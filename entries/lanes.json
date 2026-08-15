@@ -1,0 +1,25 @@
+{
+  "id": "lanes",
+  "displayName": "Lanes",
+  "description": "Shows every model lane's headroom in one place, adding OpenCode Zen Go and OpenRouter gauges alongside bb's native Claude Code and Codex tracking.",
+  "icon": "Gauge",
+  "tags": [
+    "usage",
+    "rate-limits",
+    "claude-code",
+    "codex",
+    "openrouter",
+    "opencode"
+  ],
+  "author": {
+    "name": "Shane Logsdon",
+    "github": "slogsdon",
+    "url": "https://github.com/slogsdon"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/slogsdon/bb-plugin-lanes.git",
+      "range": "^0.1.0"
+    }
+  }
+}
