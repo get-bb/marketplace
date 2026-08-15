@@ -1,0 +1,26 @@
+{
+  "id": "ayu",
+  "displayName": "Ayu",
+  "description": "Adds the three ayu themes (Light, Dark and Mirage) and a settings panel that switches between them and copies any colour from the palette.",
+  "icon": {
+    "url": "./icons/ayu-9660fa88.svg"
+  },
+  "tags": [
+    "themes",
+    "appearance",
+    "colors",
+    "syntax-highlighting",
+    "interface",
+    "ayu"
+  ],
+  "author": {
+    "name": "Vedran Burojević",
+    "github": "vburojevic"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-ayu.git",
+      "range": "^0.2.0"
+    }
+  }
+}
