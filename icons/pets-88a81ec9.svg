@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000">
+  <!-- Paw print: one pad and four toes, matching the plugin's own brand icon.
+       BB renders plugin icons as CSS masks, which key off alpha coverage, so
+       the fill is an opaque literal rather than currentColor — currentColor
+       has no inherited context inside a mask source. -->
+  <ellipse cx="12" cy="15.4" rx="4.6" ry="3.9"/>
+  <ellipse cx="6.1" cy="11.6" rx="1.9" ry="2.5" transform="rotate(-18 6.1 11.6)"/>
+  <ellipse cx="17.9" cy="11.6" rx="1.9" ry="2.5" transform="rotate(18 17.9 11.6)"/>
+  <ellipse cx="9.4" cy="7.6" rx="1.9" ry="2.6" transform="rotate(-8 9.4 7.6)"/>
+  <ellipse cx="14.6" cy="7.6" rx="1.9" ry="2.6" transform="rotate(8 14.6 7.6)"/>
+</svg>

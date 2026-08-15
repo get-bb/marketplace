@@ -1,0 +1,19 @@
+{
+  "id": "pets",
+  "displayName": "Pets",
+  "description": "Adds a pixel companion to the BB window that mirrors your fleet, walks to threads waiting on you, and earns XP from finished turns.",
+  "icon": {
+    "url": "./icons/pets-88a81ec9.svg"
+  },
+  "tags": ["companion", "interface", "pixel-art", "threads", "ai-art"],
+  "author": {
+    "name": "Vedran Burojevic",
+    "github": "vburojevic"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-pets.git",
+      "range": "^0.2.0"
+    }
+  }
+}
