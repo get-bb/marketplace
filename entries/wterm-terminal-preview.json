@@ -1,0 +1,24 @@
+{
+  "id": "wterm-terminal-preview",
+  "displayName": "Wterm Terminal Preview",
+  "description": "Adds a Ghostty-backed terminal with independent tabs, TUI mouse input, secure file transfer, and font controls.",
+  "icon": "Terminal",
+  "tags": [
+    "terminal",
+    "developer-tools",
+    "ssh",
+    "file-transfer",
+    "ghostty"
+  ],
+  "author": {
+    "name": "Andrew Kiryushkin",
+    "github": "Diffuzmetall",
+    "url": "https://github.com/Diffuzmetall"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/Diffuzmetall/bb-wterm-terminal-plugin.git",
+      "range": "^0.3.14"
+    }
+  }
+}
