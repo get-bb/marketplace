@@ -1,0 +1,23 @@
+{
+  "id": "ntfy",
+  "displayName": "ntfy notifications",
+  "description": "Pushes a notification to your phone via ntfy.sh when a bb thread needs your attention: finished unread turns, failures, and pending approvals.",
+  "icon": "Bell",
+  "tags": [
+    "notifications",
+    "ntfy",
+    "push",
+    "mobile"
+  ],
+  "author": {
+    "name": "Shane Logsdon",
+    "github": "slogsdon",
+    "url": "https://github.com/slogsdon"
+  },
+  "source": {
+    "npm": {
+      "package": "bb-plugin-ntfy",
+      "range": "^0.1.0"
+    }
+  }
+}
