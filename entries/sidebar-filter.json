@@ -1,0 +1,23 @@
+{
+  "id": "sidebar-filter",
+  "displayName": "Sidebar Project Filter",
+  "description": "Replaces the sidebar thread list with a project-grouped view that hides projects without active threads.",
+  "icon": "Filter",
+  "tags": [
+    "sidebar",
+    "threads",
+    "interface",
+    "workspace"
+  ],
+  "author": {
+    "name": "Shane Logsdon",
+    "github": "slogsdon",
+    "url": "https://github.com/slogsdon"
+  },
+  "source": {
+    "npm": {
+      "package": "bb-plugin-sidebar-filter",
+      "range": "^0.1.0"
+    }
+  }
+}
