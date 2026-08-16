@@ -1,0 +1,23 @@
+{
+  "id": "attention",
+  "displayName": "Needs Attention",
+  "description": "Ranks the top threads that need you on the bb homepage: errors, pending input, and unread finished turns, most urgent first.",
+  "icon": "AlertCircle",
+  "tags": [
+    "threads",
+    "homepage",
+    "attention",
+    "notifications"
+  ],
+  "author": {
+    "name": "Shane Logsdon",
+    "github": "slogsdon",
+    "url": "https://github.com/slogsdon"
+  },
+  "source": {
+    "npm": {
+      "package": "bb-plugin-attention",
+      "range": "^0.1.0"
+    }
+  }
+}
