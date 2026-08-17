@@ -1,0 +1,20 @@
+{
+  "id": "agentation",
+  "displayName": "Agentation",
+  "description": "Turns visual feedback on any bb surface into structured annotations that agents can read, answer, and resolve.",
+  "icon": {
+    "url": "./icons/agentation-2c7e22e8.svg"
+  },
+  "tags": ["annotations", "developer-tools", "feedback", "interface"],
+  "author": {
+    "name": "Phosphor",
+    "github": "its-rosetta",
+    "url": "https://phosphor.co"
+  },
+  "source": {
+    "npm": {
+      "package": "@phosphorco/bb-plugin-agentation",
+      "range": "^0.1.0"
+    }
+  }
+}
