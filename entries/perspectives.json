@@ -1,0 +1,18 @@
+{
+  "id": "perspectives",
+  "displayName": "Perspectives",
+  "description": "Consults independent expert agents and synthesizes source-cited evidence across caller-selected lenses.",
+  "icon": "Users",
+  "tags": ["agents", "developer-tools", "experts", "orchestration", "research"],
+  "author": {
+    "name": "Phosphor",
+    "github": "its-rosetta",
+    "url": "https://phosphor.co"
+  },
+  "source": {
+    "npm": {
+      "package": "@phosphorco/bb-plugin-perspectives",
+      "range": "^0.1.0"
+    }
+  }
+}
