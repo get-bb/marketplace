@@ -2,7 +2,9 @@
   "id": "sidebar-filter",
   "displayName": "Sidebar Project Filter",
   "description": "Replaces the sidebar thread list with a project-grouped view that hides projects without active threads.",
-  "icon": "Filter",
+  "icon": {
+    "url": "./icons/sidebar-filter-610d1d3c.svg"
+  },
   "tags": [
     "sidebar",
     "threads",
