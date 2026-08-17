@@ -1,17 +1,26 @@
 {
   "id": "usage-page",
   "displayName": "Usage",
-  "description": "Tracks coding-agent token usage and estimated API cost across enrolled machines.",
+  "description": "Tracks Claude Code, Codex, and Pi token usage with estimated API costs in a bb dashboard.",
   "icon": "ChartColumn",
-  "tags": ["analytics", "costs", "tokens", "usage"],
+  "tags": [
+    "usage",
+    "analytics",
+    "tokens",
+    "costs",
+    "claude-code",
+    "codex",
+    "pi"
+  ],
   "author": {
-    "name": "Mayank Bansal",
-    "github": "MayankBansal12"
+    "name": "Evan",
+    "github": "iamEvanYT",
+    "url": "https://github.com/iamEvanYT"
   },
   "source": {
     "git": {
-      "url": "https://github.com/MayankBansal12/bb-plugin-usage.git",
-      "range": "^0.3.1"
+      "url": "https://github.com/iamEvanYT/bb-usage-page.git",
+      "range": "^1.1.0"
     }
   }
 }
