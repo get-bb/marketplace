@@ -1,0 +1,20 @@
+{
+  "id": "gitlab",
+  "displayName": "GitLab",
+  "description": "Browses GitLab issues and merge requests in a BB panel, with pipelines, approvals, discussions and diffs, and spawns an agent thread on any of them.",
+  "icon": {
+    "url": "./icons/gitlab-37bd255a.svg"
+  },
+  "tags": ["gitlab", "issues", "merge-requests", "code-review", "interface"],
+  "author": {
+    "name": "Marius Nouchet",
+    "github": "suiramdev",
+    "url": "https://github.com/suiramdev"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/suiramdev/bb-plugin-gitlab.git",
+      "range": "^0.1.0"
+    }
+  }
+}
