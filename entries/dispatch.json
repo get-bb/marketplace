@@ -2,7 +2,9 @@
   "id": "dispatch",
   "displayName": "Dispatch",
   "description": "Turns a one-liner into a scoped thread in the right project: classifies which bb project it belongs to, expands it into a full prompt, and spawns the thread.",
-  "icon": "Send",
+  "icon": {
+    "url": "./icons/dispatch-8bca247f.svg"
+  },
   "tags": [
     "threads",
     "prompts",
