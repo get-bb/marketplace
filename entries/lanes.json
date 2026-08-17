@@ -2,7 +2,9 @@
   "id": "lanes",
   "displayName": "Lanes",
   "description": "Shows every model lane's headroom in one place, adding OpenCode Zen Go and OpenRouter gauges alongside bb's native Claude Code and Codex tracking.",
-  "icon": "Gauge",
+  "icon": {
+    "url": "./icons/lanes-d0a16007.svg"
+  },
   "tags": [
     "usage",
     "rate-limits",
