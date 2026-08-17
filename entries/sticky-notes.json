@@ -2,8 +2,15 @@
   "id": "sticky-notes",
   "displayName": "Sticky Notes",
   "description": "Adds shared, movable notes directly to bb threads for asynchronous collaboration.",
-  "icon": "Note",
-  "tags": ["collaboration", "interface", "notes", "threads"],
+  "icon": {
+    "url": "./icons/sticky-notes-5dc1948a.svg"
+  },
+  "tags": [
+    "collaboration",
+    "interface",
+    "notes",
+    "threads"
+  ],
   "author": {
     "name": "Phosphor",
     "github": "its-rosetta",
