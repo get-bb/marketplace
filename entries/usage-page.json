@@ -1,6 +1,6 @@
 {
   "id": "usage-page",
-  "displayName": "Usage",
+  "displayName": "Usage Page",
   "description": "Tracks Claude Code, Codex, and Pi token usage with estimated API costs in a bb dashboard.",
   "icon": "ChartColumn",
   "tags": [
@@ -20,7 +20,7 @@
   "source": {
     "git": {
       "url": "https://github.com/iamEvanYT/bb-usage-page.git",
-      "range": "^1.1.0"
+      "range": "^1.2.0"
     }
   }
 }
