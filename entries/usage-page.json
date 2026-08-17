@@ -1,5 +1,5 @@
 {
-  "id": "usage",
+  "id": "usage-page",
   "displayName": "Usage",
   "description": "Tracks coding-agent token usage and estimated API cost across enrolled machines.",
   "icon": "ChartColumn",
