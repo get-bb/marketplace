@@ -2,8 +2,15 @@
   "id": "image-preview",
   "displayName": "Image Preview",
   "description": "Adds responsive image grids and a click-to-expand gallery to BB chat messages.",
-  "icon": "Image",
-  "tags": ["chat", "images", "gallery", "interface"],
+  "icon": {
+    "url": "./icons/image-preview-dc6681e8.svg"
+  },
+  "tags": [
+    "chat",
+    "images",
+    "gallery",
+    "interface"
+  ],
   "author": {
     "name": "Dwite",
     "github": "Dwite",
