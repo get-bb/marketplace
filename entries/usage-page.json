@@ -1,6 +1,6 @@
 {
   "id": "usage-page",
-  "displayName": "Usage Page",
+  "displayName": "Usage",
   "description": "Tracks Claude Code, Codex, and Pi token usage with estimated API costs in a bb dashboard.",
   "icon": "ChartColumn",
   "tags": [
