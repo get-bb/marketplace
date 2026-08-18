@@ -1,0 +1,17 @@
+{
+  "id": "tinted-threads",
+  "displayName": "Tinted Threads",
+  "description": "A tinted replacement for bb's sidebar thread list with active and blocked row hues, provider glyphs, git diff badges, and sub-thread nesting.",
+  "icon": "PanelLeft",
+  "tags": ["interface", "sidebar", "threads"],
+  "author": {
+    "name": "Tom McKenzie",
+    "github": "grrowl"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/grrowl/bb-tinted-threads.git",
+      "range": "^0.1.0"
+    }
+  }
+}
