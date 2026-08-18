@@ -1,0 +1,17 @@
+{
+  "id": "rephrase",
+  "displayName": "Re-phrase",
+  "description": "Adds a Re-phrase button to the prompt input that rewrites your draft with an agent and puts the result back in the composer.",
+  "icon": "AiContentGenerator01",
+  "tags": ["prompt", "composer", "interface", "writing"],
+  "author": {
+    "name": "suiramdev",
+    "github": "suiramdev"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/suiramdev/bb-plugin-rephrase.git",
+      "range": "^0.2.1"
+    }
+  }
+}
