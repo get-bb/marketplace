@@ -1,0 +1,22 @@
+{
+  "id": "gtd-sidebar",
+  "displayName": "GTD Sidebar",
+  "description": "Replaces the bb thread list with an inbox that splits threads into Next Action and Waiting, and clears them with snooze and settle.",
+  "icon": {
+    "url": "./icons/gtd-sidebar-0a2df40e.svg"
+  },
+  "tags": ["interface", "sidebar", "threads", "inbox", "productivity"],
+  "author": {
+    "name": "Scott Sunarto",
+    "github": "smsunarto",
+    "url": "https://github.com/smsunarto"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/smsunarto/bb-plugins.git",
+      "subdir": "plugins/gtd-sidebar",
+      "range": "^0.4.0",
+      "tagPrefix": "gtd-sidebar/"
+    }
+  }
+}
