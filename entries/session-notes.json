@@ -1,0 +1,25 @@
+{
+  "id": "session-notes",
+  "displayName": "Session Notes",
+  "description": "Attaches private, thread-scoped notes to individual bb timeline messages, and never sends them to the agent's context.",
+  "icon": "FileText",
+  "tags": [
+    "notes",
+    "annotations",
+    "threads",
+    "messages",
+    "interface",
+    "markdown"
+  ],
+  "author": {
+    "name": "Pablo Oliva",
+    "github": "pablooliva",
+    "url": "https://github.com/pablooliva"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/pablooliva/bb-ide-session-notes-plugin.git",
+      "range": "^0.1.0"
+    }
+  }
+}
