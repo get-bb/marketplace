@@ -1,0 +1,25 @@
+{
+  "id": "context-meter",
+  "displayName": "Context Meter",
+  "description": "Keeps threads in the smart zone, by tracking context against a limit you set rather than the provider's full window.",
+  "icon": {
+    "url": "./icons/context-meter-929a505a.svg"
+  },
+  "tags": [
+    "interface",
+    "composer",
+    "context",
+    "tokens",
+    "smart-zone"
+  ],
+  "author": {
+    "name": "Roger Serra",
+    "github": "Hazihell"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/Hazihell/bb-plugin-context-meter.git",
+      "range": "^0.1.0"
+    }
+  }
+}
