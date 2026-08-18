@@ -1,0 +1,20 @@
+{
+  "id": "agent-checklists",
+  "displayName": "Checklists",
+  "description": "Keeps a persisted set of agent-owned steps attached to each BB thread and continues incomplete work automatically.",
+  "icon": "ClipboardCheck",
+  "tags": ["agent-tools", "checklists", "threads", "automation", "productivity"],
+  "author": {
+    "name": "Patrick Lee",
+    "github": "patleeman",
+    "url": "https://github.com/patleeman"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/patleeman/bb-plugins.git",
+      "subdir": "packages/bb-plugin-agent-checklists",
+      "range": "^0.1.0",
+      "tagPrefix": "agent-checklists/"
+    }
+  }
+}
