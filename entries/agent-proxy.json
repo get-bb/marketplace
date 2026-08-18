@@ -1,0 +1,22 @@
+{
+  "id": "agent-proxy",
+  "displayName": "Agent Proxy",
+  "description": "Runs CLIProxyAPI as a persistent macOS or Linux service, with OAuth account management, provider routing, usage stats, and one-step wiring for Claude Code and Codex.",
+  "icon": {
+    "url": "./icons/agent-proxy-b3dff2b6.svg"
+  },
+  "tags": ["proxy", "providers", "oauth", "agents", "developer-tools"],
+  "author": {
+    "name": "Scott Sunarto",
+    "github": "smsunarto",
+    "url": "https://github.com/smsunarto"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/smsunarto/bb-plugins.git",
+      "subdir": "plugins/agent-proxy",
+      "range": "^0.2.1",
+      "tagPrefix": "agent-proxy/"
+    }
+  }
+}
