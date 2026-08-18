@@ -1,0 +1,22 @@
+{
+  "id": "gh-stack",
+  "displayName": "GitHub Stack",
+  "description": "Visualizes and drives stacked pull requests from a bb thread panel, wrapping the gh stack CLI for split, push, submit, and merge.",
+  "icon": {
+    "url": "./icons/gh-stack-638265b0.svg"
+  },
+  "tags": ["github", "pull-requests", "stacked-prs", "git", "developer-tools"],
+  "author": {
+    "name": "Scott Sunarto",
+    "github": "smsunarto",
+    "url": "https://github.com/smsunarto"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/smsunarto/bb-plugins.git",
+      "subdir": "plugins/gh-stack",
+      "range": "^0.2.1",
+      "tagPrefix": "gh-stack/"
+    }
+  }
+}
