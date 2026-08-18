@@ -1,0 +1,18 @@
+{
+  "id": "advisor",
+  "displayName": "Advisor",
+  "description": "Adds a persistent second-model reviewer to BB coding threads, with tracked findings and fail-closed review status.",
+  "icon": "ShieldCheck",
+  "tags": ["agents", "developer-tools", "quality", "reviews"],
+  "author": {
+    "name": "Salem Sayed Abdel Gawad",
+    "github": "salemsayed",
+    "url": "https://github.com/salemsayed"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/salemsayed/bb-plugin-advisor.git",
+      "range": "^0.1.0"
+    }
+  }
+}
