@@ -1,0 +1,20 @@
+{
+  "id": "bb-rpiv-todo-renderer",
+  "displayName": "RPIV Todo",
+  "description": "Renders Pi rpiv-todo tasks in BB's native composer to-do panel.",
+  "icon": {
+    "url": "./icons/bb-rpiv-todo-renderer-3665901c.svg"
+  },
+  "tags": ["interface", "todo", "composer", "pi"],
+  "author": {
+    "name": "Zhen Huang",
+    "github": "ZhenHuangLab",
+    "url": "https://github.com/ZhenHuangLab"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/ZhenHuangLab/bb-rpiv-todo-renderer.git",
+      "range": "^0.1.0"
+    }
+  }
+}
