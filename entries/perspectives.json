@@ -1,0 +1,25 @@
+{
+  "id": "perspectives",
+  "displayName": "Perspectives",
+  "description": "Independent expert help and phase-bounded perspective synthesis for bb agents.",
+  "icon": {
+    "url": "./icons/perspectives-88a49dc4.svg"
+  },
+  "tags": [
+    "perspectives",
+    "agents",
+    "experts",
+    "orchestration"
+  ],
+  "author": {
+    "name": "Phosphor",
+    "github": "its-rosetta",
+    "url": "https://phosphor.co"
+  },
+  "source": {
+    "npm": {
+      "package": "@phosphorco/bb-plugin-perspectives",
+      "range": "^0.1.0"
+    }
+  }
+}
