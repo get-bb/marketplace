@@ -1,0 +1,26 @@
+{
+  "id": "traces",
+  "displayName": "Traces",
+  "description": "Indexes local agent session files and opens searchable trajectories with message, tool, error, and provider filters.",
+  "icon": "Activity",
+  "tags": [
+    "traces",
+    "observability",
+    "agent-sessions",
+    "trajectories",
+    "developer-tools"
+  ],
+  "author": {
+    "name": "Patrick Lee",
+    "github": "patleeman",
+    "url": "https://github.com/patleeman"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/patleeman/bb-plugins.git",
+      "subdir": "packages/bb-plugin-traces",
+      "range": "^0.1.0",
+      "tagPrefix": "traces/"
+    }
+  }
+}
