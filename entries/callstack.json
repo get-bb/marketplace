@@ -1,0 +1,27 @@
+{
+  "id": "callstack",
+  "displayName": "Call Stacks",
+  "description": "Agents publish call-stack flow diagrams — types moving through calls, with conditions, loops, and before/after change markers — into a live thread panel with tree, diagram, and swimlane views, drift tracking against the workspace, inline code snippets, and diffs.",
+  "icon": "Layers",
+  "tags": [
+    "call-stack",
+    "diagrams",
+    "types",
+    "code-review",
+    "planning",
+    "agent-tools",
+    "threads",
+    "visualization"
+  ],
+  "author": {
+    "name": "Ethan Greenfeld",
+    "github": "ebg1223",
+    "url": "https://github.com/ebg1223"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/ebg1223/bb-plugin-callstack.git",
+      "range": "^0.3.0"
+    }
+  }
+}
