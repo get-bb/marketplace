@@ -1,0 +1,24 @@
+{
+  "id": "rtk",
+  "displayName": "Rtk",
+  "description": "Rewrite Terminal Kommand \u2014 rewrites shell commands through the rtk CLI proxy for 60-90% token savings on verbose output like builds, tests, and git diffs.",
+  "icon": {
+    "url": "./icons/rtk-9f6bac05.svg"
+  },
+  "tags": [
+    "terminal",
+    "tokens",
+    "shell",
+    "filtering"
+  ],
+  "author": {
+    "name": "prismatic7",
+    "github": "prismatic7"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/prismatic7/bb-plugin-rtk.git",
+      "range": "^0.1.0"
+    }
+  }
+}

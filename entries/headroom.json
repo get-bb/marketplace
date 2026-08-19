@@ -1,0 +1,24 @@
+{
+  "id": "headroom",
+  "displayName": "Headroom",
+  "description": "Context budget monitoring \u2014 tells agents how much of the model's context window is used and when to summarise or start fresh.",
+  "icon": {
+    "url": "./icons/headroom-ccf7001b.svg"
+  },
+  "tags": [
+    "context",
+    "tokens",
+    "monitoring",
+    "agent-interaction"
+  ],
+  "author": {
+    "name": "prismatic7",
+    "github": "prismatic7"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/prismatic7/bb-plugin-headroom.git",
+      "range": "^0.1.0"
+    }
+  }
+}
