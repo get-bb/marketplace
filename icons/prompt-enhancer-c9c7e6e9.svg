@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+     stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- A draft's text lines with a spark rewriting them: the whole plugin in
+       one mark. Outline style to match BB's stroked icon set (1.5 at a 24
+       viewBox). BB renders plugin icons as CSS masks, which key off alpha
+       coverage, so the paint is an opaque literal rather than currentColor,
+       which has no inherited context inside a mask source. -->
+  <path d="M3.25 6h8.25"/>
+  <path d="M3.25 12h17.5"/>
+  <path d="M3.25 18h13.5"/>
+  <path d="M18.25 2.25q0 3.5 3.5 3.5-3.5 0-3.5 3.5 0-3.5-3.5-3.5 3.5 0 3.5-3.5Z" fill="#000"/>
+</svg>
