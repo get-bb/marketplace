@@ -1,0 +1,27 @@
+{
+  "id": "floating-terminal",
+  "displayName": "Floating Terminal",
+  "description": "Adds a draggable terminal window over bb, opened from the sidebar footer or Ctrl+`, with a tab per shell in any project checkout or machine home directory; tabs are persisted, so a reload or a bb restart reattaches to the same shells with their scrollback.",
+  "icon": {
+    "url": "./icons/floating-terminal-1d6d1fd9.svg"
+  },
+  "tags": [
+    "terminal",
+    "shell",
+    "developer-tools",
+    "xterm",
+    "pty",
+    "tabs",
+    "multi-machine"
+  ],
+  "author": {
+    "name": "Vedran Burojevic",
+    "github": "vburojevic"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-floating-terminal.git",
+      "range": "^0.1.0"
+    }
+  }
+}

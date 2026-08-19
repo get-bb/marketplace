@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+     stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- A window with a tab strip and a shell prompt inside it: the plugin is a
+       floating window of tabbed PTYs, not a terminal pane. Outline style to
+       match BB's stroked icon set (1.5 at a 24 viewBox). BB renders plugin
+       icons as CSS masks, which key off alpha coverage, so the stroke is an
+       opaque literal rather than currentColor, which has no inherited context
+       inside a mask source. -->
+  <rect x="2.75" y="4.75" width="18.5" height="14.5" rx="3"/>
+  <path d="M2.75 9.25h18.5"/>
+  <path d="M6.25 7h3"/>
+  <path d="M7 12.75l2 2-2 2"/>
+  <path d="M12.25 16.75h4.75"/>
+</svg>
