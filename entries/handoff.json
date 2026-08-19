@@ -1,0 +1,30 @@
+{
+  "id": "handoff",
+  "displayName": "Handoff",
+  "description": "Moves a whole session between agents and machines in both directions: hands a bb thread's rendered transcript to another provider (optionally on another enrolled machine, carrying uncommitted work as a patch), or adopts a Claude Code, Codex, Gemini CLI or OpenCode session from your terminal as a bb thread in the same directory.",
+  "icon": {
+    "url": "./icons/handoff-8139c689.svg"
+  },
+  "tags": [
+    "handoff",
+    "session",
+    "transcript",
+    "providers",
+    "machines",
+    "claude-code",
+    "codex",
+    "opencode",
+    "agent-tools"
+  ],
+  "author": {
+    "name": "Vedran Burojevic",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-handoff.git",
+      "range": "^0.7.0"
+    }
+  }
+}
