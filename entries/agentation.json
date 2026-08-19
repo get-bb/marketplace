@@ -1,0 +1,25 @@
+{
+  "id": "agentation",
+  "displayName": "Agentation",
+  "description": "Point at any part of the bb UI and turn it into structured feedback that bb agents can read, answer, and resolve.",
+  "icon": {
+    "url": "./icons/agentation-2c7e22e8.svg"
+  },
+  "tags": [
+    "agentation",
+    "annotations",
+    "visual-feedback",
+    "afs"
+  ],
+  "author": {
+    "name": "Phosphor",
+    "github": "its-rosetta",
+    "url": "https://phosphor.co"
+  },
+  "source": {
+    "npm": {
+      "package": "@phosphorco/bb-plugin-agentation",
+      "range": "^0.1.0"
+    }
+  }
+}
