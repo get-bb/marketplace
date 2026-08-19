@@ -1,0 +1,29 @@
+{
+  "id": "prompts",
+  "displayName": "Prompts",
+  "description": "Stashes prompts you write while an agent is busy and injects, schedules, or auto-sends them when it next goes idle, alongside a searchable snippet library with {{fill-in}} templates.",
+  "icon": {
+    "url": "./icons/prompts-4e83ddff.svg"
+  },
+  "tags": [
+    "prompts",
+    "queue",
+    "snippets",
+    "templates",
+    "composer",
+    "scheduling",
+    "threads",
+    "productivity"
+  ],
+  "author": {
+    "name": "Vedran Burojević",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-prompts.git",
+      "range": "^0.2.0"
+    }
+  }
+}
