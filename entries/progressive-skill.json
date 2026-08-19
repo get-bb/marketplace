@@ -1,0 +1,24 @@
+{
+  "id": "progressive-skill",
+  "displayName": "Progressive Skill",
+  "description": "Smart skill index compaction — usage-ranked, budget-capped skill lists so agents load the right skills.",
+  "icon": {
+    "url": "./icons/progressive-skill-2a22ebd1.svg"
+  },
+  "tags": [
+    "skills",
+    "context",
+    "efficiency",
+    "agent-interaction"
+  ],
+  "author": {
+    "name": "prismatic7",
+    "github": "prismatic7"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/prismatic7/bb-plugin-progressive-skill.git",
+      "range": "^0.1.0"
+    }
+  }
+}
