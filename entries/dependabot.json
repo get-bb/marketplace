@@ -1,0 +1,22 @@
+{
+  "id": "dependabot",
+  "displayName": "Dependabot",
+  "description": "Reviews GitHub Dependabot alerts grouped by dependency and sends grouped fixes to BB agents.",
+  "icon": {
+    "url": "./icons/dependabot-5b70e0d3.svg"
+  },
+  "tags": ["dependabot", "github", "security", "dependencies", "alerts"],
+  "author": {
+    "name": "Nicolas Charpentier",
+    "github": "charpeni",
+    "url": "https://github.com/charpeni"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/charpeni/bb-plugins.git",
+      "subdir": "plugins/dependabot",
+      "range": "^0.1.0",
+      "tagPrefix": "dependabot/"
+    }
+  }
+}
