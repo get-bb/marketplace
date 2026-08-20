@@ -1,0 +1,24 @@
+{
+  "id": "noisegate",
+  "displayName": "Noisegate",
+  "description": "Agent-invoked noise suppression — the agent can check short acknowledgements and filler against known noise patterns before sending.",
+  "icon": {
+    "url": "./icons/noisegate-d31ed357.svg"
+  },
+  "tags": [
+    "output",
+    "tokens",
+    "filtering",
+    "agent-interaction"
+  ],
+  "author": {
+    "name": "prismatic7",
+    "github": "prismatic7"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/prismatic7/bb-plugin-noisegate.git",
+      "range": "^0.2.0"
+    }
+  }
+}
