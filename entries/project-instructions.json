@@ -1,0 +1,24 @@
+{
+  "id": "project-instructions",
+  "displayName": "Project Instructions",
+  "description": "Gives each bb project its own standing instructions and adds them to the system prompt of every thread in that project, without writing anything into the repository.",
+  "icon": "FileText",
+  "tags": [
+    "instructions",
+    "agents",
+    "projects",
+    "prompt",
+    "monorepo",
+    "settings"
+  ],
+  "author": {
+    "name": "Roger Serra",
+    "github": "Hazihell"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/Hazihell/bb-plugin-project-instructions.git",
+      "range": "^0.1.0"
+    }
+  }
+}
