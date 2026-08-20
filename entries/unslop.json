@@ -1,0 +1,24 @@
+{
+  "id": "unslop",
+  "displayName": "Unslop",
+  "description": "Agent-invoked filter — the agent can strip overused AI patterns like hedging, filler, and corporate affect from text before sending.",
+  "icon": {
+    "url": "./icons/unslop-5d90a179.svg"
+  },
+  "tags": [
+    "output",
+    "filtering",
+    "writing",
+    "agent-interaction"
+  ],
+  "author": {
+    "name": "prismatic7",
+    "github": "prismatic7"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/prismatic7/bb-plugin-unslop.git",
+      "range": "^0.2.0"
+    }
+  }
+}
