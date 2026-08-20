@@ -1,0 +1,24 @@
+{
+  "id": "autorouter",
+  "displayName": "Autorouter",
+  "description": "Routes new BB threads using task difficulty, live provider quota, benchmark capability, and a configurable cost preference. Each submission first runs a short hidden classification turn on one of your installed providers, which may not be the one the thread ends up on.",
+  "icon": "Workflow",
+  "tags": [
+    "routing",
+    "models",
+    "agents",
+    "automation",
+    "cost-control"
+  ],
+  "author": {
+    "name": "Jacob Miller",
+    "github": "jjcm",
+    "url": "https://github.com/jjcm"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/jjcm/bb-plugin-autorouter.git",
+      "range": "^0.2.0"
+    }
+  }
+}
