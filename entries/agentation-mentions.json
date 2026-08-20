@@ -1,0 +1,27 @@
+{
+  "id": "agentation-mentions",
+  "displayName": "Agentation → Mentions",
+  "description": "Based on Agentation by Scott Sunarto; preserves visual annotation and adds bb-native mentions, queued thread delivery, verified identity tags, a distinct tool/CLI namespace, and local annotation storage.",
+  "icon": {
+    "url": "./icons/agentation-mentions-6a640b4c.png"
+  },
+  "tags": [
+    "agents",
+    "annotations",
+    "identity",
+    "mentions",
+    "queue",
+    "visual-feedback"
+  ],
+  "author": {
+    "name": "Phosphor",
+    "github": "its-rosetta",
+    "url": "https://phosphor.co"
+  },
+  "source": {
+    "npm": {
+      "package": "@phosphorco/bb-plugin-agentation-mentions",
+      "range": "^0.1.0"
+    }
+  }
+}
