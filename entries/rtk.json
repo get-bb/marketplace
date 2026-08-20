@@ -1,0 +1,24 @@
+{
+  "id": "rtk",
+  "displayName": "Rtk",
+  "description": "Agent-invoked shell tool — rewrites commands through the external rtk CLI for filtered output on verbose builds, tests, and git diffs. Requires the rtk CLI; unrestricted shell access.",
+  "icon": {
+    "url": "./icons/rtk-9f6bac05.svg"
+  },
+  "tags": [
+    "terminal",
+    "tokens",
+    "shell",
+    "filtering"
+  ],
+  "author": {
+    "name": "prismatic7",
+    "github": "prismatic7"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/prismatic7/bb-plugin-rtk.git",
+      "range": "^0.2.0"
+    }
+  }
+}
