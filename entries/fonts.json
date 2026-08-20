@@ -1,0 +1,26 @@
+{
+  "id": "fonts",
+  "displayName": "Fonts",
+  "description": "Choose local font families and tune interface, code, and serif typography independently of BB's active theme.",
+  "icon": {
+    "url": "./icons/fonts-d693cc3f.svg"
+  },
+  "tags": [
+    "fonts",
+    "typography",
+    "appearance",
+    "customization",
+    "interface"
+  ],
+  "author": {
+    "name": "Guilherme J. Tramontina",
+    "github": "gtramontina",
+    "url": "https://github.com/gtramontina"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/gtramontina/bb-plugin-fonts.git",
+      "range": "^0.1.0"
+    }
+  }
+}
