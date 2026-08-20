@@ -2,7 +2,7 @@
   "id": "worktree-setup",
   "displayName": "Worktree Setup",
   "description": "Runs per-repo setup scripts when bb creates a worktree, using a global git post-checkout hook so nothing needs to live in your repositories.",
-  "icon": "Terminal",
+  "icon": "GitBranch",
   "tags": [
     "worktree",
     "git-hooks",
