@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Theme Toggle">
+  <!-- A sun/moon switch. BB draws plugin artwork as a CSS mask, which keys off
+       alpha coverage only: the fill is an opaque literal, the shapes carry the
+       drawing, and nothing sits behind them — a filled background would mask
+       into one solid square. -->
+  <path d="M19 15h26a17 17 0 0 1 0 34H19a17 17 0 0 1 0-34zm0 4.8a12.2 12.2 0 1 0 0 24.4h26a12.2 12.2 0 0 0 0-24.4z" fill="#000"/>
+  <path d="M47.6 23.2a9.4 9.4 0 1 0 0 17.6 10.6 10.6 0 0 1 0-17.6z" fill="#000"/>
+  <g fill="#000">
+    <circle cx="20.5" cy="32" r="3.6"/>
+    <g stroke="#000" stroke-width="2.1" stroke-linecap="round">
+      <path d="M20.5 25.2v1.5M20.5 37.3v1.5M13.7 32h1.5M25.8 32h1.5M15.7 27.2l1.1 1.1M24.2 35.7l1.1 1.1M25.3 27.2l-1.1 1.1M16.8 35.7l-1.1 1.1"/>
+    </g>
+  </g>
+</svg>

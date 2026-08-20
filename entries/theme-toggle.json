@@ -3,7 +3,7 @@
   "displayName": "Theme Toggle",
   "description": "Switches the bb palette from a sidebar footer button: a click cycles palettes, and hovering, holding, or right-clicking opens a menu with light, dark, or system appearance and every palette installed on the host, including ones other plugins provide.",
   "icon": {
-    "url": "./icons/theme-toggle-c79a33d5.svg"
+    "url": "./icons/theme-toggle-ad04f4d2.svg"
   },
   "tags": [
     "themes",
