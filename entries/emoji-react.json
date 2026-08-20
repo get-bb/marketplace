@@ -1,0 +1,22 @@
+{
+  "id": "emoji-react",
+  "displayName": "Emoji React",
+  "description": "Adds configurable emoji reactions to the text-selection menu and per-message action bar that draft a quoted reply.",
+  "icon": {
+    "url": "./icons/emoji-react-61419fba.svg"
+  },
+  "tags": ["emoji", "reactions", "chat", "interface"],
+  "author": {
+    "name": "Patrick Lee",
+    "github": "patleeman",
+    "url": "https://github.com/patleeman"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/patleeman/bb-plugins.git",
+      "subdir": "packages/bb-plugin-emoji-react",
+      "range": "^0.1.0",
+      "tagPrefix": "emoji-react/"
+    }
+  }
+}
