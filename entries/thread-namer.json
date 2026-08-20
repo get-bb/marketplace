@@ -1,0 +1,18 @@
+{
+  "id": "thread-namer",
+  "displayName": "Thread Namer",
+  "description": "Names threads with an agent when their first turn ends, so the sidebar reads as what you were doing, and re-generates a name on demand from the thread header or the CLI.",
+  "icon": "AiContentGenerator01",
+  "tags": ["thread", "title", "naming", "sidebar", "agent", "interface"],
+  "author": {
+    "name": "Marius Nouchet",
+    "github": "suiramdev",
+    "url": "https://github.com/suiramdev"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/suiramdev/bb-plugin-thread-namer.git",
+      "range": "^0.1.0"
+    }
+  }
+}
