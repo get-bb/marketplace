@@ -1,0 +1,20 @@
+{
+  "id": "agent-plugins",
+  "displayName": "Agent Plugins",
+  "description": "Installs Agent Plugins once in BB and routes their skills and approved MCP tools to every provider, with per-resource enable controls.",
+  "icon": "Puzzle",
+  "tags": ["agent-tools", "skills", "mcp", "integrations", "providers", "developer-tools"],
+  "author": {
+    "name": "Patrick Lee",
+    "github": "patleeman",
+    "url": "https://github.com/patleeman"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/patleeman/bb-plugins.git",
+      "subdir": "packages/bb-plugin-agent-plugins",
+      "range": "^0.1.0",
+      "tagPrefix": "agent-plugins/"
+    }
+  }
+}
