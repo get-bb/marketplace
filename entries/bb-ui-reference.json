@@ -2,7 +2,9 @@
   "id": "bb-ui-reference",
   "displayName": "BB UI Reference",
   "description": "Shows BB's plugin surface map alongside live demonstrations of the active semantic theme palette.",
-  "icon": "CircleQuestion",
+  "icon": {
+    "url": "./icons/bb-ui-reference-cc9d856d.png"
+  },
   "tags": ["design-system", "developer-tools", "interface", "themes"],
   "author": {
     "name": "Phosphor",
