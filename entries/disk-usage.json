@@ -1,0 +1,22 @@
+{
+  "id": "disk-usage",
+  "displayName": "Disk Usage",
+  "description": "Shows what's taking up disk space on the bb server host, ncdu-style, with drill-down by directory and a bb disk-usage CLI.",
+  "icon": {
+    "url": "./icons/disk-usage-fff016e3.svg"
+  },
+  "tags": ["disk-usage", "storage", "ncdu", "server", "interface"],
+  "author": {
+    "name": "Nicolas Charpentier",
+    "github": "charpeni",
+    "url": "https://github.com/charpeni"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/charpeni/bb-plugins.git",
+      "subdir": "plugins/disk-usage",
+      "range": "^0.1.0",
+      "tagPrefix": "disk-usage/"
+    }
+  }
+}
