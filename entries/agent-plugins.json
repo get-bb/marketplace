@@ -1,0 +1,20 @@
+{
+  "id": "agent-plugins",
+  "displayName": "Agent Plugins",
+  "description": "Installs plugins that follow the Agent Plugins spec in BB, making their skills and approved MCP tools available to Codex and other BB providers; it is not a Claude marketplace integration.",
+  "icon": "Puzzle",
+  "tags": ["agent-tools", "skills", "mcp", "integrations", "providers", "developer-tools"],
+  "author": {
+    "name": "Patrick Lee",
+    "github": "patleeman",
+    "url": "https://github.com/patleeman"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/patleeman/bb-plugins.git",
+      "subdir": "packages/bb-plugin-agent-plugins",
+      "range": "^0.1.0",
+      "tagPrefix": "agent-plugins/"
+    }
+  }
+}
