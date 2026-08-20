@@ -1,0 +1,24 @@
+{
+  "id": "noema",
+  "displayName": "Noema",
+  "description": "Bridges BB threads to your own Noema server over its Streamable HTTP MCP endpoint for durable, searchable memory across sessions.",
+  "icon": {
+    "url": "./icons/noema-858265a4.svg"
+  },
+  "tags": [
+    "memory",
+    "mcp",
+    "federation",
+    "agent-interaction"
+  ],
+  "author": {
+    "name": "prismatic7",
+    "github": "prismatic7"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/prismatic7/bb-plugin-noema.git",
+      "range": "^0.2.0"
+    }
+  }
+}

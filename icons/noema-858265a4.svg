@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+     stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- A memory node: a central circle with three linked satellites, evoking a
+       federated memory graph. Outline style to match BB's stroked icon set
+       (1.5 at a 24 viewBox). BB renders plugin icons as CSS masks, which key
+       off alpha coverage, so the stroke is an opaque literal. -->
+  <circle cx="12" cy="12" r="3"/>
+  <circle cx="5" cy="6" r="2"/>
+  <circle cx="19" cy="6" r="2"/>
+  <circle cx="5" cy="18" r="2"/>
+  <path d="M6.5 7.5L10 10.5"/>
+  <path d="M17.5 7.5L14 10.5"/>
+  <path d="M6.5 16.5L10 13.5"/>
+</svg>
