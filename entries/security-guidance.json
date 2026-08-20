@@ -1,0 +1,24 @@
+{
+  "id": "security-guidance",
+  "displayName": "Security Guidance",
+  "description": "Pattern-matched security warnings for code the agent writes — 25 rules covering unsafe deserialization, injection, XSS, and crypto footguns.",
+  "icon": {
+    "url": "./icons/security-guidance-b34f32ea.svg"
+  },
+  "tags": [
+    "security",
+    "code-quality",
+    "safety",
+    "agent-interaction"
+  ],
+  "author": {
+    "name": "prismatic7",
+    "github": "prismatic7"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/prismatic7/bb-plugin-security-guidance.git",
+      "range": "^0.2.0"
+    }
+  }
+}
