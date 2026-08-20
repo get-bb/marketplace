@@ -1,0 +1,17 @@
+{
+  "id": "message-timestamps",
+  "displayName": "Message Timestamps",
+  "description": "Shows the time you sent each message next to your bubbles in BB chat windows.",
+  "icon": "Clock",
+  "tags": ["interface", "chat", "messages", "threads"],
+  "author": {
+    "name": "Elliott McNary",
+    "github": "bighitbiker3"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/bighitbiker3/bb-plugin-message-timestamps.git",
+      "range": "^0.1.0"
+    }
+  }
+}

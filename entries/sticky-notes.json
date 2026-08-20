@@ -1,0 +1,25 @@
+{
+  "id": "sticky-notes",
+  "displayName": "Sticky Notes",
+  "description": "Adds shared, movable notes directly to bb threads for asynchronous collaboration.",
+  "icon": {
+    "url": "./icons/sticky-notes-5dc1948a.svg"
+  },
+  "tags": [
+    "collaboration",
+    "interface",
+    "notes",
+    "threads"
+  ],
+  "author": {
+    "name": "Phosphor",
+    "github": "its-rosetta",
+    "url": "https://phosphor.co"
+  },
+  "source": {
+    "npm": {
+      "package": "@phosphorco/bb-plugin-sticky-notes",
+      "range": "^0.1.0"
+    }
+  }
+}

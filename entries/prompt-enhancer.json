@@ -1,0 +1,25 @@
+{
+  "id": "prompt-enhancer",
+  "displayName": "Prompt Enhancer",
+  "description": "Rewrites the composer draft into a clearer prompt through a hidden bb thread, keeping follow-ups short, preserving @mentions and file paths, and offering Undo.",
+  "icon": {
+    "url": "./icons/prompt-enhancer-c9c7e6e9.svg"
+  },
+  "tags": [
+    "composer",
+    "prompt",
+    "writing",
+    "interface",
+    "keyboard-shortcuts"
+  ],
+  "author": {
+    "name": "Vedran Burojević",
+    "github": "vburojevic"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-prompt-enhancer.git",
+      "range": "^0.2.0"
+    }
+  }
+}

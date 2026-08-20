@@ -1,0 +1,20 @@
+{
+  "id": "bb-better-latex",
+  "displayName": "Better LaTeX",
+  "description": "Renders $...$ and leftover \\[...\\] / \\(...\\) math in BB chat.",
+  "icon": {
+    "url": "./icons/bb-better-latex-8274bdfa.svg"
+  },
+  "tags": ["interface", "latex", "math", "markdown"],
+  "author": {
+    "name": "Zhen Huang",
+    "github": "ZhenHuangLab",
+    "url": "https://github.com/ZhenHuangLab"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/ZhenHuangLab/bb-better-latex.git",
+      "range": "^0.2.2"
+    }
+  }
+}

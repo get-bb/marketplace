@@ -1,0 +1,22 @@
+{
+  "id": "global-workflows",
+  "displayName": "Global Workflows",
+  "description": "Runs bb workflows from any project, from a catalog that lives outside every repository.",
+  "icon": "Workflow",
+  "tags": [
+    "workflows",
+    "automation",
+    "orchestration"
+  ],
+  "author": {
+    "name": "Shane Logsdon",
+    "github": "slogsdon",
+    "url": "https://github.com/slogsdon"
+  },
+  "source": {
+    "npm": {
+      "package": "bb-plugin-global-workflows",
+      "range": "^0.1.0"
+    }
+  }
+}

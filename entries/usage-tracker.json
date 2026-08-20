@@ -1,0 +1,24 @@
+{
+  "id": "usage-tracker",
+  "displayName": "Usage Tracker",
+  "description": "Shows compact Codex and Claude Code five-hour and weekly usage limits in the BB sidebar footer.",
+  "icon": "ChartColumn",
+  "tags": [
+    "usage",
+    "rate-limits",
+    "codex",
+    "claude-code",
+    "sidebar"
+  ],
+  "author": {
+    "name": "Mateo Cerquetella",
+    "github": "MateoCerquetella",
+    "url": "https://github.com/MateoCerquetella"
+  },
+  "source": {
+    "npm": {
+      "package": "bb-plugin-usage-tracker",
+      "range": "^0.1.1"
+    }
+  }
+}

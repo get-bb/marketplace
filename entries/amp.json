@@ -1,0 +1,22 @@
+{
+  "id": "amp",
+  "displayName": "Amp",
+  "description": "Adds Amp as a bb provider through a bundled ACP bridge built on the official @ampcode/sdk, running locally or inside an Orb sandbox.",
+  "icon": {
+    "url": "./icons/amp-84180045.svg"
+  },
+  "tags": ["amp", "provider", "agents", "acp", "sandbox"],
+  "author": {
+    "name": "Scott Sunarto",
+    "github": "smsunarto",
+    "url": "https://github.com/smsunarto"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/smsunarto/bb-plugins.git",
+      "subdir": "plugins/amp",
+      "range": "^0.4.0",
+      "tagPrefix": "amp/"
+    }
+  }
+}

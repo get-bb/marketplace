@@ -1,9 +1,9 @@
 {
   "id": "perspectives",
   "displayName": "Perspectives",
-  "description": "Consults independent expert agents and synthesizes source-cited evidence across caller-selected lenses.",
+  "description": "Adds help and gather_perspectives tools that create bounded hidden model threads for read-only expert analysis and cited synthesis; planner/worker provider, model, reasoning, and permission settings control cost and authority.",
   "icon": {
-    "url": "./icons/perspectives-88a49dc4.svg"
+    "url": "./icons/perspectives-30810901.png"
   },
   "tags": [
     "agents",
@@ -20,7 +20,7 @@
   "source": {
     "npm": {
       "package": "@phosphorco/bb-plugin-perspectives",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   }
 }

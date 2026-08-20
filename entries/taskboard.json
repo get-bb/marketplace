@@ -1,0 +1,27 @@
+{
+  "id": "taskboard",
+  "displayName": "Taskboard",
+  "description": "Brings each BB project's GitHub, Linear, or Jira tasks into one focused List or Kanban board.",
+  "icon": {
+    "url": "./icons/taskboard-0b77950c.svg"
+  },
+  "tags": [
+    "tasks",
+    "project-management",
+    "kanban",
+    "github",
+    "linear",
+    "jira"
+  ],
+  "author": {
+    "name": "Mateo Cerquetella",
+    "github": "MateoCerquetella",
+    "url": "https://github.com/MateoCerquetella"
+  },
+  "source": {
+    "npm": {
+      "package": "bb-plugin-taskboard",
+      "range": "^0.1.2"
+    }
+  }
+}

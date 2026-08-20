@@ -1,0 +1,22 @@
+{
+  "id": "notify",
+  "displayName": "Notify",
+  "description": "Sends a native macOS notification when a bb thread finishes or fails, and adds a notify_user agent tool plus a bb notify command.",
+  "icon": {
+    "url": "./icons/notify-c5803165.svg"
+  },
+  "tags": ["notifications", "macos", "threads", "agent-tools"],
+  "author": {
+    "name": "Scott Sunarto",
+    "github": "smsunarto",
+    "url": "https://github.com/smsunarto"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/smsunarto/bb-plugins.git",
+      "subdir": "plugins/notify",
+      "range": "^0.2.1",
+      "tagPrefix": "notify/"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "arc-switcher",
+  "displayName": "Arc Switcher",
+  "description": "Cycles through your seven most recently opened BB chats with an Arc-style Command-D switcher.",
+  "icon": "Layers",
+  "tags": ["interface", "keyboard-shortcuts", "navigation", "threads"],
+  "author": {
+    "name": "Elliott McNary",
+    "github": "bighitbiker3"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/bighitbiker3/bb-plugin-arc-switcher.git",
+      "range": "^0.1.0"
+    }
+  }
+}

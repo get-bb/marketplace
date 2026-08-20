@@ -1,0 +1,26 @@
+{
+  "id": "dispatch",
+  "displayName": "Dispatch",
+  "description": "Turns a one-liner into a scoped thread in the right project: classifies which bb project it belongs to, expands it into a full prompt, and spawns the thread.",
+  "icon": {
+    "url": "./icons/dispatch-8bca247f.svg"
+  },
+  "tags": [
+    "threads",
+    "prompts",
+    "agent-interaction",
+    "task-routing",
+    "prompt-expansion"
+  ],
+  "author": {
+    "name": "Shane Logsdon",
+    "github": "slogsdon",
+    "url": "https://github.com/slogsdon"
+  },
+  "source": {
+    "npm": {
+      "package": "bb-plugin-dispatch",
+      "range": "^0.1.0"
+    }
+  }
+}

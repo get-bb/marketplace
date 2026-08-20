@@ -1,0 +1,25 @@
+{
+  "id": "chime",
+  "displayName": "Chime",
+  "description": "Plays configurable notification sounds when bb turns start, finish, fail, pause for a question, or request approval.",
+  "icon": {
+    "url": "./icons/chime-30a5696d.svg"
+  },
+  "tags": [
+    "notifications",
+    "audio",
+    "sounds",
+    "attention"
+  ],
+  "author": {
+    "name": "Guilherme J. Tramontina",
+    "github": "gtramontina",
+    "url": "https://github.com/gtramontina"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/gtramontina/bb-plugin-chime.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "tokyo-night",
+  "displayName": "Tokyo Night",
+  "description": "Adds the two Tokyo Night palettes (Night and Storm), each pairing its dark base with Tokyo Night Light for light mode.",
+  "icon": {
+    "url": "./icons/tokyo-night-6c795cf1.svg"
+  },
+  "tags": ["themes", "appearance", "colors", "interface", "tokyo-night"],
+  "author": {
+    "name": "Justin Krehel",
+    "github": "krehel",
+    "url": "https://github.com/krehel"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/krehel/bb-plugin-tokyo-night.git",
+      "range": "^0.1.0"
+    }
+  }
+}
