@@ -1,0 +1,29 @@
+{
+  "id": "theme-toggle",
+  "displayName": "Theme Toggle",
+  "description": "Switches the bb palette from a sidebar footer button: a click cycles palettes, holding or right-clicking opens a menu with light, dark, or system appearance and every palette installed on the host, including ones other plugins provide.",
+  "icon": {
+    "url": "./icons/theme-toggle-04b4b087.svg"
+  },
+  "tags": [
+    "themes",
+    "palette",
+    "dark-mode",
+    "appearance",
+    "sidebar",
+    "interface"
+  ],
+  "author": {
+    "name": "Dmitriy Fomin",
+    "github": "xMinor-1",
+    "url": "https://github.com/xMinor-1"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/xMinor-1/bb-plugins.git",
+      "subdir": "plugins/theme-toggle",
+      "range": "^0.1.0",
+      "tagPrefix": "theme-toggle/"
+    }
+  }
+}
