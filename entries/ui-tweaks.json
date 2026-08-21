@@ -1,0 +1,24 @@
+{
+  "id": "ui-tweaks",
+  "displayName": "UI Tweaks",
+  "description": "Adds configurable fonts, new-thread prompt placement, Open With filtering, and sidebar footer controls to BB.",
+  "icon": "SlidersHorizontal",
+  "tags": [
+    "interface",
+    "customization",
+    "fonts",
+    "sidebar",
+    "workspace"
+  ],
+  "author": {
+    "name": "WYEZ",
+    "github": "wy3z",
+    "url": "https://github.com/wy3z"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/wy3z/bb-plugin-ui-tweaks.git",
+      "range": "^0.16.0"
+    }
+  }
+}
