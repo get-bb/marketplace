@@ -1,0 +1,30 @@
+{
+  "id": "usage-meter",
+  "displayName": "Usage Meter",
+  "description": "Shows Claude subscription limits as two rings around a sidebar footer button — the five-hour session and the week — and adds a Usage page that reads local Claude Code transcripts to explain where the limits went, broken down by project, model, thread, skill and subagent.",
+  "icon": {
+    "url": "./icons/usage-meter-93d96ace.svg"
+  },
+  "tags": [
+    "usage",
+    "limits",
+    "tokens",
+    "claude-code",
+    "analytics",
+    "sidebar",
+    "interface"
+  ],
+  "author": {
+    "name": "Foma",
+    "github": "xMinor-1",
+    "url": "https://github.com/xMinor-1"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/xMinor-1/bb-plugins.git",
+      "subdir": "plugins/usage-meter",
+      "range": "^0.2.0",
+      "tagPrefix": "usage-meter/"
+    }
+  }
+}
