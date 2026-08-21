@@ -1,9 +1,15 @@
 {
   "id": "copilot",
   "displayName": "Copilot",
-  "description": "Runs GitHub Copilot CLI as a bb provider over the Agent Client Protocol, with Copilot-native skill discovery and manual /skill invocation.",
-  "icon": { "url": "./icons/copilot-7133b161.svg" },
-  "tags": ["copilot", "github", "acp", "provider"],
+  "description": "Runs GitHub Copilot CLI as a bb agent provider.",
+  "icon": {
+    "url": "./icons/copilot-7133b161.svg"
+  },
+  "tags": [
+    "copilot",
+    "github",
+    "provider"
+  ],
   "author": {
     "name": "Balazs Tasi",
     "github": "balazstasi"
