@@ -1,0 +1,17 @@
+{
+  "id": "command-center",
+  "displayName": "Command Center",
+  "description": "Boards every dispatched request and open question as a card, lets you answer or comment on an agent's work straight from the board, and sends macOS notifications when a card's status changes.",
+  "icon": "Mail",
+  "tags": ["kanban", "board", "tasks", "notifications", "voice", "productivity"],
+  "author": {
+    "name": "Dilip Venkatesh",
+    "github": "dilipgv"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/dilipgv/bb-plugin-command-center.git",
+      "range": "^0.4.0"
+    }
+  }
+}
