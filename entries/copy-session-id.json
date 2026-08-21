@@ -1,0 +1,20 @@
+{
+  "id": "copy-session-id",
+  "displayName": "Copy Session ID",
+  "description": "Copy a thread's session ID from its left-sidebar context menu.",
+  "icon": "Copy",
+  "tags": ["clipboard", "threads", "sidebar"],
+  "author": {
+    "name": "Patrick Lee",
+    "github": "patleeman",
+    "url": "https://github.com/patleeman"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/patleeman/bb-plugins.git",
+      "subdir": "packages/bb-plugin-copy-session-id",
+      "range": "^0.1.0",
+      "tagPrefix": "copy-session-id/"
+    }
+  }
+}
