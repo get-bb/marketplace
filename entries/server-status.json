@@ -1,0 +1,30 @@
+{
+  "id": "server-status",
+  "displayName": "Server Status",
+  "description": "Tracks host RAM usage as a ring around a sidebar footer button \u2014 amber from 80%, red above 90% \u2014 and opens a panel with CPU, memory, swap, disk, load average, uptime, and OS and kernel version.",
+  "icon": {
+    "url": "./icons/server-status-0fe86d02.svg"
+  },
+  "tags": [
+    "server",
+    "monitoring",
+    "memory",
+    "disk",
+    "uptime",
+    "sidebar",
+    "interface"
+  ],
+  "author": {
+    "name": "Foma",
+    "github": "xMinor-1",
+    "url": "https://github.com/xMinor-1"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/xMinor-1/bb-plugins.git",
+      "subdir": "plugins/server-status",
+      "range": "^0.1.0",
+      "tagPrefix": "server-status/"
+    }
+  }
+}
