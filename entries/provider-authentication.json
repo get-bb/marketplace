@@ -1,0 +1,24 @@
+{
+  "id": "provider-authentication",
+  "displayName": "Provider Authentication",
+  "description": "Authenticates and reauthenticates Claude Code on connected bb machines from BB settings.",
+  "icon": "Lock",
+  "tags": [
+    "providers",
+    "authentication",
+    "oauth",
+    "claude-code",
+    "settings"
+  ],
+  "author": {
+    "name": "wjin17",
+    "github": "wjin17",
+    "url": "https://github.com/wjin17"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/wjin17/bb-plugin-provider-authentication.git",
+      "range": "^0.1.0"
+    }
+  }
+}
