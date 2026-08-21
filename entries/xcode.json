@@ -1,0 +1,30 @@
+{
+  "id": "xcode",
+  "displayName": "Xcode",
+  "description": "Tracks every Xcode build and test on the machine with no per-project configuration \u2014 live progress, verdicts, errors with file:line, history and trends \u2014 and streams the simulators they run on into the panel with full touch input, a build-aware device picker, SwiftUI preview diffs, and gated agent tools.",
+  "icon": {
+    "url": "./icons/xcode-52038a9f.svg"
+  },
+  "tags": [
+    "xcode",
+    "ios",
+    "simulator",
+    "builds",
+    "tests",
+    "swiftui",
+    "previews",
+    "snapshots",
+    "agent-tools"
+  ],
+  "author": {
+    "name": "Vedran Burojevic",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-xcode.git",
+      "range": "^0.2.0"
+    }
+  }
+}
