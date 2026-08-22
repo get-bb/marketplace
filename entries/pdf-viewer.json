@@ -1,0 +1,30 @@
+{
+  "id": "pdf-viewer",
+  "displayName": "PDF Viewer",
+  "description": "Opens .pdf files in a BB panel tab instead of downloading them, with the browser's paging, zoom, search and print controls, and adds a PDF panel for browsing a host's folders and reopening recent documents.",
+  "icon": {
+    "url": "./icons/pdf-viewer-8ac376f7.svg"
+  },
+  "tags": [
+    "pdf",
+    "documents",
+    "viewer",
+    "file-opener",
+    "files",
+    "reader",
+    "interface"
+  ],
+  "author": {
+    "name": "Foma",
+    "github": "xMinor-1",
+    "url": "https://github.com/xMinor-1"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/xMinor-1/bb-plugins.git",
+      "subdir": "plugins/pdf-viewer",
+      "range": "^0.1.0",
+      "tagPrefix": "pdf-viewer/"
+    }
+  }
+}
