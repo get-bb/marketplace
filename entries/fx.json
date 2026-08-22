@@ -1,9 +1,9 @@
 {
   "id": "fx",
   "displayName": "fx",
-  "description": "Runs the fx coding agent as a BB provider over its Agent Client Protocol, with an isolated resumable fx session per thread, model picking from your authenticated fx account, and streamed tool activity.",
+  "description": "Runs the fx coding agent in BB with resumable sessions, account-based model selection, and streamed tool activity.",
   "icon": {
-    "url": "./icons/fx-75cb79a4.svg"
+    "url": "./icons/fx-2695cead.svg"
   },
   "tags": ["provider", "acp", "coding-agent", "agents"],
   "author": {
@@ -13,8 +13,8 @@
   },
   "source": {
     "git": {
-      "url": "https://github.com/MayankBansal12/bb-plugin-fx.git",
-      "range": "^0.2.0"
+      "url": "https://github.com/MayankBansal12/bb-plugin-fx-provider.git",
+      "range": "^0.2.1"
     }
   }
 }
