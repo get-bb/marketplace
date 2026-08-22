@@ -1,0 +1,27 @@
+{
+  "id": "tokenmaxx",
+  "displayName": "tokenmaxx",
+  "description": "Shows every Codex and Claude Code account tokenmaxx manages, with live rate-limit windows, token analytics, account switching, auto-rotation policy, sign-in, and routing control.",
+  "icon": {
+    "url": "./icons/tokenmaxx-05b77465.svg"
+  },
+  "tags": [
+    "tokenmaxx",
+    "providers",
+    "rate-limits",
+    "analytics",
+    "accounts",
+    "developer-tools"
+  ],
+  "author": {
+    "name": "Pedro Filho",
+    "github": "pedroapfilho",
+    "url": "https://github.com/pedroapfilho"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/pedroapfilho/bb-plugin-tokenmaxx.git",
+      "range": "^0.1.1"
+    }
+  }
+}
