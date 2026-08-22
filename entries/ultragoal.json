@@ -1,0 +1,26 @@
+{
+  "id": "ultragoal",
+  "displayName": "UltraGoal",
+  "description": "Codex-style durable UltraGoals for Cursor, OpenCode, Claude Code, and Pi. The root thread orchestrates named workers, verifies finished slices, and keeps working until the objective is done, blocked, paused, or limited.",
+  "icon": {
+    "url": "./icons/ultragoal-9a4e92b2.svg"
+  },
+  "tags": [
+    "agents",
+    "automation",
+    "goals",
+    "orchestration",
+    "planning"
+  ],
+  "author": {
+    "name": "Braedon Saunders",
+    "github": "braedonsaunders",
+    "url": "https://github.com/braedonsaunders"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/braedonsaunders/bb-plugin-ultragoal.git",
+      "range": "^0.2.0"
+    }
+  }
+}
