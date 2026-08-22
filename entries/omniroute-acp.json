@@ -1,0 +1,17 @@
+{
+  "id": "omniroute-acp",
+  "displayName": "OmniRoute",
+  "description": "Bridges BB to a local OmniRoute instance: registers it as an agent provider, exposes its usage/cost metrics via RPC, and provides an omniswarm_spawn tool for fanning tasks out to parallel subagent threads.",
+  "icon": "Zap",
+  "tags": ["provider", "proxy", "routing", "agents", "developer-tools"],
+  "author": {
+    "name": "nuchareviews-beep",
+    "github": "nuchareviews-beep"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/nuchareviews-beep/bb-plugin-omniroute-acp.git",
+      "range": "^0.1.0"
+    }
+  }
+}
