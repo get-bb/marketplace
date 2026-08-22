@@ -1,0 +1,29 @@
+{
+  "id": "linear",
+  "displayName": "Linear",
+  "description": "Linear inside bb — a list-first issue browser, inbox, and create dialog served from a local mirror, thirteen linear_* agent tools, a bb linear CLI, and every thread resolving which issue it works on, shown live in the header and side panel and injected into agent context.",
+  "icon": {
+    "url": "./icons/linear-6ff21144.svg"
+  },
+  "tags": [
+    "linear",
+    "issues",
+    "issue-tracking",
+    "inbox",
+    "agent-tools",
+    "threads",
+    "cli",
+    "sync"
+  ],
+  "author": {
+    "name": "Vedran Burojevic",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-linear.git",
+      "range": "^0.1.2"
+    }
+  }
+}
