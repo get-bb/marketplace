@@ -1,0 +1,20 @@
+{
+  "id": "fx",
+  "displayName": "fx",
+  "description": "Runs the fx coding agent in BB with resumable sessions, account-based model selection, and streamed tool activity.",
+  "icon": {
+    "url": "./icons/fx-2695cead.svg"
+  },
+  "tags": ["provider", "acp", "coding-agent", "agents"],
+  "author": {
+    "name": "Mayank Bansal",
+    "github": "MayankBansal12",
+    "url": "https://github.com/MayankBansal12"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/MayankBansal12/bb-plugin-fx-provider.git",
+      "range": "^0.2.1"
+    }
+  }
+}
