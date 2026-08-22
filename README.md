@@ -16,6 +16,8 @@ installation refreshes.
   <https://getbb.app/schemas/marketplace.schema.json>.
 - `scripts/build.mjs` — validates everything and composes
   `dist/marketplace.json` deterministically.
+- `scripts/build-stats.mjs` — composes `dist/stats.json`, the install-count
+  sidecar, from BB's `plugin_installed` telemetry.
 
 ## Submit a plugin
 
@@ -36,6 +38,48 @@ The account that opens the listing pull request is recorded as the owner in
 BB installs nothing automatically: a catalog refresh only surfaces
 `bb plugin outdated`, and applying an update is a manual, staged,
 rollback-protected action.
+
+## Install counts
+
+`https://getbb.app/marketplace/v1/stats.json` publishes how many distinct BB
+installations reported installing each public plugin. BB fetches it beside the
+manifest on every catalog refresh and shows the number on the store card, the
+mobile browse row, and `bb plugin search`.
+
+```json
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-21T06:17:00.000Z",
+  "plugins": { "thread-hover-cards": { "installs": 4210 } }
+}
+```
+
+- The counts come from the `plugin_installed` event that BB servers already
+  send to PostHog. Telemetry is opt-out and only reports from production
+  builds, so a count is "installs BB heard about", not a true total.
+- It is a separate document, not a field in `marketplace.json`. That schema is
+  strict, so an unknown field there rejects the whole catalog on an older
+  desktop, and the numbers move daily while the manifest sits unchanged behind
+  a 304.
+- Bundled BB plugins appear here too, even though they have no entry in
+  `entries/`: BB looks their counts up in this same document.
+- Only this marketplace publishes counts. BB ignores a `stats.json` beside a
+  third-party manifest, because the number is BB's measurement, not the
+  publisher's claim.
+- `.github/workflows/stats.yml` rebuilds and uploads it daily. It needs the
+  `POSTHOG_API_KEY` secret (a personal API key with project read access) and
+  the `POSTHOG_PROJECT_ID` variable, alongside the Cloudflare credentials the
+  manifest publish already uses. Set `POSTHOG_HOST` when the project is not on
+  US cloud.
+- A run that finds no counts fails without uploading, so an outage or a
+  rotated key leaves the last published sidecar in place instead of zeroing
+  every counter in the store.
+
+Print the document without publishing it:
+
+```sh
+POSTHOG_API_KEY=… POSTHOG_PROJECT_ID=… node scripts/build-stats.mjs --print
+```
 
 ## Local validation
 

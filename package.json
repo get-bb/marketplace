@@ -5,6 +5,7 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "build:stats": "node scripts/build-stats.mjs",
     "check": "node scripts/build.mjs --liveness"
   },
   "devDependencies": {
