@@ -1,9 +1,9 @@
 {
   "id": "theme-toggle",
   "displayName": "Theme Toggle",
-  "description": "Switches the bb palette from a sidebar footer button: a click cycles palettes, and hovering, holding, or right-clicking opens a menu with light, dark, or system appearance and every palette installed on the host, including ones other plugins provide.",
+  "description": "Flips bb between light and dark from a sidebar footer button: a click switches the appearance, while hovering, holding, or right-clicking opens a menu with light, dark, or system appearance and every palette installed on the host, including ones other plugins provide. The icon is a square split by a diagonal — day above, night below — and the half that is on is filled.",
   "icon": {
-    "url": "./icons/theme-toggle-ad04f4d2.svg"
+    "url": "./icons/theme-toggle-b81e39a7.svg"
   },
   "tags": [
     "themes",
@@ -22,7 +22,7 @@
     "git": {
       "url": "https://github.com/xMinor-1/bb-plugins.git",
       "subdir": "plugins/theme-toggle",
-      "range": "^0.2.0",
+      "range": "^0.3.0",
       "tagPrefix": "theme-toggle/"
     }
   }
