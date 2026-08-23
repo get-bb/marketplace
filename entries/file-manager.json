@@ -1,7 +1,7 @@
 {
   "id": "file-manager",
   "displayName": "File Manager",
-  "description": "Browse, upload, download, move, rename and extract files under your home folder from a full-page bb panel, with folders that expand in place and chunked resumable uploads for multi-gigabyte files.",
+  "description": "Browse, upload, download, move, rename and extract files under your home folder from a full-page bb panel: folders expand in place, a browser-style path bar jumps to any pasted path, the panel reopens where you left it, and multi-gigabyte uploads resume after a dropped connection.",
   "icon": "FolderOpen",
   "tags": [
     "files",
@@ -20,7 +20,7 @@
     "git": {
       "url": "https://github.com/xMinor-1/bb-plugins.git",
       "subdir": "plugins/file-manager",
-      "range": "^0.3.0",
+      "range": "^0.4.0",
       "tagPrefix": "file-manager/"
     }
   }
