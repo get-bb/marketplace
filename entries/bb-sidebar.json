@@ -1,0 +1,18 @@
+{
+  "id": "bb-sidebar",
+  "displayName": "BB Sidebar",
+  "description": "Keeps bb threads in a stable manual order with pinned, snoozed, and settled shelves plus bulk actions.",
+  "icon": "PanelLeft",
+  "tags": ["interface", "sidebar", "threads", "inbox", "productivity"],
+  "author": {
+    "name": "Yusuf Akbulut",
+    "github": "yusuf8834",
+    "url": "https://github.com/yusuf8834"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/yusuf8834/bb-sidebar.git",
+      "range": "^0.1.0"
+    }
+  }
+}
