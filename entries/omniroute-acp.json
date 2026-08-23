@@ -2,7 +2,7 @@
   "id": "omniroute-acp",
   "displayName": "OmniRoute",
   "description": "Bridges BB to a local OmniRoute instance: registers it as an agent provider, exposes its usage/cost metrics via RPC, and provides an omniswarm_spawn tool for fanning tasks out to parallel subagent threads.",
-  "icon": "Zap",
+  "icon": { "url": "./icons/omniroute-acp-aab119f3.svg" },
   "tags": ["provider", "proxy", "routing", "agents", "developer-tools"],
   "author": {
     "name": "nuchareviews-beep",

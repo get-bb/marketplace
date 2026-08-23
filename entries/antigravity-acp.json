@@ -2,7 +2,7 @@
   "id": "antigravity-acp",
   "displayName": "Antigravity",
   "description": "Bridges BB to the local Antigravity CLI (agy): registers it as an agent provider by shelling out to it per turn, with best-effort session continuity across turns in the same thread.",
-  "icon": "Zap",
+  "icon": { "url": "./icons/antigravity-acp-deff7b3b.png" },
   "tags": ["provider", "antigravity", "gemini", "cli", "agents"],
   "author": {
     "name": "nuchareviews-beep",
