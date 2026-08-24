@@ -1,7 +1,7 @@
 {
   "id": "bb-sidebar",
   "displayName": "BB Sidebar",
-  "description": "Keeps bb threads in stable manual order with collapsible Active, Snoozed, and Settled shelves plus bulk actions.",
+  "description": "A T3 Code-inspired sidebar that keeps bb threads in stable manual order with collapsible Active, Snoozed, and Settled shelves plus bulk actions.",
   "icon": "PanelLeft",
   "tags": ["interface", "sidebar", "threads", "inbox", "productivity"],
   "author": {
