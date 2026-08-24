@@ -1,0 +1,18 @@
+{
+  "id": "git-history",
+  "displayName": "Git History",
+  "description": "Shows the complete Git history of a project as a compact commit graph with changed files and per-file diffs.",
+  "icon": "FolderGit",
+  "tags": ["git", "history", "version-control", "diffs", "interface"],
+  "author": {
+    "name": "Yusuf Akbulut",
+    "github": "yusuf8834",
+    "url": "https://github.com/yusuf8834"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/yusuf8834/bb-git-history.git",
+      "range": "^0.1.0"
+    }
+  }
+}
