@@ -3,7 +3,7 @@
   "displayName": "Bots",
   "description": "Adds a Bots panel to the BB sidebar where you create named bots with their own instructions, provider, model, reasoning level and optional project, then chat with them; each bot's instructions are bound per-thread, so a persona applies only inside that bot's own chats.",
   "icon": {
-    "url": "./icons/bots-48f12e36.svg"
+    "url": "./icons/bots-1e02e6a9.svg"
   },
   "tags": [
     "bots",
