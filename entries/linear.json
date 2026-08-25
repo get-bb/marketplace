@@ -23,7 +23,7 @@
   "source": {
     "git": {
       "url": "https://github.com/vburojevic/bb-plugin-linear.git",
-      "range": "^0.1.2"
+      "range": "^0.1.3"
     }
   }
 }
