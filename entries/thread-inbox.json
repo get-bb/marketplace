@@ -1,0 +1,18 @@
+{
+  "id": "thread-inbox",
+  "displayName": "Thread Inbox (w/ Children)",
+  "description": "Replaces the BB thread list with a stable, reorderable inbox that nests child threads and adds parking and bulk actions.",
+  "icon": "PanelLeft",
+  "tags": ["interface", "sidebar", "threads", "inbox", "productivity"],
+  "author": {
+    "name": "WYEZ",
+    "github": "wy3z",
+    "url": "https://github.com/wy3z"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/wy3z/bb-plugin-thread-inbox.git",
+      "range": "^0.2.1"
+    }
+  }
+}
