@@ -1,0 +1,26 @@
+{
+  "id": "auggie",
+  "displayName": "Auggie",
+  "description": "Adds Augment Code's Auggie CLI to bb as an ACP coding-agent provider.",
+  "icon": {
+    "url": "./icons/auggie-49d2d08d.svg"
+  },
+  "tags": [
+    "auggie",
+    "augment-code",
+    "provider",
+    "agents",
+    "acp"
+  ],
+  "author": {
+    "name": "ai-ecoverse",
+    "github": "trieloff",
+    "url": "https://github.com/ai-ecoverse"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/ai-ecoverse/bb-auggie.git",
+      "range": "^0.1.0"
+    }
+  }
+}
