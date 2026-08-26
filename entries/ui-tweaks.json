@@ -18,7 +18,7 @@
   "source": {
     "git": {
       "url": "https://github.com/wy3z/bb-plugin-ui-tweaks.git",
-      "range": "^0.16.0"
+      "range": "^0.17.0"
     }
   }
 }
