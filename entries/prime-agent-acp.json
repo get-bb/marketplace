@@ -1,0 +1,26 @@
+{
+  "id": "prime-agent-acp",
+  "displayName": "Prime Agent (ACP)",
+  "description": "Runs bb threads on Prime Agent through its native ACP protocol, with model discovery and reasoning level support.",
+  "icon": {
+    "url": "./icons/prime-agent-acp-ad265b28.svg"
+  },
+  "tags": [
+    "acp",
+    "providers",
+    "agents",
+    "prime-agent",
+    "prime-intellect"
+  ],
+  "author": {
+    "name": "rawizhere",
+    "github": "rawizhere",
+    "url": "https://github.com/rawizhere"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/rawizhere/bb-plugin-prime-agent-acp.git",
+      "range": "^0.1.0"
+    }
+  }
+}
