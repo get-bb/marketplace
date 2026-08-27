@@ -1,7 +1,7 @@
 {
   "id": "code-review",
   "displayName": "Code Review",
-  "description": "Lists the pull requests awaiting your review, runs your own review skills over one in a BB thread, and turns what it finds into individual GitHub comments you edit and post yourself, each shown beside the code it refers to.",
+  "description": "Lists the GitHub pull requests awaiting your review, runs your own review skills over one in a BB thread, and turns what it finds into individual review comments you edit and post yourself, each shown beside the code it refers to.",
   "icon": {
     "url": "./icons/code-review-10dcfdf9.svg"
   },

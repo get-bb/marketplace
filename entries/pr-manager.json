@@ -1,7 +1,7 @@
 {
   "id": "pr-manager",
   "displayName": "PR Manager",
-  "description": "Shows your open pull requests and recent merges with their CI and review state summarised as waiting, failing, feedback, approved or merged, and opens or links the BB worktree thread for the one you pick.",
+  "description": "Shows your open GitHub pull requests and recent merges with their CI and review state summarised as waiting, failing, feedback, approved or merged, and opens or links the BB worktree thread for the one you pick.",
   "icon": {
     "url": "./icons/pr-manager-64645e85.svg"
   },
