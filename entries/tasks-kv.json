@@ -1,7 +1,7 @@
 {
   "id": "tasks-kv",
   "displayName": "Tasks (KV)",
-  "description": "Plans and tracks work in BB with task dependencies, boards, agent delegation, and linked worker threads.",
+  "description": "Extends BB task planning with force-directed dependency graphs, transitive blocker views, boards, agent delegation, and linked worker threads.",
   "icon": {
     "url": "./icons/tasks-kv-c0dc7351.svg"
   },
