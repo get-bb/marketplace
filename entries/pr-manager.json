@@ -1,0 +1,29 @@
+{
+  "id": "pr-manager",
+  "displayName": "PR Manager",
+  "description": "Shows your open pull requests and recent merges with their CI and review state summarised as waiting, failing, feedback, approved or merged, and opens or links the BB worktree thread for the one you pick.",
+  "icon": {
+    "url": "./icons/pr-manager-64645e85.svg"
+  },
+  "tags": [
+    "pull-requests",
+    "github",
+    "worktrees",
+    "threads",
+    "ci",
+    "status"
+  ],
+  "author": {
+    "name": "Rob Ennals",
+    "github": "robennals",
+    "url": "https://github.com/robennals"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/robennals/bb-plugins.git",
+      "subdir": "plugins/pr-manager",
+      "range": "^0.1.0",
+      "tagPrefix": "pr-manager/"
+    }
+  }
+}

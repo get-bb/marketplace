@@ -1,0 +1,29 @@
+{
+  "id": "code-review",
+  "displayName": "Code Review",
+  "description": "Lists the pull requests awaiting your review, runs your own review skills over one in a BB thread, and turns what it finds into individual GitHub comments you edit and post yourself, each shown beside the code it refers to.",
+  "icon": {
+    "url": "./icons/code-review-10dcfdf9.svg"
+  },
+  "tags": [
+    "code-review",
+    "pull-requests",
+    "github",
+    "agents",
+    "review",
+    "comments"
+  ],
+  "author": {
+    "name": "Rob Ennals",
+    "github": "robennals",
+    "url": "https://github.com/robennals"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/robennals/bb-plugins.git",
+      "subdir": "plugins/code-review",
+      "range": "^0.1.0",
+      "tagPrefix": "code-review/"
+    }
+  }
+}
