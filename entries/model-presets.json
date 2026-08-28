@@ -1,0 +1,31 @@
+{
+  "id": "model-presets",
+  "displayName": "Model Presets",
+  "description": "Adds a preset menu to the New thread composer that sets provider, model, effort, and speed in one step, applies custom instructions to threads started with it, and opens by keyboard shortcut with number keys to pick.",
+  "icon": {
+    "url": "./icons/model-presets-8e82d4e5.svg"
+  },
+  "tags": [
+    "composer",
+    "models",
+    "presets",
+    "keyboard-shortcuts",
+    "instructions",
+    "productivity"
+  ],
+  "author": {
+    "name": "Krzysztof Kraszewski",
+    "github": "xkrsz",
+    "url": "https://github.com/xkrsz"
+  },
+  "engines": {
+    "bb": ">=0.40",
+    "bbPluginSdk": ">=0.4.21"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/xkrsz/bb-model-presets.git",
+      "range": "^0.1.0"
+    }
+  }
+}
