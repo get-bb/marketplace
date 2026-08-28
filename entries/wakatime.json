@@ -1,0 +1,26 @@
+{
+  "id": "wakatime",
+  "displayName": "WakaTime",
+  "description": "Tracks BB agent working time locally with project, machine, model, concurrency, and activity breakdowns.",
+  "icon": {
+    "url": "./icons/wakatime-b1917c34.svg"
+  },
+  "tags": [
+    "time-tracking",
+    "analytics",
+    "productivity",
+    "agents",
+    "local"
+  ],
+  "author": {
+    "name": "Mayank",
+    "github": "MayankBansal12",
+    "url": "https://github.com/MayankBansal12"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/MayankBansal12/bb-plugin-wakatime.git",
+      "range": "^0.5.0"
+    }
+  }
+}
