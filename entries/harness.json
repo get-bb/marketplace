@@ -1,0 +1,27 @@
+{
+  "id": "harness",
+  "displayName": "Harness",
+  "description": "Adds an opt-in Explore, Plan, Worker, Critic, and Promote workflow to BB threads with explicit DAGs, role routing, audit artifacts, and custom Harness definitions.",
+  "icon": {
+    "url": "./icons/harness-80394649.svg"
+  },
+  "tags": [
+    "agents",
+    "developer-tools",
+    "workflows",
+    "planning",
+    "reviews",
+    "orchestration"
+  ],
+  "author": {
+    "name": "lutfikeskin",
+    "github": "lutfikeskin",
+    "url": "https://github.com/lutfikeskin"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/lutfikeskin/bb-plugin-harness.git",
+      "range": "^0.1.0"
+    }
+  }
+}
