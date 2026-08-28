@@ -11,7 +11,7 @@
   "source": {
     "git": {
       "url": "https://github.com/nuchareviews-beep/bb-plugin-omniroute-acp.git",
-      "range": "^0.1.0"
+      "range": "^0.1.5"
     }
   }
 }
