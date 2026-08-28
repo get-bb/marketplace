@@ -18,10 +18,6 @@
     "github": "xkrsz",
     "url": "https://github.com/xkrsz"
   },
-  "engines": {
-    "bb": ">=0.40",
-    "bbPluginSdk": ">=0.4.21"
-  },
   "source": {
     "git": {
       "url": "https://github.com/xkrsz/bb-model-presets.git",
