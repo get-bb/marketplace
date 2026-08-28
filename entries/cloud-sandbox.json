@@ -1,0 +1,25 @@
+{
+  "id": "cloud-sandbox",
+  "displayName": "Cloud Machines",
+  "description": "Creates bb machines on Vercel Sandboxes from reusable templates that bake in tooling and inject agent credentials at creation, so a remote machine is ready to run threads without manual setup.",
+  "icon": "Cloud",
+  "tags": [
+    "machines",
+    "vercel",
+    "sandboxes",
+    "remote-development",
+    "agents",
+    "infrastructure"
+  ],
+  "author": {
+    "name": "Andrew Chan",
+    "github": "andrewkchan",
+    "url": "https://github.com/andrewkchan"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/andrewkchan/bb-plugin-cloud-sandbox.git",
+      "range": "^0.1.0"
+    }
+  }
+}
