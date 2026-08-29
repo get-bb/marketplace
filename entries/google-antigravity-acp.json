@@ -1,9 +1,9 @@
 {
-  "id": "antigravity-acp",
+  "id": "google-antigravity-acp",
   "displayName": "Google Antigravity (ACP)",
   "description": "Adds Google Antigravity as a bb agent provider through its official ACP server (agy_acp_server.par), with the same provider bridge as bb's built-in ACP agents.",
   "icon": {
-    "url": "./icons/antigravity-acp-ef068db2.svg"
+    "url": "./icons/google-antigravity-acp-ef068db2.svg"
   },
   "tags": [
     "acp",
@@ -20,7 +20,7 @@
   "source": {
     "git": {
       "url": "https://github.com/rawizhere/bb-plugin-antigravity-acp.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   }
 }
