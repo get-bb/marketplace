@@ -1,9 +1,9 @@
 {
   "id": "auggie",
   "displayName": "Auggie",
-  "description": "Adds Augment Code's Auggie CLI to bb as an ACP coding-agent provider.",
+  "description": "Registers Augment Code's Auggie CLI as the acp-auggie provider in bb.",
   "icon": {
-    "url": "./icons/auggie-49d2d08d.svg"
+    "url": "./icons/auggie-758c27ad.svg"
   },
   "tags": [
     "auggie",
