@@ -1,7 +1,7 @@
 {
   "id": "prime-agent-acp",
   "displayName": "Prime Agent (ACP)",
-  "description": "Runs bb threads on Prime Agent through its native ACP protocol, with model discovery and reasoning level support.",
+  "description": "Runs bb threads on Prime Agent (by Prime Intellect) through its native ACP protocol, with model discovery and reasoning level support. Installing the provider requires an explicit `bb prime-agent install` command that downloads and installs the official prime-agent binary from Prime Intellect; thread content is processed by Prime Intellect.",
   "icon": {
     "url": "./icons/prime-agent-acp-ad265b28.svg"
   },
