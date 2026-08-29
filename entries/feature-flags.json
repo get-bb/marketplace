@@ -1,0 +1,24 @@
+{
+  "id": "feature-flags",
+  "displayName": "LaunchDarkly Feature Flags",
+  "description": "See and manage LaunchDarkly feature flags from the bb sidebar: toggle each flag per environment and filter by maintainer, status, type, and tag.",
+  "icon": "SlidersHorizontal",
+  "tags": [
+    "launchdarkly",
+    "feature-flags",
+    "feature-toggles",
+    "flags",
+    "devops",
+    "release-management"
+  ],
+  "author": {
+    "name": "Maciej Kucharek",
+    "github": "mkucharek"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/mkucharek/bb-plugin-feature-flags.git",
+      "range": "^0.3.0"
+    }
+  }
+}
