@@ -1,9 +1,9 @@
 {
   "id": "droid",
   "displayName": "Factory Droid",
-  "description": "Adds Factory Droid to bb as an ACP coding-agent provider.",
+  "description": "Adds Factory.ai's Droid CLI to bb as an ACP coding-agent provider.",
   "icon": {
-    "url": "./icons/droid-2623b5ec.svg"
+    "url": "./icons/droid-0f671277.svg"
   },
   "tags": [
     "droid",
@@ -20,7 +20,7 @@
   "source": {
     "git": {
       "url": "https://github.com/ai-ecoverse/bb-droid.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   }
 }
