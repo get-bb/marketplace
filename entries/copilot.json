@@ -1,9 +1,9 @@
 {
   "id": "copilot",
   "displayName": "GitHub Copilot",
-  "description": "Adds GitHub Copilot CLI to bb as an ACP coding-agent provider.",
+  "description": "Registers GitHub Copilot CLI as the acp-copilot provider in bb.",
   "icon": {
-    "url": "./icons/copilot-cdaf2167.svg"
+    "url": "./icons/copilot-bbc37c3b.svg"
   },
   "tags": [
     "copilot",
@@ -20,7 +20,7 @@
   "source": {
     "git": {
       "url": "https://github.com/ai-ecoverse/bb-copilot.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   }
 }

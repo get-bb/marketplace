@@ -1,7 +1,7 @@
 {
   "id": "droid",
   "displayName": "Factory Droid",
-  "description": "Adds Factory.ai's Droid CLI to bb as an ACP coding-agent provider.",
+  "description": "Registers Factory.ai's Droid CLI as the acp-droid provider in bb.",
   "icon": {
     "url": "./icons/droid-0f671277.svg"
   },
