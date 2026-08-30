@@ -1,0 +1,20 @@
+{
+  "id": "operator-inbox",
+  "displayName": "Operator Inbox",
+  "description": "Adds a project-scoped inbox where BB agents leave durable messages and operators reply through native threads.",
+  "icon": {
+    "url": "./icons/operator-inbox-ba921be7.svg"
+  },
+  "tags": ["inbox", "messages", "agent-tools", "threads", "productivity"],
+  "author": {
+    "name": "pixexid",
+    "github": "pixexid",
+    "url": "https://github.com/pixexid"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/pixexid/bb-plugin-operator-inbox.git",
+      "range": "^0.1.0"
+    }
+  }
+}
