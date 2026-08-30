@@ -1,0 +1,27 @@
+{
+  "id": "files-editor",
+  "displayName": "Files",
+  "description": "Browse and edit the workspace behind a thread in an editor layout: a searchable file tree on the left, tabs across the top, and the whole file in the middle. Opens as a full-page panel or as a tab beside a thread, where it is pinned to that thread's worktree so it shows the files the agent is editing. Cmd+P ranks files by path; clicking one opens it in its own tab, syntax-highlighted in your BB code theme. Saves are guarded by the hash the file had when it was opened, so an edit an agent made underneath you stops the save and offers Reload or Overwrite. For a workspace on the machine BB runs on it walks the directory itself, so dotfiles appear. Adds a `bb files` command that gives agents the same listing, which reads the right disk when the workspace is on another machine.",
+  "icon": {
+    "url": "./icons/files-editor-43529076.svg"
+  },
+  "tags": [
+    "files",
+    "editor",
+    "file-explorer",
+    "code",
+    "interface",
+    "developer-tools"
+  ],
+  "author": {
+    "name": "AbdElrahman Telb",
+    "github": "abdoutelb",
+    "url": "https://github.com/abdoutelb"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/abdoutelb/bb-plugin-files-editor.git",
+      "range": "^0.1.2"
+    }
+  }
+}
