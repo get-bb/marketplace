@@ -1,0 +1,30 @@
+{
+  "id": "prompt-log",
+  "displayName": "Prompt Log",
+  "description": "Lists every prompt you sent in a thread in a Prompts side-panel tab, newest first and grouped by day, with a filter, a marker on the prompt being worked on, and a button that puts any earlier prompt back in the composer.",
+  "icon": {
+    "url": "./icons/prompt-log-f852a04d.svg"
+  },
+  "tags": [
+    "prompt",
+    "history",
+    "threads",
+    "sidebar",
+    "interface",
+    "composer",
+    "filtering"
+  ],
+  "author": {
+    "name": "Pablo Oliva",
+    "github": "pablooliva",
+    "url": "https://github.com/pablooliva"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/pablooliva/bb-ide-session-prompts.git",
+      "subdir": "bb-plugin-prompt-log",
+      "range": "^0.1.0",
+      "tagPrefix": "prompt-log/"
+    }
+  }
+}
