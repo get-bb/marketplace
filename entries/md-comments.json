@@ -1,0 +1,17 @@
+{
+  "id": "md-comments",
+  "displayName": "Md Comments",
+  "description": "Inline comments on markdown files opened in the side panel, anchored to quoted text instead of line numbers, sent to the agent as one batch message.",
+  "icon": "MessageSquare",
+  "tags": ["markdown", "comments", "review", "agent-tools", "productivity"],
+  "author": {
+    "name": "Yegor Korobeynikov",
+    "github": "yegor-korobeynikov"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/yegor-korobeynikov/bb-plugin-md-comments.git",
+      "range": "^1.0.0"
+    }
+  }
+}
