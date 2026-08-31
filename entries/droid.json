@@ -20,7 +20,7 @@
   "source": {
     "git": {
       "url": "https://github.com/ai-ecoverse/bb-droid.git",
-      "range": "^0.2.0"
+      "range": "^0.3.0"
     }
   }
 }

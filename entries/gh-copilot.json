@@ -1,9 +1,9 @@
 {
-  "id": "copilot",
+  "id": "gh-copilot",
   "displayName": "GitHub Copilot",
-  "description": "Registers GitHub Copilot CLI as the acp-copilot provider in bb.",
+  "description": "Registers GitHub Copilot CLI as the acp-gh-copilot provider in bb.",
   "icon": {
-    "url": "./icons/copilot-bbc37c3b.svg"
+    "url": "./icons/gh-copilot-bbc37c3b.svg"
   },
   "tags": [
     "copilot",
@@ -19,8 +19,8 @@
   },
   "source": {
     "git": {
-      "url": "https://github.com/ai-ecoverse/bb-copilot.git",
-      "range": "^0.2.0"
+      "url": "https://github.com/ai-ecoverse/bb-gh-copilot.git",
+      "range": "^0.4.0"
     }
   }
 }
