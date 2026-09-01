@@ -1,0 +1,28 @@
+{
+  "id": "bb-agent-toolbox",
+  "displayName": "BB Agent Toolbox",
+  "description": "Gives any coding agent (opencode, Prime Agent, Google Antigravity, Codex, Claude Code, and more) direct tools for bb: read and edit workspace files, inspect and message other threads, delegate work by spawning threads, and see running terminals.",
+  "icon": {
+    "url": "./icons/bb-agent-toolbox-7ffa1afd.svg"
+  },
+  "tags": [
+    "agents",
+    "tools",
+    "threads",
+    "workspace",
+    "terminals",
+    "orchestration",
+    "multi-agent"
+  ],
+  "author": {
+    "name": "rawizhere",
+    "github": "rawizhere",
+    "url": "https://github.com/rawizhere"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/rawizhere/bb-plugin-bb-agent-toolbox.git",
+      "range": "^0.1.0"
+    }
+  }
+}
