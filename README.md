@@ -22,6 +22,8 @@ One entry file supplies data to both documents.
 - `scripts/build-stats.mjs` builds the install-count document.
 
 The build writes `dist/marketplace.json` and `dist/v2/marketplace.json`.
+The base file carries the v1 identity and keeps `schemaVersion` set to `1`.
+The build sets `schemaVersion` to `2` in the v2 output.
 
 ## Submit a plugin
 
@@ -40,7 +42,8 @@ The `author.github` value identifies the owner for later entry changes.
 A semver `range` source uses release tags from the plugin repository.
 Use a new marketplace pull request for a source, name, or brand change.
 
-BB does not install a plugin during a catalog refresh.
+BB installs nothing automatically.
+A catalog refresh does not install a plugin.
 A user controls each plugin installation and update.
 
 ## Categories
@@ -50,8 +53,7 @@ An entry can use one category ID from this array.
 
 The v2 schema permits an entry without a category.
 This repository requires a category for each new or changed entry.
-CI reports a warning for each unchanged entry without a category.
-R2 will add categories to the existing entries.
+CI reports a warning when unchanged entries have no category.
 
 ## Collections
 
@@ -60,8 +62,8 @@ Each `pluginIds` value must name an entry and must occur only once.
 
 The first collection has the ID `new-and-notable`.
 An empty `pluginIds` array tells the build to select eight entries.
-The build uses `publishedAt` after all entries have that field.
-Until then, the build uses the most recent entry changes from the Git history.
+The build uses the entry `publishedAt` value when it is present.
+Otherwise, the build uses the committer date of the first commit that added the entry file.
 
 ## Screenshots and icons
 
@@ -77,7 +79,7 @@ Use this form in the entry:
 
 Each referenced screenshot file must exist.
 The file must use PNG, JPEG, or WebP image data.
-The file size must not exceed 2 MB.
+The file size must not exceed 2 MiB.
 The image width must be at least 1200 pixels.
 
 The build changes each local screenshot path to a v2 CDN URL.
@@ -101,10 +103,15 @@ A push to `main` only reports a warning after such a change.
 [The install-count document](https://getbb.app/marketplace/v1/stats.json) reports public plugin installations.
 BB reads this document during each catalog refresh.
 The document stays separate because the v1 marketplace schema is strict.
+Bundled BB plugins also appear in this document.
+They do not need files under `entries/`.
+BB ignores `stats.json` documents from third-party marketplaces.
+Install counts are BB measurements, not publisher claims.
 
 The scheduled workflow gets counts from the `plugin_installed` PostHog event.
 The workflow publishes no update when PostHog returns no counts.
 This rule keeps the last valid document available.
+Set `POSTHOG_HOST` when the PostHog project does not use the US cloud.
 
 Use this command to print the document without publication:
 

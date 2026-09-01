@@ -1,4 +1,5 @@
-import { existsSync, readFileSync, statSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 export const V1_ENTRY_FIELDS = Object.freeze([
@@ -155,6 +156,79 @@ export function compareV1EntryBytes(liveText, candidateText) {
     changed: changed.sort(),
     removed: removed.sort(),
   };
+}
+
+export function v1GateDisposition(
+  event,
+  {
+    eventName = process.env.GITHUB_EVENT_NAME,
+    ref = process.env.GITHUB_REF,
+  } = {},
+) {
+  if (
+    eventName === "push" &&
+    (event.ref === "refs/heads/main" || ref === "refs/heads/main")
+  ) {
+    return "push-warning";
+  }
+  const hasLabel = (event.pull_request?.labels ?? []).some(
+    (label) => label.name === "v1-change",
+  );
+  return hasLabel ? "label-override" : "failure";
+}
+
+export async function fetchMarketplaceText(
+  url,
+  {
+    fetchImpl = globalThis.fetch,
+    timeoutMs = 15_000,
+    retries = 2,
+    onRetry = () => {},
+  } = {},
+) {
+  let lastError;
+  for (let attempt = 0; attempt <= retries; attempt += 1) {
+    try {
+      const response = await fetchImpl(url, {
+        signal: AbortSignal.timeout(timeoutMs),
+      });
+      if (!response.ok) {
+        throw new Error(`The server returned HTTP ${response.status}.`);
+      }
+      return await response.text();
+    } catch (error) {
+      lastError = error;
+      if (attempt < retries) onRetry(error, attempt + 1);
+    }
+  }
+  throw lastError;
+}
+
+export function pullRequestEntryFiles(root, event, run = execFileSync) {
+  if (event.pull_request === undefined) return [];
+  const baseSha = event.pull_request.base?.sha;
+  const headSha = event.pull_request.head?.sha;
+  if (typeof baseSha !== "string" || typeof headSha !== "string") {
+    throw new Error("The pull request event has no base or head commit.");
+  }
+
+  return run(
+    "git",
+    [
+      "-C",
+      root,
+      "diff",
+      "--name-only",
+      "--diff-filter=AMR",
+      `${baseSha}...${headSha}`,
+      "--",
+      ":(glob)entries/*.json",
+    ],
+    { encoding: "utf8", timeout: 30_000 },
+  )
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
 }
 
 export function checkRequiredCategories(entryRecords, changedEntryFiles) {
@@ -340,25 +414,26 @@ export function validateScreenshotReference(root, pluginId, reference) {
   }
 
   const path = join(root, "screenshots", pluginId, parsed.filename);
+  const relativeFile = `screenshots/${pluginId}/${parsed.filename}`;
   if (!existsSync(path)) {
     problems.push(`The screenshot file does not exist: ${path}`);
-    return { outputUrl: parsed.outputUrl, problems };
+    return { outputUrl: parsed.outputUrl, relativeFile, problems };
   }
 
   const stat = statSync(path);
   if (!stat.isFile()) {
     problems.push(`The screenshot path is not a file: ${path}`);
-    return { outputUrl: parsed.outputUrl, problems };
+    return { outputUrl: parsed.outputUrl, relativeFile, problems };
   }
   if (stat.size > SCREENSHOT_MAX_BYTES) {
-    problems.push(`The screenshot file is larger than 2 MB: ${path}`);
-    return { outputUrl: parsed.outputUrl, problems };
+    problems.push(`The screenshot file is larger than 2 MiB: ${path}`);
+    return { outputUrl: parsed.outputUrl, relativeFile, problems };
   }
 
   const image = inspectImage(readFileSync(path));
   if (image === undefined) {
     problems.push(`The screenshot file is not a PNG, JPEG, or WebP image: ${path}`);
-    return { outputUrl: parsed.outputUrl, problems };
+    return { outputUrl: parsed.outputUrl, relativeFile, problems };
   }
   if (image.format !== expectedImageFormat(parsed.filename)) {
     problems.push(`The screenshot extension does not match its image format: ${path}`);
@@ -367,7 +442,28 @@ export function validateScreenshotReference(root, pluginId, reference) {
     problems.push(`The screenshot width is less than 1200 pixels: ${path}`);
   }
 
-  return { outputUrl: parsed.outputUrl, problems };
+  return { outputUrl: parsed.outputUrl, relativeFile, problems };
+}
+
+function screenshotFiles(directory, prefix = "") {
+  const files = [];
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    const relative = prefix.length === 0 ? entry.name : `${prefix}/${entry.name}`;
+    if (entry.isDirectory()) {
+      files.push(...screenshotFiles(join(directory, entry.name), relative));
+    } else {
+      files.push(`screenshots/${relative}`);
+    }
+  }
+  return files;
+}
+
+export function findOrphanScreenshotFiles(root, referencedFiles) {
+  const directory = join(root, "screenshots");
+  if (!existsSync(directory)) return [];
+  return screenshotFiles(directory)
+    .filter((file) => !referencedFiles.has(file))
+    .sort();
 }
 
 export function validateAndRewriteIcon(root, icon) {
@@ -414,18 +510,28 @@ function timeValue(value) {
   return Number.isNaN(time) ? Number.NEGATIVE_INFINITY : time;
 }
 
-export function fillEmptyCollections(collections, plugins, modifiedAtById) {
-  const allHavePublishedAt =
-    plugins.length > 0 &&
-    plugins.every((plugin) => typeof plugin.publishedAt === "string");
+export function parseEntryAddedDates(output) {
+  const dates = new Map();
+  let commitDate;
+  for (const rawLine of output.split("\n")) {
+    const line = rawLine.trim();
+    if (line.startsWith("date:")) {
+      commitDate = line.slice("date:".length);
+      continue;
+    }
+    const match = line.match(/^entries\/([^/]+)\.json$/);
+    if (match !== null && commitDate !== undefined) {
+      dates.set(match[1], commitDate);
+    }
+  }
+  return dates;
+}
+
+export function fillEmptyCollections(collections, plugins, addedAtById) {
   const fallbackIds = [...plugins]
     .sort((left, right) => {
-      const leftDate = allHavePublishedAt
-        ? left.publishedAt
-        : modifiedAtById.get(left.id);
-      const rightDate = allHavePublishedAt
-        ? right.publishedAt
-        : modifiedAtById.get(right.id);
+      const leftDate = left.publishedAt ?? addedAtById.get(left.id);
+      const rightDate = right.publishedAt ?? addedAtById.get(right.id);
       return timeValue(rightDate) - timeValue(leftDate) || left.id.localeCompare(right.id);
     })
     .slice(0, 8)

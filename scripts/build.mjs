@@ -9,8 +9,11 @@ import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import {
   checkRequiredCategories,
+  findOrphanScreenshotFiles,
   fillEmptyCollections,
+  parseEntryAddedDates,
   projectV1Manifest,
+  pullRequestEntryFiles,
   validateAndRewriteIcon,
   validateScreenshotReference,
 } from "./marketplace-lib.mjs";
@@ -70,7 +73,7 @@ for (const file of entryFiles) {
   entryRecords.push({ entry, file });
 }
 
-function pullRequestEntryFiles() {
+function changedPullRequestEntryFiles() {
   const eventPath = process.env.GITHUB_EVENT_PATH;
   if (eventPath === undefined) return [];
 
@@ -81,32 +84,8 @@ function pullRequestEntryFiles() {
     problems.push(`The GitHub event file is not valid JSON. ${error.message}`);
     return [];
   }
-  if (event.pull_request === undefined) return [];
-
-  const baseSha = event.pull_request.base?.sha;
-  const headSha = event.pull_request.head?.sha;
-  if (typeof baseSha !== "string" || typeof headSha !== "string") {
-    problems.push("The pull request event has no base or head commit.");
-    return [];
-  }
   try {
-    return execFileSync(
-      "git",
-      [
-        "-C",
-        root,
-        "diff",
-        "--name-only",
-        "--diff-filter=AMR",
-        `${baseSha}...${headSha}`,
-        "--",
-        ":(glob)entries/*.json",
-      ],
-      { encoding: "utf8", timeout: 30_000 },
-    )
-      .split("\n")
-      .map((line) => line.trim())
-      .filter(Boolean);
+    return pullRequestEntryFiles(root, event);
   } catch (error) {
     const reason = error.message.split("\n")[0];
     problems.push(`The build cannot find changed entry files. ${reason}`);
@@ -116,14 +95,14 @@ function pullRequestEntryFiles() {
 
 const categoryPolicy = checkRequiredCategories(
   entryRecords,
-  pullRequestEntryFiles(),
+  changedPullRequestEntryFiles(),
 );
 for (const file of categoryPolicy.errors) {
   problems.push(`${file}: A new or changed entry must have a category.`);
 }
 if (categoryPolicy.warnings.length > 0) {
   warnings.push(
-    `${categoryPolicy.warnings.length} unchanged entry files have no category. R2 will add these categories.`,
+    `${categoryPolicy.warnings.length} unchanged entry files have no category.`,
   );
 }
 
@@ -161,6 +140,7 @@ for (const entry of plugins) {
   }
 }
 
+const referencedScreenshotFiles = new Set();
 const v2Plugins = plugins.map((entry) => {
   const output = { ...entry };
   const iconResult = validateAndRewriteIcon(root, entry.icon);
@@ -175,39 +155,70 @@ const v2Plugins = plugins.map((entry) => {
       for (const problem of result.problems) {
         problems.push(`${entry.id}.json: ${problem}`);
       }
+      if (result.relativeFile !== undefined) {
+        referencedScreenshotFiles.add(result.relativeFile);
+      }
       return result.outputUrl;
     });
   }
   return output;
 });
 
-function lastModifiedDates() {
-  const result = new Map();
+for (const file of findOrphanScreenshotFiles(root, referencedScreenshotFiles)) {
+  problems.push(`${file}: No marketplace entry references this screenshot file.`);
+}
+
+function entryAddedDates() {
   const needsFallback = (base.collections ?? []).some(
     (collection) => collection.pluginIds?.length === 0,
   );
-  if (!needsFallback) return result;
+  if (!needsFallback) return new Map();
 
-  for (const { entry, file } of entryRecords) {
-    try {
-      const date = execFileSync(
-        "git",
-        ["-C", root, "log", "-1", "--format=%aI", "--", `entries/${file}`],
-        { encoding: "utf8", timeout: 30_000 },
-      ).trim();
-      if (date.length > 0) result.set(entry.id, date);
-    } catch (error) {
-      const reason = error.message.split("\n")[0];
-      problems.push(`${file}: The build cannot read the last change date. ${reason}`);
+  try {
+    const shallow = execFileSync(
+      "git",
+      ["-C", root, "rev-parse", "--is-shallow-repository"],
+      { encoding: "utf8", timeout: 30_000 },
+    ).trim();
+    if (shallow === "true") {
+      problems.push(
+        "The repository is shallow. The build needs full Git history for the new-and-notable collection.",
+      );
+      return new Map();
     }
+    const output = execFileSync(
+      "git",
+      [
+        "-C",
+        root,
+        "log",
+        "--diff-filter=A",
+        "--follow",
+        "--format=date:%cI",
+        "--name-only",
+        "--",
+        "entries/",
+      ],
+      { encoding: "utf8", timeout: 30_000 },
+    );
+    const dates = parseEntryAddedDates(output);
+    for (const { entry, file } of entryRecords) {
+      if (entry.publishedAt === undefined && !dates.has(entry.id)) {
+        problems.push(`${file}: The Git history has no first addition date.`);
+      }
+    }
+    return dates;
+  } catch (error) {
+    const reason = error.message.split("\n")[0];
+    problems.push(`The build cannot read entry addition dates. ${reason}`);
+    return new Map();
   }
-  return result;
 }
 
 const collections = fillEmptyCollections(
   base.collections ?? [],
   v2Plugins,
-  lastModifiedDates(),
+  entryAddedDates(),
 );
 const v1Manifest = projectV1Manifest(base, plugins);
 const v2Manifest = {

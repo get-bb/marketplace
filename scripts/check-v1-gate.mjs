@@ -3,7 +3,11 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { compareV1EntryBytes } from "./marketplace-lib.mjs";
+import {
+  compareV1EntryBytes,
+  fetchMarketplaceText,
+  v1GateDisposition,
+} from "./marketplace-lib.mjs";
 
 const LIVE_V1_URL = "https://getbb.app/marketplace/v1/marketplace.json";
 const root = fileURLToPath(new URL("..", import.meta.url));
@@ -14,27 +18,27 @@ function readEvent() {
   return JSON.parse(readFileSync(path, "utf8"));
 }
 
-function hasV1ChangeLabel(event) {
-  return (event.pull_request?.labels ?? []).some(
-    (label) => label.name === "v1-change",
-  );
+let event;
+try {
+  event = readEvent();
+} catch (error) {
+  console.error(`error: The v1 gate cannot read the GitHub event. ${error.message}`);
+  process.exit(1);
 }
-
-function isPushToMain(event) {
-  return (
-    process.env.GITHUB_EVENT_NAME === "push" &&
-    (event.ref === "refs/heads/main" || process.env.GITHUB_REF === "refs/heads/main")
-  );
-}
+const disposition = v1GateDisposition(event);
 
 let liveText;
 try {
-  const response = await fetch(LIVE_V1_URL);
-  if (!response.ok) {
-    throw new Error(`The server returned HTTP ${response.status}.`);
-  }
-  liveText = await response.text();
+  liveText = await fetchMarketplaceText(LIVE_V1_URL, {
+    onRetry: (error, retry) => {
+      console.warn(`warning: The v1 fetch retry ${retry} will start. ${error.message}`);
+    },
+  });
 } catch (error) {
+  if (disposition === "push-warning") {
+    console.warn(`warning: The v1 gate cannot read ${LIVE_V1_URL}. ${error.message}`);
+    process.exit(0);
+  }
   console.error(`error: The v1 gate cannot read ${LIVE_V1_URL}. ${error.message}`);
   process.exit(1);
 }
@@ -69,19 +73,12 @@ const details = [
     ? []
     : [`removed entries: ${result.removed.join(", ")}`]),
 ].join("; ");
-let event;
-try {
-  event = readEvent();
-} catch (error) {
-  console.error(`error: The v1 gate cannot read the GitHub event. ${error.message}`);
-  process.exit(1);
-}
 
-if (isPushToMain(event)) {
+if (disposition === "push-warning") {
   console.warn(`warning: The push changed frozen v1 entries. ${details}`);
   process.exit(0);
 }
-if (hasV1ChangeLabel(event)) {
+if (disposition === "label-override") {
   console.warn(`warning: The v1-change label permits these changes. ${details}`);
   process.exit(0);
 }
