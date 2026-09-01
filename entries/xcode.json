@@ -24,7 +24,7 @@
   "source": {
     "git": {
       "url": "https://github.com/vburojevic/bb-plugin-xcode.git",
-      "range": "^0.2.0"
+      "range": "^0.3.0"
     }
   }
 }
