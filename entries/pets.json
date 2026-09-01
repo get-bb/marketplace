@@ -7,8 +7,9 @@
   },
   "tags": ["companion", "interface", "pixel-art", "threads", "ai-art"],
   "author": {
-    "name": "Vedran Burojevic",
-    "github": "vburojevic"
+    "name": "Vedran Burojević",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
   },
   "source": {
     "git": {
