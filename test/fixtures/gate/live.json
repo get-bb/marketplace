@@ -1,0 +1,6 @@
+{
+  "plugins": [
+    { "id": "alpha", "description": "Alpha" },
+    { "id": "beta", "description": "Beta" }
+  ]
+}

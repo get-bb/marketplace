@@ -6,7 +6,9 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "build:stats": "node scripts/build-stats.mjs",
-    "check": "node scripts/build.mjs --liveness"
+    "check": "node scripts/build.mjs --liveness",
+    "gate:v1": "node scripts/check-v1-gate.mjs",
+    "test": "node --test"
   },
   "devDependencies": {
     "ajv": "^8.17.1",

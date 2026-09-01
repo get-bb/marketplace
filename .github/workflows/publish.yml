@@ -9,10 +9,14 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm ci
       - run: npm run build
+      - name: Check frozen v1 entries
+        if: github.event_name == 'push'
+        run: npm run gate:v1
       # Icons upload first so the manifest never references a missing object.
       - name: Upload icons
         env:
@@ -31,4 +35,30 @@ jobs:
         run: |
           npx wrangler@4 r2 object put "bb-marketplace/marketplace.json" \
             --file dist/marketplace.json \
+            --content-type application/json --remote
+      - name: Upload screenshots
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [[ ! -d screenshots ]]; then
+            exit 0
+          fi
+          while IFS= read -r -d '' screenshot; do
+            case "$screenshot" in
+              *.png) content_type="image/png" ;;
+              *.jpg|*.jpeg) content_type="image/jpeg" ;;
+              *.webp) content_type="image/webp" ;;
+              *) echo "Unsupported screenshot file: $screenshot" >&2; exit 1 ;;
+            esac
+            npx wrangler@4 r2 object put "bb-marketplace/v2/${screenshot#./}" \
+              --file "$screenshot" --content-type "$content_type" --remote
+          done < <(find screenshots -type f -print0 | sort -z)
+      - name: Upload v2 manifest
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx wrangler@4 r2 object put "bb-marketplace/v2/marketplace.json" \
+            --file dist/v2/marketplace.json \
             --content-type application/json --remote

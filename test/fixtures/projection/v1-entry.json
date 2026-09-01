@@ -1,0 +1,9 @@
+{
+  "id": "example-plugin",
+  "displayName": "Example Plugin",
+  "description": "Adds an example tool.",
+  "icon": { "url": "./icons/example-plugin.svg" },
+  "tags": ["example"],
+  "author": { "name": "Example Author", "github": "example" },
+  "source": { "npm": { "package": "example-plugin" } }
+}
