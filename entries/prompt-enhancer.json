@@ -16,6 +16,7 @@
     "name": "Vedran Burojević",
     "github": "vburojevic"
   },
+  "category": "thread-content",
   "source": {
     "git": {
       "url": "https://github.com/vburojevic/bb-plugin-prompt-enhancer.git",

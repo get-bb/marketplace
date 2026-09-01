@@ -15,6 +15,7 @@
     "github": "wjin17",
     "url": "https://github.com/wjin17"
   },
+  "category": "agents-and-providers",
   "source": {
     "git": {
       "url": "https://github.com/wjin17/bb-plugin-provider-authentication.git",

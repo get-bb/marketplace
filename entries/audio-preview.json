@@ -17,6 +17,7 @@
     "github": "braedonsaunders",
     "url": "https://github.com/braedonsaunders"
   },
+  "category": "file-viewers-and-editors",
   "source": {
     "git": {
       "url": "https://github.com/braedonsaunders/bb-plugin-audio-preview.git",

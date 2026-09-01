@@ -9,6 +9,7 @@
     "github": "divyesh-puri",
     "url": "https://github.com/divyesh-puri"
   },
+  "category": "agents-and-providers",
   "source": {
     "git": {
       "url": "https://github.com/divyesh-puri/bb-plugin-companion-chat.git",

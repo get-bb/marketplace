@@ -9,6 +9,7 @@
     "github": "suiramdev",
     "url": "https://github.com/suiramdev"
   },
+  "category": "thread-management",
   "source": {
     "git": {
       "url": "https://github.com/suiramdev/bb-plugin-thread-namer.git",

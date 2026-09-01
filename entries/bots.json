@@ -19,6 +19,7 @@
     "github": "prakashchokalingam",
     "url": "https://github.com/prakashchokalingam"
   },
+  "category": "agents-and-providers",
   "source": {
     "git": {
       "url": "https://github.com/prakashchokalingam/bb-plugin-bots.git",

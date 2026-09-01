@@ -14,6 +14,7 @@
     "name": "Sawyer Hood",
     "github": "SawyerHood"
   },
+  "category": "code-and-reviews",
   "source": {
     "git": {
       "url": "https://github.com/SawyerHood/bb-slop-cop.git",

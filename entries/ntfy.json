@@ -16,6 +16,7 @@
     "github": "slogsdon",
     "url": "https://github.com/slogsdon"
   },
+  "category": "notifications",
   "source": {
     "npm": {
       "package": "bb-plugin-ntfy",

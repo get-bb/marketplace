@@ -18,6 +18,7 @@
     "github": "abdoutelb",
     "url": "https://github.com/abdoutelb"
   },
+  "category": "file-viewers-and-editors",
   "source": {
     "git": {
       "url": "https://github.com/abdoutelb/bb-plugin-files-editor.git",

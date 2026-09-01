@@ -16,6 +16,7 @@
     "github": "gtramontina",
     "url": "https://github.com/gtramontina"
   },
+  "category": "notifications",
   "source": {
     "git": {
       "url": "https://github.com/gtramontina/bb-plugin-chime.git",

@@ -18,6 +18,7 @@
     "github": "xkrsz",
     "url": "https://github.com/xkrsz"
   },
+  "category": "agents-and-providers",
   "source": {
     "git": {
       "url": "https://github.com/xkrsz/bb-model-presets.git",

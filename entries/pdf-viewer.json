@@ -19,6 +19,7 @@
     "github": "xMinor-1",
     "url": "https://github.com/xMinor-1"
   },
+  "category": "file-viewers-and-editors",
   "source": {
     "git": {
       "url": "https://github.com/xMinor-1/bb-plugins.git",

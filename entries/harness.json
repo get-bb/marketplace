@@ -18,6 +18,7 @@
     "github": "lutfikeskin",
     "url": "https://github.com/lutfikeskin"
   },
+  "category": "tasks-and-workflows",
   "source": {
     "git": {
       "url": "https://github.com/lutfikeskin/bb-plugin-harness.git",

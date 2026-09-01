@@ -18,6 +18,7 @@
     "github": "pedroapfilho",
     "url": "https://github.com/pedroapfilho"
   },
+  "category": "agents-and-providers",
   "source": {
     "git": {
       "url": "https://github.com/pedroapfilho/bb-plugin-tokenmaxx.git",

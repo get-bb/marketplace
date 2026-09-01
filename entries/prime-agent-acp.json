@@ -17,6 +17,7 @@
     "github": "rawizhere",
     "url": "https://github.com/rawizhere"
   },
+  "category": "agents-and-providers",
   "source": {
     "git": {
       "url": "https://github.com/rawizhere/bb-plugin-prime-agent-acp.git",

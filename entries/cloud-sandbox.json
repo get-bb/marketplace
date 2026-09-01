@@ -16,6 +16,7 @@
     "github": "andrewkchan",
     "url": "https://github.com/andrewkchan"
   },
+  "category": "cloud-and-remote",
   "source": {
     "git": {
       "url": "https://github.com/andrewkchan/bb-plugin-cloud-sandbox.git",

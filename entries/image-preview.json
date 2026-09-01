@@ -16,6 +16,7 @@
     "github": "Dwite",
     "url": "https://github.com/Dwite"
   },
+  "category": "thread-content",
   "source": {
     "git": {
       "url": "https://github.com/Dwite/bb-plugin-image-preview.git",

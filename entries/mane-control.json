@@ -11,6 +11,7 @@
     "github": "MacHatter1",
     "url": "https://github.com/MacHatter1"
   },
+  "category": "tasks-and-workflows",
   "source": {
     "git": {
       "url": "https://github.com/MacHatter1/bb-plugin-mane-control.git",

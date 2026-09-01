@@ -11,6 +11,7 @@
     "github": "ZhenHuangLab",
     "url": "https://github.com/ZhenHuangLab"
   },
+  "category": "thread-content",
   "source": {
     "git": {
       "url": "https://github.com/ZhenHuangLab/bb-better-latex.git",

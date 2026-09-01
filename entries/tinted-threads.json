@@ -8,6 +8,7 @@
     "name": "Tom McKenzie",
     "github": "grrowl"
   },
+  "category": "thread-management",
   "source": {
     "git": {
       "url": "https://github.com/grrowl/bb-tinted-threads.git",

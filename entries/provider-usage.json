@@ -21,6 +21,7 @@
     "github": "braedonsaunders",
     "url": "https://github.com/braedonsaunders"
   },
+  "category": "token-usage-and-limits",
   "source": {
     "git": {
       "url": "https://github.com/braedonsaunders/bb-plugin-provider-usage.git",

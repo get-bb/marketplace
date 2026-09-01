@@ -84,7 +84,16 @@
     {
       "id": "new-and-notable",
       "displayName": "New & notable",
-      "pluginIds": []
+      "pluginIds": [
+        "harness",
+        "files-editor",
+        "companion-chat",
+        "host-monitor",
+        "github-extended",
+        "vercel-theme",
+        "operator-inbox",
+        "prompt-log"
+      ]
     }
   ]
 }

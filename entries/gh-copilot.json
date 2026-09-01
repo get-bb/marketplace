@@ -17,6 +17,7 @@
     "github": "trieloff",
     "url": "https://github.com/ai-ecoverse"
   },
+  "category": "agents-and-providers",
   "source": {
     "git": {
       "url": "https://github.com/ai-ecoverse/bb-gh-copilot.git",

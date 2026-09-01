@@ -9,6 +9,7 @@
     "github": "benegessarit",
     "url": "https://github.com/benegessarit"
   },
+  "category": "agents-and-providers",
   "source": {
     "git": {
       "url": "https://github.com/benegessarit/bb-plugin-claude-account-switcher.git",

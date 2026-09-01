@@ -18,6 +18,7 @@
     "github": "MateoCerquetella",
     "url": "https://github.com/MateoCerquetella"
   },
+  "category": "tasks-and-workflows",
   "source": {
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",

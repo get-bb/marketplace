@@ -11,6 +11,7 @@
     "github": "krehel",
     "url": "https://github.com/krehel"
   },
+  "category": "themes-and-appearance",
   "source": {
     "git": {
       "url": "https://github.com/krehel/bb-plugin-tokyo-night.git",

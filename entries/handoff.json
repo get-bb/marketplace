@@ -21,6 +21,7 @@
     "github": "vburojevic",
     "url": "https://github.com/vburojevic"
   },
+  "category": "agents-and-providers",
   "source": {
     "git": {
       "url": "https://github.com/vburojevic/bb-plugin-handoff.git",

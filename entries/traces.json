@@ -17,6 +17,7 @@
     "github": "patleeman",
     "url": "https://github.com/patleeman"
   },
+  "category": "plugin-development",
   "source": {
     "git": {
       "url": "https://github.com/patleeman/bb-plugins.git",

@@ -11,6 +11,7 @@
     "github": "pixexid",
     "url": "https://github.com/pixexid"
   },
+  "category": "notifications",
   "source": {
     "git": {
       "url": "https://github.com/pixexid/bb-plugin-operator-inbox.git",

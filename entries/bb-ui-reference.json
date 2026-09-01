@@ -11,6 +11,7 @@
     "github": "its-rosetta",
     "url": "https://phosphor.co"
   },
+  "category": "plugin-development",
   "source": {
     "npm": {
       "package": "@phosphorco/bb-plugin-bb-ui-reference",

@@ -21,6 +21,7 @@
     "github": "MateoCerquetella",
     "url": "https://github.com/MateoCerquetella"
   },
+  "category": "utilities",
   "source": {
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",
