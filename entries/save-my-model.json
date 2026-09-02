@@ -1,0 +1,9 @@
+{
+  "id": "save-my-model",
+  "displayName": "Save My Model",
+  "description": "Stores provider, model, and reasoning selections separately for each BB project, host, and provider.",
+  "icon": { "url": "./icons/save-my-model-16cfc7bf.svg" },
+  "tags": ["preferences", "projects", "models", "providers", "reasoning"],
+  "author": { "name": "Mateo Cerquetella", "github": "MateoCerquetella", "url": "https://github.com/MateoCerquetella" },
+  "source": { "git": { "url": "https://github.com/MateoCerquetella/bb-plugins.git", "subdir": "plugins/save-my-model", "range": "^0.1.0", "tagPrefix": "save-my-model/" } }
+}
