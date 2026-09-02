@@ -13,34 +13,30 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm ci
+      - name: Install Wrangler 4.86.0
+        run: npm install --global wrangler@4.86.0
       - run: npm run build
       - name: Check frozen v1 entries
         if: github.event_name == 'push'
         run: npm run gate:v1
-      # Icons upload first so the manifest never references a missing object.
+      # Keep this order explicit: assets first, then v2, then v1.
       - name: Upload icons
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
+          source scripts/r2-upload.sh
           shopt -s nullglob
           for icon in icons/*.svg icons/*.png icons/*.webp; do
-            npx wrangler@4 r2 object put "bb-marketplace/icons/$(basename "$icon")" \
+            r2_put_with_retry "bb-marketplace/icons/$(basename "$icon")" \
               --file "$icon" --remote
           done
-      - name: Upload manifest
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          npx wrangler@4 r2 object put "bb-marketplace/marketplace.json" \
-            --file dist/marketplace.json \
-            --content-type application/json --remote
       - name: Upload screenshots
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
+          source scripts/r2-upload.sh
           if [[ ! -d screenshots ]]; then
             exit 0
           fi
@@ -51,7 +47,7 @@ jobs:
               *.webp) content_type="image/webp" ;;
               *) echo "Unsupported screenshot file: $screenshot" >&2; exit 1 ;;
             esac
-            npx wrangler@4 r2 object put "bb-marketplace/v2/${screenshot#./}" \
+            r2_put_with_retry "bb-marketplace/v2/${screenshot#./}" \
               --file "$screenshot" --content-type "$content_type" --remote
           done < <(find screenshots -type f -print0 | sort -z)
       - name: Upload v2 manifest
@@ -59,6 +55,16 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          npx wrangler@4 r2 object put "bb-marketplace/v2/marketplace.json" \
+          source scripts/r2-upload.sh
+          r2_put_with_retry "bb-marketplace/v2/marketplace.json" \
             --file dist/v2/marketplace.json \
+            --content-type application/json --remote
+      - name: Upload v1 manifest
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          source scripts/r2-upload.sh
+          r2_put_with_retry "bb-marketplace/marketplace.json" \
+            --file dist/marketplace.json \
             --content-type application/json --remote
