@@ -1,0 +1,22 @@
+{
+  "id": "provider-brand-marks",
+  "displayName": "True Colors",
+  "description": "Draws each provider logo in its own brand colour — Anthropic clay, OpenAI green, Pi steel blue, Hermes ultramarine — instead of the one monochrome mask they all share. Fits every colour to the palette you already use, in light and dark mode, without replacing your theme.",
+  "icon": {
+    "url": "./icons/provider-brand-marks.svg"
+  },
+  "tags": ["appearance", "colors", "providers", "icons", "interface"],
+  "author": {
+    "name": "Christopher Böbel",
+    "github": "ChrBoebel",
+    "url": "https://github.com/ChrBoebel"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": ["./screenshots/provider-brand-marks/providers.png"],
+  "source": {
+    "git": {
+      "url": "https://github.com/ChrBoebel/bb-plugin-provider-brand-marks.git",
+      "range": "^0.1.0"
+    }
+  }
+}
