@@ -1,0 +1,31 @@
+{
+  "id": "bb-office",
+  "displayName": "BB Office",
+  "description": "Turns active BB threads into a draggable pixel-art office with live worker state, thread navigation, usage indicators, and agent-configurable behavior.",
+  "icon": {
+    "url": "./icons/bb-office-201f84a0.svg"
+  },
+  "tags": [
+    "threads",
+    "visualization",
+    "office",
+    "pixel-art",
+    "navigation",
+    "usage",
+    "customization"
+  ],
+  "category": "thread-management",
+  "author": {
+    "name": "Michael Yong",
+    "github": "ymichael",
+    "url": "https://github.com/ymichael"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/ymichael/bb-plugins.git",
+      "subdir": "plugins/bb-office",
+      "range": "^1.0.0",
+      "tagPrefix": "bb-office/"
+    }
+  }
+}

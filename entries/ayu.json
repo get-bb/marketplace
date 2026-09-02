@@ -13,9 +13,11 @@
     "interface",
     "ayu"
   ],
+  "category": "themes-and-appearance",
   "author": {
     "name": "Vedran Burojević",
-    "github": "vburojevic"
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
   },
   "category": "themes-and-appearance",
   "source": {

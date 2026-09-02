@@ -6,9 +6,11 @@
     "url": "./icons/pets-88a81ec9.svg"
   },
   "tags": ["companion", "interface", "pixel-art", "threads", "ai-art"],
+  "category": "themes-and-appearance",
   "author": {
-    "name": "Vedran Burojevic",
-    "github": "vburojevic"
+    "name": "Vedran Burojević",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
   },
   "category": "themes-and-appearance",
   "source": {

@@ -15,8 +15,9 @@
     "cli",
     "sync"
   ],
+  "category": "tasks-and-workflows",
   "author": {
-    "name": "Vedran Burojevic",
+    "name": "Vedran Burojević",
     "github": "vburojevic",
     "url": "https://github.com/vburojevic"
   },

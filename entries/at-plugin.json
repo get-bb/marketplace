@@ -1,0 +1,24 @@
+{
+  "id": "at-plugin",
+  "displayName": "@Plugin",
+  "description": "Adds installed and Community plugins to bb's @ menu. Use this to tell your agent about a plugin without describing its capabilities, or to search for community plugins and then have your agent install them for you.",
+  "icon": {
+    "url": "./icons/at-plugin-8e110197.svg"
+  },
+  "tags": ["plugins", "mentions", "composer", "marketplace", "interface"],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-content",
+  "screenshots": ["./screenshots/at-plugin/overview.png"],
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/at-plugin",
+      "range": "^0.1.0",
+      "tagPrefix": "at-plugin/"
+    }
+  }
+}

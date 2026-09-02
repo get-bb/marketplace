@@ -1,0 +1,24 @@
+{
+  "id": "endless",
+  "displayName": "Endless",
+  "description": "Restyles bb with 2 sets of light and dark themes inspired by Frank Ocean's album Endless, in either achromatic silver or a restrained color-accented palette.",
+  "icon": {
+    "url": "./icons/endless-ec9ca81b.svg"
+  },
+  "tags": ["theme", "appearance", "dark-mode", "light-mode", "frank-ocean"],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": ["./screenshots/endless/overview.png"],
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/endless",
+      "range": "^0.1.0",
+      "tagPrefix": "endless/"
+    }
+  }
+}

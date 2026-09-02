@@ -14,9 +14,11 @@
     "tabs",
     "multi-machine"
   ],
+  "category": "command-line",
   "author": {
-    "name": "Vedran Burojevic",
-    "github": "vburojevic"
+    "name": "Vedran Burojević",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
   },
   "category": "command-line",
   "source": {

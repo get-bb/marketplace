@@ -1,0 +1,25 @@
+{
+  "id": "thread-hover-cards",
+  "displayName": "Thread Hover Cards",
+  "description": "Hover a thread in the sidebar to see useful info such as model, run time, latest reply, and PR information all at a glance and without opening a thread.",
+  "icon": "ZoomIn",
+  "tags": ["sidebar", "threads", "status", "hover", "pull-requests", "interface"],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/thread-hover-cards/thread.png",
+    "./screenshots/thread-hover-cards/section.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/thread-hover-cards",
+      "range": "^0.1.0",
+      "tagPrefix": "thread-hover-cards/"
+    }
+  }
+}
