@@ -14,6 +14,7 @@
     "orchestration",
     "multi-agent"
   ],
+  "category": "agents-and-providers",
   "author": {
     "name": "rawizhere",
     "github": "rawizhere",
