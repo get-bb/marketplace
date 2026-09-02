@@ -527,12 +527,43 @@ export function parseEntryAddedDates(output) {
   return dates;
 }
 
-export function fillEmptyCollections(collections, plugins, addedAtById) {
+export function readEntryAddedDates(root) {
+  const shallow = execFileSync(
+    "git",
+    ["-C", root, "rev-parse", "--is-shallow-repository"],
+    { encoding: "utf8", timeout: 30_000 },
+  ).trim();
+  if (shallow === "true") {
+    throw new Error(
+      "The repository is shallow. The build needs full Git history for entry publication dates.",
+    );
+  }
+
+  const output = execFileSync(
+    "git",
+    [
+      "-C",
+      root,
+      "log",
+      "--diff-filter=A",
+      "--follow",
+      "--format=date:%cI",
+      "--name-only",
+      "--",
+      "entries/",
+    ],
+    { encoding: "utf8", timeout: 30_000 },
+  );
+  return parseEntryAddedDates(output);
+}
+
+export function fillEmptyCollections(collections, plugins) {
   const fallbackIds = [...plugins]
     .sort((left, right) => {
-      const leftDate = left.publishedAt ?? addedAtById.get(left.id);
-      const rightDate = right.publishedAt ?? addedAtById.get(right.id);
-      return timeValue(rightDate) - timeValue(leftDate) || left.id.localeCompare(right.id);
+      return (
+        timeValue(right.publishedAt) - timeValue(left.publishedAt) ||
+        left.id.localeCompare(right.id)
+      );
     })
     .slice(0, 8)
     .map((plugin) => plugin.id);

@@ -62,8 +62,10 @@ Each `pluginIds` value must name an entry and must occur only once.
 
 The first collection has the ID `new-and-notable`.
 An empty `pluginIds` array tells the build to select eight entries.
-The build uses the entry `publishedAt` value when it is present.
-Otherwise, the build uses the committer date of the first commit that added the entry file.
+The v2 document has a `publishedAt` value for each entry.
+The build derives this value from the first commit that added the entry file.
+The registry does not emit an `updatedAt` value.
+The empty collection fallback orders entries by the emitted `publishedAt` value.
 
 ## Screenshots and icons
 

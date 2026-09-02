@@ -23,6 +23,7 @@ import {
   projectV1Entry,
   projectV1Manifest,
   pullRequestEntryFiles,
+  readEntryAddedDates,
   validateAndRewriteIcon,
   validateScreenshotReference,
   v1GateDisposition,
@@ -58,15 +59,16 @@ function writeScreenshot(root, filename, bytes) {
   writeFileSync(join(root, "screenshots", "example-plugin", filename), bytes);
 }
 
-function runGit(root, args) {
+function runGit(root, args, options = {}) {
   return execFileSync("git", args, {
     cwd: root,
     encoding: "utf8",
     timeout: 30_000,
+    ...options,
   }).trim();
 }
 
-test("the v1 projection keeps only v1 fields", () => {
+test("the v1 projection stays unchanged when a v2 entry has dates", () => {
   const source = readJson("projection/source-entry.json");
   const expected = readJson("projection/v1-entry.json");
   assert.deepEqual(projectV1Entry(source), expected);
@@ -203,17 +205,11 @@ test("the pull request diff returns added and modified entry files", () => {
 test("an empty collection gets eight newest entries", () => {
   const plugins = Array.from({ length: 10 }, (_, index) => ({
     id: `plugin-${index}`,
+    publishedAt: new Date(Date.UTC(2026, 0, index + 1)).toISOString(),
   }));
-  const dates = new Map(
-    plugins.map((plugin, index) => [
-      plugin.id,
-      new Date(Date.UTC(2026, 0, index + 1)).toISOString(),
-    ]),
-  );
   const result = fillEmptyCollections(
     [{ id: "new", displayName: "New", pluginIds: [] }],
     plugins,
-    dates,
   );
   assert.deepEqual(result[0].pluginIds, [
     "plugin-9",
@@ -227,21 +223,16 @@ test("an empty collection gets eight newest entries", () => {
   ]);
 });
 
-test("the collection fallback mixes entry dates and uses an id tie-break", () => {
+test("the collection fallback uses publishedAt and an id tie-break", () => {
   const plugins = [
     { id: "alpha", publishedAt: "2026-03-01T00:00:00Z" },
-    { id: "beta" },
+    { id: "beta", publishedAt: "2026-04-01T00:00:00Z" },
     { id: "charlie", publishedAt: "2026-04-01T00:00:00Z" },
-    { id: "delta" },
+    { id: "delta", publishedAt: "2026-01-01T00:00:00Z" },
   ];
-  const addedDates = new Map([
-    ["beta", "2026-04-01T00:00:00Z"],
-    ["delta", "2026-01-01T00:00:00Z"],
-  ]);
   const result = fillEmptyCollections(
     [{ id: "new", displayName: "New", pluginIds: [] }],
     plugins,
-    addedDates,
   );
   assert.deepEqual(result[0].pluginIds, ["beta", "charlie", "alpha", "delta"]);
 });
@@ -256,6 +247,40 @@ test("the Git log parser keeps the first addition date", () => {
     "entries/example.json",
   ].join("\n"));
   assert.equal(dates.get("example"), "2026-04-01T00:00:00Z");
+});
+
+test("a later entry edit does not change its first addition date", () => {
+  const root = mkdtempSync(join(tmpdir(), "marketplace-date-test-"));
+  try {
+    runGit(root, ["init", "--quiet"]);
+    runGit(root, ["config", "user.email", "test@example.com"]);
+    runGit(root, ["config", "user.name", "Test User"]);
+    mkdirSync(join(root, "entries"));
+    writeFileSync(join(root, "entries", "example.json"), '{"version":1}\n');
+    runGit(root, ["add", "entries/example.json"]);
+    runGit(root, ["commit", "--quiet", "-m", "Add entry"], {
+      env: {
+        ...process.env,
+        GIT_AUTHOR_DATE: "2026-01-02T03:04:05+00:00",
+        GIT_COMMITTER_DATE: "2026-01-02T03:04:05+00:00",
+      },
+    });
+
+    writeFileSync(join(root, "entries", "example.json"), '{"version":2}\n');
+    runGit(root, ["add", "entries/example.json"]);
+    runGit(root, ["commit", "--quiet", "-m", "Edit entry"], {
+      env: {
+        ...process.env,
+        GIT_AUTHOR_DATE: "2026-02-03T04:05:06+00:00",
+        GIT_COMMITTER_DATE: "2026-02-03T04:05:06+00:00",
+      },
+    });
+
+    const dates = readEntryAddedDates(root);
+    assert.equal(dates.get("example"), "2026-01-02T03:04:05Z");
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
 });
 
 test("the image reader finds PNG, JPEG, and WebP widths", () => {

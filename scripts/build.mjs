@@ -11,9 +11,9 @@ import {
   checkRequiredCategories,
   findOrphanScreenshotFiles,
   fillEmptyCollections,
-  parseEntryAddedDates,
   projectV1Manifest,
   pullRequestEntryFiles,
+  readEntryAddedDates,
   validateAndRewriteIcon,
   validateScreenshotReference,
 } from "./marketplace-lib.mjs";
@@ -141,8 +141,16 @@ for (const entry of plugins) {
 }
 
 const referencedScreenshotFiles = new Set();
+const addedAtById = entryAddedDates();
 const v2Plugins = plugins.map((entry) => {
   const output = { ...entry };
+  delete output.updatedAt;
+  const publishedAt = addedAtById.get(entry.id);
+  if (publishedAt === undefined) {
+    delete output.publishedAt;
+  } else {
+    output.publishedAt = publishedAt;
+  }
   const iconResult = validateAndRewriteIcon(root, entry.icon);
   output.icon = iconResult.icon;
   for (const problem of iconResult.problems) {
@@ -169,41 +177,10 @@ for (const file of findOrphanScreenshotFiles(root, referencedScreenshotFiles)) {
 }
 
 function entryAddedDates() {
-  const needsFallback = (base.collections ?? []).some(
-    (collection) => collection.pluginIds?.length === 0,
-  );
-  if (!needsFallback) return new Map();
-
   try {
-    const shallow = execFileSync(
-      "git",
-      ["-C", root, "rev-parse", "--is-shallow-repository"],
-      { encoding: "utf8", timeout: 30_000 },
-    ).trim();
-    if (shallow === "true") {
-      problems.push(
-        "The repository is shallow. The build needs full Git history for the new-and-notable collection.",
-      );
-      return new Map();
-    }
-    const output = execFileSync(
-      "git",
-      [
-        "-C",
-        root,
-        "log",
-        "--diff-filter=A",
-        "--follow",
-        "--format=date:%cI",
-        "--name-only",
-        "--",
-        "entries/",
-      ],
-      { encoding: "utf8", timeout: 30_000 },
-    );
-    const dates = parseEntryAddedDates(output);
+    const dates = readEntryAddedDates(root);
     for (const { entry, file } of entryRecords) {
-      if (entry.publishedAt === undefined && !dates.has(entry.id)) {
+      if (!dates.has(entry.id)) {
         problems.push(`${file}: The Git history has no first addition date.`);
       }
     }
@@ -218,7 +195,6 @@ function entryAddedDates() {
 const collections = fillEmptyCollections(
   base.collections ?? [],
   v2Plugins,
-  entryAddedDates(),
 );
 const v1Manifest = projectV1Manifest(base, plugins);
 const v2Manifest = {
