@@ -2,7 +2,7 @@
   "id": "canvas",
   "displayName": "Canvas",
   "description": "Gives every thread a shared tldraw canvas that agents draw diagrams on, animate as a step-by-step walkthrough, and read back — including the shapes you add yourself.",
-  "icon": "PenTool",
+  "icon": "Palette",
   "tags": [
     "canvas",
     "diagrams",
