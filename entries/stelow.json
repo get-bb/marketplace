@@ -1,0 +1,25 @@
+{
+  "id": "stelow",
+  "displayName": "Stelow",
+  "description": "Brings Stelow's structured product workflow into bb, helping humans and AI agents work as a cross-functional product team through a board for stages, reviews, gates, scopes, and tasks.",
+  "icon": "Columns",
+  "tags": [
+    "product-workflow",
+    "tasks",
+    "reviews",
+    "ai-agents",
+    "project-management"
+  ],
+  "author": {
+    "name": "calionauta",
+    "github": "calionauta",
+    "url": "https://github.com/calionauta"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/calionauta/bb-plugin-stelow.git",
+      "range": "^0.1.14"
+    }
+  }
+}
