@@ -2,7 +2,7 @@
   "id": "stelow",
   "displayName": "Stelow",
   "description": "Brings Stelow's structured product workflow into bb, helping humans and AI agents work as a cross-functional product team through a board for stages, reviews, gates, scopes, and tasks.",
-  "icon": "Columns",
+  "icon": "Columns2",
   "tags": [
     "product-workflow",
     "tasks",
