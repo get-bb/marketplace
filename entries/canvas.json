@@ -1,0 +1,26 @@
+{
+  "id": "canvas",
+  "displayName": "Canvas",
+  "description": "Gives every thread a shared tldraw canvas that agents draw diagrams on, animate as a step-by-step walkthrough, and read back — including the shapes you add yourself.",
+  "icon": "PenTool",
+  "tags": [
+    "canvas",
+    "diagrams",
+    "tldraw",
+    "whiteboard",
+    "visualization",
+    "architecture"
+  ],
+  "author": {
+    "name": "Borja MPM",
+    "github": "Borjampm",
+    "url": "https://github.com/Borjampm"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/Borjampm/bb-plugin-canvas.git",
+      "range": "^0.1.0"
+    }
+  }
+}
