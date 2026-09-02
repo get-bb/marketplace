@@ -1,0 +1,19 @@
+{
+  "id": "vscode-server",
+  "displayName": "VS Code Server",
+  "description": "Embed a VS Code Server or code-server workspace in a BB thread panel, with local-server capture and desktop-profile import.",
+  "icon": { "url": "./icons/vscode-server-fc85ccb0.svg" },
+  "tags": ["vscode", "code-server", "editor", "development", "right-panel"],
+  "author": {
+    "name": "GantisStorm",
+    "github": "GantisStorm",
+    "url": "https://github.com/GantisStorm"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/GantisStorm/bb-plugin-vscode-server.git",
+      "range": "^0.1.0"
+    }
+  }
+}
