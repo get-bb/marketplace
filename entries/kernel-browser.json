@@ -1,0 +1,21 @@
+{
+  "id": "kernel-browser",
+  "displayName": "KERNEL Browser",
+  "description": "Open, watch, and drive KERNEL cloud browsers from bb threads and the bb CLI.",
+  "icon": {
+    "url": "./icons/kernel-browser.svg"
+  },
+  "tags": ["browser", "automation", "cloud"],
+  "author": {
+    "name": "KERNEL",
+    "github": "kernel",
+    "url": "https://kernel.sh"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/kernel/bb-ide-plugin.git",
+      "range": "^0.1.0"
+    }
+  }
+}
