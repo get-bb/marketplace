@@ -16,6 +16,7 @@
     "opencode",
     "agent-tools"
   ],
+  "category": "agents-and-providers",
   "author": {
     "name": "Vedran Burojević",
     "github": "vburojevic",

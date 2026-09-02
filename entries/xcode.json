@@ -16,6 +16,7 @@
     "snapshots",
     "agent-tools"
   ],
+  "category": "code-and-reviews",
   "author": {
     "name": "Vedran Burojević",
     "github": "vburojevic",

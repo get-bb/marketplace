@@ -12,6 +12,7 @@
     "interface",
     "keyboard-shortcuts"
   ],
+  "category": "thread-content",
   "author": {
     "name": "Vedran Burojević",
     "github": "vburojevic",
