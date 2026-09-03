@@ -14,7 +14,7 @@ One entry file supplies data to both documents.
 - `entries/<plugin-id>.json` contains one marketplace entry.
 - `icons/` contains local icon files.
 - `screenshots/<plugin-id>/` contains local screenshot files.
-- `about/<plugin-id>.md` contains an optional long-form description.
+- `overview/<plugin-id>.md` contains an optional long-form description.
 - `bb-official-screenshots.json` lists CDN images for bundled BB plugins.
 - `marketplace.base.json` contains the marketplace identity, categories, and collections.
 - `schema/marketplace.schema.json` defines the v1 document.
@@ -35,7 +35,7 @@ The build sets `schemaVersion` to `2` in the v2 output.
 4. Set `source` to a public Git repository or an npm package.
 5. Set `category` to an ID from `marketplace.base.json`.
 6. Add screenshots if they help users review the plugin.
-7. Add `about/<your-plugin-id>.md` if the plugin needs a long-form description.
+7. Add `overview/<your-plugin-id>.md` if the plugin needs a long-form description.
 8. Open a pull request.
 
 CI validates the entry and its remote source.
@@ -100,13 +100,13 @@ The build rejects all other image hosts.
 
 ## Long-form description
 
-An entry can reference one markdown file with the `about` field.
-Put the file at `about/<plugin-id>.md`.
+An entry can reference one markdown file with the `overview` field.
+Put the file at `overview/<plugin-id>.md`.
 Use this form in the entry:
 
 ```json
 {
-  "about": "./about/example-plugin.md"
+  "overview": "./overview/example-plugin.md"
 }
 ```
 
@@ -115,9 +115,9 @@ The file must be UTF-8 text with a maximum of 4000 characters.
 The file can use headings, paragraphs, emphasis, strong text, strikethrough, inline code, code blocks, blockquotes, lists, thematic breaks, and links.
 Each link must be an absolute `https` URL.
 The build rejects raw HTML, images, tables, footnotes, task lists, and control characters.
-The build rejects a file in `about/` that no entry references.
+The build rejects a file in `overview/` that no entry references.
 The build replaces the path with the file text in the v2 document.
-The v1 document never holds the `about` field.
+The v1 document never holds the `overview` field.
 
 ## Frozen v1 document
 

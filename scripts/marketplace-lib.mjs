@@ -24,15 +24,15 @@ export const V1_TOP_LEVEL_FIELDS = Object.freeze([
 
 export const SCREENSHOT_MAX_BYTES = 2 * 1024 * 1024;
 export const SCREENSHOT_MIN_WIDTH = 1200;
-export const ABOUT_MAX_CHARS = 4000;
+export const OVERVIEW_MAX_CHARS = 4000;
 
 const MARKETPLACE_ORIGIN = "https://getbb.app";
 const SCREENSHOT_FILE_PATTERN =
   /^[A-Za-z0-9][A-Za-z0-9._-]*\.(?:png|jpg|jpeg|webp)$/;
-const ABOUT_MAX_BYTES = ABOUT_MAX_CHARS * 4;
-const ABOUT_CONTROL_CHARACTER_PATTERN =
+const OVERVIEW_MAX_BYTES = OVERVIEW_MAX_CHARS * 4;
+const OVERVIEW_CONTROL_CHARACTER_PATTERN =
   /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/;
-const ABOUT_NODE_TYPES = new Set([
+const OVERVIEW_NODE_TYPES = new Set([
   "root",
   "paragraph",
   "heading",
@@ -51,7 +51,7 @@ const ABOUT_NODE_TYPES = new Set([
   "linkReference",
   "definition",
 ]);
-const ABOUT_NODE_LABELS = {
+const OVERVIEW_NODE_LABELS = {
   html: "raw HTML",
   image: "an image",
   imageReference: "an image",
@@ -507,11 +507,11 @@ export function findOrphanScreenshotFiles(root, referencedFiles) {
     .sort();
 }
 
-function aboutNodeLabel(type) {
-  return ABOUT_NODE_LABELS[type] ?? `an unsupported "${type}" element`;
+function overviewNodeLabel(type) {
+  return OVERVIEW_NODE_LABELS[type] ?? `an unsupported "${type}" element`;
 }
 
-function aboutLinkProblem(url) {
+function overviewLinkProblem(url) {
   let parsed;
   try {
     parsed = new URL(url);
@@ -529,19 +529,19 @@ function walkMarkdown(node, visit) {
   for (const child of node.children ?? []) walkMarkdown(child, visit);
 }
 
-export function checkAboutMarkdown(text) {
+export function checkOverviewMarkdown(text) {
   const problems = new Set();
   if (text.trim().length === 0) {
-    return ["The ABOUT file is empty."];
+    return ["The overview file is empty."];
   }
   const length = [...text.replace(/\n$/, "")].length;
-  if (length > ABOUT_MAX_CHARS) {
+  if (length > OVERVIEW_MAX_CHARS) {
     problems.add(
-      `The ABOUT file has ${length} characters. The maximum is ${ABOUT_MAX_CHARS}.`,
+      `The overview file has ${length} characters. The maximum is ${OVERVIEW_MAX_CHARS}.`,
     );
   }
-  if (ABOUT_CONTROL_CHARACTER_PATTERN.test(text)) {
-    problems.add("The ABOUT file has a control character.");
+  if (OVERVIEW_CONTROL_CHARACTER_PATTERN.test(text)) {
+    problems.add("The overview file has a control character.");
   }
   const tree = fromMarkdown(text, {
     extensions: [gfm()],
@@ -549,24 +549,24 @@ export function checkAboutMarkdown(text) {
   });
   walkMarkdown(tree, (node) => {
     const line = node.position?.start.line ?? 0;
-    if (!ABOUT_NODE_TYPES.has(node.type)) {
+    if (!OVERVIEW_NODE_TYPES.has(node.type)) {
       problems.add(
-        `The ABOUT file uses ${aboutNodeLabel(node.type)} at line ${line}.`,
+        `The overview file uses ${overviewNodeLabel(node.type)} at line ${line}.`,
       );
       return;
     }
     if (node.type === "listItem" && typeof node.checked === "boolean") {
-      problems.add(`The ABOUT file uses a task list at line ${line}.`);
+      problems.add(`The overview file uses a task list at line ${line}.`);
     }
     if (node.type === "link" || node.type === "definition") {
-      const problem = aboutLinkProblem(node.url);
+      const problem = overviewLinkProblem(node.url);
       if (problem !== undefined) problems.add(`${problem} Line ${line}.`);
     }
   });
   return [...problems];
 }
 
-export function normalizeAboutText(text) {
+export function normalizeOverviewText(text) {
   return `${text
     .replace(/^\uFEFF/, "")
     .replace(/\r\n?/g, "\n")
@@ -577,26 +577,26 @@ export function normalizeAboutText(text) {
     .replace(/\n+$/, "")}\n`;
 }
 
-export function validateAboutReference(root, pluginId, reference) {
-  if (reference !== `./about/${pluginId}.md`) {
+export function validateOverviewReference(root, pluginId, reference) {
+  if (reference !== `./overview/${pluginId}.md`) {
     return {
-      problems: [`The about path must be ./about/${pluginId}.md: ${reference}`],
+      problems: [`The overview path must be ./overview/${pluginId}.md: ${reference}`],
     };
   }
-  const relativeFile = `about/${pluginId}.md`;
-  const path = join(root, "about", `${pluginId}.md`);
+  const relativeFile = `overview/${pluginId}.md`;
+  const path = join(root, "overview", `${pluginId}.md`);
   if (!existsSync(path)) {
-    return { relativeFile, problems: [`The about file does not exist: ${path}`] };
+    return { relativeFile, problems: [`The overview file does not exist: ${path}`] };
   }
   const stat = statSync(path);
   if (!stat.isFile()) {
-    return { relativeFile, problems: [`The about path is not a file: ${path}`] };
+    return { relativeFile, problems: [`The overview path is not a file: ${path}`] };
   }
-  if (stat.size > ABOUT_MAX_BYTES) {
+  if (stat.size > OVERVIEW_MAX_BYTES) {
     return {
       relativeFile,
       problems: [
-        `The about file is larger than ${ABOUT_MAX_BYTES} bytes: ${path}`,
+        `The overview file is larger than ${OVERVIEW_MAX_BYTES} bytes: ${path}`,
       ],
     };
   }
@@ -604,19 +604,19 @@ export function validateAboutReference(root, pluginId, reference) {
   try {
     text = new TextDecoder("utf-8", { fatal: true }).decode(readFileSync(path));
   } catch {
-    return { relativeFile, problems: [`The about file is not UTF-8: ${path}`] };
+    return { relativeFile, problems: [`The overview file is not UTF-8: ${path}`] };
   }
-  const normalized = normalizeAboutText(text);
-  const problems = checkAboutMarkdown(normalized).map(
+  const normalized = normalizeOverviewText(text);
+  const problems = checkOverviewMarkdown(normalized).map(
     (problem) => `${problem} (${relativeFile})`,
   );
   return { text: normalized, relativeFile, problems };
 }
 
-export function findOrphanAboutFiles(root, referencedFiles) {
-  const directory = join(root, "about");
+export function findOrphanOverviewFiles(root, referencedFiles) {
+  const directory = join(root, "overview");
   if (!existsSync(directory)) return [];
-  return directoryFiles(directory, "about")
+  return directoryFiles(directory, "overview")
     .filter((file) => !referencedFiles.has(file))
     .sort();
 }

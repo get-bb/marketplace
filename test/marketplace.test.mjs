@@ -12,22 +12,22 @@ import { dirname, join } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import {
-  ABOUT_MAX_CHARS,
+  OVERVIEW_MAX_CHARS,
   SCREENSHOT_MAX_BYTES,
-  checkAboutMarkdown,
+  checkOverviewMarkdown,
   checkRequiredCategories,
   compareV1EntryBytes,
   fetchMarketplaceText,
   findOrphanScreenshotFiles,
   fillEmptyCollections,
-  findOrphanAboutFiles,
+  findOrphanOverviewFiles,
   inspectImage,
   parseEntryAddedDates,
   projectV1Entry,
   projectV1Manifest,
   pullRequestEntryFiles,
   readEntryAddedDates,
-  validateAboutReference,
+  validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
   v1GateDisposition,
@@ -451,9 +451,9 @@ test("the screenshot check finds an unreferenced file", () => {
   });
 });
 
-function withAboutRoot(callback) {
-  const root = mkdtempSync(join(tmpdir(), "marketplace-about-test-"));
-  mkdirSync(join(root, "about"), { recursive: true });
+function withOverviewRoot(callback) {
+  const root = mkdtempSync(join(tmpdir(), "marketplace-overview-test-"));
+  mkdirSync(join(root, "overview"), { recursive: true });
   try {
     callback(root);
   } finally {
@@ -461,88 +461,88 @@ function withAboutRoot(callback) {
   }
 }
 
-function writeAbout(root, filename, bytes) {
-  writeFileSync(join(root, "about", filename), bytes);
+function writeOverview(root, filename, bytes) {
+  writeFileSync(join(root, "overview", filename), bytes);
 }
 
-test("a valid about file becomes normalized markdown text", () => {
-  withAboutRoot((root) => {
-    writeAbout(root, "example-plugin.md", readText("about/valid.md"));
-    const result = validateAboutReference(
+test("a valid overview file becomes normalized markdown text", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "example-plugin.md", readText("overview/valid.md"));
+    const result = validateOverviewReference(
       root,
       "example-plugin",
-      "./about/example-plugin.md",
+      "./overview/example-plugin.md",
     );
     assert.deepEqual(result.problems, []);
-    assert.equal(result.relativeFile, "about/example-plugin.md");
+    assert.equal(result.relativeFile, "overview/example-plugin.md");
     assert.ok(result.text.startsWith("# Example Plugin\n"));
     assert.ok(result.text.includes("review.\n\n## What you get"));
     assert.ok(result.text.endsWith("first.\n"));
   });
 });
 
-test("the about check normalizes CRLF line endings", () => {
-  withAboutRoot((root) => {
-    writeAbout(root, "example-plugin.md", readText("about/crlf.md"));
-    const result = validateAboutReference(
+test("the overview check normalizes CRLF line endings", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "example-plugin.md", readText("overview/crlf.md"));
+    const result = validateOverviewReference(
       root,
       "example-plugin",
-      "./about/example-plugin.md",
+      "./overview/example-plugin.md",
     );
     assert.deepEqual(result.problems, []);
     assert.equal(result.text, "Line one\nLine two\n");
   });
 });
 
-test("the about check rejects a path outside the plugin file", () => {
-  withAboutRoot((root) => {
-    const result = validateAboutReference(
+test("the overview check rejects a path outside the plugin file", () => {
+  withOverviewRoot((root) => {
+    const result = validateOverviewReference(
       root,
       "example-plugin",
-      "./about/other-plugin.md",
+      "./overview/other-plugin.md",
     );
-    assert.match(result.problems[0], /must be \.\/about\/example-plugin\.md/);
+    assert.match(result.problems[0], /must be \.\/overview\/example-plugin\.md/);
     assert.equal(result.relativeFile, undefined);
   });
 });
 
-test("the about check rejects a missing file", () => {
-  withAboutRoot((root) => {
-    const result = validateAboutReference(
+test("the overview check rejects a missing file", () => {
+  withOverviewRoot((root) => {
+    const result = validateOverviewReference(
       root,
       "example-plugin",
-      "./about/example-plugin.md",
+      "./overview/example-plugin.md",
     );
     assert.match(result.problems[0], /does not exist/);
   });
 });
 
-test("the about check rejects a file that is not UTF-8", () => {
-  withAboutRoot((root) => {
-    writeAbout(root, "example-plugin.md", Buffer.from([0x23, 0x20, 0xff, 0xfe]));
-    const result = validateAboutReference(
+test("the overview check rejects a file that is not UTF-8", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "example-plugin.md", Buffer.from([0x23, 0x20, 0xff, 0xfe]));
+    const result = validateOverviewReference(
       root,
       "example-plugin",
-      "./about/example-plugin.md",
+      "./overview/example-plugin.md",
     );
     assert.match(result.problems[0], /not UTF-8/);
   });
 });
 
-test("the about check rejects a file above the character cap", () => {
-  withAboutRoot((root) => {
-    writeAbout(root, "example-plugin.md", `${"a".repeat(ABOUT_MAX_CHARS + 1)}\n`);
-    const result = validateAboutReference(
+test("the overview check rejects a file above the character cap", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "example-plugin.md", `${"a".repeat(OVERVIEW_MAX_CHARS + 1)}\n`);
+    const result = validateOverviewReference(
       root,
       "example-plugin",
-      "./about/example-plugin.md",
+      "./overview/example-plugin.md",
     );
     assert.match(result.problems[0], /maximum is 4000/);
   });
-  assert.deepEqual(checkAboutMarkdown(`${"é".repeat(ABOUT_MAX_CHARS)}\n`), []);
+  assert.deepEqual(checkOverviewMarkdown(`${"é".repeat(OVERVIEW_MAX_CHARS)}\n`), []);
 });
 
-test("the about check rejects markdown outside the allowlist", () => {
+test("the overview check rejects markdown outside the allowlist", () => {
   const cases = [
     ["<script>alert(1)</script>", /raw HTML at line 1/],
     ["Text with <b>inline</b> html", /raw HTML at line 1/],
@@ -560,7 +560,7 @@ test("the about check rejects markdown outside the allowlist", () => {
     ["  \n\n", /is empty/],
   ];
   for (const [markdown, pattern] of cases) {
-    const problems = checkAboutMarkdown(`${markdown}\n`);
+    const problems = checkOverviewMarkdown(`${markdown}\n`);
     assert.ok(
       problems.some((problem) => pattern.test(problem)),
       `${JSON.stringify(markdown)} gave ${JSON.stringify(problems)}`,
@@ -568,7 +568,7 @@ test("the about check rejects markdown outside the allowlist", () => {
   }
 });
 
-test("the about check accepts every element in the allowlist", () => {
+test("the overview check accepts every element in the allowlist", () => {
   const markdown = [
     "# Title",
     "",
@@ -592,14 +592,14 @@ test("the about check accepts every element in the allowlist", () => {
     "",
     "See [the ref][ref].",
   ].join("\n");
-  assert.deepEqual(checkAboutMarkdown(`${markdown}\n`), []);
+  assert.deepEqual(checkOverviewMarkdown(`${markdown}\n`), []);
 });
 
-test("the about check finds an unreferenced file", () => {
-  withAboutRoot((root) => {
-    writeAbout(root, "used.md", "# Used\n");
-    writeAbout(root, "orphan.md", "# Orphan\n");
-    const orphans = findOrphanAboutFiles(root, new Set(["about/used.md"]));
-    assert.deepEqual(orphans, ["about/orphan.md"]);
+test("the overview check finds an unreferenced file", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "used.md", "# Used\n");
+    writeOverview(root, "orphan.md", "# Orphan\n");
+    const orphans = findOrphanOverviewFiles(root, new Set(["overview/used.md"]));
+    assert.deepEqual(orphans, ["overview/orphan.md"]);
   });
 });
