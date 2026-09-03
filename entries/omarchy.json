@@ -3,7 +3,7 @@
   "displayName": "Omarchy Sync",
   "description": "Keeps BB desktop and PWA colors in step with the active Omarchy theme, including light/dark mode, ANSI and code colors, favicon tinting, and animated transitions, while leaving the native mobile app independent.",
   "icon": {
-    "url": "./icons/omarchy-15521a5e.svg"
+    "url": "./icons/omarchy-a524ee3b.svg"
   },
   "tags": [
     "themes",
