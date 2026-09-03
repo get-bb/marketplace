@@ -10,6 +10,7 @@
     "url": "https://github.com/yusuf8834"
   },
   "category": "code-and-reviews",
+  "screenshots": ["./screenshots/git-history/overview.jpeg"],
   "source": {
     "git": {
       "url": "https://github.com/yusuf8834/bb-git-history.git",
