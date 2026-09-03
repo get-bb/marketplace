@@ -14,6 +14,7 @@ One entry file supplies data to both documents.
 - `entries/<plugin-id>.json` contains one marketplace entry.
 - `icons/` contains local icon files.
 - `screenshots/<plugin-id>/` contains local screenshot files.
+- `bb-official-screenshots.json` lists CDN images for bundled BB plugins.
 - `marketplace.base.json` contains the marketplace identity, categories, and collections.
 - `schema/marketplace.schema.json` defines the v1 document.
 - `schema/marketplace-v2.schema.json` defines the v2 document.
@@ -83,6 +84,12 @@ Each referenced screenshot file must exist.
 The file must use PNG, JPEG, or WebP image data.
 The file size must not exceed 2 MiB.
 The image width must be at least 1200 pixels.
+
+The `bb-official-screenshots.json` file lists images for bundled plugins.
+These plugins have no community entry file.
+The build validates these images and excludes them from the community manifest.
+BB Official images can use a narrow width for a compact plugin surface.
+Their minimum width is 320 pixels.
 
 The build changes each local screenshot path to a v2 CDN URL.
 The build changes each local icon path to a v1 CDN URL.

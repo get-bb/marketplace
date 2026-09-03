@@ -387,6 +387,19 @@ test("the screenshot check rejects an image narrower than 1200 pixels", () => {
   });
 });
 
+test("the screenshot check accepts a custom minimum width", () => {
+  withScreenshotRoot((root) => {
+    writeScreenshot(root, "narrow.png", readHex("narrow-png.hex"));
+    const result = validateScreenshotReference(
+      root,
+      "example-plugin",
+      "./screenshots/example-plugin/narrow.png",
+      320,
+    );
+    assert.deepEqual(result.problems, []);
+  });
+});
+
 test("the screenshot check rejects a different host", () => {
   withScreenshotRoot((root) => {
     const result = validateScreenshotReference(

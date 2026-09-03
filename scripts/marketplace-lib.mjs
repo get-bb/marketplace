@@ -404,7 +404,12 @@ function parseScreenshotReference(pluginId, reference) {
   };
 }
 
-export function validateScreenshotReference(root, pluginId, reference) {
+export function validateScreenshotReference(
+  root,
+  pluginId,
+  reference,
+  minimumWidth = SCREENSHOT_MIN_WIDTH,
+) {
   const problems = [];
   let parsed;
   try {
@@ -438,8 +443,10 @@ export function validateScreenshotReference(root, pluginId, reference) {
   if (image.format !== expectedImageFormat(parsed.filename)) {
     problems.push(`The screenshot extension does not match its image format: ${path}`);
   }
-  if (image.width < SCREENSHOT_MIN_WIDTH) {
-    problems.push(`The screenshot width is less than 1200 pixels: ${path}`);
+  if (image.width < minimumWidth) {
+    problems.push(
+      `The screenshot width is less than ${minimumWidth} pixels: ${path}`,
+    );
   }
 
   return { outputUrl: parsed.outputUrl, relativeFile, problems };

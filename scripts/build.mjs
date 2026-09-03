@@ -36,6 +36,31 @@ const validateEntry = ajv.compile({
   ...v2Schema.$defs.entry,
   $defs: v2Schema.$defs,
 });
+const validateBbOfficialScreenshotMap = ajv.compile({
+  type: "object",
+  propertyNames: { pattern: "^[a-z0-9][a-z0-9-]*$" },
+  additionalProperties: {
+    ...v2Schema.$defs.entry.properties.screenshots,
+    minItems: 1,
+    uniqueItems: true,
+  },
+});
+
+let bbOfficialScreenshots = {};
+try {
+  const candidate = readJson(join(root, "bb-official-screenshots.json"));
+  if (validateBbOfficialScreenshotMap(candidate)) {
+    bbOfficialScreenshots = candidate;
+  } else {
+    for (const error of validateBbOfficialScreenshotMap.errors ?? []) {
+      problems.push(
+        `bb-official-screenshots.json: ${error.instancePath || "/"} ${error.message}`,
+      );
+    }
+  }
+} catch (error) {
+  problems.push(`bb-official-screenshots.json: The JSON is not valid. ${error.message}`);
+}
 
 const entryFiles = readdirSync(join(root, "entries"))
   .filter((name) => name.endsWith(".json"))
@@ -171,6 +196,18 @@ const v2Plugins = plugins.map((entry) => {
   }
   return output;
 });
+
+for (const [pluginId, screenshots] of Object.entries(bbOfficialScreenshots)) {
+  for (const reference of screenshots) {
+    const result = validateScreenshotReference(root, pluginId, reference, 320);
+    for (const problem of result.problems) {
+      problems.push(`bb-official-screenshots.json: ${problem}`);
+    }
+    if (result.relativeFile !== undefined) {
+      referencedScreenshotFiles.add(result.relativeFile);
+    }
+  }
+}
 
 for (const file of findOrphanScreenshotFiles(root, referencedScreenshotFiles)) {
   problems.push(`${file}: No marketplace entry references this screenshot file.`);
