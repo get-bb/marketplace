@@ -10,6 +10,10 @@
     "url": "https://github.com/yusuf8834"
   },
   "category": "thread-management",
+  "screenshots": [
+    "./screenshots/bb-sidebar/overview-light.jpeg",
+    "./screenshots/bb-sidebar/overview-dark.jpeg"
+  ],
   "source": {
     "git": {
       "url": "https://github.com/yusuf8834/bb-sidebar.git",
