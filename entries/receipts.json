@@ -1,0 +1,31 @@
+{
+  "id": "receipts",
+  "displayName": "Receipts",
+  "description": "Tracks Claude Code, Codex, Hermes Agent, OpenCode, Pi and Cursor token usage with estimated API cost, broken down by model, project and day.",
+  "icon": {
+    "url": "./icons/receipts-0407ee57.svg"
+  },
+  "tags": [
+    "usage",
+    "costs",
+    "tokens",
+    "analytics",
+    "hermes",
+    "opencode",
+    "claude-code",
+    "codex",
+    "cursor"
+  ],
+  "author": {
+    "name": "Christopher Böbel",
+    "github": "ChrBoebel",
+    "url": "https://github.com/ChrBoebel"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/ChrBoebel/bb-plugin-receipts.git",
+      "range": "^0.1.0"
+    }
+  }
+}
