@@ -16,6 +16,10 @@
     "url": "https://github.com/yusuf8834"
   },
   "category": "thread-management",
+  "screenshots": [
+    "./screenshots/homepage/overview-light.jpeg",
+    "./screenshots/homepage/overview-dark.jpeg"
+  ],
   "source": {
     "git": {
       "url": "https://github.com/yusuf8834/bb-homepage.git",
