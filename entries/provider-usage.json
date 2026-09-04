@@ -1,7 +1,7 @@
 {
   "id": "provider-usage",
   "displayName": "Provider Usage",
-  "description": "Shows how much of each provider's plan is left — every rate-limit window, percent remaining, and when it resets — plus a 7/30/90-day token chart covering every provider, from local transcripts and BB's own usage events.",
+  "description": "Shows how much of each provider's plan is left \u2014 every rate-limit window, percent remaining, and when it resets \u2014 plus a 7/30/90-day token chart covering every provider, from local transcripts and BB's own usage events.",
   "icon": {
     "url": "./icons/provider-usage-752e444b.svg"
   },
@@ -14,7 +14,7 @@
     "claude-code",
     "cursor",
     "opencode",
-    "sidebar"
+    "muse"
   ],
   "author": {
     "name": "Braedon Saunders",
@@ -25,7 +25,7 @@
   "source": {
     "git": {
       "url": "https://github.com/braedonsaunders/bb-plugin-provider-usage.git",
-      "range": "^0.4.0"
+      "range": "^0.8.0"
     }
   }
 }
