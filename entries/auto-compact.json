@@ -1,0 +1,19 @@
+{
+  "id": "auto-compact",
+  "displayName": "Auto Compact",
+  "description": "Compacts thread context automatically once usage reaches a configurable percentage, with a manual Compact button in every thread header.",
+  "icon": "Minimize2",
+  "tags": ["context", "compaction", "threads", "automation", "tokens"],
+  "author": {
+    "name": "Dummy-pixel-hash",
+    "github": "Dummy-pixel-hash",
+    "url": "https://github.com/Dummy-pixel-hash/bb-plugin-auto-compact"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/Dummy-pixel-hash/bb-plugin-auto-compact.git",
+      "range": "^0.1.0"
+    }
+  }
+}
