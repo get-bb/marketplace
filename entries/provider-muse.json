@@ -1,0 +1,17 @@
+{
+  "id": "provider-muse",
+  "displayName": "Muse Code",
+  "description": "Runs Meta's Muse Code CLI as a bb agent provider: a persistent serve mode plus a full-tools exec mode that surfaces tool calls as in-thread bb items.",
+  "icon": {
+    "url": "./icons/provider-muse-a636d0df.svg"
+  },
+  "tags": ["ai", "agents", "providers", "muse"],
+  "category": "agents-and-providers",
+  "author": { "name": "tohsnoom", "github": "tohsnoom" },
+  "source": {
+    "git": {
+      "url": "https://github.com/tohsnoom/bb-plugin-provider-muse.git",
+      "range": "^0.1.0"
+    }
+  }
+}
