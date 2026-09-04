@@ -1,0 +1,29 @@
+{
+  "id": "provider-muse",
+  "displayName": "Muse Code",
+  "description": "Adds Meta's Muse Code as a bb provider over its own session protocol: streamed timeline, approvals, subagents, model picker, health, and a subscription meter measured from Muse's session logs.",
+  "icon": {
+    "url": "./icons/provider-muse-e1997fa2.svg"
+  },
+  "tags": [
+    "muse",
+    "muse-code",
+    "meta",
+    "provider",
+    "agents",
+    "muse-spark",
+    "mcp"
+  ],
+  "author": {
+    "name": "Braedon Saunders",
+    "github": "braedonsaunders",
+    "url": "https://github.com/braedonsaunders"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/braedonsaunders/bb-plugin-provider-muse.git",
+      "range": ">=0.3.0 <1.0.0"
+    }
+  }
+}
