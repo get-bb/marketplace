@@ -1,0 +1,26 @@
+{
+  "id": "app-preview",
+  "displayName": "App Preview",
+  "description": "Detects the app in a thread worktree, starts it in a BB terminal, and opens it in the in-app browser.",
+  "icon": "Play",
+  "tags": [
+    "preview",
+    "dev-server",
+    "worktree",
+    "browser",
+    "interface",
+    "developer-tools"
+  ],
+  "author": {
+    "name": "Hung Vinh",
+    "github": "hungv47",
+    "url": "https://github.com/hungv47"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/hungv47/bb-plugin-app-preview.git",
+      "range": "^0.1.0"
+    }
+  }
+}
