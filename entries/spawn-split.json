@@ -5,7 +5,13 @@
   "icon": {
     "url": "./icons/spawn-split.svg"
   },
-  "tags": ["agents", "threads", "split-pane", "orchestration", "spawn"],
+  "tags": [
+    "agents",
+    "threads",
+    "split-pane",
+    "orchestration",
+    "spawn"
+  ],
   "author": {
     "name": "Jonah Cohen",
     "github": "jonahscohen",
@@ -13,6 +19,9 @@
   },
   "category": "agents-and-providers",
   "overview": "./overview/spawn-split.md",
+  "screenshots": [
+    "./screenshots/spawn-split/spawn-split-demo.png"
+  ],
   "source": {
     "git": {
       "url": "https://github.com/jonahscohen/bb-plugin-spawn-split.git",
