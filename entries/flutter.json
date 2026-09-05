@@ -1,0 +1,27 @@
+{
+  "id": "flutter",
+  "displayName": "Flutter",
+  "description": "Build, run, hot reload, and debug Flutter applications with DevTools and widget inspection.",
+  "icon": {
+    "url": "./icons/flutter-00a2dbdb.svg"
+  },
+  "tags": [
+    "flutter",
+    "mobile",
+    "dart",
+    "debugging",
+    "developer-tools"
+  ],
+  "author": {
+    "name": "Maxim Tkachenko",
+    "github": "mtkachenk0",
+    "url": "https://github.com/mtkachenk0"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/mtkachenk0/bb-plugin-flutter.git",
+      "range": "^0.1.0"
+    }
+  }
+}
