@@ -1,0 +1,31 @@
+{
+  "id": "spawn-split",
+  "displayName": "Spawn Split",
+  "description": "Spawn child agents from a thread, each opened in its own split pane. Pick a fresh isolated worktree or the caller's shared environment, fan out up to 8 at once, and choose the split direction. Headless, backend-only.",
+  "icon": {
+    "url": "./icons/spawn-split.svg"
+  },
+  "tags": [
+    "agents",
+    "threads",
+    "split-pane",
+    "orchestration",
+    "spawn"
+  ],
+  "author": {
+    "name": "Jonah Cohen",
+    "github": "jonahscohen",
+    "url": "https://github.com/jonahscohen"
+  },
+  "category": "agents-and-providers",
+  "overview": "./overview/spawn-split.md",
+  "screenshots": [
+    "./screenshots/spawn-split/spawn-split-demo.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/jonahscohen/bb-plugin-spawn-split.git",
+      "range": "^0.1.0"
+    }
+  }
+}
