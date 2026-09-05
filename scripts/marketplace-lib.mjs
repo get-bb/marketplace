@@ -1,6 +1,9 @@
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
+import { fromMarkdown } from "mdast-util-from-markdown";
+import { gfmFromMarkdown } from "mdast-util-gfm";
+import { gfm } from "micromark-extension-gfm";
 
 export const V1_ENTRY_FIELDS = Object.freeze([
   "id",
@@ -21,10 +24,41 @@ export const V1_TOP_LEVEL_FIELDS = Object.freeze([
 
 export const SCREENSHOT_MAX_BYTES = 2 * 1024 * 1024;
 export const SCREENSHOT_MIN_WIDTH = 1200;
+export const OVERVIEW_MAX_CHARS = 4000;
 
 const MARKETPLACE_ORIGIN = "https://getbb.app";
 const SCREENSHOT_FILE_PATTERN =
   /^[A-Za-z0-9][A-Za-z0-9._-]*\.(?:png|jpg|jpeg|webp)$/;
+const OVERVIEW_MAX_BYTES = OVERVIEW_MAX_CHARS * 4;
+const OVERVIEW_CONTROL_CHARACTER_PATTERN =
+  /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/;
+const OVERVIEW_NODE_TYPES = new Set([
+  "root",
+  "paragraph",
+  "heading",
+  "text",
+  "emphasis",
+  "strong",
+  "delete",
+  "inlineCode",
+  "code",
+  "blockquote",
+  "list",
+  "listItem",
+  "thematicBreak",
+  "break",
+  "link",
+  "linkReference",
+  "definition",
+]);
+const OVERVIEW_NODE_LABELS = {
+  html: "raw HTML",
+  image: "an image",
+  imageReference: "an image",
+  table: "a table",
+  footnoteDefinition: "a footnote",
+  footnoteReference: "a footnote",
+};
 
 function selectFields(value, fields) {
   const allowed = new Set(fields);
@@ -452,14 +486,14 @@ export function validateScreenshotReference(
   return { outputUrl: parsed.outputUrl, relativeFile, problems };
 }
 
-function screenshotFiles(directory, prefix = "") {
+function directoryFiles(directory, prefix) {
   const files = [];
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
-    const relative = prefix.length === 0 ? entry.name : `${prefix}/${entry.name}`;
+    const relative = `${prefix}/${entry.name}`;
     if (entry.isDirectory()) {
-      files.push(...screenshotFiles(join(directory, entry.name), relative));
+      files.push(...directoryFiles(join(directory, entry.name), relative));
     } else {
-      files.push(`screenshots/${relative}`);
+      files.push(relative);
     }
   }
   return files;
@@ -468,7 +502,121 @@ function screenshotFiles(directory, prefix = "") {
 export function findOrphanScreenshotFiles(root, referencedFiles) {
   const directory = join(root, "screenshots");
   if (!existsSync(directory)) return [];
-  return screenshotFiles(directory)
+  return directoryFiles(directory, "screenshots")
+    .filter((file) => !referencedFiles.has(file))
+    .sort();
+}
+
+function overviewNodeLabel(type) {
+  return OVERVIEW_NODE_LABELS[type] ?? `an unsupported "${type}" element`;
+}
+
+function overviewLinkProblem(url) {
+  let parsed;
+  try {
+    parsed = new URL(url);
+  } catch {
+    return `The link "${url}" must be an absolute https URL.`;
+  }
+  if (parsed.protocol !== "https:") {
+    return `The link "${url}" must use https.`;
+  }
+  return undefined;
+}
+
+function walkMarkdown(node, visit) {
+  visit(node);
+  for (const child of node.children ?? []) walkMarkdown(child, visit);
+}
+
+export function checkOverviewMarkdown(text) {
+  const problems = new Set();
+  if (text.trim().length === 0) {
+    return ["The overview file is empty."];
+  }
+  const length = [...text.replace(/\n$/, "")].length;
+  if (length > OVERVIEW_MAX_CHARS) {
+    problems.add(
+      `The overview file has ${length} characters. The maximum is ${OVERVIEW_MAX_CHARS}.`,
+    );
+  }
+  if (OVERVIEW_CONTROL_CHARACTER_PATTERN.test(text)) {
+    problems.add("The overview file has a control character.");
+  }
+  const tree = fromMarkdown(text, {
+    extensions: [gfm()],
+    mdastExtensions: [gfmFromMarkdown()],
+  });
+  walkMarkdown(tree, (node) => {
+    const line = node.position?.start.line ?? 0;
+    if (!OVERVIEW_NODE_TYPES.has(node.type)) {
+      problems.add(
+        `The overview file uses ${overviewNodeLabel(node.type)} at line ${line}.`,
+      );
+      return;
+    }
+    if (node.type === "listItem" && typeof node.checked === "boolean") {
+      problems.add(`The overview file uses a task list at line ${line}.`);
+    }
+    if (node.type === "link" || node.type === "definition") {
+      const problem = overviewLinkProblem(node.url);
+      if (problem !== undefined) problems.add(`${problem} Line ${line}.`);
+    }
+  });
+  return [...problems];
+}
+
+export function normalizeOverviewText(text) {
+  return `${text
+    .replace(/^\uFEFF/, "")
+    .replace(/\r\n?/g, "\n")
+    .split("\n")
+    .map((line) => line.replace(/[ \t]+$/, ""))
+    .join("\n")
+    .replace(/^\n+/, "")
+    .replace(/\n+$/, "")}\n`;
+}
+
+export function validateOverviewReference(root, pluginId, reference) {
+  if (reference !== `./overview/${pluginId}.md`) {
+    return {
+      problems: [`The overview path must be ./overview/${pluginId}.md: ${reference}`],
+    };
+  }
+  const relativeFile = `overview/${pluginId}.md`;
+  const path = join(root, "overview", `${pluginId}.md`);
+  if (!existsSync(path)) {
+    return { relativeFile, problems: [`The overview file does not exist: ${path}`] };
+  }
+  const stat = statSync(path);
+  if (!stat.isFile()) {
+    return { relativeFile, problems: [`The overview path is not a file: ${path}`] };
+  }
+  if (stat.size > OVERVIEW_MAX_BYTES) {
+    return {
+      relativeFile,
+      problems: [
+        `The overview file is larger than ${OVERVIEW_MAX_BYTES} bytes: ${path}`,
+      ],
+    };
+  }
+  let text;
+  try {
+    text = new TextDecoder("utf-8", { fatal: true }).decode(readFileSync(path));
+  } catch {
+    return { relativeFile, problems: [`The overview file is not UTF-8: ${path}`] };
+  }
+  const normalized = normalizeOverviewText(text);
+  const problems = checkOverviewMarkdown(normalized).map(
+    (problem) => `${problem} (${relativeFile})`,
+  );
+  return { text: normalized, relativeFile, problems };
+}
+
+export function findOrphanOverviewFiles(root, referencedFiles) {
+  const directory = join(root, "overview");
+  if (!existsSync(directory)) return [];
+  return directoryFiles(directory, "overview")
     .filter((file) => !referencedFiles.has(file))
     .sort();
 }

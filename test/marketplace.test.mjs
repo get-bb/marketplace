@@ -12,18 +12,22 @@ import { dirname, join } from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import {
+  OVERVIEW_MAX_CHARS,
   SCREENSHOT_MAX_BYTES,
+  checkOverviewMarkdown,
   checkRequiredCategories,
   compareV1EntryBytes,
   fetchMarketplaceText,
   findOrphanScreenshotFiles,
   fillEmptyCollections,
+  findOrphanOverviewFiles,
   inspectImage,
   parseEntryAddedDates,
   projectV1Entry,
   projectV1Manifest,
   pullRequestEntryFiles,
   readEntryAddedDates,
+  validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
   v1GateDisposition,
@@ -444,5 +448,158 @@ test("the screenshot check finds an unreferenced file", () => {
       new Set(["screenshots/example-plugin/used.png"]),
     );
     assert.deepEqual(orphans, ["screenshots/example-plugin/orphan.png"]);
+  });
+});
+
+function withOverviewRoot(callback) {
+  const root = mkdtempSync(join(tmpdir(), "marketplace-overview-test-"));
+  mkdirSync(join(root, "overview"), { recursive: true });
+  try {
+    callback(root);
+  } finally {
+    rmSync(root, { recursive: true, force: true });
+  }
+}
+
+function writeOverview(root, filename, bytes) {
+  writeFileSync(join(root, "overview", filename), bytes);
+}
+
+test("a valid overview file becomes normalized markdown text", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "example-plugin.md", readText("overview/valid.md"));
+    const result = validateOverviewReference(
+      root,
+      "example-plugin",
+      "./overview/example-plugin.md",
+    );
+    assert.deepEqual(result.problems, []);
+    assert.equal(result.relativeFile, "overview/example-plugin.md");
+    assert.ok(result.text.startsWith("# Example Plugin\n"));
+    assert.ok(result.text.includes("review.\n\n## What you get"));
+    assert.ok(result.text.endsWith("first.\n"));
+  });
+});
+
+test("the overview check normalizes CRLF line endings", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "example-plugin.md", readText("overview/crlf.md"));
+    const result = validateOverviewReference(
+      root,
+      "example-plugin",
+      "./overview/example-plugin.md",
+    );
+    assert.deepEqual(result.problems, []);
+    assert.equal(result.text, "Line one\nLine two\n");
+  });
+});
+
+test("the overview check rejects a path outside the plugin file", () => {
+  withOverviewRoot((root) => {
+    const result = validateOverviewReference(
+      root,
+      "example-plugin",
+      "./overview/other-plugin.md",
+    );
+    assert.match(result.problems[0], /must be \.\/overview\/example-plugin\.md/);
+    assert.equal(result.relativeFile, undefined);
+  });
+});
+
+test("the overview check rejects a missing file", () => {
+  withOverviewRoot((root) => {
+    const result = validateOverviewReference(
+      root,
+      "example-plugin",
+      "./overview/example-plugin.md",
+    );
+    assert.match(result.problems[0], /does not exist/);
+  });
+});
+
+test("the overview check rejects a file that is not UTF-8", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "example-plugin.md", Buffer.from([0x23, 0x20, 0xff, 0xfe]));
+    const result = validateOverviewReference(
+      root,
+      "example-plugin",
+      "./overview/example-plugin.md",
+    );
+    assert.match(result.problems[0], /not UTF-8/);
+  });
+});
+
+test("the overview check rejects a file above the character cap", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "example-plugin.md", `${"a".repeat(OVERVIEW_MAX_CHARS + 1)}\n`);
+    const result = validateOverviewReference(
+      root,
+      "example-plugin",
+      "./overview/example-plugin.md",
+    );
+    assert.match(result.problems[0], /maximum is 4000/);
+  });
+  assert.deepEqual(checkOverviewMarkdown(`${"é".repeat(OVERVIEW_MAX_CHARS)}\n`), []);
+});
+
+test("the overview check rejects markdown outside the allowlist", () => {
+  const cases = [
+    ["<script>alert(1)</script>", /raw HTML at line 1/],
+    ["Text with <b>inline</b> html", /raw HTML at line 1/],
+    ["![logo](https://example.com/logo.png)", /an image at line 1/],
+    ["![logo][ref]\n\n[ref]: https://example.com/logo.png", /an image at line 1/],
+    ["| a | b |\n| - | - |\n| 1 | 2 |", /a table at line 1/],
+    ["Text[^1]\n\n[^1]: Note", /a footnote/],
+    ["- [ ] task", /a task list at line 1/],
+    ["[docs](http://example.com)", /must use https/],
+    ["[docs](javascript:alert(1))", /must use https/],
+    ["[docs](./README.md)", /must be an absolute https URL/],
+    ["[docs][ref]\n\n[ref]: http://example.com", /must use https/],
+    ["Visit http://example.com today", /must use https/],
+    ["Text with a \u0007 bell", /control character/],
+    ["  \n\n", /is empty/],
+  ];
+  for (const [markdown, pattern] of cases) {
+    const problems = checkOverviewMarkdown(`${markdown}\n`);
+    assert.ok(
+      problems.some((problem) => pattern.test(problem)),
+      `${JSON.stringify(markdown)} gave ${JSON.stringify(problems)}`,
+    );
+  }
+});
+
+test("the overview check accepts every element in the allowlist", () => {
+  const markdown = [
+    "# Title",
+    "",
+    "Plain *emphasis* **strong** ~~gone~~ `code` and a [link](https://example.com).",
+    "Hard break  ",
+    "next line with https://example.com/auto autolink.",
+    "",
+    "> quote",
+    "",
+    "1. one",
+    "2. two",
+    "   - nested",
+    "",
+    "```js",
+    "const x = 1;",
+    "```",
+    "",
+    "---",
+    "",
+    "[ref]: https://example.com/ref",
+    "",
+    "See [the ref][ref].",
+  ].join("\n");
+  assert.deepEqual(checkOverviewMarkdown(`${markdown}\n`), []);
+});
+
+test("the overview check finds an unreferenced file", () => {
+  withOverviewRoot((root) => {
+    writeOverview(root, "used.md", "# Used\n");
+    writeOverview(root, "orphan.md", "# Orphan\n");
+    const orphans = findOrphanOverviewFiles(root, new Set(["overview/used.md"]));
+    assert.deepEqual(orphans, ["overview/orphan.md"]);
   });
 });

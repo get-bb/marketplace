@@ -2,12 +2,26 @@
   "id": "example-plugin",
   "displayName": "Example Plugin",
   "description": "Adds an example tool.",
-  "icon": { "url": "./icons/example-plugin.svg" },
-  "tags": ["example"],
-  "author": { "name": "Example Author", "github": "example" },
-  "source": { "npm": { "package": "example-plugin" } },
+  "icon": {
+    "url": "./icons/example-plugin.svg"
+  },
+  "tags": [
+    "example"
+  ],
+  "author": {
+    "name": "Example Author",
+    "github": "example"
+  },
+  "source": {
+    "npm": {
+      "package": "example-plugin"
+    }
+  },
   "category": "utilities",
-  "screenshots": ["./screenshots/example-plugin/overview.png"],
+  "screenshots": [
+    "./screenshots/example-plugin/overview.png"
+  ],
   "publishedAt": "2026-08-01T12:00:00Z",
-  "updatedAt": "2026-08-02T12:00:00Z"
+  "updatedAt": "2026-08-02T12:00:00Z",
+  "overview": "./overview/example-plugin.md"
 }

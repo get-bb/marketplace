@@ -9,11 +9,13 @@ import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import {
   checkRequiredCategories,
+  findOrphanOverviewFiles,
   findOrphanScreenshotFiles,
   fillEmptyCollections,
   projectV1Manifest,
   pullRequestEntryFiles,
   readEntryAddedDates,
+  validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
 } from "./marketplace-lib.mjs";
@@ -166,6 +168,7 @@ for (const entry of plugins) {
 }
 
 const referencedScreenshotFiles = new Set();
+const referencedOverviewFiles = new Set();
 const addedAtById = entryAddedDates();
 const v2Plugins = plugins.map((entry) => {
   const output = { ...entry };
@@ -194,6 +197,17 @@ const v2Plugins = plugins.map((entry) => {
       return result.outputUrl;
     });
   }
+
+  if (entry.overview !== undefined) {
+    const result = validateOverviewReference(root, entry.id, entry.overview);
+    for (const problem of result.problems) {
+      problems.push(`${entry.id}.json: ${problem}`);
+    }
+    if (result.relativeFile !== undefined) {
+      referencedOverviewFiles.add(result.relativeFile);
+    }
+    if (result.text !== undefined) output.overview = result.text;
+  }
   return output;
 });
 
@@ -211,6 +225,9 @@ for (const [pluginId, screenshots] of Object.entries(bbOfficialScreenshots)) {
 
 for (const file of findOrphanScreenshotFiles(root, referencedScreenshotFiles)) {
   problems.push(`${file}: No marketplace entry references this screenshot file.`);
+}
+for (const file of findOrphanOverviewFiles(root, referencedOverviewFiles)) {
+  problems.push(`${file}: No marketplace entry references this overview file.`);
 }
 
 function entryAddedDates() {
