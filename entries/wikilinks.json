@@ -1,0 +1,28 @@
+{
+  "id": "wikilinks",
+  "displayName": "Obsidian at Home",
+  "description": "Edit Markdown notes in BB with wikilinks, recursive previews, contextual backlinks, and queryable thinking trails.",
+  "icon": {
+    "url": "./icons/wikilinks-6477a670.svg"
+  },
+  "tags": [
+    "markdown",
+    "notes",
+    "wikilinks",
+    "backlinks",
+    "previews",
+    "knowledge-management"
+  ],
+  "category": "file-viewers-and-editors",
+  "author": {
+    "name": "Robert Haisfield",
+    "github": "classicrob",
+    "url": "https://github.com/classicrob"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/classicrob/obsidian-at-home.git",
+      "range": "^0.1.0"
+    }
+  }
+}
