@@ -23,6 +23,7 @@
     "./screenshots/bb-recap/recap-card.png",
     "./screenshots/bb-recap/settings.png"
   ],
+  "overview": "./overview/bb-recap.md",
   "source": {
     "git": {
       "url": "https://github.com/MacHatter1/bb-recap.git",
