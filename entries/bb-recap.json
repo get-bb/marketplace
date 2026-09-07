@@ -11,13 +11,18 @@
     "threads",
     "productivity"
   ],
-  "category": "thread-content",
   "author": {
     "name": "MacHatter1",
     "github": "MacHatter1",
     "url": "https://github.com/MacHatter1"
   },
   "category": "thread-content",
+  "screenshots": [
+    "./screenshots/bb-recap/compact-banner.png",
+    "./screenshots/bb-recap/expanded-banner.png",
+    "./screenshots/bb-recap/recap-card.png",
+    "./screenshots/bb-recap/settings.png"
+  ],
   "source": {
     "git": {
       "url": "https://github.com/MacHatter1/bb-recap.git",
