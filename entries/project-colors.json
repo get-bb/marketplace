@@ -1,7 +1,7 @@
 {
   "id": "project-colors",
   "displayName": "Project Colors",
-  "description": "Organize busy sidebars by giving every project its own color. Choose from seven colors; project headings and nested threads receive a matching translucent tint. Choices stay local to each BB client, and the plugin uses no external service or account.",
+  "description": "Organize busy sidebars by giving every project its own color. Choose from seven colors; project headings, nested threads, and conversation titles carry the project's visual identity. Choices stay local to each BB client, and the plugin uses no external service or account.",
   "icon": {
     "url": "./icons/project-colors-00a6c1a5.png"
   },
@@ -23,7 +23,7 @@
   "source": {
     "git": {
       "url": "https://github.com/ninjasweb/bb-project-colors.git",
-      "range": "^0.1.0"
+      "range": "^0.1.1"
     }
   },
   "overview": "./overview/project-colors.md"
