@@ -5,6 +5,7 @@
   "icon": {
     "url": "./icons/provider-muse-e1997fa2.svg"
   },
+  "overview": "./overview/provider-muse.md",
   "tags": [
     "muse",
     "muse-code",
