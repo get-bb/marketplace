@@ -8,8 +8,7 @@ lit up in the conversation itself, like find-in-page for a thread.
 - In-place highlighting of every match in the rendered messages, with the
   current hit in a stronger colour. Highlights update as new messages stream
   in and disappear when the tab closes.
-- A quick-palette row, a **Mod+Shift+F** shortcut, and a message action that
-  searches the text you have selected.
+- A quick-palette row and a **Mod+Shift+F** shortcut that open the tab.
 - A `bb chat-search find` command for agents and scripts.
 
 ## How it works
