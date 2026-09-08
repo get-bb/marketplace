@@ -1,6 +1,6 @@
 {
   "id": "files",
-  "displayName": "Files",
+  "displayName": "FileTree",
   "description": "Browse and preview workspace files beside your BB thread. Search paths, see Git changes, and open code, Markdown, PDFs and Office documents. Read-only; includes a Linux x64 build. macOS requires a native build; Windows is unsupported.",
   "icon": {
     "url": "./icons/files-editor-43529076.svg"
