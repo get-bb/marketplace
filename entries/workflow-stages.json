@@ -19,6 +19,7 @@
   },
   "category": "thread-management",
   "screenshots": [
+    "./screenshots/workflow-stages/sidebar.png",
     "./screenshots/workflow-stages/editor.png"
   ],
   "overview": "./overview/workflow-stages.md",
