@@ -1,0 +1,29 @@
+{
+  "id": "triage",
+  "displayName": "Triage",
+  "description": "Keep agent tasks, progress, and work that needs your attention in one board. Run tasks now or schedule them, organize stages, and turn existing sessions into cards. Follow each task in its linked conversation. Requires BB 0.42+, a compatible Plugin SDK 0.4.47 runtime, and a configured agent provider; provider usage charges apply.",
+  "icon": "ListTodo",
+  "tags": [
+    "agents",
+    "kanban",
+    "scheduling",
+    "task-management"
+  ],
+  "author": {
+    "name": "Mayank Bansal",
+    "github": "MayankBansal12",
+    "url": "https://github.com/MayankBansal12"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/MayankBansal12/bb-plugin-triage.git",
+      "ref": "5e74ed686c03a853c5ff3bf33883b91e75c16c2f"
+    }
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/triage/triage-board.png",
+    "./screenshots/triage/triage-new-task.png"
+  ],
+  "overview": "./overview/triage.md"
+}

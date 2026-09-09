@@ -1,0 +1,21 @@
+{
+  "id": "browser",
+  "displayName": "Browser Session Import",
+  "description": "Signs every ordinary BB Browser tab into one imported cookie session. Import once from a local Chrome, Firefox, or other browser profile, or from a JSON cookie export, and the shared session carries those logins to existing and new tabs. Re-import any time to replace the session, and remove it with one button to clear the Browser. Cookies are read on this machine only; native profiles read on macOS and Linux, while JSON exports work anywhere the BB desktop runs.",
+  "icon": { "url": "./icons/browser-9a4da551.svg" },
+  "screenshots": ["./screenshots/browser/settings.png"],
+  "overview": "./overview/browser.md",
+  "tags": ["cookies", "session", "browser", "login", "profiles", "import", "json", "sign-in"],
+  "author": {
+    "name": "GantisStorm",
+    "github": "GantisStorm",
+    "url": "https://github.com/GantisStorm"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/GantisStorm/bb-plugin-browser-session-import.git",
+      "range": "^0.4.0"
+    }
+  }
+}
