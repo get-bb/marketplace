@@ -19,8 +19,7 @@
   },
   "category": "tasks-and-workflows",
   "screenshots": [
-    "./screenshots/follow-up/panel.jpg",
-    "./screenshots/follow-up/settings.jpg"
+    "./screenshots/follow-up/settings.png"
   ],
   "overview": "./overview/follow-up.md",
   "source": {

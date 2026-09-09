@@ -19,8 +19,7 @@
   },
   "category": "thread-management",
   "screenshots": [
-    "./screenshots/thread-badges/sidebar.jpg",
-    "./screenshots/thread-badges/settings.jpg"
+    "./screenshots/thread-badges/settings.png"
   ],
   "overview": "./overview/thread-badges.md",
   "source": {
