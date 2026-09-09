@@ -1,7 +1,7 @@
 {
   "id": "thread-badges",
   "displayName": "Thread Badges",
-  "description": "Shows pull-request state, CI attention and follow-up progress on sidebar rows, so you see what needs you without opening a thread. One glyph tracks what the pull request is — open, draft, merged or closed — and a second tracks whether it wants something from you: checks running or failed, merge conflicts, changes requested, a review, or a block on merging. A ring shows how much of a thread's follow-up list is closed. Badges draw on whichever sidebar you use, and bb owns the git-host lookup and the polling, so running both pull-request badges costs no extra requests. The ring needs the Follow Up plugin; without it the ring does not draw and the other badges are unaffected.",
+  "description": "Shows pull-request state, CI attention and follow-up progress on sidebar rows, so you see what needs you without opening a thread. One glyph tracks what the pull request is — open, draft, merged or closed — and a second tracks whether it wants something from you: checks running or failed, merge conflicts, changes requested, a review, or a block on merging. A ring shows how much of a thread's follow-up list is closed. Badges draw on whichever sidebar you use — at most two per row by default, with a priority you set deciding which win the slots — and bb owns the git-host lookup and the polling, so running both pull-request badges costs no extra requests. The ring needs the Follow Up plugin; without it the ring does not draw and the other badges are unaffected.",
   "icon": "Circle",
   "tags": [
     "badges",
@@ -19,6 +19,7 @@
   },
   "category": "thread-management",
   "screenshots": [
+    "./screenshots/thread-badges/sidebar.png",
     "./screenshots/thread-badges/settings.png"
   ],
   "overview": "./overview/thread-badges.md",
@@ -26,7 +27,7 @@
     "git": {
       "url": "https://github.com/matthewdias/bb-plugins.git",
       "subdir": "plugins/thread-badges",
-      "range": "^0.1.0",
+      "range": "^0.2.0",
       "tagPrefix": "thread-badges/"
     }
   }

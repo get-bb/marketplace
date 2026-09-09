@@ -5,7 +5,9 @@ follow-ups on it are still open. These badges do, without opening anything.
 ## What you get
 
 Three badge types, each independently switchable, drawn on whichever sidebar
-you use.
+you use — at most two per row by default, since a 260px row runs out of space
+before the badges run out of things to say. You choose how many a row may draw
+and which types win the slots when more than that have something to show.
 
 **Pull requests.** A glyph coloured by state — green for open, grey for draft,
 purple for merged, red for closed. Hovering names the number, state, attention,
