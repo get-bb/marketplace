@@ -1,7 +1,7 @@
 {
   "id": "stelow",
   "displayName": "Stelow",
-  "description": "Stelow turns humans and AI agents into a cross-functional product team: research opportunity spaces with 14 strategy playbooks, then deliver through an orchestrated workflow — Shape Up proposals, interface trade-offs before code, typed scopes with spikes up front, gated reviews, and agent workers. One board, one quiet inbox.",
+  "description": "Stelow turns humans and AI agents into a cross-functional product team: research opportunity spaces with 14 strategy playbooks, run single-stage explorations, then build through an orchestrated workflow — Shape Up proposals, interface trade-offs before code, typed scopes with spikes up front, gated reviews, and agent workers. One board, one quiet inbox.",
   "icon": "Star",
   "tags": [
     "product-workflow",
@@ -12,7 +12,7 @@
     "research",
     "kanban",
     "discovery",
-    "delivery",
+    "build",
     "strategy"
   ],
   "author": {
@@ -24,7 +24,13 @@
   "source": {
     "git": {
       "url": "https://github.com/calionauta/bb-plugin-stelow.git",
-      "range": "^0.1.14"
+      "range": "^0.3.14"
     }
-  }
+  },
+  "screenshots": [
+    "./screenshots/stelow/inbox.png",
+    "./screenshots/stelow/build.png",
+    "./screenshots/stelow/research.png",
+    "./screenshots/stelow/explore.png"
+  ]
 }
