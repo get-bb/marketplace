@@ -1,0 +1,34 @@
+{
+  "id": "thread-badges",
+  "displayName": "Thread Badges",
+  "description": "Shows pull-request state, CI attention and follow-up progress on sidebar rows, so you see what needs you without opening a thread. One glyph tracks what the pull request is — open, draft, merged or closed — and a second tracks whether it wants something from you: checks running or failed, merge conflicts, changes requested, a review, or a block on merging. A ring shows how much of a thread's follow-up list is closed. Badges draw on whichever sidebar you use, and bb owns the git-host lookup and the polling, so running both pull-request badges costs no extra requests. The ring needs the Follow Up plugin; without it the ring does not draw and the other badges are unaffected.",
+  "icon": "Circle",
+  "tags": [
+    "badges",
+    "sidebar",
+    "pull-requests",
+    "ci",
+    "github",
+    "indicators",
+    "threads"
+  ],
+  "author": {
+    "name": "Matthew Dias",
+    "github": "matthewdias",
+    "url": "https://github.com/matthewdias"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/thread-badges/sidebar.jpg",
+    "./screenshots/thread-badges/settings.jpg"
+  ],
+  "overview": "./overview/thread-badges.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/matthewdias/bb-plugins.git",
+      "subdir": "plugins/thread-badges",
+      "range": "^0.1.0",
+      "tagPrefix": "thread-badges/"
+    }
+  }
+}

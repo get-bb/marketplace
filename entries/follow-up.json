@@ -1,0 +1,34 @@
+{
+  "id": "follow-up",
+  "displayName": "Follow Up",
+  "description": "Keeps the work an agent noticed but skipped, so nothing is lost when a turn ends. Agents record follow-ups through five tools as they work, and you triage the list in a banner above the composer: push a row into the composer, hand it to a new thread, reorder it, or dismiss it for good. A dismissed row stays gone even when an agent notices the same thing again. Twelve bb follow-up subcommands cover the same ground from a terminal, and recorded rows appear in the @ menu. No background model call and no external service: the two buttons that spend a turn only run when you press them.",
+  "icon": "TextWrap",
+  "tags": [
+    "follow-ups",
+    "agent-tools",
+    "triage",
+    "threads",
+    "composer",
+    "backlog",
+    "cli"
+  ],
+  "author": {
+    "name": "Matthew Dias",
+    "github": "matthewdias",
+    "url": "https://github.com/matthewdias"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/follow-up/panel.jpg",
+    "./screenshots/follow-up/settings.jpg"
+  ],
+  "overview": "./overview/follow-up.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/matthewdias/bb-plugins.git",
+      "subdir": "plugins/follow-up",
+      "range": "^0.3.0",
+      "tagPrefix": "follow-up/"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "workflow-stages",
+  "displayName": "Workflow Stages",
+  "description": "Files every thread under a workflow stage you define, and moves it as the work progresses. Rename, reorder, add and delete the stages, give each one an icon, and write the rule agents read before they move a thread. Six ship — Inbox, Planning, Building, Review, Blocked and Done — with Blocked and Done marked so that only you may file into them. The bb stages command reaches the same workflow from a terminal, always acting on the thread's root, which is what the sidebar files. Requires the Ribbon sidebar plugin, installed and selected, for the stages to have anywhere to draw.",
+  "icon": "ArrowUpDown",
+  "tags": [
+    "workflow",
+    "stages",
+    "ribbon",
+    "sidebar",
+    "kanban",
+    "automation",
+    "threads"
+  ],
+  "author": {
+    "name": "Matthew Dias",
+    "github": "matthewdias",
+    "url": "https://github.com/matthewdias"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/workflow-stages/sidebar.jpg",
+    "./screenshots/workflow-stages/editor.jpg"
+  ],
+  "overview": "./overview/workflow-stages.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/matthewdias/bb-plugins.git",
+      "subdir": "plugins/workflow-stages",
+      "range": "^0.1.0",
+      "tagPrefix": "workflow-stages/"
+    }
+  }
+}
