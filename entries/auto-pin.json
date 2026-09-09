@@ -1,0 +1,31 @@
+{
+  "id": "auto-pin",
+  "displayName": "Auto Pin",
+  "description": "Keeps every thread you start pinned to the top of the sidebar, so a thread stays in reach until you unpin it yourself. Pins each visible top-level thread as it is created, and leaves child threads, hidden threads, and anything already pinned untouched. Unpinning still works the way it always did, so pin state stays yours to edit from the sidebar. Runs on thread creation with nothing to configure, no commands to learn, and no network access.",
+  "icon": "Pin",
+  "screenshots": [
+    "./screenshots/auto-pin/pinned.png"
+  ],
+  "overview": "./overview/auto-pin.md",
+  "tags": [
+    "threads",
+    "pin",
+    "sidebar",
+    "organize",
+    "automation"
+  ],
+  "author": {
+    "name": "Chris Sells",
+    "github": "csells",
+    "url": "https://github.com/csells"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/csells/bb-plugins.git",
+      "subdir": "plugins/auto-pin",
+      "range": "^0.1.0",
+      "tagPrefix": "auto-pin/"
+    }
+  }
+}
