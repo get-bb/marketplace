@@ -1,7 +1,7 @@
 {
   "id": "file-manager",
   "displayName": "File Manager",
-  "description": "Browse, upload, download, move, rename and extract files under your home folder — as a full-page bb panel, as a tab in the side panel beside a thread, or straight from a message: right-click a file link and \"File location\" opens its folder with the file selected. Space previews the focused file, a gallery view shows thumbnails, Properties answers what a file or folder actually is, bookmarks keep the folders you live in one click away, and a file can be handed to the agent as an @-mention — including from the composer's + menu, which otherwise only reaches the browser's machine. Multi-gigabyte uploads resume after a dropped connection.",
+  "description": "Browse, upload, download, move, rename and extract files under your home folder — as a full-page bb panel, as a tab in the side panel beside a thread, or straight from a message: right-click a file link and \"File location\" opens its folder with the file selected. Double-click or Enter opens a file to read it: beside a thread it goes to bb's own preview panel, and on the full page the manager shows it itself — images, PDF, video and audio play in place, Markdown is rendered, and everything else opens with syntax highlighting. Space quick-looks the focused row, a gallery view shows thumbnails, Properties answers what a file or folder actually is, bookmarks keep the folders you live in one click away, and a file can be handed to the agent as an @-mention — including from the composer's + menu, which otherwise only reaches the browser's machine. Multi-gigabyte uploads resume after a dropped connection.",
   "icon": "FolderOpen",
   "tags": [
     "files",
@@ -21,7 +21,7 @@
     "git": {
       "url": "https://github.com/xMinor-1/bb-plugins.git",
       "subdir": "plugins/file-manager",
-      "range": "^0.7.0",
+      "range": "^0.8.0",
       "tagPrefix": "file-manager/"
     }
   }

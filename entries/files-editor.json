@@ -1,16 +1,20 @@
 {
   "id": "files-editor",
   "displayName": "Files",
-  "description": "Browse and edit the workspace behind a thread in an editor layout: a searchable file tree on the left, tabs across the top, and the whole file in the middle. Opens as a full-page panel or as a tab beside a thread, where it is pinned to that thread's worktree so it shows the files the agent is editing. Cmd+P ranks files by path; clicking one opens it in its own tab, syntax-highlighted in your BB code theme. Saves are guarded by the hash the file had when it was opened, so an edit an agent made underneath you stops the save and offers Reload or Overwrite. For a workspace on the machine BB runs on it walks the directory itself, so dotfiles appear. Adds a `bb files` command that gives agents the same listing, which reads the right disk when the workspace is on another machine.",
+  "description": "A VS Code-style file explorer and editor for the workspace behind a thread. A searchable file tree on the left, editor tabs across the top, and the whole file in the middle \u2014 as a full-page panel, or as a tab beside a thread where it is pinned to that thread's worktree so it shows the files the agent is editing. Cmd+P is a fuzzy go-to-file palette; Cmd+F finds text inside the open file with a match count and case matching. Files open syntax-highlighted in your BB code theme, and can be edited and saved: a save is guarded by the hash the file had when it was opened, so a change an agent made underneath you stops it and offers Reload or Overwrite rather than clobbering the change. Two dependent pickers choose the project and then its checkout or one of its worktrees by branch name. Dotfiles appear for a workspace on the machine BB runs on, because it walks the directory itself instead of using BB's listing, which drops them. Adds a `bb files` command so agents can browse, search and read the same workspace from the CLI \u2014 which reads the right disk when that workspace is on another machine.",
   "icon": {
     "url": "./icons/files-editor-43529076.svg"
   },
   "tags": [
     "files",
-    "editor",
     "file-explorer",
-    "code",
-    "interface",
+    "file-browser",
+    "file-tree",
+    "editor",
+    "code-editor",
+    "text-editor",
+    "vscode",
+    "workspace",
     "developer-tools"
   ],
   "author": {
