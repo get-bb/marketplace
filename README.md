@@ -22,6 +22,9 @@ One entry file supplies data to both documents.
 - `scripts/build.mjs` validates the source and builds both documents.
 - `scripts/check-v1-gate.mjs` compares the v1 entries with the live document.
 - `scripts/build-stats.mjs` builds the install-count document.
+- `scripts/build-scorecards.mjs` builds the scorecard document.
+- `scripts/scorecard-lib.mjs` holds the scoring and scanning rules.
+- `schema/scorecards.schema.json` defines the scorecard document.
 
 The build writes `dist/marketplace.json` and `dist/v2/marketplace.json`.
 The base file carries the v1 identity and keeps `schemaVersion` set to `1`.
@@ -129,6 +132,36 @@ CI compares each generated v1 entry with the live v1 entry.
 A new entry passes this gate.
 A changed or removed entry needs the `v1-change` pull request label.
 A push to `main` only reports a warning after such a change.
+
+## Scorecards
+
+[The scorecard document](https://getbb.app/marketplace/v2/scorecards.json) reports two scores per plugin.
+The store renders them beside an entry.
+
+`health` scores the repository around the plugin from the GitHub API.
+It has four sections: hygiene, maintenance, responsiveness, and adoption.
+Maintenance caps the overall grade, so a documented but dormant plugin cannot grade well.
+
+`review` scores automated scans of the release the entry resolves to.
+The scans cover obfuscated code, committed minified code, network patterns, vulnerable production dependencies, the license, and release provenance.
+The review also lists the capabilities the release code reaches for, such as shell execution, filesystem access, or secrets access.
+BB has no declared plugin permission manifest, so a capability is observed in the code, not promised by the author.
+
+Two signals fail a review: obfuscator-generated identifiers, and a file that both decodes a payload and evaluates a non-literal value.
+Everything else flags.
+A failing review is not a takedown; it is a merge blocker on the pull request and a visible verdict in the store.
+
+The pull request job scans only the entries the pull request changes.
+The scheduled job scans every entry weekly, so a compromised update is caught after a semver range picks it up, not only at first submission.
+A plugin missing from the document has no scorecard yet, which is not a pass.
+
+The document stays separate from the manifest for the same reasons `stats.json` does: the v1 schema is strict, and these scores move on their own cadence.
+
+Run the scan locally with a token that has public repository read access:
+
+```sh
+GITHUB_TOKEN=... npm run scorecards -- --entry example-plugin --print
+```
 
 ## Install counts
 
