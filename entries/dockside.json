@@ -1,0 +1,30 @@
+{
+  "id": "dockside",
+  "displayName": "Dockside",
+  "description": "Organizes BB threads into compact project-first families with semantic status, inline child agents, and persistent drag ordering.",
+  "icon": {
+    "url": "./icons/dockside-0a2df40e.svg"
+  },
+  "tags": [
+    "sidebar",
+    "threads",
+    "projects",
+    "agents",
+    "status",
+    "productivity"
+  ],
+  "author": {
+    "name": "Mateo Cerquetella",
+    "github": "MateoCerquetella",
+    "url": "https://github.com/MateoCerquetella"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/MateoCerquetella/bb-plugins.git",
+      "subdir": "plugins/dockside",
+      "range": "^0.1.0",
+      "tagPrefix": "dockside/"
+    }
+  }
+}

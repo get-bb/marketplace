@@ -1,0 +1,25 @@
+{
+  "id": "reclaim",
+  "displayName": "Reclaim",
+  "description": "Find what filled your disk and get the space back, without guessing. Indexes the whole volume with no scan cap, so the totals match what your operating system reports — about 90 seconds for 6 million files on a 500GB disk. Browse any folder by real subtree size, or work from a costed list of build output, idle dependencies, package caches, Xcode derived data and Docker layers, including compacting the Docker VM disk image that pruning alone never shrinks. Deletion is confined to roots you authorize, and a guard can clean up or hand the problem to an agent when space runs low. macOS and Linux, no account or external service.",
+  "icon": { "url": "./icons/reclaim-df93bdf8.svg" },
+  "screenshots": [
+    "./screenshots/reclaim/overview.png",
+    "./screenshots/reclaim/cleanup.png",
+    "./screenshots/reclaim/settings.png"
+  ],
+  "overview": "./overview/reclaim.md",
+  "tags": ["disk-usage", "disk-space", "storage", "cleanup", "docker", "node-modules", "cache", "file-browser", "monitoring"],
+  "author": {
+    "name": "Braedon Saunders",
+    "github": "braedonsaunders",
+    "url": "https://github.com/braedonsaunders"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/braedonsaunders/bb-plugin-reclaim.git",
+      "range": "^0.1.0"
+    }
+  }
+}

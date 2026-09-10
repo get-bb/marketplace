@@ -1,9 +1,17 @@
 {
   "id": "thread-inbox",
-  "displayName": "Thread Inbox (w/ Children)",
-  "description": "Replaces the BB thread list with a stable, reorderable inbox that nests child threads and adds parking and bulk actions.",
+  "displayName": "Inbox Sidebar",
+  "description": "Keep your thread inbox ordered and bring related work together. Nest child threads beneath their parents and scan Git, PR, and provider details on each card. Snooze, settle, or bulk-archive threads with keyboard and touch controls. Filter by project and let an optional inactivity shelf collect quiet work.",
   "icon": "PanelLeft",
-  "tags": ["interface", "sidebar", "threads", "inbox", "productivity"],
+  "tags": [
+    "threads",
+    "nested-threads",
+    "snooze",
+    "keyboard-shortcuts",
+    "git",
+    "pull-requests",
+    "bulk-actions"
+  ],
   "author": {
     "name": "WYEZ",
     "github": "wy3z",
@@ -13,7 +21,12 @@
   "source": {
     "git": {
       "url": "https://github.com/wy3z/bb-plugin-thread-inbox.git",
-      "range": "^0.2.1"
+      "range": "^0.2.2"
     }
-  }
+  },
+  "overview": "./overview/thread-inbox.md",
+  "screenshots": [
+    "./screenshots/thread-inbox/nested-threads.jpg",
+    "./screenshots/thread-inbox/inactive-settings.jpg"
+  ]
 }

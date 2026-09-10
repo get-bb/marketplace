@@ -1,0 +1,33 @@
+{
+  "id": "browser-copy",
+  "displayName": "Browser Copy",
+  "description": "Copies what you point at in a BB Browser tab: pick any element and get a structured markdown block \u2014 page URL, viewport, CSS selector, ARIA role and name, bounds, link, and text \u2014 or a PNG of just that element, or a screenshot of the visible tab. One icon button in the thread header opens the three modes, and the picker outlines each target with a hover highlight and label as you move. Redaction is a heuristic on form fields \u2014 a password input, or a name, id or autocomplete matching password, credential, secret, token, api-key or auth \u2014 so it covers more than passwords but nothing outside an input, and images are not redacted.",
+  "icon": "Copy",
+  "screenshots": [
+    "./screenshots/browser-copy/menu.png",
+    "./screenshots/browser-copy/selection.png"
+  ],
+  "overview": "./overview/browser-copy.md",
+  "tags": [
+    "browser",
+    "copy",
+    "element",
+    "screenshot",
+    "clipboard",
+    "markdown",
+    "selector",
+    "accessibility"
+  ],
+  "author": {
+    "name": "GantisStorm",
+    "github": "GantisStorm",
+    "url": "https://github.com/GantisStorm"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/GantisStorm/bb-plugin-browser-copy.git",
+      "range": "^0.2.2"
+    }
+  }
+}

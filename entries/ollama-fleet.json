@@ -1,0 +1,25 @@
+{
+  "id": "ollama-fleet",
+  "displayName": "Ollama Fleet",
+  "description": "Route local inference across your Ollama servers and see which model handled each job. Inspect health and model inventory, with bounded fallback and job history. Requires BB and a reachable Ollama server; Agent Board 0.6.0 or newer is an optional companion.",
+  "icon": "ListTodo",
+  "tags": [
+    "ollama",
+    "local-inference",
+    "routing",
+    "observability"
+  ],
+  "author": {
+    "name": "Aaron Phifer",
+    "github": "aaronphifer",
+    "url": "https://github.com/aaronphifer"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/aaronphifer/bb-plugin-ollama-fleet.git",
+      "range": "^0.6.0"
+    }
+  },
+  "overview": "./overview/ollama-fleet.md"
+}
