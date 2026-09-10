@@ -701,7 +701,7 @@ export function readEntryAddedDates(root) {
       root,
       "log",
       "--diff-filter=A",
-      "--follow",
+      "--no-renames",
       "--format=date:%cI",
       "--name-only",
       "--",
