@@ -1,0 +1,30 @@
+{
+  "id": "x-viral",
+  "displayName": "X Viral",
+  "description": "Scores a draft X post against the open-source For You ranking weights, then runs an autoresearch loop that applies every edit that raises the score, checks dropped images and videos for the feed, and drafts a video script.",
+  "icon": {
+    "url": "./icons/x-viral-94c4279d.svg"
+  },
+  "tags": [
+    "x",
+    "twitter",
+    "social-media",
+    "writing",
+    "scoring",
+    "autoresearch",
+    "video",
+    "images"
+  ],
+  "author": {
+    "name": "Jing Reyhan",
+    "github": "j1ngg",
+    "url": "https://github.com/j1ngg"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/j1ngg/bb-plugin-x-viral.git",
+      "range": "^0.1.0"
+    }
+  }
+}
