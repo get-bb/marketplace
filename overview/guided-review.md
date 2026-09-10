@@ -30,6 +30,6 @@ GitHub operations use the server's GitHub CLI credentials. Relevant patches and 
 
 Use your own trusted BB installation for your own GitHub identity. A shared BB server shares its selected account, settings, and stored reviews.
 
-Screenshots show the released interface with synthetic sample PR data and a sample assistant conversation.
+Screenshots preview the latest development build with native BB chat and refreshed open/resolved discussions, using synthetic sample PR data and a sample conversation. These UI updates are not yet included in the v0.2.1 tagged release.
 
 [Watch the walkthrough and see setup details](https://notpritam.in/plugins/guided-review) · [Source and documentation](https://github.com/notpritam/bb-plugin-guided-review) · [Release notes](https://github.com/notpritam/bb-plugin-guided-review/releases/tag/v0.2.1)

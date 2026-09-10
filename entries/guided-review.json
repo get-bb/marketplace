@@ -8,8 +8,10 @@
   "category": "code-and-reviews",
   "screenshots": [
     "./screenshots/guided-review/chapters.webp",
-    "./screenshots/guided-review/private-notes.webp",
     "./screenshots/guided-review/assistant.webp",
+    "./screenshots/guided-review/threads.webp",
+    "./screenshots/guided-review/resolved.webp",
+    "./screenshots/guided-review/private-notes.webp",
     "./screenshots/guided-review/draft-review.webp"
   ],
   "overview": "./overview/guided-review.md",
