@@ -1,8 +1,9 @@
 {
   "id": "app-preview",
   "displayName": "App Preview",
-  "description": "Detects the app in a thread worktree, starts it in a BB terminal, and opens it in the in-app browser.",
+  "description": "Detects the app in a thread worktree, starts the detected recipe in a BB terminal, and can open it in the in-app browser. Ports can share a listener over BB Connect or send SIGTERM/SIGKILL.",
   "icon": "Play",
+  "overview": "./overview/app-preview.md",
   "tags": [
     "preview",
     "dev-server",
@@ -20,7 +21,7 @@
   "source": {
     "git": {
       "url": "https://github.com/hungv47/bb-plugin-app-preview.git",
-      "range": "^0.1.0"
+      "range": "^0.2.9"
     }
   }
 }
