@@ -1,0 +1,33 @@
+{
+  "id": "omarchy",
+  "displayName": "Omarchy Sync",
+  "description": "Keeps BB desktop and PWA colors in step with the active Omarchy theme, including light/dark mode, ANSI and code colors, favicon tinting, and animated transitions, while leaving the native mobile app independent.",
+  "icon": {
+    "url": "./icons/omarchy-a524ee3b.svg"
+  },
+  "tags": [
+    "themes",
+    "appearance",
+    "omarchy",
+    "dark-mode",
+    "light-mode",
+    "automation",
+    "pwa"
+  ],
+  "author": {
+    "name": "Salem Sayed Abdel Gawad",
+    "github": "salemsayed",
+    "url": "https://github.com/salemsayed"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/omarchy/lupine-light.png",
+    "./screenshots/omarchy/tokyo-night-dark.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/salemsayed/bb-plugin-omarchy.git",
+      "range": "^0.1.0"
+    }
+  }
+}

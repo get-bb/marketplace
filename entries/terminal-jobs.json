@@ -1,0 +1,26 @@
+{
+  "id": "terminal-jobs",
+  "displayName": "Terminal Jobs",
+  "description": "Runs terminal commands that outlive agent turns, keeps job records and output logs, and sends completion notices to the owning BB thread.",
+  "icon": "Terminal",
+  "tags": [
+    "terminal",
+    "background-jobs",
+    "notifications",
+    "automation",
+    "multi-machine",
+    "command-line"
+  ],
+  "author": {
+    "name": "Ryan Brown",
+    "github": "ryanbbrown",
+    "url": "https://github.com/ryanbbrown"
+  },
+  "category": "command-line",
+  "source": {
+    "git": {
+      "url": "https://github.com/ryanbbrown/bb-plugin-terminal-jobs.git",
+      "range": "^0.2.0"
+    }
+  }
+}
