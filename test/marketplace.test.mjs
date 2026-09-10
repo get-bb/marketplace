@@ -282,6 +282,18 @@ test("a later entry edit does not change its first addition date", () => {
 
     const dates = readEntryAddedDates(root);
     assert.equal(dates.get("example"), "2026-01-02T03:04:05Z");
+
+    runGit(root, ["mv", "entries/example.json", "entries/renamed.json"]);
+    runGit(root, ["commit", "--quiet", "-m", "Rename entry"], {
+      env: {
+        ...process.env,
+        GIT_AUTHOR_DATE: "2026-03-04T05:06:07+00:00",
+        GIT_COMMITTER_DATE: "2026-03-04T05:06:07+00:00",
+      },
+    });
+    const renamedDates = readEntryAddedDates(root);
+    assert.equal(renamedDates.get("renamed"), "2026-03-04T05:06:07Z");
+    assert.equal(renamedDates.get("example"), "2026-01-02T03:04:05Z");
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
