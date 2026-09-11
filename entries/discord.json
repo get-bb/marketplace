@@ -2,9 +2,7 @@
   "id": "discord",
   "displayName": "Discord",
   "description": "Run bb agent threads from Discord, answer approvals, and manage your server with permission-gated tools. Start a dedicated conversation with a bot mention and receive final answers in its Discord thread. Choose the project, machine, model, and permission mode in bb. Requires a Discord bot with Message Content Intent and a configured bb agent provider.",
-  "icon": {
-    "url": "./icons/discord-11da9e0b.svg"
-  },
+  "icon": "Discord",
   "screenshots": [
     "./screenshots/discord/test-run-discord.png",
     "./screenshots/discord/discord-settings.png",
