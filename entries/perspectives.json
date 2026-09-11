@@ -17,6 +17,7 @@
     "github": "its-rosetta",
     "url": "https://phosphor.co"
   },
+  "category": "agents-and-providers",
   "source": {
     "npm": {
       "package": "@phosphorco/bb-plugin-perspectives",

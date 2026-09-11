@@ -9,6 +9,7 @@
     "github": "smsunarto",
     "url": "https://github.com/smsunarto"
   },
+  "category": "plugin-development",
   "source": {
     "git": {
       "url": "https://github.com/smsunarto/bb-plugins.git",

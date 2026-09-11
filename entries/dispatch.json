@@ -17,6 +17,7 @@
     "github": "slogsdon",
     "url": "https://github.com/slogsdon"
   },
+  "category": "tasks-and-workflows",
   "source": {
     "npm": {
       "package": "bb-plugin-dispatch",

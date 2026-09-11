@@ -1,0 +1,24 @@
+{
+  "id": "color-swatches",
+  "displayName": "Color Swatches",
+  "description": "Shows a color chip beside CSS values in messages, code, and diffs, so you can recognize colors without copying them into another tool.",
+  "icon": {
+    "url": "./icons/color-swatches-6c3084ca.svg"
+  },
+  "tags": ["colors", "css", "code", "timeline", "interface", "design"],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-content",
+  "screenshots": ["./screenshots/color-swatches/overview.png"],
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/color-swatches",
+      "range": "^0.1.0",
+      "tagPrefix": "color-swatches/"
+    }
+  }
+}

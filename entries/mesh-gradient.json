@@ -1,0 +1,24 @@
+{
+  "id": "mesh-gradient",
+  "displayName": "Mesh Gradient",
+  "description": "Opens a visual editor beside a thread for building mesh gradients, checking text readability, and sending exact CSS, images, or design tokens to an agent.",
+  "icon": {
+    "url": "./icons/mesh-gradient-ef60958c.svg"
+  },
+  "tags": ["design", "gradients", "themes", "assets", "css", "png", "agent-tools", "design-tokens"],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-content",
+  "screenshots": ["./screenshots/mesh-gradient/overview.png"],
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/mesh-gradient",
+      "range": "^0.1.0",
+      "tagPrefix": "mesh-gradient/"
+    }
+  }
+}

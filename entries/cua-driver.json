@@ -1,0 +1,30 @@
+{
+  "id": "cua-driver",
+  "displayName": "Computer Use",
+  "description": "Gives bb agents background desktop and Chromium browser control, powered by the open-source Cua Driver from Cua AI, with per-provider routing.",
+  "icon": {
+    "url": "./icons/cua-driver-122e4a7b.svg"
+  },
+  "tags": [
+    "computer-use",
+    "desktop-automation",
+    "browser",
+    "agent-tools",
+    "cua",
+    "mcp",
+    "multi-machine",
+    "providers"
+  ],
+  "author": {
+    "name": "Juan Bermudez",
+    "github": "juanbermudez",
+    "url": "https://github.com/juanbermudez"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/juanbermudez/bb-plugin-cua-driver.git",
+      "range": "^0.1.0"
+    }
+  }
+}

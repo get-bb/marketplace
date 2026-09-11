@@ -1,0 +1,33 @@
+{
+  "id": "host-monitor",
+  "displayName": "Host Monitor",
+  "description": "Monitors CPU, memory, disk, network throughput, load, uptime, and user-owned processes across every machine enrolled in bb, with guarded controls to stop eligible processes.",
+  "icon": {
+    "url": "./icons/host-monitor-11256331.svg"
+  },
+  "tags": [
+    "monitoring",
+    "machines",
+    "cpu",
+    "memory",
+    "disk",
+    "network",
+    "processes",
+    "sidebar",
+    "system-health"
+  ],
+  "author": {
+    "name": "Mateo Cerquetella",
+    "github": "MateoCerquetella",
+    "url": "https://github.com/MateoCerquetella"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/MateoCerquetella/bb-plugins.git",
+      "subdir": "plugins/host-monitor",
+      "range": "^0.1.2",
+      "tagPrefix": "host-monitor/"
+    }
+  }
+}

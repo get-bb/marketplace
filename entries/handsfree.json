@@ -1,0 +1,25 @@
+{
+  "id": "handsfree",
+  "displayName": "Handsfree",
+  "description": "Adds a hands-free voice operator to bb: talk to an agent that focuses threads, sends messages, starts work, and shows diffs.",
+  "icon": "AudioLines",
+  "tags": [
+    "voice",
+    "realtime",
+    "agent",
+    "interface",
+    "audio"
+  ],
+  "author": {
+    "name": "Swair Shah",
+    "github": "swairshah",
+    "url": "https://github.com/swairshah"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/swairshah/bb-handsfree.git",
+      "range": "^0.1.0"
+    }
+  }
+}

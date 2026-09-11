@@ -10,9 +10,12 @@
     "name": "Sawyer Hood",
     "github": "SawyerHood"
   },
+  "category": "thread-management",
   "source": {
     "git": {
-      "url": "https://github.com/SawyerHood/bb-plugin-cascade.git",
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/cascade",
+      "tagPrefix": "cascade/",
       "range": "^0.1.0"
     }
   }

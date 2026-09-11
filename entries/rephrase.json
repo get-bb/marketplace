@@ -8,6 +8,7 @@
     "name": "suiramdev",
     "github": "suiramdev"
   },
+  "category": "thread-content",
   "source": {
     "git": {
       "url": "https://github.com/suiramdev/bb-plugin-rephrase.git",

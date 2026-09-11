@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- The plugin's toolbox mark. BB renders plugin icons as CSS masks keyed
+       off alpha coverage, so the stroke is an opaque literal rather than
+       currentColor, which has no inherited context inside a mask source. -->
+  <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
+  <rect x="3" y="7" width="18" height="13" rx="2"/>
+  <path d="M3 13h6"/>
+  <path d="M15 13h6"/>
+  <path d="M9 11h6v4H9z"/>
+</svg>

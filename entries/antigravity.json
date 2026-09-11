@@ -1,0 +1,29 @@
+{
+  "id": "antigravity",
+  "displayName": "Antigravity",
+  "description": "Runs bb threads on Google Antigravity through the agy CLI and ACP adapter, with Gemini 3.x models and native reasoning effort.",
+  "icon": {
+    "url": "./icons/antigravity-89be99cb.svg"
+  },
+  "tags": [
+    "acp",
+    "providers",
+    "agents",
+    "google",
+    "antigravity",
+    "gemini"
+  ],
+  "author": {
+    "name": "Amr Tawfik",
+    "github": "amrtawfik160",
+    "url": "https://github.com/amrtawfik160"
+  },
+  "category": "agents-and-providers",
+  "overview": "./overview/antigravity.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/amrtawfik160/bb-plugin-antigravity.git",
+      "range": "^0.2.1"
+    }
+  }
+}

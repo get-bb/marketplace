@@ -1,0 +1,19 @@
+{
+  "id": "claude-account-switcher",
+  "displayName": "Claude Account Switcher",
+  "description": "Switches one BB Claude Code thread to the verified Claude subscription login on its machine while preserving thread history.",
+  "icon": "UserSwitch",
+  "tags": ["providers", "authentication", "oauth", "claude-code", "threads"],
+  "author": {
+    "name": "David Beyer",
+    "github": "benegessarit",
+    "url": "https://github.com/benegessarit"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/benegessarit/bb-plugin-claude-account-switcher.git",
+      "range": "^0.1.0"
+    }
+  }
+}

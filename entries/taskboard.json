@@ -1,7 +1,7 @@
 {
   "id": "taskboard",
   "displayName": "Taskboard",
-  "description": "Brings each BB project's GitHub, Linear, or Jira tasks into one focused List or Kanban board.",
+  "description": "Browses and creates project-scoped GitHub, Linear, or Jira issues in one focused List or Kanban board, with explicit review before creation.",
   "icon": {
     "url": "./icons/taskboard-0b77950c.svg"
   },
@@ -18,10 +18,13 @@
     "github": "MateoCerquetella",
     "url": "https://github.com/MateoCerquetella"
   },
+  "category": "tasks-and-workflows",
   "source": {
-    "npm": {
-      "package": "bb-plugin-taskboard",
-      "range": "^0.1.2"
+    "git": {
+      "url": "https://github.com/MateoCerquetella/bb-plugins.git",
+      "subdir": "plugins/taskboard",
+      "range": "^0.3.3",
+      "tagPrefix": "taskboard/"
     }
   }
 }

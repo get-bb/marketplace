@@ -1,0 +1,19 @@
+{
+  "id": "companion-chat",
+  "displayName": "Companion Chat",
+  "description": "Opens a fresh hidden thread beside the current BB conversation with independent provider and model selection, keeping it out of the sidebar unless the user later makes it visible.",
+  "icon": "SideChat",
+  "tags": ["agents", "interface", "providers", "threads", "workspace"],
+  "author": {
+    "name": "Divyesh",
+    "github": "divyesh-puri",
+    "url": "https://github.com/divyesh-puri"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/divyesh-puri/bb-plugin-companion-chat.git",
+      "range": "^0.1.0"
+    }
+  }
+}

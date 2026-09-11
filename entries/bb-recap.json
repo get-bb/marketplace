@@ -1,0 +1,33 @@
+{
+  "id": "bb-recap",
+  "displayName": "Recap",
+  "description": "Generates concise, display-only summaries for BB threads on demand or after they become idle.",
+  "icon": {
+    "url": "./icons/bb-recap-2f018e6b.svg"
+  },
+  "tags": [
+    "recap",
+    "summaries",
+    "threads",
+    "productivity"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/bb-recap/compact-banner.png",
+    "./screenshots/bb-recap/expanded-banner.png",
+    "./screenshots/bb-recap/recap-card.png",
+    "./screenshots/bb-recap/settings.png"
+  ],
+  "overview": "./overview/bb-recap.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-recap.git",
+      "range": "^0.2.0"
+    }
+  }
+}

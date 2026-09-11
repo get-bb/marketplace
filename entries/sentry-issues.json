@@ -1,0 +1,31 @@
+{
+  "id": "sentry-issues",
+  "displayName": "Sentry Issues",
+  "description": "Browses bounded, read-only Sentry issue snapshots across configured projects and opens searchable issue detail with optional local BB triage links.",
+  "icon": {
+    "url": "./icons/sentry-issues-808083db.svg"
+  },
+  "tags": [
+    "sentry",
+    "issues",
+    "observability",
+    "error-monitoring",
+    "debugging",
+    "triage",
+    "sync",
+    "read-only"
+  ],
+  "category": "code-and-reviews",
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-sentry-issues.git",
+      "range": "^0.1.2"
+    }
+  }
+}

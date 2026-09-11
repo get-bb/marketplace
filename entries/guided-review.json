@@ -1,0 +1,37 @@
+{
+  "id": "guided-review",
+  "displayName": "Guided Review",
+  "description": "Organizes GitHub pull requests into chapters, with code diffs, private notes, a contextual assistant, and review feedback you edit and submit.",
+  "icon": {
+    "url": "./icons/guided-review-f6e10aeb.svg"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/guided-review/chapters.webp",
+    "./screenshots/guided-review/assistant.webp",
+    "./screenshots/guided-review/threads.webp",
+    "./screenshots/guided-review/resolved.webp",
+    "./screenshots/guided-review/private-notes.webp",
+    "./screenshots/guided-review/draft-review.webp"
+  ],
+  "overview": "./overview/guided-review.md",
+  "tags": [
+    "code-review",
+    "pull-requests",
+    "github",
+    "diff",
+    "notes",
+    "agents"
+  ],
+  "author": {
+    "name": "Pritam Sharma",
+    "github": "notpritam",
+    "url": "https://notpritam.in/plugins/guided-review"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/notpritam/bb-plugin-guided-review.git",
+      "range": "^0.2.1"
+    }
+  }
+}

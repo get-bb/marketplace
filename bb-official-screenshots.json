@@ -1,0 +1,11 @@
+{
+  "automations": [
+    "./screenshots/automations/automations-catalog.png",
+    "./screenshots/automations/automations-sidebar.png"
+  ],
+  "plugin-api-docs": [
+    "./screenshots/plugin-api-docs/plugin-guide-map.png",
+    "./screenshots/plugin-api-docs/plugin-guide-surfaces.png",
+    "./screenshots/plugin-api-docs/plugin-guide-reference.png"
+  ]
+}

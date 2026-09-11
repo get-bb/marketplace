@@ -2,13 +2,21 @@
   "name": "bb-marketplace-registry",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node scripts/build.mjs --liveness"
+    "build:stats": "node scripts/build-stats.mjs",
+    "check": "node scripts/build.mjs --liveness",
+    "gate:v1": "node scripts/check-v1-gate.mjs",
+    "test": "node --test && bash test/r2-upload-retry.test.sh"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
-    "ajv-formats": "^3.0.1"
+    "ajv-formats": "^3.0.1",
+    "mdast-util-from-markdown": "^2.0.3",
+    "mdast-util-gfm": "^3.1.0",
+    "micromark-extension-gfm": "^3.0.0"
   }
 }

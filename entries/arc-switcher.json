@@ -8,6 +8,7 @@
     "name": "Elliott McNary",
     "github": "bighitbiker3"
   },
+  "category": "thread-management",
   "source": {
     "git": {
       "url": "https://github.com/bighitbiker3/bb-plugin-arc-switcher.git",

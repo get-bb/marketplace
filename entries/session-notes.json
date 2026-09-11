@@ -16,6 +16,7 @@
     "github": "pablooliva",
     "url": "https://github.com/pablooliva"
   },
+  "category": "thread-content",
   "source": {
     "git": {
       "url": "https://github.com/pablooliva/bb-ide-session-notes-plugin.git",

@@ -16,6 +16,7 @@
     "github": "its-rosetta",
     "url": "https://phosphor.co"
   },
+  "category": "thread-content",
   "source": {
     "npm": {
       "package": "@phosphorco/bb-plugin-sticky-notes",

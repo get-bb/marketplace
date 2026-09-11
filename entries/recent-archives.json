@@ -1,0 +1,27 @@
+{
+  "id": "recent-archives",
+  "displayName": "Recent Archives",
+  "description": "Adds a per-project Recently archived filter to the sidebar Display options menu that lists the newest archived threads under the project, previews them without restoring, and unarchives from the row or thread header.",
+  "icon": {
+    "url": "./icons/recent-archives-63523030.svg"
+  },
+  "tags": [
+    "sidebar",
+    "archive",
+    "threads",
+    "interface",
+    "filters"
+  ],
+  "category": "thread-management",
+  "author": {
+    "name": "Braedon Saunders",
+    "github": "braedonsaunders",
+    "url": "https://github.com/braedonsaunders"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/braedonsaunders/bb-plugin-recent-archives.git",
+      "range": "^0.1.0"
+    }
+  }
+}

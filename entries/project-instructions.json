@@ -15,6 +15,7 @@
     "name": "Roger Serra",
     "github": "Hazihell"
   },
+  "category": "memory-and-context",
   "source": {
     "git": {
       "url": "https://github.com/Hazihell/bb-plugin-project-instructions.git",

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="240" height="240" role="img" aria-label="Theme Toggle">
+  <!-- A square cut from the top-right corner to the bottom-left one: day above
+       the cut, night below it. The half that is on is filled and holds its
+       symbol punched through; the other half is an empty outline with its
+       symbol drawn small. This file is the night face — the still version bb
+       shows in the catalog — and app.tsx flips the fill to the day half while
+       the light appearance is on.
+
+       BB draws plugin artwork as a CSS mask, which keys off alpha coverage
+       only: the symbol on the filled half is cut out through an SVG mask
+       rather than painted lighter, and nothing sits behind the shapes — a
+       filled background would mask into one solid square. The drawing uses the
+       whole canvas, since bb fits the entire viewBox into the icon box. -->
+  <clipPath id="tt-square"><rect width="24" height="24" rx="5"/></clipPath>
+  <clipPath id="tt-day"><polygon points="0,0 23,0 0,23"/></clipPath>
+  <clipPath id="tt-night"><polygon points="24,1 24,24 1,24"/></clipPath>
+  <defs>
+    <mask id="tt-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+      <rect width="24" height="24" fill="#fff"/>
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" fill="#000" transform="translate(32.8 0) scale(-1 1) translate(10.8 10.8) scale(0.4667)"/>
+    </mask>
+  </defs>
+  <g clip-path="url(#tt-square)">
+    <g clip-path="url(#tt-night)">
+      <rect width="24" height="24" rx="5" fill="#000" mask="url(#tt-cut)"/>
+    </g>
+    <g clip-path="url(#tt-day)">
+      <rect x="1" y="1" width="22" height="22" rx="4" fill="none" stroke="#000" stroke-width="2"/>
+      <path d="M21.8 0.2L0.2 21.8" fill="none" stroke="#000" stroke-width="2"/>
+    </g>
+    <circle cx="6.8" cy="6.8" r="1.9" fill="#000"/>
+    <g stroke="#000" stroke-width="1.25" stroke-linecap="round">
+      <path d="M9.29 7.83L9.85 8.06M7.83 9.29L8.06 9.85M5.77 9.29L5.54 9.85M4.31 7.83L3.75 8.06M4.31 5.77L3.75 5.54M5.77 4.31L5.54 3.75M7.83 4.31L8.06 3.75M9.29 5.77L9.85 5.54"/>
+    </g>
+  </g>
+</svg>

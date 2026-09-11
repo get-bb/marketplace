@@ -15,6 +15,7 @@
     "name": "prismatic7",
     "github": "prismatic7"
   },
+  "category": "thread-content",
   "source": {
     "git": {
       "url": "https://github.com/prismatic7/bb-plugin-unslop.git",

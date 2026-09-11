@@ -20,6 +20,7 @@
     "github": "vburojevic",
     "url": "https://github.com/vburojevic"
   },
+  "category": "thread-content",
   "source": {
     "git": {
       "url": "https://github.com/vburojevic/bb-plugin-prompts.git",

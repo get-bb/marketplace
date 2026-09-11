@@ -15,6 +15,7 @@
     "github": "Diffuzmetall",
     "url": "https://github.com/Diffuzmetall"
   },
+  "category": "command-line",
   "source": {
     "git": {
       "url": "https://github.com/Diffuzmetall/bb-wterm-terminal-plugin.git",

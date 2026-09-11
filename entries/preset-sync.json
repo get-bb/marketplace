@@ -1,0 +1,28 @@
+{
+  "id": "preset-sync",
+  "displayName": "Preset Sync",
+  "description": "Synchronizes portable BB plugins and settings across computers through a Git repository.",
+  "icon": {
+    "url": "./icons/preset-sync-c621213c.svg"
+  },
+  "tags": [
+    "sync",
+    "configuration",
+    "git",
+    "github",
+    "plugins",
+    "settings"
+  ],
+  "author": {
+    "name": "y5k",
+    "github": "imyeskela",
+    "url": "https://github.com/imyeskela"
+  },
+  "category": "cloud-and-remote",
+  "source": {
+    "git": {
+      "url": "https://github.com/imyeskela/bb-plugin-preset-sync.git",
+      "range": "^0.2.0"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "audio-preview",
+  "displayName": "Audio Preview",
+  "description": "Plays .m4a and other audio files in BB's file panel, including audio/mp4 that the built-in preview refuses.",
+  "icon": {
+    "url": "./icons/audio-preview-897ab0d2.svg"
+  },
+  "tags": [
+    "audio",
+    "preview",
+    "files",
+    "interface",
+    "m4a"
+  ],
+  "author": {
+    "name": "Braedon Saunders",
+    "github": "braedonsaunders",
+    "url": "https://github.com/braedonsaunders"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/braedonsaunders/bb-plugin-audio-preview.git",
+      "range": "^0.1.0"
+    }
+  }
+}

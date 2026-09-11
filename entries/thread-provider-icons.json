@@ -1,0 +1,27 @@
+{
+  "id": "thread-provider-icons",
+  "displayName": "Thread Provider Icons",
+  "description": "Draws each thread's provider logo before its title in the sidebar, in the provider's own brand colour, so you can tell which agent owns which thread without opening it.",
+  "icon": {
+    "url": "./icons/thread-provider-icons-1ca4af15.svg"
+  },
+  "tags": [
+    "interface",
+    "sidebar",
+    "threads",
+    "icons",
+    "providers"
+  ],
+  "author": {
+    "name": "Braedon Saunders",
+    "github": "braedonsaunders",
+    "url": "https://github.com/braedonsaunders"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/braedonsaunders/bb-plugin-thread-provider-icons.git",
+      "range": "^0.1.0"
+    }
+  }
+}

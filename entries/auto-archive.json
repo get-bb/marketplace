@@ -1,0 +1,24 @@
+{
+  "id": "auto-archive",
+  "displayName": "Auto Archive",
+  "description": "Automatically archives bb threads that have seen no activity for a configurable number of days.",
+  "icon": "Archive",
+  "tags": [
+    "threads",
+    "archive",
+    "automation",
+    "cleanup"
+  ],
+  "author": {
+    "name": "Shane Logsdon",
+    "github": "slogsdon",
+    "url": "https://github.com/slogsdon"
+  },
+  "category": "thread-management",
+  "source": {
+    "npm": {
+      "package": "bb-plugin-auto-archive",
+      "range": "^0.1.0"
+    }
+  }
+}

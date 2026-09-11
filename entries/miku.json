@@ -1,0 +1,23 @@
+{
+  "id": "miku",
+  "displayName": "Miku Companion",
+  "description": "Keep Hatsune Miku beside you while you work, with a roaming pixel-art companion that reacts to activity across BB. Drag her out of the way, keep her in place, or hide her from the command palette. Enable agent-powered comments using a configured BB provider and its account or usage allowance. Optional synthesized voice runs locally and requires FFmpeg with Flite and Rubber Band on the BB server.",
+  "icon": { "url": "./icons/miku-2953b5f8.webp" },
+  "tags": ["hatsune-miku", "pixel-art", "desktop-pet", "animations", "voice", "personalization"],
+  "author": {
+    "name": "Sawyer Hood",
+    "github": "SawyerHood",
+    "url": "https://github.com/SawyerHood"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/miku",
+      "tagPrefix": "miku/",
+      "range": "^0.6.0"
+    }
+  },
+  "category": "themes-and-appearance",
+  "screenshots": ["./screenshots/miku/behavior.jpg"],
+  "overview": "./overview/miku.md"
+}

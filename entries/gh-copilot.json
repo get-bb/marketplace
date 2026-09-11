@@ -1,0 +1,27 @@
+{
+  "id": "gh-copilot",
+  "displayName": "GitHub Copilot",
+  "description": "Registers GitHub Copilot CLI as the acp-gh-copilot provider in bb.",
+  "icon": {
+    "url": "./icons/gh-copilot-bbc37c3b.svg"
+  },
+  "tags": [
+    "copilot",
+    "github",
+    "provider",
+    "agents",
+    "acp"
+  ],
+  "author": {
+    "name": "ai-ecoverse",
+    "github": "trieloff",
+    "url": "https://github.com/ai-ecoverse"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/ai-ecoverse/bb-gh-copilot.git",
+      "range": "^0.4.0"
+    }
+  }
+}

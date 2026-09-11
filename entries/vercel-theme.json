@@ -1,0 +1,30 @@
+{
+  "id": "vercel-theme",
+  "displayName": "Vercel Theme",
+  "description": "Adds a Vercel-inspired light and dark palette with Geist typography and matching code, diff, file-tree, and terminal colors.",
+  "icon": {
+    "url": "./icons/vercel-theme-4b3ff44b.svg"
+  },
+  "tags": [
+    "theme",
+    "dark",
+    "light",
+    "vercel",
+    "geist",
+    "syntax-highlighting",
+    "terminal",
+    "interface"
+  ],
+  "author": {
+    "name": "Divyesh Puri",
+    "github": "divyesh-puri",
+    "url": "https://github.com/divyesh-puri"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/divyesh-puri/bb-plugin-vercel-theme.git",
+      "range": "^0.1.0"
+    }
+  }
+}

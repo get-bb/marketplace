@@ -1,0 +1,33 @@
+{
+  "id": "compact-nav",
+  "displayName": "Compact Nav",
+  "description": "Make more room for threads with compact, borderless sidebar icons. Keep your saved order and hidden destinations, with controls to rearrange or show them. Hover labels and selected states keep navigation recognizable. Requires BB 0.42+ and Plugin SDK 0.4.53+, with no extra service or account.",
+  "icon": {
+    "url": "./icons/compact-nav-14e098a3.svg"
+  },
+  "screenshots": [
+    "./screenshots/compact-nav/navigation.png",
+    "./screenshots/compact-nav/customize.png"
+  ],
+  "overview": "./overview/compact-nav.md",
+  "tags": [
+    "sidebar",
+    "navigation",
+    "icons",
+    "customization"
+  ],
+  "author": {
+    "name": "Sawyer Hood",
+    "github": "SawyerHood",
+    "url": "https://github.com/SawyerHood"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/compact-nav",
+      "tagPrefix": "compact-nav/",
+      "range": "^0.1.0"
+    }
+  }
+}

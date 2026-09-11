@@ -13,10 +13,13 @@
     "interface",
     "ayu"
   ],
+  "category": "themes-and-appearance",
   "author": {
     "name": "Vedran Burojević",
-    "github": "vburojevic"
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
   },
+  "category": "themes-and-appearance",
   "source": {
     "git": {
       "url": "https://github.com/vburojevic/bb-plugin-ayu.git",

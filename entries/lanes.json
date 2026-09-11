@@ -18,6 +18,7 @@
     "github": "slogsdon",
     "url": "https://github.com/slogsdon"
   },
+  "category": "token-usage-and-limits",
   "source": {
     "npm": {
       "package": "bb-plugin-lanes",

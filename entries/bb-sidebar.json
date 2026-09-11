@@ -1,0 +1,23 @@
+{
+  "id": "bb-sidebar",
+  "displayName": "BB Sidebar",
+  "description": "A sidebar inspired by T3 Code that adds manual and automatic thread sorting, collapsible shelves, and bulk actions to bb.",
+  "icon": "PanelLeft",
+  "tags": ["interface", "sidebar", "threads", "inbox", "productivity"],
+  "author": {
+    "name": "Yusuf Akbulut",
+    "github": "yusuf8834",
+    "url": "https://github.com/yusuf8834"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/bb-sidebar/overview-light.jpeg",
+    "./screenshots/bb-sidebar/overview-dark.jpeg"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/yusuf8834/bb-sidebar.git",
+      "range": "^0.2.0"
+    }
+  }
+}

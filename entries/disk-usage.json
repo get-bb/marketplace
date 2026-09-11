@@ -11,6 +11,7 @@
     "github": "charpeni",
     "url": "https://github.com/charpeni"
   },
+  "category": "utilities",
   "source": {
     "git": {
       "url": "https://github.com/charpeni/bb-plugins.git",

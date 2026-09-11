@@ -1,0 +1,30 @@
+{
+  "id": "liquid-glass",
+  "displayName": "Liquid Glass",
+  "description": "Adds dark and light translucent themes over a configurable wallpaper layer, with adjustable glass effects and vibrant accent colors.",
+  "icon": {
+    "url": "./icons/liquid-glass-4b9b6aa2.svg"
+  },
+  "tags": [
+    "themes",
+    "appearance",
+    "glass",
+    "dark",
+    "light",
+    "wallpaper",
+    "colors",
+    "interface"
+  ],
+  "author": {
+    "name": "Luis Llenin",
+    "github": "luisllenin02",
+    "url": "https://github.com/luisllenin02"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/luisllenin02/bb-plugin-liquid-glass.git",
+      "range": "^0.5.4"
+    }
+  }
+}

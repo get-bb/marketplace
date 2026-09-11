@@ -1,0 +1,17 @@
+{
+  "id": "command-center",
+  "displayName": "Command Center",
+  "description": "Boards every dispatched request and open question as a card, lets you reply or comment on an agent's work straight from the board, and sends macOS notifications when a card's status changes. Includes Chief: one global Chief, a project chief per project, and task architects, for routing dispatched work through an org instead of a flat worker thread. Requires the Tasks plugin — the board offers a one-click install if it isn't already there, but never installs it silently — and, for voice input, microphone access. If you also run the `notify` plugin, expect two macOS banners for overlapping events — this one fires on board-card status, `notify` on thread lifecycle.",
+  "icon": "Mail",
+  "tags": ["kanban", "board", "tasks", "notifications", "voice", "productivity"],
+  "author": {
+    "name": "Dilip Venkatesh",
+    "github": "dilipgv"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/dilipgv/bb-plugin-command-center.git",
+      "range": "^0.7.1"
+    }
+  }
+}

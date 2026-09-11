@@ -16,6 +16,7 @@
     "name": "Roger Serra",
     "github": "Hazihell"
   },
+  "category": "token-usage-and-limits",
   "source": {
     "git": {
       "url": "https://github.com/Hazihell/bb-plugin-context-meter.git",

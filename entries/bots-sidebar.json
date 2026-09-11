@@ -1,0 +1,27 @@
+{
+  "id": "bots-sidebar",
+  "displayName": "Bots Sidebar",
+  "description": "Keep specialist bots, their memory, and their conversations together across projects. Organize chats with activity-aware trees, drag-to-bot assignment, and a state editor. Route new project conversations to an owner and coordinate bots with @ mentions or attributed messages. Uses your configured BB providers with no additional service or account. Project-folder creation requires POSIX paths.",
+  "icon": {
+    "url": "./icons/bots-sidebar-92e81b44.svg"
+  },
+  "tags": ["personas", "memory", "conversations", "project-routing", "agent-coordination"],
+  "author": {
+    "name": "Tobias Lütke",
+    "github": "tobi",
+    "url": "https://github.com/tobi"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/tobi/bb-bots-sidebar.git",
+      "ref": "v0.3.0-alpha.11"
+    }
+  },
+  "screenshots": [
+    "./screenshots/bots-sidebar/sidebar-and-instructions.png",
+    "./screenshots/bots-sidebar/project-roles.png",
+    "./screenshots/bots-sidebar/appearance.png"
+  ],
+  "overview": "./overview/bots-sidebar.md"
+}

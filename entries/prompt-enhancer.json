@@ -12,10 +12,13 @@
     "interface",
     "keyboard-shortcuts"
   ],
+  "category": "thread-content",
   "author": {
     "name": "Vedran Burojević",
-    "github": "vburojevic"
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
   },
+  "category": "thread-content",
   "source": {
     "git": {
       "url": "https://github.com/vburojevic/bb-plugin-prompt-enhancer.git",

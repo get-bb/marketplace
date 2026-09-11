@@ -1,0 +1,8 @@
+[
+  { "file": "old.json", "entry": { "id": "old" } },
+  { "file": "changed.json", "entry": { "id": "changed" } },
+  {
+    "file": "ready.json",
+    "entry": { "id": "ready", "category": "utilities" }
+  }
+]

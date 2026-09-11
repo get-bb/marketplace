@@ -1,0 +1,31 @@
+{
+  "id": "context-health",
+  "displayName": "Context Health",
+  "description": "See what contributes to your thread’s context usage. Search recorded text, inspect observed skill reads and browse available skills. Optional Codex session detail reads logs on the thread host; no separate account or paid service is required.",
+  "icon": {
+    "url": "./icons/context-health-4f136869.svg"
+  },
+  "tags": [
+    "context",
+    "skills",
+    "tokens"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-context-health.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/context-health.md",
+  "screenshots": [
+    "./screenshots/context-health/context-health-overview.png",
+    "./screenshots/context-health/context-health-entry-detail.png",
+    "./screenshots/context-health/context-health-skills.png"
+  ]
+}
