@@ -15,7 +15,7 @@
     "github": "martinlevesque",
     "url": "https://github.com/martinlevesque"
   },
-  "category": "command-line",
+  "category": "code-and-reviews",
   "source": {
     "npm": {
       "package": "bb-plugin-lazygit",
