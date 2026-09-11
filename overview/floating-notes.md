@@ -1,6 +1,6 @@
 ## What you get
 
-Notes puts a real notes app inside bb, one keystroke away. `Ctrl+'` opens a
+A real notes app lives inside bb, one keystroke away. `Ctrl+'` opens a
 draggable window that floats over whatever you are reading; `Ctrl+Shift+'`
 opens a one-line capture bar that saves a thought and disappears. Any note can
 pop out as a sticky card that stays on screen while you work.
