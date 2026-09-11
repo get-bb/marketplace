@@ -1,0 +1,21 @@
+{
+  "id": "devin",
+  "displayName": "Devin",
+  "description": "Run coding tasks with Devin from a BB thread. Devin appears in the provider picker, and BB discovers models from the local ACP session while rendering responses, tool calls, and file changes. Install the Devin CLI and authenticate it on each BB host with `devin auth login`.",
+  "icon": "Bot",
+  "tags": ["coding-agent", "acp", "cli", "developer-tools", "model-provider"],
+  "author": {
+    "name": "Alg0rix",
+    "github": "Alg0rix",
+    "url": "https://github.com/Alg0rix"
+  },
+  "category": "agents-and-providers",
+  "screenshots": ["./screenshots/devin/provider-picker.png"],
+  "overview": "./overview/devin.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/Alg0rix/bb-plugin-devin.git",
+      "range": "^0.1.0"
+    }
+  }
+}
