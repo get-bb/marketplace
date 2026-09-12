@@ -58,7 +58,9 @@ screen, so an image of a secret field is possible. Pick deliberately.
 ## Requirements
 
 - BB desktop with the native Browser and Plugin SDK 0.4.48 or newer. The plugin needs
-  `experimental_desktopBrowsers` to attach to a tab.
+  `experimental_desktopBrowsers` to attach to a tab. The header button appears only in the
+  desktop app: picking an element means clicking it in the native Browser view, which a
+  browser client cannot do, so the control is not offered on the web client.
 - A Browser tab open in the thread you are copying from. With none open, the modes are
   disabled and the dropdown says so; it re-checks the thread's tabs every time you open it,
   so open the tab and reopen the menu.

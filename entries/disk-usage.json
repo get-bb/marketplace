@@ -5,6 +5,8 @@
   "icon": {
     "url": "./icons/disk-usage-fff016e3.svg"
   },
+  "screenshots": ["./screenshots/disk-usage/overview.png"],
+  "overview": "./overview/disk-usage.md",
   "tags": ["disk-usage", "storage", "ncdu", "server", "interface"],
   "author": {
     "name": "Nicolas Charpentier",

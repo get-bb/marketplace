@@ -1,0 +1,21 @@
+{
+  "id": "pool-usage",
+  "displayName": "Pool Usage",
+  "description": "See every Account Pooler account's quota and reset time in one compact sidebar list. Rows show Claude and Codex plan labels, the shortest active quota window, reset time, and usage percentage. Requires BB's experimental Account Pooler plugin and configured pooled accounts.",
+  "icon": "ChartColumn",
+  "tags": ["account-pooler", "quota", "limits", "usage", "claude", "codex"],
+  "author": {
+    "name": "Yurii Rebryk",
+    "github": "rebryk",
+    "url": "https://github.com/rebryk"
+  },
+  "category": "token-usage-and-limits",
+  "screenshots": ["./screenshots/pool-usage/sidebar.png"],
+  "overview": "./overview/pool-usage.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/rebryk/bb-plugin-pool-usage.git",
+      "range": "^0.1.0"
+    }
+  }
+}

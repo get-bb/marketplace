@@ -1,7 +1,7 @@
 {
   "id": "vcs-widget",
   "displayName": "VCS Widget",
-  "description": "Run Git from the bb thread header instead of a terminal: branches, commits and history, on the machine that owns the worktree. A searchable branch popup lists recent, local and remote branches with ahead/behind and worktree badges, and a per-branch menu for checkout, rebase, merge, compare, worktrees, rename and delete. A commit panel stages by checkbox, previews the diff, amends and signs off, or hands the commit to the thread's agent instead of running git. A log panel reads the whole history with cherry-pick, revert and reset, and fetch, pull and push run as background jobs that report when they finish. Every push, rebase, reset and discard shows the exact git command before it runs, and the bundled CLI command and agent tool only read. Needs a thread whose environment is a Git repository; no account, service or separate install.",
+  "description": "Run Git from the bb thread header instead of a terminal: branches, commits and history, on the machine that owns the worktree. Every push, rebase and reset shows the exact git command before it runs.",
   "icon": "GitBranch",
   "tags": [
     "git",

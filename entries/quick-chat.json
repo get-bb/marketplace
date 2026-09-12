@@ -1,0 +1,32 @@
+{
+  "id": "quick-chat",
+  "displayName": "Quick Chat",
+  "description": "Ask a question in a floating chat window without adding a thread to your sidebar. Open it with Mod+Shift+K, the command palette, or the sidebar chat icon, and drag it to a convenient corner. Return to recent chats or choose Open as thread when a conversation becomes project work. Uses your configured BB agent provider and its account; provider usage charges or subscription limits still apply.",
+  "icon": {
+    "url": "./icons/quick-chat-0b9c4d6b.svg"
+  },
+  "screenshots": [
+    "./screenshots/quick-chat/conversation.png"
+  ],
+  "overview": "./overview/quick-chat.md",
+  "tags": [
+    "chat",
+    "floating-window",
+    "keyboard-shortcut",
+    "personal-workspace"
+  ],
+  "author": {
+    "name": "Sawyer Hood",
+    "github": "SawyerHood",
+    "url": "https://github.com/SawyerHood"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/quick-chat",
+      "tagPrefix": "quick-chat/",
+      "range": "^0.1.0"
+    }
+  }
+}

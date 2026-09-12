@@ -1,0 +1,39 @@
+{
+  "id": "floating-notes",
+  "displayName": "Floating Notes",
+  "description": "Keep a note beside the work it belongs to, one keystroke from any thread. Notes group themselves by project, thread and day, so nothing lands in a flat pile. Stickies pin to a thread or a project and appear only while you are looking at it, and every thread gets a scratchpad your agents can append findings to. Writes real markdown — clickable checklists, highlighted code fences, wiki links — and stores everything in a local SQLite file with no account and no network.",
+  "icon": {
+    "url": "./icons/floating-notes-f86861c8.svg"
+  },
+  "tags": [
+    "notes",
+    "sticky-notes",
+    "markdown",
+    "scratchpad",
+    "checklists",
+    "capture",
+    "wiki-links",
+    "search"
+  ],
+  "author": {
+    "name": "Vedran Burojević",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/floating-notes/hero.png",
+    "./screenshots/floating-notes/scopes.png",
+    "./screenshots/floating-notes/stickies.png",
+    "./screenshots/floating-notes/editor.png",
+    "./screenshots/floating-notes/capture.png",
+    "./screenshots/floating-notes/mobile.png"
+  ],
+  "overview": "./overview/floating-notes.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-floating-notes.git",
+      "range": "^1.2.1"
+    }
+  }
+}
