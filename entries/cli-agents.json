@@ -1,0 +1,32 @@
+{
+  "id": "cli-agents",
+  "displayName": "CLI Agents",
+  "description": "Start each chat with a specialist agent and its own CLI instructions. Search Claude Code and OpenCode agents on local or enrolled remote machines and keep the choice attached to the conversation. Requires BB 0.43.x on macOS or Linux and an installed, authenticated supported CLI; provider subscription limits or API charges apply.",
+  "icon": {
+    "url": "./icons/cli-agents-1cc42149.svg"
+  },
+  "category": "agents-and-providers",
+  "tags": [
+    "agents",
+    "claude-code",
+    "opencode",
+    "composer",
+    "remote",
+    "instructions"
+  ],
+  "author": {
+    "name": "VKirill",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill"
+  },
+  "overview": "./overview/cli-agents.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-cli-agents.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/cli-agents/agent-picker.jpg"
+  ]
+}

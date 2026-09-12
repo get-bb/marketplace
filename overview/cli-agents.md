@@ -1,0 +1,21 @@
+Pick a specialist before starting a chat and let the CLI load that agent's own instructions. The choice stays with the conversation, including later turns and plugin reloads.
+
+## What you get
+
+- An Agent menu in BB's expanded New thread composer, with search and refresh.
+- Claude Code user/project agents and agents from enabled installed Claude plugins.
+- OpenCode primary agents and agents that support both primary and subagent use.
+- Discovery on the selected local or enrolled remote machine, in the selected project checkout or existing environment.
+- A visible Agent mention in the first message and an agent label in the chat composer.
+
+## How it works
+
+The first message carries a durable selection. Before dispatch, CLI Agents checks that the machine, project, provider and workspace match and that the agent still exists. Claude starts with its native `--agent` option. OpenCode's ACP process receives its native default-agent configuration. Your CLI settings and agent instruction files are not edited.
+
+Agents can inspect available roles with `bb cli-agents list` and a chat's selection with `bb cli-agents thread`.
+
+## Requirements
+
+BB 0.43.x, macOS or Linux, and an installed, authenticated Claude Code or stock OpenCode ACP provider on the execution machine. Provider subscription limits or API charges still apply. No extra account or external service is required.
+
+Codex and other CLI providers, Windows, compact/mobile composers, custom absolute-path OpenCode ACP commands, and creating a new worktree in the same submission are not supported in this release. The composer integration reads BB 0.43's internal remembered-selection format; other BB versions need compatibility verification.
