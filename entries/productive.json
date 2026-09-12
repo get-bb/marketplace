@@ -1,0 +1,32 @@
+{
+  "id": "productive",
+  "displayName": "Productive",
+  "description": "Work a Productive.io board without leaving BB, and hand a ticket to an agent in one click. Kanban lanes group by workflow status or by task list, so the columns match the board you already use, and dragging a card writes the change back to Productive. Start a thread from any ticket, optionally in its own git worktree, with the ticket's fields as context. Agents reach the same board through a `bb productive` command. Needs a Productive.io account and an API token.",
+  "icon": {
+    "url": "./icons/productive-41c8673a.svg"
+  },
+  "screenshots": [
+    "./screenshots/productive/board.png"
+  ],
+  "overview": "./overview/productive.md",
+  "tags": [
+    "productive",
+    "tasks",
+    "project-management",
+    "kanban",
+    "issue-tracker",
+    "time-tracking"
+  ],
+  "author": {
+    "name": "Kristof Feys",
+    "github": "kristoffeys",
+    "url": "https://github.com/kristoffeys"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/kristoffeys/bb-plugin-productive.git",
+      "range": "^0.2.0"
+    }
+  }
+}
