@@ -4,6 +4,7 @@ Pick a specialist before starting a chat and let the CLI load that agent's own i
 
 - An Agent menu in BB's expanded New thread composer, with search and refresh.
 - Claude Code user/project agents and agents from enabled installed Claude plugins.
+- Codex file profiles: apply developer instructions (up to 4096 characters) through BB; model, permissions and other profile settings remain unchanged.
 - OpenCode primary agents and agents that support both primary and subagent use.
 - Discovery on the selected local or enrolled remote machine, in the selected project checkout or existing environment.
 - A visible Agent mention in the first message and an agent label in the chat composer.
@@ -16,6 +17,6 @@ Agents can inspect available roles with `bb cli-agents list` and a chat's select
 
 ## Requirements
 
-BB 0.43.x, macOS or Linux, and an installed, authenticated Claude Code or stock OpenCode ACP provider on the execution machine. Provider subscription limits or API charges still apply. No extra account or external service is required.
+BB 0.43.x, macOS or Linux, and an installed, authenticated Claude Code, Codex 0.134+ or stock OpenCode ACP provider on the execution machine. Provider subscription limits or API charges still apply. No extra account or external service is required.
 
-Codex and other CLI providers, Windows, compact/mobile composers, custom absolute-path OpenCode ACP commands, and creating a new worktree in the same submission are not supported in this release. The composer integration reads BB 0.43's internal remembered-selection format; other BB versions need compatibility verification.
+Other CLI providers, Windows, compact/mobile composers, custom absolute-path OpenCode ACP commands, and creating a new worktree in the same submission are not supported in this release. The composer integration reads BB 0.43's internal remembered-selection format; other BB versions need compatibility verification.
