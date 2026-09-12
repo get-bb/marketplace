@@ -23,7 +23,7 @@
   "source": {
     "git": {
       "url": "https://github.com/Alg0rix/bb-plugin-devin.git",
-      "range": "^0.2.0"
+      "range": "^0.2.3"
     }
   }
 }
