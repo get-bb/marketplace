@@ -1,0 +1,23 @@
+{
+  "id": "copilot",
+  "displayName": "Copilot",
+  "description": "Runs GitHub Copilot CLI as a bb agent provider.",
+  "icon": {
+    "url": "./icons/copilot-7133b161.svg"
+  },
+  "tags": [
+    "copilot",
+    "github",
+    "provider"
+  ],
+  "author": {
+    "name": "Balazs Tasi",
+    "github": "balazstasi"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/balazstasi/bb-plugin-copilot.git",
+      "range": "^0.1.0"
+    }
+  }
+}
