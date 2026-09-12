@@ -1,0 +1,35 @@
+{
+  "id": "worktree-ports",
+  "displayName": "Worktree Ports",
+  "description": "See which port each worktree's dev server is on, and open it in one click. The app port leads as a named pill; database, Docker, and internal listeners fold behind a toggle so nothing is hunted for. Hover a pill to stop the process or container holding it. The same listing answers `bb ports list` and the worktree_ports agent tool, so an agent can name the URL instead of guessing. Needs lsof, so macOS or Linux only; Docker ports need the docker CLI.",
+  "icon": "ElectricPlugs",
+  "tags": [
+    "ports",
+    "dev-server",
+    "localhost",
+    "docker",
+    "worktree",
+    "sidebar",
+    "agent-tool",
+    "lsof"
+  ],
+  "author": {
+    "name": "Russell Biggers",
+    "github": "xlightxyearx",
+    "url": "https://github.com/xlightxyearx"
+  },
+  "category": "utilities",
+  "screenshots": [
+    "./screenshots/worktree-ports/card-light.png",
+    "./screenshots/worktree-ports/card-dark.png",
+    "./screenshots/worktree-ports/sidebar-light.png",
+    "./screenshots/worktree-ports/sidebar-dark.png"
+  ],
+  "overview": "./overview/worktree-ports.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/xlightxyearx/bb-plugin-worktree-ports.git",
+      "range": "^0.1.0"
+    }
+  }
+}
