@@ -1,0 +1,33 @@
+{
+  "id": "project-folders",
+  "displayName": "Projects & Sections",
+  "description": "Organize project folders, section chats and working rules in one tree. Sort chats, create nested sections and restore archived folders with their chats. Move complete project folders on the same device and disk volume. Requires BB 0.43+ and macOS or Linux; includes 11 interface languages with English as the default.",
+  "icon": {
+    "url": "./icons/project-folders-4809b993.svg"
+  },
+  "screenshots": [
+    "./screenshots/project-folders/sections.png",
+    "./screenshots/project-folders/rules.png"
+  ],
+  "overview": "./overview/project-folders.md",
+  "tags": [
+    "folders",
+    "projects",
+    "sections",
+    "chats",
+    "archive",
+    "workspace"
+  ],
+  "author": {
+    "name": "Kirill Vechkasov",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-project-folders.git",
+      "range": "^0.3.0"
+    }
+  }
+}
