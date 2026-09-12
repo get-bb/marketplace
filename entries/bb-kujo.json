@@ -1,0 +1,34 @@
+{
+  "id": "bb-kujo",
+  "displayName": "Kujo",
+  "description": "Give bb the paper-and-ink design of Kujo, with hard edges and quiet background signal. Switch between light and dark palettes with matching code, diffs and terminal colors. Departure Mono and Tabler icons carry the technical details. Requires bb 0.43; no external account or service.",
+  "icon": {
+    "url": "./icons/bb-kujo-af480bad.svg"
+  },
+  "tags": [
+    "theme",
+    "dark",
+    "light",
+    "sitekit",
+    "terminal",
+    "typography"
+  ],
+  "author": {
+    "name": "Robert DeVore",
+    "github": "robertdevore",
+    "url": "https://kujolang.ai/"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/kujolang/bb-kujo.git",
+      "range": "^0.2.1"
+    }
+  },
+  "screenshots": [
+    "./screenshots/bb-kujo/01-dark-workspace.png",
+    "./screenshots/bb-kujo/02-light-workspace.png",
+    "./screenshots/bb-kujo/03-thread.png"
+  ],
+  "overview": "./overview/bb-kujo.md"
+}
