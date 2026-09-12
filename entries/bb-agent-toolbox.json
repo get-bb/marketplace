@@ -23,7 +23,7 @@
   "source": {
     "git": {
       "url": "https://github.com/rawizhere/bb-plugin-bb-agent-toolbox.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   }
 }
