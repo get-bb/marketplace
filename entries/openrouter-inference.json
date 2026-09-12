@@ -1,0 +1,33 @@
+{
+  "id": "openrouter-inference",
+  "displayName": "OpenRouter Inference",
+  "description": "Choose the OpenRouter model that writes your thread titles and commit messages. Search models by name or ID, compare token prices and context sizes, and test a sample title before switching. Change the selected model from settings whenever you want. Requires an OpenRouter API key; prompts, thread text, and diffs go to OpenRouter and the selected model provider, with charges billed to your account.",
+  "icon": {
+    "url": "./icons/openrouter-inference-fdbf5616.svg"
+  },
+  "screenshots": [
+    "./screenshots/openrouter-inference/settings.png"
+  ],
+  "overview": "./overview/openrouter-inference.md",
+  "tags": [
+    "openrouter",
+    "inference",
+    "models",
+    "thread-titles",
+    "commit-messages"
+  ],
+  "author": {
+    "name": "Sawyer Hood",
+    "github": "SawyerHood",
+    "url": "https://github.com/SawyerHood"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/openrouter-inference",
+      "tagPrefix": "openrouter-inference/",
+      "range": "^0.1.0"
+    }
+  }
+}

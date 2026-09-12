@@ -1,0 +1,34 @@
+{
+  "id": "btrfs-cow",
+  "displayName": "CoW copy",
+  "description": "Start a thread with your installed dependencies, build caches, and uncommitted changes already in place. Each thread gets an independent checkout that shares disk blocks until files change, using Btrfs snapshots or reflink copies. Select Btrfs Cow in the environment picker; the plugin checks filesystem support on the chosen machine. Requires Linux, Git, GNU cp with reflink support, and a compatible filesystem such as Btrfs or XFS; snapshot mode also needs the btrfs command.",
+  "icon": {
+    "url": "./icons/btrfs-cow-949dac37.svg"
+  },
+  "screenshots": [
+    "./screenshots/btrfs-cow/environment-picker.png"
+  ],
+  "overview": "./overview/btrfs-cow.md",
+  "tags": [
+    "environments",
+    "btrfs",
+    "xfs",
+    "reflink",
+    "snapshots",
+    "checkouts"
+  ],
+  "author": {
+    "name": "Sawyer Hood",
+    "github": "SawyerHood",
+    "url": "https://github.com/SawyerHood"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/btrfs-cow",
+      "tagPrefix": "btrfs-cow/",
+      "range": "^0.1.1"
+    }
+  }
+}
