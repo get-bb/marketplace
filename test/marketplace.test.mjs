@@ -31,6 +31,7 @@ import {
   validateAndRewriteIcon,
   validateScreenshotReference,
   v1GateDisposition,
+  pluginsFromRows,
 } from "../scripts/marketplace-lib.mjs";
 
 const testRoot = dirname(fileURLToPath(import.meta.url));
@@ -614,4 +615,48 @@ test("the overview check finds an unreferenced file", () => {
     const orphans = findOrphanOverviewFiles(root, new Set(["overview/used.md"]));
     assert.deepEqual(orphans, ["overview/orphan.md"]);
   });
+});
+
+test("pluginsFromRows accepts valid rows and preserves lexicographical sort", () => {
+  const input = [
+    ["zebra-plugin", 15],
+    ["alpha-plugin", 42],
+    ["beta-tool", 0],
+  ];
+  const result = pluginsFromRows(input, () => {});
+  assert.deepEqual(Object.keys(result), [
+    "alpha-plugin",
+    "beta-tool",
+    "zebra-plugin",
+  ]);
+  assert.deepEqual(result, {
+    "alpha-plugin": { installs: 42 },
+    "beta-tool": { installs: 0 },
+    "zebra-plugin": { installs: 15 },
+  });
+});
+
+test("pluginsFromRows drops malformed rows, invalid IDs, and non-integer counts", () => {
+  const warnings = [];
+  const input = [
+    ["valid-plugin", 100],
+    null,
+    "not-an-array",
+    [],
+    ["ValidPlugin", 10],
+    ["-invalid-leading-dash", 5],
+    ["invalid_underscore", 5],
+    ["plugin-a", -1],
+    ["plugin-b", 3.14],
+    ["plugin-c", "100"],
+    ["plugin-d", Number.NaN],
+    ["plugin-e", Number.POSITIVE_INFINITY],
+    ["plugin-f", Number.MAX_SAFE_INTEGER + 1],
+  ];
+  const result = pluginsFromRows(input, (msg) => warnings.push(msg));
+  assert.deepEqual(result, {
+    "valid-plugin": { installs: 100 },
+  });
+  assert.equal(warnings.length, 1);
+  assert.match(warnings[0], /dropped 12 unusable row\(s\)/);
 });
