@@ -11,7 +11,7 @@ Pick a specialist before starting a chat and let the CLI load that agent's own i
 
 ## How it works
 
-The first message carries a durable selection. Before dispatch, CLI Agents checks that the machine, project, provider and workspace match and that the agent still exists. Claude starts with its native `--agent` option. OpenCode's ACP process receives its native default-agent configuration. Your CLI settings and agent instruction files are not edited.
+The first message carries a durable selection. Before dispatch, CLI Agents checks that the machine, project, provider and workspace match and that the agent still exists. Claude starts with its native `--agent` option. OpenCode's ACP process receives its native default-agent configuration. Your CLI settings and agent instruction files are not edited. When switching away from supported CLIs, selection mentions are cleared automatically from the composer, and unsupported providers proceed normally without configuration.
 
 Agents can inspect available roles with `bb cli-agents list` and a chat's selection with `bb cli-agents thread`.
 
@@ -19,4 +19,4 @@ Agents can inspect available roles with `bb cli-agents list` and a chat's select
 
 BB 0.43.x, macOS or Linux, and an installed, authenticated Claude Code, Codex 0.134+ or stock OpenCode ACP provider on the execution machine. Provider subscription limits or API charges still apply. No extra account or external service is required.
 
-Other CLI providers, Windows, compact/mobile composers, custom absolute-path OpenCode ACP commands, and creating a new worktree in the same submission are not supported in this release. The composer integration reads BB 0.43's internal remembered-selection format; other BB versions need compatibility verification.
+Other CLI providers (e.g. Cursor, Antigravity) are unaffected and run normally without agent injection. Windows, compact/mobile composers, custom absolute-path OpenCode ACP commands, and creating a new worktree in the same submission are not supported in this release. The composer integration reads BB 0.43's internal remembered-selection format; other BB versions need compatibility verification.
