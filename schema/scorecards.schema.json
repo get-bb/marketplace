@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://getbb.app/schemas/scorecards.schema.json",
+  "title": "BB marketplace plugin scorecards",
+  "description": "The scorecard sidecar published beside marketplace.json. Health scores the repository around a plugin; review scores automated scans of the release the entry resolves to. A plugin absent from this document has no scorecard yet, which is not a pass.",
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "plugins"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "plugins": {
+      "type": "object",
+      "propertyNames": { "pattern": "^[a-z0-9][a-z0-9-]*$" },
+      "additionalProperties": { "$ref": "#/$defs/scorecard" }
+    }
+  },
+  "$defs": {
+    "grade": { "enum": ["failing", "poor", "fair", "good", "excellent"] },
+    "severity": { "enum": ["pass", "info", "warn", "fail"] },
+    "scorecard": {
+      "type": "object",
+      "required": ["review"],
+      "additionalProperties": false,
+      "properties": {
+        "repository": { "type": "string" },
+        "license": { "type": ["string", "null"] },
+        "health": {
+          "type": ["object", "null"],
+          "description": "Null when the entry has no repository to read, such as an npm-only source.",
+          "required": ["grade", "bars", "summary", "sections"],
+          "additionalProperties": false,
+          "properties": {
+            "grade": { "$ref": "#/$defs/grade" },
+            "bars": { "type": "integer", "minimum": 0, "maximum": 4 },
+            "summary": { "type": "string" },
+            "sections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["id", "label", "points", "grade", "detail"],
+                "additionalProperties": false,
+                "properties": {
+                  "id": { "enum": ["hygiene", "maintenance", "responsiveness", "adoption"] },
+                  "label": { "type": "string" },
+                  "points": { "type": "number", "minimum": 0, "maximum": 1 },
+                  "grade": { "$ref": "#/$defs/grade" },
+                  "detail": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "review": {
+          "type": "object",
+          "required": ["verdict", "bars", "summary", "findings"],
+          "additionalProperties": false,
+          "properties": {
+            "verdict": { "enum": ["failed", "flagged", "passed", "pending"] },
+            "bars": { "type": "integer", "minimum": 0, "maximum": 4 },
+            "summary": { "type": "string" },
+            "release": { "type": "string" },
+            "scannedFiles": { "type": "integer", "minimum": 0 },
+            "error": {
+              "type": "string",
+              "description": "Why the scan could not run. Present only with the pending verdict."
+            },
+            "findings": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["severity", "check", "message"],
+                "additionalProperties": false,
+                "properties": {
+                  "severity": { "$ref": "#/$defs/severity" },
+                  "check": {
+                    "enum": [
+                      "obfuscation",
+                      "generated",
+                      "network",
+                      "dependencies",
+                      "license",
+                      "provenance"
+                    ]
+                  },
+                  "message": { "type": "string" }
+                }
+              }
+            },
+            "capabilities": {
+              "type": "array",
+              "description": "What the release code reaches for, derived from its call surface. BB has no declared plugin permission manifest, so these are observed, not promised.",
+              "items": {
+                "type": "object",
+                "required": ["id", "label", "severity", "description", "evidence"],
+                "additionalProperties": false,
+                "properties": {
+                  "id": { "type": "string" },
+                  "label": { "type": "string" },
+                  "severity": { "$ref": "#/$defs/severity" },
+                  "description": { "type": "string" },
+                  "evidence": { "type": "array", "items": { "type": "string" }, "maxItems": 5 }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
