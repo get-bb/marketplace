@@ -1,0 +1,25 @@
+{
+  "id": "cf-tunnel",
+  "displayName": "Cloudflare Tunnel",
+  "description": "Reach bb from anywhere over your own Cloudflare Tunnel and Access policy, replacing bb connect.",
+  "icon": "Cloud",
+  "tags": [
+    "cloudflare",
+    "cloudflare-tunnel",
+    "remote-access",
+    "tunnel",
+    "security"
+  ],
+  "author": {
+    "name": "MGrin",
+    "github": "MGrin",
+    "url": "https://github.com/MGrin"
+  },
+  "category": "cloud-and-remote",
+  "source": {
+    "git": {
+      "url": "https://github.com/MGrin/bb-plugin-cf-tunnel.git",
+      "ref": "8f90f1067463f8f9682658550daf892fc881aed4"
+    }
+  }
+}
