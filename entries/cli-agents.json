@@ -1,0 +1,35 @@
+{
+  "id": "cli-agents",
+  "displayName": "CLI Agents",
+  "description": "Start each chat with a specialist agent or selected profile instructions. Choose native Claude Code and OpenCode agents, or Codex profile developer instructions (up to 4096 characters; other profile settings are not applied), on local or enrolled remote machines. Requires BB 0.43.x on macOS or Linux and an installed, authenticated supported CLI; provider subscription limits or API charges apply.",
+  "icon": {
+    "url": "./icons/cli-agents-1cc42149.svg"
+  },
+  "category": "agents-and-providers",
+  "tags": [
+    "agents",
+    "claude-code",
+    "opencode",
+    "composer",
+    "remote",
+    "instructions",
+    "codex",
+    "profiles"
+  ],
+  "author": {
+    "name": "VKirill",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill"
+  },
+  "overview": "./overview/cli-agents.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-cli-agents.git",
+      "range": "^0.2.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/cli-agents/agent-picker.jpg",
+    "./screenshots/cli-agents/codex-profile.jpg"
+  ]
+}
