@@ -7,7 +7,7 @@ Pick a specialist before starting a chat and let the CLI load that agent's own i
 - Codex file profiles: apply developer instructions (up to 4096 characters) through BB; model, permissions and other profile settings remain unchanged.
 - OpenCode primary agents and agents that support both primary and subagent use.
 - Discovery on the selected local or enrolled remote machine, in the selected project checkout or existing environment.
-- A visible Agent mention in the first message and an agent label in the chat composer.
+- The selected agent in the composer controls, without a duplicate Agent pill in the message.
 
 ## How it works
 
