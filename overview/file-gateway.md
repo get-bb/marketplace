@@ -4,7 +4,7 @@ Working on a server while your document is on a Mac? File Gateway lets your agen
 
 ## What it provides
 
-- A native tree in the chat side panel, including before the first message. Add files or folders as mentions that identify their source and path.
+- A native tree in the chat side panel, including before the first message. The first level opens automatically; a toggle shows hidden entries. Drag files or folders into chat as mentions that identify their source and path. Double-click a file to open the native BB viewer in an existing chat.
 - FTP, FTPS and SFTP website accounts alongside BB machines; passwords stay in BB secret storage.
 - An agent tool and `bb file-gateway` commands to discover machines, browse folders, read text and transfer files.
 - Private transfers over BB's existing host connection, with chunked delivery and SHA-256 verification.
@@ -17,4 +17,4 @@ Nothing is shared until you configure it. Selected folders mode excludes common 
 
 Requires BB 0.43 or newer and Plugin SDK 0.4.87 or newer. Supports macOS and Linux, files up to 256 MiB, and single-file transfers. No Windows support, recursive folder copies, resumable transfers or arbitrary remote editing yet. Copies persist in the receiving machine's plugin imports folder until you remove them locally.
 
-Website transfers are read-only, up to 32 MiB, and originate from the BB server. FTPS verifies certificates; SFTP verifies a configured SHA-256 host-key fingerprint and supports password authentication. No website uploads or edits. Initial UI labels are Russian.
+Website transfers are read-only, up to 32 MiB, and originate from the BB server. FTPS verifies certificates; SFTP verifies a configured SHA-256 host-key fingerprint and supports password authentication. No website uploads or edits. The interface, documentation and agent instructions are in English.

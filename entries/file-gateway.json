@@ -1,7 +1,7 @@
 {
   "id": "file-gateway",
   "displayName": "File Gateway",
-  "description": "Browse files across your BB machines and FTP/SFTP website accounts, then add a native file mention to a chat so the agent opens the correct source and path. Read text or download files without exposing account passwords to agents. Requires connected BB machines or reachable website accounts; macOS/Linux, read-only website access, 256 MiB between BB hosts and 32 MiB from websites. Initial UI is Russian.",
+  "description": "Browse files across your BB machines and FTP/SFTP website accounts, then add a native file mention to a chat so the agent opens the correct source and path. Read text or download files without exposing account passwords to agents. Requires connected BB machines or reachable website accounts; macOS/Linux, read-only website access, 256 MiB between BB hosts and 32 MiB from websites. English interface with drag-to-chat mentions, hidden-file controls and native file preview.",
   "icon": {
     "url": "./icons/file-gateway-b36f8cd4.svg"
   },
@@ -25,7 +25,7 @@
   "source": {
     "git": {
       "url": "https://github.com/VKirill/bb-plugin-file-gateway.git",
-      "ref": "v0.1.0-beta.4"
+      "ref": "v0.1.0-beta.5"
     }
   },
   "screenshots": [
