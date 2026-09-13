@@ -1,0 +1,31 @@
+{
+  "id": "command-code",
+  "displayName": "Command Code",
+  "description": "Runs BB threads on any of Command Code's 70 coding models, so a bug has to survive reviewers on Claude, GPT, GLM, Kimi or DeepSeek without leaving BB. Shell commands, file reads and edits arrive as BB timeline cards with streamed output and diffs, and reasoning stays separate from the reply. Needs Command Code installed and signed in, plus the adapter this repository ships. Command Code's headless mode cannot prompt per tool call, so writes are one setting rather than a per-call approval.",
+  "icon": { "url": "./icons/command-code-5614c1c6.svg" },
+  "screenshots": [
+    "./screenshots/command-code/model-picker.png",
+    "./screenshots/command-code/model-search.png"
+  ],
+  "tags": [
+    "command-code",
+    "acp",
+    "agent-client-protocol",
+    "provider",
+    "coding-agent",
+    "models"
+  ],
+  "author": {
+    "name": "Bukhori Muhammad Aqid",
+    "github": "aqidd",
+    "url": "https://github.com/aqidd"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/aqidd/bb-plugin-command-code.git",
+      "range": "^0.1.1"
+    }
+  },
+  "overview": "./overview/command-code.md"
+}
