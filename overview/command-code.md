@@ -41,6 +41,6 @@ If you want Command Code for review and exploration but not for edits, turn it o
 - No per-tool permission prompts (above).
 - No usage or cost reporting in BB, though `cmd` reports per-turn tokens.
 - No thread fork or edit-past-message: Command Code cannot clone a session.
-- Images in prompts are dropped, including on the vision-capable models.
+- Pasted images reach vision-capable models as a file path the model opens itself, costing one extra tool call. Image URLs are not forwarded.
 
 MIT licensed. Issues and pull requests at [aqidd/bb-plugin-command-code](https://github.com/aqidd/bb-plugin-command-code).
