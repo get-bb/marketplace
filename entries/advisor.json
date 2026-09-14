@@ -22,5 +22,10 @@
       "url": "https://github.com/salemsayed/bb-plugin-advisor.git",
       "range": "^0.1.0"
     }
-  }
+  },
+  "overview": "./overview/advisor.md",
+  "screenshots": [
+    "./screenshots/advisor/findings.jpg",
+    "./screenshots/advisor/settings.jpg"
+  ]
 }
