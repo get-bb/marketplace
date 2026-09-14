@@ -28,7 +28,7 @@
   "overview": "./overview/worktree-ports.md",
   "source": {
     "git": {
-      "url": "https://github.com/xlightxyearx/bb-plugin-worktree-ports.git",
+      "url": "https://github.com/to-infinity-labs/bb-plugin-worktree-ports.git",
       "range": "^0.1.0"
     }
   }
