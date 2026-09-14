@@ -1,0 +1,39 @@
+{
+  "id": "thread-pages",
+  "displayName": "Thread Pages",
+  "description": "Gives every agent session a web page it writes for its task, and lets you answer from that page instead of chat. Each page is built for the task at hand: a diagram you click, a decision sheet, a report that shows what failed. Your choices and notes on the page arrive as the agent's next message, from bb or from your phone. A built-in home lists your sessions by what needs you and by project. Pages run sandboxed with no bb credentials, and anything that touches another session asks you first.",
+  "icon": "FileText",
+  "tags": [
+    "pages",
+    "html",
+    "forms",
+    "diagrams",
+    "reports",
+    "decisions",
+    "dashboard",
+    "mobile",
+    "sandbox",
+    "home-page"
+  ],
+  "author": {
+    "name": "unifedev",
+    "github": "BartSoj",
+    "url": "https://github.com/unifedev"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/thread-pages/release-page.jpg",
+    "./screenshots/thread-pages/codebase-map.png",
+    "./screenshots/thread-pages/code-journeys.png",
+    "./screenshots/thread-pages/diagram-page.png",
+    "./screenshots/thread-pages/decision-page.png",
+    "./screenshots/thread-pages/report-page.png"
+  ],
+  "overview": "./overview/thread-pages.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/unifedev/bb-thread-pages.git",
+      "range": "^1.3.1"
+    }
+  }
+}
