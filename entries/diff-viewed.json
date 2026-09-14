@@ -1,0 +1,35 @@
+{
+  "id": "diff-viewed",
+  "displayName": "Diff Viewed",
+  "description": "Keep your place in a long diff by ticking off each file you have already read. A Viewed checkbox on every file in the changes panel collapses and dims that file, and the mark is remembered for that thread across reloads. The mark clears itself when the file's diff changes, so a rebase or a fresh edit puts the file back in front of you. The toolbar's line-wrap and stacked/split choices persist too, so a diff opens the way you last read one. Requires bb 0.41 or later, and needs no account or external service.",
+  "icon": "CircleCheck",
+  "tags": [
+    "code-review",
+    "changes-panel",
+    "file-diff",
+    "review-progress",
+    "collapse",
+    "line-wrap",
+    "split-view",
+    "git"
+  ],
+  "author": {
+    "name": "Daniel Bachhuber",
+    "github": "danielbachhuber",
+    "url": "https://github.com/danielbachhuber"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/diff-viewed/viewed-light.png",
+    "./screenshots/diff-viewed/viewed-dark.png"
+  ],
+  "overview": "./overview/diff-viewed.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/danielbachhuber/bb-plugins.git",
+      "subdir": "bb-plugin-diff-viewed",
+      "range": "^0.1.0",
+      "tagPrefix": "diff-viewed/"
+    }
+  }
+}
