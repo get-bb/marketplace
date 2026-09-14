@@ -1,0 +1,31 @@
+{
+  "id": "subscriptions",
+  "displayName": "Subscriptions",
+  "description": "Get a short message in your thread when a GitHub pull request or Linear issue you follow changes. Subscribe from the agent or the bb subscriptions command, in bulk, and a count in the thread heading shows how many items you follow. Changes to a busy thread are coalesced into one message and rewritten in place, so a fast-moving issue never floods the queue. GitHub uses the gh CLI already authenticated on the bb server, and Linear needs one read-only personal API key.",
+  "icon": {
+    "url": "./icons/subscriptions-6e735f31.svg"
+  },
+  "tags": [
+    "github",
+    "linear",
+    "pull-requests",
+    "issues",
+    "notifications",
+    "threads",
+    "agent-tools",
+    "cli"
+  ],
+  "author": {
+    "name": "grrowl",
+    "github": "grrowl",
+    "url": "https://github.com/grrowl"
+  },
+  "category": "tasks-and-workflows",
+  "overview": "./overview/subscriptions.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/grrowl/bb-subscriptions.git",
+      "range": "^0.3.1"
+    }
+  }
+}
