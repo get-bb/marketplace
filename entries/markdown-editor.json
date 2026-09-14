@@ -1,0 +1,36 @@
+{
+  "id": "markdown-editor",
+  "displayName": "Markdown Editor",
+  "description": "Edit a markdown file in the tab you were already reading it in, and save it with Cmd+S. Preview renders the file the way bb renders a chat message, including the images it points at, and Raw gives you the source in an editable pane, with unsaved text carrying between the two. Every save checks the file's hash first, so an edit an agent made while you were typing gives you a choice between reloading and overwriting instead of a silent clobber. Works on files in a project workspace, on a host, or in a thread's storage. Requires bb 0.42 or later, and needs no account or external service.",
+  "icon": "EditFile",
+  "tags": [
+    "markdown",
+    "editor",
+    "file-editor",
+    "file-viewers",
+    "preview",
+    "notes",
+    "readme",
+    "documentation"
+  ],
+  "author": {
+    "name": "Daniel Bachhuber",
+    "github": "danielbachhuber",
+    "url": "https://github.com/danielbachhuber"
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/markdown-editor/raw-editing.png",
+    "./screenshots/markdown-editor/preview.png",
+    "./screenshots/markdown-editor/conflict.png"
+  ],
+  "overview": "./overview/markdown-editor.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/danielbachhuber/bb-plugins.git",
+      "subdir": "bb-plugin-markdown-editor",
+      "range": "^0.1.0",
+      "tagPrefix": "markdown-editor/"
+    }
+  }
+}
