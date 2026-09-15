@@ -1,0 +1,33 @@
+{
+  "id": "pokemon",
+  "displayName": "Pokémon",
+  "description": "Build your Pokémon collection as you finish work in BB. Archive a thread to catch one of 1,025 species, then track your progress and duplicate catches in the Pokédex. Explore each catch’s artwork, types, stats, abilities, and cry. Uses free PokeAPI data and GitHub-hosted media.",
+  "icon": {
+    "url": "./icons/pokemon-5a7eb6b7.svg"
+  },
+  "tags": [
+    "pokedex",
+    "collecting",
+    "gamification",
+    "rewards",
+    "personalization"
+  ],
+  "author": {
+    "name": "Sawyer Hood",
+    "github": "SawyerHood",
+    "url": "https://github.com/SawyerHood"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/pokemon",
+      "tagPrefix": "pokemon/",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/pokemon/pokedex.jpg"
+  ],
+  "overview": "./overview/pokemon.md"
+}
