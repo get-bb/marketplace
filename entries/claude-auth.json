@@ -1,0 +1,28 @@
+{
+  "id": "claude-auth",
+  "displayName": "Claude Auth",
+  "description": "Authenticate Claude Code CLI remotely or on mobile via Tailscale, inspect token expiration, and renew sessions.",
+  "icon": "Zap",
+  "tags": [
+    "claude-code",
+    "authentication",
+    "oauth",
+    "remote",
+    "tailscale",
+    "tokens",
+    "providers"
+  ],
+  "author": {
+    "name": "Roger Serra",
+    "github": "Hazihell",
+    "url": "https://github.com/Hazihell"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/Hazihell/bb-plugin-claude-auth.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/claude-auth.md"
+}
