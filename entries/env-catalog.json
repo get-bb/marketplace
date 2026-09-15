@@ -1,0 +1,33 @@
+{
+  "id": "env-catalog",
+  "displayName": "Env Catalog",
+  "description": "Store API keys, tokens, and secrets in a single encrypted catalog across all BB sessions and machines. Agents automatically check available credentials before prompting you, and persist newly provided keys on demand. Values are encrypted at rest with AES-256-GCM and synchronized via your central BB server. Includes dedicated agent tools, a full-featured management UI with .env import/export, and terminal CLI commands.",
+  "icon": {
+    "url": "./icons/env-catalog-89c586ea.svg"
+  },
+  "tags": [
+    "secrets",
+    "credentials",
+    "api-keys",
+    "environment-variables",
+    "encryption",
+    "agent-tools",
+    "security"
+  ],
+  "author": {
+    "name": "Kirill Vechkasov",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill"
+  },
+  "category": "security",
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-env-catalog.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/env-catalog/overview.png"
+  ],
+  "overview": "./overview/env-catalog.md"
+}
