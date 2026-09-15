@@ -1,7 +1,7 @@
 {
   "id": "auto-answer",
   "displayName": "Auto Answer",
-  "description": "Cuts an agent's question down to one click per question \u2014 pick an option, and the Next or Submit press happens for you. The countdown appears under the option you picked, leads with a Stop button, and space or Escape cancels it. Picking again, another option or the same one, restarts it from the full delay. It stands down by itself when pressing the button would be wrong, such as nothing selected or the free-text box open, and never picks an option or types text on your behalf. The delay is 4 seconds by default and configurable from 1 to 120, with no account, service, or network access.",
+  "description": "Answers an agent's question with one click per question instead of two. A countdown starts the moment you pick an option, then presses the widget's own Next or Submit answer button. It appears under the option you picked and leads with a Stop button, and space or Escape stops it as well. Picking again, another option or the same one, restarts it from the full delay of 4 seconds, adjustable from 1 to 120. It never picks an option and never types free text, and it stands down by itself whenever pressing the button would be wrong, such as nothing selected or the free-text box open.",
   "icon": "Clock",
   "screenshots": [
     "./screenshots/auto-answer/countdown.png"
