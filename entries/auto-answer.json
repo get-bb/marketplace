@@ -1,0 +1,31 @@
+{
+  "id": "auto-answer",
+  "displayName": "Auto Answer",
+  "description": "Cuts an agent's question down to one click per question \u2014 pick an option, and the Next or Submit press happens for you. The countdown appears under the option you picked, leads with a Stop button, and space or Escape cancels it. Picking again, another option or the same one, restarts it from the full delay. It stands down by itself when pressing the button would be wrong, such as nothing selected or the free-text box open, and never picks an option or types text on your behalf. The delay is 4 seconds by default and configurable from 1 to 120, with no account, service, or network access.",
+  "icon": "Clock",
+  "screenshots": [
+    "./screenshots/auto-answer/countdown.png"
+  ],
+  "overview": "./overview/auto-answer.md",
+  "tags": [
+    "questions",
+    "countdown",
+    "timer",
+    "keyboard",
+    "shortcut",
+    "clicks",
+    "automation"
+  ],
+  "author": {
+    "name": "VladPolet",
+    "github": "VladPolet",
+    "url": "https://github.com/VladPolet"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/VladPolet/bb-plugin-auto-answer.git",
+      "range": "^0.1.0"
+    }
+  }
+}
