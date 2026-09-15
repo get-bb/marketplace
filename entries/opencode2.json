@@ -1,0 +1,28 @@
+{
+  "id": "opencode2",
+  "displayName": "OpenCode 2",
+  "description": "Adds OpenCode 2 as a BB provider with native skill routing and shared OpenCode Go usage limits on desktop and mobile.",
+  "icon": {
+    "url": "./icons/opencode2-cc9ae5bd.svg"
+  },
+  "tags": [
+    "opencode",
+    "provider",
+    "agents",
+    "acp",
+    "skills",
+    "usage-limits",
+    "mobile"
+  ],
+  "author": {
+    "name": "Flame119052",
+    "github": "Flame119052",
+    "url": "https://github.com/Flame119052"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/Flame119052/bb-plugin-opencode2.git",
+      "range": "^1.0.0"
+    }
+  }
+}
