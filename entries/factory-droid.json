@@ -11,6 +11,10 @@
     "github": "bentossell"
   },
   "category": "agents-and-providers",
+  "screenshots": [
+    "./screenshots/factory-droid/model-picker.png",
+    "./screenshots/factory-droid/model-picker-dark.png"
+  ],
   "overview": "./overview/factory-droid.md",
   "source": {
     "git": {
