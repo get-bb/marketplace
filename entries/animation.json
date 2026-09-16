@@ -1,0 +1,36 @@
+{
+  "id": "animation",
+  "displayName": "Animation",
+  "description": "Play technical diagrams as a sequence of beats, then export a looping HTML page. Open a .scene.json file to get a stage and a timeline: drag a step boundary to retime it, or click a part to quote its state into chat. Agents write the same JSON with ordinary file edits. GIF and MP4 export are not included; HTML is the shareable output. Requires BB 0.43 or later.",
+  "icon": {
+    "url": "./icons/animation-f7e2ea4c.svg"
+  },
+  "tags": [
+    "scene",
+    "timeline",
+    "diagram",
+    "explainer",
+    "html-export",
+    "architecture",
+    "json",
+    "protocol"
+  ],
+  "author": {
+    "name": "Tom",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/animation/queue-drain.png",
+    "./screenshots/animation/queue-drain-run.png",
+    "./screenshots/animation/cache-aside.png"
+  ],
+  "overview": "./overview/animation.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-animation.git",
+      "range": "^0.1.0"
+    }
+  }
+}
