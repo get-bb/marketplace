@@ -11,6 +11,7 @@
     "github": "bentossell"
   },
   "category": "agents-and-providers",
+  "overview": "./overview/factory-droid.md",
   "source": {
     "git": {
       "url": "https://github.com/bentossell/bb-plugin-factory-droid.git",
