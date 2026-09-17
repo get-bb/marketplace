@@ -2,6 +2,8 @@
 
 Pinned and focused work stays near the center. A coral ring marks focus and a green bar marks a running agent. Unread results have a filled blue Ready to read badge, with a blue edge and light tint on task and session cards. They rank below focus, input requests and failures, and ahead of routine review queues. Recent results stay near the center alongside running agents. Projects keep neutral fills, with an unread border and counts pointing to their tasks. Waiting for you and Ready to read have separate filters; reading a result leaves its task's review state intact.
 
+Activity in the last 24 hours also brings work closer to the center. Age labels show when it was last active; that influence fades over time. Focus, input requests and failures keep priority.
+
 ## Open work where it sits
 
 Click an area, task or session to expand it in place. Nearby cards make room while the arrangement stays stable. Read formatted response previews with tables and code, follow attached sessions, or open the full task or chat in BB. Long previews disclose when they are shortened; wide content scrolls within the preview. Search and filters help you reach work beyond the overview. Zoom out for more work and fewer details, or zoom in around an item. Reset returns to 100%.
