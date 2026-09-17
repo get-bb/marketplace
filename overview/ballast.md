@@ -34,8 +34,9 @@ Four rungs, in order of what they cost:
 3. **Stop** — terminate disposable processes.
 4. **Escalate** — hand the whole picture to an agent with the tools to work it.
 
-Each is independent and switchable. Every threshold crossing and automatic
-action is logged with the numbers that triggered it.
+Each rung is independent, and all four are off until you turn them on — a fresh
+install reports and plans, and stops nothing. Every threshold crossing and every
+automatic action is logged with the numbers that triggered it.
 
 ## What it will not stop
 
