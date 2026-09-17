@@ -33,6 +33,9 @@ Four rungs, in order of what they cost:
    dev servers. Costs a turn, costs no work.
 3. **Stop** — terminate disposable processes.
 4. **Escalate** — hand the whole picture to an agent with the tools to work it.
+   It runs unattended with full permissions, because a thread that stops on an
+   approval nobody is there to give is worse than no thread, and it is only
+   started when there is something it could actually do.
 
 Each rung is independent, and all four are off until you turn them on — a fresh
 install reports and plans, and stops nothing. Every threshold crossing and every
