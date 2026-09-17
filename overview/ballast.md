@@ -32,10 +32,8 @@ Four rungs, in order of what they cost:
 2. **Ask** — steer the hungriest threads to close their browsers and stop their
    dev servers. Costs a turn, costs no work.
 3. **Stop** — terminate disposable processes.
-4. **Escalate** — hand the whole picture to an agent with the tools to work it.
-   It runs unattended with full permissions, because a thread that stops on an
-   approval nobody is there to give is worse than no thread, and it is only
-   started when there is something it could actually do.
+4. **Escalate** — hand the picture to an agent. It runs unattended with full
+   permissions, and only starts when the plan holds something actionable.
 
 Each rung is independent, and all four are off until you turn them on — a fresh
 install reports and plans, and stops nothing. Every threshold crossing and every
@@ -64,19 +62,17 @@ The panel, the `bb ballast` command and an agent all pass through that gate.
 
 A healthy machine is sampled once a minute, and a healthy sample reads only
 memory totals — about ten milliseconds, no process table, no SDK call. The
-expensive half runs only under real pressure or while you are looking, is
-cached, and de-duplicates concurrent callers. The panel is refreshed by pushes
-from the guard and idles when its tab is hidden.
+expensive half runs only under real pressure or while you are looking, and is
+cached. The panel is push-driven and idles when its tab is hidden.
 
 ## Agents
 
 Ballast registers `ballast_status`, `ballast_plan` and `ballast_relieve` in
 every thread, plus a skill, so an agent whose build just got killed can diagnose
-it without being told the plugin exists. Under pressure it injects the current
-numbers into every thread; below the watch threshold it contributes nothing.
+it unprompted. Under pressure it injects the current numbers into every thread;
+below the watch threshold it contributes nothing.
 
 ## Requirements
 
 macOS or Linux. No account, service, or separate install. Swap, compression and
-kernel pressure level are read where the platform exposes them and reported as
-absent where it does not.
+kernel pressure level are read where the platform exposes them.
