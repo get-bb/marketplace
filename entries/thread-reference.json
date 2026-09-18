@@ -1,0 +1,32 @@
+{
+  "id": "thread-reference",
+  "displayName": "BB Thread Reference",
+  "description": "Bring a BB thread's current context into another conversation without copying its transcript. Drop a sidebar thread directly into the composer, or choose one from the Threads mention provider. References stay clickable in sent messages so you can return to the source thread. The plugin reads source threads without modifying them.",
+  "icon": "MessageSquare",
+  "tags": [
+    "thread-reference",
+    "threads",
+    "context",
+    "composer",
+    "mentions",
+    "drag-and-drop",
+    "cross-chat"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-thread-reference.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/thread-reference/sidebar-drag-handle.png",
+    "./screenshots/thread-reference/composer-reference.png"
+  ],
+  "overview": "./overview/thread-reference.md"
+}
