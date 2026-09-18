@@ -4,7 +4,7 @@ Compact pane headers, composer controls, tool cards and sidebar rows reduce the 
 
 ## Choose your accent
 
-Open Compact UI from the sidebar or Settings. Pick a preset or custom color, choose None for monochrome, or use saved colors per project and shuffle them. Toggle color on project headings, thread titles, active-workspace rails and group hover backgrounds. The selected-pane tint and dividers share the accent with Workspaces decorations when that separate plugin is installed.
+Open Compact UI from the sidebar or Settings. Pick a preset or custom color, choose None for monochrome, or use saved colors per project and shuffle them. Seven toggles cover project headings, thread titles, workspace rails, group hover backgrounds, pane headers, pane background wash and text input glow. The header and input treatments require the separate Workspaces plugin. The selected-pane tint and dividers share the accent with Workspaces decorations when that separate plugin is installed.
 
 ## Requirements
 

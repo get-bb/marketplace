@@ -22,7 +22,7 @@
   "source": {
     "git": {
       "url": "https://github.com/mgmobrien/bb-plugin-compact-ui.git",
-      "range": "^0.9.2"
+      "range": "^0.9.3"
     }
   },
   "screenshots": [

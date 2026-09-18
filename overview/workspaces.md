@@ -8,4 +8,4 @@ Layouts stay in this browser's local storage. Stock bb reloads once per switch; 
 
 ## Requirements
 
-Requires bb 0.42+. Uses internal host interfaces, so bb updates may require plugin updates. The thread index covers up to 400 unarchived threads. Layouts do not sync across devices. No external service or account is required. Compact UI is optional and adds controls for the shared workspace accent.
+Requires bb 0.42+. Uses internal host interfaces, so bb updates may require plugin updates. The thread index covers up to 400 unarchived threads. Layouts do not sync across devices. No external service or account is required. Compact UI is optional and adds controls for the shared workspace accent, including switches for pane header color and text input glow.
