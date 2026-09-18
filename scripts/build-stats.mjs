@@ -17,12 +17,10 @@
 // `--print` writes the document to stdout instead of dist/stats.json.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { pluginsFromRows } from "./marketplace-lib.mjs";
 
 const root = new URL("..", import.meta.url).pathname;
 const printOnly = process.argv.includes("--print");
-
-/** Same id shape the marketplace schema requires of an entry. */
-const ENTRY_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 
 /** A hostile or broken answer must not become a 100 MB sidecar. */
 const MAX_ENTRIES = 5_000;
@@ -90,36 +88,6 @@ async function queryInstallCounts() {
     throw new Error("PostHog answer has no results array");
   }
   return body.results;
-}
-
-/** Rows PostHog returns are `[plugin_id, installs]`; drop anything else. */
-function pluginsFromRows(rows) {
-  const plugins = {};
-  let dropped = 0;
-  for (const row of rows) {
-    const [id, installs] = Array.isArray(row) ? row : [];
-    if (
-      typeof id !== "string" ||
-      !ENTRY_ID_PATTERN.test(id) ||
-      typeof installs !== "number" ||
-      !Number.isSafeInteger(installs) ||
-      installs < 0
-    ) {
-      dropped += 1;
-      continue;
-    }
-    plugins[id] = { installs };
-  }
-  if (dropped > 0) {
-    console.error(`warning: dropped ${dropped} unusable row(s) from PostHog`);
-  }
-  // Sorted keys keep the published document byte-stable between runs that
-  // return the same counts, so an unchanged sidecar keeps its ETag.
-  return Object.fromEntries(
-    Object.keys(plugins)
-      .sort()
-      .map((id) => [id, plugins[id]]),
-  );
 }
 
 let rows;
