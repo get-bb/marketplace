@@ -1,0 +1,25 @@
+{
+  "id": "factory-droid",
+  "displayName": "Factory Droid",
+  "description": "Use Factory Droid as a native agent provider in bb: live model catalog, reasoning controls, and autonomy mapping over ACP.",
+  "icon": {
+    "url": "./icons/factory-droid.svg"
+  },
+  "tags": ["agents", "providers", "acp", "droid", "factory"],
+  "author": {
+    "name": "Ben Tossell",
+    "github": "bentossell"
+  },
+  "category": "agents-and-providers",
+  "screenshots": [
+    "./screenshots/factory-droid/model-picker.png",
+    "./screenshots/factory-droid/model-picker-dark.png"
+  ],
+  "overview": "./overview/factory-droid.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/bentossell/bb-plugin-factory-droid.git",
+      "range": "^0.2.0"
+    }
+  }
+}

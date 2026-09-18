@@ -1,7 +1,7 @@
 {
   "id": "grok-build-usage",
   "displayName": "Grok Build Usage",
-  "description": "Adds live Grok Build subscription and weekly credit usage, including reset timing, to bb's Settings → Usage Limits page.",
+  "description": "Adds live Grok Build subscription and weekly credit usage, including reset timing, to bb's Settings \u2192 Usage Limits page.",
   "icon": {
     "url": "./icons/grok-build-usage-f6377a62.svg"
   },
@@ -16,7 +16,7 @@
   ],
   "category": "token-usage-and-limits",
   "author": {
-    "name": "Tom",
+    "name": "MacHatter1",
     "github": "MacHatter1",
     "url": "https://github.com/MacHatter1"
   },

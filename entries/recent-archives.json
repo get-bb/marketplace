@@ -1,13 +1,16 @@
 {
   "id": "recent-archives",
   "displayName": "Recent Archives",
-  "description": "Adds a per-project Recently archived filter to the sidebar Display options menu that lists the newest archived threads under the project, previews them without restoring, and unarchives from the row or thread header.",
+  "description": "Keeps a project's newest archived threads visible under its thread list, so recovering one takes a click instead of a search. Turn the row on from the project's ⋯ menu and the archived threads appear dimmed under the live ones. Click one to read it while it stays archived, then unarchive from the row or from the open thread's header. Choose how many it lists — 10, 25, or 50 — and how far back it looks, from 7 days to all of them.",
   "icon": {
     "url": "./icons/recent-archives-63523030.svg"
   },
+  "overview": "./overview/recent-archives.md",
   "tags": [
     "sidebar",
     "archive",
+    "unarchive",
+    "restore",
     "threads",
     "interface",
     "filters"

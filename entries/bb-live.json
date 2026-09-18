@@ -1,0 +1,34 @@
+{
+  "id": "bb-live",
+  "displayName": "BB Live",
+  "description": "Talk to BB while your agents work, then redirect threads or start new project work by voice. Keeps one voice session connected while you move through projects, focus threads, and hear task results in the transcript. Explicit new tasks can start project threads or go to the BB Operator for coordination, while consequential actions stay in BB's visual approval flow. Requires BB 0.43.1+, Git, npm, Node.js 22.19+, an OpenAI project with GPT-Live access, and microphone permission; OpenAI usage is billed separately.",
+  "icon": "Mic",
+  "screenshots": [
+    "./screenshots/bb-live/main.png",
+    "./screenshots/bb-live/settings.png"
+  ],
+  "tags": [
+    "voice",
+    "audio",
+    "workspace",
+    "delegation",
+    "operator",
+    "threads",
+    "openai",
+    "webrtc",
+    "task-routing"
+  ],
+  "author": {
+    "name": "Jem",
+    "github": "jem-computer",
+    "url": "https://github.com/jem-computer"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/jem-computer/bb-live.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/bb-live.md"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "md-editor",
+  "displayName": "Markdown PRO",
+  "description": "Edit agent-written Markdown as a formatted document, and send any passage to the chat with its file path and line numbers. Callouts, collapsible details, footnotes, raw HTML and YAML properties render in place and save back unchanged, so opening a file never rewrites it. Mermaid flowcharts are edited by right-click (add a block or a yes/no branch, change a shape, delete), and LaTeX, code highlighting for 37 languages and directory trees render alongside. Files open from the machine and folder of the thread they came from, and autosave stops instead of overwriting a change an agent made underneath you. Adds a markdown-pro agent skill and a close-others and pin menu on the side-panel tabs; needs BB 0.43 or later and no account or external service.",
+  "icon": {
+    "url": "./icons/md-editor-342b2460.svg"
+  },
+  "tags": [
+    "markdown",
+    "wysiwyg",
+    "mermaid",
+    "latex",
+    "callouts",
+    "diagrams",
+    "code-highlighting",
+    "yaml-frontmatter",
+    "agent-docs",
+    "quote-to-chat"
+  ],
+  "author": {
+    "name": "Kirill Vechkasov",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill"
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/md-editor/1-overview.png",
+    "./screenshots/md-editor/6-comment-to-chat.png",
+    "./screenshots/md-editor/4-diagrams.png",
+    "./screenshots/md-editor/3-code.png",
+    "./screenshots/md-editor/2-tables-math.png"
+  ],
+  "overview": "./overview/md-editor.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-md-editor.git",
+      "range": "^0.1.0"
+    }
+  }
+}
