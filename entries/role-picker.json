@@ -1,0 +1,32 @@
+{
+  "id": "role-picker",
+  "displayName": "Role Picker",
+  "description": "Choose a specialist in the composer without leaving the conversation. Includes six built-in roles and optionally connects to Agent Roles for custom profiles.",
+  "icon": {
+    "url": "./icons/role-picker-66a80e4e.png"
+  },
+  "tags": [
+    "composer",
+    "specialists",
+    "role-selection"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/role-picker",
+      "range": "^0.1.0",
+      "tagPrefix": "role-picker/"
+    }
+  },
+  "overview": "./overview/role-picker.md",
+  "screenshots": [
+    "./screenshots/role-picker/overview.png",
+    "./screenshots/role-picker/selection.png"
+  ]
+}

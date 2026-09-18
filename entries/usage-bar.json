@@ -1,0 +1,30 @@
+{
+  "id": "usage-bar",
+  "displayName": "Usage Bar",
+  "description": "Keep provider quotas and reset times above the sidebar footer. Open quota details and inspect daily and monthly token totals. Requires providers that report usage to BB; Usage Limits is optional.",
+  "icon": {
+    "url": "./icons/usage-bar-e6cc325e.png"
+  },
+  "tags": [
+    "essentials"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/usage-bar",
+      "range": "^0.1.0",
+      "tagPrefix": "usage-bar/"
+    }
+  },
+  "overview": "./overview/usage-bar.md",
+  "screenshots": [
+    "./screenshots/usage-bar/overview.png",
+    "./screenshots/usage-bar/details.png"
+  ]
+}
