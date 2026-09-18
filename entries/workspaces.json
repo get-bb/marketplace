@@ -21,7 +21,7 @@
   "source": {
     "git": {
       "url": "https://github.com/mgmobrien/bb-plugin-workspaces.git",
-      "range": "^0.2.5"
+      "range": "^0.2.6"
     }
   },
   "screenshots": [
