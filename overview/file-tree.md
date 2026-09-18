@@ -10,7 +10,7 @@ Not for people whose job is to upload, move, rename, or unzip under `$HOME`. Tha
 
 The tree sits on the right of the thread. Above it is a search box: type a file name, part of a path, or paste a path, and the list under it names the files that match. Enter selects the file in the tree and opens it in the preview — one action, both results — and re-roots the tree when the file lives in another project.
 
-Click a file to open BB's default preview. Right-click to add the relative path to the draft, copy a relative or absolute path, copy the file itself onto the clipboard, or reveal the item in Finder.
+Click a file to open BB's default preview. Right-click to add the relative path to the draft, create a blank `.md` in that folder (or the file's parent), delete a file, copy a relative or absolute path, copy the file itself onto the clipboard, or reveal the item in Finder. Right-click the root name to create the markdown file at the top of the tree. A newly created `.md` opens in the external editor.
 
 Search and chat paths ask the same question of the same index. When a message names a path, the tree can jump to it. A bare file name works too: the search roots are indexed by name, so `AGENTS-base.md` lands on the file even when nothing in the message says which folder it is in. If the hit is in another folder, the tree re-roots there instead of reporting a miss.
 
