@@ -1,0 +1,33 @@
+{
+  "id": "pstack",
+  "displayName": "pstack",
+  "description": "Puts 47 pstack engineering skills in every bb thread, with one setup step to choose the models they delegate to. Run /setup-pstack once and it reads this host's model list, then asks which model each pstack role should use. After that, /poteto-mode loads one of 23 playbooks and runs the other skills its steps need: reviews that put a second model on the change, tests, blast-radius checks, and prose cleanup. Every skill has its own switch, and none reach the model prompt until you invoke them. Needs bb 0.43 or newer, the bb CLI for skills that fan out to workers, and MCP servers or a webhook endpoint for the few skills that ask for them.",
+  "icon": "Layers",
+  "screenshots": [
+    "./screenshots/pstack/skills-menu.jpg",
+    "./screenshots/pstack/skill-settings.jpg"
+  ],
+  "overview": "./overview/pstack.md",
+  "tags": [
+    "skills",
+    "engineering",
+    "code-review",
+    "verification",
+    "playbooks",
+    "planning",
+    "subagents",
+    "prompt-templates"
+  ],
+  "author": {
+    "name": "WYEZ",
+    "github": "wy3z",
+    "url": "https://github.com/wy3z"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/wy3z/bb-plugin-pstack.git",
+      "range": "^0.1.0"
+    }
+  }
+}
