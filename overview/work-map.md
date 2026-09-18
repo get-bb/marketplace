@@ -6,6 +6,8 @@ Activity in the last 24 hours also brings work closer to the center. Age labels 
 
 ## Open work where it sits
 
+Collapsed Overview fits the available window, showing fewer whole cards on smaller screens. Central cards use their extra room for session excerpts and task context. Show all opens the complete list; expanded details and chat can scroll.
+
 Click an area, task or session to expand it in place. Nearby cards make room while the arrangement stays stable. Read formatted response previews with tables and code, follow attached sessions, or open the full task or chat in BB. Long previews disclose when they are shortened; wide content scrolls within the preview. Search and filters help you reach work beyond the overview. Zoom out for more work and fewer details, or zoom in around an item. Reset returns to 100%.
 
 ## Start and organize
