@@ -1,0 +1,31 @@
+{
+  "id": "image-annotator",
+  "displayName": "Image Annotator",
+  "description": "Show your agent exactly which part of an image you mean before sending it. Draw with a pen, highlighter, arrows, or rectangles, with colors, undo/redo, and zoom. Apply replaces the unsent attachment with an annotated PNG while keeping the stored original. Requires BB 0.43 or later and no external service or account; attachment UI changes in future BB versions may require a plugin update.",
+  "icon": {
+    "url": "./icons/image-annotator-27e8856a.svg"
+  },
+  "tags": [
+    "screenshots",
+    "annotations",
+    "drawing",
+    "attachments",
+    "visual-feedback"
+  ],
+  "author": {
+    "name": "stasbel",
+    "github": "stasbel",
+    "url": "https://github.com/stasbel"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/image-annotator/editor.png"
+  ],
+  "overview": "./overview/image-annotator.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/stasbel/bb-plugin-image-annotator.git",
+      "range": "^0.1.0"
+    }
+  }
+}
