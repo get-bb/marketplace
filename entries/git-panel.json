@@ -28,5 +28,9 @@
       "url": "https://github.com/diip3sh/bb-plugin-git-panel.git",
       "range": "^0.1.0"
     }
-  }
+  },
+  "screenshots": [
+    "./screenshots/git-panel/git-panel-1.png",
+    "./screenshots/git-panel/git-panel-2.png"
+  ]
 }

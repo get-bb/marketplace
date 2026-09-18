@@ -27,5 +27,9 @@
       "url": "https://github.com/diip3sh/bb-plugin-beautiful-chat.git",
       "range": "^0.1.0"
     }
-  }
+  },
+  "screenshots": [
+    "./screenshots/beautiful-chat/beautiful-chat-1.png",
+    "./screenshots/beautiful-chat/beautiful-chat-2.png"
+  ]
 }
