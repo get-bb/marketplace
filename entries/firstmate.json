@@ -1,0 +1,24 @@
+{
+  "id": "firstmate",
+  "displayName": "Firstmate",
+  "description": "Turn one thread into a crew: dispatch parallel agent ships in their own worktrees and land their work when it reports DONE. Ships get isolated git worktrees, scouts stay read-only, and every crew ends with a DONE, BLOCKED, or FAILED verdict. Thread events ping you the moment a crew finishes, fails, or stalls, and a crew that idles without a verdict gets nudged until it reports. Queue work with dependencies, gate merges behind green checks, and hand whole projects to domain captains. Requires the bb CLI on the host; the optional real firstmate toolbelt clones upstream firstmate scripts.",
+  "icon": "Ship",
+  "tags": ["agents", "crews", "orchestration", "parallel-agents", "worktrees", "supervision", "delegation"],
+  "author": {
+    "name": "amrtawfik160",
+    "github": "amrtawfik160",
+    "url": "https://github.com/amrtawfik160"
+  },
+  "category": "agents-and-providers",
+  "screenshots": [
+    "./screenshots/firstmate/crew-thread.png",
+    "./screenshots/firstmate/settings.png"
+  ],
+  "overview": "./overview/firstmate.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/amrtawfik160/bb-plugin-firstmate.git",
+      "range": "^0.4.0"
+    }
+  }
+}
