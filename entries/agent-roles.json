@@ -1,7 +1,7 @@
 {
   "id": "agent-roles",
   "displayName": "Agent Roles",
-  "description": "Create reusable specialist profiles and start focused agent work. Optional Role Picker and Visual Workflows integrations.",
+  "description": "Create reusable specialist profiles and start focused agent work. Optional Role Picker and Visual Workflows integrations. Agent work uses your configured provider account and quota.",
   "icon": {
     "url": "./icons/agent-roles-af02a11f.png"
   },

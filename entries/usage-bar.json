@@ -6,7 +6,9 @@
     "url": "./icons/usage-bar-e6cc325e.png"
   },
   "tags": [
-    "essentials"
+    "quota",
+    "sidebar",
+    "reset-times"
   ],
   "author": {
     "name": "Dmitrii Kapustin",

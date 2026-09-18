@@ -1,7 +1,7 @@
 {
   "id": "goals",
   "displayName": "Goals",
-  "description": "Keep your personal priorities available when you ask an agent to evaluate an idea or plan. Reorder goals and archive completed ones. Goals do not launch work automatically.",
+  "description": "Keep your personal priorities available when you ask an agent to evaluate an idea or plan. Reorder goals and archive completed ones. Goals do not launch work automatically. Agent evaluations use your configured provider quota.",
   "icon": {
     "url": "./icons/goals-05aa27fc.png"
   },

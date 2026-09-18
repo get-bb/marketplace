@@ -6,7 +6,9 @@
     "url": "./icons/lock-area-8b60dcb2.png"
   },
   "tags": [
-    "essentials"
+    "layout",
+    "panes",
+    "pinning"
   ],
   "author": {
     "name": "Dmitrii Kapustin",
