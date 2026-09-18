@@ -1,0 +1,29 @@
+{
+  "id": "docker",
+  "displayName": "Docker",
+  "description": "Manages the local Docker engine from the bb sidebar with live cards for containers, images, volumes, and networks — logs, bounded non-interactive exec output, and explicitly confirmed pruning — plus a read-only bb docker CLI with listings and cleanup for agents.",
+  "icon": "Container",
+  "tags": [
+    "docker",
+    "containers",
+    "images",
+    "volumes",
+    "networks",
+    "cli",
+    "sidebar",
+    "interface"
+  ],
+  "author": {
+    "name": "Griko Nibras",
+    "github": "grikomsn",
+    "url": "https://github.com/grikomsn"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/grikomsn/bb-plugins.git",
+      "subdir": "packages/bb-plugin-docker",
+      "range": "^0.1.0",
+      "tagPrefix": "docker/"
+    }
+  }
+}
