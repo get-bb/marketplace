@@ -1,0 +1,30 @@
+{
+  "id": "nudge",
+  "displayName": "Nudge",
+  "description": "Continue or retry the agent from an empty composer. Play replaces Send while the draft is empty, starts idle threads without a user bubble, and retries failed turns by reference. Hidden while the agent is running. Also available as bb nudge. No account or API key.",
+  "icon": "Play",
+  "screenshots": [
+    "./screenshots/nudge/composer.png"
+  ],
+  "overview": "./overview/nudge.md",
+  "tags": [
+    "composer",
+    "continue",
+    "retry",
+    "empty-message",
+    "send",
+    "play"
+  ],
+  "author": {
+    "name": "Evan Simpson",
+    "github": "e-simpson",
+    "url": "https://github.com/e-simpson"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/e-simpson/bb-plugin-nudge.git",
+      "range": "^0.1.0"
+    }
+  }
+}
