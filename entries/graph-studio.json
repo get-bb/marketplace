@@ -1,0 +1,33 @@
+{
+  "id": "graph-studio",
+  "displayName": "Graph Studio",
+  "description": "Build agent graphs that may contain cycles, run them against real BB threads, and watch them execute on a live canvas. A node spawns a thread rather than calling a model, so workers appear in the sidebar and run on the providers you already have. 31 templates, human and dialogue nodes, checkpointed runs.",
+  "icon": { "url": "./icons/graph-studio.svg" },
+  "tags": [
+    "agents",
+    "graph",
+    "workflow",
+    "orchestration",
+    "langgraph",
+    "automation"
+  ],
+  "author": {
+    "name": "sajov",
+    "github": "sajov",
+    "url": "https://github.com/sajov"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/sajov/bb-plugins.git",
+      "subdir": "bb-plugin-graph-studio",
+      "range": "^0.1.0",
+      "tagPrefix": "graph-studio/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/graph-studio/running.png",
+    "./screenshots/graph-studio/templates.png"
+  ],
+  "overview": "./overview/graph-studio.md"
+}
