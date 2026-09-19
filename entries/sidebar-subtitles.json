@@ -20,7 +20,7 @@
     "git": {
       "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
       "subdir": "plugins/sidebar-subtitles",
-      "range": "^0.1.1",
+      "range": "^0.1.2",
       "tagPrefix": "sidebar-subtitles/"
     }
   },

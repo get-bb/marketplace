@@ -1,6 +1,8 @@
 ## Arrange your sidebar
 
-Keep the destinations you use visible and group them with your own headings. Customize sidebar provides drag handles, up/down controls and Show toggles. Section options also offer Move up, Move down and Hide section. Hidden destinations stay accessible under More and can be restored with Show.
+Keep the destinations you use visible and group them with your own headings. Desktop rows follow BB’s native height and spacing, with section menus appearing on hover or keyboard focus. Touch layouts keep the controls visible.
+
+Open the sliders button beside More for compact customization: drag handles reorder sections and eye buttons hide or restore them. Section menus provide keyboard-accessible move actions and heading editing. Hidden destinations open in a More popover without expanding the sidebar.
 
 ## Keep your existing layout
 
