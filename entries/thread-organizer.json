@@ -33,7 +33,7 @@
     "git": {
       "url": "https://github.com/brsbl/bb-plugins.git",
       "subdir": "plugins/thread-organizer",
-      "range": "^0.1.2",
+      "range": "^0.1.4",
       "tagPrefix": "thread-organizer/"
     }
   }
