@@ -20,7 +20,7 @@
       "url": "https://github.com/SawyerHood/sawyer-plugins.git",
       "subdir": "plugins/slopcop",
       "tagPrefix": "slopcop/",
-      "range": "^0.1.0"
+      "range": ">=0.1.6"
     }
   }
 }

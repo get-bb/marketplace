@@ -27,7 +27,7 @@
       "url": "https://github.com/SawyerHood/sawyer-plugins.git",
       "subdir": "plugins/compact-nav",
       "tagPrefix": "compact-nav/",
-      "range": "^0.1.0"
+      "range": ">=0.1.4"
     }
   }
 }

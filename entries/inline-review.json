@@ -1,0 +1,34 @@
+{
+  "id": "inline-review",
+  "displayName": "Inline Review",
+  "description": "Turn passages from an assistant response into one clear revision request. Mark comments and removals while you read, keep them highlighted across navigation, add overall feedback, and send the full review to the same thread. Drafts stay on your BB server; no external service or account is required. Requires BB 0.43.x.",
+  "icon": "MessageSquare",
+  "screenshots": [
+    "./screenshots/inline-review/select-feedback.png",
+    "./screenshots/inline-review/add-comment.png",
+    "./screenshots/inline-review/staged-feedback.png",
+    "./screenshots/inline-review/review-draft.png",
+    "./screenshots/inline-review/delivered-feedback.png"
+  ],
+  "overview": "./overview/inline-review.md",
+  "tags": [
+    "annotations",
+    "feedback",
+    "assistant-messages",
+    "text-selection",
+    "review",
+    "comments"
+  ],
+  "author": {
+    "name": "rdanhau",
+    "github": "rdanhau",
+    "url": "https://github.com/rdanhau"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/rdanhau/bb-plugin-inline-review.git",
+      "range": "^1.0.0"
+    }
+  }
+}
