@@ -1,0 +1,31 @@
+{
+  "id": "uptime",
+  "displayName": "Uptime",
+  "description": "Monitor website availability and response times from your BB server. View recent checks and see when a site is down. Requires the server to remain running and able to reach the sites.",
+  "icon": {
+    "url": "./icons/uptime-2337f766.png"
+  },
+  "tags": [
+    "monitoring",
+    "websites",
+    "latency"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/uptime",
+      "range": "^0.1.0",
+      "tagPrefix": "uptime/"
+    }
+  },
+  "overview": "./overview/uptime.md",
+  "screenshots": [
+    "./screenshots/uptime/overview.png"
+  ]
+}
