@@ -8,10 +8,13 @@ usage bar, the percentage, and a tiny window/reset line. There are no cards,
 provider group headings, separators, hover states, or status-dot clutter; the
 disclosure itself is transparent and borderless.
 
-The bar uses the shortest observed shared quota window for each account: a
-5-hour limit wins over a weekly limit, while a weekly limit is shown when it is
-the shortest available window. It remains neutral below 75%, changes to warning
-yellow at 75%, and turns critical red at 90%.
+The bar shows the window that actually limits the account right now. When a
+window is spent, the row reports the spent window that clears last and its
+reset, so an account with an empty 5-hour window but a spent weekly quota reads
+`Weekly` and not an empty bar. When every window still has room, the row reports
+the one closest to its limit. The bar remains neutral below 75%, changes to
+warning yellow at 75%, and turns critical red at 90%; a row the pool cannot
+route to is red with a red window/reset line regardless of the percentage.
 
 ## Live and local
 
