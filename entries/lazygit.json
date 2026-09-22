@@ -16,6 +16,10 @@
     "url": "https://github.com/martinlevesque"
   },
   "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/lazygit/thread-panel.png",
+    "./screenshots/lazygit/maximized.png"
+  ],
   "overview": "./overview/lazygit.md",
   "source": {
     "npm": {
