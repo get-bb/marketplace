@@ -26,7 +26,7 @@
       "url": "https://github.com/SawyerHood/sawyer-plugins.git",
       "subdir": "plugins/quick-chat",
       "tagPrefix": "quick-chat/",
-      "range": "^0.1.0"
+      "range": ">=0.1.1"
     }
   }
 }

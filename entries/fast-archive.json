@@ -1,0 +1,31 @@
+{
+  "id": "fast-archive",
+  "displayName": "Fast Archive",
+  "description": "Archive finished conversations from the thread header. Uses BB\u2019s archive and restore behavior, and avoids duplicate buttons when native archiving is present.",
+  "icon": {
+    "url": "./icons/fast-archive-7f65fb91.png"
+  },
+  "tags": [
+    "threads",
+    "archive",
+    "productivity"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/fast-archive",
+      "range": "^0.1.0",
+      "tagPrefix": "fast-archive/"
+    }
+  },
+  "overview": "./overview/fast-archive.md",
+  "screenshots": [
+    "./screenshots/fast-archive/overview.png"
+  ]
+}

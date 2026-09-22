@@ -28,7 +28,7 @@
       "url": "https://github.com/SawyerHood/sawyer-plugins.git",
       "subdir": "plugins/btrfs-cow",
       "tagPrefix": "btrfs-cow/",
-      "range": "^0.1.1"
+      "range": ">=0.1.2"
     }
   }
 }

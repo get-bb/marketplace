@@ -1,0 +1,33 @@
+{
+  "id": "quick-compose",
+  "displayName": "Quick Compose",
+  "description": "Start a thread from a floating composer without leaving the page you’re on. Open it with Mod+Shift+L, or hand off the current thread with Mod+Shift+H; both shortcuts can be rebound in Settings → Keyboard. Keep your draft and selections when you dismiss it, then start the thread in the background when you’re ready. Requires BB 0.42+ and uses your configured agent provider and account.",
+  "icon": {
+    "url": "./icons/quick-compose-b23250dd.svg"
+  },
+  "screenshots": [
+    "./screenshots/quick-compose/overview.jpg"
+  ],
+  "overview": "./overview/quick-compose.md",
+  "tags": [
+    "composer",
+    "floating-window",
+    "keyboard-shortcuts",
+    "handoff",
+    "drafts"
+  ],
+  "author": {
+    "name": "Sawyer Hood",
+    "github": "SawyerHood",
+    "url": "https://github.com/SawyerHood"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/quick-compose",
+      "tagPrefix": "quick-compose/",
+      "range": ">=0.1.0"
+    }
+  }
+}

@@ -14,7 +14,7 @@
       "url": "https://github.com/SawyerHood/sawyer-plugins.git",
       "subdir": "plugins/miku",
       "tagPrefix": "miku/",
-      "range": "^0.6.0"
+      "range": ">=0.7.0"
     }
   },
   "category": "themes-and-appearance",
