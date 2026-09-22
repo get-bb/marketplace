@@ -1,0 +1,37 @@
+{
+  "id": "design-director",
+  "displayName": "Design director",
+  "description": "Catch a screen that looks generic before you call the work done, and keep every design score on record. A critic scores each screenshot without seeing the code, so the agent that built the screen is not the one grading it. Three tiers run from a single-call spot check after any UI change to a full redesign with seeded directions and critic rounds. Critic runs spend tokens on your own provider account, at a cost that depends on the model you pick, and the screenshot scripts need Chrome or Chromium and Node 18 or newer.",
+  "icon": {
+    "url": "./icons/design-director-bca059af.svg"
+  },
+  "screenshots": [
+    "./screenshots/design-director/01-spot-check-thread.png",
+    "./screenshots/design-director/02-critic-child-thread.png",
+    "./screenshots/design-director/03-plugin-detail.png"
+  ],
+  "overview": "./overview/design-director.md",
+  "tags": [
+    "design",
+    "design-review",
+    "ui",
+    "screenshots",
+    "critic",
+    "skills",
+    "lighthouse",
+    "accessibility",
+    "frontend"
+  ],
+  "author": {
+    "name": "Jason Prunty",
+    "github": "j-withmission",
+    "url": "https://github.com/j-withmission"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/j-withmission/design-director.git",
+      "range": "^1.0.0"
+    }
+  }
+}
