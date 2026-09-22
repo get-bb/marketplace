@@ -1,0 +1,26 @@
+{
+  "id": "plan-mode",
+  "displayName": "Plan Mode",
+  "description": "Lock agents into a read-only planning phase before they touch code or run commands. Refuses execution requests and directs you to switch to Implement mode when ready to proceed. Features instant toggling via Shift+Tab or the composer button, a distinctive dashed border while active, and configurable default-on settings for new chats. Injects instructions silently at turn submit without displaying in the prompt or timeline.",
+  "icon": "ClipboardCheck",
+  "tags": [
+    "plan-mode",
+    "planning",
+    "workflow",
+    "safety",
+    "composer",
+    "read-only"
+  ],
+  "author": {
+    "name": "Daniel Walker",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-plugin-plan-mode.git",
+      "range": "^0.1.0"
+    }
+  }
+}
