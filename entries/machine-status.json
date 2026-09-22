@@ -1,0 +1,35 @@
+{
+  "id": "machine-status",
+  "displayName": "Machine Status",
+  "description": "See battery charge, memory use, and disk use for every machine connected to bb in one sidebar list. Each metric turns red at a threshold you set — 20% battery, 90% memory or storage by default. The list refreshes only when a whole-percent value changes, so it stays still while you work. Turn off the metrics you do not need; everything comes from each machine's own OS interfaces, with no account or external service.",
+  "icon": {
+    "url": "./icons/machine-status-7c0af391.svg"
+  },
+  "tags": [
+    "battery",
+    "memory",
+    "storage",
+    "machines",
+    "monitoring",
+    "sidebar",
+    "laptop",
+    "system-health"
+  ],
+  "author": {
+    "name": "Noel Blaschke",
+    "github": "noelblaschke",
+    "url": "https://github.com/noelblaschke"
+  },
+  "category": "utilities",
+  "screenshots": [
+    "./screenshots/machine-status/sidebar.png",
+    "./screenshots/machine-status/settings.png"
+  ],
+  "overview": "./overview/machine-status.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/noelblaschke/bb-plugin-machine-status.git",
+      "range": "^1.0.0"
+    }
+  }
+}

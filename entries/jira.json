@@ -1,0 +1,36 @@
+{
+  "id": "jira",
+  "displayName": "Jira",
+  "description": "Browse, edit, and move Jira Cloud issues without leaving BB, and let agents change Jira only after you approve. Switch between a grouped list and a status board, and drag a card to move an issue through its workflow. Agents can search, create, edit, transition, comment on, assign, and delete issues, and each kind of change asks first unless you set it to always allow. Link a BB project to its Jira projects so that project's chats search only those issues, and Send to agent opens the chat in the linked project. Requires a Jira Cloud site and an Atlassian API token; Jira Server and Data Center are not supported.",
+  "icon": {
+    "url": "./icons/jira-270a74aa.svg"
+  },
+  "screenshots": [
+    "./screenshots/jira/list-detail.png",
+    "./screenshots/jira/board.png",
+    "./screenshots/jira/approval.png"
+  ],
+  "overview": "./overview/jira.md",
+  "tags": [
+    "atlassian",
+    "issues",
+    "issue-tracker",
+    "kanban",
+    "project-management",
+    "jql",
+    "approvals",
+    "agent-tools"
+  ],
+  "author": {
+    "name": "Willhong",
+    "github": "Willhong",
+    "url": "https://github.com/Willhong"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/Willhong/bb-plugin-jira.git",
+      "range": "^0.1.0"
+    }
+  }
+}

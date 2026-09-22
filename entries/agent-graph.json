@@ -1,0 +1,28 @@
+{
+  "id": "agent-graph",
+  "displayName": "Agent Graph",
+  "description": "Shows your bb agents as a live node graph of threads, turns, tool calls, subagents and workflow agents, color-coded by type or status, so you can see what every agent is doing at a glance.",
+  "icon": "Workflow",
+  "tags": [
+    "agents",
+    "subagents",
+    "observability",
+    "graph",
+    "visualization",
+    "status"
+  ],
+  "author": {
+    "name": "Nathan Colgate",
+    "github": "nathancolgate",
+    "url": "https://github.com/nathancolgate"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/nathancolgate/bb-plugin-agent-graph.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": ["./screenshots/agent-graph/subagents.png"],
+  "overview": "./overview/agent-graph.md"
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+     stroke="#2563eb" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Three board columns holding issue cards. The opaque stroke and fill
+       are intentional: BB renders compact plugin artwork as a CSS mask. -->
+  <rect x="3" y="3" width="18" height="18" rx="3"/>
+  <path d="M9 3v18M15 3v18"/>
+  <g fill="#2563eb" stroke="none">
+    <rect x="4.6" y="6" width="2.8" height="2" rx="0.6"/>
+    <rect x="4.6" y="9.5" width="2.8" height="2" rx="0.6"/>
+    <rect x="10.6" y="6" width="2.8" height="2" rx="0.6"/>
+    <rect x="16.6" y="6" width="2.8" height="2" rx="0.6"/>
+    <rect x="16.6" y="9.5" width="2.8" height="2" rx="0.6"/>
+    <rect x="16.6" y="13" width="2.8" height="2" rx="0.6"/>
+  </g>
+</svg>

@@ -19,16 +19,6 @@ lines keeps the mark, since the counts carry no other per-file signal.
 
 Marks for files that have left the diff are pruned when the panel next loads.
 
-## Toolbar settings
-
-The changes toolbar's line-wrap toggle and its stacked/split pair are stored
-once, globally, and restored on every diff. How you like to read a diff is not a
-fact about one thread, so it is not kept per thread.
-
-Until you pick a view mode yourself, bb's width-driven default stays in charge.
-Collapse all is left alone deliberately: it is an action you take, not a setting
-to remember.
-
 ## Requirements
 
 - bb 0.41 or later.
