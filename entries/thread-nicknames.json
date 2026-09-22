@@ -21,7 +21,7 @@
   "source": {
     "git": {
       "url": "https://github.com/mgmobrien/bb-plugin-thread-nicknames.git",
-      "range": "^0.2.0"
+      "range": "^0.2.1"
     }
   },
   "screenshots": [
