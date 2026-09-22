@@ -1,7 +1,7 @@
 {
   "id": "ultragoal",
   "displayName": "UltraGoal",
-  "description": "Runs provider-neutral durable agent goals with scheduled workers and verification. Requires BB >=0.39 and Plugin SDK >=0.4.8. It makes no direct network requests; local provider-store reads, base-branch squash-merges, and managed worktree and branch cleanup are off by default and require explicit consent.",
+  "description": "Keep long-running agent work moving without losing the plan when a thread ends. UltraGoal schedules dependency-ready slices across isolated workers, records defects and owner decisions durably, and can require an independent verifier before work closes. Each goal pins worker and verifier execution settings, reports host substitutions, and can replace idle clean workers one at a time. Repository integration, worktree cleanup, and local provider-data reads stay off until you enable them. Requires BB 0.39+ and Plugin SDK 0.4.8+.",
   "icon": {
     "url": "./icons/ultragoal-9a4e92b2.svg"
   },
@@ -18,10 +18,14 @@
     "url": "https://github.com/braedonsaunders"
   },
   "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/ultragoal/execution-defaults.png"
+  ],
+  "overview": "./overview/ultragoal.md",
   "source": {
     "git": {
       "url": "https://github.com/braedonsaunders/bb-plugin-ultragoal.git",
-      "range": "^0.28.0"
+      "range": "^0.29.0"
     }
   }
 }
