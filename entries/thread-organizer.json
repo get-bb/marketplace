@@ -1,0 +1,40 @@
+{
+  "id": "thread-organizer",
+  "displayName": "Thread Organizer",
+  "description": "Turns your sidebar sections into a workflow that agents follow, with everything that needs you collected in one Inbox. Name the stages and describe what belongs in each; every agent gets that table in its instructions and moves its thread with one command. Idle threads that need attention land in Inbox and return to their stage when work resumes. Give a stage an entry prompt and any thread that lands there receives it, so a Review stage can start a review and a QA stage can ask for screenshots. Changes made from the command line ask for your approval in the thread before they are saved.",
+  "icon": {
+    "url": "./icons/thread-organizer-508db34f.svg"
+  },
+  "tags": [
+    "workflow",
+    "sections",
+    "inbox",
+    "stages",
+    "kanban",
+    "triage",
+    "entry-prompts",
+    "sidebar",
+    "organize",
+    "agents"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/thread-organizer/sidebar.png",
+    "./screenshots/thread-organizer/settings.png",
+    "./screenshots/thread-organizer/approval.png"
+  ],
+  "overview": "./overview/thread-organizer.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/thread-organizer",
+      "range": "^0.1.2",
+      "tagPrefix": "thread-organizer/"
+    }
+  }
+}

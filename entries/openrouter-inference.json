@@ -27,7 +27,7 @@
       "url": "https://github.com/SawyerHood/sawyer-plugins.git",
       "subdir": "plugins/openrouter-inference",
       "tagPrefix": "openrouter-inference/",
-      "range": "^0.1.0"
+      "range": ">=0.2.0"
     }
   }
 }

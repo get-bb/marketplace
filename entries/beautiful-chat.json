@@ -1,0 +1,35 @@
+{
+  "id": "beautiful-chat",
+  "displayName": "Beautiful Chat",
+  "description": "Restyles BB's chat — composer, messages, work rows, loading states — in BeautifulUI's design language, using your active theme's colors.",
+  "icon": {
+    "url": "./icons/beautiful-chat-e13a00e8.svg"
+  },
+  "tags": [
+    "theme",
+    "chat",
+    "composer",
+    "appearance",
+    "styling",
+    "animation",
+    "loading",
+    "ui"
+  ],
+  "author": {
+    "name": "Diip3sh",
+    "github": "diip3sh",
+    "url": "https://github.com/diip3sh"
+  },
+  "category": "themes-and-appearance",
+  "overview": "./overview/beautiful-chat.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/diip3sh/bb-plugin-beautiful-chat.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/beautiful-chat/beautiful-chat-1.png",
+    "./screenshots/beautiful-chat/beautiful-chat-2.png"
+  ]
+}

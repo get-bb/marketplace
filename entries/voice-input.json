@@ -1,0 +1,26 @@
+{
+  "id": "voice-input",
+  "displayName": "Voice Input",
+  "description": "Dictate into any BB chat and get clean text back, with your product names spelled right. Choose which machine does the recognition: Whisper (MLX) and GigaAM v3 keep the audio on that machine, while Groq, OpenAI and Google transcribe in the cloud with your own API key. A term vocabulary repairs garbled product and tool names, and an optional AI pass fixes the ones the rules miss. Recordings are written to disk before transcription, so a failed run never loses what you said. Local engines need Python 3, ffmpeg and macOS on Apple silicon; cloud engines need a paid API key.",
+  "icon": "Mic",
+  "screenshots": [
+    "./screenshots/voice-input/engines.png",
+    "./screenshots/voice-input/vocabulary.png",
+    "./screenshots/voice-input/cloud.png",
+    "./screenshots/voice-input/data.png"
+  ],
+  "overview": "./overview/voice-input.md",
+  "tags": ["voice", "speech-to-text", "transcription", "dictation", "whisper", "gigaam", "groq", "vocabulary", "offline"],
+  "author": {
+    "name": "VKirill",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-voice-input.git",
+      "range": "^0.2.1"
+    }
+  }
+}
