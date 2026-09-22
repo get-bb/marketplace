@@ -1,5 +1,5 @@
 {
-  "id": "bb-plugin-lazygit",
+  "id": "lazygit",
   "displayName": "Lazygit",
   "description": "Auto-creates a Lazygit terminal tab on every thread you open, running lazygit in the thread's worktree.",
   "icon": "GitBranch",
@@ -16,6 +16,7 @@
     "url": "https://github.com/martinlevesque"
   },
   "category": "code-and-reviews",
+  "overview": "./overview/lazygit.md",
   "source": {
     "npm": {
       "package": "bb-plugin-lazygit",
