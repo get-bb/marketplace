@@ -15,17 +15,17 @@ open under the app's name. You review them. You stay in charge.
   committer too.
 - Pushes over the token, because the plugin rewrites GitHub SSH remotes to
   HTTPS and routes credentials through `gh`.
-- Scope you control. Only the projects you enable get a token. Personal
-  projects stay personal.
+- Scope you control. Tie one app to one project with `set-app`, or set a
+  default app and choose its projects. Personal projects stay personal.
 
 ## How it works
 
-Give the plugin the app id, the installation id, and the private key path,
-through plugin settings or the bb server environment. Enable a project by name,
-or let the plugin enable any project that defines a `GITHUB_APP_ID` environment
-variable. The plugin mints a token on the bb server and sends only the token to
-the machine that runs the thread. It mints a new token before the one-hour
-expiry and keeps a recently used token fresh in the background.
+Store a project's app with `bb github-app-auth set-app`, or set a default app
+in plugin settings or the bb server environment. The plugin keeps every
+credential on the bb server and never sends it to an agent. It mints a token on
+the server and sends only the token to the machine that runs the thread. It
+mints a new token before the one-hour expiry and keeps a recently used token
+fresh in the background.
 
 ## Requirements
 
@@ -37,6 +37,7 @@ The plugin never writes a token or the private key to its logs.
 
 ## Commands
 
-`bb github-app-auth status`, `env`, `token` and `refresh`.
+`bb github-app-auth set-app`, `unset-app`, `status`, `env`, `token` and
+`refresh`.
 
 Try bb GitHub App Auth today!
