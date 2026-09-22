@@ -1,0 +1,21 @@
+{
+  "id": "backlog",
+  "displayName": "Backlog",
+  "description": "Track and edit Backlog.md tasks across your BB projects. Filter and sort a live Kanban board, move cards between statuses, and open tasks for Markdown and inline edits with conflict checks. Requires BB 0.43+, Plugin SDK 0.4.87 through 0.4.x, and an existing task folder on an enrolled host; no Backlog CLI or external account is needed. The interface is light-only, uses experimental BB APIs, and has been tested on macOS; Windows host paths are unverified.",
+  "icon": "ListTodo",
+  "tags": ["backlog-md", "kanban", "markdown", "task-management"],
+  "author": {
+    "name": "StreamlinedStartup",
+    "github": "StreamlinedStartup",
+    "url": "https://github.com/StreamlinedStartup"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/StreamlinedStartup/bb-plugin-backlog.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": ["./screenshots/backlog/board.jpg"],
+  "overview": "./overview/backlog.md"
+}
