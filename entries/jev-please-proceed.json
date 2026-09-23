@@ -1,0 +1,29 @@
+{
+  "id": "jev-please-proceed",
+  "displayName": "Jev, Please Proceed",
+  "description": "Keep agents moving when they stop only to ask for an unnecessary confirmation. Jev reviews the complete available top-level conversation whenever a thread becomes idle and continues only when its Noul value exceeds 0.95. Before sending `please proceed`, it confirms that the thread is still idle and has no pending interaction or queued message, then stops if the same final response repeats. Use a TypeSafe, Vercel AI Gateway, or OpenRouter API key; conversation text is sent through the selected provider for TypeSafe processing, and usage charges may apply.",
+  "icon": {
+    "url": "./icons/jev-please-proceed-2814cfee.svg"
+  },
+  "overview": "./overview/jev-please-proceed.md",
+  "tags": [
+    "automation",
+    "agent-continuation",
+    "idle-threads",
+    "confirmation",
+    "workflow",
+    "productivity"
+  ],
+  "author": {
+    "name": "Lawrence Luk",
+    "github": "lawrenceluk",
+    "url": "https://github.com/lawrenceluk"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/lawrenceluk/bb-plugin-jev-please-proceed.git",
+      "range": "^0.1.1"
+    }
+  }
+}

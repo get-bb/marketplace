@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <rect
+    x="3.5"
+    y="4.75"
+    width="17"
+    height="11.5"
+    rx="1.75"
+    stroke="currentColor"
+    stroke-width="1.75"
+  />
+  <path d="M10.2 8.1v5.1l4.4-2.55z" fill="currentColor" />
+  <path
+    d="M5 19.25h14"
+    stroke="currentColor"
+    stroke-width="1.75"
+    stroke-linecap="round"
+  />
+  <path
+    d="M8 19.25v1.7M12 19.25v1.7M16 19.25v1.7"
+    stroke="currentColor"
+    stroke-width="1.75"
+    stroke-linecap="round"
+  />
+</svg>

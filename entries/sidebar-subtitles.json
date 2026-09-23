@@ -1,0 +1,32 @@
+{
+  "id": "sidebar-subtitles",
+  "displayName": "Sidebar Subtitles",
+  "description": "Group sidebar destinations under your own headings. Drag sections or move them with arrow controls, hide sections and restore them from More. Edit headings with explicit Save, Cancel and Delete controls; your BB navigation order and visibility are preserved.",
+  "icon": {
+    "url": "./icons/sidebar-subtitles-05d85b36.png"
+  },
+  "tags": [
+    "navigation",
+    "headings",
+    "organization"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/sidebar-subtitles",
+      "range": "^0.1.2",
+      "tagPrefix": "sidebar-subtitles/"
+    }
+  },
+  "overview": "./overview/sidebar-subtitles.md",
+  "screenshots": [
+    "./screenshots/sidebar-subtitles/overview.png",
+    "./screenshots/sidebar-subtitles/editing.png"
+  ]
+}

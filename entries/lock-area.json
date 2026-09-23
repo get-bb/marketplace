@@ -1,0 +1,31 @@
+{
+  "id": "lock-area",
+  "displayName": "Lock Area",
+  "description": "Keep reference panes in place while opening work beside them. Uses compatible native locks, or offers a version-checked initializer with backup and restore for BB 0.43.1. Initialization requires a clean supported BB source checkout, installed dependencies and pnpm.",
+  "icon": {
+    "url": "./icons/lock-area-8b60dcb2.png"
+  },
+  "tags": [
+    "layout",
+    "panes",
+    "pinning"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/lock-area",
+      "range": "^0.1.0",
+      "tagPrefix": "lock-area/"
+    }
+  },
+  "overview": "./overview/lock-area.md",
+  "screenshots": [
+    "./screenshots/lock-area/overview.png"
+  ]
+}
