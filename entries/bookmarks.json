@@ -1,0 +1,26 @@
+{
+  "id": "bookmarks",
+  "displayName": "Bookmarks",
+  "description": "Bookmark any chat message and jump back to it from a Bookmarks tab in the thread's right panel. Clicking a bookmark opens its thread scrolled to the message, however far back it sits. A saved message keeps a filled bookmark button, and a selected passage can be saved as the bookmark's quote. The tab lists bookmarks from every thread, with search and a This thread filter.",
+  "icon": { "url": "./icons/bookmarks-426bb701.svg" },
+  "tags": ["saved-messages", "save", "favorites", "star", "like", "messages", "quotes", "navigation"],
+  "author": {
+    "name": "Yurii Rebryk",
+    "github": "rebryk",
+    "url": "https://github.com/rebryk"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/bookmarks/panel.png",
+    "./screenshots/bookmarks/selection.png"
+  ],
+  "overview": "./overview/bookmarks.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/rebryk/bb-plugins.git",
+      "subdir": "bookmarks",
+      "range": "^0.1.0",
+      "tagPrefix": "bookmarks/"
+    }
+  }
+}
