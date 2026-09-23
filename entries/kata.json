@@ -1,0 +1,33 @@
+{
+  "id": "kata",
+  "displayName": "Kata",
+  "description": "Track and triage kata issues from the keyboard, beside the bb thread doing the work. One tab per kata project puts the issue list and the issue detail side by side, updated live from the kata daemon. Press n for a new issue inline, N for a child of the selection, and !0-!4 to set priority without leaving the list. A thread whose checkout holds a .kata.toml gets a Kata issues side panel, clickable issue chips in messages, and kata_* tools its agent can call. The bb kata CLI covers the same ground from any bb terminal. Requires kata installed on the same machine with its daemon running; no account, token, or hosted service.",
+  "icon": "ListTodo",
+  "tags": [
+    "kata",
+    "issues",
+    "issue-tracker",
+    "tasks",
+    "keyboard",
+    "agent-tools",
+    "cli"
+  ],
+  "author": {
+    "name": "Zaymonoid",
+    "github": "zaymonoid",
+    "url": "https://github.com/zaymonoid"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/zaymonoid/bb-kata-tracker.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/kata/viewer.png",
+    "./screenshots/kata/keyboard-help.png",
+    "./screenshots/kata/thread-panel.png"
+  ],
+  "overview": "./overview/kata.md"
+}
