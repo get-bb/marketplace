@@ -1,0 +1,22 @@
+{
+  "id": "browser-annotate",
+  "displayName": "Browser Annotate",
+  "description": "Give your agent page-specific feedback with a screenshot for every annotated element. Select an element in BB's desktop Browser, write a comment, and send up to 50 annotations together. Review saved comments in the composer and sent message history. Requires BB 0.43.4 or newer with the desktop Browser.",
+  "icon": "MessageSquare",
+  "tags": ["browser", "annotations", "screenshots", "visual-feedback", "agent-context"],
+  "author": {
+    "name": "Timur Khakhalev",
+    "github": "timurkhakhalev"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/timurkhakhalev/timurkhakhalev-bb-plugins.git",
+      "subdir": "plugins/browser-annotate",
+      "range": "^0.1.0",
+      "tagPrefix": "browser-annotate/"
+    }
+  },
+  "screenshots": ["./screenshots/browser-annotate/example-page.jpg"],
+  "overview": "./overview/browser-annotate.md"
+}
