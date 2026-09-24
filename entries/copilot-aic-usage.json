@@ -1,0 +1,31 @@
+{
+  "id": "copilot-aic-usage",
+  "displayName": "Copilot AI Credits",
+  "description": "Track Copilot AI credits in your BB thread. See this session's usage, today's host total, and monthly premium requests. Install the GitHub Copilot provider from BB's marketplace and sign in to GitHub Copilot CLI with a Copilot-enabled account.",
+  "icon": {
+    "url": "./icons/copilot-aic-usage-7fb6c6d4.svg"
+  },
+  "tags": [
+    "copilot",
+    "usage",
+    "ai-credits",
+    "acp",
+    "quota"
+  ],
+  "author": {
+    "name": "Tasi Balázs",
+    "github": "balazstasi",
+    "url": "https://github.com/balazstasi"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/balazstasi/bb-plugin-copilot-aic-usage.git",
+      "range": "^0.1.0"
+    }
+  },
+  "category": "token-usage-and-limits",
+  "overview": "./overview/copilot-aic-usage.md",
+  "screenshots": [
+    "./screenshots/copilot-aic-usage/usage-details.png"
+  ]
+}
