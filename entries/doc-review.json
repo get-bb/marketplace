@@ -1,7 +1,7 @@
 {
   "id": "doc-review",
   "displayName": "Doc Review",
-  "description": "Leave comments on Markdown, PDF, Word, PowerPoint, and Excel files beside the chat, then hand them all to an agent in one message. Select text, draw a box around a chart on a page or slide, or pick spreadsheet cells, and each comment keeps its exact place; a comment on an area reaches the agent with an image of that region. Send the drafts to the current chat or to a new one, and each comment shows whether the agent is on it, closed it with a note on what changed, or answered with a question. Word and PowerPoint files render as pages, workbooks as a formatted grid, and a classic PDF view keeps search, zoom, and print. Needs poppler-utils and LibreOffice on the machine the bb server runs on.",
+  "description": "Leave comments on Markdown, PDF, Word, PowerPoint, and Excel files beside the chat, then hand them all to an agent in one message. Select text, draw a box around a chart on a page or slide, or pick spreadsheet cells, and each comment keeps its exact place; a comment on an area reaches the agent with an image of that region. Send the drafts to the current chat or to a new one, and each comment shows whether the agent is on it, closed it with a note on what changed, or answered with a question. Zoom pages with a pinch, the wheel, or the zoom bar and they re-render sharp, so a large drawing reads up close; a landscape or wide page keeps the document's scale and scrolls sideways, and a long document loads only the pages on screen. Workbooks open as a formatted grid, and the same tab works in bb's mobile web app. Needs poppler-utils and LibreOffice on the machine the bb server runs on.",
   "icon": {
     "url": "./icons/doc-review-bfdb931a.svg"
   },
@@ -27,14 +27,15 @@
     "git": {
       "url": "https://github.com/xMinor-1/bb-plugins.git",
       "subdir": "plugins/doc-review",
-      "range": "^0.2.1",
+      "range": "^0.2.2",
       "tagPrefix": "doc-review/"
     }
   },
   "screenshots": [
     "./screenshots/doc-review/markdown.png",
     "./screenshots/doc-review/slides.png",
-    "./screenshots/doc-review/spreadsheet.png"
+    "./screenshots/doc-review/spreadsheet.png",
+    "./screenshots/doc-review/drawing.png"
   ],
   "overview": "./overview/doc-review.md"
 }
