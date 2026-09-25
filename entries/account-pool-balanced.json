@@ -19,7 +19,7 @@
     "git": {
       "url": "https://github.com/OXI-717/bb-plugins.git",
       "subdir": "plugins/account-pool-balanced",
-      "range": "^0.4.0",
+      "range": "^0.4.1",
       "tagPrefix": "account-pool-balanced/"
     }
   }
