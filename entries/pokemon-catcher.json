@@ -1,0 +1,35 @@
+{
+  "id": "pokemon-catcher",
+  "displayName": "Pokemon Catcher",
+  "description": "Turn shipped engineering work into Pokémon catches, evolutions, and a collection that grows across BB threads. Earn rewards from local branches and worktrees, or selected GitHub repositories and Shortcut, Jira, or GitHub Issues. Choose any catch as an evolving companion, incubate Eggs through token usage, and filter the collection by type, rarity, generation, or shiny status. GitHub, Shortcut, and Jira connections require user-supplied credentials; the plugin also requests data, sprites, and cries from PokéAPI-hosted services. Requires BB 0.43+ and Plugin SDK 0.4.87+.",
+  "icon": {
+    "url": "./icons/pokemon-catcher-a004360d.svg"
+  },
+  "screenshots": [
+    "./screenshots/pokemon-catcher/collection.jpg",
+    "./screenshots/pokemon-catcher/settings.jpg"
+  ],
+  "overview": "./overview/pokemon-catcher.md",
+  "tags": [
+    "gamification",
+    "engineering-milestones",
+    "pokedex",
+    "companions",
+    "github",
+    "jira",
+    "shortcut",
+    "collections"
+  ],
+  "author": {
+    "name": "Mel Stanbery",
+    "github": "melindastanbery",
+    "url": "https://github.com/melindastanbery"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/melindastanbery/bb-pokemon-collection.git",
+      "range": "^0.1.0"
+    }
+  }
+}
