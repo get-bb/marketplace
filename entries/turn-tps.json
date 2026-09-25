@@ -1,0 +1,31 @@
+{
+  "id": "turn-tps",
+  "displayName": "Turn TPS",
+  "description": "Show tokens per second on every completed turn, so a slow answer is visible without opening a log. Each finished turn gets a badge under the assistant message with output tokens, wall-clock duration, and the resulting rate, and the turn header carries the same figure in short form. Reads usage the provider reports where BB has it, and the local OMP session file for ACP and OMP threads, which report none. The rate divides output tokens by the full turn duration, so tool calls and provider waits count against it; it is not a model decode benchmark. Needs a completed turn, and the ACP and OMP path needs that thread's OMP session file on the machine running BB.",
+  "icon": "Gauge",
+  "tags": [
+    "tps",
+    "tokens-per-second",
+    "throughput",
+    "output-tokens",
+    "turn-stats",
+    "benchmark"
+  ],
+  "author": {
+    "name": "Daniel Walker",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "token-usage-and-limits",
+  "screenshots": [
+    "./screenshots/turn-tps/turn-badge.webp",
+    "./screenshots/turn-tps/turn-header-rate.webp"
+  ],
+  "overview": "./overview/turn-tps.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-plugin-turn-tps.git",
+      "range": "^0.1.0"
+    }
+  }
+}
