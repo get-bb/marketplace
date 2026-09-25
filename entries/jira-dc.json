@@ -1,0 +1,31 @@
+{
+  "id": "jira-dc",
+  "displayName": "Jira Data Center",
+  "description": "Browse and update Jira Data Center issues from BB, and let agents change them only after you approve. Open a list or status board, edit fields in place, and drag a card through the workflow. Agents can search, create, edit, transition, comment on, assign, and delete issues, with each write kind asking first unless you set it to always allow. Link a BB project to its Jira projects so chats stay scoped, spawn a thread from an issue, or drive the same actions with bb jira-dc. Requires a reachable Jira Data Center (or Server) base URL and a Personal Access Token; Jira Cloud is not supported.",
+  "icon": "ListTodo",
+  "overview": "./overview/jira-dc.md",
+  "tags": [
+    "atlassian",
+    "jira-data-center",
+    "issues",
+    "issue-tracker",
+    "kanban",
+    "project-management",
+    "jql",
+    "approvals",
+    "agent-tools",
+    "pat"
+  ],
+  "author": {
+    "name": "Michael Verkhovykh",
+    "github": "mihver1",
+    "url": "https://github.com/mihver1"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/mihver1/bb-plugin-jira-dc.git",
+      "range": "^0.1.0"
+    }
+  }
+}
