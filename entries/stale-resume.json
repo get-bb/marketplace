@@ -1,0 +1,17 @@
+{
+  "id": "stale-resume",
+  "displayName": "Stale Resume",
+  "description": "Catches threads whose Claude session no longer exists after a working-directory change, reports the incident to the parent thread, and recovers the thread onto a fresh session on one command.",
+  "icon": "LifeBuoy",
+  "tags": ["claude-code", "threads", "recovery", "diagnostics", "reliability"],
+  "author": {
+    "name": "Yegor Korobeynikov",
+    "github": "yegor-korobeynikov"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/yegor-korobeynikov/bb-plugin-stale-resume.git",
+      "range": "^1.0.0"
+    }
+  }
+}
