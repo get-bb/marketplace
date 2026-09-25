@@ -1,9 +1,16 @@
 {
   "id": "thread-hover-cards",
   "displayName": "Thread Hover Cards",
-  "description": "Hover a thread in the sidebar to see useful info such as model, run time, latest reply, and PR information all at a glance and without opening a thread.",
+  "description": "See what any thread or section is doing without opening it. Hover a thread in the sidebar for its status, model, run time, latest agent message, and pull request. Hover a section header to see open questions, failed runs, and unread threads without expanding it.",
   "icon": "ZoomIn",
-  "tags": ["sidebar", "threads", "status", "hover", "pull-requests", "interface"],
+  "tags": [
+    "sidebar",
+    "threads",
+    "status",
+    "hover",
+    "pull-requests",
+    "interface"
+  ],
   "author": {
     "name": "brsbl",
     "github": "brsbl",
@@ -14,6 +21,7 @@
     "./screenshots/thread-hover-cards/thread.png",
     "./screenshots/thread-hover-cards/section.png"
   ],
+  "overview": "./overview/thread-hover-cards.md",
   "source": {
     "git": {
       "url": "https://github.com/brsbl/bb-plugins.git",
