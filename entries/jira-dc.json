@@ -27,5 +27,10 @@
       "url": "https://github.com/mihver1/bb-plugin-jira-dc.git",
       "range": "^0.1.0"
     }
-  }
+  },
+  "screenshots": [
+    "./screenshots/jira-dc/list-detail.png",
+    "./screenshots/jira-dc/board.png",
+    "./screenshots/jira-dc/approval.png"
+  ]
 }
