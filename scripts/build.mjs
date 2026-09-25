@@ -8,12 +8,11 @@ import { fileURLToPath } from "node:url";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import {
-  checkRequiredCategories,
   findOrphanOverviewFiles,
   findOrphanScreenshotFiles,
   fillEmptyCollections,
+  missingCategoryFiles,
   projectV1Manifest,
-  pullRequestEntryFiles,
   readEntryAddedDates,
   validateOverviewReference,
   validateAndRewriteIcon,
@@ -100,37 +99,8 @@ for (const file of entryFiles) {
   entryRecords.push({ entry, file });
 }
 
-function changedPullRequestEntryFiles() {
-  const eventPath = process.env.GITHUB_EVENT_PATH;
-  if (eventPath === undefined) return [];
-
-  let event;
-  try {
-    event = readJson(eventPath);
-  } catch (error) {
-    problems.push(`The GitHub event file is not valid JSON. ${error.message}`);
-    return [];
-  }
-  try {
-    return pullRequestEntryFiles(root, event);
-  } catch (error) {
-    const reason = error.message.split("\n")[0];
-    problems.push(`The build cannot find changed entry files. ${reason}`);
-    return [];
-  }
-}
-
-const categoryPolicy = checkRequiredCategories(
-  entryRecords,
-  changedPullRequestEntryFiles(),
-);
-for (const file of categoryPolicy.errors) {
-  problems.push(`${file}: A new or changed entry must have a category.`);
-}
-if (categoryPolicy.warnings.length > 0) {
-  warnings.push(
-    `${categoryPolicy.warnings.length} unchanged entry files have no category.`,
-  );
+for (const file of missingCategoryFiles(entryRecords)) {
+  problems.push(`${file}: An entry must have a category.`);
 }
 
 const categoryIds = new Set();

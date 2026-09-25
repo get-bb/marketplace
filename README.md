@@ -55,8 +55,7 @@ The `categories` array defines the available category IDs and their display text
 An entry can use one category ID from this array.
 
 The v2 schema permits an entry without a category.
-This repository requires a category for each new or changed entry.
-CI reports a warning when unchanged entries have no category.
+This repository requires a category for every entry, and CI fails when one is missing.
 
 ## Collections
 

@@ -15,17 +15,16 @@ import {
   OVERVIEW_MAX_CHARS,
   SCREENSHOT_MAX_BYTES,
   checkOverviewMarkdown,
-  checkRequiredCategories,
   compareV1EntryBytes,
   fetchMarketplaceText,
   findOrphanScreenshotFiles,
   fillEmptyCollections,
   findOrphanOverviewFiles,
   inspectImage,
+  missingCategoryFiles,
   parseEntryAddedDates,
   projectV1Entry,
   projectV1Manifest,
-  pullRequestEntryFiles,
   readEntryAddedDates,
   validateOverviewReference,
   validateAndRewriteIcon,
@@ -166,44 +165,12 @@ test("the marketplace fetch retries twice", async () => {
   assert.equal(calls, 3);
 });
 
-test("the category rule fails only changed files", () => {
+test("the category rule fails every entry without a category", () => {
   const records = readJson("categories/entries.json");
-  const result = checkRequiredCategories(records, [
+  assert.deepEqual(missingCategoryFiles(records), [
     "entries/changed.json",
-    "entries/ready.json",
+    "entries/old.json",
   ]);
-  assert.deepEqual(result.errors, ["entries/changed.json"]);
-  assert.deepEqual(result.warnings, ["entries/old.json"]);
-});
-
-test("the pull request diff returns added and modified entry files", () => {
-  const root = mkdtempSync(join(tmpdir(), "marketplace-git-test-"));
-  try {
-    runGit(root, ["init", "--quiet"]);
-    runGit(root, ["config", "user.email", "test@example.com"]);
-    runGit(root, ["config", "user.name", "Test User"]);
-    mkdirSync(join(root, "entries"));
-    writeFileSync(join(root, "entries", "changed.json"), "{}\n");
-    writeFileSync(join(root, "entries", "removed.json"), "{}\n");
-    writeFileSync(join(root, "entries", "unchanged.json"), "{}\n");
-    runGit(root, ["add", "entries"]);
-    runGit(root, ["commit", "--quiet", "-m", "Add entries"]);
-    const base = runGit(root, ["rev-parse", "HEAD"]);
-
-    writeFileSync(join(root, "entries", "changed.json"), '{"changed":true}\n');
-    writeFileSync(join(root, "entries", "added.json"), "{}\n");
-    rmSync(join(root, "entries", "removed.json"));
-    runGit(root, ["add", "entries"]);
-    runGit(root, ["commit", "--quiet", "-m", "Change entries"]);
-    const head = runGit(root, ["rev-parse", "HEAD"]);
-
-    const files = pullRequestEntryFiles(root, {
-      pull_request: { base: { sha: base }, head: { sha: head } },
-    });
-    assert.deepEqual(files, ["entries/added.json", "entries/changed.json"]);
-  } finally {
-    rmSync(root, { recursive: true, force: true });
-  }
 });
 
 test("an empty collection gets eight newest entries", () => {

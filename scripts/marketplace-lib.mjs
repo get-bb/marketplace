@@ -238,50 +238,14 @@ export async function fetchMarketplaceText(
   throw lastError;
 }
 
-export function pullRequestEntryFiles(root, event, run = execFileSync) {
-  if (event.pull_request === undefined) return [];
-  const baseSha = event.pull_request.base?.sha;
-  const headSha = event.pull_request.head?.sha;
-  if (typeof baseSha !== "string" || typeof headSha !== "string") {
-    throw new Error("The pull request event has no base or head commit.");
-  }
-
-  return run(
-    "git",
-    [
-      "-C",
-      root,
-      "diff",
-      "--name-only",
-      "--diff-filter=AMR",
-      `${baseSha}...${headSha}`,
-      "--",
-      ":(glob)entries/*.json",
-    ],
-    { encoding: "utf8", timeout: 30_000 },
-  )
-    .split("\n")
-    .map((line) => line.trim())
-    .filter(Boolean);
-}
-
-export function checkRequiredCategories(entryRecords, changedEntryFiles) {
-  const changed = new Set(
-    changedEntryFiles.map((file) => file.replaceAll("\\", "/")),
-  );
-  const errors = [];
-  const warnings = [];
-
-  for (const { entry, file } of entryRecords) {
-    if (typeof entry.category === "string" && entry.category.length > 0) {
-      continue;
-    }
-    const normalizedFile = `entries/${file}`;
-    if (changed.has(normalizedFile)) errors.push(normalizedFile);
-    else warnings.push(normalizedFile);
-  }
-
-  return { errors: errors.sort(), warnings: warnings.sort() };
+export function missingCategoryFiles(entryRecords) {
+  return entryRecords
+    .filter(
+      ({ entry }) =>
+        typeof entry.category !== "string" || entry.category.length === 0,
+    )
+    .map(({ file }) => `entries/${file}`)
+    .sort();
 }
 
 function isPng(buffer) {
