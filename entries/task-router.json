@@ -1,0 +1,23 @@
+{
+  "id": "task-router",
+  "displayName": "Task Router",
+  "description": "Notices when a composer draft belongs to a different project than the one selected, and offers to open the thread there with one click, via deterministic name/path matching against the workspace's git repositories.",
+  "icon": "Split",
+  "tags": [
+    "productivity",
+    "workspace",
+    "composer",
+    "projects",
+    "automation"
+  ],
+  "author": {
+    "name": "Yegor Korobeynikov",
+    "github": "yegor-korobeynikov"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/yegor-korobeynikov/bb-plugin-task-router.git",
+      "range": "^1.0.0"
+    }
+  }
+}
