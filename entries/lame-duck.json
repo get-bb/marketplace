@@ -1,0 +1,33 @@
+{
+  "id": "lame-duck",
+  "displayName": "Lame duck",
+  "description": "Make a busy BB server ready for maintenance while keeping new sends queued. Pause sends while active turns finish, and watch the active-thread and held-send counts in the sidebar. Resume queued work after the server restarts. Agents can manage the same flow through the bb CLI.",
+  "icon": {
+    "url": "./icons/lame-duck-d1acdcc1.svg"
+  },
+  "screenshots": [
+    "./screenshots/lame-duck/disclosure.jpg"
+  ],
+  "overview": "./overview/lame-duck.md",
+  "tags": [
+    "maintenance",
+    "server",
+    "message-queue",
+    "restart",
+    "cli"
+  ],
+  "author": {
+    "name": "Michael Yong",
+    "github": "ymichael",
+    "url": "https://github.com/ymichael"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/ymichael/bb-plugins.git",
+      "subdir": "plugins/lame-duck",
+      "range": "^0.1.0",
+      "tagPrefix": "lame-duck/"
+    }
+  }
+}
