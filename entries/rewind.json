@@ -1,0 +1,37 @@
+{
+  "id": "rewind",
+  "displayName": "Rewind",
+  "description": "Undo an agent's file changes turn by turn, and let the conversation go back with them. Checkpoints the workspace before each message and after each turn, on every provider, with no setup. Preview a restore as a per-file diff before it runs, and undo it afterwards. Restore the files and edit your message in one step, or fork from any message into a worktree whose files are as they were then. Flags turns that ran git push, a deploy, or other effects a restore cannot undo. Needs git on the thread's machine; the workspace itself does not have to be a git repository.",
+  "icon": {
+    "url": "./icons/rewind-69b0ac52.svg"
+  },
+  "tags": [
+    "undo",
+    "checkpoints",
+    "restore",
+    "rollback",
+    "snapshots",
+    "diff",
+    "file-history",
+    "fork",
+    "safety"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-rewind.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/rewind/message-action.png",
+    "./screenshots/rewind/rewind-preview.png",
+    "./screenshots/rewind/restored.png"
+  ],
+  "overview": "./overview/rewind.md"
+}
