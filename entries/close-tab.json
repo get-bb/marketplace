@@ -1,0 +1,29 @@
+{
+  "id": "close-tab",
+  "displayName": "Close Tab",
+  "description": "Close the preview tab you just finished without hunting for the ×. Double-click, middle-click, or right-click for Close / Close others / Close tabs to the right — the next file stays in the thread. Control+W and the palette command close the active tab. A three-finger click on macOS is resolved by cursor position.",
+  "icon": "X",
+  "tags": [
+    "tabs",
+    "preview",
+    "close",
+    "gestures",
+    "keyboard",
+    "context-menu",
+    "document-tabs",
+    "macos"
+  ],
+  "author": {
+    "name": "Yuriy Egorov",
+    "github": "fzrx-ego",
+    "url": "https://yuriy-egorov.pages.dev"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/fzrx-ego/bb-plugin-close-tab.git",
+      "range": "^0.2.0"
+    }
+  },
+  "overview": "./overview/close-tab.md"
+}
