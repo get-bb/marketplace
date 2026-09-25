@@ -1,0 +1,34 @@
+{
+  "id": "opencode-go-usage",
+  "displayName": "OpenCode Go Usage",
+  "description": "See how much of your OpenCode Go plan is left without leaving BB. The rolling, weekly, and monthly windows appear with the percentage consumed and when each resets, in the sidebar usage card and Settings → Provider usage. The provider is maintenance-only, so it adds no models to the composer. Requires an OpenCode Go subscription and OpenCode signed in on the machine; no second credential is created.",
+  "icon": {
+    "url": "./icons/opencode-go-usage-7772dad7.svg"
+  },
+  "screenshots": [
+    "./screenshots/opencode-go-usage/sidebar-usage-card.png"
+  ],
+  "tags": [
+    "opencode",
+    "opencode-go",
+    "usage",
+    "quota",
+    "plan-limits",
+    "rate-limits",
+    "reset-times",
+    "subscription"
+  ],
+  "author": {
+    "name": "Rock Neurotiko",
+    "github": "rockneurotiko",
+    "url": "https://github.com/rockneurotiko"
+  },
+  "category": "token-usage-and-limits",
+  "overview": "./overview/opencode-go-usage.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/rockneurotiko/bb-plugin-opencode-go-usage.git",
+      "range": "^0.1.0"
+    }
+  }
+}
