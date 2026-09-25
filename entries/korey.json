@@ -1,0 +1,32 @@
+{
+  "id": "korey",
+  "displayName": "Korey",
+  "description": "Bring all your Korey connectors into your coding conversations in bb. Research across connected services and create or update Shortcut Stories. Continue the same private Korey conversation across coding harnesses and attach workspace files. Requires a Korey account, a personal access token, and configured connectors.",
+  "icon": {
+    "url": "./icons/korey-e0884efa.svg"
+  },
+  "tags": [
+    "shortcut",
+    "sentry",
+    "launchdarkly",
+    "integrations",
+    "research",
+    "planning"
+  ],
+  "author": {
+    "name": "Shortcut",
+    "github": "charpeni",
+    "url": "https://korey.ai"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/korey/connected-tools.webp"
+  ],
+  "overview": "./overview/korey.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/useshortcut/bb-plugin-korey.git",
+      "range": "^0.1.0"
+    }
+  }
+}
