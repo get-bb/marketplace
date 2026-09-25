@@ -17,8 +17,9 @@
 // `--print` writes the document to stdout instead of dist/stats.json.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = new URL("..", import.meta.url).pathname;
+const root = fileURLToPath(new URL("..", import.meta.url));
 const printOnly = process.argv.includes("--print");
 
 /** Same id shape the marketplace schema requires of an entry. */
