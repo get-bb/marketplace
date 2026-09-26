@@ -1,0 +1,26 @@
+{
+  "id": "terminal-paste",
+  "displayName": "Terminal Paste",
+  "description": "Paste into BB's terminal from a phone or tablet. On a touch screen, BB's terminal offers no Paste, and pressing and holding it does nothing. This plugin puts Paste, a clipboard icon, in the header of the right-panel pane that shows the terminal, and a tap pastes the clipboard into that terminal the way a keyboard paste does. Where the page can't read the clipboard, as in the BB app on Android or on a plain http:// address, Paste opens a text field for the system's own Paste instead. The button shows on touch screens only.",
+  "icon": "Terminal",
+  "tags": ["terminal", "paste", "clipboard", "mobile", "touch", "phone", "tablet", "ios", "android", "xterm"],
+  "author": {
+    "name": "Yurii Rebryk",
+    "github": "rebryk",
+    "url": "https://github.com/rebryk"
+  },
+  "category": "command-line",
+  "screenshots": [
+    "./screenshots/terminal-paste/paste.png",
+    "./screenshots/terminal-paste/field.png"
+  ],
+  "overview": "./overview/terminal-paste.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/rebryk/bb-plugins.git",
+      "subdir": "terminal-paste",
+      "range": "^0.1.0",
+      "tagPrefix": "terminal-paste/"
+    }
+  }
+}
