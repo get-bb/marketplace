@@ -1,29 +1,41 @@
-Keep the whole Account Pooler visible without opening a settings page.
+See how much of each provider's capacity is in use, and when it frees up,
+without opening anything.
 
-## One account, one row
+## One number per provider
 
-Open **Account usage** from the sidebar footer to see a single flat list. Every
-row contains the Claude or Codex mark, the provider's subscription tier, one flat
-usage bar, the percentage, and a tiny window/reset line. There are no cards,
-provider group headings, separators, hover states, or status-dot clutter; the
-disclosure itself is transparent and borderless.
+Pool Usage puts each connected provider's logo at the right end of the sidebar
+footer with the share of its capacity in use right now: Claude and Codex,
+every account in Account Pooler if you use it, and other providers that report
+usage to BB, such as Cursor. Accounts weigh by the vendors' stated plan
+multipliers, so a Max 20x seat counts twenty times a Pro seat. The number turns
+red at 80%, or at the percentage you pick in the plugin's only setting,
+**Red at, %**.
 
-The bar shows the window that actually limits the account right now. When a
-window is spent, the row reports the spent window that clears last and its
-reset, so an account with an empty 5-hour window but a spent weekly quota reads
-`Weekly` and not an empty bar. When every window still has room, the row reports
-the one closest to its limit. The bar remains neutral below 75%, changes to
-warning yellow at 75%, and turns critical red at 90%; a row the pool cannot
-route to is red with a red window/reset line regardless of the percentage.
+## When it frees up
+
+Click a number for the provider's card, styled like the footer's `…` menu: the
+total, the number of accounts when there are several, and up to four lines
+showing when the total drops next and what it drops to.
 
 ## Live and local
 
-The list refreshes every 30 seconds while open. Account Pooler continues to own
-authentication, secret storage, routing, and upstream quota refreshes. Pool
-Usage reads only the redacted account status already exposed by Account
-Pooler's typed RPC. For a Codex account whose tier is missing there, it can
-match the plan label from BB's official provider usage by account email;
-credentials and tokens never enter the plugin or frontend.
+The numbers refresh every 30 seconds. Pool Usage reads only Account Pooler's
+redacted account status and BB's provider usage readings; credentials and
+tokens never enter the plugin or frontend.
 
-Disabled, held, and unavailable accounts stay in place with quiet inline
-states, preserving the pool's stable order without expanding the interface.
+## More San Francisco Plugins
+
+Pool Usage is one of the San Francisco Plugins, a family of BB plugins. The
+others:
+
+- **Super Hotkeys**: Superhuman-like keyboard navigation, with shortcut hints,
+  slash search, and number keys that set up a new thread.
+- **Bookmarks**: save any chat message and jump back to it from the thread's
+  right panel.
+- **Dia Sidebar**: the sidebar's navigation as a compact, wrapping grid of
+  icons.
+- **Server Switcher**: if you run several servers on bb connect, one click opens
+  the next online one.
+
+See all of them, with install steps, at
+[github.com/rebryk/bb-plugins](https://github.com/rebryk/bb-plugins).

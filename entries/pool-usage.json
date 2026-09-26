@@ -1,16 +1,27 @@
 {
   "id": "pool-usage",
   "displayName": "Pool Usage",
-  "description": "See every Account Pooler account's quota and reset time in one compact sidebar list. Rows show Claude and Codex plan labels, the quota window that actually limits the account, its reset time, and the usage percentage. Requires BB's experimental Account Pooler plugin and configured pooled accounts.",
+  "description": "See how much of each provider's capacity is in use and when it frees up, right in the sidebar footer. Each provider gets its logo and one percentage, with every account weighed by its plan's official multiplier, such as Claude Max 20x or Codex Pro 5x. Clicking a number opens a card with the account count and the total after each of the next resets. Covers Account Pooler's Claude and Codex accounts and any provider that reports usage to BB, such as Cursor; Account Pooler is optional. A setting turns the numbers red past the percentage you choose.",
   "icon": "ChartColumn",
-  "tags": ["account-pooler", "quota", "limits", "usage", "claude", "codex"],
+  "tags": [
+    "quota",
+    "limits",
+    "usage",
+    "rate-limits",
+    "claude",
+    "codex",
+    "cursor",
+    "account-pooler"
+  ],
   "author": {
     "name": "Yurii Rebryk",
     "github": "rebryk",
     "url": "https://github.com/rebryk"
   },
   "category": "token-usage-and-limits",
-  "screenshots": ["./screenshots/pool-usage/sidebar.png"],
+  "screenshots": [
+    "./screenshots/pool-usage/footer.png"
+  ],
   "overview": "./overview/pool-usage.md",
   "source": {
     "git": {
