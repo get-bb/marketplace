@@ -20,3 +20,20 @@ Open BB through bb connect, at `https://<handle>.getbb.app`. The plugin reads
 your server list with that page's existing session and stores nothing. Install
 it on every server you switch between, so the button is there after each
 switch.
+
+## More San Francisco Plugins
+
+Server Switcher is one of the San Francisco Plugins, a family of BB plugins. The
+others:
+
+- **Super Hotkeys**: Superhuman-like keyboard navigation, with shortcut hints,
+  slash search, and number keys that set up a new thread.
+- **Bookmarks**: save any chat message and jump back to it from the thread's
+  right panel.
+- **Dia Sidebar**: the sidebar's navigation as a compact, wrapping grid of
+  icons.
+- **Pool Usage**: how much of each provider's capacity is in use and when it
+  frees up, in the sidebar footer.
+
+See all of them, with install steps, at
+[github.com/rebryk/bb-plugins](https://github.com/rebryk/bb-plugins).
