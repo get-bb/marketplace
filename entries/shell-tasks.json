@@ -1,0 +1,35 @@
+{
+  "id": "shell-tasks",
+  "displayName": "Shell tasks",
+  "description": "Keep agents moving while tests, builds, servers and watchers run in the background. Track each command in its thread, read live output, stop its process group and clear it when finished. Tasks survive plugin reloads, and successful or failed jobs can wake the agent with one batched completion message. Requires BB 0.43+, Plugin SDK 0.5.9+ and a Unix execution machine; commands run through `/bin/sh` with no external account.",
+  "icon": {
+    "url": "./icons/shell-tasks-5fdfabe1.svg"
+  },
+  "screenshots": [
+    "./screenshots/shell-tasks/overview.png"
+  ],
+  "overview": "./overview/shell-tasks.md",
+  "tags": [
+    "background-tasks",
+    "shell",
+    "long-running",
+    "processes",
+    "builds",
+    "tests",
+    "servers",
+    "watchers",
+    "agent-tools"
+  ],
+  "author": {
+    "name": "Victor Aremu",
+    "github": "ahkohd",
+    "url": "https://github.com/ahkohd"
+  },
+  "category": "command-line",
+  "source": {
+    "git": {
+      "url": "https://github.com/ahkohd/bb-plugin-shell-tasks.git",
+      "range": "^0.1.0"
+    }
+  }
+}
