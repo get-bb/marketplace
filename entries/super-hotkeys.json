@@ -1,0 +1,26 @@
+{
+  "id": "super-hotkeys",
+  "displayName": "Super Hotkeys",
+  "description": "Drive BB from the keyboard: hold a modifier to see every shortcut, and set up a new thread with number keys. Holding Command or Ctrl shows the remaining keys as small pills beside the visible controls, following your current bindings. While the prompt is empty, 1 to 4 open the project, model, machine, and branch pickers, and numbers pick their options. Slash opens thread search, and Command+P opens the Plugins page once you free that key from Quick open file. Each part can be turned off in plugin settings.",
+  "icon": "Zap",
+  "tags": ["keyboard", "shortcuts", "hotkeys", "keybindings", "superhuman", "navigation", "search"],
+  "author": {
+    "name": "Yurii Rebryk",
+    "github": "rebryk",
+    "url": "https://github.com/rebryk"
+  },
+  "category": "utilities",
+  "screenshots": [
+    "./screenshots/super-hotkeys/hints.png",
+    "./screenshots/super-hotkeys/new-thread.png"
+  ],
+  "overview": "./overview/super-hotkeys.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/rebryk/bb-plugins.git",
+      "subdir": "super-hotkeys",
+      "range": "^0.1.0",
+      "tagPrefix": "super-hotkeys/"
+    }
+  }
+}
