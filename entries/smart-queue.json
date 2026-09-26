@@ -1,0 +1,34 @@
+{
+  "id": "smart-queue",
+  "displayName": "Smart Queue",
+  "description": "Routes each message you send to a busy thread: corrections steer the running turn, and new tasks wait until it ends. TypeSafe's Jev model decides, reached with a TypeSafe, Vercel AI Gateway, OpenRouter, or OpenCode Zen key, or through any endpoint that speaks its System One API. Without a key, a model from a BB provider you already use decides in a hidden thread, and if nothing answers the message waits. Each decision sends the thread title, your recent requests, and the new message to that provider, which bills the usage.",
+  "icon": "ListEnd",
+  "screenshots": [
+    "./screenshots/smart-queue/steer-and-queue.png",
+    "./screenshots/smart-queue/providers.png"
+  ],
+  "overview": "./overview/smart-queue.md",
+  "tags": [
+    "steer",
+    "follow-up",
+    "message-queue",
+    "busy-threads",
+    "jev",
+    "typesafe",
+    "classifier"
+  ],
+  "author": {
+    "name": "Patrick Lee",
+    "github": "patleeman",
+    "url": "https://github.com/patleeman"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/patleeman/bb-plugins.git",
+      "subdir": "packages/bb-plugin-smart-queue",
+      "range": "^0.2.0",
+      "tagPrefix": "smart-queue/"
+    }
+  }
+}
