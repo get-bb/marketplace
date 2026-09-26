@@ -1,0 +1,32 @@
+{
+  "id": "agent-tools",
+  "displayName": "Agent Tools",
+  "description": "Show which MCP servers and skills each BB machine actually has, then bring them to one catalogue and one canon. A matrix marks present, missing, and drifted configs; new servers wait for adopt, keep-local, or hide. Sync adds what is missing and never deletes on its own. The Skills tab treats ~/.agents/skills as a git canon, with fan-out into CLI homes and a version archive. Writes back up each config first; loopback paths and local secrets stay on that machine. Optional MetaMCP listing needs that gateway's API key.",
+  "icon": "Toolbox",
+  "screenshots": [
+    "./screenshots/agent-tools/servers.png",
+    "./screenshots/agent-tools/skills.png"
+  ],
+  "overview": "./overview/agent-tools.md",
+  "tags": [
+    "mcp",
+    "skills",
+    "sync",
+    "machines",
+    "catalogue",
+    "claude-code",
+    "canon"
+  ],
+  "author": {
+    "name": "Kirill Vechkasov",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill/bb-plugin-agent-tools"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-agent-tools.git",
+      "range": "^0.2.0"
+    }
+  }
+}
