@@ -1,0 +1,23 @@
+{
+  "id": "dia-sidebar",
+  "displayName": "Dia Sidebar",
+  "description": "Fit the sidebar's navigation into a compact grid of icons and leave more room for your threads. Each destination becomes a square icon button that wraps with the sidebar's width and shows its name on hover. Live dots and counts from other plugins stay visible in the lower-right corner of their icon. Your order, hidden items, and BB's menus still apply; pick it in Settings → Appearance → Navigation.",
+  "icon": { "url": "./icons/dia-sidebar-96613158.svg" },
+  "tags": ["navigation", "sidebar", "icons", "compact", "grid", "layout", "dia"],
+  "author": {
+    "name": "Yurii Rebryk",
+    "github": "rebryk",
+    "url": "https://github.com/rebryk"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": ["./screenshots/dia-sidebar/navigation.png"],
+  "overview": "./overview/dia-sidebar.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/rebryk/bb-plugins.git",
+      "subdir": "dia-sidebar",
+      "range": "^0.1.1",
+      "tagPrefix": "dia-sidebar/"
+    }
+  }
+}
