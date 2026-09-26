@@ -1,0 +1,41 @@
+{
+  "id": "context-katamari",
+  "displayName": "Context Katamari",
+  "description": "Shows how full each thread's context window is as a katamari that grows with every turn and pops when bb compacts. A floating window gives the open thread a 3D toy-box world whose ball size tracks tokens used against the auto-compact point. The HUD shows tokens used, context left, a bar for each recent turn, and a count of compactions. The cousin rolls while the thread works, drops coins past 50k tokens, and gets dizzier after each compaction. Everything runs inside bb, with synthesized sound you can mute.",
+  "icon": {
+    "url": "./icons/context-katamari-8615e17e.svg"
+  },
+  "tags": [
+    "context-window",
+    "tokens",
+    "compaction",
+    "game",
+    "3d",
+    "floating-window",
+    "visualization",
+    "fun"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "token-usage-and-limits",
+  "screenshots": [
+    "./screenshots/context-katamari/app.png",
+    "./screenshots/context-katamari/heavy-turn.png",
+    "./screenshots/context-katamari/compaction-before.png",
+    "./screenshots/context-katamari/compaction-after.png",
+    "./screenshots/context-katamari/guide.png",
+    "./screenshots/context-katamari/guide-legend.png"
+  ],
+  "overview": "./overview/context-katamari.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/context-katamari",
+      "range": "^0.1.0",
+      "tagPrefix": "context-katamari/"
+    }
+  }
+}
