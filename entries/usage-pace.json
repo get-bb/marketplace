@@ -1,0 +1,34 @@
+{
+  "id": "usage-pace",
+  "displayName": "Usage Pace",
+  "description": "Tells you if your current rate lasts until each quota window resets. In bb's usage card, each bar gets a tick at even pace, and red shows how far ahead of pace you are. Hover or tap a row to see the difference, when the quota runs out, and how long you will be without quota before the reset. Adds a Grok Build tab to the card, and hides tabs you do not use, such as Cursor. The Grok tab reads your grok login and asks xAI's billing service for the credit window; everything else uses the data bb's card already has.",
+  "icon": "ChartColumn",
+  "tags": [
+    "pace",
+    "burn-rate",
+    "quota",
+    "usage-limits",
+    "reset-times",
+    "forecast",
+    "grok",
+    "sidebar"
+  ],
+  "author": {
+    "name": "Charles Lee",
+    "github": "chug2k",
+    "url": "https://github.com/chug2k"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/chug2k/bb-plugin-usage-pace.git",
+      "range": "^0.2.0"
+    }
+  },
+  "overview": "./overview/usage-pace.md",
+  "screenshots": [
+    "./screenshots/usage-pace/ahead-of-pace.png",
+    "./screenshots/usage-pace/under-pace.png",
+    "./screenshots/usage-pace/grok-build.png"
+  ]
+}
