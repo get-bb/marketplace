@@ -24,8 +24,8 @@
   "screenshots": [
     "./screenshots/context-katamari/app.png",
     "./screenshots/context-katamari/heavy-turn.png",
-    "./screenshots/context-katamari/swallowed.png",
-    "./screenshots/context-katamari/compaction.png",
+    "./screenshots/context-katamari/compaction-before.png",
+    "./screenshots/context-katamari/compaction-after.png",
     "./screenshots/context-katamari/guide.png",
     "./screenshots/context-katamari/guide-legend.png"
   ],
