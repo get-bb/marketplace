@@ -1,0 +1,31 @@
+{
+  "id": "shortcut",
+  "displayName": "Shortcut",
+  "description": "Turn your assigned Shortcut stories into agent work in bb. Browse and reorder stories on a Kanban board, filter by workflow, and read story details. Start work from a story to move it to In Development and open an agent thread. Requires a Shortcut account and API token.",
+  "icon": {
+    "url": "./icons/shortcut-ee3fe93a.svg"
+  },
+  "screenshots": [
+    "./screenshots/shortcut/kanban.png"
+  ],
+  "tags": [
+    "stories",
+    "issue-tracking",
+    "kanban",
+    "project-management",
+    "agent-tools"
+  ],
+  "author": {
+    "name": "Andreas McDermott",
+    "github": "andreasmcdermott",
+    "url": "https://github.com/andreasmcdermott"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/andreasmcdermott/bb-plugin-shortcut.git",
+      "ref": "main"
+    }
+  },
+  "overview": "./overview/shortcut.md"
+}
