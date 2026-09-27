@@ -15,7 +15,7 @@
   "source": {
     "git": {
       "url": "https://github.com/tobi/bb-bots-sidebar.git",
-      "ref": "v0.3.0-alpha.11"
+      "range": "^1.0.0"
     }
   },
   "screenshots": [
