@@ -4,11 +4,11 @@ setup guide](https://github.com/nicolay-i/bb-plugin-tabs#readme).
 
 ## What you get
 
-- A single unpinned preview behaves like a VS Code preview tab: a newly current
-  or more recently active chat replaces it, and italic text communicates its
-  temporary state. Work in a nested workflow folds up to the root conversation,
-  so the visible parent tab receives the working marker and previews do not
-  jump to technical child chats.
+- A single unpinned preview behaves like a VS Code preview tab: opening another
+  unpinned chat replaces it, and italic text communicates its temporary state.
+  Pinning that chat leaves no preview until another unpinned chat is opened.
+  Background work never opens a preview; nested workflow activity folds up to
+  the visible parent tab's working marker.
 - Double-click a preview to pin it. Double-click a pinned tab title to rename
   it inline, with Escape cancelling the change. A tab context menu sized like
   BB's native sidebar actions provides Copy link, Mark as unread, Pin/Unpin,
