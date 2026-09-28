@@ -7,9 +7,9 @@ Pool Usage puts each connected provider's logo at the right end of the sidebar
 footer with the share of its capacity in use right now: Claude and Codex,
 every account in Account Pooler if you use it, and other providers that report
 usage to BB, such as Cursor. Accounts weigh by the vendors' stated plan
-multipliers, so a Max 20x seat counts twenty times a Pro seat. The number turns
-red at 80%, or at the percentage you pick in the plugin's only setting,
-**Red at, %**.
+multipliers, so a Max 20x seat counts twenty times a Pro seat. Codex Business
+Pro Lite and Pro Lite each count as 5x Plus. The number turns red at 80%, or at
+the percentage you pick in the plugin's only setting, **Red at, %**.
 
 ## When it frees up
 
