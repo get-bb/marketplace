@@ -18,5 +18,6 @@
       "url": "https://github.com/ChrBoebel/bb-plugin-provider-brand-marks.git",
       "range": "^0.1.0"
     }
-  }
+  },
+  "overview": "./overview/provider-brand-marks.md"
 }
