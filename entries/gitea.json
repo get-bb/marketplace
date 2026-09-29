@@ -15,7 +15,7 @@
   "source": {
     "git": {
       "url": "https://github.com/Nick-Motion/bb-plugin-gitea.git",
-      "range": "^1.0.1"
+      "range": "^1.0.2"
     }
   },
   "overview": "./overview/gitea.md",

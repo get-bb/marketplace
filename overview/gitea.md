@@ -9,7 +9,7 @@ Gitea issues and pull requests inside BB. You can browse, comment, review, and l
 
 ## Requirements
 
-Install the `tea` CLI 0.15.1 or newer and sign in with `tea login add`. BB stores no Gitea token. Set `baseUrl` to your Gitea instance with `bb plugin config gitea set baseUrl https://gitea.example.com`. Repositories come from project `origin` remotes and the optional `extraRepos` setting.
+Install the `tea` CLI 0.15.1 or newer and sign in with `tea login add` on the BB server host and on the host of each repository checkout used by Auto-fix or Auto-merge. BB stores no Gitea token. Set `baseUrl` to your Gitea instance with `bb plugin config gitea set baseUrl https://gitea.example.com`. Repositories come from project `origin` remotes and the optional `extraRepos` setting.
 
 ## Costs and permissions
 
