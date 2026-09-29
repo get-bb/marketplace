@@ -18,5 +18,6 @@
       "range": "^1.0.0"
     }
   },
-  "overview": "./overview/gitea.md"
+  "overview": "./overview/gitea.md",
+  "screenshots": ["./screenshots/gitea/my-prs.jpg"]
 }
