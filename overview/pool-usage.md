@@ -17,8 +17,19 @@ Click a number for the provider's card, styled like the footer's `…` menu: the
 total, the number of accounts when there are several, and up to four lines
 showing when the total drops next and what it drops to.
 
-## Live and local
+## Resets
 
-The numbers refresh every 30 seconds. Pool Usage reads only Account Pooler's
-redacted account status and BB's provider usage readings; credentials and
-tokens never enter the plugin or frontend.
+When Account Pooler's Claude or Codex accounts hold resets, which clear an
+account's usage limits early, the card ends with a line such as
+"Reset to 27% (3 available)": the total right after the reset that frees the
+most capacity over the next week. Clicking it asks first, in BB's own dialog,
+naming the account, when the reset expires, and the total before and after.
+Only **Use reset** spends it.
+
+## What it reads
+
+The numbers refresh every 30 seconds. Pool Usage reads Account Pooler's
+redacted account status and BB's provider usage readings. For resets, its
+server uses the access tokens Account Pooler stores: it asks Anthropic and
+OpenAI for them every 10 minutes and spends one only when you confirm it.
+Tokens never reach the frontend, and the plugin never refreshes one.
