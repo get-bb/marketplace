@@ -3,7 +3,7 @@
   "displayName": "Browserbase",
   "description": "Browserbase gives BB a real browser to use the web like a human. Navigate interactive websites, perform complex actions using natural language, and extract data from pages. Each BB thread gets its own cloud browser session. Requires a Browserbase account and API key; usage counts toward your Browserbase plan.",
   "icon": {
-    "url": "./icons/browserbase.png"
+    "url": "./icons/browserbase-logo.png"
   },
   "category": "tasks-and-workflows",
   "tags": [
