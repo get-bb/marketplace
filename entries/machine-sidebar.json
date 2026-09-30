@@ -1,0 +1,32 @@
+{
+  "id": "machine-sidebar",
+  "displayName": "Machine Sidebar",
+  "description": "Sort your bb threads by the machine they run on, then by project, so laptop and remote work never mix. Mark quiet threads or whole projects inactive to fold them into a dimmed group at the bottom; they come back when a turn finishes or waits for you. Start a title with [Tag] to show a colored pill, with a color per tag you pick in the plugin settings. Each row shows its git branch and a status dot for waiting, failed, finished, or running.",
+  "icon": "Laptop",
+  "tags": [
+    "sidebar",
+    "threads",
+    "machines",
+    "remote",
+    "projects",
+    "tags",
+    "inactive",
+    "branches"
+  ],
+  "author": {
+    "name": "Kevin Kern",
+    "github": "regenrek",
+    "url": "https://github.com/regenrek"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/machine-sidebar/overview.png"
+  ],
+  "overview": "./overview/machine-sidebar.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/regenrek/bb-plugin-machine-sidebar.git",
+      "range": "^0.1.1"
+    }
+  }
+}
