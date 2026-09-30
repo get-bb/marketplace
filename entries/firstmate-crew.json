@@ -10,6 +10,7 @@
     "url": "https://github.com/gpambrozio"
   },
   "category": "agents-and-providers",
+  "screenshots": ["./screenshots/firstmate-crew/board.png"],
   "overview": "./overview/firstmate-crew.md",
   "source": {
     "git": {
