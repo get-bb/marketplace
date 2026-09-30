@@ -16,11 +16,23 @@ come back from `specs_read` as review feedback, and replies stay attached to
 the exact text.
 
 **Chat that can edit.** Each spec has its own BB thread. The agent reads the
-spec before answering, applies agreed changes with `specs_write`, and a
-revision check reports a conflicting edit instead of overwriting it.
+spec before answering. One Send action continues the conversation; proposed
+changes are reviewed before applying. Revision checks protect intervening edits.
 
-**A calm document page.** Icon, inline project and status properties, markdown
-editing with autosave, a comments rail, and highlights on annotated text.
+**Research that returns to the document.** Reports sit beneath their parent.
+Settling their questions automatically prepares a parent update to review;
+applying it links the report to the resulting parent revision.
+
+**Diagrams in the spec.** Mermaid blocks render in place. Edit their source with
+a live preview or discuss a diagram in the spec chat to iterate on it.
+
+**Draft at your cursor.** Type `@agent` in the editor, describe what belongs
+there, and review the proposed insertion. Existing text and revision checks
+keep the document under your control.
+
+**One editable document.** Click and type with autosave; no Edit/Done step.
+Formatting, comments, agent requests, and diagram previews share the same
+document, with revision checks and draft recovery.
 
 ## How agents use it
 

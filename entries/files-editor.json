@@ -1,10 +1,15 @@
 {
   "id": "files-editor",
   "displayName": "Files",
-  "description": "A VS Code-style file explorer and editor for the workspace behind a thread. Search in files finds a word across every file in the project: results are grouped by file with each hit highlighted, and clicking one opens the file on that line. It is smart case, with match-case, whole-word and regex toggles, and built for typing \u2014 file contents stay in memory between searches, so refining a query re-runs in tens of milliseconds, and a regex runs in its own worker so a runaway pattern cannot freeze BB. Around it: a file tree that shows dotfiles, editor tabs, a go-to-file palette (Cmd+P), find in the open file (Cmd+F), syntax highlighting in your BB code theme, and edit and save guarded so a change an agent made underneath you is never clobbered. Two pickers choose the project and then its checkout or one of its worktrees; beside a thread it is pinned to that thread's worktree. Adds a `bb files` command so agents can browse and read the same workspace from the CLI, on whichever machine it lives.",
+  "description": "A VS Code-style file explorer and editor for the workspace behind a thread. Search in files finds a word across every file in the project: results are grouped by file with each hit highlighted, and clicking one opens the file on that line. It is smart case, with match-case, whole-word and regex toggles, and built for typing \u2014 file contents stay in memory between searches, so refining a query re-runs in tens of milliseconds, and a regex runs in its own worker so a runaway pattern cannot freeze BB. Around it: a file tree that shows dotfiles, editor tabs, a go-to-file palette (Cmd+P), find in the open file (Cmd+F), syntax highlighting in your BB code theme, and edit and save guarded so a change an agent made underneath you is never clobbered. Markdown files open rendered, with the source and the editor one click away. Two pickers choose the project and then its checkout or one of its worktrees; beside a thread it is pinned to that thread's worktree. Adds a `bb files` command so agents can browse and read the same workspace from the CLI, on whichever machine it lives.",
   "icon": {
     "url": "./icons/files-editor-43529076.svg"
   },
+  "screenshots": [
+    "./screenshots/files-editor/search-in-files.png",
+    "./screenshots/files-editor/find-in-file.png",
+    "./screenshots/files-editor/markdown-preview.png"
+  ],
   "tags": [
     "files",
     "file-explorer",

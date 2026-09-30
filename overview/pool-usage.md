@@ -1,29 +1,35 @@
-Keep the whole Account Pooler visible without opening a settings page.
+See how much of each provider's capacity is in use, and when it frees up,
+without opening anything.
 
-## One account, one row
+## One number per provider
 
-Open **Account usage** from the sidebar footer to see a single flat list. Every
-row contains the Claude or Codex mark, the provider's subscription tier, one flat
-usage bar, the percentage, and a tiny window/reset line. There are no cards,
-provider group headings, separators, hover states, or status-dot clutter; the
-disclosure itself is transparent and borderless.
+Pool Usage puts each connected provider's logo at the right end of the sidebar
+footer with the share of its capacity in use right now: Claude and Codex,
+every account in Account Pooler if you use it, and other providers that report
+usage to BB, such as Cursor. Accounts weigh by the vendors' stated plan
+multipliers, so a Max 20x seat counts twenty times a Pro seat. Codex Business
+Pro Lite and Pro Lite each count as 5x Plus. The number turns red at 80%, or at
+the percentage you pick in the plugin's only setting, **Red at, %**.
 
-The bar shows the window that actually limits the account right now. When a
-window is spent, the row reports the spent window that clears last and its
-reset, so an account with an empty 5-hour window but a spent weekly quota reads
-`Weekly` and not an empty bar. When every window still has room, the row reports
-the one closest to its limit. The bar remains neutral below 75%, changes to
-warning yellow at 75%, and turns critical red at 90%; a row the pool cannot
-route to is red with a red window/reset line regardless of the percentage.
+## When it frees up
 
-## Live and local
+Click a number for the provider's card, styled like the footer's `…` menu: the
+total, the number of accounts when there are several, and up to four lines
+showing when the total drops next and what it drops to.
 
-The list refreshes every 30 seconds while open. Account Pooler continues to own
-authentication, secret storage, routing, and upstream quota refreshes. Pool
-Usage reads only the redacted account status already exposed by Account
-Pooler's typed RPC. For a Codex account whose tier is missing there, it can
-match the plan label from BB's official provider usage by account email;
-credentials and tokens never enter the plugin or frontend.
+## Resets
 
-Disabled, held, and unavailable accounts stay in place with quiet inline
-states, preserving the pool's stable order without expanding the interface.
+When Account Pooler's Claude or Codex accounts hold resets, which clear an
+account's usage limits early, the card ends with a line such as
+"Reset to 27% (3 available)": the total right after the reset that frees the
+most capacity over the next week. Clicking it asks first, in BB's own dialog,
+naming the account, when the reset expires, and the total before and after.
+Only **Use reset** spends it.
+
+## What it reads
+
+The numbers refresh every 30 seconds. Pool Usage reads Account Pooler's
+redacted account status and BB's provider usage readings. For resets, its
+server uses the access tokens Account Pooler stores: it asks Anthropic and
+OpenAI for them every 10 minutes and spends one only when you confirm it.
+Tokens never reach the frontend, and the plugin never refreshes one.

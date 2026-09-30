@@ -1,0 +1,21 @@
+{
+  "id": "branch-graph",
+  "displayName": "Branch Graph",
+  "description": "See how your repositories, branches, worktrees, and BB threads connect on one canvas. Search across registered Git projects, inspect selected checkouts, and flag detached or prunable worktrees for review. Optional GitHub PR lookup requires the gh CLI and authentication.",
+  "icon": "GitBranch",
+  "tags": ["git", "branches", "worktrees", "threads", "graph", "visualization"],
+  "author": {
+    "name": "Tim Briggs",
+    "github": "t-i-m-b-r-i-g-g-s",
+    "url": "https://github.com/t-i-m-b-r-i-g-g-s"
+  },
+  "category": "code-and-reviews",
+  "screenshots": ["./screenshots/branch-graph/overview.png"],
+  "source": {
+    "git": {
+      "url": "https://github.com/t-i-m-b-r-i-g-g-s/bb-plugin-branch-graph.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/branch-graph.md"
+}

@@ -1,18 +1,27 @@
 {
   "id": "endless",
   "displayName": "Endless",
-  "description": "Restyles bb with 2 sets of light and dark themes inspired by Frank Ocean's album Endless, in either achromatic silver or a restrained color-accented palette.",
+  "description": "Restyles bb in the silver print of Frank Ocean's Endless, in light and dark mode. Choose the achromatic endless palette, or endless-color, which adds rare accents sampled from the film. Corners are square, and type follows the album's Helvetica and Courier.",
   "icon": {
     "url": "./icons/endless-ec9ca81b.svg"
   },
-  "tags": ["theme", "appearance", "dark-mode", "light-mode", "frank-ocean"],
+  "tags": [
+    "theme",
+    "appearance",
+    "dark-mode",
+    "light-mode",
+    "frank-ocean"
+  ],
   "author": {
     "name": "brsbl",
     "github": "brsbl",
     "url": "https://github.com/brsbl"
   },
   "category": "themes-and-appearance",
-  "screenshots": ["./screenshots/endless/overview.png"],
+  "screenshots": [
+    "./screenshots/endless/overview.png"
+  ],
+  "overview": "./overview/endless.md",
   "source": {
     "git": {
       "url": "https://github.com/brsbl/bb-plugins.git",

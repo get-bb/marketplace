@@ -1,11 +1,17 @@
 {
   "id": "at-plugin",
-  "displayName": "@Plugin",
-  "description": "Find plugins for your task without leaving your thread, or let your agent search for you. Mention the ones you want it to use.",
-  "icon": {
-    "url": "./icons/at-plugin-8e110197.svg"
-  },
-  "tags": ["plugins", "mentions", "composer", "marketplace", "interface"],
+  "displayName": "Plugin Finder",
+  "description": "Find the plugin for your task without leaving the thread. Type # and a keyword to search the plugins you have and the ones in BB Community, then mention the one you want your agent to use. Your agent can also search the catalog itself from the command line.",
+  "icon": "Zap",
+  "tags": [
+    "plugins",
+    "search",
+    "discovery",
+    "mentions",
+    "composer",
+    "marketplace",
+    "agents"
+  ],
   "author": {
     "name": "brsbl",
     "github": "brsbl",
@@ -14,7 +20,7 @@
   "category": "thread-content",
   "screenshots": [
     "./screenshots/at-plugin/overview.png",
-    "./screenshots/at-plugin/community-plugins.png"
+    "./screenshots/at-plugin/mention.png"
   ],
   "overview": "./overview/at-plugin.md",
   "source": {

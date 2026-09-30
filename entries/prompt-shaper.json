@@ -1,0 +1,27 @@
+{
+  "id": "prompt-shaper",
+  "displayName": "Prompt Improver",
+  "description": "Turns a rough draft into a clear, complete prompt that you review before sending. Choose Improve prompt and a hidden helper agent rewrites only the draft, then returns it in place of your text. Attachments stay attached, and you can undo the rewrite. Each rewrite runs one short turn on a provider you already use.",
+  "icon": "AiContentGenerator01",
+  "tags": ["prompts", "prompt-engineering", "composer", "rewrite", "writing", "drafts", "skills"],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/prompt-shaper/composer.png",
+    "./screenshots/prompt-shaper/improved.png",
+    "./screenshots/prompt-shaper/settings.png"
+  ],
+  "overview": "./overview/prompt-shaper.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/improve-prompt",
+      "range": "^0.1.2",
+      "tagPrefix": "prompt-shaper/"
+    }
+  }
+}

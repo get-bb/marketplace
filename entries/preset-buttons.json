@@ -1,0 +1,38 @@
+{
+  "id": "preset-buttons",
+  "displayName": "Preset Buttons",
+  "description": "Starts a new thread on the harness you meant to use, not the one the last thread left behind. Four buttons in the New thread composer apply a saved provider, model, and reasoning level in one click. A settings editor builds the buttons from BB's live provider catalogue, so no JSON and no reload. The strip holds one row beside the project picker and never wraps.",
+  "icon": {
+    "url": "./icons/preset-buttons-39a65258.svg"
+  },
+  "tags": [
+    "new-thread",
+    "composer",
+    "presets",
+    "provider",
+    "model",
+    "reasoning",
+    "defaults",
+    "shortcuts",
+    "composer-actions"
+  ],
+  "author": {
+    "name": "Maros Pekarik",
+    "github": "marospekarik",
+    "url": "https://github.com/marospekarik"
+  },
+  "category": "agents-and-providers",
+  "overview": "./overview/preset-buttons.md",
+  "screenshots": [
+    "./screenshots/preset-buttons/composer-strip.png",
+    "./screenshots/preset-buttons/settings.png",
+    "./screenshots/preset-buttons/button-editor.png",
+    "./screenshots/preset-buttons/icon-picker.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/marospekarik/bb-plugin-preset-buttons.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "file-tree",
   "displayName": "File Tree",
-  "description": "Find the file an agent mentions and keep the workspace tree beside the conversation. Search by name or path, open previews, add relative paths to drafts, create a blank markdown file, delete a file after confirmation, and reveal or copy files from the machine that owns them. Files show Seti-style type icons for markdown, JSON, gitignore, env, and other common names. Project threads stay rooted in their checkout; personal threads can browse a configured folder. Requires local file access on the BB machine; Finder reveal is macOS-only.",
+  "description": "Keep project files in view while you move between BB threads. Pin a project source or thread workspace, search by name or path, and preview files. Send a file path to a chosen chat draft, create a blank markdown file, or delete a file after confirmation. Copy paths or files, and reveal files in Finder. Requires access to the files on the BB machine; Finder reveal is macOS-only.",
   "icon": "Folder",
   "tags": [
     "files",
@@ -21,10 +21,13 @@
     "url": "https://yuriy-egorov.pages.dev"
   },
   "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/file-tree/overview.png"
+  ],
   "source": {
     "git": {
       "url": "https://github.com/fzrx-ego/bb-plugin-file-tree.git",
-      "range": "^0.18.0"
+      "range": "^0.19.3"
     }
   },
   "overview": "./overview/file-tree.md"

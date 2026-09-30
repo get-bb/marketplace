@@ -1,0 +1,37 @@
+{
+  "id": "hotspot",
+  "displayName": "Hotspot",
+  "description": "Names the BB thread that is making your Mac hot, and lets you stop the dev server or build behind it. A flame in the sidebar footer shows CPU and memory every 2 seconds; click it for the busiest threads, each thread's processes, and a kill that lists what it stops and what it spares before it runs. The Hotspot page keeps seven days of per-minute CPU, memory and thermal history, shades each hot spell, and ranks the threads that caused it. Agents answer \"why was my Mac hot at 3pm?\" with a built-in tool, and the bb hotspot command answers it in a terminal. Built for macOS, with no account or network service; on Linux it tracks CPU, memory and threads but has no thermal reading, and Windows is not supported.",
+  "icon": {
+    "url": "./icons/hotspot-4ef16854.svg"
+  },
+  "screenshots": [
+    "./screenshots/hotspot/popover.png",
+    "./screenshots/hotspot/page.png",
+    "./screenshots/hotspot/hot-spell.png"
+  ],
+  "overview": "./overview/hotspot.md",
+  "tags": [
+    "cpu",
+    "thermal",
+    "overheating",
+    "fan-noise",
+    "memory",
+    "processes",
+    "kill-process",
+    "monitoring",
+    "performance",
+    "macos"
+  ],
+  "author": {
+    "name": "Roger Serra",
+    "github": "Hazihell"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/Hazihell/bb-plugin-hotspot.git",
+      "range": "^0.1.0"
+    }
+  }
+}

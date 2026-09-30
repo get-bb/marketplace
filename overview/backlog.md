@@ -1,35 +1,60 @@
-## Track work across projects
+## Your Backlog.md project in BB
 
-Open Backlog.MD from BB navigation to see your project's Backlog.md tasks in
-configured status lanes. Switch projects and checkouts, search task content,
-filter by status, priority, assignee or label, and sort in either direction.
-Cards show description previews, labels, assignees and checklist progress.
+Open Backlog.MD from the BB navigation. The top bar has a project menu with all
+your BB projects, and the Tasks, Documents, and Decisions tabs. The layout
+follows the width of the plugin, so it also works in BB split view.
 
-## Edit the task where you read it
+## Tasks
 
-Open a card for rendered Markdown, linked subtasks and task properties.
-Double-click an editable property or section heading, then Save or Cancel.
-Keyboard users can activate the same editors. Move cards between lanes or
-reorder them by dragging or using keyboard shortcuts.
+The Kanban board shows one lane for each configured status. Search the task
+text, filter by status, priority, assignee, or label, and sort in either
+direction. Cards show the start of the description, the labels, the assignees,
+and the checklist progress. Drag cards, or use the keyboard, to change the
+status or the order.
 
-Task Markdown stays authoritative. Writes preserve unrelated fields and
-sections, merge disjoint edits, and show conflicts when edits overlap.
-Live refresh follows file changes while keeping active drafts open.
+Open a task to read its Markdown, its subtasks, and its properties.
+Double-click a property or a section heading to edit it. Then click Save or
+Cancel.
+
+## Documents and decisions
+
+The Documents tab lists the files in `docs/`. The Decisions tab lists the files
+in `decisions/`. Each card shows the file name and the start of the first
+paragraph. The front matter shows as one row of small items, such as the ID,
+the dates, and the status. Click Edit to change a file. You can hide the file
+list to give the file more space.
+
+## Add text to chat
+
+Select text in a task, a document, or a decision, and click the + button. The
+text goes to the draft of the latest thread of the project, with the path of
+the source file. If the project has no thread, BB opens a new thread draft. The
+plugin never sends the message.
+
+Type `@` in the BB composer to mention a task by words from its title or its
+description. When you send the message, the agent gets the current content of
+the task.
+
+## File safety
+
+The Markdown files are the only source of truth. A save changes only the
+edited part of the file. Before each save, the plugin checks that the file did
+not change. When changes overlap, the plugin keeps your draft and shows the
+current file.
 
 ## Requirements and limits
 
-Requires BB 0.43 or later, Plugin SDK 0.4.87 through 0.4.x, and an existing
-Backlog.md task folder on an enrolled host. No Backlog CLI, external account,
-API key or paid service is required. The plugin reads and edits task files
-through BB and stores project selections in BB storage.
+The plugin needs BB 0.43 or later with Plugin SDK 0.5.9 or a later 0.5
+version. The BB project needs a Backlog.md folder on an enrolled host. You do
+not need the Backlog CLI, an external account, or an API key.
 
-The interface is light-only. macOS has been tested; Windows host paths have
-not been verified. The plugin uses experimental BB host and provider APIs.
-Task creation, deletion, archive and restore actions are not included.
-It does not run task hooks or Git commands.
+The interface has a light theme only. We tested the plugin on macOS. We did
+not test Windows host paths. The plugin uses experimental BB host and provider
+APIs. It does not create, delete, archive, or restore tasks. It does not run
+task hooks or Git commands.
 
 ## Acknowledgments
 
-This is an independent BB plugin, not affiliated with or endorsed by the
-official [Backlog.md project](https://github.com/MrLesk/Backlog.md).
-We are grateful to its maintainers and contributors for their work.
+This is an independent BB plugin. It is not affiliated with or endorsed by the
+official [Backlog.md project](https://github.com/MrLesk/Backlog.md). We thank
+its maintainers and contributors for their work.

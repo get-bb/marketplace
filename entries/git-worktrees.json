@@ -1,0 +1,23 @@
+{
+  "id": "git-worktrees",
+  "displayName": "Git worktrees",
+  "description": "Pick any existing git worktree for a project and start a thread there in one click. Lists paths from git worktree list on the selected machine, excluding BB-managed worktrees. Attaches the picked path with ownsPath: false, so bb never deletes it when the thread retires. Requires a project checkout and Git on the selected machine.",
+  "icon": { "url": "./icons/git-worktrees-d466b436.svg" },
+  "tags": ["git", "worktrees", "environments", "branches", "attach"],
+  "author": {
+    "name": "Fabricio Ereche",
+    "github": "fabricioereche",
+    "url": "https://github.com/fabricioereche"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/fabricioereche/bb-plugin-git-worktrees.git",
+      "range": "^0.1.0"
+    }
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/git-worktrees/overview.png"
+  ],
+  "overview": "./overview/git-worktrees.md"
+}
