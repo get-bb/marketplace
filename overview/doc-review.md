@@ -2,6 +2,7 @@
 
 - A tab beside the chat for Markdown, PDF, Word, PowerPoint, Excel, and HTML files. Links in messages, the file picker, and `bb thread open` all land there.
 - Comments on selected text, on a box drawn around a chart or picture, on spreadsheet cells and ranges, on any element of an HTML page, or on the whole document. Right-click a selection or press Cmd+Option+M (Ctrl+Alt+M) to comment without reaching for the mouse.
+- Drawing over HTML pages, PDFs, and slides: cross out a button, circle a block, draw an arrow to where it should move, and comment on the drawing. The agent gets a picture of your strokes over the page as you saw it, and on HTML the elements each stroke touches.
 - Drafts that wait until you send them: to the current chat, or to a new chat in the same project and workspace with the same model.
 - A status on every comment that follows the agent's work: waiting, done with a note on what changed, or needs you when the agent answered with a question.
 - A **Doc Review** page in the sidebar with the files you commented on, recent files, and a folder browser.
@@ -14,11 +15,11 @@ The bundled skill tells the agent how to change each format: Markdown directly; 
 
 ## Viewing
 
-Word and PowerPoint files are converted to PDF by LibreOffice on the bb server and cached per file version, so a document converts once. Pages render as images with a selectable text layer and stay sharp as you zoom: use the zoom buttons, Ctrl or Cmd with the scroll wheel, or pinch, and read the smallest labels on a large drawing. All pages share one scale, so a landscape sheet or a wide timeline in a portrait document scrolls left and right instead of shrinking to fit. In a long document only the pages on screen load, and the page counter jumps to any page. **Classic** switches to the browser's own PDF viewer for search and printing, and the download button saves the original file. Workbooks open as a grid with sheet tabs, number formats, fills, borders, merged cells, and frozen panes. HTML files open as the live page, with the styles, pictures, and scripts next to them, in a sandbox that keeps the page's scripts away from bb.
+Word and PowerPoint files are converted to PDF by LibreOffice on the bb server and cached per file version, so a document converts once. Pages render as images with a selectable text layer and stay sharp as you zoom: use the zoom buttons, Ctrl or Cmd with the scroll wheel, or pinch, and read the smallest labels on a large drawing. All pages share one scale, so a landscape sheet or a wide timeline in a portrait document scrolls left and right instead of shrinking to fit. In a long document only the pages on screen load, and the page counter jumps to any page. **Classic** switches to the browser's own PDF viewer for search and printing, and the download button saves the original file. Workbooks open as a grid with sheet tabs, number formats, fills, borders, merged cells, and frozen panes. HTML files open as the live page, with the styles, pictures, and scripts next to them, in a sandbox that keeps the page's scripts away from bb; a prototype that shows its page in desktop and phone frames takes comments inside both.
 
 ## On a phone
 
-bb's mobile web app shows the same tab. Pinch to zoom, hold and then drag to mark an area, tap a cell to comment on it, or hold and drag to select a range. The comment list opens as a sheet from the bottom.
+bb's mobile web app shows the same tab. Pinch to zoom, hold and then drag to mark an area or draw, tap a cell to comment on it, or hold and drag to select a range. The comment list opens as a sheet from the bottom.
 
 The plugin never writes to your file. Only the agent you send the comments to changes it, and the tab picks up the new version on its own.
 
@@ -26,4 +27,5 @@ The plugin never writes to your file. Only the agent you send the comments to ch
 
 - poppler-utils (`pdfinfo`, `pdftoppm`, `pdftotext`) on the machine the bb server runs on, for pages and text selection.
 - LibreOffice Writer and Impress on the same machine for Word and PowerPoint files. LibreOffice Calc adds full formatting for legacy spreadsheets (`xls`, `xlsb`, `ods`); without it they open with values and fills.
+- Chrome or Chromium on the same machine, optional, for pictures of drawings on HTML pages.
 - Files on other bb machines are copied to the server for rendering, up to 64 MB.

@@ -1,7 +1,7 @@
 {
   "id": "doc-review",
   "displayName": "Doc Review",
-  "description": "Leave comments on Markdown, PDF, Word, PowerPoint, Excel, and HTML files beside the chat, then hand them all to an agent in one message. Select text, draw a box around a chart on a page or slide, pick spreadsheet cells, or click any element of an HTML page, and each comment keeps its exact place; a comment on an area reaches the agent with an image of that region. Send the drafts to the current chat or to a new one, and each comment shows whether the agent is on it, closed it with a note on what changed, or answered with a question. Zoom pages with a pinch, the wheel, or the zoom bar and they re-render sharp, so a large drawing reads up close; a landscape or wide page keeps the document's scale and scrolls sideways, and a long document loads only the pages on screen. Workbooks open as a formatted grid, HTML files as the live page with their own styles and scripts in a sandbox that keeps them away from bb, and the same tab works in bb's mobile web app. Needs poppler-utils and LibreOffice on the machine the bb server runs on.",
+  "description": "Leave comments on Markdown, PDF, Word, PowerPoint, Excel, and HTML files beside the chat, then hand them all to an agent in one message. Select text, draw a box around a chart on a page or slide, pick spreadsheet cells, or click any element of an HTML page, and each comment keeps its exact place; a comment on an area reaches the agent with an image of that region. Draw over an HTML prototype or a page to cross out a button, circle a block, or point an arrow to where something should move; the agent gets a picture of the page as you saw it with your strokes on top and, on HTML, the elements each stroke touches. Send the drafts to the current chat or to a new one, and each comment shows whether the agent is on it, closed it with a note on what changed, or answered with a question. Zoom pages with a pinch, the wheel, or the zoom bar and they re-render sharp, so a large drawing reads up close; a landscape or wide page keeps the document's scale and scrolls sideways, and a long document loads only the pages on screen. Workbooks open as a formatted grid, HTML files as the live page with their own styles and scripts in a sandbox that keeps them away from bb, and the same tab works in bb's mobile web app. Needs poppler-utils and LibreOffice on the machine the bb server runs on; Chrome or Chromium there adds the pictures of drawings on HTML pages.",
   "icon": {
     "url": "./icons/doc-review-bfdb931a.svg"
   },
@@ -27,12 +27,13 @@
     "git": {
       "url": "https://github.com/xMinor-1/bb-plugins.git",
       "subdir": "plugins/doc-review",
-      "range": "^0.2.3",
+      "range": "^0.3.0",
       "tagPrefix": "doc-review/"
     }
   },
   "screenshots": [
     "./screenshots/doc-review/markdown.png",
+    "./screenshots/doc-review/markup.png",
     "./screenshots/doc-review/html.png",
     "./screenshots/doc-review/slides.png",
     "./screenshots/doc-review/spreadsheet.png",
