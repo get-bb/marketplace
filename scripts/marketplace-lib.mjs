@@ -25,6 +25,7 @@ export const V1_TOP_LEVEL_FIELDS = Object.freeze([
 export const SCREENSHOT_MAX_BYTES = 2 * 1024 * 1024;
 export const SCREENSHOT_MIN_WIDTH = 1200;
 export const OVERVIEW_MAX_CHARS = 4000;
+export const ENTRY_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 
 const MARKETPLACE_ORIGIN = "https://getbb.app";
 const SCREENSHOT_FILE_PATTERN =
@@ -727,5 +728,34 @@ export function fillEmptyCollections(collections, plugins) {
     Array.isArray(collection.pluginIds) && collection.pluginIds.length === 0
       ? { ...collection, pluginIds: fallbackIds }
       : collection,
+  );
+}
+
+export function pluginsFromRows(rows, log = console.error) {
+  const plugins = {};
+  let dropped = 0;
+  for (const row of rows ?? []) {
+    const [id, installs] = Array.isArray(row) ? row : [];
+    if (
+      typeof id !== "string" ||
+      !ENTRY_ID_PATTERN.test(id) ||
+      typeof installs !== "number" ||
+      !Number.isSafeInteger(installs) ||
+      installs < 0
+    ) {
+      dropped += 1;
+      continue;
+    }
+    plugins[id] = { installs };
+  }
+  if (dropped > 0 && typeof log === "function") {
+    log(`warning: dropped ${dropped} unusable row(s) from PostHog`);
+  }
+  // Sorted keys keep the published document byte-stable between runs that
+  // return the same counts, so an unchanged sidecar keeps its ETag.
+  return Object.fromEntries(
+    Object.keys(plugins)
+      .sort()
+      .map((id) => [id, plugins[id]]),
   );
 }
