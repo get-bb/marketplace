@@ -1,0 +1,32 @@
+{
+  "id": "acp-profile-icons",
+  "displayName": "ACP Profile Icons",
+  "description": "Recognize eight ACP providers by their brand marks in model pickers and provider controls. Amp and Devin use contrasting theme-colored tiles; other marks follow the theme foreground, with a distinct gray tile for ACP Codex. Requires separately configured ACP providers and BB 0.44 or newer.",
+  "icon": "Palette",
+  "tags": [
+    "acp",
+    "icons",
+    "providers",
+    "amp",
+    "devin",
+    "deepseek",
+    "theme-aware"
+  ],
+  "author": {
+    "name": "hxy91819",
+    "github": "hxy91819",
+    "url": "https://github.com/hxy91819"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/hxy91819/bb-plugin-acp-profile-icons.git",
+      "range": "^0.1.4"
+    }
+  },
+  "screenshots": [
+    "./screenshots/acp-profile-icons/model-picker-light.png",
+    "./screenshots/acp-profile-icons/model-picker-dark.png"
+  ],
+  "overview": "./overview/acp-profile-icons.md"
+}
