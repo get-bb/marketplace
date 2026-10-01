@@ -1,7 +1,7 @@
 {
   "id": "action-topbar",
   "displayName": "Action Topbar",
-  "description": "Search BB tabs and Actions from the thread topbar. Reorder tabs, close them in place, and move open Action panes through native split zones. Action dragging requires a BB build with the experimental Action pane API; stock BB 0.44.0 needs the matching core patch.",
+  "description": "Keep open BB panel tabs within reach above every thread. Search tabs and Actions from one launcher, reorder tabs, close them in place, and drag supported Actions into split panes. Requires BB 0.40+ and Plugin SDK 0.4.33+.",
   "icon": { "url": "./icons/action-topbar-43b10ff4.svg" },
   "screenshots": [
     "./screenshots/action-topbar/light.png",
@@ -19,7 +19,7 @@
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",
       "subdir": "plugins/action-topbar",
-      "range": "^0.1.1",
+      "range": "^0.1.0",
       "tagPrefix": "action-topbar/"
     }
   }
