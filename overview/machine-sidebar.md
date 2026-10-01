@@ -13,7 +13,9 @@ Choose **Mark inactive** in a thread's menu, or **Mark project inactive** in a p
 ## On every row
 
 - The git branch, small under the title. Threads outside git use one line.
-- A status dot: amber waits for you, red failed, green finished and unread. A spinner means the agent is working. A collapsed group shows the most urgent dot it contains.
+- A status dot: amber waits for you, red failed, green finished and unread. A spinner appears only while the agent itself is working on a turn. A collapsed group shows the most urgent dot it contains.
+- Quiet icons with a count for work that keeps running on its own: subagents, background commands such as a dev server, workflows, plan mode, and goals.
+- A chevron on a thread with sub-threads folds them. A folded parent shows how many it hides and still shows when one of them works or waits for you.
 - On hover: **Archive**, and a menu with open in split, rename, pin, mark read or unread, mark inactive, and delete.
 - On a project heading, **+** starts a new thread in that project on that machine.
 
