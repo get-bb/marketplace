@@ -10,6 +10,7 @@
     "url": "https://github.com/gpambrozio"
   },
   "category": "notifications",
+  "screenshots": ["./screenshots/herald/page.png"],
   "overview": "./overview/herald.md",
   "source": {
     "git": {
