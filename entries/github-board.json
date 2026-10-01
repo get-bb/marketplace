@@ -10,6 +10,10 @@
     "url": "https://github.com/gpambrozio"
   },
   "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/github-board/board.png",
+    "./screenshots/github-board/send-to-chat.png"
+  ],
   "overview": "./overview/github-board.md",
   "source": {
     "git": {
