@@ -1,6 +1,6 @@
 {
   "id": "cloud-sandbox",
-  "displayName": "Cloud Machines",
+  "displayName": "Vercel Sandboxes",
   "description": "Creates bb machines on Vercel Sandboxes from reusable templates that bake in tooling and inject agent credentials at creation, so a remote machine is ready to run threads without manual setup.",
   "icon": "Cloud",
   "tags": [
