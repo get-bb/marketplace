@@ -729,3 +729,14 @@ export function fillEmptyCollections(collections, plugins) {
       : collection,
   );
 }
+
+export function reservedPluginIdProblem(id, reserved) {
+  if (typeof id !== "string") return undefined;
+  if (id.startsWith(reserved.reservedPrefix)) {
+    return `The id "${id}" starts with "${reserved.reservedPrefix}", which is reserved for plugins bundled with BB.`;
+  }
+  if (reserved.bundledPluginIds.includes(id)) {
+    return `The id "${id}" belongs to a plugin bundled with BB. Rename the package so the plugin gets a different id.`;
+  }
+  return undefined;
+}

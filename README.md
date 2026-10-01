@@ -32,6 +32,7 @@ The build sets `schemaVersion` to `2` in the v2 output.
 1. Fork this repository.
 2. Add `entries/<your-plugin-id>.json`.
 3. Make the file name equal to the entry `id`.
+   The `id` must not start with `bb--` or equal an id in `reserved-plugin-ids.json`; those belong to plugins bundled with BB.
 4. Set `source` to a public Git repository or an npm package.
 5. Set `category` to an ID from `marketplace.base.json`.
 6. Add screenshots if they help users review the plugin.

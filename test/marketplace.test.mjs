@@ -27,6 +27,7 @@ import {
   projectV1Manifest,
   pullRequestEntryFiles,
   readEntryAddedDates,
+  reservedPluginIdProblem,
   validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
@@ -614,4 +615,26 @@ test("the overview check finds an unreferenced file", () => {
     const orphans = findOrphanOverviewFiles(root, new Set(["overview/used.md"]));
     assert.deepEqual(orphans, ["overview/orphan.md"]);
   });
+});
+
+test("reserved plugin ids reject the bb-- prefix and bundled plugin ids", () => {
+  const reserved = JSON.parse(
+    readFileSync(join(testRoot, "..", "reserved-plugin-ids.json"), "utf8"),
+  );
+  assert.match(
+    reservedPluginIdProblem("bb--notes", reserved),
+    /reserved for plugins bundled with BB/,
+  );
+  assert.match(
+    reservedPluginIdProblem("memory", reserved),
+    /belongs to a plugin bundled with BB/,
+  );
+  assert.equal(reservedPluginIdProblem("bb-office", reserved), undefined);
+  assert.equal(reservedPluginIdProblem("provider-usage", reserved), undefined);
+  assert.match(
+    reservedPluginIdProblem("docs", reserved),
+    /belongs to a plugin bundled with BB/,
+  );
+  assert.equal(reservedPluginIdProblem(undefined, reserved), undefined);
+  assert.equal(reservedPluginIdProblem(42, reserved), undefined);
 });
