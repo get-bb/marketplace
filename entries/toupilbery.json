@@ -1,0 +1,22 @@
+{
+  "id": "toupilbery",
+  "displayName": "Toupilbery",
+  "description": "Surfaces Fibery work items whose public ID is a round number, with an assignee podium and filters by type, owner, and date. Shows every item whose public ID is one non-zero digit followed by at least three zeros — 1000, 5000, 10 000, 100 000, and so on — across Technical Tasks, Studies, Bugs, Actions, and Internal Goals. An all-time podium ranks the top three assignees by item count. Three independent filters narrow the list by item type, creation date (last 24 h, week, or month), and owner.",
+  "icon": "PartyPopper",
+  "tags": ["fibery", "work-items", "podium", "assignees", "filters", "productivity", "milestones"],
+  "author": {
+    "name": "Airnity",
+    "github": "airnity"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/airnity/bb-marketplace.git",
+      "subdir": "plugins/productivity/toupilbery",
+      "range": "^0.1.0",
+      "tagPrefix": "toupilbery/"
+    }
+  },
+  "screenshots": [],
+  "overview": "./overview/toupilbery.md"
+}
