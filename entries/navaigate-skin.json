@@ -1,0 +1,39 @@
+{
+  "id": "navaigate-skin",
+  "displayName": "NavAIgate Workspace",
+  "description": "Turn bb's sidebar into a run sheet: see what every harness is working on, tag and flag chats, and track to-dos that move on their own. The sidebar marks each chat with the harness it runs on and lets you add your own tags, flag chats to come back to, fold and reorder sections, and select several chats at once. A to-do panel on the right links items to chats and folders, and a four-column Board moves an item to Doing when its chat starts working and to Check when it finishes. Under the chat box, a usage dock shows context used and the plan windows of the account that chat runs on, and agents can reply with bar, stat and step charts. Folders need the Projects & Sections plugin, to-dos are stored in bb's built-in Tasks, per-account usage reads bb's Account Pooler, and the theme loads fonts from Google Fonts.",
+  "icon": {
+    "url": "./icons/navaigate-skin-08bc22c6.svg"
+  },
+  "screenshots": [
+    "./screenshots/navaigate-skin/01-rail-and-control-room.webp",
+    "./screenshots/navaigate-skin/02-todo-panel.webp",
+    "./screenshots/navaigate-skin/03-board-dark.webp",
+    "./screenshots/navaigate-skin/04-come-back-later-menu.webp"
+  ],
+  "overview": "./overview/navaigate-skin.md",
+  "tags": [
+    "sidebar",
+    "tags",
+    "todo",
+    "kanban",
+    "board",
+    "usage",
+    "context-window",
+    "theme",
+    "dark-mode",
+    "multi-select"
+  ],
+  "author": {
+    "name": "NavAIgate",
+    "github": "skyremote",
+    "url": "https://navaigate.dev"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/skyremote/bb-plugin-navaigate-skin.git",
+      "range": "^0.6.0"
+    }
+  }
+}
