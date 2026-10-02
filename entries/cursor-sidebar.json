@@ -1,0 +1,33 @@
+{
+  "id": "cursor-sidebar",
+  "displayName": "Cursor Sidebar",
+  "description": "Replace BB's thread list with a Cursor-style sidebar. Group chats by project, status, environment or date. Nest child chats, pin them, file them into folders, and keep view settings in the plugin's own database so uninstalling it leaves your threads alone.",
+  "icon": "PanelLeft",
+  "tags": [
+    "sidebar",
+    "threads",
+    "projects",
+    "grouping",
+    "folders",
+    "pins"
+  ],
+  "author": {
+    "name": "WYEZ",
+    "github": "wy3z",
+    "url": "https://github.com/wy3z"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/wy3z/bb-plugin-cursor-sidebar.git",
+      "range": "^0.2.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/cursor-sidebar/grouping-projects.png",
+    "./screenshots/cursor-sidebar/grouping-updated.png",
+    "./screenshots/cursor-sidebar/grouping-status.png",
+    "./screenshots/cursor-sidebar/grouping-environment.png"
+  ],
+  "overview": "./overview/cursor-sidebar.md"
+}
