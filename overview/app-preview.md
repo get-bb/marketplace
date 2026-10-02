@@ -32,6 +32,8 @@ interpolated into the shell command string. Nested apps `cd -- ./dir` so
 
 ## Install
 
+The installable package is `app/`.
+
 ```
-bb plugin install git:github.com/hungv47/bb-plugin-app-preview@semver:^0.2.9
+bb plugin install git:github.com/hungv47/bb-plugin-app-preview@semver:^0.2.9 --subdirectory app
 ```

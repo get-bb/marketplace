@@ -21,6 +21,7 @@
   "source": {
     "git": {
       "url": "https://github.com/hungv47/bb-plugin-app-preview.git",
+      "subdir": "app",
       "range": "^0.2.9"
     }
   }
