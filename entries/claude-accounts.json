@@ -1,0 +1,30 @@
+{
+  "id": "claude-accounts",
+  "displayName": "Fast Switch Claude Accounts",
+  "description": "Switch to another Claude login when the current session hits its limit, without leaving BB. See remaining quota, pick the account that still has it, and start the next thread. Saved logins stay in the macOS Keychain; tokens never leave this computer. Cursor and Codex show limits only. macOS only.",
+  "icon": "Users",
+  "tags": [
+    "claude",
+    "anthropic",
+    "accounts",
+    "limits",
+    "keychain",
+    "macos",
+    "oauth",
+    "cursor",
+    "codex"
+  ],
+  "author": {
+    "name": "Yuriy Egorov",
+    "github": "fzrx-ego",
+    "url": "https://yuriy-egorov.pages.dev"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/fzrx-ego/bb-plugin-claude-accounts.git",
+      "range": "^0.3.1"
+    }
+  },
+  "overview": "./overview/claude-accounts.md"
+}
