@@ -1,0 +1,31 @@
+{
+  "id": "compact-panes",
+  "displayName": "Compact UI",
+  "description": "Fit more threads and pane content on screen with tighter spacing and a composer that stays put. Reduce sidebar, header, tool-card and composer spacing. Choose a preset, custom color, monochrome or saved per-project colors, with controls for sidebar accents. Compact sizing targets desktop widths with a fine pointer; requires bb 0.42+ and uses internal styling hooks.",
+  "icon": {
+    "url": "./icons/compact-panes-fe876c6a.svg"
+  },
+  "overview": "./overview/compact-panes.md",
+  "tags": [
+    "density",
+    "sidebar",
+    "composer",
+    "accent-color",
+    "split-panes"
+  ],
+  "author": {
+    "name": "MattBot",
+    "github": "mgmobrien",
+    "url": "https://github.com/mgmobrien"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/mgmobrien/bb-plugin-compact-ui.git",
+      "range": "^0.9.5"
+    }
+  },
+  "screenshots": [
+    "./screenshots/compact-panes/accent-settings.png"
+  ]
+}

@@ -7,5 +7,12 @@
     "./screenshots/plugin-api-docs/plugin-guide-map.png",
     "./screenshots/plugin-api-docs/plugin-guide-surfaces.png",
     "./screenshots/plugin-api-docs/plugin-guide-reference.png"
+  ],
+  "docs": [
+    "./screenshots/docs/docs-21ddb6757-inline-review-desktop.png",
+    "./screenshots/docs/docs-f4957b72f-inline-editing-desktop.png",
+    "./screenshots/docs/docs-63b536e70-workspace-desktop.png",
+    "./screenshots/docs/docs-21ddb6757-html-desktop.png",
+    "./screenshots/docs/docs-21ddb6757-vault-desktop.png"
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "id": "automation-palette",
+  "displayName": "Automation Palette",
+  "description": "Start a scheduled bb automation the moment you want it, from the quick palette, instead of waiting for its cron expression to come around. Each row is titled with the automation and the project that owns it, so the palette finds it by either name, and the run is queued in that project from whichever window you are in. A paused automation keeps its row and says so, since running one by hand is the case pausing does not cover. Runs go through bb's own automations plugin, which stays the one place an automation is created, edited, or reviewed. Requires bb 0.42 or later and the bb CLI on the machine running the server; no account and no external service.",
+  "icon": "Play",
+  "tags": [
+    "cron",
+    "scheduler",
+    "scheduled-jobs",
+    "command-palette",
+    "keyboard-shortcuts",
+    "quick-actions",
+    "run-on-demand",
+    "sweeps"
+  ],
+  "author": {
+    "name": "Daniel Bachhuber",
+    "github": "danielbachhuber",
+    "url": "https://github.com/danielbachhuber"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/automation-palette/palette-rows.png",
+    "./screenshots/automation-palette/project-search.png"
+  ],
+  "overview": "./overview/automation-palette.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/danielbachhuber/bb-plugins.git",
+      "subdir": "bb-plugin-automation-palette",
+      "range": "^0.1.0",
+      "tagPrefix": "automation-palette/"
+    }
+  }
+}

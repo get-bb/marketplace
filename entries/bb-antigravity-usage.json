@@ -1,0 +1,12 @@
+{
+  "id": "bb-antigravity-usage",
+  "displayName": "Antigravity Usage",
+  "description": "See separate Antigravity weekly quota windows for Gemini and Claude/GPT models in BB. Reports each model family's quota and reset time from your local Antigravity login. Requires an existing Antigravity ACP provider and a local Antigravity account.",
+  "icon": "ChartColumn",
+  "tags": ["antigravity", "usage", "quota", "gemini", "claude", "gpt"],
+  "author": { "name": "defacid", "github": "defacid", "url": "https://github.com/defacid" },
+  "category": "token-usage-and-limits",
+  "source": { "git": { "url": "https://github.com/defacid/bb-antigravity-usage.git", "range": "^0.1.0" } },
+  "screenshots": ["./screenshots/bb-antigravity-usage/overview.png"],
+  "overview": "./overview/bb-antigravity-usage.md"
+}

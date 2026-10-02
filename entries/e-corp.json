@@ -1,0 +1,36 @@
+{
+  "id": "e-corp",
+  "displayName": "E Corp",
+  "description": "Turns bb into a cold corporate workstation, lit by one continuous petroleum-blue field that every panel shares. Dark and light are the same room at two exposures, so switching modes changes the light and not the design. Bundled Pierre-compatible code themes carry the palette into code, diffs, the file tree, and the terminal, with separate focus, selection, warning, and destructive colours. IBM Plex Sans and Mono and the texture are embedded in the stylesheet, so the theme makes no network requests.",
+  "icon": {
+    "url": "./icons/e-corp-e749a2bc.svg"
+  },
+  "screenshots": [
+    "./screenshots/e-corp/dark-thread.png",
+    "./screenshots/e-corp/light-thread.png"
+  ],
+  "tags": [
+    "themes",
+    "appearance",
+    "dark",
+    "light",
+    "colors",
+    "syntax-highlighting",
+    "terminal",
+    "ibm-plex",
+    "mr-robot"
+  ],
+  "author": {
+    "name": "Gabor Kis-Hegedus",
+    "github": "xcke",
+    "url": "https://github.com/xcke"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/xcke/bb-plugin-e-corp.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/e-corp.md"
+}

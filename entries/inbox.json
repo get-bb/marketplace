@@ -1,0 +1,34 @@
+{
+  "id": "inbox",
+  "displayName": "Needs You",
+  "description": "Questions, failed runs, finished threads, and extension activity in one inbox, with dismissible popups, optional Telegram alerts, and guided setup.",
+  "icon": {
+    "url": "./icons/inbox-ccfca228.svg"
+  },
+  "tags": [
+    "notifications",
+    "inbox",
+    "threads",
+    "telegram",
+    "review",
+    "workflow"
+  ],
+  "author": {
+    "name": "Pritam Sharma",
+    "github": "notpritam",
+    "url": "https://notpritam.in/plugins/needs-you"
+  },
+  "category": "notifications",
+  "screenshots": [
+    "./screenshots/inbox/inbox-dark.png",
+    "./screenshots/inbox/welcome.png",
+    "./screenshots/inbox/settings-light.png"
+  ],
+  "overview": "./overview/inbox.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/notpritam/bb-plugin-inbox.git",
+      "range": "^0.2.0"
+    }
+  }
+}

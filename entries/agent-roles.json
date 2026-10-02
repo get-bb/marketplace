@@ -1,0 +1,31 @@
+{
+  "id": "agent-roles",
+  "displayName": "Agent Roles",
+  "description": "Create reusable specialist profiles and start focused agent work. Optional Role Picker and Visual Workflows integrations. Agent work uses your configured provider account and quota.",
+  "icon": {
+    "url": "./icons/agent-roles-af02a11f.png"
+  },
+  "tags": [
+    "specialists",
+    "roles",
+    "agents"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/agent-roles",
+      "range": "^0.1.0",
+      "tagPrefix": "agent-roles/"
+    }
+  },
+  "overview": "./overview/agent-roles.md",
+  "screenshots": [
+    "./screenshots/agent-roles/overview.png"
+  ]
+}

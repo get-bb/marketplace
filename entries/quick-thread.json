@@ -1,0 +1,32 @@
+{
+  "id": "quick-thread",
+  "displayName": "Quick Thread",
+  "description": "Opens a floating new-thread composer from anywhere with Ctrl/Cmd+N, so you can start a thread without leaving the one you are on. Enter creates and opens it; Ctrl/Cmd+Enter creates it in the background and shows a toast with an Open action. A command-palette row covers keyboards where the OS reserves the shortcut.",
+  "icon": {
+    "url": "./icons/quick-thread-636a9149.svg"
+  },
+  "tags": [
+    "threads",
+    "new-thread",
+    "shortcut",
+    "composer",
+    "productivity"
+  ],
+  "author": {
+    "name": "Maros Pekarik",
+    "github": "marospekarik",
+    "url": "https://github.com/marospekarik"
+  },
+  "category": "thread-management",
+  "overview": "./overview/quick-thread.md",
+  "screenshots": [
+    "./screenshots/quick-thread/dialog.png",
+    "./screenshots/quick-thread/background-toast.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/marospekarik/bb-plugin-quick-thread.git",
+      "range": "^0.1.0"
+    }
+  }
+}

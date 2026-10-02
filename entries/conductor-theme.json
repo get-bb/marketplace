@@ -1,0 +1,34 @@
+{
+  "id": "conductor-theme",
+  "displayName": "Conductor Theme",
+  "description": "Applies the Conductor workspace aesthetic across bb with roasted espresso and native black surfaces, warm brown message cards, bone typography, and emerald accents.",
+  "icon": {
+    "url": "./icons/conductor-theme-826e00a1.svg"
+  },
+  "screenshots": [
+    "./screenshots/conductor-theme/overview.png"
+  ],
+  "overview": "./overview/conductor-theme.md",
+  "tags": [
+    "theme",
+    "dark",
+    "light",
+    "conductor",
+    "oled",
+    "espresso",
+    "geist",
+    "interface"
+  ],
+  "author": {
+    "name": "bottlebrushes",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-plugin-conductor-theme.git",
+      "range": "^0.1.0"
+    }
+  }
+}

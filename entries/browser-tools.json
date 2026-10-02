@@ -1,0 +1,31 @@
+{
+  "id": "browser-tools",
+  "displayName": "Browser Tools",
+  "description": "Test websites from your agent and inspect what actually happened in the browser. Navigate, click and type using page snapshots, then review screenshots and browser errors. Requires BB 0.43 or later with a connected desktop browser and an agent provider; normal provider and website-account costs apply. Tested on macOS; other host operating systems remain unverified.",
+  "icon": {
+    "url": "./icons/browser-tools-19495eb1.svg"
+  },
+  "tags": [
+    "browser-automation",
+    "web-testing",
+    "accessibility",
+    "screenshots",
+    "diagnostics"
+  ],
+  "author": {
+    "name": "Divyesh",
+    "github": "divyesh-puri",
+    "url": "https://github.com/divyesh-puri"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/divyesh-puri/bb-plugin-browser-tools.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/browser-tools.md",
+  "screenshots": [
+    "./screenshots/browser-tools/native-tools.jpg"
+  ]
+}

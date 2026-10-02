@@ -1,0 +1,35 @@
+{
+  "id": "receipts",
+  "displayName": "Receipts",
+  "description": "Compare coding-agent token usage and estimated API cost in one dashboard. Switch between 7, 30 and 90 days, with daily charts and breakdowns by model, project and day. Reads Claude Code, Codex, Hermes Agent, OpenCode and Pi usage from the bb server machine. Optional Cursor support requires a signed-in Cursor desktop app and its dashboard service; estimates are not subscription invoices.",
+  "icon": {
+    "url": "./icons/receipts-0407ee57.svg"
+  },
+  "tags": [
+    "usage",
+    "costs",
+    "tokens",
+    "analytics",
+    "hermes",
+    "opencode",
+    "claude-code",
+    "codex",
+    "cursor"
+  ],
+  "author": {
+    "name": "Christopher Böbel",
+    "github": "ChrBoebel",
+    "url": "https://github.com/ChrBoebel"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/ChrBoebel/bb-plugin-receipts.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/receipts.md",
+  "screenshots": [
+    "./screenshots/receipts/daily-tokens.jpg"
+  ]
+}

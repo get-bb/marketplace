@@ -1,0 +1,30 @@
+{
+  "id": "simple-summaries",
+  "displayName": "Simple Summaries",
+  "description": "Keep the latest thread summary in view as small italic text above the composer. Read the full summary with natural wrapping and no widget controls or badges. Generate summaries on demand or automatically after a thread becomes idle. Requires a configured BB provider and model; generation uses its normal subscription allowance or API billing.",
+  "icon": {
+    "url": "./icons/simple-summaries-5bdc7046.svg"
+  },
+  "tags": [
+    "threads",
+    "recap",
+    "composer",
+    "productivity"
+  ],
+  "author": {
+    "name": "Daniel",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/simple-summaries/summary-widget.png"
+  ],
+  "overview": "./overview/simple-summaries.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-simple-summaries.git",
+      "range": "^0.1.0"
+    }
+  }
+}

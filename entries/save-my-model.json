@@ -1,0 +1,11 @@
+{
+  "id": "save-my-model",
+  "displayName": "Save My Model",
+  "description": "Give every BB machine its own provider, model, and reasoning preference. Configure each machine through BB's native picker and review or clear browser-local records without changing the built-in New Thread defaults.",
+  "icon": { "url": "./icons/save-my-model-3e4cd1b9.svg" },
+  "screenshots": ["./screenshots/save-my-model/machine-preferences.png"],
+  "tags": ["preferences", "machines", "models", "providers", "reasoning"],
+  "author": { "name": "Mateo Cerquetella", "github": "MateoCerquetella", "url": "https://github.com/MateoCerquetella" },
+  "category": "agents-and-providers",
+  "source": { "git": { "url": "https://github.com/MateoCerquetella/bb-plugins.git", "subdir": "plugins/save-my-model", "range": "^0.1.3", "tagPrefix": "save-my-model/" } }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "stelow",
+  "displayName": "Stelow",
+  "description": "Stelow turns humans and AI agents into a cross-functional product team: research opportunity spaces, shape proposals with explicit trade-offs before code, plan typed scopes, and execute with gated reviews and agent workers. One board, one quiet inbox that only interrupts when you are needed.",
+  "icon": "Star",
+  "tags": [
+    "product-workflow",
+    "tasks",
+    "reviews",
+    "ai-agents",
+    "project-management",
+    "research",
+    "kanban",
+    "discovery",
+    "build",
+    "strategy"
+  ],
+  "author": {
+    "name": "calionauta",
+    "github": "calionauta",
+    "url": "https://github.com/calionauta"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/calionauta/bb-plugin-stelow.git",
+      "range": ">=0.23.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/stelow/inbox.png",
+    "./screenshots/stelow/build.png",
+    "./screenshots/stelow/research.png",
+    "./screenshots/stelow/explore.png",
+    "./screenshots/stelow/about.png"
+  ]
+}

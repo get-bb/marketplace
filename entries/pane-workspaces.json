@@ -1,0 +1,30 @@
+{
+  "id": "pane-workspaces",
+  "displayName": "Workspaces",
+  "description": "Switch whole pane arrangements for projects, thread groups and personal threads. Create thread workspaces, switch from sidebar controls or a searchable picker, and recover the previous layout. Layouts remain browser-local; stock bb reloads on a switch. Requires bb 0.42+ and uses internal host interfaces; disable the previous workspaces plugin before installing this renamed package.",
+  "icon": {
+    "url": "./icons/pane-workspaces-012e731c.svg"
+  },
+  "overview": "./overview/pane-workspaces.md",
+  "tags": [
+    "pane-layouts",
+    "projects",
+    "keyboard-shortcuts",
+    "session-restore"
+  ],
+  "author": {
+    "name": "MattBot",
+    "github": "mgmobrien",
+    "url": "https://github.com/mgmobrien"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/mgmobrien/bb-plugin-pane-workspaces.git",
+      "range": "^0.3.5"
+    }
+  },
+  "screenshots": [
+    "./screenshots/pane-workspaces/workspace-picker.png"
+  ]
+}

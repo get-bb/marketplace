@@ -1,0 +1,34 @@
+{
+  "id": "file-tree",
+  "displayName": "File Tree",
+  "description": "Keep project files in view while you move between BB threads. Pin a project source or thread workspace, search by name or path, and preview files. Send a file path to a chosen chat draft, create a blank markdown file, or delete a file after confirmation. Copy paths or files, and reveal files in Finder. Requires access to the files on the BB machine; Finder reveal is macOS-only.",
+  "icon": "Folder",
+  "tags": [
+    "files",
+    "workspace",
+    "finder",
+    "clipboard",
+    "preview",
+    "paths",
+    "explorer",
+    "file-tree",
+    "file-preview",
+    "navigation"
+  ],
+  "author": {
+    "name": "Yuriy Egorov",
+    "github": "fzrx-ego",
+    "url": "https://yuriy-egorov.pages.dev"
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/file-tree/overview.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/fzrx-ego/bb-plugin-file-tree.git",
+      "range": "^0.19.3"
+    }
+  },
+  "overview": "./overview/file-tree.md"
+}

@@ -1,7 +1,7 @@
 {
   "id": "fonts",
   "displayName": "Fonts",
-  "description": "Choose local font families and tune interface, code, and serif typography independently of BB's active theme.",
+  "description": "Choose local font families and tune interface, code, and serif typography independently of BB's active theme. Each role inherits size, weight, style, line height, and letter spacing from the theme until you override it, with live specimens before you save. Search the fonts installed on the device you view BB from, or type any family name. Installed-font discovery needs a secure desktop Chromium context; generic and manually entered families work everywhere, and no font data leaves the client.",
   "icon": {
     "url": "./icons/fonts-d693cc3f.svg"
   },
@@ -21,7 +21,13 @@
   "source": {
     "git": {
       "url": "https://github.com/gtramontina/bb-plugin-fonts.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
-  }
+  },
+  "screenshots": [
+    "./screenshots/fonts/settings.png",
+    "./screenshots/fonts/font-picker.png",
+    "./screenshots/fonts/compact.png"
+  ],
+  "overview": "./overview/fonts.md"
 }

@@ -1,0 +1,33 @@
+{
+  "id": "project-explorer",
+  "displayName": "Project Explorer",
+  "description": "Browse and edit the files behind a thread in the side panel, with git status colouring every name the way VS Code does. Modified files read amber, new files green, deleted red, and a collapsed folder inherits the colour of whatever changed inside it. Saving sends back the hash the file had when you opened it, so a change an agent made underneath you reports a conflict instead of being overwritten. Dotfiles such as .claude and .env appear, and directories load one level at a time, so a repository with node_modules opens as quickly as an empty one. Needs a thread whose environment has a workspace; git colours need that workspace to be a git repository.",
+  "icon": {
+    "url": "./icons/project-explorer-fa621964.svg"
+  },
+  "tags": [
+    "file-tree",
+    "editor",
+    "git-status",
+    "workspace",
+    "dotfiles",
+    "side-panel"
+  ],
+  "author": {
+    "name": "NinjasWeb",
+    "github": "ninjasweb",
+    "url": "https://github.com/ninjasweb"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/ninjasweb/bb-plugin-project-explorer.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/project-explorer/tree-and-editor.png",
+    "./screenshots/project-explorer/editing.png"
+  ],
+  "overview": "./overview/project-explorer.md"
+}

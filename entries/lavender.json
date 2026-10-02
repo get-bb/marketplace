@@ -1,0 +1,37 @@
+{
+  "id": "lavender",
+  "displayName": "Lavender",
+  "description": "Give your workspace a lavender palette, from charcoal-violet nights to pale-lilac days. Match conversations, menus, code previews and diffs with coordinated light and dark colors. Follow your Light, Dark or System setting while keeping your layout and fonts. All theme assets ship locally; no external account is required.",
+  "icon": {
+    "url": "./icons/lavender-f1617fae.svg"
+  },
+  "tags": [
+    "theme",
+    "light",
+    "dark",
+    "syntax-highlighting",
+    "violet",
+    "personalization"
+  ],
+  "author": {
+    "name": "Mateo Cerquetella",
+    "github": "MateoCerquetella",
+    "url": "https://github.com/MateoCerquetella"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/MateoCerquetella/bb-plugins.git",
+      "subdir": "plugins/lavender",
+      "range": "^0.1.0",
+      "tagPrefix": "lavender/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/lavender/dark-new-thread.jpg",
+    "./screenshots/lavender/light-new-thread.jpg",
+    "./screenshots/lavender/dark-settings.png",
+    "./screenshots/lavender/light-settings.png"
+  ],
+  "overview": "./overview/lavender.md"
+}

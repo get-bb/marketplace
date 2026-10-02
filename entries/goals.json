@@ -1,0 +1,32 @@
+{
+  "id": "goals",
+  "displayName": "Goals",
+  "description": "Keep your personal priorities available when you ask an agent to evaluate an idea or plan. Reorder goals and archive completed ones. Goals do not launch work automatically. Agent evaluations use your configured provider quota.",
+  "icon": {
+    "url": "./icons/goals-05aa27fc.png"
+  },
+  "tags": [
+    "priorities",
+    "personal-goals",
+    "planning"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "memory-and-context",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/goals",
+      "range": "^0.1.0",
+      "tagPrefix": "goals/"
+    }
+  },
+  "overview": "./overview/goals.md",
+  "screenshots": [
+    "./screenshots/goals/overview.png",
+    "./screenshots/goals/edit-goal.png"
+  ]
+}

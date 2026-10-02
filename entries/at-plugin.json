@@ -1,18 +1,28 @@
 {
   "id": "at-plugin",
-  "displayName": "@Plugin",
-  "description": "Adds installed and Community plugins to bb's @ menu. Use this to tell your agent about a plugin without describing its capabilities, or to search for community plugins and then have your agent install them for you.",
-  "icon": {
-    "url": "./icons/at-plugin-8e110197.svg"
-  },
-  "tags": ["plugins", "mentions", "composer", "marketplace", "interface"],
+  "displayName": "Plugin Finder",
+  "description": "Find the plugin for your task without leaving the thread. Type # or @ and a keyword to search the plugins you have and the ones in BB Community, then mention the one you want your agent to use. Your agent can also search the catalog itself from the command line.",
+  "icon": "Target",
+  "tags": [
+    "plugins",
+    "search",
+    "discovery",
+    "mentions",
+    "composer",
+    "marketplace",
+    "agents"
+  ],
   "author": {
     "name": "brsbl",
     "github": "brsbl",
     "url": "https://github.com/brsbl"
   },
   "category": "thread-content",
-  "screenshots": ["./screenshots/at-plugin/overview.png"],
+  "screenshots": [
+    "./screenshots/at-plugin/overview.png",
+    "./screenshots/at-plugin/mention.png"
+  ],
+  "overview": "./overview/at-plugin.md",
   "source": {
     "git": {
       "url": "https://github.com/brsbl/bb-plugins.git",

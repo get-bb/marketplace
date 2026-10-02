@@ -1,0 +1,33 @@
+{
+  "id": "moa",
+  "displayName": "Mixture of Agents",
+  "description": "Compare two independent perspectives before your chat model acts on each request. Enable MoA per chat, share model and fallback settings across chats, and inspect each participant’s input, answer and delivery receipt from the message history. Advisors retain separate sessions, and active models can continue beyond a long-wait notice. Uses your configured BB providers and accounts, adding model calls, latency and provider usage; remote file reads require the separately installed File Gateway plugin.",
+  "icon": {
+    "url": "./icons/moa-5a8efaa4.svg"
+  },
+  "tags": [
+    "multi-agent",
+    "second-opinion",
+    "model-routing",
+    "fallback",
+    "consultation-history"
+  ],
+  "author": {
+    "name": "Kirill Vechkasov",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-moa.git",
+      "ref": "v0.1.0-beta.6"
+    }
+  },
+  "screenshots": [
+    "./screenshots/moa/composer.jpg",
+    "./screenshots/moa/consultation-history.jpg",
+    "./screenshots/moa/settings-and-fallback.jpg"
+  ],
+  "overview": "./overview/moa.md"
+}

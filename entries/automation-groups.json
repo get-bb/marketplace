@@ -1,0 +1,32 @@
+{
+  "id": "automation-groups",
+  "displayName": "Autopilots",
+  "description": "Organize scheduled work into folders and control groups together. Inspect run history, errors and agent transcripts. Requires the bundled Automations plugin; agent runs use provider quota.",
+  "icon": {
+    "url": "./icons/automation-groups-0a50ad60.png"
+  },
+  "tags": [
+    "scheduling",
+    "automation",
+    "folders"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/automation-groups",
+      "range": "^0.1.0",
+      "tagPrefix": "automation-groups/"
+    }
+  },
+  "overview": "./overview/automation-groups.md",
+  "screenshots": [
+    "./screenshots/automation-groups/overview.png",
+    "./screenshots/automation-groups/history.png"
+  ]
+}

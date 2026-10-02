@@ -1,0 +1,31 @@
+{
+  "id": "fast-split",
+  "displayName": "Fast Split",
+  "description": "Open a neighboring New thread pane from the sidebar footer. Keep the current pane visible while starting another conversation. Available in wide layouts, up to BB\u2019s pane limit.",
+  "icon": {
+    "url": "./icons/fast-split-68260b9e.png"
+  },
+  "tags": [
+    "split-view",
+    "panes",
+    "multitasking"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/fast-split",
+      "range": "^0.1.0",
+      "tagPrefix": "fast-split/"
+    }
+  },
+  "overview": "./overview/fast-split.md",
+  "screenshots": [
+    "./screenshots/fast-split/overview.png"
+  ]
+}

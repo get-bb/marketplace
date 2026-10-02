@@ -1,0 +1,33 @@
+{
+  "id": "hmm-floating-terminal",
+  "displayName": "Hmm Floating Terminal",
+  "description": "Keep a shell open beside the project you are working in, without leaving the conversation for a panel or another app. The window follows the project: leave for another one and it steps aside, come back and its tabs return with the dev server still running. Shells belong to the project checkout rather than to a thread, so moving between a project's threads never costs you one. Sessions belong to BB, so closing the window leaves a build or an ssh session running and reopening replays the scrollback. Drag the grip to resize, minimize to the title bar, or maximize to fill the app. Requires BB 0.42 or newer and Plugin SDK 0.4.47 or newer.",
+  "icon": "Terminal",
+  "screenshots": [
+    "./screenshots/hmm-floating-terminal/window-over-thread.png",
+    "./screenshots/hmm-floating-terminal/maximized.png"
+  ],
+  "tags": [
+    "terminal",
+    "shell",
+    "tabs",
+    "xterm",
+    "pty",
+    "floating-window",
+    "sidebar",
+    "keyboard-shortcut"
+  ],
+  "author": {
+    "name": "Fadli Hidayatullah",
+    "github": "fadlihdytullah",
+    "url": "https://github.com/fadlihdytullah"
+  },
+  "category": "command-line",
+  "source": {
+    "git": {
+      "url": "https://github.com/fadlihdytullah/bb-plugin-hmm-floating-terminal.git",
+      "range": "^0.3.0"
+    }
+  },
+  "overview": "./overview/hmm-floating-terminal.md"
+}

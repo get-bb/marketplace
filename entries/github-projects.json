@@ -1,0 +1,32 @@
+{
+  "id": "github-projects",
+  "displayName": "GitHub Projects",
+  "description": "Creates and imports GitHub repositories directly from BB's native project picker. Injects dedicated creation and import options into the project dropdown. Automatically initializes private repositories, clones locally, and registers projects in BB with one click. Also provides the bb gh-project CLI and agent skill.",
+  "icon": {
+    "url": "./icons/github-projects-ebbef250.svg"
+  },
+  "tags": [
+    "github",
+    "projects",
+    "git",
+    "workspace",
+    "import",
+    "picker"
+  ],
+  "author": {
+    "name": "bottlebrushes",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/github-projects/picker-dropdown.png",
+    "./screenshots/github-projects/import-modal.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-plugin-github-projects.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -15,6 +15,7 @@ import {
   projectV1Manifest,
   pullRequestEntryFiles,
   readEntryAddedDates,
+  reservedPluginIdProblem,
   validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
@@ -29,6 +30,7 @@ const readJson = (path) => JSON.parse(readFileSync(path, "utf8"));
 const base = readJson(join(root, "marketplace.base.json"));
 const v1Schema = readJson(join(root, "schema", "marketplace.schema.json"));
 const v2Schema = readJson(join(root, "schema", "marketplace-v2.schema.json"));
+const reservedPluginIds = readJson(join(root, "reserved-plugin-ids.json"));
 
 const ajv = new Ajv({ allErrors: true, strict: false });
 addFormats(ajv);
@@ -91,6 +93,10 @@ for (const file of entryFiles) {
     problems.push(`${file}: The id "${entry.id}" occurs more than once.`);
   }
   seenPluginIds.add(entry.id);
+  const reservedProblem = reservedPluginIdProblem(entry.id, reservedPluginIds);
+  if (reservedProblem !== undefined) {
+    problems.push(`${file}: ${reservedProblem}`);
+  }
 
   if (!validateEntry(entry)) {
     for (const error of validateEntry.errors ?? []) {

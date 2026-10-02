@@ -1,0 +1,25 @@
+{
+  "id": "chief",
+  "displayName": "Chief",
+  "description": "Coordinates project supervisors that delegate work to managed worker and reviewer threads and follow it through completion.",
+  "icon": "Crown",
+  "tags": [
+    "agents",
+    "delegation",
+    "supervision",
+    "threads",
+    "workflows"
+  ],
+  "author": {
+    "name": "Divyesh",
+    "github": "divyesh-puri",
+    "url": "https://github.com/divyesh-puri"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/divyesh-puri/bb-plugin-chief.git",
+      "range": "^0.1.0"
+    }
+  }
+}

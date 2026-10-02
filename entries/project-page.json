@@ -1,0 +1,24 @@
+{
+  "id": "project-page",
+  "displayName": "Project Page",
+  "description": "Open a project's homepage from its name in BB's sidebar. The homepage renders the checkout's README, links to the configured repository, and starts a new thread in that project. Reads go through BB's project APIs and the project's enrolled host, so a remote browser client sees the same README as a local window. The sidebar chevron still expands and collapses threads, and disabling the plugin restores the original sidebar. Requires BB 0.43.1 or later with Plugin SDK 0.4.87 or later.",
+  "icon": "Folder",
+  "screenshots": [
+    "./screenshots/project-page/overview.png",
+    "./screenshots/project-page/readme-dark.png"
+  ],
+  "overview": "./overview/project-page.md",
+  "tags": ["readme", "sidebar", "homepage", "repository", "navigation", "markdown"],
+  "author": {
+    "name": "Jem",
+    "github": "jem-computer",
+    "url": "https://github.com/jem-computer"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/jem-computer/bb-project-page.git",
+      "range": "^0.1.0"
+    }
+  }
+}

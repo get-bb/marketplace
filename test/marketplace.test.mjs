@@ -27,6 +27,7 @@ import {
   projectV1Manifest,
   pullRequestEntryFiles,
   readEntryAddedDates,
+  reservedPluginIdProblem,
   validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
@@ -282,6 +283,18 @@ test("a later entry edit does not change its first addition date", () => {
 
     const dates = readEntryAddedDates(root);
     assert.equal(dates.get("example"), "2026-01-02T03:04:05Z");
+
+    runGit(root, ["mv", "entries/example.json", "entries/renamed.json"]);
+    runGit(root, ["commit", "--quiet", "-m", "Rename entry"], {
+      env: {
+        ...process.env,
+        GIT_AUTHOR_DATE: "2026-03-04T05:06:07+00:00",
+        GIT_COMMITTER_DATE: "2026-03-04T05:06:07+00:00",
+      },
+    });
+    const renamedDates = readEntryAddedDates(root);
+    assert.equal(renamedDates.get("renamed"), "2026-03-04T05:06:07Z");
+    assert.equal(renamedDates.get("example"), "2026-01-02T03:04:05Z");
   } finally {
     rmSync(root, { recursive: true, force: true });
   }
@@ -602,4 +615,26 @@ test("the overview check finds an unreferenced file", () => {
     const orphans = findOrphanOverviewFiles(root, new Set(["overview/used.md"]));
     assert.deepEqual(orphans, ["overview/orphan.md"]);
   });
+});
+
+test("reserved plugin ids reject the bb-- prefix and bundled plugin ids", () => {
+  const reserved = JSON.parse(
+    readFileSync(join(testRoot, "..", "reserved-plugin-ids.json"), "utf8"),
+  );
+  assert.match(
+    reservedPluginIdProblem("bb--notes", reserved),
+    /reserved for plugins bundled with BB/,
+  );
+  assert.match(
+    reservedPluginIdProblem("memory", reserved),
+    /belongs to a plugin bundled with BB/,
+  );
+  assert.equal(reservedPluginIdProblem("bb-office", reserved), undefined);
+  assert.equal(reservedPluginIdProblem("provider-usage", reserved), undefined);
+  assert.match(
+    reservedPluginIdProblem("docs", reserved),
+    /belongs to a plugin bundled with BB/,
+  );
+  assert.equal(reservedPluginIdProblem(undefined, reserved), undefined);
+  assert.equal(reservedPluginIdProblem(42, reserved), undefined);
 });

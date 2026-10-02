@@ -1,15 +1,14 @@
 {
   "id": "sql",
   "displayName": "SQL",
-  "description": "Browse Postgres schemas and run read-only SQL from a bb panel or agent tools; write support is planned for 0.5.",
-  "icon": "Database",
+  "description": "Browse Postgres schemas and run SQL from a bb panel or agent tools. Controlled write/DDL (0.5): Agent write and Allow DDL off by default.",
+  "icon": "Layers",
   "tags": [
     "sql",
     "postgres",
     "database",
     "developer-tools",
-    "query",
-    "read-only"
+    "query"
   ],
   "author": {
     "name": "yazydzhi",
@@ -20,7 +19,7 @@
   "source": {
     "git": {
       "url": "https://github.com/yazydzhi/bb-plugin-sql.git",
-      "range": "^0.2.0"
+      "range": "^0.5.4"
     }
   }
 }

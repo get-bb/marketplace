@@ -1,0 +1,31 @@
+{
+  "id": "usage-limits",
+  "displayName": "Usage Limits",
+  "description": "See provider quota windows and reset times without leaving your work. View details across connected hosts and refresh on demand. Requires providers that report quota information to BB.",
+  "icon": {
+    "url": "./icons/usage-limits-137be204.png"
+  },
+  "tags": [
+    "quota",
+    "reset-times",
+    "sidebar"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/usage-limits",
+      "range": "^0.1.0",
+      "tagPrefix": "usage-limits/"
+    }
+  },
+  "overview": "./overview/usage-limits.md",
+  "screenshots": [
+    "./screenshots/usage-limits/overview.png"
+  ]
+}

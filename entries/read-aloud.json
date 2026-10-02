@@ -1,0 +1,36 @@
+{
+  "id": "read-aloud",
+  "displayName": "Read Aloud",
+  "description": "Listen to any assistant message while you keep working, with speech that starts playing before the whole message is synthesized. A speaker button on every message row starts playback, and the player adds pause, stop, ten-second skips in both directions, and speeds from 0.75x to 2x that persist between sessions. Playback stops on its own when you switch threads or send a new prompt, and stopping cancels the synthesis stream instead of leaving it to finish unheard. Code blocks, link targets, and bare URLs are flattened out of the text first, so a voice reads prose instead of syntax. Speech uses Microsoft Edge's public neural voices over the network, so it needs an internet connection, but no account, API key, or paid service.",
+  "icon": {
+    "url": "./icons/read-aloud-732fafac.svg"
+  },
+  "screenshots": [
+    "./screenshots/read-aloud/player.png"
+  ],
+  "overview": "./overview/read-aloud.md",
+  "tags": [
+    "text-to-speech",
+    "audio",
+    "accessibility",
+    "voice",
+    "speech",
+    "listen",
+    "message-actions",
+    "hands-free"
+  ],
+  "author": {
+    "name": "Chris Sells",
+    "github": "csells",
+    "url": "https://github.com/csells"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/csells/bb-plugins.git",
+      "subdir": "plugins/read-aloud",
+      "range": "^0.1.1",
+      "tagPrefix": "read-aloud/"
+    }
+  }
+}

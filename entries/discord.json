@@ -1,0 +1,31 @@
+{
+  "id": "discord",
+  "displayName": "Discord",
+  "description": "Run bb agent threads from Discord, answer approvals, and manage your server with permission-gated tools. Start a dedicated conversation with a bot mention and receive final answers in its Discord thread. Choose the project, machine, model, and permission mode in bb. Requires a Discord bot with Message Content Intent and a configured bb agent provider.",
+  "icon": "Discord",
+  "screenshots": [
+    "./screenshots/discord/test-run-discord.png",
+    "./screenshots/discord/discord-settings.png",
+    "./screenshots/discord/bb-bot-pair.png"
+  ],
+  "overview": "./overview/discord.md",
+  "category": "cloud-and-remote",
+  "author": {
+    "name": "Mayank",
+    "github": "MayankBansal12",
+    "url": "https://github.com/MayankBansal12"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/MayankBansal12/bb-plugin-discord.git",
+      "range": "^0.1.2"
+    }
+  },
+  "tags": [
+    "chat",
+    "remote-access",
+    "approvals",
+    "agent-tools",
+    "server-management"
+  ]
+}

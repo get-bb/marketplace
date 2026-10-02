@@ -1,0 +1,34 @@
+{
+  "id": "beacon",
+  "displayName": "Beacon",
+  "description": "See CPU, memory, disk, and processes on the BB server from the footer. Optional toasts after a minute of high load. Network rates are Linux-only.",
+  "icon": {
+    "url": "./icons/beacon-ef5cb673.svg"
+  },
+  "screenshots": [
+    "./screenshots/beacon/screenshot.jpg"
+  ],
+  "overview": "./overview/beacon.md",
+  "tags": [
+    "monitoring",
+    "cpu",
+    "memory",
+    "disk",
+    "processes",
+    "linux"
+  ],
+  "author": {
+    "name": "Johan Gafaro",
+    "github": "g4f4r0",
+    "url": "https://github.com/g4f4r0"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/g4f4r0/bb-plugins.git",
+      "subdir": "bb-plugin-beacon",
+      "range": "^0.1.0",
+      "tagPrefix": "beacon/"
+    }
+  }
+}

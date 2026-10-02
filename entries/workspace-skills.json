@@ -1,0 +1,30 @@
+{
+  "id": "workspace-skills",
+  "displayName": "Workspace Skills",
+  "description": "Connect external skill repositories and workspace folders directly to BB without hardcoding paths or copying files. Discovers nested skill packages across your configured directories and registers them into BB's shared skill roots. Discovered skills appear in the slash menu and session instructions across all projects and providers. Configure paths via Settings or the workspace-skills CLI subcommand. Changes to skills in their source repositories reflect immediately without re-installing.",
+  "icon": "FolderKanban",
+  "tags": [
+    "skills",
+    "workspace",
+    "monorepo",
+    "context",
+    "prompt-injection",
+    "configuration"
+  ],
+  "author": {
+    "name": "VanDalkvist",
+    "github": "VanDalkvist",
+    "url": "https://github.com/VanDalkvist"
+  },
+  "category": "memory-and-context",
+  "source": {
+    "git": {
+      "url": "https://github.com/VanDalkvist/bb-plugin-workspace-skills.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/workspace-skills/settings.png"
+  ],
+  "overview": "./overview/workspace-skills.md"
+}

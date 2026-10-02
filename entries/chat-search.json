@@ -1,0 +1,32 @@
+{
+  "id": "chat-search",
+  "displayName": "Chat Search",
+  "description": "Find any word in the chat you are reading and see every occurrence highlighted in the messages themselves. A Find in chat tab in the thread panel lists each hit with context, and Enter steps through them while the current one glows brighter. Hits cover the whole thread, including messages scrolled far out of view, and highlights follow new messages as they stream in. Match case, regular expressions, a Mod+Shift+F shortcut, and a bb chat-search command for agents are included. Runs locally with no external service.",
+  "icon": "Search",
+  "screenshots": [
+    "./screenshots/chat-search/find-in-chat.png"
+  ],
+  "overview": "./overview/chat-search.md",
+  "tags": [
+    "search",
+    "find",
+    "find-in-page",
+    "highlight",
+    "messages",
+    "threads",
+    "regex",
+    "thread-panel"
+  ],
+  "author": {
+    "name": "Yusuf Akbulut",
+    "github": "yusuf8834",
+    "url": "https://github.com/yusuf8834"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/yusuf8834/bb-chat-search.git",
+      "range": "^0.1.0"
+    }
+  }
+}

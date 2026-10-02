@@ -1,9 +1,11 @@
 {
   "id": "vscode-server",
   "displayName": "VS Code Server",
-  "description": "Embed a VS Code Server or code-server workspace in a BB thread panel, with local-server capture and desktop-profile import.",
+  "description": "Embeds a self-hosted code-server or VS Code Server in a thread's right panel, opened at that thread's workspace so the editor shows the same files the agent is working on. One panel per thread, a compact header with the server URL and an Open in Browser link, and — for a loopback server — import of your desktop VS Code profile, keybindings, and extensions into it. You bring the server; the plugin embeds it and never proxies or weakens its authentication.",
   "icon": { "url": "./icons/vscode-server-fc85ccb0.svg" },
-  "tags": ["vscode", "code-server", "editor", "development", "right-panel"],
+  "screenshots": ["./screenshots/vscode-server/panel.png"],
+  "overview": "./overview/vscode-server.md",
+  "tags": ["vscode", "code-server", "editor", "development", "right-panel", "workspace"],
   "author": {
     "name": "GantisStorm",
     "github": "GantisStorm",
@@ -13,7 +15,7 @@
   "source": {
     "git": {
       "url": "https://github.com/GantisStorm/bb-plugin-vscode-server.git",
-      "range": "^0.1.0"
+      "range": "^0.1.18"
     }
   }
 }

@@ -1,0 +1,24 @@
+{
+  "id": "plugin-vault",
+  "displayName": "Plugin Vault",
+  "description": "Label and annotate BB plugins right on the Plugins page. Custom labels, an automatic Installed label, and blurred names for plugins you rejected.",
+  "icon": "Archive",
+  "tags": ["plugins", "labels", "notes", "organization"],
+  "author": {
+    "name": "Maxim Tkachenko",
+    "github": "mtkachenk0",
+    "url": "https://github.com/mtkachenk0"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/mtkachenk0/bb-plugin-plugin-vault.git",
+      "range": "^0.2.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/plugin-vault/browse.png",
+    "./screenshots/plugin-vault/editor.png"
+  ],
+  "overview": "./overview/plugin-vault.md"
+}

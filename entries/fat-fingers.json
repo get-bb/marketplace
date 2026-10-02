@@ -1,0 +1,35 @@
+{
+  "id": "fat-fingers",
+  "displayName": "Fat Fingers",
+  "description": "Makes every icon in bb 50% larger on your phone, so a thumb has something to see and something to hit. Applies under the same phone test bb uses for its own touch sizing, so a desktop window with a mouse is left exactly as it was. Scales the icon's layout box rather than painting it larger, so the button around it grows to fit. Leaves diagrams and images inside messages at their normal size. Works in the bb mobile app and in a phone browser, with nothing to configure and no network access.",
+  "icon": "ZoomIn",
+  "screenshots": [
+    "./screenshots/fat-fingers/before-after.png",
+    "./screenshots/fat-fingers/plugins-page.png"
+  ],
+  "overview": "./overview/fat-fingers.md",
+  "tags": [
+    "mobile",
+    "phone",
+    "touch",
+    "icons",
+    "accessibility",
+    "bigger",
+    "scale",
+    "tap-target"
+  ],
+  "author": {
+    "name": "Chris Sells",
+    "github": "csells",
+    "url": "https://github.com/csells"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/csells/bb-plugins.git",
+      "subdir": "plugins/fat-fingers",
+      "range": "^0.1.0",
+      "tagPrefix": "fat-fingers/"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "work-map",
+  "displayName": "Work Map",
+  "description": "Spot the work that needs you and manage it without leaving the map. Expand tasks and sessions in place, keep pinned work prominent, and follow running agents and results waiting for you. Start or continue sessions, manage project areas, and leave task handoffs with Undo. Requires BB 0.43 or later and its built-in Tasks plugin; sessions use your chosen BB provider and its usual account requirements and costs.",
+  "icon": {
+    "url": "./icons/work-map-07c6fa8d.svg"
+  },
+  "tags": [
+    "tasks",
+    "projects",
+    "sessions",
+    "focus",
+    "attention",
+    "spatial",
+    "agent-management"
+  ],
+  "author": {
+    "name": "Pawel Jozefiak",
+    "github": "joozio",
+    "url": "https://github.com/joozio"
+  },
+  "category": "tasks-and-workflows",
+  "overview": "./overview/work-map.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/joozio/bb-plugin-work-map.git",
+      "range": "^0.1.0"
+    }
+  }
+}

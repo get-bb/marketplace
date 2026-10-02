@@ -1,0 +1,36 @@
+{
+  "id": "vcs-widget",
+  "displayName": "VCS Widget",
+  "description": "Run Git from the bb thread header instead of a terminal: branches, commits and history, on the machine that owns the worktree. Every push, rebase and reset shows the exact git command before it runs.",
+  "icon": "GitBranch",
+  "tags": [
+    "git",
+    "version-control",
+    "branches",
+    "checkout",
+    "commit",
+    "diff",
+    "history",
+    "rebase",
+    "push",
+    "worktree"
+  ],
+  "author": {
+    "name": "Costa Fotiadis",
+    "github": "CostaFot",
+    "url": "https://www.costafotiadis.com"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/vcs-widget/popup.png",
+    "./screenshots/vcs-widget/commit.png",
+    "./screenshots/vcs-widget/log.png"
+  ],
+  "overview": "./overview/vcs-widget.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/CostaFot/bb-plugin-vcs-widget.git",
+      "range": "^0.7.0"
+    }
+  }
+}

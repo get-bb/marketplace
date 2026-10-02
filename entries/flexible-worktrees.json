@@ -1,0 +1,24 @@
+{
+  "id": "flexible-worktrees",
+  "displayName": "Flexible Worktrees",
+  "description": "Start threads in the checkout you choose, with control over new worktree directories, folder names, and branches. Filter existing checkouts or enter another clone's path in a compact Workspace popover. Worktrees and branches are retained when threads are archived or deleted. Requires BB 0.43+, Plugin SDK 0.4.87+, and Git 2.31+ on the selected machine; no external account or service is needed.",
+  "icon": { "url": "./icons/flexible-worktrees-88a15b67.svg" },
+  "tags": ["git", "worktrees", "checkouts", "branches", "environments"],
+  "author": {
+    "name": "Shashank Pachava",
+    "github": "spachava753",
+    "url": "https://github.com/spachava753"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/spachava753/bb-plugin-flexible-worktrees.git",
+      "range": "^0.1.0"
+    }
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/flexible-worktrees/new-worktree.jpg",
+    "./screenshots/flexible-worktrees/existing-checkout.jpg"
+  ],
+  "overview": "./overview/flexible-worktrees.md"
+}

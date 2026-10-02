@@ -1,0 +1,37 @@
+{
+  "id": "chatgpt-skin",
+  "displayName": "ChatGPT Skin",
+  "description": "Dress bb in the ChatGPT desktop app's look, from the canvas and sidebar down to every button state, in light and dark. Both palettes ship, so switching modes changes the light and not the layout. Hover, active, focus-visible, and disabled states are themed across buttons, menu rows, tabs, switches, chips, and icon buttons. Menus, dialogs, popovers, tooltips, and the command palette share one surface ramp, and matching code themes carry the palette into syntax highlighting. No account and no network request: bb reads the stylesheet straight from the plugin directory.",
+  "icon": {
+    "url": "./icons/chatgpt-skin-e949df20.svg"
+  },
+  "screenshots": [
+    "./screenshots/chatgpt-skin/01-dark-appearance.png",
+    "./screenshots/chatgpt-skin/02-light-appearance.png",
+    "./screenshots/chatgpt-skin/03-dark-palette-menu.png",
+    "./screenshots/chatgpt-skin/04-light-palette-menu.png"
+  ],
+  "tags": [
+    "chatgpt",
+    "theme",
+    "dark-mode",
+    "light-mode",
+    "colors",
+    "syntax-highlighting",
+    "appearance",
+    "desktop"
+  ],
+  "author": {
+    "name": "Euan Guo",
+    "github": "euanguo",
+    "url": "https://github.com/euanguo"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/euanguo/bb-plugin-chatgpt-skin.git",
+      "range": "^0.1.1"
+    }
+  },
+  "overview": "./overview/chatgpt-skin.md"
+}

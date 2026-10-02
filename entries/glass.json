@@ -1,0 +1,34 @@
+{
+  "id": "glass",
+  "displayName": "Transparency",
+  "description": "Translucent BB surfaces with six animated backdrops, custom GLSL shaders, wallpaper, and adjustable frost. Preview your look and tune colors, surfaces, and motion.",
+  "icon": {
+    "url": "./icons/glass-a2f59fa3.svg"
+  },
+  "tags": [
+    "themes",
+    "appearance",
+    "glass",
+    "shaders",
+    "wallpaper",
+    "customization"
+  ],
+  "author": {
+    "name": "Pritam Sharma",
+    "github": "notpritam",
+    "url": "https://notpritam.in/plugins/transparency"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/glass/studio-dark.png",
+    "./screenshots/glass/shader-editor.png",
+    "./screenshots/glass/studio-light.png"
+  ],
+  "overview": "./overview/glass.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/notpritam/bb-plugin-glass.git",
+      "range": "^0.2.0"
+    }
+  }
+}

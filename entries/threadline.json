@@ -1,0 +1,33 @@
+{
+  "id": "threadline",
+  "displayName": "Threadline",
+  "description": "Jump to any point in a long conversation from a minimap of your own prompts. A slim rail on the right edge of a thread shows one marker per prompt you sent, and the current prompt stays highlighted as you scroll. Hover the rail to read each prompt's preview and click to jump straight to it, even when the message is far off-screen. Choose whether the rail sits at the top, middle, or bottom of the conversation. Runs entirely inside BB with no account or external service.",
+  "icon": { "url": "./icons/threadline-b9678a75.svg" },
+  "tags": [
+    "navigation",
+    "minimap",
+    "conversation",
+    "prompts",
+    "scroll",
+    "timeline",
+    "outline"
+  ],
+  "author": {
+    "name": "frankieshakes",
+    "github": "frankieshakes",
+    "url": "https://github.com/frankieshakes"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/frankieshakes/bb-plugin-threadline.git",
+      "range": "^0.1.4"
+    }
+  },
+  "screenshots": [
+    "./screenshots/threadline/rail.png",
+    "./screenshots/threadline/popover.png",
+    "./screenshots/threadline/settings.png"
+  ],
+  "overview": "./overview/threadline.md"
+}

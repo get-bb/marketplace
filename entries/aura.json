@@ -1,0 +1,36 @@
+{
+  "id": "aura",
+  "displayName": "Aura",
+  "description": "Make your BB workspace your own with personal wallpapers and animated pixel textures. Save six backgrounds and switch between them in one click. Choose half or full wallpaper on New thread, and keep full-height wallpaper beside readable conversations. Images stay on your BB server; no external account is required.",
+  "icon": {
+    "url": "./icons/aura-5e185586.svg"
+  },
+  "tags": [
+    "wallpaper",
+    "backgrounds",
+    "dithering",
+    "personalization",
+    "saved-presets",
+    "composer"
+  ],
+  "author": {
+    "name": "Mateo Cerquetella",
+    "github": "MateoCerquetella",
+    "url": "https://github.com/MateoCerquetella"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/MateoCerquetella/bb-plugins.git",
+      "subdir": "plugins/aura",
+      "range": "^0.2.1",
+      "tagPrefix": "aura/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/aura/01-alpine-half.jpg",
+    "./screenshots/aura/02-moonlight-full.jpg",
+    "./screenshots/aura/03-chat.jpg",
+    "./screenshots/aura/04-saved-slots.jpg"
+  ]
+}

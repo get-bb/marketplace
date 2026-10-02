@@ -1,0 +1,30 @@
+{
+  "id": "fx",
+  "displayName": "fx",
+  "description": "Run the fx coding agent in BB threads. Pick models available to your account, follow replies and tool activity, and resume sessions. Requires the fx CLI and an authenticated fx account; model access and charges depend on your provider.",
+  "icon": {
+    "url": "./icons/fx-97ef5cbf.svg"
+  },
+  "tags": [
+    "provider",
+    "acp",
+    "coding-agent",
+    "agents"
+  ],
+  "author": {
+    "name": "Mayank Bansal",
+    "github": "MayankBansal12",
+    "url": "https://github.com/MayankBansal12"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/MayankBansal12/bb-plugin-fx-provider.git",
+      "range": "^0.3.0"
+    }
+  },
+  "category": "agents-and-providers",
+  "overview": "./overview/fx.md",
+  "screenshots": [
+    "./screenshots/fx/model-picker.png"
+  ]
+}

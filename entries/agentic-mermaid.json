@@ -1,0 +1,37 @@
+{
+  "id": "agentic-mermaid",
+  "displayName": "Agentic Mermaid",
+  "description": "Draws Mermaid diagrams in chat with outlined boxes, routed edges, and your theme's colors. Renders 15 diagram types, including gantt, pie, mindmap, timeline, and architecture, through the agentic-mermaid library. Git graphs and types it can't draw keep bb's own renderer. Diagrams recolor when you switch between light and dark mode. Relies on bb internals, so a bb update can return diagrams to the stock renderer until the plugin catches up.",
+  "icon": {
+    "url": "./icons/agentic-mermaid-49b421e5.svg"
+  },
+  "tags": [
+    "mermaid",
+    "diagrams",
+    "charts",
+    "gantt",
+    "flowchart",
+    "sequence-diagram",
+    "mindmap",
+    "markdown",
+    "visualization"
+  ],
+  "author": {
+    "name": "bottlebrushes",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "thread-content",
+  "overview": "./overview/agentic-mermaid.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-plugin-agentic-mermaid.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/agentic-mermaid/gantt-and-flowchart.png",
+    "./screenshots/agentic-mermaid/sequence-and-state.png",
+    "./screenshots/agentic-mermaid/pie-and-mindmap.png"
+  ]
+}

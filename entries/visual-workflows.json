@@ -1,0 +1,32 @@
+{
+  "id": "visual-workflows",
+  "displayName": "Visual Workflows",
+  "description": "Connect specialist steps on a canvas and follow their outputs through each run. Includes local step profiles and can import independent copies from Agent Roles. Runs use your configured providers and their quotas.",
+  "icon": {
+    "url": "./icons/visual-workflows-dc790f9b.png"
+  },
+  "tags": [
+    "specialists",
+    "workflow-editor",
+    "orchestration"
+  ],
+  "author": {
+    "name": "Dmitrii Kapustin",
+    "github": "dmitriikapustin",
+    "url": "https://github.com/dmitriikapustin"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/dmitriikapustin/bb-plugins-by-kapustin.git",
+      "subdir": "plugins/visual-workflows",
+      "range": "^0.1.0",
+      "tagPrefix": "visual-workflows/"
+    }
+  },
+  "overview": "./overview/visual-workflows.md",
+  "screenshots": [
+    "./screenshots/visual-workflows/overview.png",
+    "./screenshots/visual-workflows/profiles.png"
+  ]
+}

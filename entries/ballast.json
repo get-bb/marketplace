@@ -1,0 +1,37 @@
+{
+  "id": "ballast",
+  "displayName": "Ballast",
+  "description": "Know which thread is eating your RAM before the machine starts paging. Reads vm_stat page classes rather than the free percentage macOS reports, which counts inactive pages as free and stays reassuring while the box holds gigabytes of swap — pressure is graded on headroom, paging rate, compression and the kernel's own verdict, and the banner names the signal that decided. Consumers roll up by process tree and by BB thread, matched through worktree paths, so a 2.4GB row names a thread you can steer instead of six identical node processes. A guard can throttle BB concurrency, ask the hungriest threads to release memory, stop orphaned processes, or hand the problem to an agent — every one of those is off until you turn it on. Nothing is stopped unless nothing can still be waiting on it, and the apply step takes only ids the plan minted, re-checked against the live process table. macOS and Linux, no account or external service.",
+  "icon": {
+    "url": "./icons/ballast-23a89a80.svg"
+  },
+  "screenshots": [
+    "./screenshots/ballast/overview.png",
+    "./screenshots/ballast/threads.png",
+    "./screenshots/ballast/relief.png",
+    "./screenshots/ballast/settings.png"
+  ],
+  "overview": "./overview/ballast.md",
+  "tags": [
+    "memory",
+    "ram",
+    "memory-pressure",
+    "swap",
+    "monitoring",
+    "performance",
+    "processes",
+    "resource-usage"
+  ],
+  "author": {
+    "name": "Braedon Saunders",
+    "github": "braedonsaunders",
+    "url": "https://github.com/braedonsaunders"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/braedonsaunders/bb-plugin-ballast.git",
+      "range": "^0.1.0"
+    }
+  }
+}

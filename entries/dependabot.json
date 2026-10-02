@@ -5,6 +5,8 @@
   "icon": {
     "url": "./icons/dependabot-5b70e0d3.svg"
   },
+  "screenshots": ["./screenshots/dependabot/overview.png"],
+  "overview": "./overview/dependabot.md",
   "tags": ["dependabot", "github", "security", "dependencies", "alerts"],
   "author": {
     "name": "Nicolas Charpentier",

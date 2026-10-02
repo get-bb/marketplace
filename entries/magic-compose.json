@@ -1,0 +1,34 @@
+{
+  "id": "magic-compose",
+  "displayName": "Magic Compose",
+  "description": "Choose where a new thread runs as you type your prompt. Let Jev select the project, machine, model, reasoning level, and environment, then review or override each choice before sending. Tune its choices with your instructions and try routing a prompt from settings. Requires BB 0.43+ and a Vercel AI Gateway or OpenRouter API key; prompts, routing instructions, project context, and machine information are sent to TypeSafe through your gateway, with usage charges.",
+  "icon": {
+    "url": "./icons/magic-compose-b20b145f.svg"
+  },
+  "screenshots": [
+    "./screenshots/magic-compose/overview.jpg"
+  ],
+  "overview": "./overview/magic-compose.md",
+  "tags": [
+    "routing",
+    "composer",
+    "models",
+    "reasoning",
+    "machines",
+    "projects"
+  ],
+  "author": {
+    "name": "Sawyer Hood",
+    "github": "SawyerHood",
+    "url": "https://github.com/SawyerHood"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/magic-compose",
+      "tagPrefix": "magic-compose/",
+      "range": ">=0.1.0"
+    }
+  }
+}

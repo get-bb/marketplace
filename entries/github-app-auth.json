@@ -1,0 +1,29 @@
+{
+  "id": "github-app-auth",
+  "displayName": "GitHub App Auth",
+  "description": "Run your bb agents as a GitHub App, so pull requests and commits open under the app's name and you can review them on GitHub. Each agent turn gets a short-lived installation token as GH_TOKEN and GITHUB_TOKEN, so gh and git act as the app. Commits use the app's bot identity and pushes go over the token. Enable only the projects you choose, with the scopes you grant the app, and personal projects stay yours. Needs a GitHub App you create and the gh CLI on the machines that run threads.",
+  "icon": "Github",
+  "tags": [
+    "github",
+    "github-app",
+    "authentication",
+    "pull-requests",
+    "git",
+    "credentials",
+    "bot-identity",
+    "tokens"
+  ],
+  "author": {
+    "name": "grrowl",
+    "github": "grrowl",
+    "url": "https://github.com/grrowl"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/grrowl/bb-github-app-auth.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/github-app-auth.md"
+}

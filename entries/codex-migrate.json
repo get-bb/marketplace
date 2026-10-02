@@ -1,0 +1,26 @@
+{
+  "id": "codex-migrate",
+  "displayName": "Codex Migrate",
+  "description": "Keep your existing Codex projects and chats together in BB. Preview selected folders and follow the import progress for each one. Preserve conversations, available attachments, dates, and archive state with a BB database backup before changes. Requires BB 0.44, Git, and a separate Codex CLI installation on the same computer.",
+  "icon": {
+    "url": "./icons/codex-migrate-b68a86e9.svg"
+  },
+  "screenshots": [
+    "./screenshots/codex-migrate/projects.png",
+    "./screenshots/codex-migrate/preview.png"
+  ],
+  "tags": ["codex", "migration", "projects", "chat-history", "import"],
+  "author": {
+    "name": "aotd1",
+    "github": "aotd1",
+    "url": "https://github.com/aotd1"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/aotd1/bb-plugin-codex-migrate.git",
+      "range": "^0.3.11"
+    }
+  },
+  "overview": "./overview/codex-migrate.md"
+}

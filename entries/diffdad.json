@@ -1,0 +1,30 @@
+{
+  "id": "diffdad",
+  "displayName": "Diff Dad",
+  "description": "See only the pull requests that ask for you by name, and read each one as a narrated review instead of a raw diff. The sidebar page lists your direct review requests with criticality tags, approvals, verdict, and age, sorted the way Diff Dad's own queue is, with a repo filter. An All tab embeds Diff Dad's command center, and a thread panel action opens the thread's own pull request review. Agents get a diffdad_review tool that returns a PR's verdict, TL;DR, and concerns as text. Requires Diff Dad's daemon running locally with its own GitHub token and AI provider, and the GitHub CLI logged in.",
+  "icon": {
+    "url": "./icons/diffdad-801e61c7.png"
+  },
+  "overview": "./overview/diffdad.md",
+  "tags": [
+    "pull-requests",
+    "github",
+    "review",
+    "narrated-review",
+    "queue",
+    "diff",
+    "code-review"
+  ],
+  "author": {
+    "name": "Jonas Brusman",
+    "github": "himynameisjonas",
+    "url": "https://github.com/himynameisjonas"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/himynameisjonas/bb-plugin-diffdad.git",
+      "range": "^0.1.0"
+    }
+  }
+}

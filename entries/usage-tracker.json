@@ -1,14 +1,24 @@
 {
   "id": "usage-tracker",
   "displayName": "Usage Tracker",
-  "description": "Shows compact Codex and Claude Code five-hour and weekly usage limits in the BB sidebar footer.",
-  "icon": "ChartColumn",
+  "description": "See subscription limits without leaving BB. Track Codex, Claude Code, Cursor, Grok, OpenCode, and Antigravity in a compact sidebar summary with provider details and 80/95% warnings.",
+  "icon": {
+    "url": "./icons/usage-tracker-a0ebde76.svg"
+  },
   "tags": [
     "usage",
     "rate-limits",
     "codex",
     "claude-code",
+    "cursor",
+    "grok",
+    "opencode",
+    "antigravity",
+    "quota",
     "sidebar"
+  ],
+  "screenshots": [
+    "./screenshots/usage-tracker/sidebar-details.png"
   ],
   "author": {
     "name": "Mateo Cerquetella",
@@ -20,7 +30,7 @@
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",
       "subdir": "plugins/usage-tracker",
-      "range": "^0.1.5",
+      "range": "^0.1.6",
       "tagPrefix": "usage-tracker/"
     }
   }

@@ -1,0 +1,26 @@
+{
+  "id": "agent-board",
+  "displayName": "Agent Board",
+  "description": "See what BB agents are doing and what needs attention. Follow models, tools, public progress updates, and bounded execution timelines in global and thread views. Optional Ollama Fleet 0.6.0 or newer adds delegated local job visibility; Redteam is also optional. Requires BB.",
+  "icon": "Columns",
+  "tags": [
+    "agents",
+    "observability",
+    "dashboard",
+    "timeline"
+  ],
+  "author": {
+    "name": "Aaron Phifer",
+    "github": "aaronphifer",
+    "url": "https://github.com/aaronphifer"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/aaronphifer/bb-plugin-agent-board.git",
+      "range": "^0.6.1"
+    }
+  },
+  "screenshots": ["./screenshots/agent-board/global.png"],
+  "overview": "./overview/agent-board.md"
+}

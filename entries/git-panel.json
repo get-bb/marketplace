@@ -1,0 +1,36 @@
+{
+  "id": "git-panel",
+  "displayName": "Git worktree",
+  "description": "Git for the thread's workspace: stage, AI-commit, branch, and sync without leaving BB.",
+  "icon": {
+    "url": "./icons/git-panel-52cd1c8f.svg"
+  },
+  "tags": [
+    "git",
+    "worktree",
+    "version-control",
+    "commit",
+    "branches",
+    "stage",
+    "push",
+    "pull",
+    "stash"
+  ],
+  "author": {
+    "name": "Diip3sh",
+    "github": "diip3sh",
+    "url": "https://github.com/diip3sh"
+  },
+  "category": "code-and-reviews",
+  "overview": "./overview/git-panel.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/diip3sh/bb-plugin-git-panel.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/git-panel/git-panel-1.png",
+    "./screenshots/git-panel/git-panel-2.png"
+  ]
+}

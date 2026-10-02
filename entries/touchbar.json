@@ -1,0 +1,27 @@
+{
+  "id": "touchbar",
+  "displayName": "Touch Bar Agent Monitor",
+  "description": "Keep BB agent status and guarded controls on a MacBook Pro Touch Bar across every app. Open threads, follow provider usage, and switch to compact Host Monitor gauges. Requires macOS 11+, a Touch Bar Mac, and Xcode Command Line Tools; native mode uses Apple's private Touch Bar frameworks.",
+  "icon": { "url": "./icons/touchbar-6ab395fe.svg" },
+  "screenshots": [
+    "./screenshots/touchbar/threads.png",
+    "./screenshots/touchbar/host-monitor.png",
+    "./screenshots/touchbar/settings.png",
+    "./screenshots/touchbar/intel-macbook-pro.jpg"
+  ],
+  "tags": ["touch-bar", "macos", "threads", "agents", "status", "host-monitor"],
+  "author": {
+    "name": "Mateo Cerquetella",
+    "github": "MateoCerquetella",
+    "url": "https://github.com/MateoCerquetella"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/MateoCerquetella/bb-plugins.git",
+      "subdir": "plugins/touchbar",
+      "range": "^0.1.0",
+      "tagPrefix": "touchbar/"
+    }
+  }
+}

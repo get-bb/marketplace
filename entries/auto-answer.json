@@ -1,0 +1,31 @@
+{
+  "id": "auto-answer",
+  "displayName": "Auto Answer",
+  "description": "Answers an agent's question with one click per question instead of two. A countdown starts the moment you pick an option, then presses the widget's own Next or Submit answer button. It appears under the option you picked and leads with a Stop button, and space or Escape stops it as well. Picking again, another option or the same one, restarts it from the full delay of 4 seconds, adjustable from 1 to 120. It never picks an option and never types free text, and it stands down by itself whenever pressing the button would be wrong, such as nothing selected or the free-text box open.",
+  "icon": "Clock",
+  "screenshots": [
+    "./screenshots/auto-answer/countdown.png"
+  ],
+  "overview": "./overview/auto-answer.md",
+  "tags": [
+    "questions",
+    "countdown",
+    "timer",
+    "keyboard",
+    "shortcut",
+    "clicks",
+    "automation"
+  ],
+  "author": {
+    "name": "VladPolet",
+    "github": "VladPolet",
+    "url": "https://github.com/VladPolet"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/VladPolet/bb-plugin-auto-answer.git",
+      "range": "^0.1.0"
+    }
+  }
+}

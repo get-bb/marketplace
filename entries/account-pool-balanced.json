@@ -1,0 +1,26 @@
+{
+  "id": "account-pool-balanced",
+  "displayName": "Account Pool Balanced",
+  "description": "Keep coding across multiple accounts when one reaches its limit. Route Claude Code and Codex threads with quota-aware balancing, primary and reserve accounts, per-account caps, and session affinity. Connect Kimi, Z.AI, OpenCode Go, Cursor, and experimental Devin Local CLI; compatible external clients can use the proxy too. Bring your own provider accounts, subscriptions or API keys. Requires BB 0.43.1+ and Node/npm; disable BB's bundled Account Pooler because both register the same routes and command.",
+  "icon": { "url": "./icons/account-pool-balanced-8493edf7.svg" },
+  "screenshots": [
+    "./screenshots/account-pool-balanced/empty-pool.jpg",
+    "./screenshots/account-pool-balanced/providers-and-routing.jpg"
+  ],
+  "overview": "./overview/account-pool-balanced.md",
+  "tags": ["accounts", "quota", "balancing", "failover", "claude-code", "codex", "devin", "proxy"],
+  "author": {
+    "name": "OXI",
+    "github": "OXI-717",
+    "url": "https://github.com/OXI-717"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/OXI-717/bb-plugins.git",
+      "subdir": "plugins/account-pool-balanced",
+      "range": "^0.4.1",
+      "tagPrefix": "account-pool-balanced/"
+    }
+  }
+}
