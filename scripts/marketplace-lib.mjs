@@ -712,15 +712,22 @@ export function readEntryAddedDates(root) {
   return parseEntryAddedDates(output);
 }
 
+const COLLECTION_SIZE = 8;
+const TRENDING_MIN_RECENT_INSTALLS = 5;
+const TRENDING_GRAVITY = 1.5;
+const DAY_MS = 86_400_000;
+
+function newestFirst(left, right) {
+  return (
+    timeValue(right.publishedAt) - timeValue(left.publishedAt) ||
+    left.id.localeCompare(right.id)
+  );
+}
+
 export function fillEmptyCollections(collections, plugins) {
   const fallbackIds = [...plugins]
-    .sort((left, right) => {
-      return (
-        timeValue(right.publishedAt) - timeValue(left.publishedAt) ||
-        left.id.localeCompare(right.id)
-      );
-    })
-    .slice(0, 8)
+    .sort(newestFirst)
+    .slice(0, COLLECTION_SIZE)
     .map((plugin) => plugin.id);
 
   return collections.map((collection) =>
@@ -728,6 +735,104 @@ export function fillEmptyCollections(collections, plugins) {
       ? { ...collection, pluginIds: fallbackIds }
       : collection,
   );
+}
+
+/**
+ * Hacker News style gravity: recent installs divided by a power of age, so a
+ * new plugin with a few installs can outrank an older one with many, and
+ * every plugin fades out gradually instead of dropping off at a cutoff.
+ */
+export function trendingScore(recentInstalls, publishedAt, now) {
+  const published = timeValue(publishedAt);
+  if (!Number.isFinite(published)) return 0;
+  const ageDays = Math.max(0, (now - published) / DAY_MS);
+  return recentInstalls / (ageDays + 2) ** TRENDING_GRAVITY;
+}
+
+/**
+ * Resolve each collection's published `pluginIds`.
+ *
+ * A collection with `"fill": "trending"` gets eight entries by trending
+ * score, then by newest. Without ranking data it gets the newest entries.
+ * Other collections keep their earlier behavior: an empty `pluginIds` array
+ * gets the eight newest entries.
+ */
+export function resolveCollections(collections, plugins, ranking, now) {
+  const newest = [...plugins].sort(newestFirst);
+  return collections.map(({ fill, ...collection }) => {
+    if (fill !== "trending") {
+      return fillEmptyCollections([collection], plugins)[0];
+    }
+    const trending = plugins
+      .map((plugin) => {
+        const recent = ranking?.plugins[plugin.id]?.installs14d ?? 0;
+        return {
+          plugin,
+          recent,
+          score: trendingScore(recent, plugin.publishedAt, now),
+        };
+      })
+      .filter(({ recent }) => recent >= TRENDING_MIN_RECENT_INSTALLS)
+      .sort(
+        (left, right) =>
+          right.score - left.score || newestFirst(left.plugin, right.plugin),
+      )
+      .map(({ plugin }) => plugin);
+    const chosen = new Set();
+    for (const plugin of [...trending, ...newest]) {
+      if (chosen.size >= COLLECTION_SIZE) break;
+      chosen.add(plugin.id);
+    }
+    return { ...collection, pluginIds: [...chosen] };
+  });
+}
+
+/**
+ * Order categories by the summed 30-day installs of their entries. Ties and
+ * missing ranking data keep the base order.
+ */
+export function orderCategories(categories, plugins, ranking) {
+  const installs = new Map();
+  for (const plugin of plugins) {
+    if (plugin.category === undefined) continue;
+    const recent = ranking?.plugins[plugin.id]?.installs30d ?? 0;
+    installs.set(plugin.category, (installs.get(plugin.category) ?? 0) + recent);
+  }
+  return [...categories].sort(
+    (left, right) => (installs.get(right.id) ?? 0) - (installs.get(left.id) ?? 0),
+  );
+}
+
+const RANKING_COUNT_KEYS = ["installs14d", "installs30d"];
+
+/** Returns the ranking document, or a reason it cannot be used. */
+export function parseRanking(value) {
+  if (
+    value === null ||
+    typeof value !== "object" ||
+    value.schemaVersion !== 1 ||
+    value.plugins === null ||
+    typeof value.plugins !== "object"
+  ) {
+    return { problem: "The ranking document has an unknown shape." };
+  }
+  const plugins = {};
+  for (const [id, counts] of Object.entries(value.plugins)) {
+    if (
+      counts === null ||
+      typeof counts !== "object" ||
+      RANKING_COUNT_KEYS.some(
+        (key) => !Number.isSafeInteger(counts[key]) || counts[key] < 0,
+      )
+    ) {
+      return { problem: `The ranking document has bad counts for "${id}".` };
+    }
+    plugins[id] = {
+      installs14d: counts.installs14d,
+      installs30d: counts.installs30d,
+    };
+  }
+  return { ranking: { plugins } };
 }
 
 export function reservedPluginIdProblem(id, reserved) {

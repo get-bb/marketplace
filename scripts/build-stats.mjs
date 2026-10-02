@@ -17,6 +17,7 @@
 // `--print` writes the document to stdout instead of dist/stats.json.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { queryHogQL } from "./posthog.mjs";
 
 const root = new URL("..", import.meta.url).pathname;
 const printOnly = process.argv.includes("--print");
@@ -52,46 +53,6 @@ const QUERY = `
   LIMIT ${MAX_ENTRIES}
 `;
 
-function required(name) {
-  const value = process.env[name];
-  if (value === undefined || value.trim().length === 0) {
-    console.error(`error: ${name} is not set`);
-    process.exit(1);
-  }
-  return value.trim();
-}
-
-async function queryInstallCounts() {
-  const host = (process.env.POSTHOG_HOST ?? "https://us.posthog.com").replace(
-    /\/+$/,
-    "",
-  );
-  const projectId = required("POSTHOG_PROJECT_ID");
-  const response = await fetch(`${host}/api/projects/${projectId}/query/`, {
-    method: "POST",
-    headers: {
-      authorization: `Bearer ${required("POSTHOG_API_KEY")}`,
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      query: { kind: "HogQLQuery", query: QUERY },
-    }),
-    signal: AbortSignal.timeout(120_000),
-  });
-  if (!response.ok) {
-    // The body names the real problem (bad key, wrong project, HogQL error).
-    const detail = await response.text().catch(() => "");
-    throw new Error(
-      `PostHog query failed with HTTP ${response.status}: ${detail.slice(0, 500)}`,
-    );
-  }
-  const body = await response.json();
-  if (!Array.isArray(body?.results)) {
-    throw new Error("PostHog answer has no results array");
-  }
-  return body.results;
-}
-
 /** Rows PostHog returns are `[plugin_id, installs]`; drop anything else. */
 function pluginsFromRows(rows) {
   const plugins = {};
@@ -124,7 +85,7 @@ function pluginsFromRows(rows) {
 
 let rows;
 try {
-  rows = await queryInstallCounts();
+  rows = await queryHogQL(QUERY);
 } catch (error) {
   // A rejected top-level await prints an undici stack trace; the job log
   // should name the problem instead.

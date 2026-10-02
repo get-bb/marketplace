@@ -84,15 +84,8 @@
     {
       "id": "new-and-notable",
       "displayName": "New & notable",
-      "pluginIds": [
-        "bb-office",
-        "bots-sidebar",
-        "kernel-browser",
-        "usage",
-        "bb-recap",
-        "action-topbar",
-        "aura"
-      ]
+      "fill": "trending",
+      "pluginIds": []
     }
   ]
 }

@@ -22,12 +22,16 @@ import {
   fillEmptyCollections,
   findOrphanOverviewFiles,
   inspectImage,
+  orderCategories,
   parseEntryAddedDates,
+  parseRanking,
   projectV1Entry,
   projectV1Manifest,
   pullRequestEntryFiles,
   readEntryAddedDates,
   reservedPluginIdProblem,
+  resolveCollections,
+  trendingScore,
   validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
@@ -240,6 +244,127 @@ test("the collection fallback uses publishedAt and an id tie-break", () => {
     plugins,
   );
   assert.deepEqual(result[0].pluginIds, ["beta", "charlie", "alpha", "delta"]);
+});
+
+const NOW = Date.parse("2026-10-01T00:00:00Z");
+const daysAgo = (days) => new Date(NOW - days * 86_400_000).toISOString();
+const rankingOf = (counts) => ({
+  plugins: Object.fromEntries(
+    Object.entries(counts).map(([id, [installs14d, installs30d]]) => [
+      id,
+      { installs14d, installs30d },
+    ]),
+  ),
+});
+
+test("trending decays recent installs by age", () => {
+  assert.ok(
+    trendingScore(6, daysAgo(2), NOW) > trendingScore(100, daysAgo(60), NOW),
+  );
+  assert.equal(trendingScore(10, undefined, NOW), 0);
+});
+
+test("a trending collection ranks by trend, then fills newest", () => {
+  const plugins = [
+    { id: "old-quiet", publishedAt: daysAgo(300) },
+    { id: "hot-new", publishedAt: daysAgo(3) },
+    { id: "big-old", publishedAt: daysAgo(90) },
+    { id: "too-few", publishedAt: daysAgo(1) },
+    { id: "viral", publishedAt: daysAgo(2) },
+    ...Array.from({ length: 6 }, (_, index) => ({
+      id: `newest-${index}`,
+      publishedAt: daysAgo(10 + index),
+    })),
+  ];
+  const ranking = rankingOf({
+    "hot-new": [8, 8],
+    "big-old": [120, 300],
+    "too-few": [4, 4],
+    viral: [50, 50],
+  });
+  const [collection] = resolveCollections(
+    [
+      {
+        id: "new-and-notable",
+        displayName: "New & notable",
+        fill: "trending",
+        pluginIds: [],
+      },
+    ],
+    plugins,
+    ranking,
+    NOW,
+  );
+  assert.deepEqual(collection, {
+    id: "new-and-notable",
+    displayName: "New & notable",
+    pluginIds: [
+      "viral",
+      "hot-new",
+      "big-old",
+      "too-few",
+      "newest-0",
+      "newest-1",
+      "newest-2",
+      "newest-3",
+    ],
+  });
+});
+
+test("a trending collection falls back to newest entries without ranking data", () => {
+  const plugins = Array.from({ length: 10 }, (_, index) => ({
+    id: `plugin-${index}`,
+    publishedAt: daysAgo(index),
+  }));
+  const [collection] = resolveCollections(
+    [{ id: "new", displayName: "New", fill: "trending", pluginIds: [] }],
+    plugins,
+    null,
+    NOW,
+  );
+  assert.deepEqual(
+    collection.pluginIds,
+    plugins.slice(0, 8).map(({ id }) => id),
+  );
+});
+
+test("categories order by 30-day installs, then base order", () => {
+  const categories = ["alpha", "beta", "gamma", "delta"].map((id) => ({
+    id,
+    displayName: id,
+    description: id,
+  }));
+  const plugins = [
+    { id: "a", category: "alpha" },
+    { id: "b1", category: "beta" },
+    { id: "b2", category: "beta" },
+    { id: "g", category: "gamma" },
+  ];
+  const ranking = rankingOf({ a: [0, 5], b1: [0, 3], b2: [0, 4], g: [0, 1] });
+  assert.deepEqual(
+    orderCategories(categories, plugins, ranking).map(({ id }) => id),
+    ["beta", "alpha", "gamma", "delta"],
+  );
+  assert.deepEqual(
+    orderCategories(categories, plugins, null).map(({ id }) => id),
+    ["alpha", "beta", "gamma", "delta"],
+  );
+});
+
+test("the ranking parser rejects bad counts", () => {
+  assert.ok(
+    parseRanking({
+      schemaVersion: 1,
+      plugins: { a: { installs14d: 1, installs30d: -1 } },
+    }).problem,
+  );
+  assert.deepEqual(
+    parseRanking({
+      schemaVersion: 1,
+      plugins: { a: { installs14d: 1, installs30d: 2 } },
+    }).ranking,
+    { plugins: { a: { installs14d: 1, installs30d: 2 } } },
+  );
 });
 
 test("the Git log parser keeps the first addition date", () => {

@@ -3,10 +3,20 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
+  schedule:
+    # Daily, after the install counts, so trending shelves and the category
+    # order follow recent installs without a commit.
+    - cron: "47 6 * * *"
+concurrency:
+  group: publish
+  cancel-in-progress: false
 jobs:
   publish:
     runs-on: ubuntu-latest
     environment: production
+    permissions:
+      contents: read
+      actions: read
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
@@ -15,12 +25,37 @@ jobs:
       - run: npm ci
       - name: Install Wrangler 4.86.0
         run: npm install --global wrangler@4.86.0
-      - run: npm run build
+      # A scheduled run exists only to refresh the ranking, so it stops when
+      # PostHog fails. A push still publishes, with newest-entry fallbacks.
+      - name: Build ranking.json
+        continue-on-error: ${{ github.event_name != 'schedule' }}
+        env:
+          POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
+          POSTHOG_PROJECT_ID: ${{ vars.POSTHOG_PROJECT_ID }}
+          POSTHOG_HOST: ${{ vars.POSTHOG_HOST }}
+        run: npm run build:ranking
+      - run: npm run build -- --ranking dist/ranking.json
       - name: Check frozen v1 entries
         if: github.event_name == 'push'
         run: npm run gate:v1
+      # A scheduled run reuses this commit's assets when an earlier publish of
+      # the same commit succeeded; otherwise it uploads them like any run.
+      - name: Check published assets
+        id: assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          published=false
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            count=$(gh run list --repo "${{ github.repository }}" \
+              --workflow publish.yml --commit "${{ github.sha }}" \
+              --status success --limit 1 --json databaseId --jq length) || count=0
+            if [[ "$count" -gt 0 ]]; then published=true; fi
+          fi
+          echo "published=$published" >> "$GITHUB_OUTPUT"
       # Keep this order explicit: assets first, then v2, then v1.
       - name: Upload icons
+        if: steps.assets.outputs.published != 'true'
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
@@ -32,6 +67,7 @@ jobs:
               --file "$icon" --remote
           done
       - name: Upload screenshots
+        if: steps.assets.outputs.published != 'true'
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}

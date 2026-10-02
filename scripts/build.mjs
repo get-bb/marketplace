@@ -1,8 +1,16 @@
 #!/usr/bin/env node
 // Build the frozen v1 document and the full v2 document from one source.
 // The --liveness option also checks each remote source.
+// The --ranking <path> option reads recent install counts from
+// scripts/build-ranking.mjs; without it, computed shelves use newest entries.
 import { execFileSync } from "node:child_process";
-import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  writeFileSync,
+} from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import Ajv from "ajv/dist/2020.js";
@@ -11,11 +19,13 @@ import {
   checkRequiredCategories,
   findOrphanOverviewFiles,
   findOrphanScreenshotFiles,
-  fillEmptyCollections,
+  orderCategories,
+  parseRanking,
   projectV1Manifest,
   pullRequestEntryFiles,
   readEntryAddedDates,
   reservedPluginIdProblem,
+  resolveCollections,
   validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
@@ -23,6 +33,9 @@ import {
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const liveness = process.argv.includes("--liveness");
+const rankingFlag = process.argv.indexOf("--ranking");
+const rankingPath =
+  rankingFlag === -1 ? undefined : process.argv[rankingFlag + 1];
 const problems = [];
 const warnings = [];
 
@@ -166,6 +179,45 @@ for (const collection of base.collections ?? []) {
   }
 }
 
+for (const collection of base.collections ?? []) {
+  if (collection.fill !== undefined && collection.fill !== "trending") {
+    problems.push(
+      `marketplace.base.json: The collection "${collection.id}" has the unknown fill "${collection.fill}".`,
+    );
+  }
+  if (collection.fill === "trending" && (collection.pluginIds ?? []).length > 0) {
+    problems.push(
+      `marketplace.base.json: The trending collection "${collection.id}" must have an empty pluginIds array.`,
+    );
+  }
+}
+
+function readRanking() {
+  if (rankingPath === undefined) return null;
+  if (!existsSync(rankingPath)) {
+    warnings.push(`The ranking file ${rankingPath} does not exist.`);
+    return null;
+  }
+  let value;
+  try {
+    value = readJson(rankingPath);
+  } catch (error) {
+    warnings.push(`The ranking file is not valid JSON. ${error.message}`);
+    return null;
+  }
+  const result = parseRanking(value);
+  if (result.problem !== undefined) {
+    warnings.push(result.problem);
+    return null;
+  }
+  return result.ranking;
+}
+
+const ranking = readRanking();
+if (rankingPath !== undefined && ranking === null) {
+  warnings.push("Computed shelves use newest entries and the base category order.");
+}
+
 const plugins = entryRecords.map(({ entry }) => entry);
 for (const entry of plugins) {
   if (entry.category !== undefined && !categoryIds.has(entry.category)) {
@@ -252,10 +304,16 @@ function entryAddedDates() {
   }
 }
 
-const collections = fillEmptyCollections(
+const collections = resolveCollections(
   base.collections ?? [],
   v2Plugins,
+  ranking,
+  Date.now(),
 );
+const categories =
+  base.categories === undefined
+    ? undefined
+    : orderCategories(base.categories, v2Plugins, ranking);
 const v1Manifest = projectV1Manifest(base, plugins);
 const v2Manifest = {
   $schema: "https://getbb.app/schemas/marketplace-v2.schema.json",
@@ -263,7 +321,7 @@ const v2Manifest = {
   name: base.name,
   displayName: base.displayName,
   ...(base.description === undefined ? {} : { description: base.description }),
-  ...(base.categories === undefined ? {} : { categories: base.categories }),
+  ...(categories === undefined ? {} : { categories }),
   ...(base.collections === undefined ? {} : { collections }),
   plugins: v2Plugins,
 };
