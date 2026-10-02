@@ -1,0 +1,33 @@
+{
+  "id": "file-explorer",
+  "displayName": "File Explorer",
+  "description": "Keeps a file explorer pinned to any project or thread while you switch between BB threads. Search by file name or path and jump the tree to matches, including bare file names resolved across configured search roots. Search and replace text inside files under the pinned root with case, whole-word, and regex options, guarded by read-time hashes. Right-click files to preview, create, rename, delete, copy paths to chat drafts, or reveal in the system file manager.",
+  "icon": "FileText",
+  "tags": [
+    "files",
+    "file-explorer",
+    "search",
+    "replace",
+    "preview",
+    "workspace",
+    "paths",
+    "git-ignore"
+  ],
+  "author": {
+    "name": "mifhud",
+    "github": "mifhud",
+    "url": "https://github.com/mifhud"
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/file-explorer/tree-view.png",
+    "./screenshots/file-explorer/search-results.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/mifhud/bb-plugin-file-explorer.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/file-explorer.md"
+}
