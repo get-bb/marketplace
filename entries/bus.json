@@ -1,0 +1,25 @@
+{
+  "id": "bus",
+  "displayName": "Bus",
+  "description": "Peer session bus between bb threads: rooms, presence, ambient messages, and addressed sends that wake the recipient.",
+  "icon": "Radio",
+  "tags": [
+    "threads",
+    "messaging",
+    "coordination",
+    "multi-agent",
+    "agent-tools"
+  ],
+  "author": {
+    "name": "MGrin",
+    "github": "MGrin",
+    "url": "https://github.com/MGrin"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/MGrin/bb-plugin-bus.git",
+      "ref": "8c945cfc95e638bf1226d7705c658a361e5d70e8"
+    }
+  }
+}
