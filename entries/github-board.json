@@ -1,7 +1,7 @@
 {
   "id": "github-board",
   "displayName": "GitHub Board",
-  "description": "See your GitHub issues, pull requests and discussions on one board, and hand any of them to an agent thread. Four columns cover what you wrote, what is open on repositories you own and what is assigned to you, and an issue that a pull request closes folds into that pull request's card. Pull request cards show CI checks and branch status, with an Update branch button wherever you can push. A detail panel shows the body, comments and images, and labels are added or removed from a right-click menu. Send to chat opens bb's new-thread composer on a card, with a prompt you set per column and per project, in the bb project that has the repository checked out. Requires the GitHub CLI (gh) installed and signed in on the machine running the bb server.",
+  "description": "See your GitHub issues, pull requests and discussions on one board, and hand any of them to an agent thread. Four columns cover what you wrote, what is open on repositories you own and what is assigned to you, and an issue that a pull request closes folds into that pull request's card. Pull request cards show CI checks and branch status, with an Update branch button wherever you can push. A detail panel shows the body, comments and images, and labels are added or removed from a right-click menu. Send to chat opens bb's new-thread composer on a card, with a prompt you set per column and per project, in the bb project that has the repository checked out. Add to chat puts a card's title and link at the end of a chat's draft without sending it, from a menu of the chats on screen and your recent threads. Requires bb 0.45 or later, and the GitHub CLI (gh) installed and signed in on the machine running the bb server.",
   "icon": "Github",
   "tags": ["github", "issues", "pull-requests", "discussions", "kanban", "ci-checks", "labels", "gh-cli"],
   "author": {
@@ -20,7 +20,7 @@
       "url": "https://github.com/gpambrozio/bb-plugins.git",
       "subdir": "github-board",
       "tagPrefix": "github-board/",
-      "range": "^0.1.0"
+      "range": "^0.3.0"
     }
   }
 }

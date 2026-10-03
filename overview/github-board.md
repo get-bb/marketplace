@@ -12,8 +12,10 @@ columns, beside the threads that work on them.
 - Labels added and removed from a right-click menu.
 - Send to chat opens bb's new-thread composer on a card, with a prompt you can set per column and per
   project, in the bb project that has the repository checked out.
+- Add to chat puts a card's title and link at the end of a chat's draft, without sending it. Pick a chat
+  on screen or a recent thread, which opens beside the board.
 
 ## What it needs
 
-The GitHub CLI, `gh`, installed and signed in on the machine running the bb server. The board uses that
-login and stores no token of its own.
+bb 0.45 or later, and the GitHub CLI, `gh`, installed and signed in on the machine running the bb
+server. The board uses that login and stores no token of its own.
