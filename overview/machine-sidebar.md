@@ -23,7 +23,7 @@ Pinned threads stay on top, and child threads are indented under their parent. b
 
 ## Farcall worker tasks
 
-If you delegate work to Claude Code or Codex workers through farcall-mcp, turn on **Show Farcall tasks** in the plugin settings. Each coordinator thread then lists its worker tasks underneath, with provider, model, task, elapsed call time and the final outcome. The list is built only from bb's own tool-call events: the plugin never starts, retries or controls workers, and it shows "Call open" while a batch is still running instead of guessing per-worker progress. **Show hierarchy guides** adds thin tree lines through nested threads and tasks.
+If you delegate work to Claude Code or Codex workers through farcall-mcp, turn on **Show Farcall tasks** in the plugin settings. Each coordinator thread then lists its worker tasks underneath, with provider, model, task, elapsed call time and the final outcome. The list is built only from bb's own tool-call events: the plugin never starts, retries or controls workers, and it shows "Call open" while a batch is still running instead of guessing per-worker progress. Under each task a small line shows where the worker runs: the branch when its folder is a bb worktree environment on the coordinator's machine, otherwise the folder name from a `worktrees/<name>` path, marked as a folder because the branch is unknown. **Show hierarchy guides** adds thin tree lines through nested threads and tasks.
 
 ## How it works
 
