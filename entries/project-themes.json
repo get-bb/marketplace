@@ -29,7 +29,6 @@
   },
   "screenshots": [
     "./screenshots/project-themes/settings-light.png",
-    "./screenshots/project-themes/workspace.png",
     "./screenshots/project-themes/settings-dark.png"
   ],
   "overview": "./overview/project-themes.md"
