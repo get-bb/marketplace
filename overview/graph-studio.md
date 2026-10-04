@@ -35,13 +35,24 @@ A `human` node pauses the run and waits for your answer. A `dialog` node keeps
 one thread open so a worker that interviews you — asking one question, waiting,
 then the next — stays a conversation instead of degrading into a monologue.
 
-## 31 templates to start from
+## 32 templates to start from
 
 Shipped as code and read-only; clone one under a new id to make it yours. They
 cover the established orchestration patterns — prompt chaining, routing,
 map-reduce, evaluator–optimizer, supervisor, swarm, state machine, debate — and
 the library search understands the catalogue's own vocabulary, so looking for
 `orchestrator–worker` finds `map-reduce`.
+
+## Combine it with Crew
+
+A flow ends; a [Crew](https://github.com/sajov/bb-plugins/tree/main/bb-plugin-crew)
+is a team that stays. A `member` node hands one step to a persistent crew
+member instead of spawning a fresh thread, so the member keeps its context,
+worktree and model — the `owner-check-loop` template runs build and check on a
+crew this way. In the other direction, a crew member can start a Graph Studio
+graph with `crew_graph_run`, and a run waiting on a human node shows up in the
+crew's **Needs you**. Without the Crew plugin, graphs without member nodes run
+as before.
 
 ## Edges you can read
 
@@ -81,6 +92,11 @@ An agent inside a BB thread can drive it too, through the
 
 ## Requirements
 
-Requires BB 0.42 or later and Plugin SDK 0.4.47 or later. No extra service,
+Requires BB 0.42 or later and Plugin SDK 0.5.29 or later. No extra service,
 account or API key is needed — runs use the providers BB is already configured
 with.
+
+The Work templates run their steps on
+[Matt Pocock's skills](https://github.com/mattpocock/skills). Install them
+first with `npx skills add mattpocock/skills`; without them those steps fall
+back to their prompt alone. The Pattern templates need no skills.
