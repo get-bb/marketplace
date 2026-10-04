@@ -12,7 +12,18 @@ apply again: only the difference is applied, and `bb crew plan` shows it first.
 Members message each other by address, share a channel and a work queue, and
 hand off work with a subject such as a task key. Writing members get their own
 worktree; readers share the crew's. A member that waits for you shows up in
-**Needs you** with its question.
+**Needs you** with its question — including a Graph Studio run of theirs that
+is sitting on a human node.
+
+## Running a Graph Studio graph from a member
+
+`graphs:` on a member (inherited from the crew/group, like `instructions` and
+the new `skills:`) names which graphs it may run; `crew_graph_run(graph,
+input)` starts one and blocks until it finishes, carrying the member's
+address, key and role into the run's input. Every run is linked back to its
+member and shows with its live status on the member card; `bb crew stop`
+cancels open runs and `bb crew delete --threads delete` also removes their
+worker threads.
 
 ## Several crews in one project
 
@@ -24,12 +35,18 @@ limit, so two crews cannot ping-pong forever.
 
 ## See who works
 
-**Crews** in the sidebar opens a project overview: every crew with its branch,
-members and state, lines for lead-to-lead traffic, and a project feed that can
-show cross-crew messages only. Each crew has a topology view, a table with the
-feed, and an editor for the crew file with a preview identical to
-`bb crew plan` and one Apply button. `::crew{crew="…"}` renders a live card in
-chat.
+**Crews** in the sidebar opens one zoomable canvas with four levels: all
+projects → one project → one crew → one member. Every card shows its state —
+running, stopped, or waiting on you — and the header counts **Needs you**
+across all projects. BB Tasks labelled `crew-<crew>` are drawn as edges to the
+crew working on them, and lines between crews show lead-to-lead traffic. A
+crew's side panel holds its members, a table with the feed, and an editor for
+the crew file (YAML and form, with a preview identical to `bb crew plan` and
+one Apply button). `::crew{crew="…"}` renders a live card in chat.
+
+**Needs you** lists only what needs a decision: an open question or approval,
+a merge request, a merge conflict, a stopped loop with its reason, or a graph
+run waiting on a human node. Settled items drop out on their own.
 
 ## Merge requests inside the crew
 
@@ -51,7 +68,8 @@ bb crew stop trio
 
 Agents inside a crew use the same functions as tools, for example `crew_send`,
 `crew_peers` and `crew_directory`. Graph Studio can run a step on a crew member
-through its `member` node.
+through its `member` node, and a member with `graphs:` set can run a Graph
+Studio graph itself with `crew_graph_run`.
 
 ## Requirements and limits
 
