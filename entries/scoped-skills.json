@@ -1,0 +1,35 @@
+{
+  "id": "scoped-skills",
+  "displayName": "Scoped Skills",
+  "description": "Give each skill only to the agents and models that can use it, so image skills reach Codex and stay out of Claude Code. Each skill carries a list of agents and optional model globs such as gpt-5*, and a thread receives only the skills that match its agent and model. A preview shows what a thread on any agent and model would get. Import skill folders from the BB machine, or ask a thread to list or change a scope; a bb scoped-skills CLI does the same. Needs no account, API key or network access.",
+  "icon": {
+    "url": "./icons/scoped-skills-f7f5958c.svg"
+  },
+  "tags": [
+    "skills",
+    "agents",
+    "codex",
+    "claude-code",
+    "models",
+    "scoping",
+    "skill-routing"
+  ],
+  "author": {
+    "name": "Pritam Sharma",
+    "github": "notpritam",
+    "url": "https://github.com/notpritam/bb-plugin-scoped-skills"
+  },
+  "category": "memory-and-context",
+  "screenshots": [
+    "./screenshots/scoped-skills/library-codex.webp",
+    "./screenshots/scoped-skills/preview-claude-code.webp",
+    "./screenshots/scoped-skills/import.webp"
+  ],
+  "overview": "./overview/scoped-skills.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/notpritam/bb-plugin-scoped-skills.git",
+      "range": "^0.1.0"
+    }
+  }
+}
