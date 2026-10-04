@@ -1,7 +1,7 @@
 {
   "id": "scoped-skills",
   "displayName": "Scoped Skills",
-  "description": "Give each skill only to the agents and models that can use it, so image skills reach Codex and stay out of Claude Code. Each skill carries a list of agents and optional model globs such as gpt-5*, and a thread receives only the skills that match its agent and model. A preview shows what a thread on any agent and model would get. Import skill folders from the BB machine, or ask a thread to list or change a scope; a bb scoped-skills CLI does the same. Needs no account, API key or network access.",
+  "description": "Give each skill only to the agents, models and projects that should have it, so image skills reach Codex and stay out of Claude Code. Each skill carries a list of agents plus optional model and project globs such as gpt-5* or *my-org/*, and a thread receives only the skills that match its agent, model and project. A preview shows what a thread on any agent, model and project would get. Import skill folders from the BB machine, or ask a thread to list or change a scope; a bb scoped-skills CLI does the same. Needs no account, API key or network access.",
   "icon": {
     "url": "./icons/scoped-skills-f7f5958c.svg"
   },
@@ -11,6 +11,7 @@
     "codex",
     "claude-code",
     "models",
+    "projects",
     "scoping",
     "skill-routing"
   ],
@@ -22,14 +23,13 @@
   "category": "memory-and-context",
   "screenshots": [
     "./screenshots/scoped-skills/library-codex.webp",
-    "./screenshots/scoped-skills/preview-claude-code.webp",
-    "./screenshots/scoped-skills/import.webp"
+    "./screenshots/scoped-skills/preview-claude-code.webp"
   ],
   "overview": "./overview/scoped-skills.md",
   "source": {
     "git": {
       "url": "https://github.com/notpritam/bb-plugin-scoped-skills.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   }
 }
