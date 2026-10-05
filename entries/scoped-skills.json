@@ -22,8 +22,9 @@
   },
   "category": "memory-and-context",
   "screenshots": [
-    "./screenshots/scoped-skills/library-codex.webp",
-    "./screenshots/scoped-skills/preview-claude-code.webp"
+    "./screenshots/scoped-skills/library.webp",
+    "./screenshots/scoped-skills/skill-page.webp",
+    "./screenshots/scoped-skills/import.webp"
   ],
   "overview": "./overview/scoped-skills.md",
   "source": {

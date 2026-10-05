@@ -1,6 +1,7 @@
 ## What you get
 
-- A **Scoped Skills** page in the BB sidebar. Every skill in it carries a scope: the agents that receive it and, optionally, the models and projects. Toggle agents with one click, type model globs such as `gpt-5*` or project globs such as `*my-org/*`, and remove skills you no longer want.
+- A **Scoped Skills** page in the BB sidebar that lists every skill with its scope: the agents that receive it and, optionally, model globs such as `gpt-5*` and project globs such as `*my-org/*`.
+- A **page per skill** to change who gets it. Pick agents by logo, add model and project globs, and see live which of your projects a glob matches. The skill's SKILL.md is rendered below.
 - A **preview**: pick an agent, a model and a project and see which scoped skills a new thread there would get, and which it would not.
 - **Import** from any skill folder on the BB machine, such as `~/.claude/skills/brandkit`. The plugin copies the folder and leaves the original alone.
 - A `bb scoped-skills` command with `list`, `import`, `scope`, `remove`, `preview` and `agents`.
