@@ -1,0 +1,39 @@
+{
+  "id": "herdr-theme",
+  "displayName": "Herdr Theme",
+  "description": "Turn BB into a terminal-style workspace, with framed conversation panes and eleven color palettes in light and dark. Child threads hang from their parent as a connected tree in the sidebar. Turn on branch names to show each project thread's Git branch beneath its title. JetBrains Mono ships inside the plugin, so no font service, account, or API key is needed. Requires BB 0.43 or later.",
+  "icon": {
+    "url": "./icons/herdr-theme-cc86d4bf.svg"
+  },
+  "screenshots": [
+    "./screenshots/herdr-theme/conversation-dark.png",
+    "./screenshots/herdr-theme/conversation-light.png",
+    "./screenshots/herdr-theme/six-panes-dark.png",
+    "./screenshots/herdr-theme/palette-picker-dark.png"
+  ],
+  "overview": "./overview/herdr-theme.md",
+  "tags": [
+    "theme",
+    "terminal",
+    "dark",
+    "light",
+    "monospace",
+    "palettes",
+    "catppuccin",
+    "tokyo-night",
+    "gruvbox",
+    "git-branch"
+  ],
+  "author": {
+    "name": "David Eiffert",
+    "github": "davideiffert",
+    "url": "https://github.com/davideiffert"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/davideiffert/bb-plugin-herdr-theme.git",
+      "range": "^0.5.0"
+    }
+  }
+}
