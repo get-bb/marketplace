@@ -5,7 +5,10 @@
   "icon": "Toolbox",
   "screenshots": [
     "./screenshots/agent-tools/servers.png",
-    "./screenshots/agent-tools/skills.png"
+    "./screenshots/agent-tools/skills.png",
+    "./screenshots/agent-tools/archive.png",
+    "./screenshots/agent-tools/plugins.png",
+    "./screenshots/agent-tools/opencode.png"
   ],
   "overview": "./overview/agent-tools.md",
   "tags": [

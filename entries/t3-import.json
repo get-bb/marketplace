@@ -1,0 +1,31 @@
+{
+  "id": "t3-import",
+  "displayName": "T3 Import",
+  "description": "Bring your T3 Code threads into bb and pick up each conversation where you left off. Each thread lands in the bb project for its folder with its messages, reasoning, tool calls, plans, and dates, and the next message continues with the agent's full context. A preview lists every thread and project before anything changes, settled threads can come over archived, and each import backs up the bb database first. Requires bb 0.45, with T3 Code and Claude Code or Codex on the same computer; the plugin writes threads directly to the bb database.",
+  "icon": {
+    "url": "./icons/t3-import-e362d35c.svg"
+  },
+  "overview": "./overview/t3-import.md",
+  "tags": [
+    "t3-code",
+    "import",
+    "migration",
+    "claude-code",
+    "codex",
+    "chat-history",
+    "sessions",
+    "projects"
+  ],
+  "author": {
+    "name": "Karol Chudzik",
+    "github": "iipanda",
+    "url": "https://github.com/iipanda"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/iipanda/bb-plugin-t3-import.git",
+      "range": "^0.1.0"
+    }
+  }
+}

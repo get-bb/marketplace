@@ -1,0 +1,39 @@
+{
+  "id": "pokecut-theme",
+  "displayName": "Pokecut Theme",
+  "description": "Turns bb into a soft dashboard: a gray shell, the thread as a raised panel, white cards and a pink-violet accent, light and dark. The composer gets even chips for project, machine and access, a gradient send button and a context line that fills as the window does. Expanded work groups read as one card with right-aligned durations and red error chips, and messages show their time on hover. A footer switch flips light, dark or system, and each chat feature can be turned off in English or Russian settings.",
+  "icon": {
+    "url": "./icons/pokecut-theme-9e059f3b.svg"
+  },
+  "screenshots": [
+    "./screenshots/pokecut-theme/overview.jpg",
+    "./screenshots/pokecut-theme/before-after-light.jpg",
+    "./screenshots/pokecut-theme/before-after-dark.jpg",
+    "./screenshots/pokecut-theme/before-after-phone.jpg"
+  ],
+  "overview": "./overview/pokecut-theme.md",
+  "tags": [
+    "theme",
+    "light",
+    "dark",
+    "dashboard",
+    "gradient",
+    "composer",
+    "sidebar",
+    "mobile",
+    "chat",
+    "interface"
+  ],
+  "author": {
+    "name": "Kirill Vechkasov",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-pokecut-theme.git",
+      "range": "^0.5.0"
+    }
+  }
+}
