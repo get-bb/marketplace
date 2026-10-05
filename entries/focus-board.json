@@ -1,7 +1,7 @@
 {
   "id": "focus-board",
   "displayName": "Focus Board",
-  "description": "A kanban of your bb threads, focused on what needs you first. Group threads by attention, last activity, project, provider, or machine, and filter by project, provider, and state. Search across titles and ids. Cards show state, pin, pending-interaction badge, update time, and branch or host; a click opens the thread and a modified click opens it in a new window.",
+  "description": "A kanban of your bb threads, focused on what needs you first. Group by attention, activity, project, provider, machine, or parent thread; filter and search; drag to pin, read, mark Done, or nest a card under another. A thread pane beside the board takes replies, questions, snoozes, and auto-renames, and every lane sweeps its stale work in two clicks.",
   "icon": "Columns2",
   "tags": [
     "kanban",
