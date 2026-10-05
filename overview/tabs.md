@@ -1,58 +1,26 @@
-Chat Tabs puts the current conversation and pinned chats within reach in BB,
-without replacing the sidebar or changing BB core. See the [screenshots and
-setup guide](https://github.com/nicolay-i/bb-plugin-tabs#readme).
+Keep the conversations you return to in a manually ordered strip beneath BB's header. The sidebar stays available. See the [screenshots and setup guide](https://github.com/nicolay-i/bb-plugin-tabs#readme).
 
-## What you get
+## Chats within reach
 
-- A single unpinned preview behaves like a VS Code preview tab: opening another
-  unpinned chat replaces it, and italic text communicates its temporary state.
-  Pinning that chat leaves no preview until another unpinned chat is opened.
-  Background work never opens a preview; nested workflow activity folds up to
-  the visible parent tab's working marker.
-- Double-click a preview to pin it. Double-click a pinned tab title to rename
-  it inline, with Escape cancelling the change. A tab context menu sized like
-  BB's native sidebar actions provides Copy link, Mark as unread, Pin/Unpin,
-  modal Rename, and Archive. Archive uses the BB host action and removes the
-  plugin tab immediately.
-- Pinned tabs form one manually ordered horizontal sequence across projects.
-  Desktop drag and drop shows one highlighted slot and edge autoscroll; preview
-  tabs never participate. Hover text gives the complete project and chat titles
-  and explains primary click behavior. Unread state has its own dot, independent
-  of working activity.
-- The **New chat** composer has an immediately visible pinned-chat list. It
-  uses the same global order: title on the first line, project on the left of
-  the second, and only useful **Working** and/or **Unread** status on the right.
-  Calm chats have no filler status. Preview does not enter this list, and the
-  `showPinnedTabsList` setting hides it without changing pins.
-- The desktop strip supports horizontal mouse-wheel scrolling, a theme-aware
-  top scrollbar only when necessary, middle-click close, `Ctrl+Tab` /
-  `Ctrl+Shift+Tab`, and Desktop `Ctrl+W` / `⌘W`. When the embedded BrowserView
-  has focus, the native browser tab close keeps priority. Compact and touch
-  layouts preserve native horizontal swipe, 44×44 targets, and explicit Close
-  actions instead of HTML drag and drop.
-- A borderless plus directly after the last tab opens BB's native composer.
-  Hovering for 300 ms offers the 15 projects with the newest chat activity;
-  **More** reveals subsequent groups of 15 on click or a 300 ms hover. Picking
-  a project preselects it. Both menus animate, with reduced-motion support.
-- The list icon opens the same Radix dropdown by click, after 300 ms of
-  hover, or with a double Shift press. Type to search available chats by title
-  (including unloaded history pages), choose with the arrow keys and open with
-  Enter. Manually ordered **Pinned** chats precede **History** of up to 100
-  visits. Eight history records render at a time; **More** loads the next page
-  on click, tap, keyboard selection or after 300 ms of hover. Section visibility
-  settings do not delete pins or history.
-- Lifecycle data comes from public archive/delete/unarchive events and bounded
-  `bb.sdk.threads.get()` reconciliation, not from sidebar omission. Archive or
-  delete removes a chat from tabs, pins, and the home list while preserving a
-  disabled Archived or Deleted tombstone in history. Unarchiving re-enables it
-  but deliberately does not restore its old pin or preview. Transient and
-  permission errors never hide a chat as deleted.
-- Tabs and history use plugin-owned KV keys and realtime events. Realtime and
-  live sidebar state are the primary source of activity; durable workflow
-  status is a visibility-aware, rate-limited fallback through the built-in
-  `workflows` public RPC. Client and server coalesce equivalent requests.
-- The scoped CSS hybrid operates in a single main pane. It follows the main
-  chat width around a right panel, but hides in true split, full-panel, and
-  drawer states. All presentation uses BB theme tokens (`background`,
-  `foreground`, `muted`, `border`, `popover`, `primary`, and `ring`) with
-  `color-mix(in oklch)`.
+- One italic preview follows the unpinned chat you open. Opening another unpinned chat replaces it; creating a new chat shows its preview immediately. Closing a preview stays closed across reloads and other windows until you open that chat again. Background work never opens a preview.
+- Double-click a preview to pin it. Drag pinned tabs across projects into one shared order, with an insertion marker and edge autoscroll. Double-click a pinned title to rename it inline. The context menu provides Copy link, Mark as unread, Pin/Unpin, Rename, and Archive.
+- A compact **?** marker tells you when BB is waiting for an answer or approval instead of showing an endless working dot. Hover for an explanation. Pending input in a nested chat also marks its parent tab. Working and unread states remain distinct; lists and home cards show the full **Needs input** status.
+- An optional pinned-chat list appears below the **New chat** composer. It shares the strip's ordering and shows the project and useful status below each title. Calm chats have no filler status.
+
+## Navigation
+
+- Search up to 100 recently visited chats by title from the list menu. Open it by click, a 300 ms hover, or a double Shift press. Arrow keys select a result and Enter opens it. Pinned chats precede history; **More** reveals another eight history entries.
+- The plus after the last tab opens BB's native new-chat composer. Hover for 300 ms to choose from the 15 most recently active projects; **More** reveals the next group. Selecting a project preselects it in the composer.
+- Desktop supports horizontal wheel scrolling, a conditional top scrollbar, middle-click close, `Ctrl+Tab` / `Ctrl+Shift+Tab`, and BB Desktop `Ctrl+W` / `⌘W`. An embedded browser with focus keeps its native close behavior. Compact and touch layouts use horizontal swipe, 44×44 targets, and explicit close buttons.
+
+## Language and presentation
+
+Choose from 15 interface languages: English, Russian, Spanish, Brazilian Portuguese, French, German, Simplified Chinese, Hindi, Arabic, Japanese, Indonesian, Turkish, Korean, Vietnamese, and Italian. **Auto** follows a supported BB page language, then the browser language, then English. Chat titles and project names are not translated. Static plugin-setting labels remain in English. Additional translations are machine-assisted first drafts.
+
+The plugin includes a theme-aware SVG icon. Controls and status markers follow BB theme colors; animations respect reduced-motion preferences. The strip follows the main chat width around a right panel and hides in true split, full-panel, and drawer layouts.
+
+## State and requirements
+
+Tabs, order, and history live in plugin-owned storage and synchronize across windows. Archive or delete removes a chat from tabs and pins while retaining a disabled history record. Unarchiving re-enables history navigation without restoring the old pin or preview. Live sidebar state supplies activity; durable workflow status uses the built-in workflows plugin's public RPC as a bounded fallback.
+
+Requires BB 0.43 or later. No external service or account is required, and no chat content is sent for runtime translation: language strings are bundled with the plugin.
