@@ -15,7 +15,6 @@
   "source": {
     "git": {
       "url": "https://github.com/masked8knights/bb-kilocode.git",
-      "subdir": ".",
       "range": "^0.1.0"
     }
   }
