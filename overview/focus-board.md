@@ -1,85 +1,28 @@
-Focus Board is a nav panel in the bb sidebar that shows all your threads as
-a kanban board. It reads bb's live thread view through the plugin SDK's
-sidebar hooks, so it updates in real time. Hidden and archived threads are
-excluded from the board.
+Focus Board is a nav panel in the bb sidebar that shows all your threads as a kanban board. It reads bb's live thread view through the plugin SDK's sidebar hooks, so it updates in real time as your threads change.
 
 ## What you get
 
-- **Group** threads into columns by Attention (the default: Pinned, Needs
-  you, Unread, Working, then idle threads bucketed by how long they've been
-  quiet), Last activity, Project, Provider, Machine (which bb host the
-  thread runs on), or None (one flat column).
-- **Filter** by project, provider, and thread state (Working / Needs you /
-  Unread / Idle), and **search** across thread titles and ids.
-- **Nest** subthreads under their parent card.
-- **Sweep** stale Done threads (default: older than 7 days) and long-idle
-  threads (default: idle more than 30 days) to Archive. Thresholds are
-  configurable and any thread can be exempted with a per-card "Keep from
-  sweep" override.
-- **Ticket chips** link cards to their GitHub issues and pull requests, with
-  live status dots.
-- Cards show state, pin, pending-interaction badge, relative update time,
-  title, and branch or host. Click a card to open the thread; modified-click
-  opens it in a new window. On phone, the toolbar stacks and the thread pane
-  goes full screen.
-- Group, filter, and search selections persist per client in localStorage.
+- **Group** threads into columns by Attention (the default: Pinned, Needs you, Unread, Working, then idle threads bucketed by how long they have been quiet), Last activity, Project, Provider, Machine, or Parent thread.
+- **Filter and search** by thread state, project, provider, or title. Grouping, filters, and search persist across sessions.
+- **Drag to act**: hand-order a column, drop a card on Pinned, Unread, or Done to change its state in the same drag, or drop it onto a card's middle to nest it as that thread's child. Drag a nested child onto any column floor to top-level it again, and back onto a card to re-nest.
+- **Spawn children from the board**: "New child thread…" in the card and pane menus opens the composer preset to the parent's project and checkout, and the child lands nested under its parent in the pane.
+- **Thread pane**: open a card to read and reply beside the board, full screen on phone. Agent questions are answered right from the pane, and the header's menu opens the thread's workspace in your editor, file explorer, or terminal.
+- **Auto-rename**: the pane's title editor can title the thread from its opening prompt with bb's AI services, falling back to the thread's own model when the pinned service can't.
+- **Snooze**: "Snooze…" reads a thread now and marks it unread again at the time you pick.
+- **Sweep**: every lane carries a sweep with its own destination — stale Done threads archive, long-idle threads move to Done, Pinned unpins, Unread marks read. Shift-click and Cmd/Ctrl-click multi-select before sweeping.
+- **Ticket chips** with GitHub status dots when the official GitHub plugin is installed.
+- **What's new**: a gift toolbar button lists recent changes after an update.
 
-## Screenshots
+## How it works
 
-The first screenshot (dark theme) shows the board grouped by Attention with
-the thread pane open beside it: columns read left to right in attention
-order (Pinned, Needs you, Unread, Working, then newest-first idle buckets),
-and opening a card slides the conversation in beside the board. The second
-shows the same board in light theme.
+The board writes only pin state, read state, and Done marks through bb's own stores — never thread content. Sweep thresholds are configurable in Settings → Installed plugins or with the CLI, and any thread can be exempted with a per-card "Keep from sweep" override.
 
 ## CLI
 
-The plugin registers one `bb` subcommand for managing its own state:
+The plugin registers one `bb` subcommand, `bb focus-board`, for managing its own state: `done list|mark|clear`, `snooze list|set|clear`, `autotitle availability|prompt|probe`, `sweep`, and `config show|set`. All commands accept `--json`, and the sweep never archives without `--confirm`.
 
-```sh
-bb focus-board done list [--json]
-bb focus-board done mark <thread-id>...
-bb focus-board done clear <thread-id>...
-bb focus-board sweep [--ids <id>...] [--confirm]
-bb focus-board config show
-bb focus-board config set <doneArchiveDays|idleArchiveDays> <days>
-```
+## Requirements
 
-All commands accept `--json`. The sweep never archives without `--confirm`;
-without it the command is a dry-run: it prints what would be archived and
-exits 1.
-
-## Data and privacy
-
-The board writes only pin state, read state, and Done marks through bb's
-own stores — never thread content. For ticket status dots it reads the
-official GitHub plugin's local cache read-only. Nothing leaves your
-machine.
-
-## Install
-
-Install straight from GitHub:
-
-```sh
-bb plugin install https://github.com/cristoslc/bb-plugin-focus-board
-```
-
-or pin a version:
-
-```sh
-bb plugin install git:https://github.com/cristoslc/bb-plugin-focus-board@v0.3.1
-```
-
-To update later, run the same install command again (add `--yes` to skip the
-confirmation prompt).
-
-## Development
-
-```sh
-npm install
-bb plugin build
-bb plugin install . --yes
-bb plugin reload focus-board
-# or: bb plugin dev
-npx tsc --noEmit   # typecheck
-```
+- Node 18 or newer
+- bb 0.43 or newer with plugin SDK 0.5.9 or newer
+- Optional: the official GitHub plugin, for ticket status dots. Without its local cache, chips render without dots and everything else works.

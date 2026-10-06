@@ -1,7 +1,7 @@
 {
   "id": "focus-board",
   "displayName": "Focus Board",
-  "description": "A kanban of your bb threads, focused on what needs you first. Group threads by attention, last activity, project, provider, or machine, and filter by project, provider, and state. Search across titles and ids. Cards show state, pin, pending-interaction badge, update time, and branch or host; a click opens the thread and a modified click opens it in a new window.",
+  "description": "A kanban of your bb threads, focused on what needs you first. Group threads by attention, last activity, project, provider, machine, or parent; drag to act — hand-order a column, change a card's state in the drag, or nest a child; sweep stale lanes, snooze threads, and search titles, projects, and branches. Cards show state, pin, pending-interaction badge, update time, and branch or host; a click opens the thread and a modified click opens it in a new window.",
   "icon": "Columns2",
   "tags": [
     "kanban",
@@ -22,7 +22,7 @@
   "source": {
     "git": {
       "url": "https://github.com/cristoslc/bb-plugin-focus-board.git",
-      "range": "^0.3.1"
+      "range": "^1.0.0"
     }
   },
   "screenshots": [
