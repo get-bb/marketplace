@@ -1,0 +1,29 @@
+{
+  "id": "bb-freebuff",
+  "displayName": "Freebuff",
+  "description": "Talk to Buffy, the Freebuff agent, inside bb threads: registers the freebuff provider and drives the installed freebuff CLI in a per-thread pseudo-terminal, so Freebuff runs through its official CLI only.",
+  "icon": {
+    "url": "./icons/bb-freebuff.svg"
+  },
+  "tags": [
+    "freebuff",
+    "buffy",
+    "provider",
+    "agents",
+    "acp",
+    "cli"
+  ],
+  "author": {
+    "name": "masked8knights",
+    "github": "masked8knights",
+    "url": "https://github.com/masked8knights"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/masked8knights/bb-freebuff.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/bb-freebuff.md"
+}
