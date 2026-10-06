@@ -6,7 +6,7 @@
 - A **List** grouped by In progress, To do, and Done, or a **Board** with one
   column per workflow status. Drag a card to another column to move the issue;
   a move the workflow does not allow snaps back with the reason.
-- An issue view where you edit the title, description, status, assignee,
+- An issue view where you edit the title, description, status, assignee, sprint,
   priority, labels, and comments in place. Deleting asks for confirmation.
 - The same browser as a thread side panel, and `@` mentions that attach an
   issue's current state to a message.
@@ -14,11 +14,11 @@
 ## Agents
 
 Agents get tools to search, read, create, edit, transition, comment on, assign,
-and delete issues. Descriptions and comments are written in Markdown and
+move between sprints, and delete issues. Descriptions and comments are written in Markdown and
 converted to Jira's format.
 
 Every kind of change asks first by default. Create, edit, status, comment,
-assignee, and delete each have their own setting, **Ask every time** or
+assignee, sprint, and delete each have their own setting, **Ask every time** or
 **Always allow**, and the approval card in the thread can switch one to Always
 allow. A declined or timed-out approval sends nothing to Jira. Your own edits on
 the Jira page never ask.
