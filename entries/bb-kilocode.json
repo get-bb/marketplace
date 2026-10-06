@@ -1,0 +1,22 @@
+{
+  "id": "bb-kilocode",
+  "displayName": "Kilo Code",
+  "description": "First-class Kilo Code provider for BB.",
+  "icon": {
+    "url": "./icons/bb-kilocode.svg"
+  },
+  "tags": ["kilocode", "provider", "kilo", "ai"],
+  "author": {
+    "name": "Admin",
+    "github": "masked8knights",
+    "url": "https://github.com/masked8knights"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/masked8knights/bb-kilocode.git",
+      "subdir": ".",
+      "range": "^0.1.0"
+    }
+  }
+}
