@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- Official Kilo (kilocode.ai) favicon mark. The site ships
-       fill="oklch(95% 0.15 108)"; converted to its hex equivalent so
-       renderers without CSS Color 4 support still draw the brand color. -->
-  <rect width="32" height="32" fill="#f8f676"/>
-  <g fill="#000000">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#000000" role="img" aria-label="Kilo Code">
+  <title>Kilo Code</title>
+  <!-- Official Kilo Code mark (kilocode.ai/favicon/favicon.svg), glyph shape only: bb.branding.icon
+       is drawn as a currentColor CSS mask, so SVG colors are ignored and only alpha counts. The
+       site's oklch tile background is dropped because a filled tile renders as a solid blob. -->
+  <g>
     <path d="M23,26v-2h3v-5l-2-2h-4v2h-3v5l2,2h4ZM20,20h3v3h-3v-3Z"/>
     <rect x="12" y="17" width="3" height="3"/>
     <polygon points="26 12 23 12 23 9 20 6 17 6 17 9 20 9 20 12 17 12 17 15 26 15 26 12"/>
