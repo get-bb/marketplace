@@ -1,9 +1,9 @@
 {
-  "id": "bb-kilocode",
+  "id": "kilocode",
   "displayName": "Kilo Code",
   "description": "First-class Kilo Code provider for BB.",
   "icon": {
-    "url": "./icons/bb-kilocode.svg"
+    "url": "./icons/kilocode.svg"
   },
   "tags": ["kilocode", "provider", "kilo", "ai"],
   "author": {
