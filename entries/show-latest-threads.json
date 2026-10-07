@@ -1,7 +1,7 @@
 {
   "id": "show-latest-threads",
   "displayName": "Show Latest Threads",
-  "description": "Shows only the threads you touched in the last 24, 48 or 72 hours, so the sidebar holds today's work. A switch and a 24h / 48h / 72h picker sit at the top of the list; turn the switch off to see every project. Pinned threads, sections and child threads keep their places, and a thread that is open, running or waiting for your answer stays visible whatever its age. Each row shows when you last touched it, in English or Russian and a 12- or 24-hour clock.",
+  "description": "Shows only the threads you touched in the last 24, 48 or 72 hours, so the sidebar holds today's work. A switch and a 24h / 48h / 72h picker sit at the top of the list; turn the switch off to see every project. Pinned threads, sections and child threads keep their places, and a thread that is open, running or waiting for your answer stays visible whatever its age. Each row shows its status on the right as BB's own list does: a dot for unread, a spinner while the agent works, a question mark when it waits for you. English or Russian.",
   "icon": {
     "url": "./icons/show-latest-threads-07eb7b0b.svg"
   },

@@ -12,17 +12,18 @@ last 24, 48 or 72 hours.
   the list, so the tree never breaks.
 - The open thread and any thread that is running or waiting for your answer
   stay visible whatever their age.
-- On every row, the last time the thread changed or you opened it, in a
-  12-hour or 24-hour clock. Opening a thread counts as activity for the filter.
+- Status on the right of every row, as in BB's own list: a dot for unread,
+  a spinner while the agent works, a question mark when it waits for your
+  answer, a red cross after a failure, a clock for a queued message, a pencil
+  for an unsent draft.
+- Opening a thread counts as activity for the filter.
 - With the filter off, every project is listed, even one without threads.
-- English and Russian. By default the plugin follows your computer's language,
-  and its 24-hour switch or region for the clock.
+- English and Russian. By default the plugin follows your computer's language.
 
 ## Settings
 
-Settings > Plugins > Show Latest Threads holds the filter, the window, the
-language (System, English, Русский) and the time format (System, 12-hour,
-24-hour).
+Settings > Plugins > Show Latest Threads holds the filter, the window and the
+language (System, English, Русский).
 
 ## How it works
 
