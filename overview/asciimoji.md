@@ -9,7 +9,13 @@ so returning to a conversation feels familiar across sessions.
 Click the face to open a picker with 12 named presets. Choose a favorite,
 write your own custom asciimoji, or use Surprise me for a different preset.
 Every thread automatically gets a deterministic expression from the thread ID; child
-threads share their parent's hash-selected eyes. Reset to default returns to the thread’s automatic face.
+threads in the same family share their parent's hash-selected eyes. Reset to default returns to the thread’s automatic face.
+
+Choose a generated face family: Classic, Bears, Robots, Cats, or Minimal.
+Set **Project default** in the picker to give existing and new automatic faces
+in that project a shared style. Thread family selections, presets, and custom
+faces are saved overrides; Reset follows the current project default. Classic
+preserves the original generator, including previously saved generated faces.
 
 Choices are saved in bb and updates sync between connected windows. Each
 visible thread has its own control, including in split views. Custom faces
@@ -38,7 +44,7 @@ Activity is on by default and follows BB's reported state.
 ## Shell controls
 
 Use `bb asciimoji get`, `bb asciimoji set '<face>'`, `bb asciimoji shuffle`,
-`bb asciimoji generate`, and `bb asciimoji reset`. Commands target the current thread, with an optional
+`bb asciimoji generate --family bear`, `bb asciimoji project-default robot`, and `bb asciimoji reset`. Use `project-default` without a family to read the current project default. Commands target the current thread, with an optional
 `--thread` for another conversation and `--json` for structured output.
 
 ## Requirements
