@@ -1,0 +1,34 @@
+{
+  "id": "agent-retry",
+  "displayName": "Agent Retry",
+  "description": "Retry a failed turn instead of accepting it as the end of the work. It retries any failure a provider reports, including one with no error classification at all — a gateway error, a process that died mid-stream, a request refused at the door — which bb's own retry declines. The wait grows with each attempt, up to 50 by default, and can be scoped by project, provider, thread, or the half of the failure space where the provider never took the request. Every decision is recorded with the rule behind it, and `bb agent-retry log`, `explain` and `simulate` show a retry before or after it happens. Disable BB's bundled Provider Retry plugin: both queue retries for the same failed turn.",
+  "icon": "RotateCcw",
+  "screenshots": [
+    "./screenshots/agent-retry/settings.png",
+    "./screenshots/agent-retry/retry-card.png",
+    "./screenshots/agent-retry/cli.png"
+  ],
+  "overview": "./overview/agent-retry.md",
+  "tags": [
+    "retry",
+    "backoff",
+    "provider-errors",
+    "failed-turns",
+    "resilience",
+    "error-handling",
+    "unattended",
+    "jitter"
+  ],
+  "author": {
+    "name": "Euan Guo",
+    "github": "euanguo",
+    "url": "https://github.com/euanguo"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/euanguo/bb-plugin-agent-retry.git",
+      "range": "^0.2.0"
+    }
+  }
+}
