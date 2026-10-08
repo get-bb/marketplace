@@ -29,12 +29,13 @@ header, picker, and sidebar. This optional setting is off by default and follows
 theme changes automatically.
 
 Choose Off, Subtle, or Playful animation. Subtle adds a small entrance and hover
-wave; Playful adds a gentle idle bob. System reduced-motion preferences disable
+wave on working threads; Playful adds a gentle bob while a thread is working. Idle,
+waiting, and error faces stay still. System reduced-motion preferences disable
 these animations. Changes to settings take effect immediately.
 
 Enable Show activity expressions to see running, waiting, and error feedback.
 Generated faces change their eyes; presets and custom faces use a small marker or optional saved Running, Waiting, and Error expressions. The picker previews these states before saving.
-Generated faces blink when idle and animated. Expression frames keep a stable width, and motion pauses in hidden windows and for reduced motion.
+Generated running faces animate. Expression frames keep a stable width, and motion pauses in hidden windows and for reduced motion.
 Activity is on by default and follows BB's reported state.
 
 ## Shell controls
