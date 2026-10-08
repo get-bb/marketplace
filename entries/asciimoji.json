@@ -25,5 +25,9 @@
       "range": "^0.2.0"
     }
   },
-  "overview": "./overview/asciimoji.md"
+  "overview": "./overview/asciimoji.md",
+  "screenshots": [
+    "./screenshots/asciimoji/face-picker.png",
+    "./screenshots/asciimoji/settings.png"
+  ]
 }
