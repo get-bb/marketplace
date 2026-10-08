@@ -1,0 +1,29 @@
+{
+  "id": "asciimoji",
+  "displayName": "Asciimoji",
+  "description": "Give every thread a familiar text face that stays with the conversation. Choose from 12 presets or write your own, with saved choices synced between connected windows. Add sidebar faces, theme colors, and activity expressions with adjustable animations. Includes shell controls and needs no external service or account.",
+  "icon": {
+    "url": "./icons/asciimoji-fd5c4fe5.svg"
+  },
+  "tags": [
+    "faces",
+    "customization",
+    "threads",
+    "sidebar",
+    "animation",
+    "activity"
+  ],
+  "author": {
+    "name": "rigerc",
+    "github": "rigerc",
+    "url": "https://github.com/rigerc"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/rigerc/bb-plugin-asciimoji.git",
+      "range": "^0.2.0"
+    }
+  },
+  "overview": "./overview/asciimoji.md"
+}
