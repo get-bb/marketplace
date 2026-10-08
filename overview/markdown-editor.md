@@ -12,6 +12,12 @@ from the host the file lives on, so a README shows its own screenshots.
 The header carries the file path, the Preview/Raw pair, a reload button, a Save
 button, and one word of state: Unsaved changes, Saving, or Saved.
 
+Selecting text in Preview offers an **Add to chat** button under the selection.
+It appends what you selected to the thread's composer draft as a blockquote
+whose first line is the file's path, so a paragraph lifted out of a document
+arrives with a note of where it came from. It writes to the same draft bb's own
+Add to chat affordances do.
+
 ## Saving
 
 Saving is explicit. Press Cmd+S or click Save; both do nothing while the file
@@ -30,6 +36,13 @@ an agent edited the file while you were typing — the write is refused before i
 happens and a banner offers the two honest choices: reload and discard your
 edits, or overwrite and discard theirs. Until you pick, your text stays exactly
 as you typed it. Nothing is merged, and nothing is lost quietly.
+
+## Opening from a diff
+
+A markdown file in a thread's changes panel gets a pencil in its card header,
+after bb's copy and open-in-editor icons, and it opens that file in this
+editor. Clicking the file's path in the same header already did this, so the
+pencil is there to say so.
 
 ## Where it works
 

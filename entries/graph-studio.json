@@ -1,0 +1,36 @@
+{
+  "id": "graph-studio",
+  "displayName": "Graph Studio",
+  "description": "Build agent loops that go back when review fails, run them on real BB threads, and watch every step live. A node spawns a thread rather than calling a model, so workers appear in the sidebar and run on the providers you already have. Describe a flow in the chat and the agent builds and starts it, or open the studio from the command palette; the run shows up as a live card in the thread. 31 templates, human and dialogue nodes, per-attempt token counts, checkpointed runs. The work templates use Matt Pocock's skills, a separate install (npx skills add mattpocock/skills).",
+  "icon": { "url": "./icons/graph-studio.svg" },
+  "tags": [
+    "agents",
+    "graph",
+    "workflow",
+    "orchestration",
+    "langgraph",
+    "automation",
+    "loops",
+    "multi-agent"
+  ],
+  "author": {
+    "name": "sajov",
+    "github": "sajov",
+    "url": "https://github.com/sajov"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/sajov/bb-plugins.git",
+      "subdir": "bb-plugin-graph-studio",
+      "range": "^0.1.0",
+      "tagPrefix": "graph-studio/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/graph-studio/editor.png",
+    "./screenshots/graph-studio/running.png",
+    "./screenshots/graph-studio/chat-run-card.png"
+  ],
+  "overview": "./overview/graph-studio.md"
+}

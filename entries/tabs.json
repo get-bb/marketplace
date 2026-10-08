@@ -1,0 +1,25 @@
+{
+  "id": "tabs",
+  "displayName": "Chat Tabs",
+  "description": "Keep important BB conversations one click away with pinned and preview tabs. Search up to 100 recent chats and spot questions or approvals awaiting your reply, including in nested chats. Choose from 15 interface languages and hover over the plus to start a chat in a selected project. Requires BB 0.43+; no external service is needed.",
+  "icon": { "url": "./icons/tabs-040544fb.svg" },
+  "tags": ["chat", "tabs", "pinned-chats", "preview", "history", "navigation", "search"],
+  "author": {
+    "name": "Nicolay I",
+    "github": "nicolay-i",
+    "url": "https://github.com/nicolay-i"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/nicolay-i/bb-plugin-tabs.git",
+      "range": "^0.1.2"
+    }
+  },
+  "screenshots": [
+    "./screenshots/tabs/real-bb-tabs-primary.png",
+    "./screenshots/tabs/real-bb-new-chat-projects.png",
+    "./screenshots/tabs/real-bb-thread-tabs.png"
+  ],
+  "overview": "./overview/tabs.md"
+}

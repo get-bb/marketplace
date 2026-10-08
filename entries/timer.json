@@ -1,0 +1,29 @@
+{
+  "id": "timer",
+  "displayName": "Floating Timer",
+  "description": "Run floating focus timers, custom sprints, and pomodoro blocks anywhere in BB. Tracks multiple concurrent sessions with minute presets, draggable overlay positioning, and Web Audio completion chimes. Mounts as an app-wide overlay that collapses into a compact status pill and integrates with the thread header.",
+  "icon": "Timer",
+  "overview": "./overview/timer.md",
+  "tags": [
+    "timer",
+    "pomodoro",
+    "productivity",
+    "focus",
+    "sprints",
+    "overlay",
+    "floating",
+    "audio"
+  ],
+  "author": {
+    "name": "Ivan Afanasov",
+    "github": "VanDalkvist",
+    "url": "https://github.com/VanDalkvist"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/VanDalkvist/bb-plugin-timer.git",
+      "range": "^0.1.0"
+    }
+  }
+}

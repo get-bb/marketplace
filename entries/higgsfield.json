@@ -1,0 +1,24 @@
+{
+  "id": "higgsfield",
+  "displayName": "Higgsfield Credits",
+  "description": "Shows how many Higgsfield credits you have, when they reset, and how many will expire unused at your current pace. A burn forecast charts this cycle's balance and projects it to the reset date, so you see whether you run out early or leave credits behind. A per-model table counts generations, refunded failures, credits, and cost per generation, tagged image, video, audio, or text. A daily chart stacks spend by model or media type for this cycle, 7, 30, or 90 days. Requires the Higgsfield CLI and a Higgsfield account; sign-in uses Higgsfield's own browser login.",
+  "icon": { "url": "./icons/higgsfield-f9df6528.svg" },
+  "screenshots": [
+    "./screenshots/higgsfield/overview.png",
+    "./screenshots/higgsfield/models.png"
+  ],
+  "overview": "./overview/higgsfield.md",
+  "tags": ["higgsfield", "credits", "ai-video", "ai-image", "generations", "consumption", "forecast", "subscription", "billing", "dashboard"],
+  "author": {
+    "name": "VladPolet",
+    "github": "VladPolet",
+    "url": "https://github.com/VladPolet"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/VladPolet/bb-plugin-higgsfield.git",
+      "range": "^0.1.0"
+    }
+  }
+}

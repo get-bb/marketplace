@@ -1,0 +1,41 @@
+{
+  "id": "file-pins",
+  "displayName": "Pinned Files & Links",
+  "description": "Keep a thread's key files and links one click away, in a strip right above the composer. Each pin shows its file icon or site icon and is as wide as its label, with extra pins waiting in a ⋯ list. Type file names or URLs after the Pin pill and the agent finds and pins them; agents also pin the PR, issue, spec and dev server they work with on their own. Right-click a pin to preview, copy, unpin or remove it, and open Moss notes in Moss Viewer when it's installed.",
+  "icon": {
+    "url": "./icons/file-pins-6c0372df.svg"
+  },
+  "tags": [
+    "pins",
+    "files",
+    "links",
+    "bookmarks",
+    "composer",
+    "pull-requests",
+    "dev-server",
+    "moss",
+    "agents"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/file-pins/strip.png",
+    "./screenshots/file-pins/more-list.png",
+    "./screenshots/file-pins/pin-menu.png",
+    "./screenshots/file-pins/pin-pill.png",
+    "./screenshots/file-pins/settings-card.png",
+    "./screenshots/file-pins/pin-button.png"
+  ],
+  "overview": "./overview/file-pins.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "range": "^0.1.2",
+      "tagPrefix": "file-pins/"
+    }
+  }
+}

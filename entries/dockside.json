@@ -26,5 +26,9 @@
       "range": "^0.1.0",
       "tagPrefix": "dockside/"
     }
-  }
+  },
+  "screenshots": [
+    "./screenshots/dockside/light-dark.png",
+    "./screenshots/dockside/sidebar-selection.png"
+  ]
 }

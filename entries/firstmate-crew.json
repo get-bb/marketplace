@@ -1,0 +1,23 @@
+{
+  "id": "firstmate-crew",
+  "displayName": "FirstMate Crew",
+  "description": "Hand one agent your to-do list and it runs a crew of worker threads, each in its own git worktree, until the work lands. The first mate is a pinned thread in bb's own chat that writes each worker's instructions, supervises it, and brings back branches, pull requests, findings and only the decisions that are yours. A FirstMate tab shows the crew as a board of Queued, Working, Blocked, Parked, Done, Failed and Idle, with Steer, Interrupt, Relaunch and End on every card. A built-in watch tells the first mate within about five minutes when a pull request is merged, reviewed or changes check status. Requires git, and the logged-in gh CLI for the pull request watch; a capable model such as Claude Sonnet is recommended for the first mate.",
+  "icon": "Ship",
+  "tags": ["agents", "crews", "orchestration", "parallel-agents", "worktrees", "delegation", "supervision", "pull-requests"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "agents-and-providers",
+  "screenshots": ["./screenshots/firstmate-crew/board.png"],
+  "overview": "./overview/firstmate-crew.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "firstmate-crew",
+      "tagPrefix": "firstmate-crew/",
+      "range": "^0.1.0"
+    }
+  }
+}

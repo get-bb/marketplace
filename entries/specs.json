@@ -1,0 +1,36 @@
+{
+  "id": "specs",
+  "displayName": "Specs",
+  "description": "Give every project one shared set of spec documents that agents read before they change code. Specs link to any number of projects and live in one store, so they survive branches, worktrees, and new checkouts. Each project thread receives a compact index of its specs \u2014 pinned documents always, changed documents when they changed \u2014 and pulls full text only when an agent asks. Select a quote to leave a comment; open comments come back from the read tool as review feedback instead of silent edits. Every spec gets its own chat thread where the agent reads before answering and applies agreed changes with a revision check. Agents also get the bb specs command line and tools for search, annotate, attach, detach, and delete. Runs entirely inside BB: no account and no external service.",
+  "icon": {
+    "url": "./icons/specs-c9689eb3.svg"
+  },
+  "screenshots": [
+    "./screenshots/specs/document.png",
+    "./screenshots/specs/chat.png"
+  ],
+  "overview": "./overview/specs.md",
+  "tags": [
+    "specs",
+    "spec-documents",
+    "design-docs",
+    "annotations",
+    "comments",
+    "documentation",
+    "agent-context",
+    "revisions",
+    "markdown"
+  ],
+  "author": {
+    "name": "Peter Abu-Ekpeshie",
+    "github": "peteabu",
+    "url": "https://github.com/peteabu"
+  },
+  "category": "memory-and-context",
+  "source": {
+    "git": {
+      "url": "https://github.com/peteabu/bb-plugin-specs.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "backlog",
+  "displayName": "Backlog.MD",
+  "description": "Read and edit the Backlog.md files of your BB projects: a live Kanban board for tasks, and tabs for documents and decisions. Add selected text to the chat of the project with its file path. Needs BB 0.43 or later with Plugin SDK 0.5.9 or a later 0.5 version, and a Backlog.md folder on an enrolled host. No Backlog CLI or account is needed. Light theme only; tested on macOS.",
+  "icon": "ListTodo",
+  "tags": ["backlog-md", "kanban", "markdown", "task-management"],
+  "author": {
+    "name": "StreamlinedStartup",
+    "github": "StreamlinedStartup",
+    "url": "https://github.com/StreamlinedStartup"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/StreamlinedStartup/bb-plugin-backlog.git",
+      "range": "^1.0.0"
+    }
+  },
+  "screenshots": ["./screenshots/backlog/board.jpg", "./screenshots/backlog/documents.jpg", "./screenshots/backlog/decisions.jpg"],
+  "overview": "./overview/backlog.md"
+}

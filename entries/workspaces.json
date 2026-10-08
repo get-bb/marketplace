@@ -1,0 +1,34 @@
+{
+  "id": "workspaces",
+  "displayName": "Workspaces",
+  "description": "Run one agent thread across several repositories, each in its own isolated Git worktree. Group existing BB projects into a reusable workspace, then select only the repositories a task needs and start a thread rooted at all of them. Every checkout branches from its repository's own default branch, and your source clones are never pulled, checked out, or stashed. The thread's Repositories panel reports changed files and commits ahead for each checkout, and can enroll another project mid-session. Removing worktrees requires an archived session with every checkout clean and still on its recorded branch, and generated branches are never deleted. Uses local Git and BB's public plugin APIs, with no account, token, or external service.",
+  "icon": "Layers",
+  "screenshots": [
+    "./screenshots/workspaces/overview.png",
+    "./screenshots/workspaces/session-repositories.png",
+    "./screenshots/workspaces/repository-picker.png"
+  ],
+  "tags": [
+    "multi-repo",
+    "git-worktree",
+    "repositories",
+    "microservices",
+    "sessions",
+    "branches",
+    "checkout",
+    "isolation"
+  ],
+  "author": {
+    "name": "wishcreator",
+    "github": "wishcreator",
+    "url": "https://github.com/wishcreator"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/wishcreator/bb-plugin-workspaces.git",
+      "range": "^0.3.0"
+    }
+  },
+  "overview": "./overview/workspaces.md"
+}

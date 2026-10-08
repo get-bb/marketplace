@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 100 600 600" fill="currentColor" fill-rule="evenodd">
+  <title>Pi Durable</title>
+  <!-- P shape with durable rounded notch -->
+  <path d="
+    M165.29 165.29
+    H517.36
+    V400
+    H400
+    V517.36
+    H282.65
+    V634.72
+    H165.29
+    Z
+    M282.65 282.65
+    V400
+    H400
+    V282.65
+    Z
+  " />
+  <!-- i dot with disk plate -->
+  <path d="M517.36 400 H634.72 V634.72 H517.36 Z" />
+  <!-- Durable WAL bar accent at the bottom -->
+  <rect x="165.29" y="660" width="469.43" height="36" rx="10" fill="#10B981" />
+</svg>

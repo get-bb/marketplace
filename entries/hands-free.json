@@ -1,0 +1,21 @@
+{
+  "id": "hands-free",
+  "displayName": "Hands-Free",
+  "description": "Talk to BB threads on iPhone and hear replies aloud. Choose a thread, dictate, and send with a tap. Speech is sent without review. Requires BB voice transcription and microphone access; an optional Read Aloud installation can provide another voice.",
+  "icon": "Mic",
+  "tags": ["voice", "dictation", "speech", "iphone", "accessibility", "audio"],
+  "author": {
+    "name": "Matt Wynne",
+    "github": "mattwynne",
+    "url": "https://github.com/mattwynne"
+  },
+  "category": "thread-content",
+  "screenshots": ["./screenshots/hands-free/recording.jpg"],
+  "overview": "./overview/hands-free.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/mattwynne/bb-plugin-hands-free.git",
+      "range": "^0.1.0"
+    }
+  }
+}

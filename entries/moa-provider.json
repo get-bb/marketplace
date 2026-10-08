@@ -1,0 +1,36 @@
+{
+  "id": "moa-provider",
+  "displayName": "MoA Provider",
+  "description": "Get a second and third opinion on every message before one agent changes your files. Each preset you build becomes a model in the model picker: up to six advisor models answer in parallel, then an aggregator model reads their notes and does the work. A live panel in the thread shows what each advisor is doing and its answer as it streams. Type /moa in any other thread to put a question to the same advisors, or have the aggregator check in with them every few tool calls. Uses the providers you already installed and signed in to; each advisor adds a model turn to every message, and what an advisor reads goes to its model's provider.",
+  "icon": {
+    "url": "./icons/moa-provider-ccac758f.svg"
+  },
+  "tags": [
+    "mixture-of-agents",
+    "moa",
+    "multi-agent",
+    "second-opinion",
+    "advisors",
+    "aggregator",
+    "model-picker",
+    "presets"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-moa-provider.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/moa-provider/advisor-panel.png",
+    "./screenshots/moa-provider/moa-ask.png",
+    "./screenshots/moa-provider/presets.png"
+  ],
+  "overview": "./overview/moa-provider.md"
+}

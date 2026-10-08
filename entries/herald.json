@@ -1,0 +1,23 @@
+{
+  "id": "herald",
+  "displayName": "Herald",
+  "description": "Hear one spoken sentence when an agent needs you, and see every waiting thread in one list. When a thread asks a question, waits for a plan or a permission to be approved, finishes its turn or fails, the bb app says which thread it is and what it needs, on whatever page you are on. A Herald page in the sidebar lists every thread waiting on you with its reason and sentence, and the same sentence sits above that thread's composer with a Read again button until you answer. Settings choose which kinds of event are announced, the voice and speed, and where to speak: the desktop app, a browser tab, or the mobile app while it is open. By default the sentence is built from the event itself, with no model or external service; optionally, Claude Code, OpenAI Codex, Gemini CLI or a command of your own, installed and logged in on the Mac running bb, writes it instead, for one short model turn per announcement. The default voice needs bb running on a Mac, and elsewhere each device's own browser voice speaks.",
+  "icon": { "url": "./icons/herald-4139bcd6.svg" },
+  "tags": ["speech", "text-to-speech", "voice", "announcements", "alerts", "attention", "questions", "permissions"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "notifications",
+  "screenshots": ["./screenshots/herald/page.png"],
+  "overview": "./overview/herald.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "herald",
+      "tagPrefix": "herald/",
+      "range": "^0.2.0"
+    }
+  }
+}

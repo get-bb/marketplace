@@ -1,0 +1,34 @@
+{
+  "id": "telegram-projects",
+  "displayName": "Telegram Projects",
+  "description": "Get BB agent reports in Telegram and answer any thread from your phone, one topic per project. When an agent finishes, waits for you or stops, its project topic gets a card with the section, thread and agent, and the reply collapsed or summarized by a BB model you choose. Connect the reported thread with one tap and keep working with that agent by text or voice. Pick which agent and Tasks events arrive, with or without sound, and use the bot in Russian or English. Requires your own Telegram bot; messages of connected chats and reports are sent to Telegram.",
+  "icon": { "url": "./icons/telegram-projects-86879ea1.svg" },
+  "screenshots": [
+    "./screenshots/telegram-projects/overview.png",
+    "./screenshots/telegram-projects/events.png",
+    "./screenshots/telegram-projects/summary.png"
+  ],
+  "overview": "./overview/telegram-projects.md",
+  "category": "cloud-and-remote",
+  "tags": [
+    "telegram",
+    "notifications",
+    "agent-reports",
+    "mobile",
+    "remote-access",
+    "voice-input",
+    "summaries",
+    "tasks"
+  ],
+  "author": {
+    "name": "Kirill Vechkasov",
+    "github": "VKirill",
+    "url": "https://github.com/VKirill"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/bb-plugin-telegram-projects.git",
+      "range": "^0.9.0"
+    }
+  }
+}

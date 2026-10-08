@@ -1,11 +1,23 @@
 {
   "id": "emoji-react",
   "displayName": "Emoji React",
-  "description": "Adds configurable emoji reactions to the text-selection menu and per-message action bar that draft a quoted reply.",
+  "description": "Answer an agent with one click: pick an emoji reaction and it drafts your reply. Select text in a reply to quote it with your reaction from the selection menu, or use the reaction buttons under each message. Turn on smart reactions and the agent adds reactions that fit its question, such as SQLite or Postgres, as buttons in its reply. Smart reactions add a short instruction to each thread.",
   "icon": {
     "url": "./icons/emoji-react-61419fba.svg"
   },
-  "tags": ["emoji", "reactions", "chat", "interface"],
+  "screenshots": [
+    "./screenshots/emoji-react/smart-reactions.png",
+    "./screenshots/emoji-react/settings.png"
+  ],
+  "overview": "./overview/emoji-react.md",
+  "tags": [
+    "emoji",
+    "reactions",
+    "quick-replies",
+    "smart-reactions",
+    "chat",
+    "interface"
+  ],
   "author": {
     "name": "Patrick Lee",
     "github": "patleeman",
@@ -16,7 +28,7 @@
     "git": {
       "url": "https://github.com/patleeman/bb-plugins.git",
       "subdir": "packages/bb-plugin-emoji-react",
-      "range": "^0.1.0",
+      "range": "^0.2.0",
       "tagPrefix": "emoji-react/"
     }
   }

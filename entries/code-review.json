@@ -23,7 +23,7 @@
     "git": {
       "url": "https://github.com/robennals/bb-plugins.git",
       "subdir": "plugins/code-review",
-      "range": "^0.1.0",
+      "range": "^0.2.0",
       "tagPrefix": "code-review/"
     }
   }

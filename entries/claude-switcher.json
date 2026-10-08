@@ -1,0 +1,34 @@
+{
+  "id": "claude-switcher",
+  "displayName": "Claude Switcher",
+  "description": "See every Claude Code account in one usage panel, pick the account before a new thread's first message or from any thread's header, start new projects on the best account, and move a project to a free account when a turn hits a subscription limit. Runs on macOS and Linux, on the machine that holds your Claude Code logins.",
+  "icon": { "url": "./icons/claude-switcher-6feaa374.svg" },
+  "screenshots": [
+    "./screenshots/claude-switcher/provider-usage.png",
+    "./screenshots/claude-switcher/new-thread-composer.png",
+    "./screenshots/claude-switcher/thread-header.png",
+    "./screenshots/claude-switcher/settings.png"
+  ],
+  "overview": "./overview/claude-switcher.md",
+  "tags": [
+    "claude-code",
+    "accounts",
+    "usage",
+    "rate-limits",
+    "quota",
+    "providers",
+    "subscription"
+  ],
+  "author": {
+    "name": "Aitor Mariscal",
+    "github": "Finolaina",
+    "url": "https://github.com/Finolaina"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/Finolaina/bb-plugin-claude-switcher.git",
+      "range": "^0.2.3"
+    }
+  }
+}

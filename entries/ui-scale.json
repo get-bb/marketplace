@@ -1,0 +1,24 @@
+{
+  "id": "ui-scale",
+  "displayName": "UI Scale",
+  "description": "Makes the bb interface bigger or smaller on each device, so your phone and desktop each get a size that fits. A slider from 50% to 200% scales text, spacing, and layout, and the change applies immediately. Each browser and phone keeps its own value, stored locally and never synced. On iOS, it also stops Safari from zooming in when you tap a text field.",
+  "icon": "ZoomIn",
+  "tags": ["scale", "zoom", "font-size", "mobile", "ios", "accessibility", "interface"],
+  "author": {
+    "name": "Mathieu Post",
+    "github": "m9tdev",
+    "url": "https://github.com/m9tdev"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/ui-scale/settings.png",
+    "./screenshots/ui-scale/scaled-125.png"
+  ],
+  "overview": "./overview/ui-scale.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/m9tdev/bb-plugin-ui-scale.git",
+      "range": "^0.1.0"
+    }
+  }
+}

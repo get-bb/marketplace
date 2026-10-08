@@ -1,0 +1,33 @@
+{
+  "id": "retitle",
+  "displayName": "Retitle",
+  "description": "Gives each thread a title that matches the conversation, not only its first message. After the first reply, a small model writes a new title: Haiku 4.5 on Claude Code, gpt-5.4-mini on Codex. Press ⌘⌥R, click the header button, or use the quick palette to rename any thread again, and turn on an emoji at the start of each title. Each rename runs one short session on the thread's own provider, so it needs no API key.",
+  "icon": "EditFile",
+  "tags": [
+    "title",
+    "rename",
+    "naming",
+    "sidebar",
+    "keyboard-shortcut",
+    "emoji",
+    "haiku",
+    "small-model"
+  ],
+  "author": {
+    "name": "Charles Lee",
+    "github": "chug2k",
+    "url": "https://github.com/chug2k"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/chug2k/bb-plugin-retitle.git",
+      "range": "^0.1.2"
+    }
+  },
+  "overview": "./overview/retitle.md",
+  "screenshots": [
+    "./screenshots/retitle/command.png",
+    "./screenshots/retitle/settings.png"
+  ]
+}

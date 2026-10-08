@@ -1,0 +1,36 @@
+{
+  "id": "live-markdown",
+  "displayName": "Live Markdown",
+  "description": "Edit Markdown right in the side panel, with formatting rendered as you type and saves that change only the characters you typed. Tables stay tables while you edit: click a cell to change its raw Markdown in place, Tab to the next cell, and Tab past the last one to add a row. Every save checks the file's hash first, so a file an agent changed while you typed asks you to keep your version or load the disk version instead of being overwritten. It becomes the opener for .md, .mdx and .markdown files on install unless you already chose one under Settings, and needs bb 0.43 or later with no account or external service.",
+  "icon": {
+    "url": "./icons/live-markdown-c1107db5.svg"
+  },
+  "tags": [
+    "markdown",
+    "live-preview",
+    "editor",
+    "tables",
+    "notes",
+    "autosave",
+    "readme",
+    "agent-docs"
+  ],
+  "author": {
+    "name": "bottlebrushes",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/live-markdown/live-preview.png",
+    "./screenshots/live-markdown/table-cell-editing.png",
+    "./screenshots/live-markdown/conflict-banner.png"
+  ],
+  "overview": "./overview/live-markdown.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-plugin-live-markdown.git",
+      "range": "^0.1.0"
+    }
+  }
+}

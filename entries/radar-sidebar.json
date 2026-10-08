@@ -1,0 +1,25 @@
+{
+  "id": "radar-sidebar",
+  "displayName": "Radar Sidebar",
+  "description": "See which threads need you without opening each conversation. Group threads by activity, project or section, fold nested families, and preview goals and context usage on hover. Filter or save views, use keyboard and bulk actions, and keep navigation aligned with BB's sidebar settings. Requires BB 0.44+ and uses exclusive experimental sidebar slots; no external service or account.",
+  "icon": { "url": "./icons/radar-sidebar-139a7005.svg" },
+  "screenshots": [
+    "./screenshots/radar-sidebar/hero.png",
+    "./screenshots/radar-sidebar/hover-card.png",
+    "./screenshots/radar-sidebar/settings.png"
+  ],
+  "overview": "./overview/radar-sidebar.md",
+  "tags": ["activity", "thread-families", "navigation", "filters", "bulk-actions", "keyboard-shortcuts"],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-radar-sidebar.git",
+      "range": "^0.5.0"
+    }
+  }
+}

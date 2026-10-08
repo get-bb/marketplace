@@ -1,0 +1,34 @@
+{
+  "id": "session-history",
+  "displayName": "Session History",
+  "description": "See every Claude Code, Codex and Qwen Code session you ran outside BB, under the titles the agents gave them. The new-thread screen lists the sessions from the selected project's folders, and a Sessions page lists all of them with agent filters and search. Open any session to read its transcript, show its tool calls, or copy the command that resumes it in a terminal. Session files are read on the machine that runs BB and are never uploaded or changed.",
+  "icon": "Clock",
+  "tags": [
+    "sessions",
+    "history",
+    "claude-code",
+    "codex",
+    "qwen-code",
+    "transcripts",
+    "resume",
+    "search"
+  ],
+  "author": {
+    "name": "Nikolai Marchenko",
+    "github": "neonick",
+    "url": "https://github.com/neonick"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/session-history/new-thread.png",
+    "./screenshots/session-history/sessions.png",
+    "./screenshots/session-history/transcript.png"
+  ],
+  "overview": "./overview/session-history.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/neonick/bb-plugin-session-history.git",
+      "range": "^0.1.0"
+    }
+  }
+}
