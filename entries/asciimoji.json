@@ -24,7 +24,7 @@
   "source": {
     "git": {
       "url": "https://github.com/rigerc/bb-plugin-asciimoji.git",
-      "range": "^0.3.0"
+      "range": "^0.3.1"
     }
   },
   "overview": "./overview/asciimoji.md",
