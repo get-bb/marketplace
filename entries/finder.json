@@ -1,0 +1,38 @@
+{
+  "id": "finder",
+  "displayName": "Finder",
+  "description": "Browse, edit, and save the files an agent is working on without leaving BB. A file tree with new file, rename, upload, and delete sits beside the thread, and search in files reads every file in the workspace and opens a hit at its line. The CodeMirror editor saves with compare-and-swap, so a change the agent made while you were typing stops the save instead of overwriting it. An @ mention attaches a file whose contents are resolved at send time, and markdown renders Mermaid diagrams. A workspace on another machine works the same way.",
+  "icon": {
+    "url": "./icons/finder-8026aab0.svg"
+  },
+  "screenshots": [
+    "./screenshots/finder/overview.png",
+    "./screenshots/finder/search-in-files.png",
+    "./screenshots/finder/thread-panel.png",
+    "./screenshots/finder/markdown-preview.png"
+  ],
+  "tags": [
+    "files",
+    "file-tree",
+    "editor",
+    "code-editor",
+    "search-in-files",
+    "markdown-preview",
+    "mermaid",
+    "workspace-files",
+    "at-mentions"
+  ],
+  "author": {
+    "name": "Naufal Riza Fatahillah",
+    "github": "rayzalzero",
+    "url": "https://github.com/rayzalzero"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/rayzalzero/bb-plugin-finder.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/finder.md"
+}
