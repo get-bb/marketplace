@@ -1,0 +1,35 @@
+{
+  "id": "agent-tv",
+  "displayName": "Agent TV",
+  "description": "See what every running agent is doing, and which one needs you, from a live wall at the foot of the sidebar. Each tile shows the tool call in flight, the files touched in the last minute, a 60-second activity trace, and how much of its context window the thread has used. Threads blocked on a question or an approval are marked and sorted to the top. Pop the wall out as a monitor you can drag anywhere in BB. The bb agent-tv status command gives terminals and agents the same feed, and nothing leaves your BB server.",
+  "icon": "GridView",
+  "screenshots": [
+    "./screenshots/agent-tv/wall.png",
+    "./screenshots/agent-tv/popout.png",
+    "./screenshots/agent-tv/popout-closeup.png"
+  ],
+  "overview": "./overview/agent-tv.md",
+  "tags": [
+    "fleet",
+    "monitor",
+    "dashboard",
+    "activity",
+    "live",
+    "context-window",
+    "multi-agent",
+    "sidebar",
+    "status"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-agent-tv.git",
+      "range": "^0.1.0"
+    }
+  }
+}

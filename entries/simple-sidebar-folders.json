@@ -1,0 +1,32 @@
+{
+  "id": "simple-sidebar-folders",
+  "displayName": "Simple Sidebar Folders",
+  "description": "Fold whole groups of sidebar projects, so work projects stay out of sight at home and personal ones stay out of sight at work. Drag a project by its name onto a folder to file it; BB's own project and thread rows stay as they are. A folded folder shows how many projects it holds, and a dot when a thread in it needs you. Folders are shared across your BB clients, and each client remembers which ones it keeps folded.",
+  "icon": "Folder",
+  "tags": [
+    "folders",
+    "sidebar",
+    "projects",
+    "project-organization",
+    "collapse",
+    "grouping",
+    "work-personal"
+  ],
+  "author": {
+    "name": "Charles Lee",
+    "github": "chug2k",
+    "url": "https://github.com/chug2k"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/simple-sidebar-folders/sidebar-folders.png",
+    "./screenshots/simple-sidebar-folders/drag-into-folder.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/chug2k/bb-plugin-simple-sidebar-folders.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/simple-sidebar-folders.md"
+}

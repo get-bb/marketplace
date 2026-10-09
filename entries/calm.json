@@ -1,0 +1,38 @@
+{
+  "id": "calm",
+  "displayName": "Calm",
+  "description": "A little world while your agent works. Sixteen pixel-art scenes bring sheep, sailboats, a rooftop cat, and forty-eight little misadventures to bb. An amber light means it needs you. A rain cloud marks an error. Requires bb 0.45 or later, with no external service or account.",
+  "icon": {
+    "url": "./icons/calm-bdc4f795.png"
+  },
+  "tags": [
+    "agent-status",
+    "activity",
+    "pixel-art",
+    "animation",
+    "composer",
+    "child-threads",
+    "working-indicator",
+    "thread-header"
+  ],
+  "author": {
+    "name": "David Eiffert",
+    "github": "davideiffert",
+    "url": "https://github.com/davideiffert"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/calm/working-detail.webp",
+    "./screenshots/calm/all-scenes.png",
+    "./screenshots/calm/waiting-detail.png",
+    "./screenshots/calm/helper-alert.png",
+    "./screenshots/calm/settings.png"
+  ],
+  "overview": "./overview/calm.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/davideiffert/bb-plugin-calm.git",
+      "range": "^1.1.1"
+    }
+  }
+}

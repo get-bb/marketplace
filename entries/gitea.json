@@ -1,0 +1,23 @@
+{
+  "id": "gitea",
+  "displayName": "Gitea",
+  "description": "Manage Gitea issues and pull requests from BB. Review diffs, discuss changes, and handle labels, assignments, and status from a thread panel or the bb gitea command. Turn on Auto-fix or Auto-merge from My PRs or Pull requests. Install the tea CLI and sign in to your Gitea instance; agent actions use your configured BB model and tea permissions.",
+  "icon": {
+    "url": "./icons/gitea-6a83958c.svg"
+  },
+  "tags": ["gitea", "issues", "pull-requests", "code-review", "tea-cli"],
+  "author": {
+    "name": "Nick Motion",
+    "github": "Nick-Motion",
+    "url": "https://github.com/Nick-Motion"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/Nick-Motion/bb-plugin-gitea.git",
+      "range": "^1.0.2"
+    }
+  },
+  "overview": "./overview/gitea.md",
+  "screenshots": ["./screenshots/gitea/my-prs.jpg"]
+}

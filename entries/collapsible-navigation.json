@@ -1,0 +1,24 @@
+{
+  "id": "collapsible-navigation",
+  "displayName": "Collapsible Navigation",
+  "description": "Folds the sidebar navigation upward into a compact strip to maximize vertical space for your thread list. Quick actions remain accessible with one click in the collapsed bar, and navigation icons can optionally move into the window top header. Remembers expanded and collapsed state across restarts.",
+  "icon": "PanelTopClose",
+  "tags": ["navigation", "sidebar", "collapsible", "appearance"],
+  "author": {
+    "name": "VanDalkvist",
+    "github": "VanDalkvist",
+    "url": "https://github.com/VanDalkvist"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/collapsible-navigation/expanded.png",
+    "./screenshots/collapsible-navigation/collapsed.png"
+  ],
+  "overview": "./overview/collapsible-navigation.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/VanDalkvist/bb-plugin-collapsible-navigation.git",
+      "range": "^0.1.0"
+    }
+  }
+}

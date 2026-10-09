@@ -1,0 +1,37 @@
+{
+  "id": "orchestrator-mode",
+  "displayName": "Orchestrator Mode",
+  "description": "Keep one thread as the planner and send every unit of work to its own worker thread. A watchdog checks new timeline work at the guard and block levels, records direct work the parent did itself, and sends up to three corrective messages or stops the turn. Toggle a thread from the composer, its + menu or `bb orchestrator-mode`, and switch the mode on for every new thread you start. Workers share the parent's environment and provider, so they need no extra service; requires bb 0.44 or newer.",
+  "icon": {
+    "url": "./icons/orchestrator-mode-a865393a.svg"
+  },
+  "tags": [
+    "orchestration",
+    "delegation",
+    "worker-threads",
+    "subagents",
+    "multi-agent",
+    "watchdog",
+    "enforcement",
+    "composer",
+    "cli"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-orchestrator-mode.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/orchestrator-mode/orchestrating-thread.png",
+    "./screenshots/orchestrator-mode/direct-work-caught.png",
+    "./screenshots/orchestrator-mode/new-thread-default.png"
+  ],
+  "overview": "./overview/orchestrator-mode.md"
+}

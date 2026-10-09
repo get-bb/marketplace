@@ -5,8 +5,9 @@ tells you what it will free before it frees it.
 
 Reclaim indexes your whole volume — every file, no scan cap — then keeps the
 directory totals so browsing is instant instead of re-walking the disk on every
-click. A full scan of a 500 GB volume with 6 million files takes about 90
-seconds and runs in the background.
+click. A full scan of a 500 GB volume with 6 million files takes a few
+minutes (clone-id lookup is an extra syscall per file) and runs in the
+background.
 
 ## Finding the space
 
@@ -15,8 +16,8 @@ out the pass-through parents that make a naive "largest folders" list useless.
 The tree browser expands in place, so you keep the whole path in view while you
 drill into it. Every row carries a real subtree total.
 
-Numbers come from allocated blocks with hardlinks counted once, so they agree
-with `du` and with what the operating system reports.
+Numbers come from allocated blocks with hardlinks and APFS clones counted
+once, so they agree with what deleting a folder would actually free.
 
 ## Getting it back
 
@@ -66,6 +67,6 @@ Nothing inside a macOS application bundle is ever a candidate.
 ## Requirements
 
 macOS or Linux. No account, service, or separate install. Docker features need
-a local Docker install and appear as unavailable without one. On a machine with
-APFS clones the indexed total can exceed the volume's capacity, because a clone
-reports a full allocation per copy; Reclaim labels that rather than hiding it.
+a local Docker install and appear as unavailable without one. APFS clones
+(Chrome code-sign leftovers, Finder copies) share one data stream; Reclaim
+counts that stream once instead of once per name.

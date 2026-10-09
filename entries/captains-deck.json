@@ -1,0 +1,33 @@
+{
+  "id": "captains-deck",
+  "displayName": "Captain's Deck",
+  "description": "Puts a first mate's whole crew on one board, so you only touch the calls that need you. Five columns track what is charted, what is underway, the decisions waiting on you, merges, and landings. Answer a call in place: pick an option, add a note, and the answer reaches the first mate's thread. Cards carry live thread state (working, queued, needs input, failed), the worker bot, and the pull request link. The first mate charts and moves work with the `bb deck` command; no external service or account is needed.",
+  "icon": "Kanban",
+  "tags": [
+    "kanban",
+    "board",
+    "tasks",
+    "agents",
+    "orchestration",
+    "decisions",
+    "first-mate",
+    "crew"
+  ],
+  "author": {
+    "name": "Deimantas Norkeliunas",
+    "github": "deimantasnork",
+    "url": "https://github.com/deimantasnork"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/deimantasnork/bb-plugin-captains-deck.git",
+      "range": "^0.3.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/captains-deck/board.jpg",
+    "./screenshots/captains-deck/decision.jpg"
+  ],
+  "overview": "./overview/captains-deck.md"
+}

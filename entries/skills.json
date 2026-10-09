@@ -1,0 +1,27 @@
+{
+  "id": "skills",
+  "displayName": "Skills",
+  "description": "See every skill a thread's agent can use, where each one comes from and what it says, and add one to the chat from the panel or composer. A Skills tab in the thread's side panel groups them by origin — the project, the repository, your personal folder, an admin folder, a Claude Code or Codex plugin, or bb itself — and shows each one's SKILL.md, rendered, with its path on disk. Claude Code, Codex and Hermes threads have their skill folders read the way that agent reads them, in worktrees and on other enrolled machines too, so a name defined twice is listed once, under the copy the agent uses. Add to chat puts the skill in the message box as the same pill bb's / menu inserts and sends nothing, and a Skills button with a live count, or a keyboard command, opens the same list in bb's pop-up above the message box. Threads on other providers list bb's own skills and what bb's / menu offers. Needs bb 0.45 or later, and no account, key or network access.",
+  "icon": "Zap",
+  "tags": ["skill-md", "slash-commands", "claude-code", "codex", "hermes", "composer", "side-panel", "agent-instructions"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "memory-and-context",
+  "screenshots": [
+    "./screenshots/skills/composer-popover.png",
+    "./screenshots/skills/panel-list.png",
+    "./screenshots/skills/panel-detail.png"
+  ],
+  "overview": "./overview/skills.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "skills",
+      "tagPrefix": "skills/",
+      "range": "^0.3.0"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "id": "pstack-for-bb",
+  "displayName": "pstack for bb",
+  "description": "Use Lauren Tan's pstack skills in bb, synced daily from cursor/plugins with Cursor locations adapted for bb.",
+  "icon": "Layers",
+  "screenshots": [
+    "./screenshots/pstack-for-bb/overview.png",
+    "./screenshots/pstack-for-bb/project.png",
+    "./screenshots/pstack-for-bb/dependencies.png",
+    "./screenshots/pstack-for-bb/skills.png"
+  ],
+  "overview": "./overview/pstack-for-bb.md",
+  "tags": ["skills", "poteto", "playbooks", "engineering", "code-review", "verification", "principles", "per-project", "upstream-sync"],
+  "author": {
+    "name": "Erik MacKinnon",
+    "github": "erikmackinnon",
+    "url": "https://github.com/erikmackinnon"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/erikmackinnon/bb-plugin-pstack-for-bb.git",
+      "range": "^0.1.5"
+    }
+  }
+}

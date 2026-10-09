@@ -1,0 +1,24 @@
+{
+  "id": "link-hovercards",
+  "displayName": "Link Hovercards",
+  "description": "See a pull request's CI, review and merge state by hovering its link, without leaving the thread. Works on GitHub pull requests, GitHub issues and Linear issues anywhere in BB. On a phone, long-press a link to open its card. GitHub cards need the GitHub CLI signed in on your BB server; Linear cards need a personal Linear API key.",
+  "icon": { "url": "./icons/link-hovercards-4729ba19.svg" },
+  "screenshots": [
+    "./screenshots/link-hovercards/pull-request.png",
+    "./screenshots/link-hovercards/issue.png"
+  ],
+  "overview": "./overview/link-hovercards.md",
+  "tags": ["github", "linear", "pull-requests", "issues", "hover", "link-preview", "ci-status", "mobile"],
+  "author": {
+    "name": "Bruno Bornsztein",
+    "github": "bborn",
+    "url": "https://github.com/bborn"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/bborn/bb-plugin-link-hovercards.git",
+      "range": "^0.1.0"
+    }
+  }
+}

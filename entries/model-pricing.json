@@ -1,0 +1,27 @@
+{
+  "id": "model-pricing",
+  "displayName": "Model Pricing",
+  "description": "Compare what every AI model costs per million tokens, across Anthropic, OpenAI, Fireworks AI, Ollama Cloud and OpenRouter, in one table. A Relative column ranks each model against the cheapest one on screen, weighted by an input/output blend you choose. Each row also gives the context window, the longest reply, and whether the model can reason, call tools or return structured output. Sort by any column, search by name, hide a provider with its legend dot, and open any model's own page from its row. Prices come from the public models.dev catalog and OpenRouter's model list and are kept for twelve hours; no account or key is needed, but the machine running the bb server must reach both sites.",
+  "icon": "ChartColumn",
+  "tags": ["price-comparison", "cost", "tokens", "llm", "anthropic", "openai", "openrouter", "fireworks", "ollama", "models-dev"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "token-usage-and-limits",
+  "screenshots": [
+    "./screenshots/model-pricing/table.png",
+    "./screenshots/model-pricing/cards-and-model-page.png",
+    "./screenshots/model-pricing/settings.png"
+  ],
+  "overview": "./overview/model-pricing.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "model-pricing",
+      "tagPrefix": "model-pricing/",
+      "range": "^0.1.0"
+    }
+  }
+}

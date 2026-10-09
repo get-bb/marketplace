@@ -1,0 +1,34 @@
+{
+  "id": "browserbase",
+  "displayName": "Browserbase",
+  "description": "Browserbase gives BB a real browser to use the web like a human. Navigate interactive websites, perform complex actions using natural language, and extract data from pages. Each BB thread gets its own cloud browser session. Requires a Browserbase account and API key; usage counts toward your Browserbase plan.",
+  "icon": {
+    "url": "./icons/browserbase-logo.png"
+  },
+  "category": "tasks-and-workflows",
+  "tags": [
+    "agents",
+    "ai",
+    "ai-agents",
+    "browser-agent",
+    "browser-automation",
+    "cloud-browser",
+    "data-extraction",
+    "headless-chrome",
+    "web-automation"
+  ],
+  "author": {
+    "name": "Shriya Lolabattu",
+    "github": "shriyatheunicorn"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/browserbase/bb-plugin.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/browserbase.md",
+  "screenshots": [
+    "./screenshots/browserbase/search-demo.png"
+  ]
+}

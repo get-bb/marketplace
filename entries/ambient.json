@@ -1,0 +1,41 @@
+{
+  "id": "ambient",
+  "displayName": "Ambient",
+  "description": "Turns bb's background into a live scene that shows what your agents are doing at a glance. Each working agent becomes a character in the scene, a thread waiting on you pulses, and a finished turn sends out a ripple that turns red on an error. Describe a scene in your own words and an agent paints it in a new thread, complete with its own sliders, or let a daily automation paint a new one each day. Ten built-in scenes, including Poppy Hill, Koi Pond, and Starry Fjord, each have their own sliders and four-color palette. Runs inside bb with no external service; each painted scene uses one agent turn on your default provider.",
+  "icon": {
+    "url": "./icons/ambient-35bd9109.svg"
+  },
+  "tags": [
+    "background",
+    "wallpaper",
+    "shader",
+    "glsl",
+    "webgl",
+    "generative-art",
+    "animation",
+    "agent-status",
+    "activity"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/ambient/poppy-hill.jpg",
+    "./screenshots/ambient/koi-pond-thread.jpg",
+    "./screenshots/ambient/starry-fjord.jpg",
+    "./screenshots/ambient/controls.jpg",
+    "./screenshots/ambient/create-a-scene.jpg"
+  ],
+  "overview": "./overview/ambient.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/ambient",
+      "range": "^0.1.2",
+      "tagPrefix": "ambient/"
+    }
+  }
+}

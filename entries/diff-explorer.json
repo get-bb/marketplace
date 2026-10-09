@@ -1,0 +1,35 @@
+{
+  "id": "diff-explorer",
+  "displayName": "Diff Explorer",
+  "description": "Review every changed file in one scroll, and ⌘-click any symbol to read its definition without leaving the diff. Press Ctrl+- to step back, so you can follow a call several levels deep and return to the hunk you were reading. Switch between uncommitted changes and all changes since the base branch. Open it with ⌘⇧D or the button in the thread header. Go to definition needs the language server on your PATH: gopls, rust-analyzer, pyright, clangd, or sourcekit-lsp; TypeScript downloads typescript-language-server through npx on first use.",
+  "icon": "FileDiff",
+  "tags": [
+    "diff",
+    "code-review",
+    "go-to-definition",
+    "language-server",
+    "lsp",
+    "multi-file-diff",
+    "uncommitted-changes",
+    "monaco"
+  ],
+  "author": {
+    "name": "Arash Outadi",
+    "github": "arashout",
+    "url": "https://github.com/arashout"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/diff-explorer/diff.png",
+    "./screenshots/diff-explorer/go-to-definition.png"
+  ],
+  "overview": "./overview/diff-explorer.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/bitcomplete/bb-plugins.git",
+      "subdir": "plugins/diff-explorer",
+      "range": "^0.1.3",
+      "tagPrefix": "diff-explorer/"
+    }
+  }
+}

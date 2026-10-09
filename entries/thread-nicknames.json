@@ -1,0 +1,30 @@
+{
+  "id": "thread-nicknames",
+  "displayName": "Thread nicknames",
+  "description": "Identify threads by persistent numbers such as @27. New threads keep their number across title changes and reloads, while forks receive their own numbers. Browse numbered threads from the sidebar or Settings, then open one directly. Requires bb 0.42+; prefixes change actual thread titles and remain after disabling the plugin.",
+  "icon": {
+    "url": "./icons/thread-nicknames-f79e48ce.svg"
+  },
+  "overview": "./overview/thread-nicknames.md",
+  "tags": [
+    "thread-numbers",
+    "titles",
+    "identifiers",
+    "navigation"
+  ],
+  "author": {
+    "name": "MattBot",
+    "github": "mgmobrien",
+    "url": "https://github.com/mgmobrien"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/mgmobrien/bb-plugin-thread-nicknames.git",
+      "range": "^0.2.1"
+    }
+  },
+  "screenshots": [
+    "./screenshots/thread-nicknames/numbered-threads.png"
+  ]
+}

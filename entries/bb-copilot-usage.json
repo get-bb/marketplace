@@ -1,0 +1,12 @@
+{
+  "id": "bb-copilot-usage",
+  "displayName": "GitHub Copilot Usage",
+  "description": "See GitHub Copilot AI-credit or premium-request usage beside your other BB providers. Reads the quota shown by the authenticated Copilot CLI and reports the billing-cycle reset estimate. Requires GitHub Copilot CLI, a Copilot account, and tmux on the BB host.",
+  "icon": "Github",
+  "tags": ["github-copilot", "copilot", "usage", "quota", "ai-credits"],
+  "author": { "name": "defacid", "github": "defacid", "url": "https://github.com/defacid" },
+  "category": "token-usage-and-limits",
+  "source": { "git": { "url": "https://github.com/defacid/bb-copilot-usage.git", "range": "^0.1.0" } },
+  "screenshots": ["./screenshots/bb-copilot-usage/overview.png"],
+  "overview": "./overview/bb-copilot-usage.md"
+}
