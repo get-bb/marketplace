@@ -1,7 +1,7 @@
 {
   "id": "asciimoji",
   "displayName": "Asciimoji",
-  "description": "Give every thread a familiar text face that stays with the conversation. Choose from five generated face families, 12 presets, or custom text, with thread, project, and global default precedence. Add sidebar faces with adjustable width, theme colors, and expression or marker activity styles plus a live appearance preview; saved choices sync between connected windows. Includes shell controls and needs no external service or account.",
+  "description": "Give every thread a familiar text face that stays with the conversation. Choose from five generated face families, 12 presets, or custom text through a focused four-tab picker, with thread, project, and global default precedence. Add sidebar faces with adjustable width, theme colors, and expression or marker activity styles plus a live appearance preview; saved choices sync between connected windows. Includes shell controls and needs no external service or account.",
   "icon": {
     "url": "./icons/asciimoji-fd5c4fe5.svg"
   },
@@ -24,7 +24,7 @@
   "source": {
     "git": {
       "url": "https://github.com/rigerc/bb-plugin-asciimoji.git",
-      "range": "^0.4.0"
+      "range": "^1.0.0"
     }
   },
   "overview": "./overview/asciimoji.md",
