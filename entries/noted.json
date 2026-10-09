@@ -1,0 +1,21 @@
+{
+  "id": "noted",
+  "displayName": "Noted",
+  "description": "Point at the exact part of an agent's HTML or Markdown artifact and send that feedback straight to its thread. Click an element or select text in the side panel, type a note, and queue as many notes as you want before sending them as one message. Each note reaches the agent with the element's selector and the quoted text, so it edits the right spot instead of guessing which paragraph you meant. When the agent saves the file, the open review refreshes to the next revision. Optional settings add a separate review window and in-place Markdown source editing.",
+  "icon": { "url": "./icons/noted-aff43143.svg" },
+  "screenshots": ["./screenshots/noted/html-review.png", "./screenshots/noted/markdown-review.png"],
+  "overview": "./overview/noted.md",
+  "tags": ["annotation", "review", "feedback", "html", "markdown", "artifacts", "side-panel", "comments", "agent-feedback", "lavish"],
+  "author": {
+    "name": "MPIV",
+    "github": "MPIsaac-Per",
+    "url": "https://github.com/mpiv-ai"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/mpiv-ai/noted.git",
+      "range": "^0.2.0"
+    }
+  }
+}
