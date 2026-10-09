@@ -9,7 +9,8 @@
     "./screenshots/finder/overview.png",
     "./screenshots/finder/search-in-files.png",
     "./screenshots/finder/thread-panel.png",
-    "./screenshots/finder/markdown-preview.png"
+    "./screenshots/finder/markdown-preview.png",
+    "./screenshots/finder/at-mention.png"
   ],
   "tags": [
     "files",
