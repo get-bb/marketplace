@@ -193,6 +193,14 @@ for (const entry of plugins) {
   if (entry.category !== undefined && !categoryIds.has(entry.category)) {
     problems.push(`${entry.id}.json: The category "${entry.category}" is not defined.`);
   }
+  for (const secondary of entry.secondaryCategories ?? []) {
+    if (!categoryIds.has(secondary)) {
+      problems.push(`${entry.id}.json: The secondary category "${secondary}" is not defined.`);
+    }
+    if (secondary === entry.category) {
+      problems.push(`${entry.id}.json: The primary category cannot be secondary.`);
+    }
+  }
 }
 
 const referencedScreenshotFiles = new Set();

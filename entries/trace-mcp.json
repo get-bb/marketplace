@@ -10,6 +10,7 @@
     "url": "https://trace-mcp.com"
   },
   "category": "memory-and-context",
+  "secondaryCategories": ["token-usage-and-limits"],
   "source": {
     "git": {
       "url": "https://github.com/nikolai-vysotskyi/trace-mcp.git",

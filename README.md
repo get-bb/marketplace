@@ -53,7 +53,10 @@ A user controls each plugin installation and update.
 ## Categories
 
 The `categories` array defines the available category IDs and their display text.
-An entry can use one category ID from this array.
+An entry has one primary `category` ID. Add up to three `secondaryCategories`
+to place the same plugin in other category shelves in bb versions that support
+them. Older bb versions display the primary category only. Secondary IDs must
+be distinct from the primary ID and from each other.
 
 The v2 schema permits an entry without a category.
 This repository requires a category for each new or changed entry.
