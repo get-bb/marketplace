@@ -1,0 +1,22 @@
+{
+  "id": "trace-mcp",
+  "displayName": "trace-mcp",
+  "description": "Find code and past decisions without rereading whole files. Search an indexed repository, inspect exact symbols and file outlines, and recall decisions from bb threads. Other trace-mcp tools remain searchable without filling every agent prompt. Runs on each environment's machine; the first query fetches trace-mcp through npx, which requires npm access on that machine.",
+  "icon": { "url": "./icons/trace-mcp-71aeb605.svg" },
+  "tags": ["context", "tokens", "token-usage", "code-search", "symbols", "decisions", "mcp"],
+  "author": {
+    "name": "Nikolai Vysotskyi",
+    "github": "nikolai-vysotskyi",
+    "url": "https://trace-mcp.com"
+  },
+  "category": "memory-and-context",
+  "source": {
+    "git": {
+      "url": "https://github.com/nikolai-vysotskyi/trace-mcp.git",
+      "subdir": "integrations/bb",
+      "range": "^0.1.0",
+      "tagPrefix": "bb-plugin-trace-mcp/"
+    }
+  },
+  "overview": "./overview/trace-mcp.md"
+}
