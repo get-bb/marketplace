@@ -1,0 +1,36 @@
+{
+  "id": "markdown-reader",
+  "displayName": "Markdown Reader",
+  "description": "Markdown source mixes document content with formatting syntax. Markdown Reader provides formatted Preview, exact Raw text, and heading navigation in the same read-only BB file tab. Open workspace, host, and thread-storage files, follow supported links, preview images, and refresh content without editing it. Remote images contact their source servers; no paid account or separate service is required. Requires BB 0.45+ and Plugin SDK >=0.6.15 <0.7; supports UTF-8 text up to 1 MiB, with BB preview available for unsupported files.",
+  "icon": {
+    "url": "./icons/markdown-reader-ca48f6fc.svg"
+  },
+  "screenshots": [
+    "./screenshots/markdown-reader/reading-outline.png",
+    "./screenshots/markdown-reader/code-highlighting.png",
+    "./screenshots/markdown-reader/wide-content.png",
+    "./screenshots/markdown-reader/raw-source.png"
+  ],
+  "overview": "./overview/markdown-reader.md",
+  "tags": [
+    "markdown",
+    "documents",
+    "preview",
+    "read-only",
+    "outline"
+  ],
+  "author": {
+    "name": "koenvg",
+    "github": "koenvg",
+    "url": "https://github.com/koenvg"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/koenvg/bb-plugins.git",
+      "subdir": "bb-plugin-markdown-reader",
+      "range": "^0.1.0",
+      "tagPrefix": "markdown-reader/"
+    }
+  }
+}
