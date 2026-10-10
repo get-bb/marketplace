@@ -1,0 +1,34 @@
+{
+  "id": "followups",
+  "displayName": "Followups",
+  "description": "Turn a finished answer into your next message: pick one of its suggested follow-ups and get a full draft in the composer. When a thread finishes, a model reads its last answer and your last three messages, then shows two to five next steps above the message box, each with the reason it is worth doing. Click one, or press 1–9, and it is written out as a first-person message in your composer; nothing is sent for you, and anything you typed stays. A switch in each thread's header turns follow-ups on or off for that thread, and a footer shows how long each run took and how many tokens it used. Each suggestion and draft is a short run on a model you choose from your bb providers, in a hidden worker thread that uses the provider's least privileged permission mode and is deleted when it finishes.",
+  "icon": "ListTodo",
+  "tags": [
+    "suggestions",
+    "next-steps",
+    "prompts",
+    "composer",
+    "drafting",
+    "quick-replies",
+    "keyboard",
+    "workflow"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-followups.git",
+      "range": "^0.6.1"
+    }
+  },
+  "screenshots": [
+    "./screenshots/followups/banner.png",
+    "./screenshots/followups/draft.png",
+    "./screenshots/followups/settings.png"
+  ],
+  "overview": "./overview/followups.md"
+}
