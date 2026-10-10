@@ -1,0 +1,31 @@
+{
+  "id": "vim",
+  "displayName": "Vim",
+  "description": "Write BB prompts with Vim motions, modes, selections, and operators while BB keeps its native composer behavior. Insert mode leaves attachments, image paste, model controls, voice input, and submission to BB. Normal, Visual, and Visual Line modes add counts, text objects, search, yank, paste, undo, and redo. Terminals, search fields, command palettes, and opted-out plugin surfaces stay native. Requires BB 0.41+ and Plugin SDK 0.4.34+; no external service or paid account is required.",
+  "icon": "EditFile",
+  "screenshots": [
+    "./screenshots/vim/insert-mode.png",
+    "./screenshots/vim/normal-mode.png",
+    "./screenshots/vim/visual-mode.png"
+  ],
+  "tags": [
+    "vim",
+    "editing",
+    "keybindings",
+    "composer",
+    "modal-editing"
+  ],
+  "author": {
+    "name": "John Debay",
+    "github": "jad",
+    "url": "https://github.com/jad"
+  },
+  "category": "thread-content",
+  "overview": "./overview/vim.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/jad/bb-plugin-vim.git",
+      "range": "^0.1.0"
+    }
+  }
+}
