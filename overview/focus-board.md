@@ -2,24 +2,19 @@ Focus Board is a nav panel in the bb sidebar that shows all your threads as a ka
 
 ## What you get
 
-- **Group** threads into columns by Attention (the default: Pinned, Needs you, Unread, Working, then idle threads bucketed by how long they have been quiet), Last activity, Project, Provider, Machine, or Parent thread.
-- **Filter and search** by thread state, project, provider, or title. Grouping, filters, and search persist across sessions.
-- **Drag to act**: hand-order a column, drop a card on Pinned, Unread, or Done to change its state in the same drag, or drop it onto a card's middle to nest it as that thread's child. Drag a nested child onto any column floor to top-level it again, and back onto a card to re-nest.
-- **Spawn children from the board**: "New child thread…" in the card and pane menus opens the composer preset to the parent's project and checkout, and the child lands nested under its parent in the pane.
-- **Thread pane**: open a card to read and reply beside the board, full screen on phone. Agent questions are answered right from the pane, and the header's menu opens the thread's workspace in your editor, file explorer, or terminal.
-- **Auto-rename**: the pane's title editor can title the thread from its opening prompt with bb's AI services, falling back to the thread's own model when the pinned service can't.
-- **Snooze**: "Snooze…" reads a thread now and marks it unread again at the time you pick.
-- **Sweep**: every lane carries a sweep with its own destination — stale Done threads archive, long-idle threads move to Done, Pinned unpins, Unread marks read. Shift-click and Cmd/Ctrl-click multi-select before sweeping.
-- **Ticket chips** with GitHub status dots when the official GitHub plugin is installed.
-- **What's new**: a gift toolbar button lists recent changes after an update.
+- **Orient at a glance.**
+  - The default lanes rank threads by attention — pinned, needs-you, unread, or working — and quiet threads settle out based on how long they have been idle.
+  - Reslice anytime by project, provider, machine, activity, or parent; search and filters persist across sessions.
+- **Act from the board.**
+  - Drag to re-order a column, or drop a card to change its state or nest it as a child. Sweep a lane's stragglers to "Done" or "Archive" so your board stays focused on what's fresh.
+- **Depth, one click away.**
+  - Open a thread within the board and read, reply, or answer the agent's questions -- works from your browser, desktop, or phone.
 
-## How it works
-
-The board writes only pin state, read state, and Done marks through bb's own stores — never thread content. Sweep thresholds are configurable in Settings → Installed plugins or with the CLI, and any thread can be exempted with a per-card "Keep from sweep" override.
+More about our features in the [README](https://github.com/cristoslc/bb-plugin-focus-board).
 
 ## CLI
 
-The plugin registers one `bb` subcommand, `bb focus-board`, for managing its own state: `done list|mark|clear`, `snooze list|set|clear`, `autotitle availability|prompt|probe`, `sweep`, and `config show|set`. All commands accept `--json`, and the sweep never archives without `--confirm`.
+One subcommand, `bb focus-board`, manages the plugin's own state: done status, marks, snoozes, links, auto-titling, sweeps, and config. All commands accept `--json`, and the sweep never archives without `--confirm`.
 
 ## Requirements
 
