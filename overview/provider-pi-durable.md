@@ -9,7 +9,7 @@ Run BB agent threads with the Pi Durable ACID SQLite runtime, offering persisten
 
 ## How it works
 
-When a thread starts in BB with the Pi Durable provider selected, the plugin spawns the `pi-durable-rpc` engine with dedicated IPC bridge channels. The runner establishes handshake communication, exchanges the model catalog, and streams conversation events into the BB timeline with sub-millisecond latency.
+When a thread starts in BB with the Pi Durable provider selected, the plugin spawns its built-in TypeScript runner with dedicated IPC bridge channels. The runner establishes handshake communication, exchanges the model catalog, and streams conversation events into the BB timeline with sub-millisecond latency.
 
 ## Prerequisites
 

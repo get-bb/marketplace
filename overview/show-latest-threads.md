@@ -6,10 +6,11 @@ last 24, 48 or 72 hours.
 
 - A **Recent only** switch and a **24h / 48h / 72h** picker at the top of the
   list. Turn the switch off to see everything.
-- Pinned threads on top, then your sections, then projects ordered by their
-  latest activity.
+- Pinned threads on top, then your sections, then projects ordered by name
+  ascending. Numbers sort naturally: 1.9 comes before 1.10 and 1.12.
 - Child threads stay under their parent. A recent child keeps its parent in
   the list, so the tree never breaks.
+- Threads are indented under project headings, with a subtle vertical guide.
 - The open thread and any thread that is running or waiting for your answer
   stay visible whatever their age.
 - Status on the right of every row, as in BB's own list: a dot for unread,
