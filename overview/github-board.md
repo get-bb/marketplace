@@ -17,5 +17,5 @@ columns, beside the threads that work on them.
 
 ## What it needs
 
-bb 0.45 or later, and the GitHub CLI, `gh`, installed and signed in on the machine running the bb
+bb 0.46 or later, and the GitHub CLI, `gh`, installed and signed in on the machine running the bb
 server. The board uses that login and stores no token of its own.
