@@ -1,0 +1,29 @@
+{
+  "id": "glass-sidebar",
+  "displayName": "Glass Sidebar",
+  "description": "Distinguishes focused, split, and idle sessions in bb with colored folders, drag-and-drop organization, live work, project identity, and lifecycle shelves.",
+  "icon": {
+    "url": "./icons/glass-sidebar-e2480dc4.svg"
+  },
+  "tags": [
+    "sidebar",
+    "sessions",
+    "thread-management",
+    "folders",
+    "workflows",
+    "projects",
+    "glass"
+  ],
+  "category": "thread-management",
+  "author": {
+    "name": "Luis Llenin",
+    "github": "luisllenin02",
+    "url": "https://github.com/luisllenin02"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/luisllenin02/bb-plugin-glass-sidebar.git",
+      "range": "^1.0.0"
+    }
+  }
+}
