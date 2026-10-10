@@ -1,0 +1,27 @@
+{
+  "id": "screen-sharing",
+  "displayName": "Screen Sharing",
+  "description": "See and control the screens of your Macs from inside bb, at your desk or from anywhere through your getbb.app address. A sidebar page shows each Mac connected to your bb with whether its Screen Sharing is on, and opens its screen in the page for your keyboard and mouse. Sessions to several Macs can be open at once, with View only, Send keys for shortcuts such as Command-Tab, and Full screen. Every new session asks for that Mac's own macOS user name and password, which bb never keeps, and a Close all pill ends every session at once. Requires bb 0.45 or later and macOS, with Screen Sharing turned on by you in System Settings on each Mac; it relies on experimental bb plugin APIs that may change between bb releases.",
+  "icon": { "url": "./icons/screen-sharing-e6061524.svg" },
+  "tags": ["vnc", "remote-desktop", "screen-share", "macos", "remote-control", "multi-mac"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "utilities",
+  "screenshots": [
+    "./screenshots/screen-sharing/mac-picker.png",
+    "./screenshots/screen-sharing/macbook-session.png",
+    "./screenshots/screen-sharing/macmini-session.png"
+  ],
+  "overview": "./overview/screen-sharing.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "screen-sharing",
+      "tagPrefix": "screen-sharing/",
+      "range": "^0.2.0"
+    }
+  }
+}
