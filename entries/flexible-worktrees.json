@@ -12,7 +12,7 @@
   "source": {
     "git": {
       "url": "https://github.com/spachava753/bb-plugin-flexible-worktrees.git",
-      "range": "^0.2.0"
+      "range": ">=0.1.0"
     }
   },
   "category": "code-and-reviews",
