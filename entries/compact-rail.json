@@ -1,0 +1,31 @@
+{
+  "id": "compact-rail",
+  "displayName": "Compact Rail",
+  "description": "Make more room on a small desktop screen with compact navigation and narrower window gutters. Use a 40 px navigation rail with full-size icons and frame gutters at 60% of their default size. Resize the thread sidebar while its list fills the available width. Requires BB 0.46+ and Plugin SDK 0.6.37+; applies to desktop widths with a fine pointer and uses internal layout selectors.",
+  "icon": {
+    "url": "./icons/compact-rail-71a3b6e5.svg"
+  },
+  "overview": "./overview/compact-rail.md",
+  "tags": [
+    "desktop",
+    "small-screen",
+    "sidebar",
+    "navigation",
+    "density"
+  ],
+  "author": {
+    "name": "Yuriy Egorov",
+    "github": "fzrx-ego",
+    "url": "https://github.com/fzrx-ego"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/fzrx-ego/bb-plugin-compact-rail.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/compact-rail/overview.png"
+  ]
+}
