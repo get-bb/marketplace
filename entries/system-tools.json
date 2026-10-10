@@ -1,0 +1,26 @@
+{
+  "id": "system-tools",
+  "displayName": "System Tools",
+  "description": "Monitor and safely manage files, cleanup, processes, ports, storage, and host health from a BB sidebar page.",
+  "icon": "Laptop",
+  "tags": [
+    "system",
+    "monitoring",
+    "cleanup",
+    "processes",
+    "ports",
+    "storage",
+    "files"
+  ],
+  "author": {
+    "name": "Yusuf Lisawi",
+    "github": "YusufLisawi",
+    "url": "https://github.com/YusufLisawi"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/YusufLisawi/bb-plugin-system-tools.git",
+      "range": "^0.1.0"
+    }
+  }
+}
