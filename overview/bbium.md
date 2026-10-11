@@ -4,7 +4,7 @@ Every clickable thing in bb gets a short letter label: sidebar threads, navigati
 
 ## Keys
 
-Keys work when focus is outside a text field. In the composer, press `Esc` first. bb blurs the composer and the agent keeps running.
+Keys work when focus is outside a text field. While the composer has focus, it shows a colored ring and an INSERT badge: keys type text there. Press `Esc` first. bb blurs the composer and the agent keeps running.
 
 - `f` shows hints. Type a label to click the element. Text fields get focus instead.
 - `j` and `k` scroll down and up. `d` and `u` scroll half a screen.
