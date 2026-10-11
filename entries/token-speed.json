@@ -1,0 +1,30 @@
+{
+  "id": "token-speed",
+  "displayName": "Token Speed (TPS)",
+  "description": "See approximate visible-output tokens per second beside BB's native message actions. Hover or focus the info marker for token counts, measured time, and accuracy limits. Excludes reasoning, first-chunk waiting, and known tool execution intervals; incomplete stream data produces no guessed rate. Runs locally in BB with no external service or account.",
+  "icon": "Zap",
+  "tags": [
+    "tps",
+    "tokens-per-second",
+    "visible-output",
+    "streaming",
+    "performance"
+  ],
+  "author": {
+    "name": "nicolay-i",
+    "github": "nicolay-i",
+    "url": "https://github.com/nicolay-i"
+  },
+  "category": "token-usage-and-limits",
+  "screenshots": [
+    "./screenshots/token-speed/message-actions.png",
+    "./screenshots/token-speed/token-speed-details.png"
+  ],
+  "overview": "./overview/token-speed.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/nicolay-i/bb-plugin-token-speed.git",
+      "range": "^0.1.0"
+    }
+  }
+}
