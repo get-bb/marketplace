@@ -15,6 +15,8 @@ port is opened to the internet.
 - View only, to watch without sending keys or clicks; switch it at any time.
 - Send keys, for ⌘Tab, ⌘Space, Mission Control and the other shortcuts your own Mac keeps; Full
   screen, in Chrome, Edge and bb's desktop app, to give the shared Mac the browser's shortcuts too.
+- Clipboard: send your clipboard text to the Mac, copy the Mac's here, or keep both in sync
+  automatically, in any language; the choice is remembered for the next connection.
 - While any session is open, on any device, the sidebar row says Live and a pill in the corner of
   every bb window offers Close all, which ends every session on every Mac.
 - Leave the page and come back: the session keeps running in that bb window and is still signed in.
@@ -44,3 +46,6 @@ Sharing inside its own encrypted sign-in, and bb never logs or keeps it.
 - A Mac with several displays shows as the one picture macOS sends; you cannot pick a display.
 - It is standard VNC, because Apple's faster mode is private to its own app: good for working on a
   Mac, not for watching video.
+- The clipboard carries text only, up to 1 MB, and reaches the clipboard of the macOS account bb runs
+  as on that Mac: sign in to Screen Sharing as that account. Safari, Firefox and the mobile app let bb
+  read your clipboard only when you click Send clipboard.
