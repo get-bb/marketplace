@@ -11,7 +11,7 @@ Keys work when focus is outside a text field. In the composer, press `Esc` first
 - `gg` and `G` jump to the top and the bottom.
 - `i` puts the cursor back in the composer.
 
-In hint mode, `Backspace` removes the last letter and `Esc` closes hints. Buttons that bb shows only on hover, such as message actions, stay visible while hints are open, and an icon button gets its label on its top edge, so the icon stays visible. Hints follow their targets while the chat scrolls during an agent run. Menus and selects open as they would on a mouse click.
+In hint mode, `Backspace` removes the last letter and `Esc` closes hints. Buttons that bb shows only on hover, such as message actions and the Snooze and Settle buttons on sidebar threads, stay visible while hints are open, and an icon button gets its label on its top edge, so the icon stays visible. Hints follow their targets while the chat scrolls during an agent run. Menus and selects open as they would on a mouse click.
 
 ## Settings
 
