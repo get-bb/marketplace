@@ -1,0 +1,37 @@
+{
+  "id": "sidebar-plus",
+  "displayName": "Sidebar Plus",
+  "description": "Keep active projects within reach and check thread status without leaving the sidebar. Pin, hide, reorder, and search projects in collapsible sections. Inspect branch and pull request details from thread menus, where you can also open a split, mark threads read or unread, pin, rename, archive, or delete them. Preferences stay in sync across BB windows.",
+  "icon": {
+    "url": "./icons/sidebar-plus-b7938318.svg"
+  },
+  "tags": [
+    "sidebar",
+    "projects",
+    "threads",
+    "pinning",
+    "search",
+    "grouping",
+    "pull-requests",
+    "split-view"
+  ],
+  "author": {
+    "name": "Juan Turk",
+    "github": "juanem1",
+    "url": "https://github.com/juanem1"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/sidebar-plus/thread-menu.jpg",
+    "./screenshots/sidebar-plus/project-menu.jpg",
+    "./screenshots/sidebar-plus/project-settings.jpg",
+    "./screenshots/sidebar-plus/sections.jpg"
+  ],
+  "overview": "./overview/sidebar-plus.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/juanem1/bb-sidebar-plus-plugin.git",
+      "ref": "main"
+    }
+  }
+}
