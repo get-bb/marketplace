@@ -1,0 +1,42 @@
+{
+  "id": "magpie",
+  "displayName": "Magpie",
+  "description": "Connect BB to a Magpie gateway and see what your agents cost. The Magpie page shows estimated cost, tokens over time per agent, cache hit rate, subscription allowance with reset times, and a breakdown by model, agent, or day. Sync models puts Magpie models into the Pi, Codex, and Claude Code pickers, and you can route one thread or a whole provider through Magpie. Gateway keys stay on the BB server.",
+  "icon": {
+    "url": "./icons/magpie-01425377.svg"
+  },
+  "screenshots": [
+    "./screenshots/magpie/overview.png",
+    "./screenshots/magpie/subscriptions.png"
+  ],
+  "overview": "./overview/magpie.md",
+  "tags": [
+    "magpie",
+    "gateway",
+    "usage",
+    "cost",
+    "quota",
+    "subscriptions",
+    "models",
+    "pi",
+    "codex",
+    "claude-code"
+  ],
+  "author": {
+    "name": "Vaayne",
+    "github": "vaayne",
+    "url": "https://github.com/vaayne"
+  },
+  "category": "token-usage-and-limits",
+  "secondaryCategories": [
+    "agents-and-providers"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/vaayne/agent-kit.git",
+      "subdir": "bb-extensions/magpie",
+      "range": "^0.2.0",
+      "tagPrefix": "magpie/"
+    }
+  }
+}
