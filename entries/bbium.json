@@ -1,0 +1,25 @@
+{
+  "id": "bbium",
+  "displayName": "Bbium",
+  "description": "Click anything in bb without the mouse: press f, type the letter label, and bb clicks it. Labels cover sidebar threads, pickers, composer controls and hover-only message actions, and most stay one or two letters long. j and k scroll the chat, gg and G jump to its ends, and i puts the cursor back in the composer. Change hint letters, colors and fonts in settings or by asking an agent; changes apply live.",
+  "icon": { "url": "./icons/bbium-13cf65ee.svg" },
+  "screenshots": [
+    "./screenshots/bbium/hints.png",
+    "./screenshots/bbium/hints-typed.png",
+    "./screenshots/bbium/settings.png"
+  ],
+  "overview": "./overview/bbium.md",
+  "tags": ["keyboard", "keyboard-shortcuts", "vim", "vimium", "navigation", "hints", "accessibility", "mouseless"],
+  "author": {
+    "name": "Andrej Kostal",
+    "github": "kuringer",
+    "url": "https://github.com/kuringer"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/kuringer/bb-plugin-bbium.git",
+      "range": "^0.1.4"
+    }
+  }
+}

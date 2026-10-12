@@ -43,7 +43,8 @@ const MAX_ENTRIES = 5_000;
  */
 const QUERY = `
   SELECT properties.plugin_id AS plugin_id,
-         count(DISTINCT distinct_id) AS installs
+         count(DISTINCT distinct_id) AS installs,
+         count(DISTINCT if(timestamp > now() - INTERVAL 14 DAY, distinct_id, NULL)) AS recent_installs
   FROM events
   WHERE event = 'plugin_installed'
     AND properties.plugin_id IS NOT NULL
@@ -53,23 +54,28 @@ const QUERY = `
   LIMIT ${MAX_ENTRIES}
 `;
 
-/** Rows PostHog returns are `[plugin_id, installs]`; drop anything else. */
+const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
+
+/**
+ * Rows PostHog returns are `[plugin_id, installs, recent_installs]`; drop
+ * anything else. `recentInstalls` counts the last 14 days so BB can rank
+ * shelves by momentum rather than by lifetime totals.
+ */
 function pluginsFromRows(rows) {
   const plugins = {};
   let dropped = 0;
   for (const row of rows) {
-    const [id, installs] = Array.isArray(row) ? row : [];
+    const [id, installs, recentInstalls] = Array.isArray(row) ? row : [];
     if (
       typeof id !== "string" ||
       !ENTRY_ID_PATTERN.test(id) ||
-      typeof installs !== "number" ||
-      !Number.isSafeInteger(installs) ||
-      installs < 0
+      !isCount(installs) ||
+      !isCount(recentInstalls)
     ) {
       dropped += 1;
       continue;
     }
-    plugins[id] = { installs };
+    plugins[id] = { installs, recentInstalls };
   }
   if (dropped > 0) {
     console.error(`warning: dropped ${dropped} unusable row(s) from PostHog`);

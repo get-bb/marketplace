@@ -161,6 +161,11 @@ They do not need files under `entries/`.
 BB ignores `stats.json` documents from third-party marketplaces.
 Install counts are BB measurements, not publisher claims.
 
+Each plugin has `installs`, the distinct installations of all time.
+Each plugin also has `recentInstalls`, the distinct installations in the last 14 days.
+BB ranks the BB Official shelf by `recentInstalls` and the publish date.
+Older BB versions ignore `recentInstalls`.
+
 The scheduled workflow gets counts from the `plugin_installed` PostHog event.
 The workflow publishes no update when PostHog returns no counts.
 This rule keeps the last valid document available.
