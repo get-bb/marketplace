@@ -1,9 +1,9 @@
 {
   "id": "tabs",
   "displayName": "Chat Tabs",
-  "description": "Keep important BB conversations one click away with pinned and preview tabs. Search up to 100 recent chats and spot questions or approvals awaiting your reply, including in nested chats. Choose from 15 interface languages and hover over the plus to start a chat in a selected project. Requires BB 0.43+; no external service is needed.",
+  "description": "Return to important BB conversations from pinned tabs and a separate favorites list. Toggle pins and favorites on New chat, with retained cards so you can undo an accidental removal. Search chats by title and project, and distinguish subthreads with branch icons and waiting-for-input markers. Supports 15 interface languages; requires BB 0.43+ with no external service or account.",
   "icon": { "url": "./icons/tabs-040544fb.svg" },
-  "tags": ["chat", "tabs", "pinned-chats", "preview", "history", "navigation", "search"],
+  "tags": ["chat", "favorites", "pinned-chats", "preview", "history", "navigation", "search", "subthreads"],
   "author": {
     "name": "Nicolay I",
     "github": "nicolay-i",
@@ -18,6 +18,8 @@
   },
   "screenshots": [
     "./screenshots/tabs/real-bb-tabs-primary.png",
+    "./screenshots/tabs/real-bb-favorites-home.png",
+    "./screenshots/tabs/real-bb-favorite-menu.png",
     "./screenshots/tabs/real-bb-new-chat-projects.png",
     "./screenshots/tabs/real-bb-thread-tabs.png"
   ],

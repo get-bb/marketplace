@@ -1,0 +1,28 @@
+{
+  "id": "beads",
+  "displayName": "Beads",
+  "description": "Track issues and dependencies for long-running agent work with beads, so plans survive context loss. Agents call a beads tool to run bd prime, pick ready work, create tasks under epics, and record status changes in the thread's own checkout. A bb beads command runs any bd command from your shell. Requires the bd CLI installed separately on the BB host (brew tap steveyegge/beads && brew install bd).",
+  "icon": "ListTodo",
+  "tags": [
+    "issue-tracker",
+    "tasks",
+    "dependencies",
+    "agent-tools",
+    "planning",
+    "memory",
+    "cli"
+  ],
+  "author": {
+    "name": "Jehu",
+    "github": "Jehu",
+    "url": "https://github.com/Jehu"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/Jehu/bb-plugin-beads.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/beads.md"
+}
