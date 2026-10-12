@@ -4,7 +4,7 @@ A GLSL scene runs behind bb's interface and reacts to your agents. Each working 
 
 ## Ten built-in scenes
 
-Tide, Fireflies, Contour, Atomic Comics, Poppy Hill, Lighthouse Cove, Starry Fjord, Jellyfish Tidepool, Koi Pond, and Red Alarm. Your agents belong to each picture: fireflies over a meadow, poppies on a windy hill, koi circling a pond, pins on a topographic map.
+Tide, Fireflies, Contour, Atomic Comics, Poppy Hill, Lighthouse Cove, Starry Fjord, Jellyfish Tidepool, Koi Pond, and Red Alarm. Your agents belong to each picture: fireflies over a meadow, poppies on a windy hill, koi circling a pond, peaks on a calm night map.
 
 ## Tune the scene
 

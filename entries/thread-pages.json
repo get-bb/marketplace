@@ -22,12 +22,12 @@
   },
   "category": "thread-content",
   "screenshots": [
-    "./screenshots/thread-pages/release-page.jpg",
-    "./screenshots/thread-pages/codebase-map.png",
-    "./screenshots/thread-pages/code-journeys.png",
-    "./screenshots/thread-pages/diagram-page.png",
-    "./screenshots/thread-pages/decision-page.png",
-    "./screenshots/thread-pages/report-page.png"
+    "./screenshots/thread-pages/research-page.png",
+    "./screenshots/thread-pages/answer-form.png",
+    "./screenshots/thread-pages/home.png",
+    "./screenshots/thread-pages/working-state.png",
+    "./screenshots/thread-pages/phone.png",
+    "./screenshots/thread-pages/diagnostic-page.png"
   ],
   "overview": "./overview/thread-pages.md",
   "source": {

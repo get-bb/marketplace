@@ -43,8 +43,9 @@ session and runs your prompt again once, carrying a transcript of the
 conversation into the replacement. An expired login or a rate limit is reported
 instead, because neither is fixed by a rebuild.
 
-Meta publishes no usage endpoint, so the subscription meter is measured from
-Muse's own session logs over a five-hour rolling window.
+The subscription meters are Muse's own: the 5-hour and weekly limits Muse 1.4
+reports with every model response, kept from the last Muse turn on the machine.
+Before the first turn, the window is measured from Muse's session logs instead.
 
 ## Requirements
 

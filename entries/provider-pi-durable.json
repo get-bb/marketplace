@@ -1,0 +1,31 @@
+{
+  "id": "provider-pi-durable",
+  "displayName": "Pi Durable",
+  "description": "Run BB threads with Pi Durable ACID SQLite runtime, offering persistent conversations and deterministic session resumption.",
+  "icon": {
+    "url": "./icons/provider-pi-durable.svg"
+  },
+  "overview": "./overview/provider-pi-durable.md",
+  "tags": [
+    "pi",
+    "durable",
+    "sqlite",
+    "acid",
+    "provider",
+    "agents",
+    "persistence",
+    "session-resumption"
+  ],
+  "author": {
+    "name": "Ivan Afanasov",
+    "github": "VanDalkvist",
+    "url": "https://github.com/VanDalkvist"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/VanDalkvist/bb-plugin-provider-pi-durable.git",
+      "range": "^0.2.0"
+    }
+  }
+}

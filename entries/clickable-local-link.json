@@ -1,0 +1,30 @@
+{
+  "id": "clickable-local-link",
+  "displayName": "Clickable Local Link",
+  "description": "Opens a local document from a chat link in its Mac app, and a folder link in Finder, with one click. Text and code files keep BB's preview, and Option-click selects any linked item in Finder. Scripts, apps and unknown file types are only selected, never opened, including when a link hides them behind a symlink. A bundled skill tells agents to write local paths as clickable links. Works in the macOS desktop app on the Mac that runs BB.",
+  "icon": {
+    "url": "./icons/clickable-local-link-18123588.svg"
+  },
+  "tags": [
+    "links",
+    "files",
+    "folders",
+    "finder",
+    "macos",
+    "open-file",
+    "local-files"
+  ],
+  "author": {
+    "name": "Sergey Kalachev",
+    "github": "meanwhile17",
+    "url": "https://github.com/meanwhile17"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/meanwhile17/bb-plugin-clickable-local-link.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/clickable-local-link.md"
+}

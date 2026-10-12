@@ -1,6 +1,6 @@
 ## What you get
 
-Your sidebar sections become a workflow: Inbox, then the stages you name, in the order you choose. Every agent working in a thread receives that table of stages and rules in its instructions and moves its own thread with one command when its work clearly matches a rule. Idle threads that need your attention collect in Inbox and go back to their stage when work resumes, so the queue of things to read never hides where a thread actually is.
+Your sidebar sections become a workflow: Inbox, then the stages you name, in the order you choose. Every agent working in a thread receives that table of stages and rules in its instructions and moves its own thread with one command when its work clearly matches a rule. Idle threads that need your attention collect in Inbox and go back to their stage when work resumes or a message is queued, so the queue of things to read never hides where a thread actually is.
 
 ## Entry prompts
 
@@ -8,7 +8,7 @@ Give a stage an entry prompt and every thread that lands there receives it as a 
 
 ## How it works
 
-Configure everything on the plugin's settings page: rename or reorder stages, describe what belongs in each, and type each entry prompt in place. Inbox routing cannot be changed, and Inbox never carries a prompt. From inside a thread, `bb organizer phase <stage>` moves that thread; `bb organizer section` and `bb organizer prompt` list, add, set, or clear stages and prompts, and each change asks for your approval in that thread before it is saved.
+Configure everything on the plugin's settings page: rename or reorder stages, describe what belongs in each, and type each entry prompt in place. Make a section an inbox and choose which plugin it catches. Claimed threads stay there until you move or archive them; opening them marks them read normally. The main Inbox catches other idle unread threads. Inboxes never carry entry prompts. From inside a thread, `bb organizer phase <stage>` moves that thread; `bb organizer section` and `bb organizer prompt` list, add, set, or clear stages and prompts, and each change asks for your approval in that thread before it is saved.
 
 The plugin never renames a thread, never expands or collapses sections, and never classifies prompts to guess a stage. Movement follows the rules you wrote, and prompts fire once per landing with a cooldown, so a thread cannot be prompted in a loop.
 

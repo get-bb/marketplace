@@ -1,7 +1,7 @@
 {
   "id": "diff-viewed",
   "displayName": "Diff Viewed",
-  "description": "Keep your place in a long diff by ticking off each file you have already read. A Viewed checkbox on every file in the changes panel collapses and dims that file, and the mark is remembered for that thread across reloads. The mark clears itself when the file's diff changes, so a rebase or a fresh edit puts the file back in front of you. Requires bb 0.41 or later, and needs no account or external service.",
+  "description": "Keep your place in a long diff by ticking off each file you have already read. A Viewed checkbox on every file in the changes panel collapses and dims that file, and the toolbar counts how far you have got, such as 3/6 viewed. The mark clears itself when the file's diff changes, so a rebase or a fresh edit puts the file back in front of you. An Only unviewed filter hides the files you have reviewed. On a thread with an open pull request, the checkbox stays in step with GitHub's Viewed boxes in both directions. Requires bb 0.41 or later, and GitHub sync needs the gh CLI signed in.",
   "icon": "CircleCheck",
   "tags": [
     "code-review",
@@ -11,7 +11,9 @@
     "collapse",
     "line-wrap",
     "split-view",
-    "git"
+    "git",
+    "github",
+    "pull-request"
   ],
   "author": {
     "name": "Daniel Bachhuber",
@@ -21,14 +23,14 @@
   "category": "code-and-reviews",
   "screenshots": [
     "./screenshots/diff-viewed/viewed-light.png",
-    "./screenshots/diff-viewed/viewed-dark.png"
+    "./screenshots/diff-viewed/local-dark.png"
   ],
   "overview": "./overview/diff-viewed.md",
   "source": {
     "git": {
       "url": "https://github.com/danielbachhuber/bb-plugins.git",
       "subdir": "bb-plugin-diff-viewed",
-      "range": "^0.1.0",
+      "range": "^0.2.0",
       "tagPrefix": "diff-viewed/"
     }
   }

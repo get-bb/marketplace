@@ -1,0 +1,27 @@
+{
+  "id": "trace-mcp",
+  "displayName": "trace-mcp",
+  "description": "See repository context and saved decisions beside every bb thread. Search code, record decisions, and reindex without leaving the thread. Native agent tools and bb trace commands keep queries compact. Runs on the environment's machine; first use needs Node.js and npm registry access. Shows provider context usage when bb reports it and does not alter quotas.",
+  "icon": { "url": "./icons/trace-mcp-71aeb605.svg" },
+  "tags": ["context", "tokens", "token-usage", "code-search", "symbols", "decisions", "mcp"],
+  "author": {
+    "name": "Nikolai Vysotskyi",
+    "github": "nikolai-vysotskyi",
+    "url": "https://trace-mcp.com"
+  },
+  "category": "memory-and-context",
+  "secondaryCategories": ["token-usage-and-limits"],
+  "source": {
+    "git": {
+      "url": "https://github.com/nikolai-vysotskyi/trace-mcp.git",
+      "subdir": "integrations/bb",
+      "range": "^0.2.0",
+      "tagPrefix": "bb-plugin-trace-mcp/"
+    }
+  },
+  "overview": "./overview/trace-mcp.md",
+  "screenshots": [
+    "./screenshots/trace-mcp/context.png",
+    "./screenshots/trace-mcp/record-decision.png"
+  ]
+}

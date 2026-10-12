@@ -10,7 +10,9 @@ Filter project checkouts and worktrees by branch or path, or enter the path to a
 
 Choose the parent directory, folder name, branch name, and starting revision. Create a new branch or use an existing local branch that is not checked out elsewhere. Leave folder and new-branch names blank for BB-generated names. A destination preview shows where the worktree will go.
 
-Set a default parent directory in the plugin's settings, then override it for individual threads. Paths are resolved on the selected machine.
+To review a colleague’s remote branch, choose Remote branch, filter the automatically loaded list, and select it. Starting the thread fetches that branch and creates a local tracking branch in its own worktree. Existing local branches are never overwritten. Remote discovery and fetching use the selected machine’s Git authentication.
+
+Set one default path template in the plugin's settings. Leave it blank for unique folders under `~/worktrees`, use `~/worktrees/{repo}/{pathKey}` to group them by repository, or use `{checkoutParent}/{repo}.{branch}` for siblings with sanitized branch-based names. Settings explain every variable and show expansion examples. Add per-project templates keyed by BB project ID or remote identity, including wildcard matches. Override the parent and folder independently for individual threads. Paths and previews are resolved on the selected machine.
 
 ## Keep control of your files
 

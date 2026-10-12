@@ -18,7 +18,7 @@
     "git": {
       "url": "https://github.com/charpeni/bb-plugins.git",
       "subdir": "plugins/dependabot",
-      "range": "^0.1.0",
+      "range": "^1.0.0",
       "tagPrefix": "dependabot/"
     }
   }

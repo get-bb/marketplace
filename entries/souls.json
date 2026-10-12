@@ -1,0 +1,36 @@
+{
+  "id": "souls",
+  "displayName": "Souls",
+  "description": "Give any thread a persona you define once: its job, voice, expertise and hard limits, the same in every thread that runs it. An agent interviews you in four to seven questions and puts the draft on a review card, and nothing is saved, edited or deleted until you approve. Pick a soul from the composer's + menu for an open thread or the next one, and a banner shows it with a pixel-art portrait that animates with what the agent is doing. After a context compaction the persona goes back in, and a parent thread can start a child already in character. Compare a soul with no soul on the same prompt before you rely on it. Souls stay in the plugin's own SQLite store with no account or external service, and a comparison spends model runs only when you start it.",
+  "icon": { "url": "./icons/souls-ecf85537.svg" },
+  "tags": [
+    "personas",
+    "agent-personas",
+    "roles",
+    "system-prompt",
+    "custom-instructions",
+    "interview",
+    "child-threads",
+    "delegation",
+    "compaction",
+    "pixel-art"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-souls.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/souls/soul-loaded.png",
+    "./screenshots/souls/picker.png",
+    "./screenshots/souls/review-card.png"
+  ],
+  "overview": "./overview/souls.md"
+}

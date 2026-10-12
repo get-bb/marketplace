@@ -8,10 +8,12 @@ conversation.
   grouped by origin: the project, the repository, your personal folder, an admin folder, a Claude Code
   or Codex plugin, or bb itself.
 - Each skill's `SKILL.md`, rendered, with its path on disk and a button to copy it.
-- **Add to chat**: puts the skill's command at the start of the thread's message box, with the
-  cursor after it for any arguments. Nothing is sent until you send it.
-- A **Skills** button in the composer with a live count, opening the same list in a popover (a sheet
-  on a narrow window), and a command palette entry for the tab.
+- **Add to chat**: puts the skill at the start of the thread's message box as the same pill bb's own
+  `/` menu inserts, with the cursor after it for any arguments. Nothing is sent until you send it.
+- A **Skills** button in the composer with a live count, opening the same list in bb's own pop-up
+  above the message box (a sheet on a narrow window), and a command palette entry for the tab.
+- A command to open that list from the keyboard, in whichever message box has the cursor. Give it a
+  key in bb's keyboard settings.
 
 ## How it finds them
 
@@ -27,7 +29,7 @@ conversation.
 
 ## What it needs
 
-- bb 0.44 or later. No account, key or network access.
+- bb 0.45 or later. No account, key or network access.
 
 ## Limits
 

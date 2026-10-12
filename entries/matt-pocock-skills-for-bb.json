@@ -1,0 +1,37 @@
+{
+  "id": "matt-pocock-skills-for-bb",
+  "displayName": "Matt Pocock skills for bb",
+  "description": "Gives your agents Matt Pocock's engineering and productivity skills as slash commands, from test-first development to issue triage. Choose which skills each project gets, or turn them on only in the projects you pick; Matt's 6 experimental skills stay off until you opt in. A skill you already have keeps its name, and you can keep both, with Matt's as matt-pocock-<name>. Turning off a skill that another one needs asks first and names what else changes. New releases follow mattpocock/skills daily; some skills use Git or GitHub CLI, and no account is needed.",
+  "icon": "Layers",
+  "screenshots": [
+    "./screenshots/matt-pocock-skills-for-bb/overview.png",
+    "./screenshots/matt-pocock-skills-for-bb/project.png",
+    "./screenshots/matt-pocock-skills-for-bb/dependencies.png",
+    "./screenshots/matt-pocock-skills-for-bb/skills.png"
+  ],
+  "overview": "./overview/matt-pocock-skills-for-bb.md",
+  "tags": [
+    "skills",
+    "slash-commands",
+    "tdd",
+    "code-review",
+    "debugging",
+    "issue-triage",
+    "planning",
+    "specs",
+    "per-project",
+    "engineering"
+  ],
+  "author": {
+    "name": "Erik MacKinnon",
+    "github": "erikmackinnon",
+    "url": "https://github.com/erikmackinnon"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/erikmackinnon/bb-plugin-matt-pocock-skills-for-bb.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "provider-muse",
   "displayName": "Muse Code",
-  "description": "Adds Meta's Muse Code as a bb provider over its own session protocol: streamed timeline, approvals, subagents, model picker, health, and a subscription meter measured from Muse's session logs.",
+  "description": "Adds Meta's Muse Code as a bb provider over its own session protocol: streamed timeline, approvals, subagents, model picker, health, and the plan's own 5-hour and weekly usage limits as Muse reports them.",
   "icon": {
     "url": "./icons/provider-muse-e1997fa2.svg"
   },

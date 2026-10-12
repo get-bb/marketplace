@@ -1,0 +1,35 @@
+{
+  "id": "jb-flow",
+  "displayName": "JB Flow",
+  "description": "Puts the agent threads that need you at the top, and keeps the rest out of the way until they do. A Triage sidebar sorts threads into Needs me and numbered lanes you move between with one key. Snooze hides a thread until a time you pick and brings it back unread, with an optional note for the agent. Agents call wait_for_ci and end their turn instead of polling GitHub, and are messaged when checks finish or a review arrives. PR and CI features need the GitHub CLI.",
+  "icon": "TimeSchedule",
+  "tags": [
+    "triage",
+    "snooze",
+    "sidebar",
+    "keyboard-shortcuts",
+    "pull-requests",
+    "ci",
+    "github",
+    "digest",
+    "dev-servers"
+  ],
+  "author": {
+    "name": "Johannes Berggren",
+    "github": "Johannes-Berggren",
+    "url": "https://github.com/Johannes-Berggren"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/Johannes-Berggren/bb-plugin-jb-flow.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/jb-flow/triage.png",
+    "./screenshots/jb-flow/home.png",
+    "./screenshots/jb-flow/settings.png"
+  ],
+  "overview": "./overview/jb-flow.md"
+}

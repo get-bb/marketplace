@@ -1,0 +1,30 @@
+{
+  "id": "omp-agents",
+  "displayName": "OMP Agents",
+  "description": "Name an OMP subagent in the composer instead of describing it. Type @, pick a row, and the pill carries the agent's specialization, tools, model, and definition file to the model at send time. The menu appears only on OMP threads; on another provider a send carrying an OMP mention is refused with the reason. Requires the omp CLI and a thread on the omp provider.",
+  "icon": "Bot",
+  "tags": [
+    "subagents",
+    "composer",
+    "mentions",
+    "omp",
+    "delegation"
+  ],
+  "author": {
+    "name": "Naufal Riza Fatahillah",
+    "github": "rayzalzero",
+    "url": "https://github.com/rayzalzero"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/rayzalzero/bb-plugin-omp-agent.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/omp-agents.md",
+  "screenshots": [
+    "./screenshots/omp-agents/agents-page.png",
+    "./screenshots/omp-agents/mention-menu.png"
+  ]
+}

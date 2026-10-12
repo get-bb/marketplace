@@ -1,7 +1,7 @@
 {
   "id": "chat-sidebar",
   "displayName": "Chat Sidebar",
-  "description": "See which threads need you at a glance in a messenger-style sidebar with live status, folders, and project colours. Sub-agents and forks fold into their parent, so each task is one row. Attention, project, and section folders sit as tabs or a Telegram-style rail, each with unread badges. Projects get distinct colours you can change, and the + starts a chat in the open project. Search, pinned order, splits, and bb's thread shortcuts all keep working.",
+  "description": "See which threads need you at a glance in a messenger-style sidebar with live status, folders, and project colours. Sub-agents and forks fold into their parent, so each task is one row. Attention, project, and section folders sit as tabs or a Telegram-style rail, each with unread badges, and you can add your own folders that pick chats by status, project, agent, or words in the title. Projects get distinct colours you can change, and the + starts a chat in the open project. Search, pinned order, splits, and bb's thread shortcuts all keep working.",
   "icon": { "url": "./icons/chat-sidebar-543f9dc2.svg" },
   "tags": ["sidebar", "threads", "chats", "messenger", "folders", "status", "projects", "colors"],
   "author": {
@@ -13,12 +13,13 @@
   "source": {
     "git": {
       "url": "https://github.com/seoperin/bb-plugin-chat-sidebar.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   },
   "overview": "./overview/chat-sidebar.md",
   "screenshots": [
     "./screenshots/chat-sidebar/overview-dark.png",
-    "./screenshots/chat-sidebar/overview-light.png"
+    "./screenshots/chat-sidebar/overview-light.png",
+    "./screenshots/chat-sidebar/folder-editor-dark.png"
   ]
 }
