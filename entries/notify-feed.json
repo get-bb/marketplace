@@ -1,0 +1,41 @@
+{
+  "id": "notify-feed",
+  "displayName": "Notify Feed",
+  "description": "Keep your conversation from drowning in child-thread reports when a thread delegates work. Background messages and completion notices move to a Notifications tab beside the feed. Browse updates by thread or day, and reply directly from the panel. Works inside BB with no external service.",
+  "icon": {
+    "url": "./icons/notify-feed-8e31760e.svg"
+  },
+  "tags": [
+    "agents",
+    "child-threads",
+    "orchestration",
+    "subagents",
+    "timeline",
+    "messages",
+    "inbox",
+    "declutter",
+    "side-panel"
+  ],
+  "author": {
+    "name": "Sargares22",
+    "github": "Sargares22",
+    "url": "https://github.com/Sargares22"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "notifications"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/Sargares22/bb-plugin-notify-feed.git",
+      "range": "^0.3.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/notify-feed/timeline.png",
+    "./screenshots/notify-feed/before-after.png",
+    "./screenshots/notify-feed/by-thread.png",
+    "./screenshots/notify-feed/conversation.png"
+  ],
+  "overview": "./overview/notify-feed.md"
+}

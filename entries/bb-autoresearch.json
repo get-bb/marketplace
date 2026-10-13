@@ -1,0 +1,43 @@
+{
+  "id": "bb-autoresearch",
+  "displayName": "Autoresearch",
+  "description": "Orchestrates autoresearch loops: parallel agent workers try code changes, and only the ones your benchmark proves better are kept. The plugin, not the agents, runs every measurement and decides each verdict from paired runs and confidence intervals, with guardrails on secondary metrics. A Live tab shows workers, candidates and each measurement's confidence band as they move, and any study can be replayed. Harvest turns the wins into draft PRs, each with its contribution measured by reverting it. Requires git 2.38 or newer; benchmarks run your repository's own commands, and the GitHub CLI is needed only to publish PRs.",
+  "icon": {
+    "url": "./icons/bb-autoresearch-bbcadbb3.svg"
+  },
+  "tags": [
+    "optimization",
+    "benchmarking",
+    "performance",
+    "experiments",
+    "parallel-agents",
+    "orchestration",
+    "statistics",
+    "pull-requests"
+  ],
+  "author": {
+    "name": "Pascal de Ladurantaye",
+    "github": "pascal-de-ladurantaye",
+    "url": "https://github.com/pascal-de-ladurantaye"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "code-and-reviews",
+    "agents-and-providers"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/pascal-de-ladurantaye/bb-autoresearch.git",
+      "range": "^0.2.4"
+    }
+  },
+  "screenshots": [
+    "./screenshots/bb-autoresearch/live.jpg",
+    "./screenshots/bb-autoresearch/panel.jpg",
+    "./screenshots/bb-autoresearch/replay.png",
+    "./screenshots/bb-autoresearch/overview.png",
+    "./screenshots/bb-autoresearch/harvest.png",
+    "./screenshots/bb-autoresearch/candidate.png"
+  ],
+  "overview": "./overview/bb-autoresearch.md"
+}
