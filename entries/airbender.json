@@ -1,0 +1,21 @@
+{
+  "id": "airbender",
+  "displayName": "Airbender",
+  "description": "Keep your project's issues beside the agent doing the work. Track beads or GitHub issues, review plans and results, and start work in branches or worktrees. Run an epic's ready issues in sequence with Autopilot while keeping control of reviews and commits. Requires BB 0.44+; setup installs bend from GitHub Releases on Linux/macOS amd64 or arm64 using curl and SHA-256 tools, with Go 1.24+ needed for source builds on other platforms.",
+  "icon": "ListTodo",
+  "tags": ["issues", "beads", "github", "epics", "worktrees", "autopilot", "reviews"],
+  "author": {
+    "name": "Mikhail Turilin",
+    "github": "mturilin",
+    "url": "https://github.com/mturilin"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": ["./screenshots/airbender/overview.png"],
+  "overview": "./overview/airbender.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/mturilin/airbender.git",
+      "range": "^0.1.0"
+    }
+  }
+}
