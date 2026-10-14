@@ -1,0 +1,35 @@
+{
+  "id": "prism-frame",
+  "displayName": "Prism Frame",
+  "description": "Give your app frame a moving sheen and your mention pills a glass finish that follows your theme. Adjust motion and intensity, or style mentions separately. Colors adapt when you switch themes or appearance modes. Requires bb 0.46 or newer; no external service or account is needed.",
+  "icon": {
+    "url": "./icons/prism-frame-9987b3b2.svg"
+  },
+  "tags": [
+    "theme",
+    "appearance",
+    "glass",
+    "animation",
+    "mentions",
+    "dark-mode",
+    "light-mode"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/prism-frame/overview.png",
+    "./screenshots/prism-frame/dark.png"
+  ],
+  "overview": "./overview/prism-frame.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "range": "^0.1.3",
+      "tagPrefix": "prism-frame/"
+    }
+  }
+}
