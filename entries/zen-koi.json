@@ -1,0 +1,38 @@
+{
+  "id": "zen-koi",
+  "displayName": "Zen Koi",
+  "description": "Watch pixel-art koi swim under your chat input while the agent works, and scoop them in a one-tap catch game. When a ! shows over the paper poi, tap to lift that koi into the bowl; leave it alone and the poi plays by itself. Draw up to nine koi that grow from 15 to 45 cm over two weeks, and set the garden, season, time of day, and rain. Optional sound adds water, a wind chime, and rain in a soft reverb. Your koi and catch counts stay on your bb server and use no external service.",
+  "icon": {
+    "url": "./icons/zen-koi-906749b4.svg"
+  },
+  "screenshots": [
+    "./screenshots/zen-koi/showcase.webp",
+    "./screenshots/zen-koi/pond.png",
+    "./screenshots/zen-koi/zen-pond-page.png"
+  ],
+  "overview": "./overview/zen-koi.md",
+  "category": "themes-and-appearance",
+  "tags": [
+    "koi",
+    "pond",
+    "pixel-art",
+    "game",
+    "idle-game",
+    "chat-input",
+    "composer",
+    "ambience",
+    "relaxing",
+    "seasons"
+  ],
+  "author": {
+    "name": "Reja Revaldy F",
+    "github": "rejarevaldy",
+    "url": "https://github.com/rejarevaldy"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/rejarevaldy/zen-koi.git",
+      "range": "^0.6.1"
+    }
+  }
+}
