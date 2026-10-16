@@ -1,0 +1,26 @@
+{
+  "id": "crew",
+  "displayName": "Crew",
+  "description": "Run a standing team of agents that message each other, hand off work and wait for you only when they need an answer. You describe the team once in a crew.yaml: each member gets a fixed address, its own provider and model, a role and its own worktree, and every member is a thread in the sidebar. Several crews in one project coordinate through their leads, BB Tasks and the base branch, with a step limit so they cannot loop forever. A project overview shows who works, who waits and every cross-crew message. Merge and rebase need the repository on the machine BB runs on.",
+  "icon": { "url": "./icons/crew-4b617c36.svg" },
+  "tags": ["agents", "multi-agent", "team", "orchestration", "worktrees", "merge-requests", "automation", "yaml"],
+  "author": {
+    "name": "sajov",
+    "github": "sajov",
+    "url": "https://github.com/sajov"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/sajov/bb-plugins.git",
+      "subdir": "bb-plugin-crew",
+      "range": "^0.1.0",
+      "tagPrefix": "crew/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/crew/overview.png",
+    "./screenshots/crew/topology.png"
+  ],
+  "overview": "./overview/crew.md"
+}

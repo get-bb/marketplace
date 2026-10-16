@@ -1,0 +1,34 @@
+{
+  "id": "emoji-picker",
+  "displayName": "Emoji Picker",
+  "description": "Add emojis to the composer. Type : to open the picker and replace the colon with your choice. Search by name, keyword, or shortcode, browse eight categories, and return to recent choices with your preferred skin tone. Uses system-rendered emojis and works offline without another account or service.",
+  "icon": {
+    "url": "./icons/emoji-picker-8b4bf44a.svg"
+  },
+  "screenshots": [
+    "./screenshots/emoji-picker/composer.png",
+    "./screenshots/emoji-picker/mobile-search.png"
+  ],
+  "overview": "./overview/emoji-picker.md",
+  "tags": [
+    "composer",
+    "writing",
+    "unicode",
+    "shortcodes",
+    "skin-tones",
+    "offline"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "range": "^0.1.0",
+      "tagPrefix": "emoji-picker/"
+    }
+  }
+}

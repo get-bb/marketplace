@@ -1,0 +1,33 @@
+{
+  "id": "thread-tags",
+  "displayName": "Thread Tags",
+  "description": "Puts a colored emoji or text badge before a thread's title, so you can spot status and topics in the sidebar at a glance. Tag a thread from the tag button in its hover controls, or create a tag there with up to 12 characters and a preset or custom color. An emoji picker lists every emoji by category and searches names in English and Russian, without network access. A Tags editor renames, recolors, and deletes tags, and the bb thread-tags command lets agents tag the thread they work in.",
+  "icon": "Tag",
+  "screenshots": [
+    "./screenshots/thread-tags/picker.png",
+    "./screenshots/thread-tags/emoji-picker.png"
+  ],
+  "overview": "./overview/thread-tags.md",
+  "tags": [
+    "tags",
+    "labels",
+    "badges",
+    "emoji",
+    "status",
+    "sidebar",
+    "organize",
+    "colors"
+  ],
+  "author": {
+    "name": "VladPolet",
+    "github": "VladPolet",
+    "url": "https://github.com/VladPolet"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/VladPolet/bb-plugin-thread-tags.git",
+      "range": "^0.1.0"
+    }
+  }
+}

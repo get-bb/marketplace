@@ -35,13 +35,21 @@ A `human` node pauses the run and waits for your answer. A `dialog` node keeps
 one thread open so a worker that interviews you — asking one question, waiting,
 then the next — stays a conversation instead of degrading into a monologue.
 
-## 31 templates to start from
+## 32 templates to start from
 
 Shipped as code and read-only; clone one under a new id to make it yours. They
 cover the established orchestration patterns — prompt chaining, routing,
 map-reduce, evaluator–optimizer, supervisor, swarm, state machine, debate — and
 the library search understands the catalogue's own vocabulary, so looking for
 `orchestrator–worker` finds `map-reduce`.
+
+## Combine it with Crew
+
+A flow ends; a [Crew](https://github.com/sajov/bb-plugins/tree/main/bb-plugin-crew)
+is a team that stays. A `member` node hands a step to a persistent crew member,
+which keeps its context, worktree and model (see `owner-check-loop`). A crew
+member can start a graph with `crew_graph_run`; a run waiting on a human node
+shows up in the crew's **Needs you**.
 
 ## Edges you can read
 
@@ -53,13 +61,13 @@ per-visit retries and a per-graph step cap mean a cycle always terminates.
 
 ## Survives a reload
 
-Runs are checkpointed into the plugin's own database. Reloading the plugin
-resumes a run from its last checkpoint instead of re-running finished nodes.
+Runs are checkpointed, so a reload resumes a run instead of re-running
+finished nodes.
 
 ## Keep a graph in your repo
 
-Graphs live centrally, so one you build is available in every project. To
-version or share one, export it to a file and import it elsewhere:
+Graphs live centrally and are available in every project. To version or
+share one, export and import it:
 
 ```sh
 bb graph-studio export my-graph > .bb/graphs/my-graph.graph.json
@@ -74,13 +82,15 @@ bb graph-studio run evaluator-optimizer "Write the onboarding text"
 bb graph-studio status <run-id>
 ```
 
-An agent inside a BB thread can drive it too, through the
-`graph_studio_graphs`, `graph_studio_describe`, `graph_studio_get`,
-`graph_studio_save`, `graph_studio_run`, `graph_studio_status` and
-`graph_studio_answer` tools.
+An agent inside a BB thread can drive it too, through the `graph_studio_*`
+tools.
 
 ## Requirements
 
-Requires BB 0.42 or later and Plugin SDK 0.4.47 or later. No extra service,
-account or API key is needed — runs use the providers BB is already configured
-with.
+Requires BB 0.42+ and Plugin SDK 0.5.29+. No extra service, account or API
+key — runs use the providers BB already has.
+
+The Work templates run their steps on
+[Matt Pocock's skills](https://github.com/mattpocock/skills). Install them
+first with `npx skills add mattpocock/skills`; without them those steps fall
+back to their prompt alone. The Pattern templates need no skills.

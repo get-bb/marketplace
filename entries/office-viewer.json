@@ -1,0 +1,17 @@
+{
+  "id": "office-viewer",
+  "displayName": "Office Viewer",
+  "description": "Opens Excel, Word, PowerPoint, PDF, images and video right in BB's side panel, on any device you browse from. Spreadsheets recalculate live formulas and save edits to .xlsx and .csv without touching the formatting. Pictures open in an editor for arrows, boxes, text, numbered steps, blur and crop, and the result goes straight into the chat. Select cells, a PDF passage or a slide and quote it to the agent. Runs locally: no account, API key or external service.",
+  "icon": { "url": "./icons/office-viewer-254b33ba.png" },
+  "screenshots": [
+    "./screenshots/office-viewer/image-editor.jpg",
+    "./screenshots/office-viewer/spreadsheet.jpg",
+    "./screenshots/office-viewer/word.jpg",
+    "./screenshots/office-viewer/powerpoint.jpg"
+  ],
+  "overview": "./overview/office-viewer.md",
+  "tags": ["excel", "xlsx", "word", "docx", "pdf", "powerpoint", "image-editor", "screenshot-annotation", "video", "csv"],
+  "author": { "name": "Kirill Vechkasov", "github": "VKirill" },
+  "category": "file-viewers-and-editors",
+  "source": { "git": { "url": "https://github.com/VKirill/bb-plugin-office-viewer.git", "range": "^0.7.0" } }
+}

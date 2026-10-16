@@ -1,0 +1,23 @@
+{
+  "id": "launchd-jobs",
+  "displayName": "Scheduled Jobs",
+  "description": "Run shell commands on your Mac on a cron schedule or a fixed interval, as launchd jobs that keep running while bb is closed. Each job is a LaunchAgent plist that launchd owns, so a missed fire runs once when the Mac wakes and a disabled job stays disabled across reboots. A sidebar page shows each job's launchd status, its last twenty runs with duration and exit code, and the tail of its log, which you can follow live. Run now, Enable, Disable, Edit and Delete do the launchctl work for you, and commands run through your login shell with your terminal's PATH. The sidebar row counts failing jobs, and a picker switches between the Macs connected to bb. macOS only.",
+  "icon": "TimeSchedule",
+  "tags": ["launchd", "cron", "launchagents", "scheduling", "background-jobs", "shell", "macos", "logs"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": ["./screenshots/launchd-jobs/jobs.png"],
+  "overview": "./overview/launchd-jobs.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "launchd-jobs",
+      "tagPrefix": "launchd-jobs/",
+      "range": "^0.1.0"
+    }
+  }
+}

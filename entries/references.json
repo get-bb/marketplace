@@ -1,0 +1,29 @@
+{
+  "id": "references",
+  "displayName": "References",
+  "description": "Organize visual moodboards, design references, and inspirational websites directly beside your thread in BB IDE. Opens automatically in the thread panel when agents collect UI references. Extracts website metadata with OpenGraph previews and serves local project images with path-traversal protection. Lets you pin key stylistic anchors to your desk and inspect images in a full-screen lightbox.",
+  "icon": "Images",
+  "overview": "./overview/references.md",
+  "tags": [
+    "moodboard",
+    "references",
+    "design",
+    "ui",
+    "inspiration",
+    "images",
+    "lightbox",
+    "thread-panel"
+  ],
+  "author": {
+    "name": "Ivan Afanasov",
+    "github": "VanDalkvist",
+    "url": "https://github.com/VanDalkvist"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/VanDalkvist/bb-plugin-references.git",
+      "range": "^0.1.0"
+    }
+  }
+}

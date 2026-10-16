@@ -1,0 +1,37 @@
+{
+  "id": "agent-calendar",
+  "displayName": "Agent Calendar",
+  "description": "See what your agents worked on and when, as a calendar of work blocks or a weekly time sheet. Each thread gets a block for the time its agent turns ran, colored by project, in a day, 3-day, or week view. Switch to Projects to merge a project's parallel threads into one entry, or open the time sheet to copy hours per thread and day as CSV. Agents can answer \"what did my agents work on last week?\" with the bb agent-calendar command and its bundled skill. Turn history stays in a local database on the bb server and uses no external service.",
+  "icon": {
+    "url": "./icons/agent-calendar-fbc75fcf.svg"
+  },
+  "screenshots": [
+    "./screenshots/agent-calendar/week.png",
+    "./screenshots/agent-calendar/day.png"
+  ],
+  "overview": "./overview/agent-calendar.md",
+  "tags": [
+    "calendar",
+    "timesheet",
+    "time-tracking",
+    "activity",
+    "hours",
+    "projects",
+    "csv",
+    "cli"
+  ],
+  "author": {
+    "name": "Nicolas Charpentier",
+    "github": "charpeni",
+    "url": "https://github.com/charpeni"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/charpeni/bb-plugins.git",
+      "subdir": "plugins/agent-calendar",
+      "range": "^1.0.0",
+      "tagPrefix": "agent-calendar/"
+    }
+  }
+}

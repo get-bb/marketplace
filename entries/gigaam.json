@@ -1,0 +1,37 @@
+{
+  "id": "gigaam",
+  "displayName": "GigaAM Voice Input",
+  "description": "Dictate in Russian with the bb microphone and get punctuated text, recognized on your own machine. On first load the plugin installs GigaAM v3, Sber's open Russian speech model, with a private Python and CPU-only PyTorch, so nothing is set up by hand. A 10-second phrase takes about 1 second on a 10-core CPU, and recordings over 20 seconds are split at pauses, so minute-long voice notes work. Audio never leaves the machine, or you can point the plugin at your own OpenAI-compatible transcription server. Needs Linux (x86-64 or arm64) or macOS on Apple silicon, about 2 GB of disk, 1.5 GB of RAM, and a one-time 1.2 GB download; recognizes Russian only.",
+  "icon": {
+    "url": "./icons/gigaam-77da25fb.svg"
+  },
+  "screenshots": [
+    "./screenshots/gigaam/ai-services.png",
+    "./screenshots/gigaam/plugin-settings.png"
+  ],
+  "overview": "./overview/gigaam.md",
+  "tags": [
+    "voice",
+    "speech-to-text",
+    "dictation",
+    "russian",
+    "gigaam",
+    "offline",
+    "transcription",
+    "asr",
+    "local-model",
+    "voice-input"
+  ],
+  "author": {
+    "name": "AiXenix",
+    "github": "AiXenix",
+    "url": "https://aixenix.com"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/AiXenix/bb-plugin-gigaam.git",
+      "range": "^0.1.0"
+    }
+  }
+}

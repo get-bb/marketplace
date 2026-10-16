@@ -1,0 +1,36 @@
+{
+  "id": "ultra-launcher",
+  "displayName": "Ultra Launcher",
+  "description": "Start a BB thread from any screen with Cmd+N, without leaving the thread you are in. Each thread starts from a saved preset of provider, model, reasoning level and service tier. Enter opens the new thread, and Cmd+Enter starts it in the background with an Open button in a toast. Save up to 30 presets, reorder them by dragging, and edit them in the picker or in settings. On phones the launcher opens as a bottom sheet. It takes over Cmd+N and moves BB's own New thread shortcut to Cmd+Shift+O, and one setting gives Cmd+N back. Requires BB 0.46 or later.",
+  "icon": {
+    "url": "./icons/ultra-launcher-9a43dfe0.svg"
+  },
+  "screenshots": [
+    "./screenshots/ultra-launcher/launcher.png",
+    "./screenshots/ultra-launcher/presets.png",
+    "./screenshots/ultra-launcher/phone.png"
+  ],
+  "overview": "./overview/ultra-launcher.md",
+  "tags": [
+    "new-thread",
+    "launcher",
+    "keyboard-shortcuts",
+    "model-presets",
+    "composer",
+    "background-threads",
+    "mobile",
+    "productivity"
+  ],
+  "author": {
+    "name": "Dillion Verma",
+    "github": "dillionverma",
+    "url": "https://dillion.io"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/dillionverma/bb-plugin-ultra-launcher.git",
+      "range": "^1.0.0"
+    }
+  }
+}

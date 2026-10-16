@@ -1,0 +1,32 @@
+{
+  "id": "header-pins",
+  "displayName": "Header Pins",
+  "description": "Switch between your pinned threads in one click from the empty title bar strip at the top of the BB window. Each chip carries a status dot for the thread and its child threads: yellow waits for you, blue works, green finished and unread. A colored bar marks the thread with its project color when Chat Sidebar by Evgeniy Perin is installed, which we recommend, and with its provider's color otherwise. Hover a chip to unpin it in place. Needs the BB desktop app; no account or network access.",
+  "icon": "Pin",
+  "tags": [
+    "pins",
+    "pinned-threads",
+    "title-bar",
+    "tabs",
+    "navigation",
+    "thread-status",
+    "switcher",
+    "status-dot"
+  ],
+  "author": {
+    "name": "Yuriy Egorov",
+    "github": "fzrx-ego",
+    "url": "https://yuriy-egorov.pages.dev"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/header-pins/title-bar.png"
+  ],
+  "overview": "./overview/header-pins.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/fzrx-ego/bb-plugin-header-pins.git",
+      "range": "^0.1.0"
+    }
+  }
+}

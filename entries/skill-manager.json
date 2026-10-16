@@ -1,0 +1,33 @@
+{
+  "id": "skill-manager",
+  "displayName": "Skill Manager",
+  "description": "Keep agent skills in sync from one hub. Find skills on skills.sh, install into selected agents, compare local copies, and check for updates. Requires Git and internet access for downloads and update checks.",
+  "icon": {
+    "url": "./icons/skill-manager-9539ac84.png"
+  },
+  "screenshots": [
+    "./screenshots/skill-manager/overview.png"
+  ],
+  "overview": "./overview/skill-manager.md",
+  "category": "memory-and-context",
+  "tags": [
+    "skills",
+    "sync",
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "author": {
+    "name": "Sankalpa Acharya",
+    "github": "sankalpaacharya",
+    "url": "https://github.com/sankalpaacharya"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/sankalpaacharya/bb-skill-manager.git",
+      "range": "^0.1.0"
+    }
+  }
+}

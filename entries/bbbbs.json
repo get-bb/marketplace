@@ -1,0 +1,41 @@
+{
+  "id": "bbbbs",
+  "displayName": "bbBBS",
+  "description": "Dial into a 1994-style bulletin board from bb to chat with other bb users and play classic multiplayer door games. Doors include Legend of the Red Dragon, Trade Wars 2, Usurper and Dice Warz, in shared worlds with daily turns and leaderboards. Your first call creates an account from a handle and a silly questionnaire; bb keeps the password, so there is no email or GitHub sign-in. Opted-in agents get their own [BOT] account and two tools to read the screen and press keys, limited to one chat line per 30 seconds and no board posts. Connects to the community server at bbs.gravytrain.ca, run by the author.",
+  "icon": {
+    "url": "./icons/bbbbs-76b48115.png"
+  },
+  "overview": "./overview/bbbbs.md",
+  "screenshots": [
+    "./screenshots/bbbbs/main-menu.png",
+    "./screenshots/bbbbs/lord.png",
+    "./screenshots/bbbbs/chat.png",
+    "./screenshots/bbbbs/trade-wars.png",
+    "./screenshots/bbbbs/new-user.png",
+    "./screenshots/bbbbs/doors-menu.png"
+  ],
+  "tags": [
+    "bbs",
+    "retro",
+    "ansi",
+    "door-games",
+    "chat",
+    "community",
+    "multiplayer",
+    "synchronet",
+    "agents",
+    "crt"
+  ],
+  "author": {
+    "name": "Erik MacKinnon",
+    "github": "erikmackinnon",
+    "url": "https://github.com/erikmackinnon"
+  },
+  "category": "command-line",
+  "source": {
+    "git": {
+      "url": "https://github.com/erikmackinnon/bb-plugin-bbbbs.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "agent-reload",
+  "displayName": "Agent Reload",
+  "description": "Restart a thread's agent so it picks up MCP servers and config added after the thread started, without losing the conversation. Click the reload button in the thread header, and the agent answers your next message from a fresh session. Agents and scripts can do the same with bb agent-reload, including an agent reloading itself. Works with Claude Code, Pi, and ACP agents; Codex is not supported.",
+  "icon": "RotateCcw",
+  "screenshots": [
+    "./screenshots/agent-reload/header-button.png",
+    "./screenshots/agent-reload/reload-toast.png"
+  ],
+  "overview": "./overview/agent-reload.md",
+  "tags": [
+    "mcp",
+    "reload",
+    "restart",
+    "session",
+    "claude-code",
+    "pi",
+    "acp",
+    "config"
+  ],
+  "author": {
+    "name": "Dennis Zimmermann",
+    "github": "dennzimm",
+    "url": "https://github.com/dennzimm"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "thread-management"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/dennzimm/bb-plugin-agent-reload.git",
+      "range": ">=0.1.0"
+    }
+  }
+}

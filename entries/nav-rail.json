@@ -1,0 +1,32 @@
+{
+  "id": "nav-rail",
+  "displayName": "Nav Rail",
+  "description": "Make more room for threads with a vertical strip of sidebar icons. Keep your saved navigation order and hidden destinations, with controls to rearrange them or open panels in a split. Start a new thread from the sidebar header, and use hover labels, selected states, and badges to find your way. Requires BB 0.42+ and Plugin SDK 0.5.15+, with no extra service, account, or API key.",
+  "icon": {
+    "url": "./icons/nav-rail-1d641ea5.svg"
+  },
+  "screenshots": [
+    "./screenshots/nav-rail/navigation.jpg"
+  ],
+  "overview": "./overview/nav-rail.md",
+  "tags": [
+    "sidebar",
+    "navigation",
+    "icons",
+    "customization"
+  ],
+  "author": {
+    "name": "Sawyer Hood",
+    "github": "SawyerHood",
+    "url": "https://github.com/SawyerHood"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/SawyerHood/sawyer-plugins.git",
+      "subdir": "plugins/nav-rail",
+      "tagPrefix": "nav-rail/",
+      "range": "^0.1.0"
+    }
+  }
+}

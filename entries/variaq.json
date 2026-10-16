@@ -1,0 +1,26 @@
+{
+  "id": "variaq",
+  "displayName": "VariaQ",
+  "description": "Run VariaQ classical/quantum experiments from bb. Generate problems, solve, benchmark, plan and execute campaigns, analyze results, and generate reports against a standalone VariaQ install. Supports VariaQ 0.6.x and 0.8.x including 0.8.0rc1; schema-v1 validated. Requires BB and a separate VariaQ install.",
+  "icon": "Zap",
+  "tags": [
+    "quantum",
+    "variaq",
+    "experiments",
+    "benchmarks",
+    "campaigns"
+  ],
+  "author": {
+    "name": "Aaron Phifer",
+    "github": "aaronphifer",
+    "url": "https://github.com/aaronphifer"
+  },
+  "category": "command-line",
+  "source": {
+    "git": {
+      "url": "https://github.com/aaronphifer/bb-plugin-variaq.git",
+      "range": "^0.6.1"
+    }
+  },
+  "overview": "./overview/variaq.md"
+}

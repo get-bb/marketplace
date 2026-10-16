@@ -1,0 +1,33 @@
+{
+  "id": "syns",
+  "displayName": "Syns",
+  "description": "Lets the pages your agents write read and save your Syns files, so a task board or wiki on a page is the repository itself, not a copy. A page sees only the repository, or the placed folder, its session works in, with the access of the Syns account signed in on that machine. Every edit carries the version the page last read: if the files moved since, the edit is refused and the page re-reads, so an edit never overwrites changes it hasn't seen. From a control you press, a page can also share a folder, set its visibility and manage who has access. Needs Thread Pages 1.10.0 or later, and the Syns CLI installed and signed in to a Syns account on each machine whose sessions use it.",
+  "icon": {
+    "url": "./icons/syns-7c088da5.svg"
+  },
+  "tags": [
+    "repository",
+    "files",
+    "version-history",
+    "wiki",
+    "task-board",
+    "notebook",
+    "sharing",
+    "collaboration",
+    "pages",
+    "cli"
+  ],
+  "author": {
+    "name": "Syns",
+    "github": "BartSoj",
+    "url": "https://syns.dev"
+  },
+  "category": "thread-content",
+  "overview": "./overview/syns.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/synsdev/syns-bb-plugin.git",
+      "range": "^0.8.2"
+    }
+  }
+}

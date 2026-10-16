@@ -1,0 +1,34 @@
+{
+  "id": "close-tab",
+  "displayName": "Close Tab",
+  "description": "Keep the preview down to the files you still need, and close each tab like in a browser instead of aiming at a tiny ×. Double-click or middle-click a tab you have read; on a Mac trackpad a three-finger click works too. Control+W and a palette command close the active tab, because ⌘W closes the window. A × at the right of the preview header hides the panel when you are back to the chat.",
+  "icon": "X",
+  "tags": [
+    "tabs",
+    "preview",
+    "close",
+    "gestures",
+    "keyboard",
+    "double-click",
+    "middle-click",
+    "document-tabs",
+    "panel",
+    "macos"
+  ],
+  "author": {
+    "name": "Yuriy Egorov",
+    "github": "fzrx-ego",
+    "url": "https://yuriy-egorov.pages.dev"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/close-tab/overview.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/fzrx-ego/bb-plugin-close-tab.git",
+      "range": "^0.3.0"
+    }
+  },
+  "overview": "./overview/close-tab.md"
+}

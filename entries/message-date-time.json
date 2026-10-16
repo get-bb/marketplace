@@ -1,0 +1,34 @@
+{
+  "id": "message-date-time",
+  "displayName": "Message Date & Time",
+  "description": "Puts the date and time above every message in a thread, yours and the agent's. Labels read \"Today, 2:34 PM\", \"Yesterday, 22:10\" or \"Oct 3, 9:15 AM\", and older messages add the year. Choose English or Russian and a 12- or 24-hour clock, or let the plugin follow your computer's settings. A BB update can hide the labels until the plugin catches up; the chat keeps working.",
+  "icon": {
+    "url": "./icons/message-date-time-5fdf4291.svg"
+  },
+  "tags": [
+    "timestamps",
+    "messages",
+    "chat",
+    "date",
+    "time",
+    "clock",
+    "history"
+  ],
+  "author": {
+    "name": "Sergey Kalachev",
+    "github": "meanwhile17",
+    "url": "https://github.com/meanwhile17"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/meanwhile17/bb-plugin-message-date-time.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/message-date-time/en-thread.png",
+    "./screenshots/message-date-time/ru-thread.png"
+  ],
+  "overview": "./overview/message-date-time.md"
+}

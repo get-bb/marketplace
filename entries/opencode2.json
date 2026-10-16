@@ -1,0 +1,27 @@
+{
+  "id": "opencode2",
+  "displayName": "OpenCode v2",
+  "description": "Run BB threads on any model you've connected to OpenCode v2, with BB's rewind, fork, steering, and permission modes intact. Tool calls show as native BB rows, including live command output and file changes built from OpenCode's own patches. BB dynamic tools, skills, and the bb CLI work inside OpenCode sessions. Needs OpenCode v2 (2.0.26 or newer, installed as opencode2) on the host and a model provider connected with opencode2 auth login.",
+  "icon": {
+    "url": "./icons/opencode2-7e411ab0.svg"
+  },
+  "overview": "./overview/opencode2.md",
+  "screenshots": [
+    "./screenshots/opencode2/thread.png",
+    "./screenshots/opencode2/settings.png",
+    "./screenshots/opencode2/model-picker.png"
+  ],
+  "tags": ["opencode2", "provider", "agents", "models", "mcp", "plan-mode"],
+  "author": {
+    "name": "Evan",
+    "github": "iamEvanYT",
+    "url": "https://github.com/iamEvanYT"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/iamEvanYT/bb-plugin-opencode2.git",
+      "range": "^1.0.0"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "treelanes",
+  "displayName": "Treelanes",
+  "description": "Take each coding task from idea to merged pull request in its own Git worktree, with checks before every stage moves. A board shows one card per worktree as agents move it through Design, TDD, Quality Loop, Simplify and PR Watch. A stage moves on only when its worker reports passing checks for the current files. The sidebar lists one main thread per worktree, with its other threads below it. The task map sets the harness, model and effort for each step. Needs an agent harness such as Claude Code or Codex, and the GitHub CLI for pull requests.",
+  "icon": {
+    "url": "./icons/treelanes-6173e64a.svg"
+  },
+  "tags": [
+    "git-worktree",
+    "kanban",
+    "coding-agents",
+    "pull-requests",
+    "code-review",
+    "tdd",
+    "sidebar",
+    "task-board",
+    "delivery"
+  ],
+  "author": {
+    "name": "Ahmed Hesham Abdelkader",
+    "github": "ahmedhesham6",
+    "url": "https://github.com/ahmedhesham6"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "code-and-reviews",
+    "thread-management"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/ahmedhesham6/bb-plugin-treelanes.git",
+      "range": "^0"
+    }
+  },
+  "overview": "./overview/treelanes.md",
+  "screenshots": [
+    "./screenshots/treelanes/board.png",
+    "./screenshots/treelanes/sidebar.png",
+    "./screenshots/treelanes/task-map.png"
+  ]
+}

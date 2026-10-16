@@ -1,0 +1,36 @@
+{
+  "id": "server-switcher",
+  "displayName": "Server Switcher",
+  "description": "See which bb server you are on and switch to another server on your account in one click. A strip above the sidebar footer shows the current server's name, address, online status, and your GitHub avatar. Click it to list the other servers on your bb account; offline servers are greyed out, and in the desktop app the switch goes through the app's own server menu. Give each server its own colored ring, from seven presets, a custom color, or a two-color gradient, in a picker beside the sidebar or with the bb server-switcher ring command. Requires a bb signed in to a bb account with the bundled bb connect plugin enabled.",
+  "icon": "ComputerCloud",
+  "tags": [
+    "servers",
+    "remote",
+    "getbb",
+    "account",
+    "sidebar",
+    "avatar",
+    "desktop",
+    "multi-machine"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "cloud-and-remote",
+  "screenshots": [
+    "./screenshots/server-switcher/sidebar.png",
+    "./screenshots/server-switcher/switcher.png",
+    "./screenshots/server-switcher/ring-popover.png"
+  ],
+  "overview": "./overview/server-switcher.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/server-switcher",
+      "range": "^0.1.0",
+      "tagPrefix": "server-switcher/"
+    }
+  }
+}

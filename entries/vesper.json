@@ -1,0 +1,36 @@
+{
+  "id": "vesper",
+  "displayName": "Vesper",
+  "description": "Recolor BB, its diffs and its terminal in Vesper's peppermint and orange. Pick Vesper to follow BB's light or dark mode, or Vesper Dark or Vesper Light to keep one look. Diffs and file previews use Vesper's syntax colors, and the dark code theme is the original Vesper file. The plugin adds only CSS and color files and runs nothing in the background. Requires BB 0.46 or later.",
+  "icon": {
+    "url": "./icons/vesper-f6838a30.svg"
+  },
+  "screenshots": [
+    "./screenshots/vesper/vesper-dark.png",
+    "./screenshots/vesper/vesper-light.png",
+    "./screenshots/vesper/palettes.png"
+  ],
+  "overview": "./overview/vesper.md",
+  "tags": [
+    "dark-theme",
+    "light-theme",
+    "palette",
+    "color-scheme",
+    "syntax-highlighting",
+    "code-theme",
+    "terminal-colors",
+    "minimal"
+  ],
+  "author": {
+    "name": "Dillion Verma",
+    "github": "dillionverma",
+    "url": "https://dillion.io"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/dillionverma/bb-plugin-vesper.git",
+      "range": "^1.0.0"
+    }
+  }
+}

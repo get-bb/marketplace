@@ -1,0 +1,34 @@
+{
+  "id": "peek",
+  "displayName": "Peek",
+  "description": "See what a plugin would change in bb before you install it. Every card in the plugin store gets a Preview button that lists the surfaces the plugin would add — a sidebar page, a thread-header button, a settings section — each with the plugin's own name for it. The same report names the settings it would create and flags wide access: a full-trust daemon, a script that can rewrite any part of the bb UI, or permission to run commands on your machine. Nothing is installed or executed to produce it, because Peek reads the exact release's files as text from the bb app, npm, or GitHub. No account or token is required, and the same report is available to you and your agents through bb peek show.",
+  "icon": "Eye",
+  "screenshots": [
+    "./screenshots/peek/preview-button.png",
+    "./screenshots/peek/interface-changes.png",
+    "./screenshots/peek/cli-and-notes.png"
+  ],
+  "tags": [
+    "preview",
+    "marketplace",
+    "install",
+    "inspect",
+    "permissions",
+    "audit",
+    "plugins",
+    "discovery"
+  ],
+  "author": {
+    "name": "Valentino Bonato",
+    "github": "valentino-bonato",
+    "url": "https://github.com/valentino-bonato"
+  },
+  "category": "plugin-development",
+  "source": {
+    "git": {
+      "url": "https://github.com/valentino-bonato/bb-plugin-peek.git",
+      "range": "^1.0.0"
+    }
+  },
+  "overview": "./overview/peek.md"
+}

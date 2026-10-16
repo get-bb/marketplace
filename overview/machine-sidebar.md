@@ -21,6 +21,10 @@ Choose **Mark inactive** in a thread's menu, or **Mark project inactive** in a p
 
 Pinned threads stay on top, and child threads are indented under their parent. bb's Cmd+1…9 and next or previous thread shortcuts keep working.
 
+## Farcall worker tasks
+
+If you delegate work to Claude Code or Codex workers through farcall-mcp, turn on **Show Farcall tasks** in the plugin settings. Each coordinator thread then lists its worker tasks underneath, with provider, model, task, elapsed call time and the final outcome. The list is built only from bb's own tool-call events: the plugin never starts, retries or controls workers, and it shows "Call open" while a batch is still running instead of guessing per-worker progress. Under each task a small line shows where the worker runs: the branch when its folder is a bb worktree environment on the coordinator's machine, otherwise the folder name from a `worktrees/<name>` path, marked as a folder because the branch is unknown. **Show hierarchy guides** adds thin tree lines through nested threads and tasks.
+
 ## How it works
 
-The list reads bb's own thread and project data; it adds no external service or account. Tag colors and inactive marks are stored by the plugin on your bb server, so every window and machine shows the same state. Which groups you collapsed is remembered per window.
+The list reads bb's own thread, project and tool-call data; it adds no external service or account. Tag colors and inactive marks are stored by the plugin on your bb server, so every window and machine shows the same state. Which groups you collapsed is remembered per window.

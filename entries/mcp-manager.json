@@ -1,0 +1,33 @@
+{
+  "id": "mcp-manager",
+  "displayName": "MCP Manager",
+  "description": "Find and manage MCP connections across five coding harnesses. Filter by harness, organize with tags, reconnect, or remove a configuration with a backup. Requires an enrolled BB host and installed harness CLIs for status checks and sign-in.",
+  "icon": {
+    "url": "./icons/mcp-manager-43a95a45.png"
+  },
+  "screenshots": [
+    "./screenshots/mcp-manager/overview.png"
+  ],
+  "overview": "./overview/mcp-manager.md",
+  "category": "agents-and-providers",
+  "tags": [
+    "mcp",
+    "connections",
+    "claude-code",
+    "codex",
+    "gemini",
+    "opencode",
+    "cursor"
+  ],
+  "author": {
+    "name": "Sankalpa Acharya",
+    "github": "sankalpaacharya",
+    "url": "https://github.com/sankalpaacharya"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/sankalpaacharya/bb-mcp-manager.git",
+      "range": "^0.1.0"
+    }
+  }
+}

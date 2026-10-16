@@ -1,0 +1,40 @@
+{
+  "id": "meetings",
+  "displayName": "Meetings",
+  "description": "Keep recordings, transcripts and action items from Zoom, Google Meet, Telemost and Jitsi calls together. Record and transcribe Russian speech on a Linux x64 or arm64 host with Chrome, Xvfb, PulseAudio, ffmpeg and the separately installed GigaAM plugin or your own transcription server. Use five built-in or custom summary templates, transcript search, timecoded Q&A, optional calendar auto-join and external agents through MCP or REST. A BB agent or an optional model API writes summaries; calendar sync needs Google OAuth or an ICS feed, and admission can require a platform account.",
+  "icon": {
+    "url": "./icons/meetings-e3a51582.svg"
+  },
+  "screenshots": [
+    "./screenshots/meetings/summary.jpg",
+    "./screenshots/meetings/search.jpg"
+  ],
+  "overview": "./overview/meetings.md",
+  "tags": [
+    "meeting-recorder",
+    "transcription",
+    "russian",
+    "zoom",
+    "google-meet",
+    "telemost",
+    "jitsi",
+    "summaries",
+    "calendar",
+    "mcp"
+  ],
+  "author": {
+    "name": "AiXenix",
+    "github": "AiXenix",
+    "url": "https://aixenix.com"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "memory-and-context"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/AiXenix/bb-plugin-meetings.git",
+      "range": "^0.3.0"
+    }
+  }
+}

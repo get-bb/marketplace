@@ -1,0 +1,21 @@
+{
+  "id": "feed",
+  "displayName": "Feed",
+  "description": "See every thread that needs your answer in one list, each with a one-line summary of its latest result. Rows sort into Needs your response, In progress, and Paused, and you reply, pause, archive, or move a thread from its row. A bundled manager skill starts new work in a section the Feed watches and flags child results for you. Summaries use your Codex login (ChatGPT account or OpenAI API key); without it, a row shows the first sentence of the agent's latest message.",
+  "icon": "ListTodo",
+  "tags": ["inbox", "queue", "triage", "summaries", "manager", "orchestration", "threads", "codex"],
+  "author": {
+    "name": "Ryan Brown",
+    "github": "ryanbbrown",
+    "url": "https://github.com/ryanbbrown"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/ryanbbrown/bb-plugin-feed.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": ["./screenshots/feed/feed.png", "./screenshots/feed/card.png", "./screenshots/feed/reply.png"],
+  "overview": "./overview/feed.md"
+}

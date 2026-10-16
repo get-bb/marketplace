@@ -1,0 +1,39 @@
+{
+  "id": "gone-fishing",
+  "displayName": "Gone Fishing",
+  "description": "Turn the wait for your agent into a pixel-art fishing trip on top of the chat input. The pond fishes by itself while a turn runs, or you take the rod to hook, reel, and land each fish yourself. Water floods the chat input behind your text, and the fish swimming there are the ones that bite. Three maps hold 28 species, and the seasons follow your calendar. Your catches unlock new maps and gear for your angler, boat, and dog. Catches stay in a local database on the bb server and use no external service.",
+  "icon": {
+    "url": "./icons/gone-fishing-7f9474a7.svg"
+  },
+  "screenshots": [
+    "./screenshots/gone-fishing/showcase.webp",
+    "./screenshots/gone-fishing/tackle-box.png",
+    "./screenshots/gone-fishing/fish-book.png"
+  ],
+  "overview": "./overview/gone-fishing.md",
+  "category": "themes-and-appearance",
+  "tags": [
+    "fishing",
+    "game",
+    "pixel-art",
+    "idle-game",
+    "chat-input",
+    "composer",
+    "seasons",
+    "customization",
+    "cozy"
+  ],
+  "author": {
+    "name": "Nicolas Charpentier",
+    "github": "charpeni",
+    "url": "https://github.com/charpeni"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/charpeni/bb-plugins.git",
+      "subdir": "plugins/gone-fishing",
+      "range": "^1.0.0",
+      "tagPrefix": "gone-fishing/"
+    }
+  }
+}

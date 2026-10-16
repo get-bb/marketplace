@@ -1,0 +1,17 @@
+{
+  "id": "workspace-sidebar",
+  "displayName": "Ultra Sidebar",
+  "description": "Keep every BB thread visible as work moves across projects. Group threads by project or status, pin current work, and see subagents nested under their parent. Review pull requests, branches, failures, and scheduled work on each row. Select threads in batches to move, snooze, or finish them, and use bb sidebar from a terminal. Replaces BB's thread list and requires BB 0.46 or later.",
+  "icon": { "url": "./icons/workspace-sidebar-ffbbb801.svg" },
+  "screenshots": [
+    "./screenshots/workspace-sidebar/sidebar.png",
+    "./screenshots/workspace-sidebar/details.png",
+    "./screenshots/workspace-sidebar/selection.png"
+  ],
+  "overview": "./overview/workspace-sidebar.md",
+  "tags": ["sidebar", "threads", "projects", "status", "subagents", "pull-requests", "snooze", "bulk-actions", "navigation"],
+  "author": { "name": "Dillion Verma", "github": "dillionverma", "url": "https://dillion.io" },
+  "category": "thread-management",
+  "secondaryCategories": ["tasks-and-workflows", "code-and-reviews"],
+  "source": { "git": { "url": "https://github.com/dillionverma/bb-plugin-ultra-sidebar.git", "range": "^1.0.0" } }
+}

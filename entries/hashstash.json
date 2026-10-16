@@ -1,0 +1,32 @@
+{
+  "id": "hashstash",
+  "displayName": "HashStash",
+  "description": "Reuse saved prompts in any BB chat and edit them before sending. Type # to search by name and insert a template. Keep your library as Markdown files in a folder you choose. No external service or API key is required.",
+  "icon": {
+    "url": "./icons/hashstash-630090c4.svg"
+  },
+  "tags": [
+    "prompts",
+    "templates",
+    "markdown",
+    "composer",
+    "snippets"
+  ],
+  "author": {
+    "name": "Streamlined Startup",
+    "github": "StreamlinedStartup",
+    "url": "https://github.com/StreamlinedStartup"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/hashstash/library.jpg",
+    "./screenshots/hashstash/prompt-menu.png"
+  ],
+  "overview": "./overview/hashstash.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/StreamlinedStartup/hashstash.git",
+      "range": "^0.1.0"
+    }
+  }
+}

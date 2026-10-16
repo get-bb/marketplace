@@ -1,0 +1,32 @@
+{
+  "id": "pi-command-sync",
+  "displayName": "Pi Command Sync",
+  "description": "Run Pi's own slash commands inside a BB thread instead of paying a model turn for them. The composer menu lists every command the Pi session has loaded, including extension and prompt commands BB cannot see on its own. /session, /thinking, /model, /name and /reload answer from the addon with no model request, and terminal-only controls such as /login or /resume explain the limitation instead of falling through to the model. Needs a one-time patch to BB's installed Pi provider bundle, applied with the checked script in the repository, because BB 0.45.0 has no API for this. Linux hosts only; macOS is untested and Windows is refused.",
+  "icon": "Zap",
+  "screenshots": [
+    "./screenshots/pi-command-sync/command-menu.png"
+  ],
+  "overview": "./overview/pi-command-sync.md",
+  "tags": [
+    "pi",
+    "slash-commands",
+    "command-menu",
+    "composer",
+    "extensions",
+    "custom-commands",
+    "prompt-templates",
+    "session-controls"
+  ],
+  "author": {
+    "name": "Diffuzmetall",
+    "github": "Diffuzmetall",
+    "url": "https://github.com/Diffuzmetall"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/Diffuzmetall/bb-plugin-pi-command-sync.git",
+      "range": "^0.2.0"
+    }
+  }
+}

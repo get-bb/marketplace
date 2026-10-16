@@ -1,0 +1,34 @@
+{
+  "id": "chat-find",
+  "displayName": "Chat Find",
+  "description": "Press Ctrl+F (Cmd+F on Mac) in any bb chat to find words in the conversation, with every match highlighted where it appears. Enter and Shift+Enter step through matches, and the chat scrolls each one clear of the composer, including matches inside bold text, links, and syntax-highlighted code. The count updates while an agent is still replying, without losing your place. Escape closes the bar and puts the cursor back where it was. It searches the messages the chat has loaded, leaves Ctrl+F to the embedded browser and terminals when they have focus, and needs no account or external service.",
+  "icon": {
+    "url": "./icons/chat-find-945f278b.svg"
+  },
+  "tags": [
+    "find",
+    "find-in-page",
+    "ctrl-f",
+    "search",
+    "highlight",
+    "keyboard-shortcut",
+    "messages",
+    "transcript"
+  ],
+  "author": {
+    "name": "bottlebrushes",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/chat-find/find-in-chat.png"
+  ],
+  "overview": "./overview/chat-find.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-plugin-chat-find.git",
+      "range": "^0.1.0"
+    }
+  }
+}

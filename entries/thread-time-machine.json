@@ -1,0 +1,35 @@
+{
+  "id": "thread-time-machine",
+  "displayName": "Thread Time Machine",
+  "description": "Step through everything an agent did in any thread, and diff its file changes between any two moments.Drag across a filmstrip of every message, command, file change and error, or press play, and open any frame to read its output, exit code or diff. Pin a start frame to see every file change between it and the current frame as diffs. Works on Codex, Claude Code, Pi, Muse Code, Cursor, opencode, Grok and Antigravity threads, including sub-agents, and adds frames live while an agent runs. A bb thread-time-machine dump command and a bundled agent skill print the same history as text. Read-only and local: no account or external service, and it never changes a thread.",
+  "icon": { "url": "./icons/thread-time-machine-d2318fb7.svg" },
+  "tags": [
+    "replay",
+    "session-replay",
+    "timeline",
+    "history",
+    "diff",
+    "debugging",
+    "transcripts",
+    "file-changes",
+    "audit"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-thread-time-machine.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/thread-time-machine/range-diff.png",
+    "./screenshots/thread-time-machine/command.png",
+    "./screenshots/thread-time-machine/edit.png"
+  ],
+  "overview": "./overview/thread-time-machine.md"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "genui",
+  "displayName": "Generative UI",
+  "description": "Turns agent replies into charts, diagrams, maps, plans and forms you can use, right in the chat. Agents choose from 86 components on their own, with no setup: sliders and filters recompute in the page, and buttons and forms send your pick back as your next message. Test reports, logs, lint errors and coverage files render as their own components instead of pasted text, and a thread's changes, commits, pull request and workers are read live from BB. Adds about 4,000 tokens of instructions to sessions whose replies you read, and looks up photos, places and map tiles on Wikimedia Commons, Photon and OpenStreetMap unless you turn web lookups off. Relies on BB internals, so a BB update can show the blocks as code until the plugin catches up.",
+  "icon": {
+    "url": "./icons/genui-37854277.svg"
+  },
+  "tags": [
+    "inline-ui",
+    "charts",
+    "diagrams",
+    "interactive",
+    "forms",
+    "maps",
+    "kanban",
+    "test-reports",
+    "visualization",
+    "components"
+  ],
+  "author": {
+    "name": "ComicBit",
+    "github": "ComicBit",
+    "url": "https://github.com/ComicBit"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "screenshots": [
+    "./screenshots/genui/chat-reply.png",
+    "./screenshots/genui/chat-decision-dark.png",
+    "./screenshots/genui/gallery-map.png"
+  ],
+  "overview": "./overview/genui.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/ComicBit/bb-plugin-genui.git",
+      "range": "^0.1.0"
+    }
+  }
+}

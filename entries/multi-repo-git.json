@@ -1,0 +1,41 @@
+{
+  "id": "multi-repo-git",
+  "displayName": "Multi Repo Git",
+  "description": "Keep related subprojects together and choose whether a chat works on the workspace or one subproject. Set each project's visible thread-family limit from 1 to 100 (default 5), with independent Show more controls. Use Edit workspace to connect folders while keeping BB's native thread rows, menus and actions. Inspect and commit changes in each linked repository through Source Control; requires BB 0.46 or newer, SDK 0.6.37 or newer, and the built-in thread-list sidebar.",
+  "icon": "FolderGit",
+  "tags": [
+    "workspaces",
+    "subprojects",
+    "sidebar",
+    "project-chats",
+    "pagination",
+    "thread-limits",
+    "folders",
+    "source-control",
+    "git"
+  ],
+  "author": {
+    "name": "nicolay-i",
+    "github": "nicolay-i",
+    "url": "https://github.com/nicolay-i"
+  },
+  "category": "thread-management",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/nicolay-i/bb-plugin-multi-repo-git.git",
+      "range": "^0.1.1"
+    }
+  },
+  "screenshots": [
+    "./screenshots/multi-repo-git/workspace-chats.png",
+    "./screenshots/multi-repo-git/subproject-chat.png",
+    "./screenshots/multi-repo-git/thread-limit.png",
+    "./screenshots/multi-repo-git/workspace-editor.png",
+    "./screenshots/multi-repo-git/source-control.png",
+    "./screenshots/multi-repo-git/workspace-menu.png"
+  ],
+  "overview": "./overview/multi-repo-git.md"
+}
