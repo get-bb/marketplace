@@ -1,0 +1,42 @@
+{
+  "id": "factory",
+  "displayName": "Software Factory",
+  "description": "Turn requests into reviewed pull requests: a Lead plans tasks, specialist agents build them, and independent agents review each PR. A Factory page in the left rail shows every agent's live status and a board from Backlog to Done. When a builder finishes, the Lead opens a draft PR; Reviewer 1 and a Security reviewer start within about two minutes, plus Reviewer 2 for large or sensitive diffs, and each posts its verdict on the PR. The PR is marked ready for review only when every reviewer approves, and merging stays with you. Needs a Git project, the agent CLIs you choose per role (Claude Code, Codex or Cursor), and a GitHub remote with the gh CLI for PR review; optional Rafter scans need a Rafter account.",
+  "icon": {
+    "url": "./icons/factory-8abebdef.svg"
+  },
+  "tags": [
+    "multi-agent",
+    "agent-team",
+    "code-review",
+    "pull-requests",
+    "kanban",
+    "task-board",
+    "security-review",
+    "worktrees",
+    "orchestration",
+    "rafter"
+  ],
+  "author": {
+    "name": "lpbaril",
+    "github": "lpbaril",
+    "url": "https://github.com/lpbaril"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "agents-and-providers",
+    "code-and-reviews"
+  ],
+  "screenshots": [
+    "./screenshots/factory/board.jpg",
+    "./screenshots/factory/task-review.jpg",
+    "./screenshots/factory/pr-comments.jpg"
+  ],
+  "overview": "./overview/factory.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/lpbaril/bb-plugin-factory.git",
+      "range": "^0.1.0"
+    }
+  }
+}
