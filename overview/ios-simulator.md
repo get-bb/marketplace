@@ -8,8 +8,22 @@ when available. A CSS device frame remains available when artwork is missing.
 Agent tools can attach a simulator, install and launch a build, capture a
 screenshot, inspect accessibility elements, tap, swipe, paste, press buttons,
 rotate, and open URLs. The panel opens when an agent attaches a device. The
-first control request asks for permission; you can change Agent control in
-settings.
+Agent control setting governs permission. Choose **Take control** to use the
+screen and hardware buttons, then **Let agent drive** to hand it back. One
+thread controls each iOS device; other attached threads can observe. Taking
+control cancels the previous driver's pending input.
+
+## Replay and activity
+
+Capture up to the last 30 seconds of iOS video, then play, pause, scrub or jump
+to an input or app event. Open Activity to inspect the timeline and available
+app logs and crash reports. App diagnostics follow apps launched through the
+plugin; their availability is shown in the panel.
+
+Replay playback cannot send input to the live device. Captures stay in memory
+and clear when the device's last attachment is removed or the plugin reloads;
+download replay JSON to keep one. Bounded
+buffers can hold less than 30 seconds, and playback requires WebCodecs.
 
 ## Android preview
 

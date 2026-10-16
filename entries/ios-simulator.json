@@ -1,7 +1,7 @@
 {
   "id": "ios-simulator",
   "displayName": "iOS Simulator",
-  "description": "Run iOS simulators and Android emulators beside your BB thread, with shared controls and tools for agents to launch and test apps. Requires BB 0.46+, an Apple Silicon Mac with Xcode and Node.js 20+ for iOS, or an existing Android SDK and AVD for Android. Android uses screenshot polling.",
+  "description": "Run and test mobile apps beside your BB thread, using the same screen as your agent. Capture up to the last 30 seconds of iOS video with input, app-log, and matching crash events. Hand control explicitly between you and your agent, with one controlling thread per device. Requires BB 0.46+, an Apple Silicon Mac with Xcode’s iOS platform and Node.js 20+ for iOS; Android screenshot previews need an installed SDK and AVD.",
   "icon": {
     "url": "./icons/ios-simulator-c4007f39.svg"
   },
@@ -30,7 +30,7 @@
   "source": {
     "git": {
       "url": "https://github.com/peteabu/bb-plugin-ios-simulator.git",
-      "range": "^0.1.0"
+      "range": "^0.1.1"
     }
   }
 }
