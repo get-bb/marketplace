@@ -1,0 +1,24 @@
+{
+  "id": "table-expand",
+  "displayName": "Table Expand",
+  "description": "Opens any markdown table in a thread full width, the way bb already expands images and Mermaid diagrams. Click the table or its corner expand button to see it in a dialog at the window width, with cells wrapping and both axes scrolling when it is still too big. Links, buttons and text selections inside the table keep working; Esc, the close button or the backdrop closes it. Relies on bb's table markup, so a bb update can break it until the plugin catches up.",
+  "icon": "Maximize2",
+  "tags": ["tables", "markdown", "timeline", "chat", "expand", "full-width", "readability"],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost",
+    "url": "https://github.com/steveafrost"
+  },
+  "category": "thread-content",
+  "overview": "./overview/table-expand.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-plugin-table-expand.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/table-expand/inline.png",
+    "./screenshots/table-expand/dialog.png"
+  ]
+}
