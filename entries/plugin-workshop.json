@@ -1,0 +1,37 @@
+{
+  "id": "plugin-workshop",
+  "displayName": "Plugin Workshop",
+  "description": "Turns a few sentences into an installed bb plugin, with one agent per stage from spec and mockup to code, review and rollout.",
+  "icon": {
+    "url": "./icons/plugin-workshop-8d539c71.svg"
+  },
+  "tags": [
+    "plugin-builder",
+    "agents",
+    "autopilot",
+    "code-review",
+    "mockups",
+    "rollback",
+    "github",
+    "multi-agent"
+  ],
+  "author": {
+    "name": "Plugin Workshop contributors",
+    "github": "mosmanlaw",
+    "url": "https://github.com/mosmanlaw/plugin-workshop"
+  },
+  "category": "plugin-development",
+  "source": {
+    "git": {
+      "url": "https://github.com/mosmanlaw/plugin-workshop.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/plugin-workshop/work-context.png",
+    "./screenshots/plugin-workshop/new-plugin.png",
+    "./screenshots/plugin-workshop/autopilot.png",
+    "./screenshots/plugin-workshop/board.png"
+  ],
+  "overview": "./overview/plugin-workshop.md"
+}
