@@ -3,9 +3,11 @@
   "displayName": "iOS Simulator",
   "description": "Run iOS simulators and Android emulators beside your BB thread, with shared controls and tools for agents to launch and test apps. Requires BB 0.46+, an Apple Silicon Mac with Xcode and Node.js 20+ for iOS, or an existing Android SDK and AVD for Android. Android uses screenshot polling.",
   "icon": {
-    "url": "./icons/ios-simulator.svg"
+    "url": "./icons/ios-simulator-c4007f39.svg"
   },
-  "screenshots": [],
+  "screenshots": [
+    "./screenshots/ios-simulator/panel-eb92b3d6.png"
+  ],
   "overview": "./overview/ios-simulator.md",
   "tags": [
     "ios",
