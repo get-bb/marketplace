@@ -1,0 +1,40 @@
+{
+  "id": "auto-router",
+  "displayName": "Model Pilot",
+  "description": "Choose a coding model for each task and see where your tokens go. Route work to Codex or Claude Code, delegate helper tasks, and compare recorded usage with cost estimates. Experimental support targets macOS with BB 0.46.",
+  "icon": {
+    "url": "./icons/auto-router-d06985a9.svg"
+  },
+  "tags": [
+    "model-routing",
+    "automatic-model-selection",
+    "codex",
+    "claude-code",
+    "jev",
+    "openai",
+    "haiku",
+    "token-usage",
+    "cost-tracking",
+    "delegation"
+  ],
+  "author": {
+    "name": "Mahmoud Elsayad",
+    "github": "MahmoudElsayad",
+    "url": "https://github.com/MahmoudElsayad"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "token-usage-and-limits"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/MahmoudElsayad/bb-model-pilot.git",
+      "range": "^0.4.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/auto-router/usage.png",
+    "./screenshots/auto-router/connection.png"
+  ],
+  "overview": "./overview/auto-router.md"
+}
