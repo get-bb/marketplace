@@ -4,7 +4,7 @@
 - **A Lead you talk to.** Tell it what you want built. It reads the repository, writes tasks with acceptance criteria, and starts specialists: Builder, QA and Designer. Each specialist is a child thread of the Lead, so the Lead hears when it finishes.
 - **Automatic pull request review.** When a builder is done, the Lead opens a draft PR. Within about two minutes the factory starts Reviewer 1 and a Security reviewer, plus Reviewer 2 when the diff is large or touches sensitive paths. Each posts an APPROVE or REQUEST CHANGES comment on the PR. New commits re-run only the reviewers who asked for changes. When every verdict is APPROVE, the factory marks the PR ready for review, which runs your full CI. After you merge, the card moves to Done.
 - **Optional Rafter security scans.** With a Rafter API key, each PR branch is scanned. The Security reviewer gets the findings for the files the PR changes, plus the full report.
-- **An optional shadow reviewer trial.** Run a second Security reviewer on another model next to the incumbent, with no vote. It covers the next N PRs or every sensitive PR. Afterwards a comparison thread checks both reviewers' findings against the code and recommends which to keep.
+- **An optional shadow reviewer.** Run a second Security reviewer on another model next to the incumbent, for the next N PRs or every sensitive PR. By default it has no vote. You can let its REQUEST CHANGES hold the PR until the issue is fixed or dismissed with a reason. A comparison thread checks both reviewers' findings against the code and recommends which to keep.
 
 ## How it works
 
