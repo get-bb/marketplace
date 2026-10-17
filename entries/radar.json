@@ -1,0 +1,38 @@
+{
+  "id": "radar",
+  "displayName": "Radar",
+  "description": "See every pull request and issue that needs you, live in the sidebar, without opening GitHub. Saved lanes poll straight through your gh CLI, so results are always current and nothing about your repositories is stored outside your machine. Describe a queue in plain words — \"my team's billing PRs, no drafts\" — and an OpenAI-compatible model drafts the lane, then tune every filter in a full editor. From any row, open a read-only review or triage thread with the project already picked, or rebase your own open PR server-side. Needs gh signed in to GitHub (gs or dt to add Gitstream and Delta), and an OpenAI-compatible API key in the bb server environment for drafting.",
+  "icon": { "url": "./icons/radar-52603aef.svg" },
+  "tags": [
+    "pull-requests",
+    "code-review",
+    "github",
+    "issues",
+    "mentions",
+    "triage",
+    "rebase",
+    "gitstream",
+    "delta"
+  ],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost",
+    "url": "https://github.com/steveafrost"
+  },
+  "category": "code-and-reviews",
+  "secondaryCategories": [
+    "notifications",
+    "agents-and-providers"
+  ],
+  "screenshots": [
+    "./screenshots/radar/board.png",
+    "./screenshots/radar/lane-editor.png"
+  ],
+  "overview": "./overview/radar.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-plugin-radar.git",
+      "range": "^0.3.0"
+    }
+  }
+}
