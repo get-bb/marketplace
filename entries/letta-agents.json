@@ -1,0 +1,11 @@
+{
+  "id": "letta-agents",
+  "displayName": "Letta Agents",
+  "description": "Resume your local Letta agents from the sidebar without losing their saved conversations. See agent activity and dispatched tasks beside each agent. Keep agent providers out of the model picker unless you enable them. Requires a separate local Letta Docker installation with the supported filesystem layout, Docker access, and the BB ACP adapter; the adapter uses npx to install its pinned Letta ACP package.",
+  "icon": "Bot",
+  "tags": ["local-agents", "docker", "acp", "sidebar", "conversations"],
+  "author": {"name": "Steve Frost", "github": "steveafrost", "url": "https://github.com/steveafrost"},
+  "category": "agents-and-providers",
+  "source": {"git": {"url": "https://github.com/steveafrost/bb-plugin-letta-agents.git", "range": "^0.3.30"}},
+  "overview": "./overview/letta-agents.md"
+}
