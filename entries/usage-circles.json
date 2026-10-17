@@ -1,0 +1,22 @@
+{
+  "id": "usage-circles",
+  "displayName": "Usage Circles",
+  "description": "Displays Claude Code usage limits as paired rings in the BB sidebar footer — an outer ring for share spent that colors by threshold and an inner ring for time until reset — and expands a per-window breakdown panel on click.",
+  "icon": {
+    "url": "./icons/usage-circles-c71462e8.svg"
+  },
+  "tags": ["usage", "limits", "quota", "claude-code", "sidebar", "footer", "rings"],
+  "author": {
+    "name": "e0068",
+    "github": "e0068",
+    "url": "https://github.com/e0068"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/e0068/bb-plugins.git",
+      "subdir": "bb-plugin-usage-circles",
+      "range": "^0.1.0",
+      "tagPrefix": "usage-circles/"
+    }
+  }
+}
