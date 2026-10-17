@@ -32,7 +32,7 @@
   "source": {
     "git": {
       "url": "https://github.com/steveafrost/bb-plugin-radar.git",
-      "range": "^0.2.1"
+      "range": "^0.3.0"
     }
   }
 }
