@@ -1,7 +1,7 @@
 {
   "id": "image-studio",
   "displayName": "Image Studio",
-  "description": "Keep generated photos for the current project in a gallery, then make the next one from the panel or from chat. People profiles store selfies and body details so a named person stays recognizable. Nano Banana 2, Nano Banana Pro, and Muse Image run through fal.ai or kie.ai; those providers bill generation, and Muse Image is fal.ai only. The chat Send form remembers the last model, frame, and size. English and Russian UI; Env Catalog can hold the keys.",
+  "description": "Keep generated project photos in a gallery and create or edit the next image from the panel or chat. People profiles use labeled reference sheets and can build missing face, body, and detail views for reuse across models. Nano Banana 2, 2.1, Pro, and Muse Image use paid fal.ai or kie.ai API keys; Muse Image requires fal.ai. The chat Send form remembers the model, frame, and size, with 2K as the default size; the interface supports English and Russian, and Env Catalog can hold the keys.",
   "icon": "Palette",
   "tags": [
     "images",
@@ -23,13 +23,13 @@
   "source": {
     "git": {
       "url": "https://github.com/VKirill/bb-plugin-image-studio.git",
-      "range": "^0.1.19"
+      "range": ">=0.2.1 <1.0.0"
     }
   },
   "screenshots": [
-    "./screenshots/image-studio/gallery.png",
-    "./screenshots/image-studio/profiles.png",
-    "./screenshots/image-studio/settings.png"
+    "./screenshots/image-studio/gallery.jpg",
+    "./screenshots/image-studio/profiles.jpg",
+    "./screenshots/image-studio/settings.jpg"
   ],
   "overview": "./overview/image-studio.md"
 }

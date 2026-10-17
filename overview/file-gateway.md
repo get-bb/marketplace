@@ -1,6 +1,7 @@
-## Your files, across your BB machines
+## File Gateway for BB — Cross-Machine Files, Remote Mentions & FTP/SFTP Explorer
 
 Working on a server while your document is on a Mac? File Gateway lets your agent list a shared folder, read text, or copy a file to another enrolled machine without setting up SSH or publishing a download link.
+
 
 ## What it provides
 
@@ -13,8 +14,14 @@ Working on a server while your document is on a Mac? File Gateway lets your agen
 
 Nothing is shared until you configure it. Selected folders mode excludes common credential paths and symbolic links. Full computer mode opens all files readable by BB, including hidden files and credentials, and follows links. Operating-system permissions still apply.
 
+## Folder view
+
+Click a folder path in a chat message to open it as a panel tab on that chat's machine: breadcrumbs, icons or list, image thumbnails, in-panel preview of images, PDF, video and audio, download to your computer, native mentions and copy path. The same access policy applies as for the rest of the plugin.
+
 ## Beta limits
 
 Requires BB 0.43 or newer and Plugin SDK 0.4.87 or newer. Supports macOS and Linux, files up to 256 MiB, and single-file transfers. No Windows support, recursive folder copies, resumable transfers or arbitrary remote editing yet. Copies persist in the receiving machine's plugin imports folder until you remove them locally.
 
 Website transfers are read-only, up to 32 MiB, and originate from the BB server. FTPS verifies certificates; SFTP verifies a configured SHA-256 host-key fingerprint and supports password authentication. No website uploads or edits. The interface, documentation and agent instructions are in English.
+
+The folder toolbar can download the visible files in the current folder as a ZIP archive. Subfolders are not included. Use the media viewer’s back button to return to the folder.

@@ -1,0 +1,37 @@
+{
+  "id": "voice-mode",
+  "displayName": "Voice Mode",
+  "description": "Talk to a thread's agent hands-free, like ChatGPT or Codex voice. When the composer is empty its send button becomes a waveform; click it, or press Ctrl+Shift+V, for a full-duplex realtime voice chat. The voice model hands requests to the thread's agent, answers \"is it done?\", stops the agent when you say stop, and reads back a short summary when the turn ends. Talk over it any time to interrupt. Uses OpenAI Realtime with your own API key, or a plugin that provides realtime connections (for example a company AI proxy). bb's own send and dictation are never affected.",
+  "icon": {
+    "url": "./icons/voice-mode.svg"
+  },
+  "tags": [
+    "voice",
+    "realtime",
+    "speech",
+    "hands-free",
+    "openai",
+    "conversation",
+    "agent"
+  ],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost",
+    "url": "https://github.com/steveafrost"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "thread-management"
+  ],
+  "overview": "./overview/voice-mode.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-plugin-voice-mode.git",
+      "range": "^0.1.5"
+    }
+  },
+  "screenshots": [
+    "./screenshots/voice-mode/start.png",
+    "./screenshots/voice-mode/live.png"
+  ]
+}

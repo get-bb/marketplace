@@ -1,0 +1,36 @@
+{
+  "id": "ios-simulator",
+  "displayName": "iOS Simulator",
+  "description": "Run and test mobile apps beside your BB thread, using the same screen as your agent. Capture up to the last 30 seconds of iOS video with input, app-log, and matching crash events. Hand control explicitly between you and your agent, with one controlling thread per device. Requires BB 0.46+, an Apple Silicon Mac with Xcode’s iOS platform and Node.js 20+ for iOS; Android screenshot previews need an installed SDK and AVD.",
+  "icon": {
+    "url": "./icons/ios-simulator-c4007f39.svg"
+  },
+  "screenshots": [
+    "./screenshots/ios-simulator/panel-eb92b3d6.png"
+  ],
+  "overview": "./overview/ios-simulator.md",
+  "tags": [
+    "ios",
+    "simulator",
+    "android",
+    "emulator",
+    "testing",
+    "xcode",
+    "mobile"
+  ],
+  "author": {
+    "name": "Peter Abu",
+    "github": "peteabu",
+    "url": "https://github.com/peteabu"
+  },
+  "category": "utilities",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/peteabu/bb-plugin-ios-simulator.git",
+      "range": "^0.1.1"
+    }
+  }
+}

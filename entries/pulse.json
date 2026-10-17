@@ -1,0 +1,22 @@
+{
+  "id": "pulse",
+  "displayName": "Pulse",
+  "description": "See what needs you from Slack, Gmail and Calendar on one live board, kept current by scheduled agent runs. Hourly, Daily and Weekly runs write items sorted into Now, Next, Later and Nice to Know, and Done or Snooze sticks across runs. Each item can carry prepared replies that copy to your clipboard and open the source; nothing is sent for you. A robot button hands an item to an agent thread that drafts the work for your review. Your agents need their own Slack, Gmail and Calendar access (MCP servers, CLIs or plugins), and every run uses your model quota.",
+  "icon": { "url": "./icons/pulse-a4bd5c7c.svg" },
+  "tags": ["slack", "gmail", "calendar", "inbox", "follow-ups", "triage", "scheduled-agents", "daily-digest", "todo"],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost",
+    "url": "https://github.com/steveafrost"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": ["notifications"],
+  "screenshots": ["./screenshots/pulse/board.png", "./screenshots/pulse/quick-actions.png", "./screenshots/pulse/runs.png"],
+  "overview": "./overview/pulse.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-plugin-pulse.git",
+      "range": "^0.1.0"
+    }
+  }
+}
