@@ -9,7 +9,7 @@ Talk to a thread's agent hands-free, the way ChatGPT and Codex voice work.
 
 ## Setup
 
-Install a plugin that provides realtime connections (for example a company AI proxy plugin) and leave **Connection** on auto; that plugin picks the model. Or add an OpenAI API key, which talks to OpenAI directly, and pick the model in Voice Mode's settings. The voice is always picked here.
+Install a plugin that provides realtime connections (for example Realtime Gateway, which routes sessions through the Vercel AI Gateway) and leave **Connection** on auto; that plugin picks the model. Or add an OpenAI API key, which talks to OpenAI directly, and pick the model in Voice Mode's settings. The voice is always picked here.
 
 ## Notes
 
