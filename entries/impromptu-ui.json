@@ -1,0 +1,38 @@
+{
+  "id": "impromptu-ui",
+  "displayName": "Impromptu UI",
+  "description": "Generate interfaces for what you need to process or act on, instead of walls of text in chat. An agent's results, such as issues to triage or a Dependabot pull request to merge, appear as rows above the composer, one per item. Each row opens a side panel with the details, a draft you can edit, and buttons that post it, start a thread, run a command once you confirm it, or open a link. For design choices, a film strip shows screenshots of the original and each alternative, and Send feedback returns your pick and notes to the thread. The agent reads back what you did and carries on from there. Requires bb 0.43 or later, and needs no account or external service.",
+  "icon": "GridView",
+  "tags": [
+    "agent-output",
+    "triage",
+    "action-items",
+    "side-panel",
+    "composer",
+    "drafts",
+    "design-review",
+    "dependabot",
+    "skills",
+    "interactive"
+  ],
+  "author": {
+    "name": "Daniel Bachhuber",
+    "github": "danielbachhuber",
+    "url": "https://github.com/danielbachhuber"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/impromptu-ui/dependabot-item-open.png",
+    "./screenshots/impromptu-ui/dependabot-in-chat.png",
+    "./screenshots/impromptu-ui/visual-review.png"
+  ],
+  "overview": "./overview/impromptu-ui.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/danielbachhuber/bb-plugins.git",
+      "subdir": "bb-plugin-impromptu-ui",
+      "range": "^0.1.0",
+      "tagPrefix": "impromptu-ui/"
+    }
+  }
+}
