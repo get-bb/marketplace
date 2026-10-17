@@ -1,0 +1,24 @@
+{
+  "id": "attach-folder",
+  "displayName": "Attach Folder",
+  "description": "Adds an Attach Folder row to the bb composer's + menu; picking a folder sends its file manifest and contents to the agent as context, with configurable file-count and size limits.",
+  "icon": "Folder",
+  "tags": [
+    "composer",
+    "context",
+    "attachments",
+    "folder",
+    "files"
+  ],
+  "author": {
+    "name": "Yegor Korobeynikov",
+    "github": "yegor-korobeynikov",
+    "url": "https://github.com/yegor-korobeynikov"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/yegor-korobeynikov/bb-plugin-attach-folder.git",
+      "range": "^1.0.0"
+    }
+  }
+}
