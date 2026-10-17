@@ -1,0 +1,33 @@
+{
+  "id": "url-pills",
+  "displayName": "Compact Links",
+  "description": "Recognize website links at a glance in drafts and conversations. Paste a URL to show a compact favicon pill, then click to open it using your bb browser preference. Full URLs stay intact when copied or sent. Optional favicon lookups contact public HTTPS origins; localhost and unavailable icons use a generic icon.",
+  "icon": {
+    "url": "./icons/url-pills-c6af4092.svg"
+  },
+  "tags": [
+    "links",
+    "favicons",
+    "composer",
+    "messages",
+    "localhost"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/url-pills/composer-light.png",
+    "./screenshots/url-pills/conversation-dark.png"
+  ],
+  "overview": "./overview/url-pills.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "ref": "7c0586180465760463f8f58f061ce30dfd768a2f",
+      "subdir": "plugins/url-pills"
+    }
+  }
+}
