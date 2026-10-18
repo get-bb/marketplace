@@ -13,5 +13,5 @@
   "tags": ["excel", "xlsx", "word", "docx", "pdf", "powerpoint", "image-editor", "screenshot-annotation", "video", "csv"],
   "author": { "name": "Kirill Vechkasov", "github": "VKirill" },
   "category": "file-viewers-and-editors",
-  "source": { "git": { "url": "https://github.com/VKirill/bb-plugin-office-viewer.git", "range": "^0.7.0" } }
+  "source": { "git": { "url": "https://github.com/VKirill/bb-plugin-office-viewer.git", "range": "^0.8.1" } }
 }

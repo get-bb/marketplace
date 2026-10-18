@@ -1,0 +1,34 @@
+{
+  "id": "breathe",
+  "displayName": "Breathe",
+  "description": "Turn waiting time into a reminder to breathe. A pixel wave guides inhale, hold and exhale while your agent works, then disappears when it finishes or needs your input. Choose five colors and three timing presets or your own rhythm, preview changes, and use your system’s reduced-motion setting. Runs locally without extra accounts or services, and is inspired by Mindful Claude by halluton.",
+  "icon": {
+    "url": "./icons/breathe-0e83da5e.svg"
+  },
+  "screenshots": [
+    "./screenshots/breathe/wave.jpg",
+    "./screenshots/breathe/colors.jpg",
+    "./screenshots/breathe/breathe-loop.webp"
+  ],
+  "overview": "./overview/breathe.md",
+  "tags": [
+    "breathing",
+    "mindfulness",
+    "pixel-art",
+    "animation",
+    "composer",
+    "relaxation"
+  ],
+  "author": {
+    "name": "Nikko Foti",
+    "github": "Nikko-Foti",
+    "url": "https://github.com/Nikko-Foti"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/Nikko-Foti/bb-plugin-breathe.git",
+      "range": "^0.1.1"
+    }
+  }
+}

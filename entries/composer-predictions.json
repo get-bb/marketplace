@@ -1,0 +1,36 @@
+{
+  "id": "composer-predictions",
+  "displayName": "Composer Predictions",
+  "description": "Suggests the message you're likely to send next as ghost text in the empty composer, one Tab from an editable draft. Nothing is sent for you: Tab only fills an empty message box, and typing, pasting or Escape hides the suggestion until the conversation moves on. Suggestions are saved across restarts and checked against the conversation before they reappear, so an unchanged thread costs no new request. Every reply in a thread you've opened costs one request in a hidden helper thread, which receives up to 48,000 characters of recent messages and tool output.",
+  "icon": {
+    "url": "./icons/composer-predictions-b9135f01.svg"
+  },
+  "tags": [
+    "autocomplete",
+    "ghost-text",
+    "next-message",
+    "suggestions",
+    "predictions",
+    "composer",
+    "tab-completion",
+    "drafts"
+  ],
+  "author": {
+    "name": "MacHatter1",
+    "github": "MacHatter1",
+    "url": "https://github.com/MacHatter1"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/MacHatter1/bb-plugin-composer-predictions.git",
+      "range": "^0.4.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/composer-predictions/ghost-text.png",
+    "./screenshots/composer-predictions/draft.png",
+    "./screenshots/composer-predictions/settings.png"
+  ],
+  "overview": "./overview/composer-predictions.md"
+}

@@ -6,9 +6,7 @@
     "url": "./icons/zen-koi-906749b4.svg"
   },
   "screenshots": [
-    "./screenshots/zen-koi/showcase.webp",
-    "./screenshots/zen-koi/pond.png",
-    "./screenshots/zen-koi/zen-pond-page.png"
+    "./screenshots/zen-koi/showcase.webp"
   ],
   "overview": "./overview/zen-koi.md",
   "category": "themes-and-appearance",

@@ -1,0 +1,21 @@
+{
+  "id": "plain-paste",
+  "displayName": "Plain Paste",
+  "description": "Pastes only the text of the clipboard into the message box with ⇧⌘V, never its images or attachments. The text replaces any selection and keeps its line breaks. If the clipboard holds no text, nothing is pasted and a notice says why. Works in the message box only, in bb Desktop on macOS. Requires bb 0.46+ and Plugin SDK 0.6.49+.",
+  "icon": "ClipboardType",
+  "screenshots": ["./screenshots/plain-paste/keyboard-settings.png"],
+  "tags": ["paste", "clipboard", "plain-text", "composer", "message-box", "shortcut", "keyboard"],
+  "author": {
+    "name": "Dmitry Makarov",
+    "github": "dimiboi",
+    "url": "https://github.com/dimiboi"
+  },
+  "category": "thread-content",
+  "overview": "./overview/plain-paste.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/dimiboi/bb-plugin-plain-paste.git",
+      "range": "^0.1.0"
+    }
+  }
+}

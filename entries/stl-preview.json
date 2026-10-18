@@ -1,0 +1,24 @@
+{
+  "id": "stl-preview",
+  "displayName": "STL Preview",
+  "description": "Inspect STL models beside your BB conversation. Orbit, pan and zoom, switch to wireframe, and read dimensions and triangle counts. Open workspace, host and thread-storage files through BB, including selected remote hosts. Requires WebGL2; supports binary and ASCII STL up to 64 MiB and one million triangles, with no separate viewer or external service.",
+  "icon": { "url": "./icons/stl-preview-5f19239f.svg" },
+  "screenshots": [
+    "./screenshots/stl-preview/solid.png",
+    "./screenshots/stl-preview/wireframe.png"
+  ],
+  "overview": "./overview/stl-preview.md",
+  "tags": ["stl", "3d-printing", "cad", "mesh", "wireframe", "model-viewer"],
+  "author": {
+    "name": "Ogi",
+    "github": "obostjancic",
+    "url": "https://github.com/obostjancic"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/obostjancic/bb-plugin-stl-preview.git",
+      "range": "^0.1.0"
+    }
+  }
+}

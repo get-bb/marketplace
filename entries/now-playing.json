@@ -1,0 +1,39 @@
+{
+  "id": "now-playing",
+  "displayName": "Now Playing",
+  "description": "Play, pause, and skip tracks from a small player in the bb sidebar footer. The player shows the current track with album art, a seek bar, shuffle, repeat, and volume, in one of seven styles: Default, Minimal, Cover, Hi-Fi, Terminal, Pocket, and the bb-amp skin. The styles follow your bb theme in light and dark mode, and four of them take an accent color. It controls the music player on the computer that runs the bb server: Spotify or Apple Music on macOS, and any MPRIS player on Linux (needs playerctl) or any app in the media overlay on Windows (no volume control there). By default the player follows the app that is playing, and a setting locks it to Spotify or Apple Music. The bb music command gives terminals and agents the same controls. On macOS, Spotify needs its desktop app, and macOS asks once for permission to control each app. Covers for streamed Apple Music tracks come from Apple's iTunes Search API, which receives the artist and title; a setting turns this off.",
+  "icon": {
+    "url": "./icons/now-playing-50a667ca.svg"
+  },
+  "screenshots": [
+    "./screenshots/now-playing/styles-dark.png",
+    "./screenshots/now-playing/styles-light.png",
+    "./screenshots/now-playing/spotify.png",
+    "./screenshots/now-playing/apple-music.png"
+  ],
+  "overview": "./overview/now-playing.md",
+  "tags": [
+    "spotify",
+    "apple-music",
+    "music",
+    "media-player",
+    "playback",
+    "audio",
+    "macos",
+    "linux",
+    "windows",
+    "themes"
+  ],
+  "author": {
+    "name": "Chris Abra",
+    "github": "chrisabra-co",
+    "url": "https://github.com/chrisabra-co"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/chrisabra-co/bb-plugin-now-playing.git",
+      "range": "^0.4.0"
+    }
+  }
+}

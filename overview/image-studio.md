@@ -4,9 +4,9 @@ A gallery of photos generated for the current BB project, in their real aspect r
 
 ## How it works
 
-Open **Image Studio** in BB's sidebar. The gallery is the home screen: WebP thumbnails, click to preview, prompt plus generate at the bottom. Profiles hold body details and up to three selfies plus an optional manicure photo used when hands are in frame. Settings turn models on and off through a searchable list, pick English or Russian, and store API keys (a typed key wins over Env Catalog).
+Open **Image Studio** in BB's sidebar. The gallery is the home screen: WebP thumbnails, click to preview, prompt plus generate at the bottom. Profiles hold body details and a labeled reference sheet (face angles, body views, close-ups); each generation sends only the slots the prompt needs, and Build sheet generates the missing ones. Settings turn models on and off through a searchable list, pick English or Russian, and store API keys (a typed key wins over Env Catalog).
 
-Nano Banana 2 and Nano Banana Pro default to kie.ai; fal.ai remains available with `--gateway fal`. Size defaults to 2K. Muse Image runs on fal.ai only. GPT Image 2.5 (Flare/Sunburst), FLUX.2 Pro, Seedream 5.0 Pro, and Grok Imagine are opt-in in settings and run on both gateways. Generated files stay with the project; profiles are shared across projects.
+Nano Banana 2, Nano Banana 2.1 and Nano Banana Pro default to kie.ai; fal.ai remains available with `--gateway fal`. Size defaults to 2K. Muse Image runs on fal.ai only. GPT Image 2.5 (Flare/Sunburst), FLUX.2 Pro, Seedream 5.0 Pro, and Grok Imagine are opt-in in settings and run on both gateways. Generated files stay with the project; profiles are shared across projects.
 
 In a thread, ask for a photo. The agent fills the prompt from the bundled skill template for that model, then calls `image_studio_generate` (not the CLI) so you can change model, aspect ratio, and size, then press Send.
 
