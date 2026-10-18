@@ -1,0 +1,26 @@
+{
+  "id": "session-log",
+  "displayName": "Session Log",
+  "description": "Check what an agent actually ran, changed and decided, in one live log beside the chat. Messages, thinking, commands with their output and exit codes, tool calls, file diffs and subagent steps appear in timeline order, with a timestamp on every row and a duration on every command. The log follows new output as it arrives, opens failed commands by default, and filters to messages, thinking, tools or errors. Search covers the whole session, and single keys jump between rows, replies and errors. Open it with Mod+Shift+L or from the thread header; it reads bb's timeline and keeps no copy of the thread.",
+  "icon": { "url": "./icons/session-log-8dc89d04.svg" },
+  "screenshots": [
+    "./screenshots/session-log/side-panel.png",
+    "./screenshots/session-log/full-window.png"
+  ],
+  "overview": "./overview/session-log.md",
+  "tags": ["log", "timeline", "tool-calls", "commands", "diffs", "search", "debugging", "side-panel"],
+  "author": {
+    "name": "Kalindu De Costa",
+    "github": "kalindudc",
+    "url": "https://github.com/kalindudc"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/kalindudc/bb-marketplace.git",
+      "subdir": "plugins/session-log",
+      "range": ">=0.1.0 <1.0.0",
+      "tagPrefix": "session-log/"
+    }
+  }
+}
