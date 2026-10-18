@@ -1,0 +1,27 @@
+{
+  "id": "switchboard",
+  "displayName": "Switchboard",
+  "description": "See which agent threads failed, need you or are still running, grouped under your bb sections. Child threads nest under their parent across projects, and a collapsed parent still shows its most urgent child. A status-lanes view lists every awake thread under Failed, Needs you, Running, Unread or Idle. Drag threads to reorder, nest or move them between sections, and snooze a quiet family until tomorrow morning. Hover a row for the thread's model, context use, branch, uncommitted changes and pull request. Choose Switchboard under Settings → Appearance → Sidebar in each bb client.",
+  "icon": { "url": "./icons/switchboard-d9a6c807.svg" },
+  "screenshots": [
+    "./screenshots/switchboard/sections.png",
+    "./screenshots/switchboard/hover-card.png",
+    "./screenshots/switchboard/status-lanes.png"
+  ],
+  "overview": "./overview/switchboard.md",
+  "tags": ["sidebar", "threads", "sections", "status", "triage", "snooze", "drag-and-drop", "child-threads", "parallel-agents"],
+  "author": {
+    "name": "Kalindu De Costa",
+    "github": "kalindudc",
+    "url": "https://github.com/kalindudc"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/kalindudc/bb-marketplace.git",
+      "subdir": "plugins/switchboard",
+      "range": ">=0.1.0 <1.0.0",
+      "tagPrefix": "switchboard/"
+    }
+  }
+}
