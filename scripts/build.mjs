@@ -382,7 +382,7 @@ const outputs = [
   ["v2/marketplace.json", v2Manifest],
 ];
 for (const [label, manifest] of outputs) {
-  const bytes = `${JSON.stringify(manifest, null, 2)}\n`;
+  const bytes = `${JSON.stringify(manifest, null, label.startsWith("v2/") ? undefined : 2)}\n`;
   if (Buffer.byteLength(bytes, "utf8") > 1_048_576) {
     console.error(`error: The ${label} document is larger than 1 MiB.`);
     process.exit(1);
@@ -396,7 +396,7 @@ writeFileSync(
 );
 writeFileSync(
   join(root, "dist", "v2", "marketplace.json"),
-  `${JSON.stringify(v2Manifest, null, 2)}\n`,
+  `${JSON.stringify(v2Manifest)}\n`,
 );
 console.log(`built dist/marketplace.json with ${plugins.length} entries`);
 console.log(`built dist/v2/marketplace.json with ${plugins.length} entries`);
