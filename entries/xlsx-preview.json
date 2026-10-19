@@ -1,0 +1,32 @@
+{
+  "id": "xlsx-preview",
+  "displayName": "Xlsx Preview",
+  "description": "Read Excel workbooks directly in BB’s file panel. Switch between sheets and view merged cells, dates, and up to 1,000 rows × 100 columns per sheet. Find workbooks in your workspace and thread files from the Spreadsheets button. Supports .xlsx and .xlsm without an external account or separate spreadsheet application.",
+  "icon": {
+    "url": "./icons/xlsx-preview-ed49cf11.svg"
+  },
+  "tags": [
+    "excel",
+    "spreadsheets",
+    "xlsx",
+    "xlsm",
+    "workbooks",
+    "tables"
+  ],
+  "author": {
+    "name": "must-aero",
+    "github": "must-aero",
+    "url": "https://github.com/must-aero"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/must-aero/bb-plugin-xlsx-preview.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/xlsx-preview/workbook.png"
+  ],
+  "overview": "./overview/xlsx-preview.md"
+}
