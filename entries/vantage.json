@@ -1,0 +1,35 @@
+{
+  "id": "vantage",
+  "displayName": "Vantage",
+  "description": "See every worktree your parallel agents work in, and everything they changed across repositories, from the parent thread. Each worktree shows status, branch, commits ahead and behind, uncommitted files and its pull request; open one to read its diffs and commits, talk to its agent, or start a terminal in it. Files changed in two worktrees are flagged before they conflict. A full-screen Vantage page in bb's left navigation shows every recent thread's worktrees and changed repositories at once, filtered by project. It paints at once and loads git details in the background; archived threads stay hidden on the page until you ask for them.",
+  "icon": { "url": "./icons/vantage-38847873.svg" },
+  "tags": [
+    "git",
+    "worktrees",
+    "worktree",
+    "parallel-agents",
+    "diffs",
+    "multi-repo",
+    "terminal"
+  ],
+  "author": {
+    "name": "Kalindu De Costa",
+    "github": "kalindudc",
+    "url": "https://github.com/kalindudc"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/vantage/side-panel.png",
+    "./screenshots/vantage/full-screen.png",
+    "./screenshots/vantage/repositories.png"
+  ],
+  "overview": "./overview/vantage.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/kalindudc/bb-marketplace.git",
+      "subdir": "plugins/vantage",
+      "range": ">=0.1.0 <1.0.0",
+      "tagPrefix": "vantage/"
+    }
+  }
+}

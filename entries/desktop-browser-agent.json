@@ -1,0 +1,37 @@
+{
+  "id": "desktop-browser-agent",
+  "displayName": "Desktop & Browser Agent",
+  "description": "Lets your agents use the apps and browser tabs on your machine in the background, while you keep working. Agents read and operate native apps and Chrome, Edge or Brave windows through Cua Driver from Cua AI, which the settings page installs and checks on each machine. The optional Browser Bridge for bb extension lets them work in any tab of your signed-in browser, in an Agent tab group you can pause. Tools that run code or force-quit apps start off, and agents can be made to ask before clipboard, screen capture and file actions. Needs Cua Driver (free, MIT). Tested on macOS 14+; Windows 10/11 and Linux with X11 are supported by Cua Driver but not yet tested with this plugin.",
+  "icon": {
+    "url": "./icons/desktop-browser-agent-caf1b0d7.svg"
+  },
+  "tags": [
+    "computer-use",
+    "desktop-automation",
+    "browser-automation",
+    "chrome-extension",
+    "cua-driver",
+    "accessibility",
+    "macos",
+    "background-agents"
+  ],
+  "author": {
+    "name": "Boros Máté",
+    "github": "qwadrox",
+    "url": "https://github.com/qwadrox"
+  },
+  "category": "agents-and-providers",
+  "screenshots": [
+    "./screenshots/desktop-browser-agent/overview.png",
+    "./screenshots/desktop-browser-agent/machines.png",
+    "./screenshots/desktop-browser-agent/browser-extension.png",
+    "./screenshots/desktop-browser-agent/routing.png"
+  ],
+  "overview": "./overview/desktop-browser-agent.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/qwadrox/bb-plugin-desktop-browser-agent.git",
+      "range": "^0.5.0"
+    }
+  }
+}
