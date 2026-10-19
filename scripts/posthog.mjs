@@ -14,7 +14,31 @@ function required(name) {
   return value.trim();
 }
 
-export async function queryHogQL(query) {
+/**
+ * PostHog answers 504 with this detail when ClickHouse hits its execution
+ * limit. Load on the shared cluster makes that intermittent, and the query is
+ * a read, so running it again is safe. Every other failure (bad key, HogQL
+ * error, other 5xx) still fails at once.
+ */
+const EXECUTION_TIMEOUT = /max execution time/i;
+const TIMEOUT_ATTEMPTS = 3;
+const TIMEOUT_BACKOFF_MS = 15_000;
+
+export async function queryHogQL(query, { backoffMs = TIMEOUT_BACKOFF_MS } = {}) {
+  for (let attempt = 1; ; attempt += 1) {
+    try {
+      return await queryHogQLOnce(query);
+    } catch (error) {
+      if (!error?.executionTimeout || attempt >= TIMEOUT_ATTEMPTS) throw error;
+      console.error(
+        `warning: PostHog query hit its execution limit (attempt ${attempt}/${TIMEOUT_ATTEMPTS}); retrying`,
+      );
+      await new Promise((resolve) => setTimeout(resolve, backoffMs * attempt));
+    }
+  }
+}
+
+async function queryHogQLOnce(query) {
   const host = (process.env.POSTHOG_HOST ?? "https://us.posthog.com").replace(
     /\/+$/,
     "",
@@ -34,9 +58,12 @@ export async function queryHogQL(query) {
   if (!response.ok) {
     // The body names the real problem (bad key, wrong project, HogQL error).
     const detail = await response.text().catch(() => "");
-    throw new Error(
+    const error = new Error(
       `PostHog query failed with HTTP ${response.status}: ${detail.slice(0, 500)}`,
     );
+    error.executionTimeout =
+      response.status === 504 && EXECUTION_TIMEOUT.test(detail);
+    throw error;
   }
   const body = await response.json();
   if (!Array.isArray(body?.results)) {

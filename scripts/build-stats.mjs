@@ -40,13 +40,21 @@ const MAX_ENTRIES = 5_000;
  * so no private plugin id or source can reach this file. Bundled builtins are
  * counted too even though they have no entry here: BB looks them up in this
  * same document.
+ *
+ * The lower timestamp bound loses nothing: BB first sent `plugin_installed`
+ * on 2026-08-17 (get-bb/bb#1743). Without it ClickHouse cannot prune any
+ * partition and scans the project's whole event history, which sometimes runs
+ * past PostHog's execution limit and fails the job with a 504.
  */
+const TELEMETRY_START = "2026-08-17";
+
 const QUERY = `
   SELECT properties.plugin_id AS plugin_id,
          count(DISTINCT distinct_id) AS installs,
          count(DISTINCT if(timestamp > now() - INTERVAL 14 DAY, distinct_id, NULL)) AS recent_installs
   FROM events
   WHERE event = 'plugin_installed'
+    AND timestamp >= toDateTime('${TELEMETRY_START} 00:00:00')
     AND properties.plugin_id IS NOT NULL
     AND properties.plugin_id != ''
   GROUP BY plugin_id
