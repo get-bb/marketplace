@@ -1,0 +1,36 @@
+{
+  "id": "agent-lanes",
+  "displayName": "Lanes",
+  "description": "See which agents are working, waiting for you, or failing across a live timeline. Follow hand-offs between threads, inspect any turn, and approve or reject requests on the block. Open Team lanes beside a thread or run bb lanes now for a text summary. Uses bb's local thread history, with no external account or API key.",
+  "icon": {
+    "url": "./icons/agent-lanes-5802181b.svg"
+  },
+  "tags": [
+    "agents",
+    "timeline",
+    "threads",
+    "handoffs",
+    "approvals",
+    "teams",
+    "cli"
+  ],
+  "author": {
+    "name": "Tom McKenzie",
+    "github": "grrowl",
+    "url": "https://github.com/grrowl"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/grrowl/bb-lanes.git",
+      "range": "^0.1.0",
+      "tagPrefix": "agent-lanes/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/agent-lanes/timeline-light.png",
+    "./screenshots/agent-lanes/turn-detail-dark.png",
+    "./screenshots/agent-lanes/approval-dark.png"
+  ],
+  "overview": "./overview/agent-lanes.md"
+}

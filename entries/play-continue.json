@@ -1,0 +1,35 @@
+{
+  "id": "play-continue",
+  "displayName": "Play Continue",
+  "description": "Stop a run with a double Escape and pick up a stopped turn with one Play click. Two Escape presses within 400 ms press BB's own Stop button, and the Stop icon shows Esc after the first press. After a stopped, failed or restart-interrupted turn, Play replaces the disabled Send button and asks the agent to continue, checking state before repeating uncertain actions. No account, service or settings.",
+  "icon": {
+    "url": "./icons/play-continue-7ff385fe.svg"
+  },
+  "screenshots": [
+    "./screenshots/play-continue/play.png",
+    "./screenshots/play-continue/esc-hint.png"
+  ],
+  "overview": "./overview/play-continue.md",
+  "tags": [
+    "keyboard-shortcuts",
+    "stop",
+    "resume",
+    "continue",
+    "escape",
+    "composer",
+    "interrupted-turn"
+  ],
+  "author": {
+    "name": "brzvsk",
+    "github": "brzvsk"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/brzvsk/bb-plugins.git",
+      "subdir": "plugins/play-continue",
+      "tagPrefix": "play-continue/",
+      "range": "^0.1.0"
+    }
+  }
+}

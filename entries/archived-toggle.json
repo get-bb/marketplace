@@ -1,0 +1,33 @@
+{
+  "id": "archived-toggle",
+  "displayName": "Archived Threads Toggle",
+  "description": "Show or hide archived threads in the sidebar with one click. An archive button in the sidebar footer adds archived threads to bb's thread list, and a second click removes them. It flips the same active/archived setting as Organize in the list, so the choice stays after a reload. Requires bb's built-in Thread list plugin to stay enabled.",
+  "icon": "Archive",
+  "tags": [
+    "archived",
+    "archive",
+    "sidebar",
+    "thread-list",
+    "footer",
+    "toggle"
+  ],
+  "author": {
+    "name": "Nikolai Berezovskii",
+    "github": "brzvsk",
+    "url": "https://github.com/brzvsk"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/brzvsk/bb-plugins.git",
+      "subdir": "plugins/archived-toggle",
+      "range": "^0.1.0",
+      "tagPrefix": "archived-toggle/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/archived-toggle/archived-hidden.png",
+    "./screenshots/archived-toggle/archived-shown.png"
+  ],
+  "overview": "./overview/archived-toggle.md"
+}

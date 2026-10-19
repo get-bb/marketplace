@@ -1,0 +1,32 @@
+{
+  "id": "sessions-switcher",
+  "displayName": "Sessions’ switcher",
+  "description": "Switch between seven recent sessions with Alt+Tab-style controls. Hold the shortcut modifier, select with the keyboard or pointer, then release to open. Choose horizontal cards or a vertical list, with provider icons and live running and unread indicators. No extra account or service is required.",
+  "icon": {
+    "url": "./icons/sessions-switcher-a5836c30.svg"
+  },
+  "screenshots": [
+    "./screenshots/sessions-switcher/demo.webp"
+  ],
+  "overview": "./overview/sessions-switcher.md",
+  "tags": [
+    "keyboard-shortcuts",
+    "navigation",
+    "recent-chats",
+    "unread",
+    "productivity"
+  ],
+  "author": {
+    "name": "brzvsk",
+    "github": "brzvsk"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/brzvsk/bb-plugins.git",
+      "subdir": "plugins/sessions-switcher",
+      "tagPrefix": "sessions-switcher/",
+      "range": "^0.1.0"
+    }
+  }
+}

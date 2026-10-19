@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <!-- A gap around the tag cut out of the cursor. -->
+    <mask id="gap" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+      <rect width="24" height="24" fill="#fff"/>
+      <rect x="9.6" y="13.2" width="11.4" height="7.4" rx="3.7" fill="#000" stroke="#000" stroke-width="2.4"/>
+    </mask>
+    <!-- The letters cut out of the tag. -->
+    <mask id="letters" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+      <rect width="24" height="24" fill="#fff"/>
+      <g fill="none" stroke="#000" stroke-width="1.35" stroke-linecap="round">
+    <path d="M11.84 14.8V17.57"/>
+    <circle cx="13.26" cy="17.57" r="1.43"/>
+    <path d="M15.91 14.8V17.57"/>
+    <circle cx="17.34" cy="17.57" r="1.43"/>
+  </g>
+    </mask>
+  </defs>
+  <!-- Scaled up to fill the box like bb's other plugin icons. -->
+  <g transform="translate(-4.3 -3.5) scale(1.265)">
+    <g mask="url(#gap)">
+      <path transform="translate(1.1 1.75) scale(.7)" d="M5 3.5 19.5 13.2 12.6 14.2 9.4 20.8Z" stroke-width="2.86" stroke-linejoin="round" fill="currentColor" stroke="currentColor"/>
+    </g>
+    <rect x="9.6" y="13.2" width="11.4" height="7.4" rx="3.7" fill="currentColor" mask="url(#letters)"/>
+  </g>
+</svg>
