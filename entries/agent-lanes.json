@@ -23,7 +23,8 @@
   "source": {
     "git": {
       "url": "https://github.com/grrowl/bb-lanes.git",
-      "range": "^0.1.0"
+      "range": "^0.1.0",
+      "tagPrefix": "agent-lanes/"
     }
   },
   "screenshots": [
