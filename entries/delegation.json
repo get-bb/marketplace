@@ -1,0 +1,33 @@
+{
+  "id": "delegation",
+  "displayName": "Agent Channels",
+  "description": "Follow agent conversations, results, and requests for input in one panel. Keep each conversation in its own channel and set worker roles and delegation preferences from your instructions. Uses a provider configured in bb and its account limits; no extra workflow skills are required.",
+  "icon": {
+    "url": "./icons/delegation-9b44fa46.svg"
+  },
+  "tags": [
+    "delegation",
+    "workers",
+    "coordination",
+    "conversations"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/delegation",
+      "range": "^0.1.1",
+      "tagPrefix": "delegation/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/delegation/channels.png",
+    "./screenshots/delegation/settings.png"
+  ],
+  "overview": "./overview/delegation.md"
+}
