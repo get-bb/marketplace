@@ -1,0 +1,43 @@
+## Your scheduled briefing
+
+Choose what you want to know and when. Each run arrives in a Briefs inbox as
+an ordinary bb thread with a headline, priorities, source buttons, and
+collapsible routine details. Move or archive it when finished; thread search
+keeps earlier briefs findable.
+
+Add a brief under a signed-in site in Settings, describe what it should tell
+you, and choose a schedule. Run it immediately to preview the result. Starter
+recipes cover unread email, money, and reading; another thread can also publish
+a prepared report.
+
+## Gmail read state and recovery
+
+Opening an email can mark it read. **Keep unread**, the default, instructs the
+collecting agent to restore each originally unread message immediately and
+verify the result before continuing. **Mark as read** leaves opened messages
+read. Messages that were already read stay read in both modes.
+
+A saved per-message journal retains the original state across interruptions.
+Unverified or failed restoration stays visible in the brief; Retry instructs
+the agent to repair those records before collecting more. The journal records
+the agent's browser observations; it does not operate Gmail itself.
+Newsletter briefs remember successfully summarized message IDs to avoid repeats.
+
+Collection must not send, reply, archive, delete, or change labels or settings.
+Restoring unread state is its only permitted explicit Gmail write. Other sites
+are read-only. Source buttons open the original page for review.
+
+## Requirements and privacy
+
+Install **Automations**, **Browser Automation**, and **Thread Organizer** with
+additional-inbox support. Browser collection requires **bb 0.45.0 or later**
+on the browser desktop and connected server, a connected browser computer,
+and a configured agent provider and model. Runs use that provider's account
+and usage allowance. Sign in to your chosen sources—Gmail, X, or LinkedIn—in
+BB Browser; Briefs reuses those sign-ins in fresh tabs without copying cookies.
+
+Signed-out connections show Reconnect. Unavailable or interrupted runs show
+Retry. Brief content, definitions, read-state journals, and processed message
+IDs stay in plugin-owned storage on your bb server. Content read by the agent
+is sent to your configured provider. Optional **Inline Decisions** adds
+approval cards for proposed actions; without it, proposals remain plain text.

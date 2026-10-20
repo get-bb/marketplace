@@ -1,0 +1,34 @@
+{
+  "id": "digests",
+  "displayName": "Briefs",
+  "description": "Catch up on what needs you with scheduled briefings in your inbox. Review priorities and source links, choose Gmail read-state handling, and retry interrupted runs. Requires Automations, Browser Automation, Thread Organizer with additional inbox support, bb 0.45 or later, a configured agent provider, and sign-ins to your chosen Gmail, X, or LinkedIn sources. Runs use your provider account and usage allowance.",
+  "icon": "MailOpen",
+  "tags": [
+    "briefings",
+    "email",
+    "gmail",
+    "newsletters",
+    "schedules",
+    "summaries"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/digests",
+      "range": "^0.1.1",
+      "tagPrefix": "digests/"
+    }
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/digests/brief.png",
+    "./screenshots/digests/settings.png",
+    "./screenshots/digests/settings-edit.png"
+  ],
+  "overview": "./overview/digests.md"
+}
