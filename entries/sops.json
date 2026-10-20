@@ -1,0 +1,37 @@
+{
+  "id": "sops",
+  "displayName": "SOPS",
+  "description": "A SOPS editor for BB: see a repo's encrypted files, edit them in a table or as text, and save them encrypted again. Needs sops installed.",
+  "icon": "Lock",
+  "tags": [
+    "sops",
+    "secrets",
+    "age",
+    "encryption",
+    "dotenv",
+    "env-files",
+    "credentials",
+    "mise"
+  ],
+  "author": {
+    "name": "Mikhail Turilin",
+    "github": "mturilin",
+    "url": "https://github.com/mturilin"
+  },
+  "category": "file-viewers-and-editors",
+  "secondaryCategories": [
+    "security"
+  ],
+  "screenshots": [
+    "./screenshots/sops/env-table.png",
+    "./screenshots/sops/file-list.png",
+    "./screenshots/sops/text-editor.png"
+  ],
+  "overview": "./overview/sops.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/mturilin/bb-plugin-sops.git",
+      "range": "^0.1.1"
+    }
+  }
+}
