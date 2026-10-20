@@ -1,0 +1,18 @@
+{
+  "id": "goal",
+  "displayName": "Goal",
+  "description": "Keeps one durable objective active on a BB thread and continues agent work until completion or a qualifying stop.",
+  "icon": "Target",
+  "tags": ["agents", "automation", "goals", "productivity", "threads"],
+  "author": {
+    "name": "Kavii Suri",
+    "github": "Kavii-Camb",
+    "url": "https://github.com/KaviiSuri"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/KaviiSuri/bb-plugin-goal.git",
+      "range": "^0.1.1"
+    }
+  }
+}
