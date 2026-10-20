@@ -1,0 +1,39 @@
+{
+  "id": "millivolt",
+  "displayName": "Millivolt",
+  "description": "See every AI request your agents make, and what it cost, without leaving bb. The plugin installs millivolt for you or adopts a deployment you already run, then keeps it current on each bb start. Its sidebar shows live requests, tokens, cost and latency next to the full millivolt dashboard for settings, holds and debugging. Needs Docker; millivolt keeps its own SQLite history in a Docker volume and listens on loopback only.",
+  "icon": {
+    "url": "./icons/millivolt-a66d083b.png"
+  },
+  "screenshots": [
+    "./screenshots/millivolt/overview.png",
+    "./screenshots/millivolt/requests.png",
+    "./screenshots/millivolt/dashboard.png"
+  ],
+  "overview": "./overview/millivolt.md",
+  "tags": [
+    "llm-proxy",
+    "observability",
+    "tokens",
+    "cost",
+    "latency",
+    "traffic",
+    "docker",
+    "inference",
+    "openai",
+    "debugging"
+  ],
+  "author": {
+    "name": "Hemang Vellore",
+    "github": "hv-V6",
+    "url": "https://github.com/hv-V6"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": ["token-usage-and-limits", "utilities"],
+  "source": {
+    "git": {
+      "url": "https://github.com/hv-V6/bb-plugin-millivolt.git",
+      "range": "^0.1.0"
+    }
+  }
+}
