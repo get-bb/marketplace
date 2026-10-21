@@ -1,9 +1,13 @@
-Aura Motion puts a wallpaper behind the New thread screen and in the margins of
+Aura Motion puts a video, GIF or photo wallpaper behind the New thread screen and in the margins of
 your conversations, drawn through a pixel-dither effect that keeps moving.
 Message text always sits on an opaque, theme-colored reading column.
 
 ## What you get
 
+- **Video wallpapers.** Upload an MP4 (H.264) or WebM loop up to 24 MB and
+  4,096 px per side, so a 4K loop plays in full colour. Videos play muted and
+  looped. Turn the texture off to show the video exactly as encoded, or keep
+  Capy dithering to render it through the pixel effect.
 - **Animated GIF wallpapers.** Upload a GIF up to 8 MB and 4,096 px per side.
   It plays frame by frame through the dither effect, at the GIF's own timing.
   Turn the texture off and the GIF plays as it is.
@@ -24,7 +28,7 @@ Message text always sits on an opaque, theme-colored reading column.
 
 Animation runs at 15, 30 or 60 FPS at one of three render-quality tiers, and
 pauses when the panel is hidden or off-screen and when your system asks for
-reduced motion. If WebGL is unavailable, the plain image or gradient shows
+reduced motion; videos pause in the same cases. If WebGL is unavailable, the plain image or gradient shows
 instead.
 
 ## Requirements
