@@ -1,0 +1,27 @@
+{
+  "id": "activity-sidebar",
+  "displayName": "Activity Sidebar",
+  "description": "Triage every agent thread at a glance: what needs you, what's working and what's done. A feed at the top quotes each question, approval and failure waiting on you, above a project tree that holds still while you read. Subagents and hidden workflow workers nest under the thread that started them, and a Crew panel maps every worktree they touch. Pull requests read in words on their row, such as checks failed or ready to merge. Needs bb 0.46 or later; optional AI titles run on your own Claude Code or Codex CLI, and optional sharper states need a TypeSafe API key.",
+  "icon": { "url": "./icons/activity-sidebar-b24d0a57.png" },
+  "tags": ["sidebar", "threads", "triage", "attention", "subagents", "workflows", "worktrees", "pull-requests", "projects", "mobile"],
+  "author": {
+    "name": "Vedran Burojevic",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
+  },
+  "category": "thread-management",
+  "secondaryCategories": ["notifications", "code-and-reviews"],
+  "screenshots": [
+    "./screenshots/activity-sidebar/hero.png",
+    "./screenshots/activity-sidebar/crew.png",
+    "./screenshots/activity-sidebar/hover.png",
+    "./screenshots/activity-sidebar/phone.png"
+  ],
+  "overview": "./overview/activity-sidebar.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-activity-sidebar.git",
+      "range": "^1.0.0"
+    }
+  }
+}
