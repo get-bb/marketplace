@@ -1,0 +1,35 @@
+{
+  "id": "aura-motion",
+  "displayName": "Aura Motion",
+  "description": "Turn an animated GIF or a photo into a moving pixel-dithered wallpaper behind New thread and your conversations. GIFs up to 8 MB play frame by frame at their own timing through the dither effect. Without an image, pick one of seven moving patterns; with a photo, one of five texture motions or Still, plus four dither styles. Save six backgrounds and switch with one click; images stay on your BB server. An optional GitHub activity overview needs the GitHub CLI signed in on the BB server. A fork of Aura by Mateo Cerquetella; install it instead of Aura, not beside it.",
+  "icon": {
+    "url": "./icons/aura-motion-8ecadf20.svg"
+  },
+  "tags": [
+    "wallpaper",
+    "backgrounds",
+    "gif",
+    "animated-wallpaper",
+    "dithering",
+    "pixel-art",
+    "personalization",
+    "saved-presets"
+  ],
+  "author": {
+    "name": "Nikos Benakis",
+    "github": "NickolasBenakis",
+    "url": "https://github.com/NickolasBenakis"
+  },
+  "category": "themes-and-appearance",
+  "overview": "./overview/aura-motion.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/NickolasBenakis/bb-plugin-aura-motion.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/aura-motion/01-new-thread.jpg",
+    "./screenshots/aura-motion/02-settings.jpg"
+  ]
+}
