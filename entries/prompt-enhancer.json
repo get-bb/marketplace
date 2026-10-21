@@ -22,7 +22,7 @@
   "source": {
     "git": {
       "url": "https://github.com/vburojevic/bb-plugin-prompt-enhancer.git",
-      "range": "^0.2.0"
+      "range": ">=0.2.0"
     }
   }
 }
