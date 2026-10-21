@@ -1,0 +1,22 @@
+{
+  "id": "gitlab-interface-notion-style",
+  "displayName": "GitLab Interface (Notion style)",
+  "description": "Review, merge and fix GitLab merge requests without leaving BB. Each merge request opens on a readiness strip that names what blocks it, and counts approvals and 👍 reactions as review. Reply to and resolve threads, read a failed job's log and retry it, or start a pipeline on any branch. Requires the glab CLI logged in to your GitLab host.",
+  "icon": { "url": "./icons/gitlab-interface-notion-style-38deb846.svg" },
+  "screenshots": [
+    "./screenshots/gitlab-interface-notion-style/merge-request.png",
+    "./screenshots/gitlab-interface-notion-style/merge-requests.png",
+    "./screenshots/gitlab-interface-notion-style/pipeline.png",
+    "./screenshots/gitlab-interface-notion-style/branches.png"
+  ],
+  "overview": "./overview/gitlab-interface-notion-style.md",
+  "tags": ["gitlab", "merge-requests", "pipelines", "ci", "code-review", "issues", "notion", "glab"],
+  "author": { "name": "Max Kosach", "github": "KosachMax", "url": "https://github.com/KosachMax" },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/KosachMax/bb-plugin-gitlab-interface-notion-style.git",
+      "range": "^1.0.0"
+    }
+  }
+}
