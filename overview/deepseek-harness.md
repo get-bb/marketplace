@@ -13,13 +13,18 @@ Run DeepSeek Harness threads in bb, with its modes and its slash commands.
 - **Harness commands.** dsh's own slash-command registry (`/compact`, `/goal`,
   `/feedback`) is exposed to the agent through a bundled dsh plugin, and a bare command
   line typed into bb runs directly without a model turn.
+- **Session continuity.** Reopening a thread continues its dsh session with the earlier
+  context; the ACP patch bridges `session/load` onto dsh's resume path so bb's stable
+  adapter can restore sessions.
 
 ## How it works
 
 The plugin provisions three dsh profiles and a launcher that boots the one matching the
 mode you picked. It installs a small dsh plugin for the command bridge and applies a
-patch to dsh's ACP app so the command surface is reachable. One command sets all of it
-up, and re-running it repairs an installation after a dsh upgrade.
+patch to dsh's ACP app so the command surface is reachable and sessions can be restored
+by ACP clients that only know `session/load`. Copies of the patched pieces live outside
+the dsh package, so the launcher re-applies them after a dsh upgrade; one command still
+sets everything up on a new machine.
 
 ## Requirements
 
