@@ -2,7 +2,7 @@ Activity Sidebar replaces bb's thread list with one that reads like a status boa
 
 ## What you get
 
-- **Activity, in three bands.** *Needs you* collects every question, failure and interrupted turn. *Working* holds what is running, and *Finished* holds results nobody has read. Each row quotes what it wants: the question itself, the command waiting for approval, or the failure with its cause first.
+- **Activity, in three bands.** *Needs you* collects every question, failure and interrupted turn. *Working* holds every family with an agent at work, and *Finished* holds families that are entirely done, with a result nobody has read. Each row quotes what it wants: the question itself, the command waiting for approval, or the failure with its cause first.
 - **Projects, as a stable tree.** Every project is a collapsible group in alphabetical order, so a row never moves under your pointer. Subagents nest under the thread that spawned them, on a spine coloured by the subtree's health. Large fan-outs fold to a one-line crew that still surfaces any helper that is failing or asking.
 - **Workflow workers, shown.** bb hides the agents a workflow spawns. Activity Sidebar nests them under the thread that started the run, with the run and phase named.
 - **Pull requests in words.** A thread's branch upgrades to its PR in place: `#412 · checks failed`, `changes requested`, `ready to merge`. The colour says how much the PR wants from you.
