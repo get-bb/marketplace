@@ -1,0 +1,41 @@
+{
+  "id": "ultra-cmd-k",
+  "displayName": "Ultra Cmd+K",
+  "description": "Reach any thread, project, theme or BB command from one Cmd+K palette. Press the right arrow on a thread to pin, archive, fork, compact, stop or message it without opening it. Move through the theme list to preview each theme on the whole app, and press Esc to keep yours. Type $ and a bb command to run it on your primary host and read the output in the palette. It takes over Cmd+K and moves BB's quick palette to Cmd+Shift+P, and one setting gives Cmd+K back. Requires BB 0.46 or later.",
+  "icon": {
+    "url": "./icons/ultra-cmd-k-309f9812.svg"
+  },
+  "screenshots": [
+    "./screenshots/ultra-cmd-k/palette.png",
+    "./screenshots/ultra-cmd-k/thread-actions.png",
+    "./screenshots/ultra-cmd-k/themes.png",
+    "./screenshots/ultra-cmd-k/bb-commands.png"
+  ],
+  "overview": "./overview/ultra-cmd-k.md",
+  "tags": [
+    "command-palette",
+    "keyboard-shortcuts",
+    "search",
+    "quick-actions",
+    "theme-switcher",
+    "cli",
+    "productivity",
+    "navigation"
+  ],
+  "author": {
+    "name": "Dillion Verma",
+    "github": "dillionverma",
+    "url": "https://dillion.io"
+  },
+  "category": "utilities",
+  "secondaryCategories": [
+    "thread-management",
+    "command-line"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/dillionverma/bb-plugin-ultra-cmd-k.git",
+      "range": "^1.0.0"
+    }
+  }
+}
