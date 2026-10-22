@@ -83,8 +83,30 @@
   "collections": [
     {
       "id": "new-and-notable",
-      "displayName": "New & notable",
-      "pluginIds": []
+      "displayName": "Make it yours",
+      "pluginIds": [
+        "playgrounds",
+        "ambient",
+        "bots-sidebar",
+        "bb-sidebar",
+        "genui",
+        "agent-graph",
+        "pull-requests",
+        "content-calendar",
+        "digests",
+        "linear",
+        "file-manager",
+        "video-markup",
+        "beautiful-chat",
+        "aura",
+        "read-aloud",
+        "desktop",
+        "url-pills",
+        "inline-action-cards",
+        "focus-board",
+        "thread-hover-cards",
+        "agentic-mermaid"
+      ]
     }
   ]
 }
