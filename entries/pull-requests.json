@@ -1,0 +1,33 @@
+{
+  "id": "pull-requests",
+  "displayName": "Pull Requests",
+  "description": "Find the pull requests that need attention and return to the bb threads behind them. Browse CI and review status across projects, keep stacks together, and inspect read-only changes. Link work to accessible threads or paste a pull request URL to open it. Requires GitHub.com and the GitHub CLI authenticated on each source machine.",
+  "icon": "GitPullRequest",
+  "tags": [
+    "github",
+    "code-review",
+    "ci",
+    "stacks",
+    "worktrees"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/pull-requests/summary.png",
+    "./screenshots/pull-requests/stack-attention.png",
+    "./screenshots/pull-requests/changes.png"
+  ],
+  "overview": "./overview/pull-requests.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/pull-requests",
+      "range": "^0.1.1",
+      "tagPrefix": "pull-requests/"
+    }
+  }
+}

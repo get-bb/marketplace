@@ -1,0 +1,41 @@
+{
+  "id": "desktop",
+  "displayName": "Desktop",
+  "description": "Turns bb's new-thread page into a retro desktop where your threads live in folders and open as chat windows. Each thread opens as an instant-message window with bb's own chat and composer inside, and a yellow balloon pops up from the clock when a thread is waiting on you. Desktop folders mirror your sidebar sections, projects or machines, and the Recycle Bin holds archived threads. The Start menu opens a paint program, a terminal, note pads your agents can read and write, minesweeper, solitaire, pinball and a 3D maze, and other plugins can add their own programs. Runs inside bb with no external service; bb Explorer needs the bb desktop app, and Desktop doesn't show on phone-sized screens. Not affiliated with Microsoft or AOL.",
+  "icon": {
+    "url": "./icons/desktop-c485c6b0.png"
+  },
+  "tags": [
+    "retro",
+    "early-2000s",
+    "folders",
+    "windows",
+    "taskbar",
+    "start-menu",
+    "chat",
+    "paint",
+    "games"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-management",
+  "secondaryCategories": [
+    "themes-and-appearance"
+  ],
+  "screenshots": [
+    "./screenshots/desktop/overview.png",
+    "./screenshots/desktop/start-menu.png"
+  ],
+  "overview": "./overview/desktop.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/desktop",
+      "range": "^1.0.0",
+      "tagPrefix": "desktop/"
+    }
+  }
+}

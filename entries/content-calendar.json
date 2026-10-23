@@ -1,0 +1,33 @@
+{
+  "id": "content-calendar",
+  "displayName": "Content Calendar",
+  "description": "Plan publishing dates on one calendar, and ask an agent to add or move items for you. Track ideas, drafts, posted work, blockers, and references in month, week, or conversation views. Requires Google Calendar and your own Google Cloud OAuth client. Optional file attachments need a connected machine; opening notes in Moss needs a Mac with Moss installed.",
+  "icon": "Calendar",
+  "tags": [
+    "publishing",
+    "editorial",
+    "google-calendar",
+    "planning"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/content-calendar/calendar-inline.png",
+    "./screenshots/content-calendar/calendar-month.png",
+    "./screenshots/content-calendar/calendar-week.png",
+    "./screenshots/content-calendar/calendar-setup.png"
+  ],
+  "overview": "./overview/content-calendar.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/content-calendar",
+      "range": "^0.1.4",
+      "tagPrefix": "content-calendar/"
+    }
+  }
+}
