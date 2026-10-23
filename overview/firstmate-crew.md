@@ -9,6 +9,7 @@ You tell the first mate what you want done; it sends each task to a worker, a bb
 - **Where things stand, on demand.** Bearings gives the state of everything. It is a button on the board and an entry in the command palette.
 - **Next steps as buttons.** The first mate offers what you will probably want next; pressing one sends it as if you had typed it.
 - **/fm from any thread.** Type `/fm` and a request in any thread, say `/fm run a review loop on this`, and the first mate gets it word for word with that thread's id, project and branch, so it knows which work you mean.
+- **Autocompact, if you want it.** Switch it on for the first mate, the crew or both, and a conversation that has sat idle long enough with a large context is compacted, so the next turn does not resend all of it. You set the token threshold and the idle time.
 - **Compact and Restart on the board.** Compact frees room in the first mate's conversation. Restart starts it afresh on the same thread; its records and the workers already running carry over. A gear beside them opens the plugin's settings.
 
 ## How it works
