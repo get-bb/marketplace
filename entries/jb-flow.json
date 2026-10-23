@@ -29,6 +29,8 @@
   },
   "screenshots": [
     "./screenshots/jb-flow/triage.png",
+    "./screenshots/jb-flow/palette.png",
+    "./screenshots/jb-flow/workspaces.png",
     "./screenshots/jb-flow/home.png",
     "./screenshots/jb-flow/settings.png"
   ],
