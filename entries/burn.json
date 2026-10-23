@@ -1,17 +1,17 @@
 {
   "id": "burn",
   "displayName": "Burn",
-  "description": "See what every agent thread costs in dollars while it runs, per prompt and across all your threads. A chip beside the context circle shows the thread's total and what the last prompt added; click it for where the money went, a chart of every model call and the total with child threads. The Burn tab in the side panel lists the cost of each prompt, and a Burn page in bb's navigation charts spend across threads by day, project, model and harness. Budgets notify you at 80% and 100% of a thread's budget, and stop a run only if you turn that on. Works with pi, Codex, Claude Code and any harness that reports usage to bb; where a harness records no cost, Burn estimates it from list prices and marks it with ~.",
+  "description": "See what every agent thread costs in dollars while it runs, per prompt and across all your threads. A chip beside the context circle shows the thread's total and what the last prompt added; click it for where the money went, a chart of every model call and the total with child threads. The Burn tab in the side panel lists the cost of each prompt, and a Burn page in bb's navigation charts spend across threads by day, project, model and harness. Budgets notify you at 80% and 100% of a thread's budget, and stop a run only if you turn that on. Works with pi, OpenCode, Codex, Claude Code and any harness that reports usage to bb; where a harness records no cost, Burn estimates it from list prices and marks it with ~.",
   "icon": { "url": "./icons/burn-9fbcc076.svg" },
   "tags": [
     "cost",
     "spend",
     "budget",
-    "dollars",
     "per-prompt",
     "dashboard",
     "child-threads",
     "pi",
+    "opencode",
     "codex",
     "claude-code"
   ],
