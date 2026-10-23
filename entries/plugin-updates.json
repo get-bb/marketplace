@@ -1,0 +1,40 @@
+{
+  "id": "plugin-updates",
+  "displayName": "Plugin Updates",
+  "description": "Shows which installed plugins have updates and installs them for you, including newer releases outside a plugin's version range. A count on the nav icon and a one-time toast flag each new version. Compatible updates install in place, singly or all at once; out-of-range ones reinstall at the new release with settings restored and rollback on failure. Requires git and network access to each plugin's repository.",
+  "icon": {
+    "url": "./icons/plugin-updates-3a6706c6.svg"
+  },
+  "tags": [
+    "updates",
+    "upgrade",
+    "semver",
+    "versions",
+    "releases",
+    "git",
+    "maintenance",
+    "notifications"
+  ],
+  "author": {
+    "name": "Frank Manno",
+    "github": "frankieshakes",
+    "url": "https://github.com/frankieshakes"
+  },
+  "category": "utilities",
+  "secondaryCategories": [
+    "notifications"
+  ],
+  "screenshots": [
+    "./screenshots/plugin-updates/overview.png",
+    "./screenshots/plugin-updates/toast.png",
+    "./screenshots/plugin-updates/confirm.png",
+    "./screenshots/plugin-updates/updating.png"
+  ],
+  "overview": "./overview/plugin-updates.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/frankieshakes/bb-plugin-updates.git",
+      "range": "^0.1.1"
+    }
+  }
+}
