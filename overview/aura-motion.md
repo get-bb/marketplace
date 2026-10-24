@@ -1,9 +1,19 @@
-Aura Motion puts a video, GIF or photo wallpaper behind the New thread screen and in the margins of
-your conversations, drawn through a pixel-dither effect that keeps moving.
-Message text always sits on an opaque, theme-colored reading column.
+Aura Motion puts a video, GIF or photo wallpaper behind the New thread screen and your
+conversations, with an optional pixel-dither effect that keeps moving. In chats, your messages
+sit on a solid column or on frosted glass that lets the wallpaper show through.
 
 ## What you get
 
+- **Glass behind your messages.** Choose Solid (wallpaper in the margins
+  only), Glass (a floating frosted sheet behind the message column) or Sheer
+  (a light veil). In dark mode the glass dims bright frames so text stays
+  readable, the composer becomes a matching glass capsule, and the sheet keeps
+  its margins from phone to 4K widths. Set it per slot, or with
+  `bb aura-motion chat glass`.
+- **Readable on phones.** In the bb mobile app and phone browsers, the New
+  thread Recent list and project row sit on frosted cards, and Sheer chats use
+  Glass's fill, so text stays clear when the wallpaper fills the screen.
+  Desktop is unchanged.
 - **Video wallpapers.** Upload an MP4 (H.264) or WebM loop up to 24 MB and
   4,096 px per side, so a 4K loop plays in full colour. Videos play muted and
   looped. Turn the texture off to show the video exactly as encoded, or keep
@@ -20,7 +30,8 @@ Message text always sits on an opaque, theme-colored reading column.
 - **Six saved slots.** Save an image with its appearance and switch with one
   click, from Settings or with `bb aura-motion use <1-6>`.
 - **Where it shows.** Full or half wallpaper on New thread, and optionally in
-  every conversation.
+  every conversation. The settings preview switches between Chat and New
+  thread so you can see either before applying.
 - **Activity overview (optional, off by default).** A GitHub contributions,
   PRs and reviews summary below the New thread composer.
 
@@ -29,7 +40,7 @@ Message text always sits on an opaque, theme-colored reading column.
 Animation runs at 15, 30 or 60 FPS at one of three render-quality tiers, and
 pauses when the panel is hidden or off-screen and when your system asks for
 reduced motion; videos pause in the same cases. If WebGL is unavailable, the plain image or gradient shows
-instead.
+instead. With Reduce Transparency turned on, every glass surface turns solid.
 
 ## Requirements
 
