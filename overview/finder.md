@@ -8,6 +8,10 @@ without leaving BB.
 - A file tree with a dotfile toggle, a path filter, expand/collapse all,
   refresh, new file, new folder, upload, rename, and delete. Right-click a row
   for the same actions plus copy-path.
+- An **Outline** under the tree: the symbol tree of the file in front — classes,
+  functions, methods, headings, keys — read from the same grammar the editor
+  highlights with. Clicking a symbol puts the caret on it, and the panel's
+  height is resizable and remembered.
 - Search in files: reads file contents across the whole workspace or one
   folder, with match case, regexp, and whole-word toggles. Results group under
   a sticky file header and a hit opens the file at its line.
