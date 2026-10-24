@@ -1,0 +1,33 @@
+{
+  "id": "codex-theme",
+  "displayName": "Codex Theme",
+  "description": "Brings the OpenAI Codex / ChatGPT desktop app's look to bb: system-font typography at 430 weight, the Codex surface and menu geometry, its send arrow, and a roomier left rail. Light and dark.",
+  "icon": {
+    "url": "./icons/codex-theme-6f3ff205.svg"
+  },
+  "tags": [
+    "themes",
+    "appearance",
+    "colors",
+    "interface",
+    "typography",
+    "codex",
+    "chatgpt"
+  ],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost",
+    "url": "https://github.com/steveafrost"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/codex-theme/chat.png",
+    "./screenshots/codex-theme/menus.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-theme-codex.git",
+      "range": "^0.1.0"
+    }
+  }
+}
