@@ -1,29 +1,25 @@
-Keep the conversations you return to in a manually ordered strip beneath BB's header, without replacing the sidebar. See the [screenshots and setup guide](https://github.com/nicolay-i/bb-plugin-tabs#readme).
+Return to important conversations without digging through the sidebar. See the [setup guide](https://github.com/nicolay-i/bb-plugin-tabs#readme).
 
-## Chats within reach
+## Tabs and workspaces
 
-- One italic preview follows the unpinned chat you open. Opening another replaces it; creating a chat shows its preview immediately. Closing a preview stays closed across reloads and windows until you reopen that chat. Background work never opens a preview.
-- Double-click a preview to pin it. Drag pinned tabs across projects into one shared order. Double-click a pinned title to rename it. The context menu includes Copy link, Mark as unread, Pin/Unpin, Add/Remove favorite, Rename, and Archive.
-- Favorite chats have their own **Favorites** list on **New chat**, independent of pinned and closed tabs. An optional **Tabs** list shows pinned chats in the strip's order. Both show the project and useful activity status.
-- Compact home cards let you toggle pins and favorites directly. Changes save immediately, but a removed card stays in place until you leave the screen; another click restores an accidental removal.
-- A **?** marker shows when BB needs an answer or approval, including in nested chats. Working, waiting-for-input, and unread states remain distinct.
+Keep manually ordered pins, one italic preview, and independent favorites. Optional Tabs and Favorites cards appear on New chat. Favorite chats survive closing their tabs; removed cards support undo during that visit.
 
-## Navigation
+Work, Home, Other, and custom workspaces have separate tabs and favorites. The native thread-header selector remains available with the strip hidden. Switching restores this window's last active tab, or opens New chat for an empty set. Create, rename, or remove sets without deleting chats. Disabling workspaces preserves them.
 
-- A branch icon distinguishes subthreads in tabs, home cards, pinned lists, history, and search. A localized tooltip provides context without extra visible text.
-- The subthread counter counts distinct working, waiting-for-input, or unread descendants. Hover or click to explore direct children and recursively expand side menus. Click a title to open it as the normal preview. Archived branches are excluded; keyboard and touch expansion are supported.
-- Search available BB chats by title and project name, including chats outside the last 100 visits. Combine project and title words to narrow results. An optional setting includes archived chats as disabled, struck-through results; deleted and hidden chats remain excluded. Open search by click, a 300 ms hover, or double Shift. Use arrows and Enter to navigate. History retains the last 100 visits; **More** reveals another eight.
-- The plus opens BB's native composer. Hover to choose from the 15 most recently active projects; **More** reveals the next group.
-- Desktop supports horizontal wheel scrolling, middle-click close, `Ctrl+Tab` / `Ctrl+Shift+Tab`, and BB Desktop `Ctrl+W` / `⌘W`. An embedded browser keeps its native close behavior. Touch layouts use horizontal swipe, 44px targets, and explicit close buttons.
+Restore explicit closes with `Ctrl+Shift+T` / `⌘⇧T` when BB receives the shortcut. Up to 100 window-local undo records survive reload; unavailable chats are skipped and failures remain retryable.
 
-## Language and presentation
+## Navigation and activity
 
-Choose from 15 interface languages. **Auto** follows a supported BB page language, then the browser language, then English. Chat and project names are not translated. The settings panel follows the chosen language. Additional translations are machine-assisted first drafts.
+Search chat titles and project names, including conversations beyond the last 100 visits. Pins from the current workspace appear first; other-workspace pins remain accessible below without duplicates. A fixed plus opens BB's native composer and prioritizes this workspace's projects in its menu.
 
-The icon and controls follow BB theme colors; animations respect reduced motion. The strip follows the chat width beside a right panel and hides in true split, full-panel, and drawer layouts.
+Working, unread, and waiting-for-input signals remain distinct. A grey dot shows sidechat-only work. Branch markers and nested menus help explore subthreads. Desktop supports manual drag ordering and keyboard navigation; touch uses swipe and 44px targets.
 
-## State and requirements
+## Appearance preview
 
-Tabs, favorites, order, and history use plugin-owned storage and synchronize across windows. Archive or delete removes tabs, pins, and favorites but retains a disabled history record. Unarchive restores history navigation, not pins or favorites. Activity comes from BB's sidebar and, where available, public workflow status.
+Settings have General and Appearance tabs. Try a six-color palette, project aliases and inherited colors, or override an individual tab's color. A searchable project manager supports autocomplete, editing, and confirmed removal from the appearance list only. Native projects, chat titles, and memberships stay unchanged. Appearance is shared across workspaces.
 
-Requires BB 0.43 or later. No external service or account is required. Translation strings are bundled; chat content is not sent to a translation service.
+## Language and requirements
+
+English is the source language. Choose among 15 languages inside Chat Tabs settings, with all language names in one alphabetical list. Auto follows BB's page language, then the browser, then English. It does not change BB's own language or translate user-authored names. Additional translations are machine-assisted drafts.
+
+Follows BB themes and reduced-motion preferences. Workspace data uses plugin-owned SQLite; history stays separate. Requires BB 0.43 or later, with no external service or account.
