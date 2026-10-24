@@ -2,12 +2,21 @@
   "id": "action-topbar",
   "displayName": "Action Topbar",
   "description": "Keep open BB panel tabs within reach above every thread. Search tabs and Actions from one launcher, reorder tabs, close them in place, and drag supported Actions into split panes. Requires BB 0.40+ and Plugin SDK 0.4.33+.",
-  "icon": { "url": "./icons/action-topbar-43b10ff4.svg" },
+  "icon": {
+    "url": "./icons/action-topbar-79065c50.svg"
+  },
   "screenshots": [
     "./screenshots/action-topbar/light.png",
     "./screenshots/action-topbar/dark.png"
   ],
-  "tags": ["tabs", "actions", "launcher", "split-view", "navigation", "topbar"],
+  "tags": [
+    "tabs",
+    "actions",
+    "launcher",
+    "split-view",
+    "navigation",
+    "topbar"
+  ],
   "author": {
     "name": "Mateo Cerquetella",
     "github": "MateoCerquetella",

@@ -3,7 +3,7 @@
   "displayName": "Taskboard",
   "description": "Browses and creates project-scoped GitHub, Linear, or Jira issues in one focused List or Kanban board, with explicit review before creation.",
   "icon": {
-    "url": "./icons/taskboard-0b77950c.svg"
+    "url": "./icons/taskboard-65bbf6cd.svg"
   },
   "tags": [
     "tasks",

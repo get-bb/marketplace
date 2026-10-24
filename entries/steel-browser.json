@@ -3,7 +3,7 @@
   "displayName": "BB Surf",
   "description": "Operate self-hosted Steel browser sessions from BB with project-scoped sessions, Playwright navigation, and inline viewing.",
   "icon": {
-    "url": "./icons/steel-browser-95888c52.svg"
+    "url": "./icons/steel-browser-1a2203ef.svg"
   },
   "tags": [
     "browser-automation",

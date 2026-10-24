@@ -3,7 +3,7 @@
   "displayName": "Dockside",
   "description": "Organizes BB threads into compact project-first families with semantic status, inline child agents, persistent drag ordering, and mobile active-thread navigation.",
   "icon": {
-    "url": "./icons/dockside-0a2df40e.svg"
+    "url": "./icons/dockside-49489ca2.svg"
   },
   "tags": [
     "sidebar",
