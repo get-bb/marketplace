@@ -1,0 +1,34 @@
+{
+  "id": "shuttle",
+  "displayName": "Shuttle",
+  "description": "Puts every pull request that needs you, from any server, in one place. The Inbox lists the decisions waiting on you, your PRs keep the agent thread that fixes their reviews and failed checks, and the review centre groups PRs that ask you or your teams by where your review stands. Merge, comment and post AI review drafts from Shuttle, on GitHub out of the box or on any other server you describe with a command adapter. Insights show where review time goes: who reviews your PRs, how fast, and what your agents fixed.",
+  "icon": { "url": "./icons/shuttle-2bd74ed6.svg" },
+  "screenshots": [
+    "./screenshots/shuttle/inbox.jpg",
+    "./screenshots/shuttle/pr-panel.jpg",
+    "./screenshots/shuttle/reviews.jpg"
+  ],
+  "tags": [
+    "pull-requests",
+    "code-review",
+    "github",
+    "review-requests",
+    "automation",
+    "notifications"
+  ],
+  "author": {
+    "name": "Kalindu De Costa",
+    "github": "kalindudc",
+    "url": "https://github.com/kalindudc"
+  },
+  "category": "code-and-reviews",
+  "overview": "./overview/shuttle.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/kalindudc/bb-marketplace.git",
+      "subdir": "plugins/shuttle",
+      "range": ">=0.1.0 <1.0.0",
+      "tagPrefix": "shuttle/"
+    }
+  }
+}
