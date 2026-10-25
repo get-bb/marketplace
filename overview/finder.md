@@ -12,6 +12,10 @@ without leaving BB.
   functions, methods, headings, keys — read from the same grammar the editor
   highlights with. Clicking a symbol puts the caret on it, and the panel's
   height is resizable and remembered.
+- **Uncommitted changes**, read from git: a status letter on each changed file
+  in the tree, a count on every folder that holds one, and one list of the whole
+  change set. A click opens that file's diff, unified or side by side, and the
+  layout you pick is remembered.
 - Search in files: reads file contents across the whole workspace or one
   folder, with match case, regexp, and whole-word toggles. Results group under
   a sticky file header and a hit opens the file at its line.

@@ -1,17 +1,17 @@
 {
   "id": "finder",
   "displayName": "Finder",
-  "description": "Browse, edit, and save the files an agent is working on without leaving BB. An outline panel lists every class, function, and heading in the open file and puts the caret on the one you click. A file tree with new file, rename, upload, and delete sits beside the thread, and search in files reads every file in the workspace and opens a hit at its line. The CodeMirror editor saves with compare-and-swap, so a change the agent made while you were typing stops the save instead of overwriting it. An @ mention attaches a file whose contents are resolved at send time, and markdown renders Mermaid diagrams. A workspace on another machine works the same way.",
+  "description": "Browse, edit, and review the files an agent is working on without leaving BB. Every changed file carries a git status letter in the tree, and one click opens its diff, unified or side by side. An outline panel lists every class, function, and heading in the open file and puts the caret on the one you click. The CodeMirror editor saves with compare-and-swap, so a change the agent made while you were typing stops the save instead of overwriting it. Search in files reads every file in the workspace and opens a hit at its line, an @ mention attaches a file resolved at send time, and markdown renders Mermaid diagrams. A workspace on another machine works the same way.",
   "icon": {
     "url": "./icons/finder-8026aab0.svg"
   },
   "screenshots": [
     "./screenshots/finder/overview.png",
+    "./screenshots/finder/changes-split.png",
+    "./screenshots/finder/outline.png",
     "./screenshots/finder/search-in-files.png",
-    "./screenshots/finder/thread-panel.png",
     "./screenshots/finder/markdown-preview.png",
-    "./screenshots/finder/at-mention.png",
-    "./screenshots/finder/outline.png"
+    "./screenshots/finder/thread-panel.png"
   ],
   "tags": [
     "files",
@@ -19,11 +19,11 @@
     "editor",
     "code-editor",
     "search-in-files",
-    "markdown-preview",
-    "mermaid",
+    "git",
+    "diff",
+    "outline",
     "workspace-files",
-    "at-mentions",
-    "outline"
+    "at-mentions"
   ],
   "author": {
     "name": "Naufal Riza Fatahillah",
@@ -34,7 +34,7 @@
   "source": {
     "git": {
       "url": "https://github.com/rayzalzero/bb-plugin-finder.git",
-      "range": "^0.2.0"
+      "range": "^0.3.0"
     }
   },
   "overview": "./overview/finder.md"
