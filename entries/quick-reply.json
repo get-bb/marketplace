@@ -1,9 +1,9 @@
 {
-  "id": "quick-review",
-  "displayName": "Quick Review",
+  "id": "quick-reply",
+  "displayName": "Quick Reply",
   "description": "Give your agent quick feedback by clicking on which lines you agree and disagree with. Ask for more detail on any line, or add a comment when a click isn't enough.",
   "icon": {
-    "url": "./icons/quick-review-400d9b89.svg"
+    "url": "./icons/quick-reply-400d9b89.svg"
   },
   "tags": [
     "review",
@@ -22,14 +22,14 @@
   },
   "category": "thread-content",
   "screenshots": [
-    "./screenshots/quick-review/line-buttons.png",
-    "./screenshots/quick-review/marked-reply.png"
+    "./screenshots/quick-reply/line-buttons.png",
+    "./screenshots/quick-reply/marked-reply.png"
   ],
-  "overview": "./overview/quick-review.md",
+  "overview": "./overview/quick-reply.md",
   "source": {
     "git": {
-      "url": "https://github.com/mturilin/bb-plugin-quick-review.git",
-      "range": ">=0.1.0 <1.0.0"
+      "url": "https://github.com/mturilin/bb-plugin-quick-reply.git",
+      "range": ">=0.2.0 <1.0.0"
     }
   }
 }
