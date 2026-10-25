@@ -1,0 +1,35 @@
+{
+  "id": "quick-review",
+  "displayName": "Quick Review",
+  "description": "Give your agent quick feedback by clicking on which lines you agree and disagree with. Ask for more detail on any line, or add a comment when a click isn't enough.",
+  "icon": {
+    "url": "./icons/quick-review-400d9b89.svg"
+  },
+  "tags": [
+    "review",
+    "feedback",
+    "agree",
+    "disagree",
+    "comments",
+    "agent-replies",
+    "line-by-line",
+    "approval"
+  ],
+  "author": {
+    "name": "Mikhail Turilin",
+    "github": "mturilin",
+    "url": "https://github.com/mturilin"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/quick-review/line-buttons.png",
+    "./screenshots/quick-review/marked-reply.png"
+  ],
+  "overview": "./overview/quick-review.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/mturilin/bb-plugin-quick-review.git",
+      "range": ">=0.1.0 <1.0.0"
+    }
+  }
+}
