@@ -1,10 +1,14 @@
 {
   "id": "focus-mode",
   "displayName": "Focus mode",
-  "description": "Read one conversation with the sidebar, other split panes, and composer out of sight. Open it from the thread header or with a rebindable keyboard shortcut. Press Escape to return to your previous layout and draft. Uses BB's native transcript and active theme, with no additional account or external service.",
+  "description": "Read one conversation with the sidebar, other split panes, and composer out of sight. Open it from the thread header or command palette, and assign a shortcut in BB's Keyboard settings. Press Escape to return to your previous layout and draft. Uses BB's native transcript and active theme, with no additional account or external service.",
   "icon": {
     "url": "./icons/focus-mode-d37cdfd5.svg"
   },
+  "screenshots": [
+    "./screenshots/focus-mode/reader-light.png",
+    "./screenshots/focus-mode/reader-dark.png"
+  ],
   "tags": [
     "reading",
     "distraction-free",
