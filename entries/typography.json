@@ -1,0 +1,12 @@
+{
+  "id": "typography",
+  "displayName": "Typography",
+  "description": "Set your own interface and code fonts in bb, down to size, line height, bold weight, and OpenType features. Interface size and line height scale the theme's whole type ramp, so headings and labels keep their proportions. Code settings reach inline code, code blocks, the source viewer, and diffs. A preview built from bb's own chat and source renderers shows each saved change, and every value also works from bb plugin config. Fonts must already be installed on the device that displays bb.",
+  "icon": { "url": "./icons/typography-e9f30025.svg" },
+  "tags": ["fonts", "font-size", "line-height", "font-weight", "opentype", "code-font", "monospace", "ligatures"],
+  "author": { "name": "Andrey Yazev", "github": "n30g30" },
+  "category": "themes-and-appearance",
+  "source": { "git": { "url": "https://github.com/n30g30/bb-plugin-typography.git", "range": "^0.1.0" } },
+  "screenshots": ["./screenshots/typography/settings.png", "./screenshots/typography/preview.png"],
+  "overview": "./overview/typography.md"
+}
