@@ -1,0 +1,34 @@
+{
+  "id": "plan-progress",
+  "displayName": "Plan Progress",
+  "description": "Watch the agent's plan fill a progress bar above the message box, stage by stage, as it works. The agent sends its plan once through a plan_progress tool and marks each step as it goes. The bar turns amber when the agent needs your answer and red on an error, with its note on the bar. Each subagent gets a row under the bar with its model, current tool and time. Bars are stored on your bb server; no account or API key.",
+  "icon": "ListTodo",
+  "screenshots": [
+    "./screenshots/plan-progress/agents.png",
+    "./screenshots/plan-progress/steps.png",
+    "./screenshots/plan-progress/question.png"
+  ],
+  "overview": "./overview/plan-progress.md",
+  "tags": [
+    "progress",
+    "progress-bar",
+    "plan",
+    "steps",
+    "subagents",
+    "status",
+    "agents"
+  ],
+  "author": {
+    "name": "Yuri Smirnov",
+    "github": "mrsu-smirnov",
+    "url": "https://github.com/mrsu-smirnov"
+  },
+  "category": "thread-content",
+  "secondaryCategories": ["tasks-and-workflows"],
+  "source": {
+    "git": {
+      "url": "https://github.com/mrsu-smirnov/bb-plugin-plan-progress.git",
+      "range": "^0.2.0"
+    }
+  }
+}
