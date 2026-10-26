@@ -1,0 +1,32 @@
+{
+  "id": "model-filter",
+  "displayName": "Model Filter",
+  "description": "Keep only your chosen models in BB’s standard model pickers. Set a shared selection for built-in and third-party providers, hide new models until chosen, and keep each picker’s current model available. Tested with BB 0.47.1; the version-scoped runtime adapter needs compatibility checks after BB updates. No separate service or API key is required.",
+  "icon": {
+    "url": "./icons/model-filter-36b73c8e.svg"
+  },
+  "screenshots": [
+    "./screenshots/model-filter/settings.jpg",
+    "./screenshots/model-filter/native-picker.jpg"
+  ],
+  "overview": "./overview/model-filter.md",
+  "tags": [
+    "models",
+    "model-picker",
+    "favorites",
+    "providers",
+    "settings"
+  ],
+  "author": {
+    "name": "werserk",
+    "github": "werserk",
+    "url": "https://github.com/werserk"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/werserk/bb-plugin-model-filter.git",
+      "range": "^0.1.0"
+    }
+  }
+}
