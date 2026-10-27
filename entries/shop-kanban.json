@@ -1,0 +1,33 @@
+{
+  "id": "shop-kanban",
+  "displayName": "Shop Kanban",
+  "description": "Shows your bb threads as cards in Queue, WIP, Blocked and Done, placed by live state, so you see which threads need you. Cards move on their own: a pending question or a failed run lands in Blocked, a reply that reports completion lands in Done. Each card carries a model-written title and summary, plus session cost, context-window fill and the icon of the harness running it. Agents get tools to move their own card, spawn child tasks, or split an investigation into one thread per theory. Titles and summaries come from a pi-compatible CLI on the thread's host (default Claude Haiku 4.5), billed to that CLI's account; you can turn them off.",
+  "icon": "ListTodo",
+  "tags": [
+    "kanban",
+    "board",
+    "threads",
+    "status",
+    "agent-tools",
+    "subtasks",
+    "cost",
+    "context-window"
+  ],
+  "author": {
+    "name": "Muhammad Siddeek",
+    "github": "muhammad-siddeek",
+    "url": "https://github.com/muhammad-siddeek"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/muhammad-siddeek/bb-plugin-shop-kanban.git",
+      "range": "^0.6.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/shop-kanban/board.jpg",
+    "./screenshots/shop-kanban/card-details.jpg"
+  ],
+  "overview": "./overview/shop-kanban.md"
+}
