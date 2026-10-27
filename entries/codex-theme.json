@@ -22,7 +22,8 @@
   "category": "themes-and-appearance",
   "screenshots": [
     "./screenshots/codex-theme/chat.png",
-    "./screenshots/codex-theme/menus.png"
+    "./screenshots/codex-theme/menus.png",
+    "./screenshots/codex-theme/light.png"
   ],
   "source": {
     "git": {
