@@ -1,0 +1,31 @@
+{
+  "id": "mattermost",
+  "displayName": "Mattermost",
+  "description": "Bring work conversations into your BB threads. Search and link conversations, quote context into drafts, and prepare agent tasks. Preview attachments and keep personal starred and pinned conversations. Requires the mm CLI on an enrolled BB host and a signed-in Mattermost account.",
+  "icon": "MessageSquare",
+  "tags": [
+    "chat",
+    "search",
+    "context",
+    "conversations",
+    "inbox"
+  ],
+  "author": {
+    "name": "Oddship",
+    "github": "rhnvrm",
+    "url": "https://github.com/oddship"
+  },
+  "category": "memory-and-context",
+  "screenshots": [
+    "./screenshots/mattermost/search.jpg"
+  ],
+  "overview": "./overview/mattermost.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/oddship/bb-plugins.git",
+      "subdir": "plugins/mattermost",
+      "range": "^0.4.0",
+      "tagPrefix": "mattermost/"
+    }
+  }
+}
