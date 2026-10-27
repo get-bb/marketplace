@@ -1,0 +1,15 @@
+{
+  "id": "file-pretty",
+  "displayName": "Pretty",
+  "description": "Read structured files with consistent formatting inside BB. Switch between formatted and raw content, and copy the view on screen. Parse errors show their location in the file. Supports JSON, JSON Lines, YAML, TOML, XML, and XML-based formats. Formatting TOML omits comments; the raw view retains them.",
+  "icon": "FileText",
+  "screenshots": [
+    "./screenshots/file-pretty/formatted.png",
+    "./screenshots/file-pretty/error.png"
+  ],
+  "overview": "./overview/file-pretty.md",
+  "tags": ["json", "yaml", "toml", "xml", "formatting", "file-viewer"],
+  "author": { "name": "Oleg", "github": "zom-2018", "url": "https://github.com/zom-2018" },
+  "category": "file-viewers-and-editors",
+  "source": { "git": { "url": "https://github.com/zom-2018/bb-plugin-file-pretty.git", "range": "^0.1.0" } }
+}
