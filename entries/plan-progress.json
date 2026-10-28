@@ -28,7 +28,7 @@
   "source": {
     "git": {
       "url": "https://github.com/mrsu-smirnov/bb-plugin-plan-progress.git",
-      "range": "^0.2.0"
+      "range": ">=0.2.0"
     }
   }
 }
