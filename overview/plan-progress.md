@@ -3,18 +3,22 @@
 - A bar above the thread's message box for each task the agent plans: stages as capsules, steps as dots, and a pill at the head naming the current stage and step. Hover the bar to see how long the task has run; hover a mark to see its step and how long it took.
 - Four states with their own colours: working, needs your answer, error, done. On a question or an error the pill shows the agent's note, and your reply turns the bar back to working.
 - A row for each subagent under the bar: its description, model, the tool it is in right now, and its time. Background subagents count too. Finished rows fold away after a few seconds.
+- Child threads show up as rows too, whichever provider runs them (Claude, Codex, Pi): its name, model, status and time. Click a row to open that thread beside the chat.
+- The answer speed, `⚡ ≈ 42 tok/s`, sits in the message box before the voice and send buttons: bright while the model writes, dimmed between turns. It is an estimate until bb reports the exact token count.
 - The arrow beside the percent opens the step list with the time of every step. The cross closes a bar.
 - The plan can change mid-task: finished steps keep their done by title.
 
 ## How it works
 
-The plugin adds a `plan_progress` tool. The agent sends the whole plan once, then short calls such as `{id, next: true}` after each step, `{id, state: "needs_input", note}` before asking you something, and `{id, state: "done"}` at the end. The rules for when to use it come with the tool. The subagent rows are read from the thread's own timeline and cost no tokens.
+The plugin adds a `plan_progress` tool. The agent sends the whole plan once, then short calls such as `{id, next: true}` after each step, `{id, state: "needs_input", note}` before asking you something, and `{id, state: "done"}` at the end. The rules for when to use it come with the tool. The subagent and child-thread rows are read from bb's own thread data and cost no tokens.
+
+If the original plan-progress mod for Claude Code is installed too, the plugin switches it off for Claude sessions started from bb only, so the agent talks to this bar instead. Claude Code outside bb keeps the original as it was.
 
 Bars are stored per thread in the plugin's storage on your bb server. Nothing leaves the machine, and the plugin needs no account or API key.
 
 ## Settings
 
-Settings → Plugins → Plan Progress → the gear at the top right: twinkling dots on or off, auto-close for finished bars after 10, 30 or 60 seconds, and a short chime on a question, an error and the finish.
+Settings → Plugins → Plan Progress → the gear at the top right: twinkling dots on or off, auto-close for finished bars after 10, 30 or 60 seconds, a short chime on a question, an error and the finish, the answer speed on or off, and one automatic progress reminder per turn on or off.
 
 ## Credits
 
