@@ -1,0 +1,33 @@
+{
+  "id": "limits",
+  "displayName": "Limits — usage rings",
+  "description": "A floating pill in the bottom-right corner shows how much of your coding-plan quota is left: Claude Code, Codex and Cursor through bb's own collectors, plus GLM (Z.AI) and Kimi Code fetched directly. One ring per limit window, follows the open thread's harness, inline per-provider refresh, a two-column popup with Refresh-all, and a manual mode that makes no background requests at all. Requires BB 0.46+.",
+  "icon": "Gauge",
+  "tags": [
+    "quota",
+    "coding-plans",
+    "usage",
+    "glm",
+    "kimi"
+  ],
+  "author": {
+    "name": "Aleksandr Poliakov",
+    "github": "artwist-polyakov",
+    "url": "https://github.com/artwist-polyakov"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/artwist-polyakov/bb-plugins.git",
+      "subdir": "limits",
+      "range": "^1.0.0",
+      "tagPrefix": "limits/"
+    }
+  },
+  "overview": "./overview/limits.md",
+  "screenshots": [
+    "./screenshots/limits/pill.png",
+    "./screenshots/limits/popup.png",
+    "./screenshots/limits/hover-card.png"
+  ]
+}
