@@ -6,7 +6,8 @@
   "screenshots": [
     "./screenshots/plan-progress/agents.png",
     "./screenshots/plan-progress/steps.png",
-    "./screenshots/plan-progress/question.png"
+    "./screenshots/plan-progress/question.png",
+    "./screenshots/plan-progress/child-threads.png"
   ],
   "overview": "./overview/plan-progress.md",
   "tags": [
