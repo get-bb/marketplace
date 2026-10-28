@@ -24,7 +24,7 @@
   "source": {
     "git": {
       "url": "https://github.com/muhammad-siddeek/bb-plugin-shop-kanban.git",
-      "range": "^0.9.0"
+      "range": "^0.10.0"
     }
   },
   "screenshots": [
