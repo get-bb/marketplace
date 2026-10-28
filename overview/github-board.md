@@ -14,8 +14,9 @@ columns, beside the threads that work on them.
   project, in the bb project that has the repository checked out.
 - Add to chat puts the same prompt at the end of a chat's draft, using that chat's project's prompt,
   without sending it. Pick a chat on screen or a recent thread, which opens in the board's place.
+- A thread started from a card shows that card in its Info tab, linked to GitHub.
 
 ## What it needs
 
-bb 0.46 or later, and the GitHub CLI, `gh`, installed and signed in on the machine running the bb
+bb 0.47 or later, and the GitHub CLI, `gh`, installed and signed in on the machine running the bb
 server. The board uses that login and stores no token of its own.
