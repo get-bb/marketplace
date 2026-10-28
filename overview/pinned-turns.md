@@ -12,11 +12,11 @@ Long threads stay oriented: you always see which question you are in the middle 
 
 ## Settings
 
-The pin button in the thread header opens a menu with a switch for the bar and a switch for each option above, plus a debug log for the plugin log. You can hide the button from the plugin's page in BB settings.
+**Pinned turns** in a thread's actions menu (⋯ in the thread header, or a sidebar row's menu) holds a switch for the bar and for each option above, plus a debug log for the plugin log; a check marks the ones that are on. You can hide it from thread menus on the plugin's page in BB settings.
 
 ## Requirements
 
-- BB 0.47 or later.
+- BB 0.48 or later.
 - It reads BB's timeline layout, which is not a documented interface, so a future BB release may need a plugin update.
 - Jumping never changes the page URL or the back button's history.
 - No external service or account is used.
