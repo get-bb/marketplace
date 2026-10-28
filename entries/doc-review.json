@@ -33,11 +33,11 @@
   },
   "screenshots": [
     "./screenshots/doc-review/markdown.png",
+    "./screenshots/doc-review/reply.png",
     "./screenshots/doc-review/markup.png",
-    "./screenshots/doc-review/html.png",
+    "./screenshots/doc-review/export-pdf.png",
     "./screenshots/doc-review/slides.png",
-    "./screenshots/doc-review/spreadsheet.png",
-    "./screenshots/doc-review/drawing.png"
+    "./screenshots/doc-review/spreadsheet.png"
   ],
   "overview": "./overview/doc-review.md"
 }
