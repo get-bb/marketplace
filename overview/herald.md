@@ -14,6 +14,8 @@ know which thread to go back to without watching the sidebar.
 - The sentence above the waiting thread's composer, with a Read again button, until you answer.
 - Settings for where to speak (desktop app, browser tab, mobile app), the voice and speed, and which
   kinds of event are announced.
+- A choice in each thread's menu: Announce, Questions only, or Silent. A worker without one follows the
+  thread that started it, so silencing a coordinator silences its workers.
 - Optionally, a model writes each sentence: Claude Code, OpenAI Codex, Gemini CLI or a command of your
   own, installed on the Mac running bb, runs once per announcement with no tools or read-only. Off by
   default; the plain sentence is spoken whenever the tool fails or is slow.

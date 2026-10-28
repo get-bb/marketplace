@@ -5,11 +5,11 @@
   "icon": { "url": "./icons/loom-2c566478.svg" },
   "screenshots": [
     "./screenshots/loom/home.png",
-    "./screenshots/loom/spec.png",
     "./screenshots/loom/board.png",
     "./screenshots/loom/ticket.png",
+    "./screenshots/loom/spec.png",
     "./screenshots/loom/changes.png",
-    "./screenshots/loom/planner.png"
+    "./screenshots/loom/insights.png"
   ],
   "tags": [
     "parallel-agents",

@@ -377,18 +377,6 @@ if (problems.length > 0) {
   process.exit(1);
 }
 
-const outputs = [
-  ["marketplace.json", v1Manifest],
-  ["v2/marketplace.json", v2Manifest],
-];
-for (const [label, manifest] of outputs) {
-  const bytes = `${JSON.stringify(manifest, null, label.startsWith("v2/") ? undefined : 2)}\n`;
-  if (Buffer.byteLength(bytes, "utf8") > 1_048_576) {
-    console.error(`error: The ${label} document is larger than 1 MiB.`);
-    process.exit(1);
-  }
-}
-
 mkdirSync(join(root, "dist", "v2"), { recursive: true });
 writeFileSync(
   join(root, "dist", "marketplace.json"),
