@@ -17,7 +17,8 @@ The tree adds to BB's own Diff tab and leaves its diffs alone: filtering goes th
 
 ## Requirements
 
-- BB 0.47 or later.
+- BB 0.48 or later.
 - BB has no plugin slot beside the Diff tab, so the tree finds the tab by its page structure. A future BB release may move it; the tree then does not show until the plugin is updated.
+- It reads the changed files from BB's bundled Git plugin, which the Diff tab itself uses.
 - No external service or account is used.
 - The icons are from vscode-icons, under CC BY-SA 4.0: https://github.com/vscode-icons/vscode-icons
