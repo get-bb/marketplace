@@ -1,7 +1,7 @@
 {
   "id": "usage-tracker",
   "displayName": "Usage Tracker",
-  "description": "See subscription limits without leaving BB. Track Codex, Claude Code, Cursor, Grok, OpenCode, and Antigravity in a compact sidebar summary with provider details and 80/95% warnings.",
+  "description": "See subscription limits without leaving BB. Track Codex, Claude Code, Cursor, Grok, OpenCode, Antigravity, and DeepSeek in a compact sidebar summary with provider details and 80/95% warnings.",
   "icon": {
     "url": "./icons/usage-tracker-18d34a4d.svg"
   },
@@ -15,7 +15,7 @@
     "opencode",
     "antigravity",
     "quota",
-    "sidebar"
+    "deepseek"
   ],
   "screenshots": [
     "./screenshots/usage-tracker/sidebar-details.png"
@@ -30,7 +30,7 @@
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",
       "subdir": "plugins/usage-tracker",
-      "range": "^0.1.6",
+      "range": "^0.1.16",
       "tagPrefix": "usage-tracker/"
     }
   }

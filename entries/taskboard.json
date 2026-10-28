@@ -1,7 +1,7 @@
 {
   "id": "taskboard",
   "displayName": "Taskboard",
-  "description": "Browses and creates project-scoped GitHub, Linear, or Jira issues in one focused List or Kanban board, with explicit review before creation.",
+  "description": "Browses and creates project-scoped GitHub, GitLab, Gitea, Linear, or Jira issues in one focused List or Kanban board, with explicit review before creation and an optional autonomous task factory.",
   "icon": {
     "url": "./icons/taskboard-65bbf6cd.svg"
   },
@@ -10,8 +10,11 @@
     "project-management",
     "kanban",
     "github",
+    "gitlab",
+    "gitea",
     "linear",
-    "jira"
+    "jira",
+    "ai-agents"
   ],
   "author": {
     "name": "Mateo Cerquetella",
@@ -23,7 +26,7 @@
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",
       "subdir": "plugins/taskboard",
-      "range": "^0.3.3",
+      "range": "^0.3.6",
       "tagPrefix": "taskboard/"
     }
   }
