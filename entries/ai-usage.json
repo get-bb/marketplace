@@ -6,7 +6,6 @@
     "url": "./icons/ai-usage-bc067434.svg"
   },
   "screenshots": [
-    "./screenshots/ai-usage/panel.png",
     "./screenshots/ai-usage/cost.png"
   ],
   "overview": "./overview/ai-usage.md",
