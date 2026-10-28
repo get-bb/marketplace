@@ -1,0 +1,34 @@
+{
+  "id": "bureaucat",
+  "displayName": "Bureaucat",
+  "description": "Bring assigned and project tasks into your BB workflow. Sort and filter complete task lists, inspect details, update supported task fields, and prepare agent drafts. Requires an authenticated Bureaucat CLI and configured service URL; complete scans are limited to 5,000 tasks.",
+  "icon": "ListTodo",
+  "tags": [
+    "tasks",
+    "projects",
+    "sorting",
+    "filters",
+    "bcat"
+  ],
+  "author": {
+    "name": "Oddship",
+    "github": "rhnvrm",
+    "url": "https://github.com/oddship"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/bureaucat/walkthrough.webp",
+    "./screenshots/bureaucat/step-1.jpg",
+    "./screenshots/bureaucat/step-2.jpg",
+    "./screenshots/bureaucat/step-3.jpg"
+  ],
+  "overview": "./overview/bureaucat.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/oddship/bb-plugins.git",
+      "subdir": "plugins/bureaucat",
+      "range": "^0.2.0",
+      "tagPrefix": "bureaucat/"
+    }
+  }
+}

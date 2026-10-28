@@ -1,7 +1,7 @@
 {
   "id": "mattermost",
   "displayName": "Mattermost",
-  "description": "Bring work conversations into your BB threads. Search and link conversations, quote context into drafts, and prepare agent tasks. Preview attachments and keep personal starred and pinned conversations. Requires the mm CLI on an enrolled BB host and a signed-in Mattermost account.",
+  "description": "Bring work conversations into your BB threads. Search and link conversations, quote context, preview attachments, and keep personal starred and pinned conversations. Requires the mm CLI on an enrolled BB host and a signed-in Mattermost account.",
   "icon": "MessageSquare",
   "tags": [
     "chat",
@@ -17,7 +17,10 @@
   },
   "category": "memory-and-context",
   "screenshots": [
-    "./screenshots/mattermost/search.jpg"
+    "./screenshots/mattermost/walkthrough.webp",
+    "./screenshots/mattermost/step-1.jpg",
+    "./screenshots/mattermost/step-2.jpg",
+    "./screenshots/mattermost/step-3.jpg"
   ],
   "overview": "./overview/mattermost.md",
   "source": {
