@@ -1,14 +1,14 @@
 {
   "id": "shop-kanban",
   "displayName": "Shop Kanban",
-  "description": "Shows your bb threads as cards in Queue, WIP, Blocked and Done, placed by live state, so you see which threads need you. Cards move on their own: a pending question or a failed run lands in Blocked, a reply that reports completion lands in Done. Each card carries a model-written title and summary, context-window fill, the harness icon, and the cost of the thread together with every child thread and subagent it started. A Reviews section lists the Delta and GitHub pull requests waiting on you or your teams, each with a risk chip, approve and request-changes buttons, and a drafted thread that explains the change. The title-bar search finds any thread by what was said in it, archived ones included. Agents get tools to move their own card, spawn child threads, or split an investigation into one thread per theory. Titles, summaries and risk chips come from a pi-compatible CLI on the thread's host (default Claude Haiku 4.5), billed to that CLI's account; search needs qmd and reviews need the dt or gh CLI, signed in, on a persistent host. Each is optional.",
+  "description": "Shows your bb threads as cards placed by live state, so you see at a glance which ones need you. Cards move on their own: a pending question or a failed run turns red at the top of WIP, a reply that reports completion lands in Done, and threads you set aside wait in Parked. A WIP limit caps how many threads run at once: past it, a new thread waits in Queue and starts when a running one finishes, to pace spend. Each card carries a model-written title and summary, context-window fill, the harness icon, and the cost of the thread together with every child thread and subagent it started. A Reviews section lists the Delta and GitHub pull requests waiting on you or your teams, each with a risk chip, approve and request-changes buttons, and a drafted thread that explains the change. The title-bar search finds any thread by what was said in it, archived ones included. Agents get tools to move their own card, spawn child threads, or split an investigation into one thread per theory. Titles, summaries and risk chips come from a pi-compatible CLI on the thread's host (default Claude Haiku 4.5), billed to that CLI's account; search needs qmd and reviews need the dt or gh CLI, signed in, on a persistent host. Each is optional.",
   "icon": "ListTodo",
   "tags": [
     "kanban",
     "board",
     "threads",
     "agent-tools",
-    "subtasks",
+    "wip-limit",
     "cost",
     "context-window",
     "code-review",
@@ -24,7 +24,7 @@
   "source": {
     "git": {
       "url": "https://github.com/muhammad-siddeek/bb-plugin-shop-kanban.git",
-      "range": "^0.10.0"
+      "range": "^0.11.0"
     }
   },
   "screenshots": [
