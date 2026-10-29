@@ -6,7 +6,7 @@ Nothing is rebuilt. BB's own composer is moved as it is, so a half-written draft
 
 ## Two ways to dock
 
-- **At the panel's bottom** (the default): a strip under whichever tab is open. The tab shrinks to make room, so nothing is covered, and the composer stays put while you switch tabs.
+- **At the panel's bottom** (the default): a strip under whichever tab is open, in the bottom tile when the panel is split. The tab shrinks to make room, so nothing is covered, and the composer stays put while you switch tabs.
 - **As a Chat tab**: switch the strip off and the composer lives in a Chat tab instead. It is in the panel while that tab is the active one in its pane, and in the column otherwise, and the tab splits and drags like any other.
 
 The dock button in the composer's action row switches docking on and off. **Chat dock** in the thread's actions menu (⋯ in the thread header, or a sidebar row's menu) chooses between the two and holds the other options, with a check beside each one that is on. Switching moves the composer once, straight to its new place.
