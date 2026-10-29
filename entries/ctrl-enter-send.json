@@ -1,0 +1,31 @@
+{
+  "id": "ctrl-enter-send",
+  "displayName": "Ctrl+Enter Send",
+  "description": "Send messages with the shortcut you choose: Ctrl+Enter, Enter, or Shift+Enter. Use the same choice in new threads, replies, queued messages, and sent-message editors. Hover over the send button to see the active shortcut; Ctrl+Enter mode also accepts Command+Enter on macOS. Requires BB 0.46+.",
+  "tags": [
+    "keyboard",
+    "shortcuts",
+    "composer",
+    "messages",
+    "line-breaks"
+  ],
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/artbear/bb-plugin-ctrl-enter-send.git",
+      "range": "^0.2.1"
+    }
+  },
+  "screenshots": [
+    "./screenshots/ctrl-enter-send/settings.png"
+  ],
+  "icon": {
+    "url": "./icons/ctrl-enter-send-c406380e.svg"
+  },
+  "author": {
+    "name": "artbear",
+    "github": "artbear",
+    "url": "https://github.com/artbear"
+  },
+  "overview": "./overview/ctrl-enter-send.md"
+}
