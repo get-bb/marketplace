@@ -1,0 +1,30 @@
+{
+  "id": "thread-reveal",
+  "displayName": "Thread Reveal",
+  "description": "Find the open thread in your sidebar without changing grouping or filters. Use the button beside its title or Ctrl+Shift+L (Command+Shift+L on macOS) to expand its branch, scroll to its row, and focus it. Reassign the shortcut in Settings. Requires BB 0.48.0+ and the built-in Thread list.",
+  "icon": {
+    "url": "./icons/thread-reveal-1d7f2947.svg"
+  },
+  "tags": [
+    "sidebar",
+    "navigation",
+    "keyboard",
+    "nested-threads"
+  ],
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/artbear/bb-plugin-thread-reveal.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/thread-reveal/reveal.png"
+  ],
+  "author": {
+    "name": "artbear",
+    "github": "artbear",
+    "url": "https://github.com/artbear"
+  },
+  "overview": "./overview/thread-reveal.md"
+}
