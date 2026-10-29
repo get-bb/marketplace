@@ -12,7 +12,7 @@ Restore explicit closes with `Ctrl+Shift+T` / `⌘⇧T` when BB receives the sho
 
 Search chat titles and project names, including conversations beyond the last 100 visits. Pins from the current workspace appear first; other-workspace pins remain accessible below without duplicates. A fixed plus opens BB's native composer and prioritizes this workspace's projects in its menu.
 
-Working, unread, and waiting-for-input signals remain distinct. A grey dot shows sidechat-only work. Branch markers and nested menus help explore subthreads. Desktop supports manual drag ordering and keyboard navigation; touch uses swipe and 44px targets.
+Working, unread, and waiting-for-input signals remain distinct. A grey dot shows sidechat-only work. Branch markers and nested menus help explore subthreads. Desktop supports manual drag ordering and keyboard navigation; touch uses swipe and 44px targets. Palette commands (`⌘⇧P`) select tabs by number, pin, favorite, switch workspaces, and rename; defaults such as `Ctrl+Alt+1…9` / `⌘⌥1…9` are rebindable in Settings → Keyboard and work in any keyboard layout.
 
 ## Appearance preview
 

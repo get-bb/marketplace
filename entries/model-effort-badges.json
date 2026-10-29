@@ -1,0 +1,21 @@
+{
+  "id": "model-effort-badges",
+  "displayName": "Thread Columns",
+  "description": "See which threads need you, with subthread columns, status marks, and model and effort badges.",
+  "icon": "Gauge",
+  "author": {
+    "name": "Sergey Baus",
+    "github": "neoromantic"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/neoromantic/bb-plugin-model-effort-badges.git",
+      "range": "^0.6.0"
+    }
+  },
+  "overview": "./overview/model-effort-badges.md",
+  "screenshots": [
+    "./screenshots/model-effort-badges/columns.png"
+  ]
+}

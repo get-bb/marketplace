@@ -1,0 +1,39 @@
+{
+  "id": "optbot",
+  "displayName": "OptBot",
+  "description": "Gives each bot a memory of every conversation it has had, so it recalls decisions and details from weeks ago without you repeating them. Every message is kept and compressed into a summary tree that each turn reads fresh, zooming down to the original message when needed. A bot can split work across subagents that report back on their own. Uses the Codex, Claude Code, Pi or ACP providers you already installed; summaries need no API key.",
+  "icon": {
+    "url": "./icons/optbot-e4521e29.svg"
+  },
+  "tags": [
+    "memory",
+    "long-term-memory",
+    "personas",
+    "subagents",
+    "summaries",
+    "conversations",
+    "agent-coordination",
+    "bots"
+  ],
+  "author": {
+    "name": "Karthik Raju",
+    "github": "KarthikRaju391",
+    "url": "https://github.com/KarthikRaju391"
+  },
+  "category": "memory-and-context",
+  "secondaryCategories": [
+    "agents-and-providers"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/KarthikRaju391/bb-plugin-optbot.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/optbot/bots-and-subagents.png",
+    "./screenshots/optbot/research-bot-and-topics.png",
+    "./screenshots/optbot/bot-identity.png"
+  ],
+  "overview": "./overview/optbot.md"
+}

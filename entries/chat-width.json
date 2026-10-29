@@ -1,0 +1,34 @@
+{
+  "id": "chat-width",
+  "displayName": "Chat Width",
+  "description": "Give your conversations the room they need. Save separate Reading and Wide widths, or fill the current pane. Messages and the input stay aligned across split views and side panels. Preferences stay in this browser; no account or external service is required.",
+  "icon": {
+    "url": "./icons/chat-width-e2b30393.svg"
+  },
+  "tags": [
+    "full-width",
+    "chat",
+    "presets",
+    "readability",
+    "layout",
+    "customization",
+    "split-view"
+  ],
+  "author": {
+    "name": "werserk",
+    "github": "werserk",
+    "url": "https://github.com/werserk"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/werserk/bb-plugin-chat-width.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/chat-width/presets.jpg",
+    "./screenshots/chat-width/fill.jpg"
+  ],
+  "overview": "./overview/chat-width.md"
+}

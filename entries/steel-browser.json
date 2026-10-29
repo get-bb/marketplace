@@ -1,13 +1,14 @@
 {
   "id": "steel-browser",
   "displayName": "BB Surf",
-  "description": "Operate self-hosted Steel browser sessions from BB with project-scoped sessions, Playwright navigation, and inline viewing.",
+  "description": "Operate self-hosted Steel browser sessions from BB with project-scoped sessions, selectable Playwright or Jev execution, and inline viewing.",
   "icon": {
     "url": "./icons/steel-browser-1a2203ef.svg"
   },
   "tags": [
     "browser-automation",
     "playwright",
+    "jev",
     "steel",
     "remote-access",
     "threads"
@@ -22,7 +23,7 @@
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",
       "subdir": "plugins/steel-browser",
-      "range": "^0.1.0",
+      "range": "^0.2.0",
       "tagPrefix": "steel-browser/"
     }
   }

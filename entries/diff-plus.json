@@ -1,0 +1,34 @@
+{
+  "id": "diff-plus",
+  "displayName": "Diff Plus",
+  "description": "See where a large change lands before you read it: a folder tree beside BB's Diff tab with file counts and +/- per folder. Click a folder to show only its files, or a file to open its diff alone, through the tab's own filter, so Viewed marks, split view and Add to chat keep working. Files and folders carry vscode-icons glyphs and VS Code's git letters, with a dot on each folder for what changed under it. The tree follows the tab's scope, from all changes down to one commit, and moves above the list on narrow screens. It finds the Diff tab by its page structure, which is not a documented interface, so a BB update may need a plugin update. Requires BB 0.48 or later.",
+  "icon": "FileDiff",
+  "tags": [
+    "diff",
+    "file-tree",
+    "folder-tree",
+    "code-review",
+    "changes-panel",
+    "git",
+    "file-icons",
+    "vscode-icons"
+  ],
+  "author": {
+    "name": "nfour",
+    "github": "nfour",
+    "url": "https://github.com/nfour"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/diff-plus/tree.png"
+  ],
+  "overview": "./overview/diff-plus.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/nfour/bb-plugins.git",
+      "subdir": "bb-plugin-diff-plus",
+      "range": "^0.1.0",
+      "tagPrefix": "diff-plus/"
+    }
+  }
+}

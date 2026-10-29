@@ -1,7 +1,7 @@
 {
   "id": "action-topbar",
   "displayName": "Action Topbar",
-  "description": "Keep open BB panel tabs within reach above every thread. Search tabs and Actions from one launcher, reorder tabs, close them in place, and drag supported Actions into split panes. Requires BB 0.40+ and Plugin SDK 0.4.33+.",
+  "description": "Keep open BB panel tabs within reach above every thread. Search tabs and Actions from one launcher, reorder tabs, close them in place, and drag Actions into panes. Requires BB 0.40+.",
   "icon": {
     "url": "./icons/action-topbar-79065c50.svg"
   },
@@ -28,7 +28,7 @@
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",
       "subdir": "plugins/action-topbar",
-      "range": "^0.1.0",
+      "range": "^0.1.4",
       "tagPrefix": "action-topbar/"
     }
   }

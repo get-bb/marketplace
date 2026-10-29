@@ -1,0 +1,26 @@
+{
+  "id": "rad-binder",
+  "displayName": "Rad Binder",
+  "description": "Turn bb into an 80s/90s school-binder cover, with neon confetti, striped edges and chunky toy-commercial shadows. The sidebar becomes a deep-purple binder spine where the open thread is a hot-pink sticker. The composer, your messages and inline cards get thick outlines and hard offset shadows, and headings switch to bold italic capitals. Works in light and dark, makes no network requests, and uses Futura and Avenir Next from macOS, falling back to your system sans elsewhere.",
+  "icon": {
+    "url": "./icons/rad-binder-041d1e4b.svg"
+  },
+  "screenshots": [
+    "./screenshots/rad-binder/conversation-dark.png",
+    "./screenshots/rad-binder/conversation-light.png"
+  ],
+  "overview": "./overview/rad-binder.md",
+  "tags": ["theme", "retro", "80s", "90s", "neon", "memphis", "synthwave", "dark", "light", "colorful"],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost",
+    "url": "https://github.com/steveafrost"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-theme-rad-binder.git",
+      "range": "^0.1.0"
+    }
+  }
+}

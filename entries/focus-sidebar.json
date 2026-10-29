@@ -1,0 +1,34 @@
+{
+  "id": "focus-sidebar",
+  "displayName": "Focus Sidebar",
+  "description": "Keeps only the threads from the last few hours in your sidebar and moves older ones to an Archive grouped by day. Threads that are running, waiting for your answer or pinned stay in Focus whatever their age, and you pick the window: 2, 4, 6, 8, 12 or 24 hours. A search box matches titles, projects and branches as you type, then message text across open and closed threads. Every row and the thread header get a close button that uses bb's own archive with Undo; nothing is archived automatically.",
+  "icon": "Target",
+  "tags": [
+    "focus",
+    "recent",
+    "archive",
+    "search",
+    "thread-list",
+    "sidebar",
+    "declutter",
+    "close-thread",
+    "today"
+  ],
+  "author": {
+    "name": "Grigory Shimichev",
+    "github": "grishaster80",
+    "url": "https://github.com/grishaster80"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/grishaster80/bb-plugin-focus-sidebar.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/focus-sidebar/tabs-and-search.png",
+    "./screenshots/focus-sidebar/focus.png"
+  ],
+  "overview": "./overview/focus-sidebar.md"
+}

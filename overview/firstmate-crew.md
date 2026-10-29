@@ -20,7 +20,7 @@ Watches are small scripts in the home that run on a schedule while bb is running
 
 ## Requirements
 
-- bb 0.46 or newer.
+- bb 0.47 or newer.
 - A capable model for the first mate, such as Claude Sonnet or better. Workers use the provider and model you set in the settings, or the first mate chooses.
 - `git` for your projects, and for the pull request watch the `gh` command, logged in.
 

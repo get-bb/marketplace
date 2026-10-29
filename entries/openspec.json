@@ -1,0 +1,30 @@
+{
+  "id": "openspec",
+  "displayName": "OpenSpec",
+  "description": "Browse OpenSpec changes and specifications, track task progress, and launch linked agents.",
+  "icon": "ListTodo",
+  "author": {
+    "name": "Aleksander Khanteev",
+    "github": "khaale",
+    "url": "https://github.com/khaale"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "tags": [
+    "openspec"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/khaale/bb-openspec.git",
+      "ref": "main"
+    }
+  },
+  "screenshots": [
+    "./screenshots/openspec/changes.jpg",
+    "./screenshots/openspec/specifications.jpg",
+    "./screenshots/openspec/changes-and-specs.jpg"
+  ],
+  "overview": "./overview/openspec.md"
+}

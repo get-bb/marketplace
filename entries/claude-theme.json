@@ -1,0 +1,34 @@
+{
+  "id": "claude-theme",
+  "displayName": "Claude Theme for BB",
+  "description": "Give BB terracotta accents with charcoal dark and off-white light palettes. Select one palette that follows Light, Dark or System, with matching syntax and terminal colours. Adapted from SK's Claude Theme for VS Code, with accents on selected navigation and active tabs. Requires BB 0.47.1 or later and a compatible Plugin SDK; no account or external service is needed.",
+  "icon": {
+    "url": "./icons/claude-theme-25480cd3.svg"
+  },
+  "screenshots": [
+    "./screenshots/claude-theme/dark.jpg",
+    "./screenshots/claude-theme/light.jpg"
+  ],
+  "overview": "./overview/claude-theme.md",
+  "tags": [
+    "dark-theme",
+    "light-theme",
+    "terracotta",
+    "color-scheme",
+    "syntax-highlighting",
+    "terminal-colors",
+    "palette"
+  ],
+  "author": {
+    "github": "jtattreo",
+    "name": "Treo-Solutions",
+    "url": "https://github.com/Treo-Solutions"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/Treo-Solutions/bb-plugin-claude-theme.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "md-prompt",
+  "displayName": "MD Prompt",
+  "description": "Read Markdown and code with live formatting as you write your prompt. Code fences gain syntax colours before you close them. Toggle highlighting in the composer, settings or CLI without changing the text sent to your agent. Requires BB 0.47 or later; no external service, account or API key.",
+  "icon": {
+    "url": "./icons/md-prompt-cfaf3d3b.svg"
+  },
+  "screenshots": [
+    "./screenshots/md-prompt/markdown.png",
+    "./screenshots/md-prompt/code.png"
+  ],
+  "overview": "./overview/md-prompt.md",
+  "tags": [
+    "markdown",
+    "syntax-highlighting",
+    "composer",
+    "prompt-formatting",
+    "code-fences"
+  ],
+  "author": {
+    "name": "Adebola",
+    "github": "AdzeB",
+    "url": "https://github.com/AdzeB"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/AdzeB/bb-plugin-md-prompt.git",
+      "range": "^0.1.0"
+    }
+  }
+}

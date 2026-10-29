@@ -1,0 +1,37 @@
+{
+  "id": "lobu",
+  "displayName": "Lobu",
+  "description": "See what needs you across your Lobu workspaces (pending approvals, failed runs, unhealthy connections and devices, recent activity, pinned metrics) and save what your agents learn to Lobu memory after reviewing it. Requires the Lobu CLI, logged in.",
+  "icon": {
+    "url": "./icons/lobu-d54c7c7d.svg"
+  },
+  "tags": [
+    "lobu",
+    "dashboard",
+    "approvals",
+    "automations",
+    "monitoring",
+    "memory"
+  ],
+  "author": {
+    "name": "Lobu",
+    "github": "buremba",
+    "url": "https://lobu.ai"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "notifications"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/lobu-ai/bb-plugin-lobu.git",
+      "range": "^0.4.0"
+    }
+  },
+  "overview": "./overview/lobu.md",
+  "screenshots": [
+    "./screenshots/lobu/dashboard.jpg",
+    "./screenshots/lobu/save-to-lobu.jpg",
+    "./screenshots/lobu/activity.jpg"
+  ]
+}

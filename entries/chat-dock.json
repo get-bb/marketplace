@@ -1,0 +1,35 @@
+{
+  "id": "chat-dock",
+  "displayName": "Chat Dock",
+  "description": "Write your next message beside the diff, file or tab you are reading: the composer moves into the right panel while it is open. Your draft and the cards above the box (running commands, child threads, questions) move with it and go back under the timeline when you close the panel. Dock it as a strip under whichever tab is open, or as a Chat tab of its own that splits and drags like any other. Split chat panes keep a composer each, and on a phone it docks at the bottom of the panel drawer. It moves BB's own page elements, which are not a documented interface, so a BB update may need a plugin update. Requires BB 0.48 or later.",
+  "icon": "PanelRight",
+  "tags": [
+    "composer",
+    "right-panel",
+    "side-panel",
+    "layout",
+    "chat-input",
+    "docking",
+    "split-panes",
+    "workspace-layout"
+  ],
+  "author": {
+    "name": "nfour",
+    "github": "nfour",
+    "url": "https://github.com/nfour"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/chat-dock/strip.png",
+    "./screenshots/chat-dock/menu.png"
+  ],
+  "overview": "./overview/chat-dock.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/nfour/bb-plugins.git",
+      "subdir": "bb-plugin-chat-dock",
+      "range": "^0.1.0",
+      "tagPrefix": "chat-dock/"
+    }
+  }
+}
