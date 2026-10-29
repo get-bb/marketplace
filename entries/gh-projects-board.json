@@ -1,0 +1,35 @@
+{
+  "id": "gh-projects-board",
+  "displayName": "GitHub Projects Board",
+  "description": "See what you are actually working on, in the columns your team already agreed on. The board reads the Status field of a GitHub Projects v2 board, so Todo, In Progress and QA arrive in the project's own order with each option's description, instead of every assigned issue landing in one pile. A My Tasks filter opens on your own unfinished work, and GitHub's filter syntax works as it does on github.com, including assignee:@me and negation. Group by any single-select field, not only Status. Requires the GitHub CLI signed in on the machine running the BB server, with a classic token carrying the read:project scope, because fine-grained tokens cannot read user-owned projects.",
+  "icon": "Github",
+  "tags": [
+    "github",
+    "projects",
+    "kanban",
+    "board",
+    "issues",
+    "status",
+    "project-management",
+    "gh-cli"
+  ],
+  "author": {
+    "name": "James Klein",
+    "github": "kleinjm",
+    "url": "https://github.com/kleinjm"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "overview": "./overview/gh-projects-board.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/kleinjm/bb-plugin-gh-projects-board.git",
+      "range": "^0.1.5"
+    }
+  },
+  "screenshots": [
+    "./screenshots/gh-projects-board/my-tasks.png"
+  ]
+}
