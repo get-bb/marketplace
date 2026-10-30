@@ -1,7 +1,7 @@
 {
   "id": "responsibilities",
   "displayName": "Responsibilities",
-  "description": "Shows which threads need you: failed, waiting for your answer, or holding an unread result. Highlights manager threads, filters the thread list, and adds New child thread to the thread actions.",
+  "description": "Find failures, questions and unread results in BB. Filter threads, start child threads and optionally highlight managers.",
   "icon": "Filter",
   "author": {
     "name": "Sergey Baus",

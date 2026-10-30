@@ -1,7 +1,9 @@
 # Responsibilities
 
-See which BB threads need your attention: failures, questions and unread results, including subthreads. Filter the sidebar to Working, Needs you, Quiet or Managers while keeping matching threads in their tree.
+Find the BB threads that need you: failures, questions and unread results, including subthreads. Choose **Filter threads → Needs you** in the sidebar footer to work through them. Matching threads keep their parents, and the open thread stays visible; choose **All** to restore the full list.
 
-New child thread opens BB’s composer under a thread with Full Access selected initially. You can choose another permission mode before sending. Manager highlighting is optional and uses your own JSON file.
+Filter by **Working**, **Needs you**, **Quiet** or **Managers**. Manager highlighting is optional and uses your own JSON file. **New child thread** opens BB’s composer under the selected thread with **Full Access** selected initially; it preserves any permission mode you choose before sending.
 
-Requires BB 0.47.1 or later, the standard sidebar and full plugin trust. Experimental SDK and sidebar DOM integration can change in future BB versions. No external service or management registry is required; sending a thread uses your chosen BB provider. See the [README](https://github.com/neoromantic/bb-plugin-responsibilities/blob/v0.1.0/README.md) for migration and data access. Install from the public [Git release](https://github.com/neoromantic/bb-plugin-responsibilities/releases/tag/v0.1.0); npm publication is pending.
+Results count as seen when open in a visible, focused window. Responsibilities stores attention/seen timestamps in local SQLite without changing BB’s native read state. It can also supply unread-result columns to the optional [Subthread Columns](https://github.com/neoromantic/bb-plugin-subthread-columns) plugin.
+
+Requires BB 0.47.1 / SDK 0.6.79 or later, the standard sidebar and full plugin trust. Experimental APIs and sidebar integration may change. Install `npm:bb-plugin-responsibilities@0.1.0` in BB. No external service or management registry is required. Adds no telemetry; BB and your chosen provider have their own data handling and access requirements. [README](https://github.com/neoromantic/bb-plugin-responsibilities#readme) · [Migration reference](https://github.com/neoromantic/bb-plugin-subthread-columns/blob/main/MIGRATION.md).
