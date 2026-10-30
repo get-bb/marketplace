@@ -1,7 +1,7 @@
 {
   "id": "provider-usage",
   "displayName": "Provider Usage",
-  "description": "Shows how much of each provider's plan is left \u2014 every rate-limit window, percent remaining, and when it resets, including Muse Code's 5-hour and weekly limits \u2014 plus a 7/30/90-day token chart covering every provider, from local transcripts and BB's own usage events.",
+  "description": "See the coding quota you can actually use, with live token rates and reset times. Provider headlines and the navigation badge use the most restrictive subscription window, so a full five-hour allowance cannot hide an exhausted week. Track Gemini through Antigravity alongside Codex, Claude, Cursor and Muse, plus 7/30/90-day token history. Requires existing provider accounts; Antigravity quota reporting uses the signed-in agy CLI on the primary machine.",
   "icon": {
     "url": "./icons/provider-usage-752e444b.svg"
   },
@@ -12,8 +12,8 @@
     "tokens",
     "codex",
     "claude-code",
-    "cursor",
-    "opencode",
+    "gemini",
+    "antigravity",
     "muse",
     "sidebar"
   ],
@@ -28,5 +28,6 @@
       "url": "https://github.com/braedonsaunders/bb-plugin-provider-usage.git",
       "range": ">=0.4.0 <1.0.0"
     }
-  }
+  },
+  "overview": "./overview/provider-usage.md"
 }
