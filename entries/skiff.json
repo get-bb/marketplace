@@ -5,7 +5,8 @@
   "icon": "Server",
   "screenshots": [
     "./screenshots/skiff/thread-in-vm.jpg",
-    "./screenshots/skiff/environment-picker.jpg"
+    "./screenshots/skiff/environment-picker.jpg",
+    "./screenshots/skiff/plugin-settings.jpg"
   ],
   "overview": "./overview/skiff.md",
   "category": "cloud-and-remote",
