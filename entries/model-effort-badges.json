@@ -1,7 +1,7 @@
 {
   "id": "model-effort-badges",
   "displayName": "Model & Effort Badges",
-  "description": "Shows each thread's model and reasoning effort at its provider logo.",
+  "description": "See each thread’s model and reasoning effort in the BB sidebar. Hover for the full name.",
   "icon": "Gauge",
   "author": {
     "name": "Sergey Baus",

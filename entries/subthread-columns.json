@@ -1,7 +1,7 @@
 {
   "id": "subthread-columns",
   "displayName": "Subthread Columns",
-  "description": "Open a thread and its waiting or failed subthreads as columns. Unread-result columns require the optional Responsibilities plugin.",
+  "description": "Answer waiting or failed subthreads beside their parent. Optional Responsibilities adds unread-result columns.",
   "icon": "Columns2",
   "author": {
     "name": "Sergey Baus",

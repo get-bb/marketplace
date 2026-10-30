@@ -1,11 +1,11 @@
 # Model & Effort Badges
 
-See the model family and reasoning effort beside each thread in BB's sidebar. Hover for the full name. Choose a tile, a caption under the logo, or a chip beside it; tile is the default.
+See each BB thread’s model family and reasoning effort without opening its composer. A compact code appears at the provider logo. Hover for the full model name and effort before sending the next turn.
 
 *Synthetic example data in BB 0.47.1, without True Colors.*
 
-True Colors supplies the provider hues and outline/fill styles. Without it, gray letter codes remain, and different providers can show the same code. Hover for the full name.
+Compare several threads at a glance. Choose a tile, a caption under the logo, or a chip beside it; tile is the default for Codex and Claude Code. Use the caption to preserve long titles. Badges show the next turn’s settings; a switch sent to an already running thread appears when it goes idle.
 
-0.7.0 contains badges only. Columns are now [Subthread Columns](https://github.com/neoromantic/bb-plugin-subthread-columns) 0.1.0, installed separately. Read [migration](https://github.com/neoromantic/bb-plugin-model-effort-badges/blob/v0.7.0/MIGRATION.md) before updating from Thread Columns 0.6.0. Status marks, result tracking, manager styling and New child thread belong to the separate Responsibilities plugin, which is not included or publicly available here.
+The separate True Colors plugin supplies provider hues and outline/fill styles. Without it, codes remain gray and different providers can show the same code; use the full-name tooltip to distinguish them.
 
-Declared minimum: BB 0.46.1 / SDK 0.6.49. This split was runtime-tested on BB 0.47.1.
+Declared minimum: BB 0.46.1 / SDK 0.6.49; tested on BB 0.47.1. Full-trust plugin using experimental APIs and the standard sidebar. Install `npm:bb-plugin-model-effort-badges@0.7.0` in BB. Stores no server data and adds no telemetry; BB and providers have their own data handling. [README](https://github.com/neoromantic/bb-plugin-model-effort-badges#readme) · [Migration reference](https://github.com/neoromantic/bb-plugin-model-effort-badges/blob/main/MIGRATION.md).
