@@ -1,0 +1,31 @@
+{
+  "id": "cache-watch",
+  "displayName": "Cache Watch [Experimental]",
+  "description": "See prompt-cache usage and estimated time left in each thread. Inspect cache reads and writes above the composer, or enable time-limited keepalive from the Cache Watch page. Keepalive sends ordinary paid agent turns through your configured provider; cache hits and savings are not guaranteed. Requires BB 0.48+ and Plugin SDK 0.6.104+.",
+  "icon": {
+    "url": "./icons/cache-watch-bd9d3c6e.svg"
+  },
+  "screenshots": [
+    "./screenshots/cache-watch/thread-panel.jpg",
+    "./screenshots/cache-watch/overview.jpg"
+  ],
+  "overview": "./overview/cache-watch.md",
+  "tags": [
+    "prompt-caching",
+    "keepalive",
+    "codex",
+    "claude-code"
+  ],
+  "author": {
+    "name": "Sergey Zhukov",
+    "github": "SergeyZh",
+    "url": "https://github.com/SergeyZh"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/SergeyZh/bb-plugin-cache-watch.git",
+      "range": "^0.1.0"
+    }
+  }
+}
