@@ -1,0 +1,30 @@
+{
+  "id": "otel",
+  "displayName": "OpenTelemetry",
+  "description": "Send per-turn token, cost and quota data from bb to the OpenTelemetry collector you already run. Each finished turn becomes a span with the model, input, output and cache tokens, and cost when the provider reports it; child threads join the trace of their root thread. Histograms and counters track token usage, turn duration, cost, turns and thread transitions, and gauges follow provider quota windows (used percent, reset time). Prompts, replies, tool text, thread titles, file paths and error messages are never exported, and no setting turns that on. Needs an OpenTelemetry collector that you run; nothing is sent until you set its OTLP/HTTP endpoint.",
+  "icon": { "url": "./icons/otel-ba3cf4e8.svg" },
+  "screenshots": ["./screenshots/otel/settings.png"],
+  "overview": "./overview/otel.md",
+  "tags": [
+    "opentelemetry",
+    "otlp",
+    "observability",
+    "tracing",
+    "metrics",
+    "genai",
+    "token-usage",
+    "cost-tracking"
+  ],
+  "author": {
+    "name": "lanjak",
+    "github": "lanjak",
+    "url": "https://github.com/lanjak"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/lanjak/bb-plugin-otel.git",
+      "range": "^0.1.0"
+    }
+  }
+}
