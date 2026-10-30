@@ -1,12 +1,12 @@
-## What you get
+## With Impromptu UI, you can
 
-- Rows above the composer, one per item an agent wants you to act on, such as issues to triage or a Dependabot pull request to merge.
-- A side panel for each item, with its details, a draft you can edit, and buttons that post the draft, start a thread, run a command once you confirm it, or open a link.
-- A film strip for picking a design: screenshots of the original and its alternatives, a note on each, and **Send feedback**, which sends your pick and notes to the thread.
+- **Triage your milestone** without getting lost in paragraphs of feedback. Each recommendation becomes a row with a drafted comment and buttons to post it, post and close, or start a thread.
+- **Create several PRs at once** without juggling threads. Each fix waits on its own card, with its diff and PR description, until you click **Commit, push, and open PR**.
+- **Find the design you want** by reacting to variations instead of describing it up front. Pick one from a film strip, or leave notes for the next round.
 
 ## How it works
 
-A skill writes its results as a view file and publishes it from the thread. Done and dismissed items sink to the bottom, and the agent reads back what you did. Views are stored in the plugin's own database on this machine.
+Impromptu UI gives your agent a toolkit for generating interfaces on the fly. A skill publishes its results as numbered rows above the composer. Click one to open its card in the side panel, with its details, any diff, a draft you can edit, and the buttons that act on it. The agent reads back what you did. Views are stored in the plugin's own database on this machine.
 
 ## For agents
 

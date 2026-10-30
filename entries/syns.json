@@ -27,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/synsdev/syns-bb-plugin.git",
-      "range": "^0.8.2"
+      "range": ">=0.8.2"
     }
   }
 }

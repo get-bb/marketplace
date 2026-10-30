@@ -3,7 +3,7 @@
   "displayName": "Host Monitor",
   "description": "Monitors CPU, memory, disk, network throughput, load, uptime, and user-owned processes across every machine enrolled in bb, with guarded controls to stop eligible processes.",
   "icon": {
-    "url": "./icons/host-monitor-11256331.svg"
+    "url": "./icons/host-monitor-e1143dae.svg"
   },
   "tags": [
     "monitoring",

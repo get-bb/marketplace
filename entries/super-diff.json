@@ -1,0 +1,36 @@
+{
+  "id": "super-diff",
+  "displayName": "Super Diff",
+  "description": "Read a long diff one concern at a time, with each group explained and notes under the lines a reviewer might misread. Click Generate Super Diff in the Diff tab, and the thread's agent groups the changed files into concerns in place of bb's file list, with a line on what each file's change does. Hover any other line, removed ones included, and click Explain this line for a note written on request. Each file keeps bb's Viewed checkbox, each concern counts its viewed files, and the list offers Regenerate when files change after it was written. Requires bb 0.47 or later; generating sends one message to the thread's agent.",
+  "icon": "Layers",
+  "tags": [
+    "code-review",
+    "diff",
+    "changes-panel",
+    "file-diff",
+    "annotations",
+    "explain-code",
+    "review-progress",
+    "git"
+  ],
+  "author": {
+    "name": "Daniel Bachhuber",
+    "github": "danielbachhuber",
+    "url": "https://github.com/danielbachhuber"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/super-diff/overview.png",
+    "./screenshots/super-diff/note.png",
+    "./screenshots/super-diff/out-of-date.png"
+  ],
+  "overview": "./overview/super-diff.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/danielbachhuber/bb-plugins.git",
+      "subdir": "bb-plugin-super-diff",
+      "range": "^0.1.0",
+      "tagPrefix": "super-diff/"
+    }
+  }
+}

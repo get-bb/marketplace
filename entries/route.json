@@ -1,0 +1,38 @@
+{
+  "id": "route",
+  "displayName": "Route",
+  "description": "Hand mechanical edits to a cheaper agent, ask another model, or get a ranked decision without leaving the turn. route_worker runs a task on any BB harness and model you list, in the same environment, and returns its final message. route_ask sends one prompt to any OpenAI-compatible API, and route_decide asks a System One decision model such as TypeSafe Jev for a pick with probabilities. Each tool needs its own provider or endpoint and key, billed by that service.",
+  "icon": "Workflow",
+  "tags": [
+    "delegation",
+    "subagents",
+    "model-routing",
+    "workers",
+    "openai-compatible",
+    "openrouter",
+    "decisions",
+    "jev",
+    "system-one",
+    "multi-model"
+  ],
+  "author": {
+    "name": "lanjak",
+    "github": "lanjak",
+    "url": "https://github.com/lanjak"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "tasks-and-workflows"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/lanjak/bb-plugin-route.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/route/thread.png",
+    "./screenshots/route/settings.png"
+  ],
+  "overview": "./overview/route.md"
+}

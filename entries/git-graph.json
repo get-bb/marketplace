@@ -1,0 +1,31 @@
+{
+  "id": "git-graph",
+  "displayName": "Git History Graph",
+  "description": "Follow branches, merges, and commit history beside your BB thread. Browse up to 200 commits with branch and tag labels, switch between configured repositories, and inspect history from the CLI. Runs Git in the thread's local or connected remote environment without changing the repository. Requires BB 0.47.1+, Git in the environment, and npm for installation; no external account or paid service is needed.",
+  "icon": {
+    "url": "./icons/git-graph-324ef039.svg"
+  },
+  "screenshots": [
+    "./screenshots/git-graph/overview.png"
+  ],
+  "overview": "./overview/git-graph.md",
+  "category": "code-and-reviews",
+  "tags": [
+    "git",
+    "commit-history",
+    "branches",
+    "merges",
+    "repositories"
+  ],
+  "author": {
+    "name": "Gabrielle Neveu",
+    "github": "GabZoFar",
+    "url": "https://github.com/GabZoFar"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/GabZoFar/bb-plugin-git-graph.git",
+      "range": "^0.1.3"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ocean-dark",
+  "displayName": "Ocean Dark",
+  "description": "Give BB blue-grey surfaces, sky-blue accents and teal highlights. Matching syntax and terminal palettes keep code previews and diffs coordinated. Adapts T3 Code's Ocean dark palette and stays dark in Light, Dark or System mode. Requires BB 0.47.1 or later and a compatible Plugin SDK; no account or external service is needed.",
+  "icon": {
+    "url": "./icons/ocean-dark-1832e294.svg"
+  },
+  "screenshots": [
+    "./screenshots/ocean-dark/appearance.jpg",
+    "./screenshots/ocean-dark/code-colours.jpg"
+  ],
+  "overview": "./overview/ocean-dark.md",
+  "tags": [
+    "dark-theme",
+    "blue-grey",
+    "color-scheme",
+    "syntax-highlighting",
+    "terminal-colors",
+    "palette"
+  ],
+  "author": {
+    "name": "Treo-Solutions",
+    "github": "jtattreo",
+    "url": "https://github.com/Treo-Solutions"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "range": "^0.1.0",
+      "url": "https://github.com/Treo-Solutions/bb-plugin-ocean-dark.git"
+    }
+  }
+}

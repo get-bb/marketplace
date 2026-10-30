@@ -1,0 +1,36 @@
+{
+  "id": "waiting-on-you",
+  "displayName": "Waiting On You",
+  "description": "Shows which agent threads wait on your answer or failed, pinned above your thread list, so none of them sit unnoticed. Open one with a click, ⇧⌘J for the next, or ⌥⌘1–9 by its row; a thread leaves the block once you open it. Each question shows when it was asked, and counters in the title track waiting, failed, finished, and working threads. Pick a style, or tune markers, colors, row layout, and row limits on a settings page with a live preview, then move the setup between machines as JSON. Runs on your bb server only, with no account, API key, or outside service.",
+  "icon": {
+    "url": "./icons/waiting-on-you-119f8001.svg"
+  },
+  "screenshots": [
+    "./screenshots/waiting-on-you/overview.jpg",
+    "./screenshots/waiting-on-you/rows.jpg",
+    "./screenshots/waiting-on-you/colors.jpg"
+  ],
+  "overview": "./overview/waiting-on-you.md",
+  "tags": [
+    "needs-you",
+    "attention",
+    "approvals",
+    "questions",
+    "failed-threads",
+    "sidebar",
+    "keyboard-shortcuts",
+    "threads"
+  ],
+  "author": {
+    "name": "qwent71",
+    "github": "qwent71",
+    "url": "https://github.com/qwent71"
+  },
+  "category": "notifications",
+  "source": {
+    "git": {
+      "url": "https://github.com/qwent71/bb-plugin-waiting-on-you.git",
+      "range": "^0.1.0"
+    }
+  }
+}

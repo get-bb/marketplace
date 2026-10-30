@@ -1,0 +1,33 @@
+{
+  "id": "kimi-code",
+  "displayName": "Kimi Code",
+  "description": "Adds Moonshot's Kimi Code as a provider: run its threads from bb's provider picker, locally and on enrolled remote hosts. Turns stream into the native bb timeline — replies and tool calls such as file edits and shell commands — with resume and bb permission modes gating each action. The model picker fills from Kimi Code itself (K3, K3-256k, K2.8 Preview, K2.7 Code Highspeed), with thinking levels and the Default / Plan / Auto / YOLO mode selector. Kimi Code's slash commands (/compact, /status, /usage, and your own skill commands) appear in the composer menu. Requires the Kimi Code CLI and a signed-in account on each host (kimi login); the provider card can install the CLI where it is missing.",
+  "icon": {
+    "url": "./icons/kimi-code-541a21b8.png"
+  },
+  "tags": [
+    "kimi",
+    "moonshot",
+    "providers",
+    "agents",
+    "acp",
+    "developer-tools"
+  ],
+  "author": {
+    "name": "Dmitry Polishuk",
+    "github": "dpolishuk",
+    "url": "https://github.com/dpolishuk"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/dpolishuk/bb-kimi-code.git",
+      "range": "^0.2.0"
+    }
+  },
+  "overview": "./overview/kimi-code.md",
+  "screenshots": [
+    "./screenshots/kimi-code/model-picker.png",
+    "./screenshots/kimi-code/thread-turn.png"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "pinned-turns",
+  "displayName": "Pinned Turns",
+  "description": "Keep the question you are reading under and the agent's last answer in view while you scroll a long thread. Click either one to jump back to it; the page's address and the back button stay as they were. A counter such as 7/23 shows which turn you are on, and a turn that is still running pulses. A Pinned turns submenu in the thread's actions menu switches the bar and each option on or off. It reads BB's timeline layout, which is not a documented interface, so a BB update may need a plugin update. Requires BB 0.48 or later.",
+  "icon": "Pin",
+  "tags": [
+    "long-threads",
+    "scrolling",
+    "navigation",
+    "timeline",
+    "jump-to-message",
+    "turn-counter",
+    "sticky-header",
+    "reading"
+  ],
+  "author": {
+    "name": "nfour",
+    "github": "nfour",
+    "url": "https://github.com/nfour"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/pinned-turns/bar.png",
+    "./screenshots/pinned-turns/menu.png"
+  ],
+  "overview": "./overview/pinned-turns.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/nfour/bb-plugins.git",
+      "subdir": "bb-plugin-pinned-turns",
+      "range": "^0.1.0",
+      "tagPrefix": "pinned-turns/"
+    }
+  }
+}

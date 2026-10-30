@@ -1,0 +1,38 @@
+{
+  "id": "zcode",
+  "displayName": "ZCode",
+  "description": "Run ZCode coding agents inside bb, with streamed replies, native tool activity, approvals, and sessions you can resume and rewind. Follow every ZCode tool call in the thread timeline, answer approvals inline, and track background agents and scheduled automations. Dynamic workflows render as causality graphs with live per-agent progress, and a Workflows hub lists run history across threads. Requires bb 0.46.1, Node.js 24+, and the ZCode CLI installed separately; sessions run under your own Z.ai Coding Plan or API account, billed by Z.ai. Verified on macOS against ZCode CLI 0.16.9-0.17.0; Linux and Windows are unverified.",
+  "icon": {
+    "url": "./icons/zcode-f8cd1ca5.svg"
+  },
+  "screenshots": [
+    "./screenshots/zcode/thread-timeline.png"
+  ],
+  "tags": [
+    "glm",
+    "zai",
+    "coding-agent",
+    "sessions",
+    "approvals",
+    "workflows",
+    "automations",
+    "resume",
+    "model-selection"
+  ],
+  "author": {
+    "name": "Dmitry Polishuk",
+    "github": "dpolishuk",
+    "url": "https://github.com/dpolishuk"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "tasks-and-workflows"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/dpolishuk/bb-zcode.git",
+      "range": "^0.14.1"
+    }
+  },
+  "overview": "./overview/zcode.md"
+}

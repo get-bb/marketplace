@@ -1,7 +1,7 @@
 {
   "id": "file-pins",
   "displayName": "Pinned Files & Links",
-  "description": "Keep a thread's key files and links one click away, in a strip right above the composer. Each pin shows its file icon or site icon and is as wide as its label, with extra pins waiting in a ⋯ list. Type file names or URLs after the Pin pill and the agent finds and pins them; agents also pin the PR, issue, spec and dev server they work with on their own. Right-click a pin to preview, copy, unpin or remove it, and open Moss notes in Moss Viewer when it's installed.",
+  "description": "Keep a thread's key files and links one click away, in a strip right above the composer. Each pin shows its file icon or site icon and is as wide as its label, with extra pins waiting in a ⋯ list. Type file names or URLs after the Pin pill and the agent finds and pins them; agents also pin the PR, issue, spec and dev server they work with on their own. Right-click a pin to preview, copy, unpin or remove it.",
   "icon": {
     "url": "./icons/file-pins-6c0372df.svg"
   },

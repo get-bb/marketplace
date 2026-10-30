@@ -9,8 +9,6 @@
 
 Click a pin to open it the way bb opens files and links. Right-click a file for **Open preview**, **Open externally**, **Copy file path** and **Copy file name**, then **Unpin** to move it to the ⋯ list or **Remove**, which offers **Undo**. Pin a file back from the ⋯ list while the strip has room. Missing files stay visible with a light red tint.
 
-With Moss Viewer installed, a pinned Moss note opens in its panel, even when the note lives on another machine, and **Open in Moss** there opens it for editing.
-
 Pins persist per thread across clients and restarts. Agents and scripts can also run `bb file-pins pin`, `list` and `remove`.
 
 ## Privacy

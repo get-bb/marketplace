@@ -1,0 +1,24 @@
+{
+  "id": "machine-monitor",
+  "displayName": "Machine Monitor",
+  "description": "Check CPU, GPU, memory, disk, network and battery on any of your bb machines from one sidebar panel. Pick the bb server, your own machines or BB Box boxes from a searchable list, and each opens with live charts and its five busiest processes. On Apple silicon Macs it adds CPU and GPU temperature and power, read by a small bundled helper that needs no root. Tailscale name, address and tags sit at the bottom, each with a copy button. Works on Linux, macOS and WSL, and optional in-app alerts warn when the bb server stays overloaded.",
+  "icon": { "url": "./icons/machine-monitor-f44b9ee5.svg" },
+  "screenshots": [
+    "./screenshots/machine-monitor/overview.png",
+    "./screenshots/machine-monitor/machines.png"
+  ],
+  "overview": "./overview/machine-monitor.md",
+  "tags": ["monitoring", "machines", "cpu", "gpu", "memory", "battery", "temperature", "tailscale", "macos", "system-health"],
+  "author": {
+    "name": "Victor Aremu",
+    "github": "ahkohd",
+    "url": "https://github.com/ahkohd"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/ahkohd/bb-plugin-machine-monitor.git",
+      "range": "^0.2.0"
+    }
+  }
+}

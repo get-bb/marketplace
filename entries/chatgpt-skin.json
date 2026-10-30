@@ -29,8 +29,10 @@
   "category": "themes-and-appearance",
   "source": {
     "git": {
-      "url": "https://github.com/euanguo/bb-plugin-chatgpt-skin.git",
-      "range": "^0.1.1"
+      "url": "https://github.com/euanguo/euanguo-plugins.git",
+      "subdir": "plugins/chatgpt-skin",
+      "range": "^0.2.0",
+      "tagPrefix": "chatgpt-skin/"
     }
   },
   "overview": "./overview/chatgpt-skin.md"

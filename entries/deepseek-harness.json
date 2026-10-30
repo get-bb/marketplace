@@ -1,8 +1,10 @@
 {
   "id": "deepseek-harness",
   "displayName": "DeepSeek Harness",
-  "description": "Run DeepSeek Harness (dsh) threads in bb over ACP, with Standard, Creator, and Minimal modes picked right above the composer, harness slash commands exposed to the agent, and one-command provisioning of the dsh profiles, run_command plugin, and ACP bridge patch. Requires dsh installed globally and a model credential for its route.",
-  "icon": "AiBrain01",
+  "description": "Run DeepSeek Harness (dsh) threads in bb over ACP, with Standard, Creator, and Minimal modes chosen in the New thread composer, a read-only badge naming the mode a thread booted with, a live roster of the dsh subagents a thread deploys, harness slash commands exposed to the agent, and one-command provisioning of the dsh profiles, run_command plugin, and ACP bridge patch. Requires dsh installed globally and a model credential for its route.",
+  "icon": {
+    "url": "./icons/deepseek-harness-29d6d190.svg"
+  },
   "tags": [
     "deepseek",
     "dsh",
@@ -10,7 +12,9 @@
     "provider",
     "acp",
     "modes",
-    "slash-commands"
+    "slash-commands",
+    "subagents",
+    "observability"
   ],
   "author": {
     "name": "Hemang Vellore",
@@ -21,7 +25,7 @@
   "source": {
     "git": {
       "url": "https://github.com/hv-V6/bb-plugin-deepseek-harness.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   },
   "screenshots": [

@@ -1,0 +1,36 @@
+{
+  "id": "media-viewer",
+  "displayName": "Media Viewer",
+  "description": "Zoom into screenshots, step through recordings and play audio in bb's right panel instead of a fit-only preview. Drag to pan, pinch or Ctrl-scroll to zoom at the pointer, and double-click to switch between Fit and a close-up. Previous and next step through every image, video and audio file in the same folder. Videos get frame stepping, seeking and speeds from 0.25× to 2×, and agents can show the same viewer inline in a reply with a ::media directive.",
+  "icon": "ZoomIn",
+  "screenshots": [
+    "./screenshots/media-viewer/zoom.png",
+    "./screenshots/media-viewer/video.png"
+  ],
+  "overview": "./overview/media-viewer.md",
+  "tags": [
+    "images",
+    "video",
+    "screenshots",
+    "zoom",
+    "audio",
+    "recordings",
+    "media",
+    "preview"
+  ],
+  "author": {
+    "name": "Dhiyaan Nirmal",
+    "github": "dhiyaancnirmal",
+    "url": "https://github.com/dhiyaancnirmal"
+  },
+  "category": "file-viewers-and-editors",
+  "secondaryCategories": [
+    "thread-content"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/dhiyaancnirmal/bb-plugin-media-viewer.git",
+      "range": "^0.1.0"
+    }
+  }
+}

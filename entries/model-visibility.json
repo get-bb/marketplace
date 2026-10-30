@@ -1,0 +1,26 @@
+{
+  "id": "model-visibility",
+  "displayName": "Hide Models",
+  "description": "Keep the model picker short without losing access to any model. Move chosen model IDs out of the main list and into More models, where they stay selectable and searchable. Hide models per provider, with Hide all for a whole catalog and a Configure... shortcut in More models. Hiding is display-only: the selected model, reasoning level, service tier, and provider catalogs are unchanged. Experimental and desktop-only for BB 0.47.1; the compact picker fails open, and a future picker layout change may need a plugin update.",
+  "icon": { "url": "./icons/model-visibility-73493371.svg" },
+  "screenshots": [
+    "./screenshots/model-visibility/more-models-home.jpg",
+    "./screenshots/model-visibility/settings.jpg"
+  ],
+  "overview": "./overview/model-visibility.md",
+  "tags": ["model-picker", "provider-models", "model-list", "picker", "desktop-app"],
+  "author": {
+    "name": "brzvsk",
+    "github": "brzvsk",
+    "url": "https://github.com/brzvsk"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/brzvsk/bb-plugins.git",
+      "subdir": "plugins/model-visibility",
+      "range": "^0.1.0",
+      "tagPrefix": "model-visibility/"
+    }
+  }
+}

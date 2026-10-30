@@ -1,0 +1,39 @@
+{
+  "id": "workbench-explorer",
+  "displayName": "Workbench Explorer",
+  "description": "Keeps a file tree beside every thread that shows what the agent changed in git colours, one click away from the diff. Quick Open finds any file from a few letters of its name, and Search in Files previews every replacement before it is written. The tree works from the keyboard: arrows, F2 to rename, Delete to move to the Trash with Undo, and Cut, Copy and Paste for files; drag and drop moves them. Files open in BB's own editor, with Material Icon Theme icons. Git colours and diffs need a git repository; the Trash works on macOS and Linux.",
+  "icon": {
+    "url": "./icons/workbench-explorer-cadeb2f5.svg"
+  },
+  "tags": [
+    "file-explorer",
+    "file-tree",
+    "git-status",
+    "diff",
+    "quick-open",
+    "search-and-replace",
+    "material-icons",
+    "vscode",
+    "drag-and-drop",
+    "keyboard"
+  ],
+  "author": {
+    "name": "architawr",
+    "github": "architawr",
+    "url": "https://github.com/architawr"
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/workbench-explorer/explorer-and-editor.png",
+    "./screenshots/workbench-explorer/changes-and-diff.png",
+    "./screenshots/workbench-explorer/search-and-replace.png",
+    "./screenshots/workbench-explorer/quick-open.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/architawr/bb-plugin-workbench-explorer.git",
+      "range": "^0.3.0"
+    }
+  },
+  "overview": "./overview/workbench-explorer.md"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "nudger",
+  "displayName": "Nudger",
+  "description": "Agents stop halfway and wait for you to type “go on”. Nudger types it for you: Jev reads each stopped thread and nudges only unfinished work, never past a blocker or a request for permission. Bring your own Jev API key.",
+  "icon": { "url": "./icons/nudger-3f79dd1b.svg" },
+  "tags": ["auto-continue", "agent-monitoring", "blockers", "jev", "statistics"],
+  "author": { "name": "ComicBit", "github": "ComicBit", "url": "https://github.com/ComicBit" },
+  "category": "tasks-and-workflows",
+  "source": { "git": { "url": "https://github.com/ComicBit/bb-plugin-nudger.git", "range": "^0.1.0" } },
+  "screenshots": ["./screenshots/nudger/statistics.png", "./screenshots/nudger/settings.png"],
+  "overview": "./overview/nudger.md"
+}

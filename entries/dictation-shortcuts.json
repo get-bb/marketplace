@@ -1,0 +1,33 @@
+{
+  "id": "dictation-shortcuts",
+  "displayName": "Dictation Shortcuts",
+  "description": "Dictate into a BB draft by holding Space, then release to finish. Enter finishes recording without sending, Escape cancels, and Ctrl+Shift+Space toggles recording without holding a key. Microphone tooltips and modifier-held badges show the controls beside BB’s native buttons. Requires BB 0.46.1+, microphone permission and an available BB voice-input service; that service’s existing account requirements and charges still apply, with no additional speech service installed.",
+  "icon": {
+    "url": "./icons/dictation-shortcuts-23ff5922.svg"
+  },
+  "tags": [
+    "voice",
+    "dictation",
+    "push-to-talk",
+    "keyboard",
+    "shortcuts",
+    "speech-to-text"
+  ],
+  "author": {
+    "name": "Artur Karapetyan",
+    "github": "architawr",
+    "url": "https://github.com/architawr"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/dictation-shortcuts/microphone-tooltip.jpg",
+    "./screenshots/dictation-shortcuts/keyboard-hints.jpg"
+  ],
+  "overview": "./overview/dictation-shortcuts.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/architawr/bb-plugin-dictation-shortcuts.git",
+      "range": "^0.2.1"
+    }
+  }
+}

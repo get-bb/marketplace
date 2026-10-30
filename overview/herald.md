@@ -8,10 +8,15 @@ know which thread to go back to without watching the sidebar.
   fails, the bb app says one sentence about it — what is being asked and the choices, the command, or
   the start of what was done.
 - A Herald page in the sidebar listing every waiting thread with its reason and sentence, and a count
-  beside the sidebar entry. Tap a row to open the thread, or Read again to hear it again.
+  on its sidebar entry. Tap a row to open the thread, or Read again to hear it again.
+- Below them on the same page, the latest sentences from every thread in every project, 20 by default
+  and up to 50, each opening its thread.
 - The sentence above the waiting thread's composer, with a Read again button, until you answer.
 - Settings for where to speak (desktop app, browser tab, mobile app), the voice and speed, and which
   kinds of event are announced.
+- A choice in each thread's menu: Announce, Questions only, or Silent. A worker without one follows the
+  thread that started it, so silencing a coordinator silences its workers. On bb 0.48, set it for several
+  threads selected in the sidebar at once.
 - Optionally, a model writes each sentence: Claude Code, OpenAI Codex, Gemini CLI or a command of your
   own, installed on the Mac running bb, runs once per announcement with no tools or read-only. Off by
   default; the plain sentence is spoken whenever the tool fails or is slow.
@@ -23,6 +28,7 @@ Herald adds a sentence to be heard, speech on every client, and one list of what
 
 ## What it needs
 
+- bb 0.47 or newer.
 - No account or external service for the plain sentence: it is built from the event itself. A
   model-written sentence needs the chosen command-line tool installed and logged in on the Mac running
   bb, and each announcement costs one short model turn there.

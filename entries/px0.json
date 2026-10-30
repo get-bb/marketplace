@@ -1,0 +1,35 @@
+{
+  "id": "px0",
+  "displayName": "px0",
+  "description": "Review and edit a thread's codebase without leaving its BB conversation. Browse files, search the workspace, inspect symbols and references, and review Git diffs in a full-tab px0 workspace. px0's native editor saves changes and creates files or folders while refreshing Git, search, and language-server state. Requires px0 0.1.20 or newer on each workspace machine; remote panels require BB Connect.",
+  "icon": {
+    "url": "./icons/px0-b1e76fa6.png"
+  },
+  "tags": [
+    "code-review",
+    "file-browser",
+    "editor",
+    "git",
+    "workspace",
+    "search"
+  ],
+  "author": {
+    "name": "Kavii Suri",
+    "github": "KaviiSuri",
+    "url": "https://github.com/KaviiSuri"
+  },
+  "category": "file-viewers-and-editors",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "overview": "./overview/px0.md",
+  "screenshots": [
+    "./screenshots/px0/px0-editor.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/KaviiSuri/bb-plugin-px0.git",
+      "range": "^0.1.1"
+    }
+  }
+}

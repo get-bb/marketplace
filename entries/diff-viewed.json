@@ -1,14 +1,13 @@
 {
   "id": "diff-viewed",
-  "displayName": "Diff Viewed",
-  "description": "Use a Viewed checkbox on each file to keep track of what you've read in a long diff, synced with GitHub on the thread's pull request. Checking a file collapses and dims it, and the toolbar counts how far you have got, such as 3/6 viewed. A mark clears itself when the file's diff changes, so a rebase or a new hunk puts the file back in front of you. An Only unviewed filter hides the files you have read. Requires bb 0.41 or later, and GitHub sync needs the gh CLI signed in.",
+  "displayName": "Diff Viewed Enhanced",
+  "description": "See how much of a long diff you've read, with a viewed count beside bb's own Viewed checkboxes and the same marks on GitHub. The changes panel toolbar counts the files you have checked, such as 3/6 viewed, across every file in the range. On a thread with an open pull request, checking a file in bb marks it viewed on GitHub, and a file marked viewed on GitHub is checked in bb. A file with edits you have not pushed shows a Local icon until a push makes its diff match the pull request's. Requires bb 0.47 or later, and GitHub sync needs the gh CLI signed in.",
   "icon": "CircleCheck",
   "tags": [
     "code-review",
     "changes-panel",
     "file-diff",
     "review-progress",
-    "collapse",
     "line-wrap",
     "split-view",
     "git",
@@ -23,7 +22,6 @@
   "category": "code-and-reviews",
   "screenshots": [
     "./screenshots/diff-viewed/viewed.png",
-    "./screenshots/diff-viewed/only-unviewed.png",
     "./screenshots/diff-viewed/local.png"
   ],
   "overview": "./overview/diff-viewed.md",

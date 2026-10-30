@@ -1,0 +1,30 @@
+{
+  "id": "omp-subagents",
+  "displayName": "OMP Subagents",
+  "description": "Watch OMP subagents work instead of staring at a \"Ran tool\" row. Each spawn gets a live line per agent under it in the dialog, and the thread header opens a panel with every agent's status, model, tokens, cost, transcript and final output. A box in the panel messages the OMP session, and a bb omp-subagents command gives agents the same view. Requires threads on the omp provider and the omp CLI on the machine that runs them.",
+  "icon": "Bot",
+  "tags": [
+    "omp",
+    "subagents",
+    "observability",
+    "transcripts",
+    "delegation",
+    "status"
+  ],
+  "author": {
+    "name": "Andrey Dagaev",
+    "github": "IMPOSTOR15",
+    "url": "https://github.com/IMPOSTOR15"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/IMPOSTOR15/bb-plugin-omp-subagents.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/omp-subagents/roster-and-strip.png"
+  ],
+  "overview": "./overview/omp-subagents.md"
+}

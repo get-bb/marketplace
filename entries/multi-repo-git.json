@@ -1,21 +1,22 @@
 {
   "id": "multi-repo-git",
-  "displayName": "Multi Repo Git",
-  "description": "Keep related subprojects together and choose whether a chat works on the workspace or one subproject. Set each project's visible thread-family limit from 1 to 100 (default 5), with independent Show more controls. Use Edit workspace to connect folders while keeping BB's native thread rows, menus and actions. Inspect and commit changes in each linked repository through Source Control; requires BB 0.46 or newer, SDK 0.6.37 or newer, and the built-in thread-list sidebar.",
+  "displayName": "Atrium — MonoRepo Projects",
+  "description": "Keep a monorepo or a folder of related projects as one BB workspace: subprojects nest under it in the sidebar, and you chat about the whole workspace or one subproject. Set how many thread families each project shows (1–100, default 5) with independent Show more. Optional Source Control commits in each repository. Requires BB 0.46+, SDK 0.6.37+ and the built-in thread-list sidebar.",
   "icon": "FolderGit",
   "tags": [
     "workspaces",
     "subprojects",
     "sidebar",
     "project-chats",
-    "pagination",
+    "repositories",
     "thread-limits",
     "folders",
     "source-control",
-    "git"
+    "git",
+    "monorepo"
   ],
   "author": {
-    "name": "nicolay-i",
+    "name": "Nicolay I",
     "github": "nicolay-i",
     "url": "https://github.com/nicolay-i"
   },
@@ -26,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/nicolay-i/bb-plugin-multi-repo-git.git",
-      "range": "^0.1.1"
+      "range": "^0.1.2"
     }
   },
   "screenshots": [
