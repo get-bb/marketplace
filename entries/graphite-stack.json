@@ -6,7 +6,8 @@
     "url": "./icons/graphite-stack-35373369.svg"
   },
   "screenshots": [
-    "./screenshots/graphite-stack/review.jpg"
+    "./screenshots/graphite-stack/review.jpg",
+    "./screenshots/graphite-stack/thread-review.jpg"
   ],
   "overview": "./overview/graphite-stack.md",
   "tags": [
