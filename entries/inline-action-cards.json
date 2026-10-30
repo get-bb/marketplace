@@ -1,0 +1,35 @@
+{
+  "id": "inline-action-cards",
+  "displayName": "Inline Decisions",
+  "description": "Answer agent questions and keep track of what you decided. Pick an option, write an answer, or dismiss an item in Waiting on you; review waiting items and results in the Decision log. Review and edit email replies before approving them. Requires bb and an agent; Gmail actions use the agent’s separately connected Gmail tools.",
+  "icon": {
+    "url": "./icons/inline-action-cards-3d717340.svg"
+  },
+  "tags": [
+    "approvals",
+    "questions",
+    "choices",
+    "email-drafts"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "subdir": "plugins/inline-action-cards",
+      "range": "^0.3.3",
+      "tagPrefix": "inline-action-cards/"
+    }
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/inline-action-cards/decision-in-thread.png",
+    "./screenshots/inline-action-cards/decision-result.png",
+    "./screenshots/inline-action-cards/waiting-drawer.png",
+    "./screenshots/inline-action-cards/decision-log.png"
+  ],
+  "overview": "./overview/inline-action-cards.md"
+}

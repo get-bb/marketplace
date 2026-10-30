@@ -1,0 +1,30 @@
+{
+  "id": "video-markup",
+  "displayName": "Video Markup",
+  "description": "Give video feedback on the exact frame and carry unresolved notes into the next cut. Draw boxes, arrows, or zoom regions and send selected notes with their captured stills. Review demos and version history in the thread panel. Requires bb 0.43.4 or newer and ffprobe on the video host for automatic metadata and exact frame timestamps.",
+  "icon": "Play",
+  "tags": [
+    "video",
+    "frame-notes",
+    "review",
+    "versions"
+  ],
+  "author": {
+    "name": "brsbl",
+    "github": "brsbl",
+    "url": "https://github.com/brsbl"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/video-markup/frame-review.png",
+    "./screenshots/video-markup/revision-review.png",
+    "./screenshots/video-markup/prompt-handoff.png"
+  ],
+  "overview": "./overview/video-markup.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/brsbl/bb-plugins.git",
+      "ref": "plugin/video-markup"
+    }
+  }
+}
