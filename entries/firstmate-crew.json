@@ -17,7 +17,7 @@
       "url": "https://github.com/gpambrozio/bb-plugins.git",
       "subdir": "firstmate-crew",
       "tagPrefix": "firstmate-crew/",
-      "range": "^0.7.0"
+      "range": "^0.8.0"
     }
   }
 }
