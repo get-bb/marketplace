@@ -1,17 +1,18 @@
 {
   "id": "jb-flow",
   "displayName": "JB Flow",
-  "description": "Puts the agent threads that need you at the top, and keeps the rest out of the way until they do. A Triage sidebar sorts threads into Needs me and numbered lanes you move between with one key. Snooze hides a thread until a time you pick and brings it back unread, with an optional note for the agent. Agents call wait_for_ci and end their turn instead of polling GitHub, and are messaged when checks finish or a review arrives. PR and CI features need the GitHub CLI.",
+  "description": "Puts the agent threads that need you at the top, and keeps the rest out of the way until they do. A Triage sidebar sorts threads into Needs me and numbered lanes you move between with one key, and workspace tabs group projects, threads and tools by area of work. ⌘K searches threads, messages and PRs, and Tab on a result replies to it, snoozes, moves or archives it. Snooze hides a thread until a time you pick and brings it back unread. Agents call wait_for_ci and end their turn instead of polling GitHub, and are messaged when checks finish or a review arrives. PR and CI features need the GitHub CLI.",
   "icon": "TimeSchedule",
   "tags": [
     "triage",
+    "workspaces",
+    "command-palette",
     "snooze",
     "sidebar",
     "keyboard-shortcuts",
     "pull-requests",
     "ci",
     "github",
-    "digest",
     "dev-servers"
   ],
   "author": {
@@ -28,6 +29,8 @@
   },
   "screenshots": [
     "./screenshots/jb-flow/triage.png",
+    "./screenshots/jb-flow/palette.png",
+    "./screenshots/jb-flow/workspaces.png",
     "./screenshots/jb-flow/home.png",
     "./screenshots/jb-flow/settings.png"
   ],

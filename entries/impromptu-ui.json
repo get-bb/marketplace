@@ -1,7 +1,7 @@
 {
   "id": "impromptu-ui",
   "displayName": "Impromptu UI",
-  "description": "Generate interfaces for what you need to process or act on, instead of walls of text in chat. An agent's results, such as issues to triage or a Dependabot pull request to merge, appear as rows above the composer, one per item. Each row opens a side panel with the details, a draft you can edit, and buttons that post it, start a thread, run a command once you confirm it, or open a link. For design choices, a film strip shows screenshots of the original and each alternative, and Send feedback returns your pick and notes to the thread. The agent reads back what you did and carries on from there. Requires bb 0.43 or later, and needs no account or external service.",
+  "description": "Turn your agent's walls of text into interfaces you can click. Triage a milestone from rows that each carry a drafted comment and Post and close, Post, and Start thread buttons. Split one review comment into several pull requests, each waiting on its own card with its diff until you click Commit, push, and open PR. Find a design by picking from screenshots of the original and its variations, with a note on each. Requires bb 0.43 or later, and needs no account or external service.",
   "icon": "GridView",
   "tags": [
     "agent-output",
@@ -11,7 +11,7 @@
     "composer",
     "drafts",
     "design-review",
-    "dependabot",
+    "pull-requests",
     "skills",
     "interactive"
   ],
@@ -22,8 +22,8 @@
   },
   "category": "thread-content",
   "screenshots": [
-    "./screenshots/impromptu-ui/dependabot-item-open.png",
-    "./screenshots/impromptu-ui/dependabot-in-chat.png",
+    "./screenshots/impromptu-ui/three-prs-at-once.png",
+    "./screenshots/impromptu-ui/milestone-triage.png",
     "./screenshots/impromptu-ui/visual-review.png"
   ],
   "overview": "./overview/impromptu-ui.md",

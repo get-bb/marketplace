@@ -1,0 +1,39 @@
+{
+  "id": "aura-motion",
+  "displayName": "Aura Motion",
+  "description": "Play your own video, GIF or photo behind every BB conversation, with your messages on frosted glass so they stay readable. MP4 and WebM loops up to 24 MB play at up to 4K, and GIFs up to 8 MB play at their own frame timing. Choose Solid, Glass or Sheer for the message column: dark glass dims bright frames, phones get frosted cards so text stays readable, and Reduce Transparency turns it solid. Add an optional moving pixel-dither effect with seven patterns or five photo motions, and save six backgrounds to switch with one click. Images and videos stay on your BB server; the optional GitHub activity overview needs the GitHub CLI signed in on that server. A fork of Aura by Mateo Cerquetella; install it instead of Aura, not beside it.",
+  "icon": {
+    "url": "./icons/aura-motion-8ecadf20.svg"
+  },
+  "tags": [
+    "wallpaper",
+    "backgrounds",
+    "video-wallpaper",
+    "gif",
+    "animated-wallpaper",
+    "frosted-glass",
+    "glassmorphism",
+    "dithering",
+    "personalization",
+    "4k"
+  ],
+  "author": {
+    "name": "Nikos Benakis",
+    "github": "NickolasBenakis",
+    "url": "https://github.com/NickolasBenakis"
+  },
+  "category": "themes-and-appearance",
+  "overview": "./overview/aura-motion.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/NickolasBenakis/bb-plugin-aura-motion.git",
+      "range": "^0.3.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/aura-motion/01-chat-glass-dark.jpg",
+    "./screenshots/aura-motion/02-chat-glass-light.jpg",
+    "./screenshots/aura-motion/03-new-thread.jpg",
+    "./screenshots/aura-motion/04-settings.jpg"
+  ]
+}

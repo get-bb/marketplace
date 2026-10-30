@@ -11,14 +11,14 @@ once you disable it. One sidebar page is where you make, read and change those j
 - Run now, Enable, Disable, Edit and Delete, each doing the launchd part for you.
 - Commands run through your login shell with your terminal's PATH, so tools from Homebrew or a version
   manager are found.
-- The sidebar row says how many jobs are failing; opening a job clears it until it fails again.
+- The sidebar entry shows how many jobs are failing; opening a job clears it until it fails again.
 - With several Macs connected to bb, a picker chooses whose jobs you see.
 - Jobs made by the Paseo `launchd-jobs` plugin appear as they are, with their history, and are never
   moved.
 
 ## What it needs
 
-macOS on the Mac whose jobs you manage. Commands run as you, with your permissions; only plists under
+bb 0.47 or newer, and macOS on the Mac whose jobs you manage. Commands run as you, with your permissions; only plists under
 the plugin's own label prefix are ever listed or changed.
 
 ## Not a replacement for bb automations

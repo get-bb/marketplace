@@ -1,0 +1,38 @@
+{
+  "id": "beside",
+  "displayName": "Beside",
+  "description": "Turns the bb sidebar into an inbox where threads keep their place and finished work waits on shelves until it has news. Snooze, settle or mute a thread from its row or from bb's thread menu, and it comes back when it finishes, fails or asks you something. Child threads nest under their parent, and pinned threads drag into your own order. Shelf menus act in bulk with Undo. Optional rules settle threads after you read them, archive long-settled work, or ask a self-hosted decision model whether news needs you. Needs bb 0.46 or later.",
+  "icon": {
+    "url": "./icons/beside-1c3f6754.svg"
+  },
+  "tags": [
+    "inbox",
+    "sidebar",
+    "threads",
+    "snooze",
+    "mute",
+    "nested-threads",
+    "pinned-threads",
+    "bulk-actions",
+    "auto-archive"
+  ],
+  "author": {
+    "name": "Victor Aremu",
+    "github": "ahkohd"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/ahkohd/bb-plugin-beside.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/beside/overview.png",
+    "./screenshots/beside/row-actions.png",
+    "./screenshots/beside/inbox-menu.png",
+    "./screenshots/beside/shelves.png",
+    "./screenshots/beside/decision-mode.png"
+  ],
+  "overview": "./overview/beside.md"
+}

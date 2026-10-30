@@ -1,0 +1,32 @@
+{
+  "id": "minus",
+  "displayName": "Minus",
+  "description": "Hide the bb controls you never click and fold runs of tool calls into one \"Called N tools\" row. Twenty-seven switches in Settings, grouped by area, each remove one element: back/forward buttons, sidebar and panel toggles, \"...\" menus, the Commit and \"Open in\" buttons, the prompt box buttons and the items under it, the message navigator, message and code block hover buttons, thinking rows, thread provider icons, and the macOS workbench padding. Changes apply in every open window without a reload, and keyboard shortcuts keep working for hidden controls. A bb update that renames an element can bring it back until the plugin catches up.",
+  "icon": "EyeOff",
+  "overview": "./overview/minus.md",
+  "tags": [
+    "declutter",
+    "hide",
+    "minimal",
+    "interface",
+    "tool-calls",
+    "thinking",
+    "sidebar",
+    "toolbar",
+    "focus"
+  ],
+  "author": {
+    "name": "n30g30",
+    "github": "n30g30"
+  },
+  "category": "themes-and-appearance",
+  "secondaryCategories": [
+    "thread-content"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/n30g30/bb-plugin-minus.git",
+      "range": "^0.2.0"
+    }
+  }
+}

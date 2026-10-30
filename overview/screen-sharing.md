@@ -17,7 +17,7 @@ port is opened to the internet.
   screen, in Chrome, Edge and bb's desktop app, to give the shared Mac the browser's shortcuts too.
 - Clipboard: send your clipboard text to the Mac, copy the Mac's here, or keep both in sync
   automatically, in any language; the choice is remembered for the next connection.
-- While any session is open, on any device, the sidebar row says Live and a pill in the corner of
+- While any session is open, on any device, the sidebar entry carries a LIVE badge and a pill in the corner of
   every bb window offers Close all, which ends every session on every Mac.
 - Leave the page and come back: the session keeps running in that bb window and is still signed in.
 - Sessions end on Disconnect or Close all, when you close the window, after 30 minutes without
@@ -33,6 +33,7 @@ Sharing inside its own encrypted sign-in, and bb never logs or keeps it.
 
 ## What it needs
 
+- bb 0.47 or newer.
 - Screen Sharing turned on, on each Mac you want to see, in System Settings → General → Sharing.
   macOS does not let an app turn it on for you.
 - Other Macs enrolled in this bb, with bb's host daemon connected.

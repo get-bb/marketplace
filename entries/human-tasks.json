@@ -1,0 +1,38 @@
+{
+  "id": "human-tasks",
+  "displayName": "Human tasks",
+  "description": "Collect the steps only you can do in one checklist, and the agent that asked resumes when you finish. Agents hand you tasks with steps, like creating an API key, adding a DNS record, or testing a build on your phone, each linked to the project, thread, and bot that asked. Each task says what the agent would need to do it itself, such as an MCP server, an API key, or your browser, so you can do it or let the agent do it. Blocking tasks wait as a form in their thread so your push notifications fire, and credentials come back through bb's secret form instead of the chat.",
+  "icon": {
+    "url": "./icons/human-tasks-b6a5ff66.svg"
+  },
+  "screenshots": [
+    "./screenshots/human-tasks/1-tasks.jpg",
+    "./screenshots/human-tasks/2-blocking-task.jpg",
+    "./screenshots/human-tasks/3-agent-sent-it-back.jpg"
+  ],
+  "overview": "./overview/human-tasks.md",
+  "tags": [
+    "human-in-the-loop",
+    "manual-tasks",
+    "checklist",
+    "agent-handoff",
+    "credentials",
+    "blocked-agents",
+    "mcp",
+    "snooze"
+  ],
+  "author": {
+    "name": "Konstantin Valiotti",
+    "github": "kvaliotti"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "notifications"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/kvaliotti/bb-plugin-human-tasks.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "ai-usage",
+  "displayName": "AI Usage",
+  "description": "See what your team's Claude Code, Codex and Grok subscriptions have left, when each runs out at the current pace, which machine used it, and what the subscriptions cost a month. Installs the open-source ai-usage collector when it is missing. macOS and Linux.",
+  "icon": {
+    "url": "./icons/ai-usage-bc067434.svg"
+  },
+  "screenshots": [
+    "./screenshots/ai-usage/cost.png"
+  ],
+  "overview": "./overview/ai-usage.md",
+  "tags": [
+    "claude-code",
+    "codex",
+    "grok",
+    "hermes",
+    "quota",
+    "rate-limits",
+    "team",
+    "cost",
+    "forecast",
+    "subscriptions"
+  ],
+  "author": {
+    "name": "Sergey Baus",
+    "github": "neoromantic",
+    "url": "https://au.sergeybaus.com"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "npm": {
+      "package": "@goodit/bb-plugin-ai-usage",
+      "range": ">=0.12.0 <1.0.0"
+    }
+  }
+}

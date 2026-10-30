@@ -1,0 +1,43 @@
+{
+  "id": "agent-traces",
+  "displayName": "Agent Traces",
+  "description": "See where your agents' time goes, from every thread down to each command, tool call, and subagent of a turn. A turn opens as a timeline that splits the agent's time into waiting on you, tools, subagents, thinking, writing, and model time, and it grows live while the agent works. Select a call to see its exit code, output, and arguments, or jump to the reply that followed it in the chat. A Traces page in the sidebar compares your recent threads by active time, calls, and errors, and two turns can be compared phase by phase. Turns export as OpenTelemetry or an HTML snapshot, and the bb agent-traces command gives agents the same answers. Traces come from the thread history on your bb server; an OpenTelemetry collector is optional.",
+  "icon": {
+    "url": "./icons/agent-traces-e0e02b40.svg"
+  },
+  "screenshots": [
+    "./screenshots/agent-traces/demo.webp",
+    "./screenshots/agent-traces/traces-page.png",
+    "./screenshots/agent-traces/turn.png",
+    "./screenshots/agent-traces/compare.png"
+  ],
+  "overview": "./overview/agent-traces.md",
+  "tags": [
+    "tracing",
+    "waterfall",
+    "timeline",
+    "performance",
+    "profiling",
+    "observability",
+    "opentelemetry",
+    "subagents",
+    "cli"
+  ],
+  "author": {
+    "name": "Nicolas Charpentier",
+    "github": "charpeni",
+    "url": "https://github.com/charpeni"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "thread-management"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/charpeni/bb-plugins.git",
+      "subdir": "plugins/agent-traces",
+      "range": "^1.0.0",
+      "tagPrefix": "agent-traces/"
+    }
+  }
+}

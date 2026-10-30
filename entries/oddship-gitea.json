@@ -1,0 +1,33 @@
+{
+  "id": "oddship-gitea",
+  "displayName": "Gitea CLI",
+  "description": "Read Gitea issues and pull requests and prepare agent work without leaving BB. Choose an account and repository, filter the current page, and read descriptions and comments. Requires the tea CLI with an authenticated login on the selected BB host.",
+  "icon": "GitPullRequest",
+  "tags": [
+    "tea-cli",
+    "issues",
+    "pull-requests",
+    "reviews"
+  ],
+  "author": {
+    "name": "Oddship",
+    "github": "rhnvrm",
+    "url": "https://github.com/oddship"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/oddship-gitea/walkthrough.webp",
+    "./screenshots/oddship-gitea/step-1.jpg",
+    "./screenshots/oddship-gitea/step-2.jpg",
+    "./screenshots/oddship-gitea/step-3.jpg"
+  ],
+  "overview": "./overview/oddship-gitea.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/oddship/bb-plugins.git",
+      "subdir": "plugins/gitea",
+      "range": "^0.1.0",
+      "tagPrefix": "oddship-gitea/"
+    }
+  }
+}

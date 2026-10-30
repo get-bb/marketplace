@@ -1,0 +1,43 @@
+{
+  "id": "shipyard",
+  "displayName": "Shipyard",
+  "description": "Drive coding tasks from idea to merge on a Kanban board, and nothing reaches your branch until you review it. Save ideas, brainstorm them with an agent, then queue them. Each task runs in its own bb thread and git worktree: a short triage picks the model and effort, an optional plan waits for your approval, and the agent builds, runs the checks, and reviews its own diff. Add skills to each stage, such as a planning skill for Plan. When an agent is stuck, it asks you, and your answer continues the same stage. Review in a side panel, request changes in the same session, open a pull request, or merge. Agents use the bb providers you already have; pull requests need a GitHub remote and the gh CLI.",
+  "icon": {
+    "url": "./icons/shipyard-f7ef5ccb.svg"
+  },
+  "screenshots": [
+    "./screenshots/shipyard/board.jpg",
+    "./screenshots/shipyard/review.jpg",
+    "./screenshots/shipyard/list.jpg",
+    "./screenshots/shipyard/settings.jpg"
+  ],
+  "overview": "./overview/shipyard.md",
+  "tags": [
+    "kanban",
+    "task-board",
+    "parallel-agents",
+    "worktrees",
+    "brainstorming",
+    "planning",
+    "code-review",
+    "pull-requests",
+    "model-routing",
+    "orchestration"
+  ],
+  "author": {
+    "name": "Chris Abra",
+    "github": "chrisabra-co",
+    "url": "https://github.com/chrisabra-co"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "agents-and-providers",
+    "code-and-reviews"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/chrisabra-co/bb-plugin-shipyard.git",
+      "range": "^0.2.0"
+    }
+  }
+}

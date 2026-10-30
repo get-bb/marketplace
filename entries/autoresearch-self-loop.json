@@ -1,0 +1,12 @@
+{
+  "id": "autoresearch-self-loop",
+  "displayName": "Autoresearch Self Loop",
+  "description": "Let an agent iterate on one measured metric in your Git checkout, and keep a log of every attempt. Each kept run becomes a commit with its result in the message, and a keep is refused when the benchmark or checks failed. A discarded, crashed, or checks-failed run reverts the agent's changes, including new untracked files that Git does not ignore. Needs Git, a committer identity, a clean working tree when a session starts, and a benchmark that prints METRIC name=value lines.",
+  "icon": "RotateCcw",
+  "screenshots": ["./screenshots/autoresearch-self-loop/panel.png"],
+  "tags": ["autoresearch", "benchmarking", "optimization", "experiments", "performance", "git", "coding-agent", "iteration"],
+  "overview": "./overview/autoresearch-self-loop.md",
+  "author": { "name": "Oleg", "github": "zom-2018", "url": "https://github.com/zom-2018" },
+  "category": "tasks-and-workflows",
+  "source": { "git": { "url": "https://github.com/zom-2018/bb-plugin-autoresearch-self-loop.git", "range": "^0.1.0" } }
+}

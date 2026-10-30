@@ -1,19 +1,19 @@
 {
   "id": "tokenomics",
   "displayName": "Tokenomics",
-  "description": "Understand what your threads cost in tokens and time, so you can cut what isn't worth it. Each thread's header shows a sparkline of its token use that opens a summary of which of your messages used the most tokens and time. Once a thread's context passes a size you set, a meter above the composer offers to compact it, and the sidebar counts those threads. A Tokenomics page charts tokens by hour or day, shows where turn time went, and ranks threads by use. Requires bb 0.43 or later, and counts Claude Code subagents only for threads that ran on the same machine as bb.",
+  "description": "See what your threads cost in tokens and time, and whether your subscription's session and weekly limits will last until they reset. Each thread's header shows a sparkline of its token use that opens a summary of which of your messages used the most tokens and time. bb's title bar shows how much of your session and week you have used, in amber or red when either is on pace to run out before it resets. Once a thread's context passes a size you set, a meter above the composer offers to compact it. A Tokenomics page charts tokens by hour or day, shows where turn time went, and ranks threads by use. Counts tokens, not dollars, needs bb 0.43 or later, and counts Claude Code subagents only for threads that ran on the same machine as bb.",
   "icon": { "url": "./icons/tokenomics-db56ebad.svg" },
   "tags": [
     "tokens",
     "token-cost",
+    "usage-limits",
     "context-window",
     "compaction",
     "prompt-cache",
     "turn-time",
     "subagents",
     "claude-code",
-    "codex",
-    "analytics"
+    "codex"
   ],
   "author": {
     "name": "Daniel Bachhuber",
@@ -22,7 +22,10 @@
   },
   "category": "token-usage-and-limits",
   "screenshots": [
-    "./screenshots/tokenomics/thread.png",
+    "./screenshots/tokenomics/window.png",
+    "./screenshots/tokenomics/header.png",
+    "./screenshots/tokenomics/context-meter.png",
+    "./screenshots/tokenomics/title-bar.png",
     "./screenshots/tokenomics/page.png"
   ],
   "overview": "./overview/tokenomics.md",
@@ -30,7 +33,7 @@
     "git": {
       "url": "https://github.com/danielbachhuber/bb-plugins.git",
       "subdir": "bb-plugin-tokenomics",
-      "range": "^0.1.0",
+      "range": "^0.2.0",
       "tagPrefix": "tokenomics/"
     }
   }

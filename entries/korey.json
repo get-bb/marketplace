@@ -20,7 +20,11 @@
   },
   "category": "tasks-and-workflows",
   "screenshots": [
-    "./screenshots/korey/connected-tools.webp"
+    "./screenshots/korey/connected-tools.webp",
+    "./screenshots/korey/sentry-errors.webp",
+    "./screenshots/korey/launchdarkly-flag.webp",
+    "./screenshots/korey/shortcut-story.webp",
+    "./screenshots/korey/release-check.webp"
   ],
   "overview": "./overview/korey.md",
   "source": {

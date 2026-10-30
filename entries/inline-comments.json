@@ -1,0 +1,34 @@
+{
+  "id": "inline-comments",
+  "displayName": "Inline Comments",
+  "description": "Comment on exact passages of an agent's reply and send every comment with your next message. Select text, choose Add to chat, and type or dictate a note in a card next to the passage. Each passage stays highlighted and appears as a pill in the composer, where a click edits or deletes its comment. The agent receives each quoted passage next to its comment. Comments stay on your bb server; no external service or account is needed. Requires bb 0.46 or later.",
+  "icon": "MessageSquare",
+  "screenshots": [
+    "./screenshots/inline-comments/add-comment.png",
+    "./screenshots/inline-comments/staged-comments.png",
+    "./screenshots/inline-comments/comment-tooltip.png",
+    "./screenshots/inline-comments/mobile.png"
+  ],
+  "overview": "./overview/inline-comments.md",
+  "tags": [
+    "comments",
+    "annotations",
+    "feedback",
+    "quotes",
+    "text-selection",
+    "voice-input",
+    "mobile"
+  ],
+  "author": {
+    "name": "Boros Máté",
+    "github": "qwadrox",
+    "url": "https://github.com/qwadrox"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/qwadrox/bb-plugin-inline-comments.git",
+      "range": "^0.1.2"
+    }
+  }
+}

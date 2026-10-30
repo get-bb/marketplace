@@ -33,7 +33,7 @@
   "source": {
     "git": {
       "url": "https://github.com/vburojevic/bb-plugin-floating-notes.git",
-      "range": "^1.2.1"
+      "range": ">=1.2.1"
     }
   }
 }

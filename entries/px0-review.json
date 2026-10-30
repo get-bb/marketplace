@@ -1,0 +1,33 @@
+{
+  "id": "px0-review",
+  "displayName": "px0 Review",
+  "description": "Review changes in your active worktree and send selected-code feedback to its BB thread. Browse files and diffs, edit code, and keep the existing conversation and provider. Downloads a pinned px0 fork on first use; remote access uses BB Connect.",
+  "icon": "FileText",
+  "tags": [
+    "code-review",
+    "diffs",
+    "git",
+    "feedback"
+  ],
+  "author": {
+    "name": "Oddship",
+    "github": "rhnvrm",
+    "url": "https://github.com/oddship"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/px0-review/walkthrough.webp",
+    "./screenshots/px0-review/step-1.jpg",
+    "./screenshots/px0-review/step-2.jpg",
+    "./screenshots/px0-review/step-3.jpg"
+  ],
+  "overview": "./overview/px0-review.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/oddship/bb-plugins.git",
+      "subdir": "plugins/px0-review",
+      "range": "^0.1.1",
+      "tagPrefix": "px0-review/"
+    }
+  }
+}

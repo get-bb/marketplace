@@ -1,0 +1,39 @@
+{
+  "id": "elephant-goldfish",
+  "displayName": "Elephant Goldfish",
+  "description": "Runs a fresh-context review on every Markdown spec and applies only the changes you explicitly approve. Spec files stay as plain Markdown in your project checkout, listed on a dedicated spec workspace page and in a tab beside each conversation. Seven agent skills cover the workflow from brainstorm and draft through staged reviews, findings and proposals to resolution and drift reports. Reviews run as BB workers on the provider configured for the reviewed project, or as a tool-less OpenAI-compatible endpoint that needs a base URL, model id and API key.",
+  "icon": {
+    "url": "./icons/elephant-goldfish-f5e44110.svg"
+  },
+  "tags": [
+    "specs",
+    "documentation",
+    "review",
+    "human-approval",
+    "markdown",
+    "workflow",
+    "agent-skills",
+    "fresh-context"
+  ],
+  "author": {
+    "name": "Marco Michely",
+    "github": "Jehu",
+    "url": "https://michelyweb.de"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "thread-content"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/Jehu/bb-elephant-goldfish.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/elephant-goldfish.md",
+  "screenshots": [
+    "./screenshots/elephant-goldfish/project-page.png",
+    "./screenshots/elephant-goldfish/spec-detail.png",
+    "./screenshots/elephant-goldfish/thread-tab.png"
+  ]
+}

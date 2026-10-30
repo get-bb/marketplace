@@ -1,0 +1,38 @@
+{
+  "id": "nested-sidebar",
+  "displayName": "Nest",
+  "description": "Give every project a stable place in the sidebar, with its worktrees and agent threads underneath it. A thread family expands inline under the workspace it runs in, so work starting never reorders the row you were about to click. Each row reports the worst state under it, which puts a failed child agent on the project row without opening anything. Snooze a thread until a time you pick, or settle it when the work is done, and both shelves collapse to one counted header. Eighteen semantic colours, three ready-made presets and a Custom palette, each colour drawn as the thing it paints. Nest also reads which repository each workspace really belongs to from the machine holding it, and reports worktrees bb has no environment for. No account and no network request; requires bb 0.36 or newer and uses bb's experimental thread-list slot.",
+  "icon": {
+    "url": "./icons/nested-sidebar-49489ca2.svg"
+  },
+  "screenshots": [
+    "./screenshots/nested-sidebar/01-sidebar.png",
+    "./screenshots/nested-sidebar/02-view-menu.png",
+    "./screenshots/nested-sidebar/03-settings.png"
+  ],
+  "tags": [
+    "sidebar",
+    "projects",
+    "threads",
+    "groups",
+    "worktrees",
+    "snooze",
+    "organize",
+    "agents"
+  ],
+  "author": {
+    "name": "Euan Guo",
+    "github": "euanguo",
+    "url": "https://github.com/euanguo"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/euanguo/euanguo-plugins.git",
+      "subdir": "plugins/nested-sidebar",
+      "range": "^0.5.0",
+      "tagPrefix": "nested-sidebar/"
+    }
+  },
+  "overview": "./overview/nested-sidebar.md"
+}

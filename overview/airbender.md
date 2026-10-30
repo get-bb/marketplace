@@ -1,48 +1,56 @@
-Keep your project's issues beside the agent conversation. Airbender connects
-your backlog to the work: choose an issue, start the agent, review the result,
-and decide when to commit.
+**Never get lost in vibe coding.**
 
-Issues stay in your tracker — beads or GitHub issues — with the requirements,
-plans and decisions that the next agent needs.
+Airbender keeps your project's issues in a tab beside every agent
+conversation, so each agent knows what it is on and you always know what
+comes next. Issues live in your tracker, beads inside the repository or
+GitHub issues, never in the chat. It works with Claude Code and Codex.
+
+## The problem
+
+Your agent got fast. Your process is still a terminal tab and a good memory.
+The work list lives somewhere else, so you stop writing things down. The
+agent decides when it is done: it builds before you agreed on what to build,
+and commits before you looked. And the reasons die with the chat.
 
 ## What you get
 
-- **Your backlog inside BB.** An Airbender tab beside each conversation and
-  on the New thread screen, with issues grouped into in progress, ready,
-  blocked and closed. Filter by priority, type or category.
-- **Quick issue capture.** The new-issue field stays visible. Type
-  `Fix login redirect #bug #p1 $ux` to set the type, priority and category.
-- **A clear next step.** The current issue is highlighted in the tab.
-  Its status and review buttons also appear around the message box.
-- **Reviews that fit the work.** Standard workflow guides the agent through
-  definition, planning, implementation and review. Small issues reach you
-  once, at the end; larger ones stop for earlier approvals. Simple workflow
-  leaves you to direct the agent yourself.
-- **Parallel work.** Start an issue on its own branch or in a worktree with
-  a separate conversation.
-- **Epics and Autopilot.** Organize work into sub-issues. Autopilot starts
-  an epic's ready issues one after another, with reviews still yours.
-- **A lasting record.** Read descriptions, acceptance criteria, plans,
-  notes and comments without leaving the conversation. Agents record
-  decisions on the issue as they work.
+- **An issue in one line, without leaving the conversation.** The field at
+  the bottom of the tab is always there. `Fix login redirect #bug #p1 $ux`
+  sets the type, the priority and the category as you type.
+- **A fixed path for every issue.** The agent defines, plans, builds and
+  reviews its own work. You approve the definition, the plan and the result.
+  Nothing closes until the work is in git.
+- **Only the steps an issue needs.** A background agent sizes each issue S,
+  M or L. A typo fix reaches you once, at the end; a risky change stops at
+  every turn. Or choose the simple workflow and direct the agent yourself.
+- **The decision where you are reading.** A line above the message box names
+  the issue, its step and what is needed from you; the step's buttons sit
+  inside the box.
+- **Three issues, three work trees, one clean main.** Start an issue in a
+  work tree and a new conversation opens for it on a branch of its own.
+- **Epics on Autopilot.** Nest issues under an epic and Autopilot starts its
+  ready issues one after another. Every review is still yours.
+- **The issue is the record.** Intent in your words, the plan, every decision
+  with its reason: written onto the issue as the agent works, so the next
+  session can pick it up.
+- **Two trackers, switchable.** beads for many agents writing at once, GitHub
+  issues for projects that move at human pace. Switch from the tab's menu;
+  your issues come with you.
 
 ## How it works
 
-The tab and agents use `bend` to read and update the same tracker.
-Airbender follows changes made outside the tab and shows sync problems.
-
-On Standard workflow, accepting finished work leads to a commit, or a
-commit and merge. The agent performs the chosen action; the issue closes
-when that step finishes.
+The tab and the agents read and change the tracker through `bend`, one
+command that works the same on beads and on GitHub issues. Changes made
+outside the tab show up in it.
 
 ## Getting started
 
-You need BB 0.44 or later on the machine that holds the repository.
-On Linux and macOS, on Intel/AMD or ARM64, setup installs a precompiled
-`bend` from the matching GitHub release after checking its SHA-256 checksum.
-Go is not required; the download needs `curl` and `sha256sum` or `shasum`.
-Other platforms can build from source with Go 1.24 or later.
+You need BB 0.44 or later on the machine that has the repository. On Linux
+and macOS, on Intel/AMD or ARM64, setup downloads the matching `bend` release
+and verifies its SHA-256 checksum; Go is not required, and the download
+needs `curl` and `sha256sum` or `shasum`. Other platforms can build `bend`
+from source with Go 1.24 or later.
 
-Open the Airbender tab and choose beads or GitHub issues. Setup offers the
-missing tools and repository instructions in a terminal you can watch.
-Folders on another machine are not yet supported.
+Open the Airbender tab, pick beads or GitHub issues, and say yes to setup:
+it installs what is missing and adds the rules for your agent, in a terminal
+you can watch. Folders on another machine are not supported yet.

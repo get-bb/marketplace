@@ -1,0 +1,35 @@
+{
+  "id": "token-pass-pace",
+  "displayName": "Token Pass Pace",
+  "description": "See whether your Vercel Token Pass will last the billing period, before it runs out. A sidebar page charts every day of the period and projects your recent daily spend to the renewal date, naming the day you hit the limit. A footer line keeps the percentage and countdown in view. Needs a Vercel AI Gateway API key, your renewal day, and your allowance, entered once.",
+  "icon": {
+    "url": "./icons/token-pass-pace-122b3f87.svg"
+  },
+  "tags": [
+    "vercel",
+    "token-pass",
+    "usage",
+    "forecast",
+    "spend",
+    "budget",
+    "billing",
+    "ai-gateway"
+  ],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost",
+    "url": "https://github.com/steveafrost"
+  },
+  "category": "token-usage-and-limits",
+  "screenshots": [
+    "./screenshots/token-pass-pace/panel.png",
+    "./screenshots/token-pass-pace/footer.png"
+  ],
+  "overview": "./overview/token-pass-pace.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-plugin-token-pass-pace.git",
+      "range": "^1.0.0"
+    }
+  }
+}

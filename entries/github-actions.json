@@ -1,0 +1,25 @@
+{
+  "id": "github-actions",
+  "displayName": "GitHub Actions",
+  "description": "Watch every GitHub Actions run of your BB projects, start any workflow with its inputs, and hand failures to an agent. A failed job opens its log at the error line, and Ask agent starts a thread with that excerpt and a brief to find the root cause. Run workflow turns a workflow_dispatch trigger into a form with branch, choice, and boolean inputs, checked before the request reaches GitHub. Rerun failed jobs, cancel a run, or send a run report to the BB threads you pick and subscribe them to new failures. Requires a GitHub account: the plugin uses the gh CLI login on the BB server machine, or a token you set.",
+  "icon": "Workflow",
+  "tags": ["github-actions", "ci", "cd", "workflows", "pipelines", "build-logs", "rerun", "workflow-dispatch", "gh-cli"],
+  "author": {
+    "name": "pers0na2dev",
+    "github": "pers0na2dev",
+    "url": "https://github.com/pers0na2dev"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/github-actions/01-runs.jpg",
+    "./screenshots/github-actions/02-failed-job-log.jpg",
+    "./screenshots/github-actions/03-run-workflow.jpg"
+  ],
+  "overview": "./overview/github-actions.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/pers0na2dev/bb-github-actions.git",
+      "range": "^0.1.1"
+    }
+  }
+}

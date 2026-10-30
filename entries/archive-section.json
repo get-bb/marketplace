@@ -1,0 +1,29 @@
+{
+  "id": "archive-section",
+  "displayName": "Archive Section",
+  "description": "Move every thread you archive into an Archived sidebar section, and back to its old section when you unarchive it. The move happens right after the archive, from the sidebar, the CLI, or an agent, and children archived with a parent move too. Threads archived before install, or while the plugin was off, are swept in when it loads. Pick the section by name in settings; emoji and case are ignored, and the section is created if it does not exist.",
+  "icon": "Archive",
+  "tags": [
+    "archive",
+    "archived-threads",
+    "sections",
+    "sidebar",
+    "organize",
+    "thread-list",
+    "unarchive",
+    "cleanup"
+  ],
+  "author": {
+    "name": "Nikos Benakis",
+    "github": "NickolasBenakis",
+    "url": "https://github.com/NickolasBenakis"
+  },
+  "category": "thread-management",
+  "overview": "./overview/archive-section.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/NickolasBenakis/bb-plugin-archive-section.git",
+      "range": "^0.1.0"
+    }
+  }
+}

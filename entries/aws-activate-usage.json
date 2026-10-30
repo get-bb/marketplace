@@ -1,0 +1,34 @@
+{
+  "id": "aws-activate-usage",
+  "displayName": "AWS Activate Usage",
+  "description": "Keep your AWS promotional-credit runway visible while agents work. View remaining balance, amount used, expiration dates, and current-month allocations in BB, with cached results when credentials expire. Reconnect an AWS SSO session from the same panel. Requires AWS CLI v2, a configured AWS profile, Billing permissions, and an AWS account with promotional credits.",
+  "icon": "Cloud",
+  "screenshots": [
+    "./screenshots/aws-activate-usage/credits-overview.jpg"
+  ],
+  "overview": "./overview/aws-activate-usage.md",
+  "tags": [
+    "aws",
+    "aws-activate",
+    "cloud-credits",
+    "billing",
+    "cost-management",
+    "usage",
+    "promotional-credits"
+  ],
+  "author": {
+    "name": "Aidar Karimov",
+    "github": "aidarkarimov",
+    "url": "https://github.com/aidarkarimov"
+  },
+  "category": "cloud-and-remote",
+  "secondaryCategories": [
+    "token-usage-and-limits"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/aidarkarimov/bb-plugin-aws-activate-usage.git",
+      "range": "^0.1.1"
+    }
+  }
+}

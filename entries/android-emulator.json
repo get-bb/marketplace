@@ -1,0 +1,42 @@
+{
+  "id": "android-emulator",
+  "displayName": "Android Emulator",
+  "description": "Watch and drive an Android emulator, a virtual phone, beside your thread, on the same device your agent controls. The panel streams the live screen with touch, scroll, keyboard and system buttons, and pastes Unicode text into the focused field. Agents list, start and stop AVDs and press keys through bb android-emulator commands. Needs a Windows or Linux bb host with the Android SDK and an existing AVD; the plugin installs nothing.",
+  "icon": "Smartphone",
+  "screenshots": [
+    "./screenshots/android-emulator/agent-thread.jpg",
+    "./screenshots/android-emulator/hosts.jpg",
+    "./screenshots/android-emulator/text-input.jpg",
+    "./screenshots/android-emulator/device-menu.jpg",
+    "./screenshots/android-emulator/environment-checks.jpg"
+  ],
+  "overview": "./overview/android-emulator.md",
+  "tags": [
+    "android",
+    "emulator",
+    "avd",
+    "adb",
+    "scrcpy",
+    "mobile",
+    "testing",
+    "phone",
+    "ui-testing",
+    "react-native"
+  ],
+  "author": {
+    "name": "Nicolay I",
+    "github": "nicolay-i",
+    "url": "https://github.com/nicolay-i"
+  },
+  "category": "utilities",
+  "secondaryCategories": [
+    "code-and-reviews",
+    "cloud-and-remote"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/nicolay-i/bb-plugin-android-emulator.git",
+      "range": "^0.1.1"
+    }
+  }
+}

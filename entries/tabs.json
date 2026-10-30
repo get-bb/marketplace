@@ -1,9 +1,9 @@
 {
   "id": "tabs",
   "displayName": "Chat Tabs",
-  "description": "Return to important BB conversations from pinned tabs and a separate favorites list. Toggle pins and favorites on New chat, with retained cards so you can undo an accidental removal. Search chats by title and project, and distinguish subthreads with branch icons and waiting-for-input markers. Supports 15 interface languages; requires BB 0.43+ with no external service or account.",
+  "description": "Keep work and home conversations separate and return to the chats you need. Switch workspaces with independent pins and favorites, and restore your last local choice when reopening BB. Search chats and projects, explore nested chats in side menus, and customize project aliases and tab colors. Supports 15 interface languages; requires BB 0.43+ with no external service or account.",
   "icon": { "url": "./icons/tabs-040544fb.svg" },
-  "tags": ["chat", "favorites", "pinned-chats", "preview", "history", "navigation", "search", "subthreads"],
+  "tags": ["chat", "favorites", "pinned-chats", "history", "navigation", "search", "subthreads", "workspaces", "appearance", "tabs"],
   "author": {
     "name": "Nicolay I",
     "github": "nicolay-i",
@@ -17,6 +17,7 @@
     }
   },
   "screenshots": [
+    "./screenshots/tabs/chat-tree-v0.1.15.jpg",
     "./screenshots/tabs/real-bb-tabs-primary.png",
     "./screenshots/tabs/real-bb-favorites-home.png",
     "./screenshots/tabs/real-bb-favorite-menu.png",

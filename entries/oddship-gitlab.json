@@ -1,0 +1,33 @@
+{
+  "id": "oddship-gitlab",
+  "displayName": "GitLab CLI",
+  "description": "Work through GitLab issues and merge requests inside BB. Read discussions, inspect pipeline status, update supported item fields, and start agent work or reviews. Requires glab installed and authenticated on the BB server.",
+  "icon": "GitPullRequest",
+  "tags": [
+    "glab",
+    "issues",
+    "merge-requests",
+    "reviews"
+  ],
+  "author": {
+    "name": "Oddship",
+    "github": "rhnvrm",
+    "url": "https://github.com/oddship"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/oddship-gitlab/walkthrough.webp",
+    "./screenshots/oddship-gitlab/step-1.jpg",
+    "./screenshots/oddship-gitlab/step-2.jpg",
+    "./screenshots/oddship-gitlab/step-3.jpg"
+  ],
+  "overview": "./overview/oddship-gitlab.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/oddship/bb-plugins.git",
+      "subdir": "plugins/gitlab",
+      "range": "^0.1.0",
+      "tagPrefix": "oddship-gitlab/"
+    }
+  }
+}

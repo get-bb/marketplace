@@ -17,6 +17,6 @@ Each bb thread can continue a linked private Korey conversation, including when 
 3. Add the token under **Settings → Installed plugins → Korey** in bb.
 4. Start a request with “Ask Korey…” or use `bb korey ask` from the CLI.
 
-Requires a Korey account and access to the relevant connected services. Available data and actions depend on your Korey workspace's connectors and permissions. This version supports research, analysis, and drafts across connected services, plus Shortcut Story creation and updates.
+Requires a Korey account and access to the relevant connected services. Available data and actions depend on your Korey workspace's connectors and permissions.
 
 See the [connector guides](https://korey.ai/docs/connectors/overview) and [plugin documentation](https://github.com/useshortcut/bb-plugin-korey) for more details.
