@@ -1,0 +1,33 @@
+{
+  "id": "dashboard",
+  "displayName": "BBDesk",
+  "description": "Keep project conversations, live activity and application shortcuts in one workspace. Read and continue chats, search project history and switch conversations with bottom tabs. Track work and requests for attention across projects, open applications alongside your workspace and choose English or Russian. Requires BB 0.48+ and internet access for first-install dependencies; no separate service, account or API key.",
+  "icon": {
+    "url": "./icons/dashboard-ede9c458.svg"
+  },
+  "tags": [
+    "projects",
+    "conversations",
+    "activity",
+    "launcher",
+    "navigation",
+    "chat",
+    "search"
+  ],
+  "author": {
+    "name": "devalextelematika",
+    "github": "devalextelematika",
+    "url": "https://github.com/devalextelematika"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/devalextelematika/BBDesk.git",
+      "range": "^0.1.4"
+    }
+  },
+  "screenshots": [
+    "./screenshots/dashboard/overview.png"
+  ],
+  "overview": "./overview/dashboard.md"
+}
