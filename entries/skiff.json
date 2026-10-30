@@ -1,7 +1,7 @@
 {
   "id": "skiff",
   "displayName": "Skiff VM",
-  "description": "Gives every thread its own throwaway Linux VM on your Mac, so nothing the agent installs or runs touches macOS. Claude Code and GitHub tokens stay in the macOS Keychain; the VM only holds placeholders that the skiff broker swaps for the real tokens on the way out. A fresh Ubuntu VM boots in about 4 seconds, is ready for the agent in under a minute, and is deleted when you archive the thread. Requires Apple Silicon, macOS 26, the open-source skiff CLI, a bb server access the VM can reach, such as bb Connect, and bb's own GitHub forwarding turned off. Experimental.",
+  "description": "Gives every thread its own throwaway Linux VM on your Mac, so nothing the agent installs or runs touches macOS. Claude Code and GitHub tokens stay in the macOS Keychain; the VM only holds placeholders that the skiff broker swaps for the real tokens on the way out. A fresh Ubuntu VM boots in about 4 seconds, is ready for the agent in under a minute, and is deleted when you archive the thread. Requires Apple Silicon, macOS 26, the open-source skiff CLI, a bb server access the VM can reach, such as bb Connect, and bb's own GitHub forwarding turned off.",
   "icon": "Server",
   "screenshots": [
     "./screenshots/skiff/thread-in-vm.jpg",

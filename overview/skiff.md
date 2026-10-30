@@ -36,5 +36,3 @@ see the [skiff website](https://sovyn-eu.github.io/skiff/).
 - bb's own GitHub forwarding turned off with
   `bb settings general machineGitCredentialsEnabled false`. Skiff VM refuses to boot a VM while
   it is on, so no real token reaches the guest.
-
-This plugin is experimental.
