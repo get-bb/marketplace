@@ -24,7 +24,7 @@
   "source": {
     "git": {
       "url": "https://github.com/brsbl/bb-plugins.git",
-      "ref": "10812086d1f8d2490322aa09fdedd3c6e938540b"
+      "ref": "plugin/url-pills"
     }
   }
 }
