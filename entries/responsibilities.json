@@ -1,0 +1,18 @@
+{
+  "id": "responsibilities",
+  "displayName": "Responsibilities",
+  "description": "Shows which threads need you: failed, waiting for your answer, or holding an unread result. Highlights manager threads, filters the thread list, and adds New child thread to the thread actions.",
+  "icon": "Filter",
+  "author": {
+    "name": "Sergey Baus",
+    "github": "neoromantic"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/neoromantic/bb-plugin-responsibilities.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/responsibilities.md"
+}
