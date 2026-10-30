@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" role="img">
+  <title>Graphite Stack</title>
+  <path fill="black" fill-rule="evenodd" d="M15.215 0 3.215 3.215 0 15.215 8.785 24l12-3.215L24 8.785 15.215 0Zm1.958 20.966H6.827L1.655 12l5.172-8.966h10.346L22.345 12l-5.172 8.966Z"/>
+  <path d="m6.8 9.7 5.2-2.5 5.2 2.5-5.2 2.5-5.2-2.5Zm0 3.1 5.2 2.5 5.2-2.5M6.8 15.8l5.2 2.5 5.2-2.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

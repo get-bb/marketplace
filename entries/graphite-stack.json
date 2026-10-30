@@ -1,0 +1,30 @@
+{
+  "id": "graphite-stack",
+  "displayName": "Graphite Stack",
+  "description": "Review stacked changes alongside your BB threads. Inspect parent-relative diffs and keep local comments before sending them to a linked thread. Review GitHub pull requests and preview stack actions. Requires the Graphite CLI; GitHub review features also require an authenticated GitHub CLI.",
+  "icon": {
+    "url": "./icons/graphite-stack-35373369.svg"
+  },
+  "screenshots": [
+    "./screenshots/graphite-stack/review.jpg"
+  ],
+  "overview": "./overview/graphite-stack.md",
+  "tags": [
+    "git",
+    "graphite",
+    "pull-requests",
+    "code-review"
+  ],
+  "author": {
+    "name": "Prakash Chokalingam",
+    "github": "prakashchokalingam",
+    "url": "https://github.com/prakashchokalingam"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/prakashchokalingam/bb-plugin-graphite-stack.git",
+      "range": "^0.1.0"
+    }
+  }
+}
