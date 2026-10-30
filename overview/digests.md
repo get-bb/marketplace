@@ -13,10 +13,10 @@ a prepared report.
 
 ## Gmail read state and recovery
 
-Opening an email can mark it read. **Keep unread**, the default, instructs the
-collecting agent to restore each originally unread message immediately and
-verify the result before continuing. **Mark as read** leaves opened messages
-read. Messages that were already read stay read in both modes.
+Gmail emails are read in full, including every message in a thread, and left
+read by default. Choose **Keep unread** under any Gmail account to preserve
+original read states. Briefs never summarizes list previews. Messages that were
+already read stay read in both modes.
 
 A saved per-message journal retains the original state across interruptions.
 Unverified or failed restoration stays visible in the brief; Retry instructs
@@ -27,7 +27,8 @@ newsletters, and copies in several inboxes collapse into one row. Successfully
 summarized message IDs are remembered to avoid repeats.
 
 Collection must not send, reply, archive, delete, or change labels or settings.
-Restoring unread state is its only permitted explicit Gmail write. Other sites
+Marking fully read messages read and restoring known original unread state
+are its only permitted explicit Gmail writes. Other sites
 are read-only. Task buttons open the page where you can finish the task;
 Open email returns to the original message. Opening a button performs no write.
 
