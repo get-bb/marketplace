@@ -2,7 +2,7 @@
 
 Maxwell sits in a side panel beside your conversation. Open him from Actions in an existing thread or from the new-thread screen.
 
-- A 3D cat that sways before the conversation starts.
+- Maxwell sways before the conversation starts.
 - Rotation that speeds up as the conversation's context fills up.
 - Music when you click Maxwell.
 
@@ -11,9 +11,9 @@ Maxwell sits in a side panel beside your conversation. Open him from Actions in 
 
 ## How it works
 
-Before the first message, Maxwell sways in place. In an active conversation, his rotation follows that thread's context usage, from 24 to 120 RPM. Compacting or clearing context can slow him down again.
+Before the first message, Maxwell sways in place. During a conversation, he spins faster as the context fills up.
 
-Clicking Maxwell starts the bundled music. Playback continues when you close the panel or switch threads. It stops when the plugin is disabled or removed, or when the browser tab closes.
+Click Maxwell to play music.
 
 ## Requirements
 
