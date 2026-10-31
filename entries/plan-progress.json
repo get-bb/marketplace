@@ -1,7 +1,7 @@
 {
   "id": "plan-progress",
   "displayName": "Plan Progress",
-  "description": "Watch the agent's plan fill a progress bar above the message box, stage by stage, as it works. The agent sends its plan once through a plan_progress tool and marks each step as it goes. The bar turns amber when the agent needs your answer and red on an error, with its note on the bar. Each subagent gets a row under the bar with its model, current tool and time. Bars are stored on your bb server; no account or API key.",
+  "description": "Follow the agent's plan above the message box, with stages, steps and status for questions, errors and completion. Fold the progress block or hide and restore individual plans. See observed helper activity and estimated answer speed. Bounded reminders can prompt agents to create or update plans. Plan data stays on your bb server; no extra account or API key.",
   "icon": "ListTodo",
   "screenshots": [
     "./screenshots/plan-progress/agents.png",
