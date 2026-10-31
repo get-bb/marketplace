@@ -1,0 +1,33 @@
+{
+  "id": "thread-images",
+  "displayName": "Thread Images",
+  "description": "Shows every image an agent opens right in the thread. Click one to see it full size. An Images gallery in the thread context card keeps every image from the thread, newest first.",
+  "icon": {
+    "url": "./icons/thread-images-f914168b.svg"
+  },
+  "screenshots": [
+    "./screenshots/thread-images/inline-and-gallery.jpg",
+    "./screenshots/thread-images/viewer.jpg"
+  ],
+  "overview": "./overview/thread-images.md",
+  "tags": [
+    "images",
+    "screenshots",
+    "gallery",
+    "file-read",
+    "thread-context",
+    "viewer"
+  ],
+  "author": {
+    "name": "Dmitrii Maksimov",
+    "github": "kartollikaa",
+    "url": "https://github.com/kartollikaa"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/kartollikaa/bb-plugin-thread-images.git",
+      "range": "^0.1.1"
+    }
+  }
+}
