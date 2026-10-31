@@ -1,0 +1,22 @@
+{
+  "id": "responsibilities",
+  "displayName": "Responsibilities",
+  "description": "Find failures, questions and unread results in BB. Filter threads, start child threads and optionally highlight managers.",
+  "icon": "Filter",
+  "author": {
+    "name": "Sergey Baus",
+    "github": "neoromantic"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/neoromantic/bb-plugin-responsibilities.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/responsibilities.md",
+  "screenshots": [
+    "./screenshots/responsibilities/responsibilities.png",
+    "./screenshots/responsibilities/new-child.png"
+  ]
+}

@@ -1,65 +1,35 @@
-Stop opening GitHub tab by tab to find out why a pull request is still open.
-This plugin adds a **My PRs** page to the BB navigation rail that answers it
-at a glance.
+A **My PRs** page in the bb navigation rail for every pull request you are part of, with a detail view for each one, so you stop opening GitHub tab by tab.
 
-## What you get
+## The list
 
-- **Open**, **Merged** and **Closed** tabs with counts, listing the pull
-  requests you authored across every repository you can see, grouped by
-  repository, most recently updated first.
-- **Review requested** (from you or any team you are on) and **Assigned**
-  tabs for other people's pull requests, with each author shown.
-- For each open pull request, the reasons it is not merged yet: draft,
-  stacked on another pull request, merge conflicts, failing CI (with each failing check linked), CI still
-  running, changes requested, unresolved review comments, or waiting on a
-  review. A pull request with nothing blocking it says so.
-- A detail view for each pull request:
-  - Where it sits in a stack: the pull request it is based on, and any
-    loaded pull request based on it, each one click away.
-  - **Changed files**, inline or side by side with syntax highlighting, with
-    review comments under their lines. Press + or select line numbers (Shift-
-    click or drag for a range) to comment. Start a private review or post a single comment, then finish it
-    as Comment, Approve or Request changes, or discard it.
-  - **CI checks** by pipeline and job, with error annotations and logs.
-  - **Review comments**, unresolved first, each with the diff it is on, who
-    asked, every reply, and who it is waiting on. Reply to a thread right
-    there. Resolved threads show who resolved them.
-  - The **conversation**: the description, comments and reviews in order,
-    rendered as Markdown, with a box to add your own comment.
+- **Open**, **Review requested** (from you or a team you are on), **Assigned**, **Merged** and **Closed** tabs with counts, grouped by repository, most recently updated first.
+- Each open pull request leads with what blocks it: draft, stacked on another pull request, merge conflicts, failing CI with the failing jobs named, CI running, changes requested, unresolved comments, or waiting on a review. A coloured stripe shows the worst one. A pull request with nothing blocking it says so.
+- Search by title, #number, repository or author. Hide repositories with a per-tab filter (Select all, Deselect all), fold a repository's group, or Collapse all. Hidden and folded repositories are remembered.
+- On Merged and Closed, search and the repository filter reach your whole history, up to the 1,000 results GitHub search returns.
+- Keys: j and k move between pull requests, Enter opens one, / searches. Coming back from a pull request returns you to where you were.
+
+## A pull request
+
+- A header with its state, branches, its place in a stack, and its blockers as the headline. Previous and Next (or [ and ]) step through the list as you left it.
+- **Checks** by pipeline and job, failing first, with error annotations and log links.
+- **Files**: a file list beside the diff, syntax highlighting inline or side by side, and review threads under their lines. Press + or select line numbers (Shift-click or drag for a range) to comment. Start a private review or post a single comment, then finish as Comment, Approve or Request changes, or discard it. j and k move between files, n and p between unresolved comments.
+- **Comments**: unresolved first, each with its diff, every reply, who it waits on, and Show in diff. Reply right there.
+- **Conversation**: the description, comments and reviews in order, as Markdown, with a box for your own comment.
 - Close an open pull request (with a confirm step) or reopen a closed one.
 
 ## Alerts
 
-- Every 5 minutes (you can change this), the plugin checks your open pull
-  requests and alerts you when a CI job starts failing, or when someone else
-  comments or reviews.
-- Each alert shows as a bb toast, adds a red count to the **My PRs** icon,
-  and waits in a "New since you last looked" list on the page. Allow desktop
-  notifications in the plugin settings to also get a system banner.
-- In the plugin settings (the bell button on My PRs), choose what alerts you
-  (CI failures, comments, or both) and how (toasts, desktop notifications,
-  the unread count), change the interval, or list review bots to ignore.
-  GitHub bot accounts are skipped already.
+- Every 5 minutes (you can change this), the plugin checks your open pull requests and alerts you when a CI job starts failing or someone else comments or reviews.
+- Each alert shows as a bb toast, adds a count to the **My PRs** icon, and waits in a "New since you last looked" list. Allow desktop notifications in the plugin settings for a system banner too.
+- In the plugin settings (the bell on My PRs), choose what alerts you and how, change the interval, or list review bots to ignore. GitHub bot accounts are skipped already. Hiding a repository in the list does not mute its alerts.
 
 ## How it works
 
-One GitHub GraphQL request on each refresh of the list, one when you open a
-pull request (plus one REST request when you open its Files tab), and one per
-alert check, all sent from the BB server. Nothing is written to GitHub except
-what you send: comments, replies, reviews, and closing or reopening. Alerts and
-the state they compare against stay in this plugin's storage on your BB
-server. No data leaves your machine except those requests to GitHub.
+Requests go to GitHub only for what you open: one GraphQL request for the tab you open (with every tab's count), one for a pull request, one REST request when you open its Files tab, the Merged or Closed history only when you search or filter it, and one per alert check. All are sent from the bb server. Nothing is written to GitHub except what you send. Alerts and their state stay in this plugin's storage on your bb server.
 
 ## Requirements
 
-- A GitHub account. By default the plugin uses the
-  [GitHub CLI](https://cli.github.com) login on the machine running BB
-  (`gh auth login`), so each user sees their own pull requests.
-- Or set a personal access token in the plugin settings: `repo` scope for a
-  classic token, or Pull requests read and write plus Checks read for a
-  fine-grained one. Write access is used only when you comment, reply,
-  review, close or reopen, all under your GitHub name and only when you click. For organizations that enforce SAML SSO, authorize the token for that
-  organization, or its pull requests will be missing.
-- Alerts run only while the BB server runs, and desktop banners appear only
-  while a BB window is open. Alerts do not reach your phone.
+- A GitHub account. By default the plugin uses the [GitHub CLI](https://cli.github.com) login on the machine running bb (`gh auth login`), so each user sees their own pull requests.
+- Or a personal access token in the plugin settings: `repo` scope for a classic token, or Pull requests read and write plus Checks read for a fine-grained one. Write access is used only when you click to comment, reply, review, close or reopen. For organizations that enforce SAML SSO, authorize the token for them, or their pull requests will be missing.
+- Alerts run only while the bb server runs; desktop banners appear only while a bb window is open.
 - github.com only; GitHub Enterprise Server is not supported yet.

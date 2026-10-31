@@ -1,0 +1,42 @@
+{
+  "id": "qlik-sense",
+  "displayName": "Qlik Sense",
+  "description": "Agents read Qlik Sense Enterprise sheets and charts with filters. Sign in once, tick the reports agents may use, and choose which models may see the data.",
+  "icon": "ChartColumn",
+  "tags": [
+    "qlik",
+    "bi",
+    "business-intelligence",
+    "reports",
+    "dashboards",
+    "analytics",
+    "agent-tools",
+    "enterprise",
+    "data-governance",
+    "model-allowlist"
+  ],
+  "author": {
+    "name": "Foma",
+    "github": "xMinor-1",
+    "url": "https://github.com/xMinor-1"
+  },
+  "category": "memory-and-context",
+  "secondaryCategories": [
+    "security"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/xMinor-1/bb-plugins.git",
+      "subdir": "plugins/qlik-sense",
+      "range": "^0.1.0",
+      "tagPrefix": "qlik-sense/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/qlik-sense/reports.png",
+    "./screenshots/qlik-sense/sign-in.png",
+    "./screenshots/qlik-sense/access-and-agents.png",
+    "./screenshots/qlik-sense/russian.png"
+  ],
+  "overview": "./overview/qlik-sense.md"
+}

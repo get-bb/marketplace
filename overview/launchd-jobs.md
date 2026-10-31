@@ -12,6 +12,8 @@ once you disable it. One sidebar page is where you make, read and change those j
 - Commands run through your login shell with your terminal's PATH, so tools from Homebrew or a version
   manager are found.
 - The sidebar entry shows how many jobs are failing; opening a job clears it until it fails again.
+- Optionally, a push notification when a job starts failing, once per failure, through bb's Push
+  notifications (bb 0.48.1 or newer).
 - With several Macs connected to bb, a picker chooses whose jobs you see.
 - Jobs made by the Paseo `launchd-jobs` plugin appear as they are, with their history, and are never
   moved.

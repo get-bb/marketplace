@@ -1,0 +1,33 @@
+{
+  "id": "system-messages-tab",
+  "displayName": "System Messages Tab",
+  "description": "Keeps \"Your messages\" in the thread outline to what you typed, moving BB notices and messages from other threads into their own tab. In an orchestrator thread with child agents, that took one outline from 1,045 entries to the 78 the user wrote. Every outline entry gets a date and time, and senders the outline would label \"Agent\" show their thread title. A BB update can hide these changes until the plugin catches up; the outline keeps working.",
+  "icon": "Bell",
+  "tags": [
+    "outline",
+    "system-messages",
+    "notifications",
+    "timestamps",
+    "orchestration",
+    "child-threads",
+    "navigation",
+    "messages"
+  ],
+  "author": {
+    "name": "FlowGoCrazy",
+    "github": "FlowGoCrazy",
+    "url": "https://github.com/FlowGoCrazy"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/FlowGoCrazy/bb-plugin-system-messages-tab.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/system-messages-tab/system-messages.png",
+    "./screenshots/system-messages-tab/your-messages.png"
+  ],
+  "overview": "./overview/system-messages-tab.md"
+}

@@ -1,24 +1,57 @@
-## What you get
+Diff Plus improves BB's Diff tab with a folder tree beside the file list, plus a few views that make a large change quicker to find your way around. It adds to the tab: nothing of BB's is replaced, and it doesn't rebuild features BB already has.
 
-A folder button in the toolbar of BB's Diff tab shows the changed files as a tree beside the file list. Each folder shows how many files changed under it and its added and removed lines, so you can see where a large change lands before you read any of it.
+## Features
 
-- Click a folder's name to show only the files under it. Click a file to show it alone with its diff open. Click the same row again, or **All files**, to see everything.
-- Click a folder's icon to open or close it. The tree opens the top levels for you.
-- Files and folders carry vscode-icons glyphs for common languages, tools and folder names, and VS Code's git letters at the right: U untracked, A added, M modified, D deleted, R renamed. A folder gets a dot: green when everything under it is new, red when it is all deleted, amber otherwise.
-- The tree follows the tab's scope: all changes, committed changes, uncommitted changes or a single commit. It refreshes when BB reports that the worktree's status or branches changed.
+- **Folder tree** beside the file list
+  - File count and +/- per folder, so you see where a change lands
+  - Click a folder or file to show only it; click again, or **Changes**, for everything
+  - Click a folder's icon to open or close it; one button opens or closes them all
+- **Sticky folders:** open folders stay pinned at the top as you scroll through them
+- **File icons and git letters:** A added, M modified, D deleted, R renamed; a coloured dot per folder
+- **Tree or Flat view:** folders, or every file on one row with its folder beside it
+- **Compact folders:** a folder holding only one folder shares its row
+- **Synced view:** the tree in the same order as the file list
+  - **Scroll sync:** the tree follows the list as you scroll
+  - **Visible indicator lines:** a bar beside the files on screen
+- **Recent commits:** your last 10, 20 or 50 commits in the scope picker, even merged ones (see below)
+- **Follows the tab:** its scope and its **Filter files** menu; rows the path filter matches are tinted
+- **Remembers your place:** open folders, the picked row and your place in the list come back after you open a file
+- **Fits any width:** drag the tree's edge to resize it; in a narrow panel or the phone drawer it sits above the list
 
-## Layout
+Every option is configurable, from the folder button in the tab's toolbar and the view button beside **Changes**.
 
-Drag the tree's right edge, or focus it and use the arrow keys, to change its width. In a tab narrower than 600px, such as the phone drawer, the tree goes above the list instead. The folder button hides the tree, and the choice and the width are kept per browser.
+## Works with BB's Diff tab
 
-## How it works
+- Clicks filter through the tab's own filter box
+- BB's search, filters, Viewed checkboxes, split view and "Add to chat" work as before
+- The folder button in the tab's toolbar turns the tree off
 
-The tree adds to BB's own Diff tab and leaves its diffs alone: filtering goes through the tab's own filter box, so BB's own file search and filters, Viewed checkboxes, split view and "Add to chat" on selected lines all keep working. File paths that look like glob patterns, such as `app/[slug]`, are escaped so a click shows exactly that folder or file.
+## Recent commits and the merge base
+
+BB's scope picker only lists commits made since the checkout's merge base, so commits that are already merged never show. Diff Plus works around that:
+
+- Picking a recent commit moves the checkout's merge base back far enough for BB to list that commit
+- The merge base is BB's own setting for the checkout, the one its base branch picker sets; git itself is never changed
+- While it is moved, every thread on that checkout sees it: **All changes**, **Committed** and the branch's git status count those commits too
+- It is put back when you pick any other scope, close the picker without picking, or the plugin stops or starts
+- Each move and restore is logged (`bb plugin logs diff-plus`)
+- Don't want this? Set **Recent commits** to Off in the folder button's menu
+
+## Inspiration
+
+VS Code: the Explorer tree, sticky scroll, compact folders, file icons and git decoration letters.
 
 ## Requirements
 
-- BB 0.48 or later.
-- BB has no plugin slot beside the Diff tab, so the tree finds the tab by its page structure. A future BB release may move it; the tree then does not show until the plugin is updated.
-- It reads the changed files from BB's bundled Git plugin, which the Diff tab itself uses.
-- No external service or account is used.
-- The icons are from vscode-icons, under CC BY-SA 4.0: https://github.com/vscode-icons/vscode-icons
+- BB 0.48 or later
+- BB has no plugin slot in the Diff tab yet, so the tree finds it by its page structure; a BB update may need a plugin update
+
+## Maintenance
+
+- Releases follow semver
+- Kept up to date with BB releases until BB supports these features natively
+- Feature requests and bug reports are welcome: [open an issue](https://github.com/nfour/bb-plugins/issues)
+
+## Credits
+
+File icons from [vscode-icons](https://github.com/vscode-icons/vscode-icons), CC BY-SA 4.0.

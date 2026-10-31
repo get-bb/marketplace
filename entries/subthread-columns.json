@@ -1,0 +1,21 @@
+{
+  "id": "subthread-columns",
+  "displayName": "Subthread Columns",
+  "description": "Answer waiting subthreads and inspect failures beside their parent. Optional Responsibilities adds unread-result columns.",
+  "icon": "Columns2",
+  "author": {
+    "name": "Sergey Baus",
+    "github": "neoromantic"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/neoromantic/bb-plugin-subthread-columns.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/subthread-columns.md",
+  "screenshots": [
+    "./screenshots/subthread-columns/columns.png"
+  ]
+}

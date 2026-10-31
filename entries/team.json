@@ -1,7 +1,7 @@
 {
   "id": "team",
   "displayName": "Team",
-  "description": "Turns one bb team init command into a full agent team for a project: a lead that assigns work packages, plus developers and testers that report back to it. Roles, providers, and models are pinned in .bb/team.yaml; every executor spawns as a child thread of the lead, so reports and blockers flow to one place. Existing threads join through a threadId, and re-runs repair missing links instead of duplicating. Works with any provider already installed; no external services.",
+  "description": "Role-based agent teams for a project: a lead that plans and accepts work, plus developers, a cheap junior for simple tasks, and testers that report back to it. Create several teams per project from templates, edit templates in settings, add executors or adopt existing threads, hand out tracked work packages, and watch every team in a live tree with statuses and actions. Configs live in .bb/teams/ and stay out of git until you turn versioning on. Works with any installed provider; no external services.",
   "icon": "Users",
   "tags": [
     "agents",
@@ -10,7 +10,8 @@
     "multi-agent",
     "orchestration",
     "delegation",
-    "threads"
+    "templates",
+    "work-packages"
   ],
   "author": {
     "name": "kirei4ik",
@@ -21,7 +22,7 @@
   "source": {
     "git": {
       "url": "https://github.com/kirei4ik/bb-plugin-team.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   },
   "overview": "./overview/team.md",

@@ -28,5 +28,6 @@
       "url": "https://github.com/braedonsaunders/bb-plugin-provider-usage.git",
       "range": ">=0.4.0 <1.0.0"
     }
-  }
+  },
+  "overview": "./overview/provider-usage.md"
 }

@@ -1,7 +1,7 @@
 {
   "id": "bb-github-pr-dashboard",
   "displayName": "GitHub PR Dashboard",
-  "description": "See why each pull request is stuck and review it without leaving bb: failing CI, unresolved comments, conflicts and stacks. Your pull requests, review requests for you and your teams, and assigned ones sit in one My PRs tab, grouped by repository. Open one to read its CI failures by pipeline and job, its changed files with syntax highlighting inline or side by side, and every review thread with who it waits on. Comment on a line or a range, reply, start and submit a review as Comment, Approve or Request changes, and close or reopen the pull request. Alerts tell you when CI starts failing or someone comments, as bb toasts, desktop notifications or a badge, each one optional. Uses the GitHub CLI login on the machine running bb, or a personal access token; github.com only.",
+  "description": "See why each pull request is stuck, and get it unstuck, without leaving bb. My PRs lists your pull requests, review requests for you and your teams, and assigned ones by repository, each led by what blocks it: failing CI down to the job, changes requested, unresolved comments, conflicts or a stack. Open one to read its failing checks, walk its changed files with syntax highlighting inline or side by side, and answer each review thread under its line. Comment on a line or a range, reply, submit a review as Comment, Approve or Request changes, and close or reopen the pull request, each only when you click. Search the list, hide or fold repositories, and move by keyboard: j and k between pull requests or files, n and p between unresolved comments, [ and ] to the previous or next one. Alerts tell you when CI starts failing or someone comments, as bb toasts, desktop notifications or a badge. Uses the GitHub CLI login on the machine running bb, or a personal access token; github.com only.",
   "icon": "GitPullRequest",
   "tags": [
     "github",
@@ -21,17 +21,18 @@
   },
   "category": "code-and-reviews",
   "screenshots": [
-    "./screenshots/bb-github-pr-dashboard/list.jpg",
-    "./screenshots/bb-github-pr-dashboard/files.jpg",
-    "./screenshots/bb-github-pr-dashboard/review.jpg",
-    "./screenshots/bb-github-pr-dashboard/checks.jpg",
-    "./screenshots/bb-github-pr-dashboard/split.jpg"
+    "./screenshots/bb-github-pr-dashboard/list.png",
+    "./screenshots/bb-github-pr-dashboard/files.png",
+    "./screenshots/bb-github-pr-dashboard/review.png",
+    "./screenshots/bb-github-pr-dashboard/checks.png",
+    "./screenshots/bb-github-pr-dashboard/split.png",
+    "./screenshots/bb-github-pr-dashboard/filters.png"
   ],
   "overview": "./overview/bb-github-pr-dashboard.md",
   "source": {
     "git": {
       "url": "https://github.com/ahsan7162/bb-github-pr-dashboard.git",
-      "range": "^0.2.0"
+      "range": "^0.3.0"
     }
   }
 }

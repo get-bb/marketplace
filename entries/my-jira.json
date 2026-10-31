@@ -1,0 +1,36 @@
+{
+  "id": "my-jira",
+  "displayName": "Jira Board",
+  "description": "See every Jira ticket assigned to you in one bb tab, filtered and grouped the way you work, and move it along without opening Jira. Filter by status and type, search by key or words, and group by status, initiative and epic, or the boards that list each ticket. Open a ticket beside the list to read its lineage, description, subtasks and comments, then step to the next one with Previous and Next or the keyboard. Change a status in place from the moves your workflow allows. Needs Jira Cloud with Atlassian's Rovo MCP server allowed for your organization; you sign in with Atlassian in the browser and set up nothing else.",
+  "icon": "Columns2",
+  "tags": [
+    "atlassian",
+    "jira-cloud",
+    "issues",
+    "issue-tracker",
+    "assigned-to-me",
+    "epics",
+    "kanban",
+    "workflow-transitions",
+    "keyboard-shortcuts",
+    "my-tickets"
+  ],
+  "author": {
+    "name": "Muhammad Ahsan",
+    "github": "ahsan7162",
+    "url": "https://github.com/ahsan7162"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/my-jira/list.png",
+    "./screenshots/my-jira/ticket.png",
+    "./screenshots/my-jira/hierarchy.png"
+  ],
+  "overview": "./overview/my-jira.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/ahsan7162/bb-plugin-my-jira.git",
+      "range": "^0.4.0"
+    }
+  }
+}

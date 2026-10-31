@@ -1,7 +1,7 @@
 {
   "id": "model-effort-badges",
-  "displayName": "Thread Columns",
-  "description": "See which threads need you, with subthread columns, status marks, and model and effort badges.",
+  "displayName": "Model & Effort Badges",
+  "description": "See each thread’s model and reasoning effort in the BB sidebar. Hover for the full name.",
   "icon": "Gauge",
   "author": {
     "name": "Sergey Baus",
@@ -11,11 +11,11 @@
   "source": {
     "git": {
       "url": "https://github.com/neoromantic/bb-plugin-model-effort-badges.git",
-      "range": "^0.6.0"
+      "range": "^0.7.0"
     }
   },
   "overview": "./overview/model-effort-badges.md",
   "screenshots": [
-    "./screenshots/model-effort-badges/columns.png"
+    "./screenshots/model-effort-badges/badges.png"
   ]
 }

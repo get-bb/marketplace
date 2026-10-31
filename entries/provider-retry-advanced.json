@@ -1,0 +1,20 @@
+{
+  "id": "provider-retry-advanced",
+  "displayName": "Provider retry advanced",
+  "description": "Keeps BB's bundled overload and subscription-limit retries and resumes turns after lost connectivity. Optional, off by default: Claude Code UltraCode workflow recovery, a stalled-turn watchdog and continuation follow-ups. A fresh install observes until armed. Disable the bundled Provider retry before use.",
+  "icon": "ArrowReloadHorizontal",
+  "overview": "./overview/provider-retry-advanced.md",
+  "tags": ["retry", "connectivity", "claude-code", "codex", "workflows"],
+  "author": {
+    "name": "Sergey Baus",
+    "github": "neoromantic",
+    "url": "https://github.com/neoromantic"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/neoromantic/bb-plugin-provider-retry-advanced.git",
+      "range": "^0.2.1"
+    }
+  }
+}

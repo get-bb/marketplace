@@ -1,0 +1,36 @@
+{
+  "id": "skiff",
+  "displayName": "Skiff VM",
+  "description": "Gives every thread its own throwaway Linux VM on your Mac, so nothing the agent installs or runs touches macOS. Claude Code and GitHub tokens stay in the macOS Keychain; the VM only holds placeholders that the skiff broker swaps for the real tokens on the way out. A fresh Ubuntu VM boots in about 4 seconds, is ready for the agent in under a minute, and is deleted when you archive the thread. Requires Apple Silicon, macOS 26, the open-source skiff CLI, a bb server access the VM can reach, such as bb Connect, and bb's own GitHub forwarding turned off.",
+  "icon": "Server",
+  "screenshots": [
+    "./screenshots/skiff/thread-in-vm.jpg",
+    "./screenshots/skiff/environment-picker.jpg",
+    "./screenshots/skiff/plugin-settings.jpg"
+  ],
+  "overview": "./overview/skiff.md",
+  "category": "cloud-and-remote",
+  "tags": [
+    "vm",
+    "virtual-machine",
+    "sandbox",
+    "isolation",
+    "linux",
+    "ubuntu",
+    "macos",
+    "apple-silicon",
+    "machines",
+    "credentials"
+  ],
+  "author": {
+    "name": "Florian Fiedler",
+    "github": "flo-sovyn-eu",
+    "url": "https://github.com/sovyn-eu"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/sovyn-eu/bb-plugin-skiff.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "typewriter",
+  "displayName": "Typewriter",
+  "description": "Hear IBM Selectric clicks as you type in BB, with five WAV sounds included. Set the volume, preview Enter or import a personal sound pack stored only on your device. No account, external service or OS keyboard-monitoring permission is needed.",
+  "icon": {
+    "url": "./icons/typewriter-dcb88c2f.svg"
+  },
+  "screenshots": [
+    "./screenshots/typewriter/settings.png"
+  ],
+  "overview": "./overview/typewriter.md",
+  "tags": [
+    "typing",
+    "keyboard",
+    "sound",
+    "wav",
+    "audio",
+    "customization"
+  ],
+  "author": {
+    "name": "creshka",
+    "github": "creshka",
+    "url": "https://github.com/creshka"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/creshka/bb-plugin-typewriter.git",
+      "range": "^0.1.1"
+    }
+  }
+}
