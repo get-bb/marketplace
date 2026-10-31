@@ -1,0 +1,23 @@
+{
+  "id": "maxwell",
+  "displayName": "Maxwell",
+  "description": "Keep Maxwell beside your BB conversations.",
+  "icon": {
+    "url": "./icons/maxwell-e05ac182.svg"
+  },
+  "tags": ["fun", "cat", "useless", "maxwell"],
+  "author": {
+    "name": "Mikołaj Nowak",
+    "github": "m3nowak",
+    "url": "https://github.com/m3nowak"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": ["./screenshots/maxwell/overview.jpg"],
+  "overview": "./overview/maxwell.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/m3nowak/bb-plugin-maxwell.git",
+      "range": "*"
+    }
+  }
+}
