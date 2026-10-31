@@ -12,6 +12,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   publish:
+    if: github.repository == 'get-bb/marketplace'
     runs-on: ubuntu-latest
     environment: production
     steps:
