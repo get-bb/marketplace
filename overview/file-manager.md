@@ -5,6 +5,7 @@
 - Uploads by drag and drop, whole folders included. They go in chunks, keep running while you work elsewhere in bb, and resume after a dropped connection. Downloads stream from disk, so a 10 GB file costs the browser no memory. Several selected files or a whole folder download as one zip.
 - Rename, move, copy, delete and new folder, with cut and paste or drag and drop. A name clash becomes `name (1).ext` instead of an overwrite.
 - Bookmarks for up to fifty folders, a start folder chosen with a folder browser, and the folder you were last in when you come back.
+- English or Russian interface: one **EN | RU** switch for all the author's plugins, the browser's language by default.
 
 ## Reading files
 
