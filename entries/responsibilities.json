@@ -14,5 +14,9 @@
       "range": "^0.1.0"
     }
   },
-  "overview": "./overview/responsibilities.md"
+  "overview": "./overview/responsibilities.md",
+  "screenshots": [
+    "./screenshots/responsibilities/responsibilities.png",
+    "./screenshots/responsibilities/new-child.png"
+  ]
 }
