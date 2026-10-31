@@ -15,6 +15,7 @@ import {
   findOrphanScreenshotFiles,
   fillEmptyCollections,
   orderCategories,
+  overviewAssetUrl,
   projectV1Manifest,
   pullRequestEntryFiles,
   readEntryAddedDates,
@@ -242,7 +243,8 @@ const v2Plugins = plugins.map((entry) => {
     if (result.relativeFile !== undefined) {
       referencedOverviewFiles.add(result.relativeFile);
     }
-    if (result.text !== undefined) output.overview = result.text;
+    if (result.text !== undefined)
+      output.overview = overviewAssetUrl(entry.id);
   }
   return output;
 });

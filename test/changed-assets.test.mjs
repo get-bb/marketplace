@@ -46,6 +46,9 @@ test("asset groups map files to their bucket keys", () => {
     "icons/README.md": "not an icon",
     "screenshots/plugin/two.webp": "2",
     "screenshots/plugin/one.png": "1",
+    "overview/b.md": "b",
+    "overview/a.md": "a",
+    "overview/notes.txt": "not an overview",
   });
   try {
     assert.deepEqual(listAssets(root, "icons"), [
@@ -63,6 +66,11 @@ test("asset groups map files to their bucket keys", () => {
       },
     ]);
     assert.deepEqual(listAssets(join(root, "missing"), "screenshots"), []);
+    assert.deepEqual(listAssets(root, "overviews"), [
+      { file: "overview/a.md", key: "v2/overview/a.md" },
+      { file: "overview/b.md", key: "v2/overview/b.md" },
+    ]);
+    assert.deepEqual(listAssets(join(root, "missing"), "overviews"), []);
     assert.throws(() => listAssets(root, "other"), /unknown asset group/);
   } finally {
     rmSync(root, { recursive: true, force: true });
