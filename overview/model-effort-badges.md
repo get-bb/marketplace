@@ -2,7 +2,7 @@
 
 See each BB thread’s model family and reasoning effort without opening its composer. A compact code appears at the provider logo. Hover for the full model name and effort before sending the next turn.
 
-*Synthetic example data in BB 0.47.1, without True Colors.*
+*Synthetic example data in BB 0.47.1 with separate [True Colors](https://github.com/ChrBoebel/bb-plugin-provider-brand-marks) 0.1.3 by ChrBoebel. Without it, codes are gray. The tooltip shows a raw model ID because this demo has no provider catalog.*
 
 Compare several threads at a glance. Choose a tile, a caption under the logo, or a chip beside it; tile is the default for Codex and Claude Code. Use the caption to preserve long titles. Badges show the next turn’s settings; a switch sent to an already running thread appears when it goes idle.
 

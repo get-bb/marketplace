@@ -1,7 +1,7 @@
 {
   "id": "subthread-columns",
   "displayName": "Subthread Columns",
-  "description": "Answer waiting or failed subthreads beside their parent. Optional Responsibilities adds unread-result columns.",
+  "description": "Answer waiting subthreads and inspect failures beside their parent. Optional Responsibilities adds unread-result columns.",
   "icon": "Columns2",
   "author": {
     "name": "Sergey Baus",

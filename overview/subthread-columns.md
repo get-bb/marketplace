@@ -2,7 +2,7 @@
 
 Answer the subthreads that need you without opening each one separately. Open a parent thread to see its chat beside waiting and failed descendants, at any depth. Every column has its own composer; paths and depth stripes show where it belongs.
 
-*Synthetic example data in BB 0.47.1, without Responsibilities.*
+*Synthetic example data in BB 0.47.1 with Subthread Columns alone. Sidebar marks are BB’s own.*
 
 Reply to a waiting subthread in its column, or inspect a failure, then click outside its column to mark it seen. The default limit is eight descendant columns, with overflow shown as **+N more**. **Only this thread** returns to the parent’s normal view. Automatic opening works on desktop-width windows when you navigate to a parent with descendants needing attention.
 
