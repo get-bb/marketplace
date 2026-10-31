@@ -1,0 +1,24 @@
+{
+  "id": "memory-ui",
+  "displayName": "Memory UI",
+  "description": "Browse, search, edit and forget bb memories — FTS search, per-record history, and a Sweep view of what has been rewriting the store.",
+  "icon": "Brain",
+  "tags": [
+    "memory",
+    "search",
+    "curation",
+    "interface"
+  ],
+  "author": {
+    "name": "MGrin",
+    "github": "MGrin",
+    "url": "https://github.com/MGrin"
+  },
+  "category": "memory-and-context",
+  "source": {
+    "git": {
+      "url": "https://github.com/MGrin/bb-plugin-memory-ui.git",
+      "ref": "60901ad7fa4892e4e20e6aac12ae25b0b6252a3e"
+    }
+  }
+}
