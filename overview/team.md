@@ -1,80 +1,81 @@
 # Team
 
-Spawn a role-based agent team for a project from a declarative config — a lead
-that coordinates work, and any number of executors (developers, testers,
-analysts) that report back to it.
+Role-based agent teams for bb: a lead that plans and accepts work, and
+executors — developers, a cheap junior for simple tasks, testers, writers —
+that report back to it. Several teams per project, created from templates.
 
 ## Why
 
-Setting up a multi-agent workflow in bb is manual: you write role prompts from
-scratch, spawn each thread by hand, paste thread IDs between them, and route
-messages yourself. Team turns that setup into one config file and one command.
+A multi-agent workflow in bb is manual: role prompts from scratch, threads
+spawned one by one, thread IDs pasted between agents, packages tracked in
+chat. Team turns it into a template, a short config and one click.
 
 ## How it works
 
-1. `bb team init` — drop a template config (`.bb/team.yaml`) plus role prompt
-   files (`.bb/team/roles/`) into a project.
-2. Edit the config: roles, providers, models, environments.
-3. `bb team create` — spawn the whole team in one command.
-4. `bb team status` — see the config and the live team threads.
+1. Open the Team panel: projects are grouped into "with teams", "a team can be
+   created" and "cannot be created now" (with the reason), with search.
+2. Pick a template (development, QA, docs, management, or your own), adjust
+   roles, providers and models, and create the team. Disabled providers block
+   creation up front.
+3. The lead gets a roster; executors are its child threads, titled
+   `👥 Developer` (or `👥 core · Developer` with several teams).
+4. Work from the panel's tree or the CLI: message roles by name, hand out
+   tracked work packages, pause, stop, add executors.
 
-The first role (or the one marked `lead: true`) becomes the lead thread. Every
-other role is spawned as its child thread and reports to the lead with
-`bb thread tell`. The lead receives a ready-made team roster with clickable
-thread references, so no one pastes IDs by hand.
+## Highlights
 
-## Config highlights
+- **Several teams per project**, each in `.bb/teams/<team>.yaml`, each with its
+  own sidebar section, packages and pause.
+- **Budget-minded default team**: a lead on a strong model, a developer, a
+  junior on a cheap model, a tester; short built-in prompts that plan first,
+  delegate by difficulty and keep diffs and reports small.
+- **Templates** shared across projects: edit them in Settings → Team, create
+  one from role kinds with prepared prompts, or save a running team as one.
+- **Add executors** later: a new role, or an existing free thread of the
+  project (it is renamed and moved under the lead).
+- **Work packages**: `bb team task add developer "Login form" --send`;
+  executors move them to review, only the lead accepts.
+- **Helpers**: threads an agent spawns under a role show up under that role.
+- **Live tree**: statuses, models and current packages; actions per role.
+- **Pause** holds agent messages to executors until resume; humans are never
+  held. Optional `notifyOn: [idle]` wakes the lead after a role's turn.
+- **Doctor**: providers, environments, prompts, broken links, git state.
+- **Replace** a role with a fresh thread that receives a handoff.
+- **Out of git by default**: team configs stay untracked until you turn
+  versioning on per team.
+
+## Config sketch
 
 ```yaml
 version: 1
+title: Development team
 defaults:
-  environment: checkout   # checkout | default | worktree | env:<id>
+  environment: checkout
   parentNotifications: stuck
 roles:
   - name: lead
-    title: Development lead
+    lead: true
     provider: codex
-    promptFile: .bb/team/roles/lead.md
   - name: developer
-    title: Developer
-    provider: pi
-    promptFile: .bb/team/roles/developer.md
-  - name: tester
-    title: Tester
     provider: codex
-    promptFile: .bb/team/roles/tester.md
+  - name: junior
+    provider: pi
+    model: qwen3-coder
+  - name: tester
+    provider: codex
+    notifyOn: [idle]
 ```
-
-- **Per-role provider and model**: pin each role to a provider (`codex`, `pi`,
-  `claude-code`, …) and a concrete model, with optional `reasoningLevel`,
-  `serviceTier`, and `permissionMode`.
-- **Shared or isolated environments**: all roles in one project checkout, or a
-  separate managed worktree per role.
-- **Existing threads**: give a role a `threadId` to adopt a thread you already
-  run instead of spawning a duplicate.
-- **Prompt placeholders**: `{{leadThreadId}}`, `{{leadThreadRef}}`,
-  `{{role.<name>.threadId}}`, `{{projectId}}`, `{{workspacePath}}` are filled
-  in at spawn time.
-- **Idempotent**: re-running `bb team create` skips roles that already have
-  threads and repairs missing parent links; `--dry-run` shows the plan.
-
-## Plugin settings
-
-- **Language** (`en` | `ru`, default `en`) — CLI output and scaffold templates
-  (config comments, role prompts).
-- **Team sidebar section** (default on) — team threads live in one section.
-- **Send team roster** (default on) — the lead gets a roster message after
-  `bb team create`.
-
-## Opt-in per project
-
-The plugin does nothing in projects without `.bb/team.yaml`. Run
-`bb team init` in a project to opt in; other projects are untouched.
 
 ## Commands
 
-- `bb team init [--project <id|name>] [--force]` — write the template.
-- `bb team create [--project <id|name>] [--dry-run]` — spawn or adopt threads.
-- `bb team status [--project <id|name>]` — config and live team overview.
+`bb team init | create | list | status | add-role | version | tell |
+task add/list/update/done/remove | report | doctor | replace | stop | pause |
+resume | retitle | template list/show/save/delete` — all with `--team`,
+`--project` and `--json`.
 
-All commands support `--json` and run from any thread or terminal.
+## Settings
+
+Language (English or Russian for CLI, panel and templates), a sidebar section
+per team, the roster message, and the thread title format.
+
+Opt-in: projects without team configs are untouched.
