@@ -1,11 +1,11 @@
 {
   "id": "maxwell",
   "displayName": "Maxwell",
-  "description": "Keep Maxwell beside your BB conversations. Watch him sway and spin faster as the context fills up. Click him to play music.",
+  "description": "Keep Maxwell beside your BB conversations.",
   "icon": {
     "url": "./icons/maxwell-e05ac182.svg"
   },
-  "tags": ["cat", "companion", "animation", "music"],
+  "tags": ["fun", "cat", "useless", "maxwell"],
   "author": {
     "name": "Mikołaj Nowak",
     "github": "m3nowak",
