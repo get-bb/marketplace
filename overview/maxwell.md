@@ -1,17 +1,12 @@
 ## What you get
 
-Maxwell sits in a side panel beside your conversation. Open him from Actions in an existing thread or from the new-thread screen.
+Maxwell sits in a side panel beside your conversation.
 
-- Maxwell sways before the conversation starts.
-- Rotation that speeds up as the conversation's context fills up.
-- Music when you click Maxwell.
-
-> [!WARNING]
-> Do not free Maxwell.
+> **Warning:** Do not free Maxwell.
 
 ## How it works
 
-Before the first message, Maxwell sways in place. During a conversation, he spins faster as the context fills up.
+Open Maxwell from Actions in an existing thread or from the new-thread screen. He sways before the first message, then spins faster as the context fills up.
 
 Click Maxwell to play music.
 
