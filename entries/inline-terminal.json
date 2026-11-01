@@ -1,0 +1,38 @@
+{
+  "id": "inline-terminal",
+  "displayName": "Inline Terminal",
+  "description": "Run the commands an agent suggests right under its reply, and have the agent read the result and answer on its own. Every bash, sh, zsh or console code block in a reply gets a Run button that opens a live terminal beneath it, where you can answer prompts, type passwords and press Ctrl-C. When the block finishes, its exit code and output reach the agent as hidden context, so it replies without you pasting anything and the chat gets no extra message. The shell starts in the thread's workspace with your startup files loaded and keeps cd, virtualenvs and variables for follow-up commands. Needs a macOS or Linux machine; no account or external service.",
+  "icon": {
+    "url": "./icons/inline-terminal-f64ad521.svg"
+  },
+  "screenshots": [
+    "./screenshots/inline-terminal/terminal.jpg",
+    "./screenshots/inline-terminal/run-button.jpg"
+  ],
+  "overview": "./overview/inline-terminal.md",
+  "tags": [
+    "terminal",
+    "shell",
+    "run-command",
+    "code-blocks",
+    "interactive",
+    "xterm",
+    "command-output",
+    "agent-context"
+  ],
+  "author": {
+    "name": "Dmitrii Maksimov",
+    "github": "kartollikaa",
+    "url": "https://github.com/kartollikaa"
+  },
+  "category": "command-line",
+  "secondaryCategories": [
+    "thread-content"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/kartollikaa/bb-plugin-inline-terminal.git",
+      "range": "^0.1.0"
+    }
+  }
+}
