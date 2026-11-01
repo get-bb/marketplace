@@ -1,7 +1,7 @@
 {
   "id": "hex",
   "displayName": "Hex Voice",
-  "description": "On-device voice dictation for BB's chat composer and `bb voice transcribe`, powered by Hex and macOS 26's built-in Apple Speech (SpeechTranscriber + SpeechAnalyzer) or local GGUF speech models (Parakeet, Whisper, Qwen3-ASR, Cohere Transcribe, Nemotron). Starts a warm embedded `hex service --embedded` daemon when BB loads the plugin, transcodes browser microphone clips (`audio/webm`, `audio/mp4`, `audio/ogg`) to 16 kHz mono PCM WAV via `ffmpeg`, and stops the daemon automatically when BB exits.",
+  "description": "On-device voice dictation for BB's chat composer and `bb voice transcribe`, powered by Hex and macOS 26's built-in Apple Speech (SpeechTranscriber + SpeechAnalyzer) or local GGUF speech models (Parakeet, Whisper, Qwen3-ASR, Cohere Transcribe, Nemotron). Starts a warm embedded `hex service --embedded` daemon when BB loads the plugin, adds a Voice Provider picker directly to the composer microphone right-click menu, transcodes browser microphone clips (`audio/webm`, `audio/mp4`, `audio/ogg`) to 16 kHz mono PCM WAV via `ffmpeg`, and stops the daemon automatically when BB exits.",
   "icon": {
     "url": "./icons/hex-11e5b363.svg"
   },
@@ -30,7 +30,7 @@
   "source": {
     "git": {
       "url": "https://github.com/braedonsaunders/bb-plugin-hex.git",
-      "range": "^0.1.0"
+      "range": "^0.1.1"
     }
   }
 }

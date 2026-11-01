@@ -9,9 +9,10 @@ BB's composer microphone button dispatches recorded speech to the active `voice`
 ## How it works
 
 1. **Registers the `hex` (`Hex (Apple Speech)`) AI service** via `bb.experimental_aiServices.register`.
-2. **Manages a warm `hex service --embedded` daemon** tied to BB's plugin lifecycle (`bb.onDispose` and a stdin pipe lease), so it starts automatically when BB loads the plugin and exits cleanly when BB quits or reloads.
-3. **Transcodes browser microphone recordings** (`audio/webm`, `audio/mp4`, `audio/ogg`, etc.) to 16 kHz mono 16-bit PCM WAV via `ffmpeg` before sending them to Hex's `/transcriptions` endpoint.
-4. **Supports Apple Speech and local GGUF models** — defaults to `apple_speech` (macOS 26 `SpeechTranscriber`), with support for `parakeet_unified_en`, `parakeet_v2`, `parakeet_v3`, `whisper_large_v3_turbo`, `qwen3_asr06_b`, `cohere_transcribe`, and `nemotron_3_5_asr`.
+2. **Adds a Voice Provider picker to the microphone right-click menu** — right-clicking the composer microphone button displays all configured voice providers right below **Input device**, so you can switch between `Hex (Apple Speech)`, `Codex`, and any other configured voice provider on the fly.
+3. **Manages a warm `hex service --embedded` daemon** tied to BB's plugin lifecycle (`bb.onDispose` and a stdin pipe lease), so it starts automatically when BB loads the plugin and exits cleanly when BB quits or reloads.
+4. **Transcodes browser microphone recordings** (`audio/webm`, `audio/mp4`, `audio/ogg`, etc.) to 16 kHz mono 16-bit PCM WAV via `ffmpeg` before sending them to Hex's `/transcriptions` endpoint.
+5. **Supports Apple Speech and local GGUF models** — defaults to `apple_speech` (macOS 26 `SpeechTranscriber`), with support for `parakeet_unified_en`, `parakeet_v2`, `parakeet_v3`, `whisper_large_v3_turbo`, `qwen3_asr06_b`, `cohere_transcribe`, and `nemotron_3_5_asr`.
 
 ## Commands
 
