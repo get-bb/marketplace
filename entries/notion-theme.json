@@ -1,0 +1,33 @@
+{
+  "id": "notion-theme",
+  "displayName": "Notion Theme",
+  "description": "Give BB Notion's page colours and type in light and dark, then pick Default, Serif or Mono for messages. Menus, dialogs, switches and your own bubble follow those shapes; markdown in the thread uses Notion's inline code, quotes, headings and tables. Hover cards close when the pointer leaves, and a click pins them. A notice on the prompt box appears when a provider window is exhausted and can retry at reset. No account; licensed Notion fonts are named first, then system fallbacks.",
+  "icon": "Palette",
+  "screenshots": [
+    "./screenshots/notion-theme/light.jpg",
+    "./screenshots/notion-theme/dark.jpg",
+    "./screenshots/notion-theme/fonts.jpg"
+  ],
+  "overview": "./overview/notion-theme.md",
+  "tags": [
+    "notion",
+    "palette",
+    "fonts",
+    "dark-mode",
+    "appearance",
+    "typography",
+    "theme"
+  ],
+  "author": {
+    "name": "Max Kosach",
+    "github": "KosachMax",
+    "url": "https://github.com/KosachMax"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/KosachMax/bb-plugin-notion-theme.git",
+      "range": "^0.1.0"
+    }
+  }
+}
