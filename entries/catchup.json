@@ -1,0 +1,24 @@
+{
+  "id": "catchup",
+  "displayName": "Catch Up",
+  "description": "Shows a short recap above the composer, so you can pick up a thread without rereading it. Close it with × once you have read it; it stays closed on every device until a newer recap replaces it. Recaps follow the language of your latest messages, or one language you set. Other layouts add a compact banner, an expanded banner and a larger card. Each recap is a normal request to the provider you choose and never enters the thread's context.",
+  "icon": "History",
+  "tags": ["recap", "summary", "summaries", "threads", "composer", "catch-up", "resume", "context"],
+  "author": {
+    "name": "Serge Baranov",
+    "github": "CrazyCoder",
+    "url": "https://github.com/CrazyCoder"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/catchup/minimal.png",
+    "./screenshots/catchup/settings.png"
+  ],
+  "overview": "./overview/catchup.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/CrazyCoder/bb-plugin-catchup.git",
+      "range": ">=0.3.0"
+    }
+  }
+}
