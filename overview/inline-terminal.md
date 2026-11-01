@@ -7,17 +7,17 @@ back to the agent the way `!command` does in Claude Code.
 - A **Run** button under every `bash`, `sh`, `shell`, `zsh`, `console`,
   `shell-session` and `terminal` code block in agent replies. It becomes
   active once the block has finished streaming.
-- A live, interactive terminal right under the block: answer prompts, type
-  passwords, press Ctrl-C, run follow-ups in the same session.
+- A live, interactive terminal right under the block that grows with its
+  output: answer prompts, type passwords, press Ctrl-C, run follow-ups in the
+  same session. Type `exit` to end it, then **Run again** to start fresh.
 - When the block finishes, its exit code and output go to the agent as hidden
   context and the agent replies right away. You see the output in the
   terminal; nothing extra is posted to the chat. If the agent is still busy,
   the result waits until its current reply ends.
-- **Send to agent** by hand instead: turn off *Send command results to the
-  agent* in the plugin settings.
-- **Panel** moves the same session into bb's terminal panel, **Ctrl-C**
-  interrupts the block, **Run again** starts it fresh, **Close** ends the
-  shell.
+- The terminal icon in the terminal's top-right corner opens the same
+  session in bb's terminal panel.
+- To keep results to yourself, turn off *Send command results to the agent*
+  in the plugin settings.
 
 ## How it works
 
