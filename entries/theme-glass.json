@@ -1,0 +1,34 @@
+{
+  "id": "theme-glass",
+  "displayName": "Theme Glass",
+  "description": "Turns bb's chrome into frosted glass over a soft mesh wallpaper, in light and dark mode. Sidebar, main pane, composer, popovers, dialogs, and cards become translucent sheets that keep text readable through the tint. No surface draws a border or shadow, so the window reads as one continuous material divided by tone alone. Works in the browser and the desktop app; requires backdrop-filter support and falls back to a solid palette without it.",
+  "icon": "Layers",
+  "tags": [
+    "theme",
+    "appearance",
+    "translucent",
+    "frosted-glass",
+    "blur",
+    "wallpaper",
+    "light-mode",
+    "dark-mode",
+    "aesthetics"
+  ],
+  "author": {
+    "name": "rayzalzero",
+    "github": "rayzalzero",
+    "url": "https://github.com/rayzalzero"
+  },
+  "category": "themes-and-appearance",
+  "overview": "./overview/theme-glass.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/rayzalzero/bb-plugin-theme-glass.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/theme-glass/overview-dark.png",
+    "./screenshots/theme-glass/finder-workspace.png"
+  ]
+}
