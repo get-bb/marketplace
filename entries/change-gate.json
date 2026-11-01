@@ -1,0 +1,35 @@
+{
+  "id": "change-gate",
+  "displayName": "Change Gate",
+  "description": "Approve production changes from a card that says what changes, where and how to undo it. Agents ask before a migration, a deploy or deleting shared data, and you answer with one click. An approval covers one request, and a decline tells the agent not to look for another route. Every decision stays in a journal page and in bb change-gate log. Agents are instructed to ask; the gate does not block other tools.",
+  "icon": {
+    "url": "./icons/change-gate-02c45ea9.svg"
+  },
+  "screenshots": [
+    "./screenshots/change-gate/overview.png"
+  ],
+  "overview": "./overview/change-gate.md",
+  "tags": [
+    "approvals",
+    "production",
+    "migrations",
+    "deploy",
+    "audit-log",
+    "journal",
+    "human-in-the-loop"
+  ],
+  "author": {
+    "name": "Alexander Kashin",
+    "github": "AlexKashin29",
+    "url": "https://github.com/AlexKashin29"
+  },
+  "category": "security",
+  "source": {
+    "git": {
+      "url": "https://github.com/AlexKashin29/bb-plugins.git",
+      "range": "^0.1.0",
+      "subdir": "bb-plugin-change-gate",
+      "tagPrefix": "change-gate/"
+    }
+  }
+}
