@@ -7,6 +7,7 @@ Threadspace turns the BB sidebar into a Notion-style list of projects and thread
 - **Waiting for you.** Threads that need your answer are collected above the projects, with the project name and a count. Answer one and it leaves the section.
 - **One status column.** A synchronised spinner for running agents, a question bubble for input, a triangle for errors, and a dot for unread results. Collapsed projects and parent threads show a compact count, and nothing when idle.
 - **Instant selection.** The thread you press highlights at once, while BB is still loading it.
+- **Parent disclosure.** Hover a parent thread and the provider icon becomes a chevron in a small rounded box, the same nested-page control Notion uses.
 - **Keyboard and mouse.** Arrow keys move and fold rows. Drag projects to reorder them; the order syncs between windows.
 
 - **Hidden sidebar on hover (experimental).** Turn it on in settings or with `⌘⇧S`: the sidebar stays collapsed and slides in when the pointer reaches the left edge.
