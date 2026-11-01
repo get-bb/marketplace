@@ -1,0 +1,35 @@
+{
+  "id": "token-guard",
+  "displayName": "Token Guard",
+  "description": "Stop API keys from landing in your agent chats, and find the ones already there. Rejects a message that contains a credential before it reaches the agent or thread history. Scans Claude Code, Codex and BB history on your server in one click. Lists each credential by kind and fingerprint with a link to its revoke page, and never shows, stores or sends a value.",
+  "icon": {
+    "url": "./icons/token-guard-84e8df1c.svg"
+  },
+  "screenshots": [
+    "./screenshots/token-guard/overview.png"
+  ],
+  "overview": "./overview/token-guard.md",
+  "tags": [
+    "api-keys",
+    "secrets",
+    "credentials",
+    "tokens",
+    "leak-detection",
+    "security-scan",
+    "privacy"
+  ],
+  "author": {
+    "name": "Alexander Kashin",
+    "github": "AlexKashin29",
+    "url": "https://github.com/AlexKashin29"
+  },
+  "category": "security",
+  "source": {
+    "git": {
+      "url": "https://github.com/AlexKashin29/bb-plugins.git",
+      "range": "^0.1.0",
+      "subdir": "bb-plugin-token-guard",
+      "tagPrefix": "token-guard/"
+    }
+  }
+}
