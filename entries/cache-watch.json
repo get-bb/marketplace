@@ -1,12 +1,14 @@
 {
   "id": "cache-watch",
   "displayName": "Cache Watch [Experimental]",
-  "description": "See prompt-cache usage and estimated time left in each thread. Inspect cache reads and writes above the composer, or enable time-limited keepalive from the Cache Watch page. Keepalive sends ordinary paid agent turns through your configured provider; cache hits and savings are not guaranteed. Requires BB 0.48+ and Plugin SDK 0.6.104+.",
+  "description": "See how much prompt caching each turn reuses and what its tokens would cost at Standard API rates. Expand the Cache panel for per-request reads and writes, first-request cache use, and estimated time left. Open the Cache marker under an assistant reply for saved turn details, or Session statistics for totals and turn history. Optional time-limited keepalive sends ordinary paid turns through your configured provider; cache hits and savings are not guaranteed. Requires BB 0.48+ and Plugin SDK 0.6.104+; Claude Code Telemetry support requires that separate provider plugin.",
   "icon": {
     "url": "./icons/cache-watch-bd9d3c6e.svg"
   },
   "screenshots": [
     "./screenshots/cache-watch/thread-panel.jpg",
+    "./screenshots/cache-watch/turn-footer.jpg",
+    "./screenshots/cache-watch/turn-details.jpg",
     "./screenshots/cache-watch/overview.jpg"
   ],
   "overview": "./overview/cache-watch.md",
@@ -25,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/SergeyZh/bb-plugin-cache-watch.git",
-      "range": "^0.1.0"
+      "range": "*"
     }
   }
 }
