@@ -1,0 +1,40 @@
+{
+  "id": "code-review-workspace",
+  "displayName": "Code Review Workspace",
+  "description": "Understand a pull request or local diff before you approve it, and post a review you edited from an agent's draft to GitHub. An agent splits the change into chapters in reading order, rates each one's risk, and points to the one to three lines most likely to hide a defect. The review agent drafts line comments with a severity, a summary, and a suggested verdict, and you choose what posts to GitHub. All reviews sorts your PRs by whose turn it is, and after new commits Since your review shows only what changed and checks each of your earlier comments. Review a BB thread's uncommitted work the same way, then send your comments back to the thread that wrote the code. Needs git and a signed-in GitHub CLI (gh) on the BB server, works with github.com only, and spends your BB agent provider's usage on guides and reviews.",
+  "icon": {
+    "url": "./icons/code-review-workspace-40d5df4b.svg"
+  },
+  "category": "code-and-reviews",
+  "screenshots": [
+    "./screenshots/code-review-workspace/overview.webp",
+    "./screenshots/code-review-workspace/chapter-drafts.webp",
+    "./screenshots/code-review-workspace/ask-agent.webp",
+    "./screenshots/code-review-workspace/finish-review.webp",
+    "./screenshots/code-review-workspace/rereview-check.webp",
+    "./screenshots/code-review-workspace/all-reviews.webp"
+  ],
+  "overview": "./overview/code-review-workspace.md",
+  "tags": [
+    "code-review",
+    "pull-requests",
+    "github",
+    "diff",
+    "local-diff",
+    "review-agent",
+    "re-review",
+    "review-comments",
+    "agents"
+  ],
+  "author": {
+    "name": "Andrew Bird",
+    "github": "AndrewBird81",
+    "url": "https://github.com/AndrewBird81"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/AndrewBird81/bb-plugin-code-review-workspace.git",
+      "range": "^1.9.0"
+    }
+  }
+}
