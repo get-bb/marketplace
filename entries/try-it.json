@@ -1,0 +1,35 @@
+{
+  "id": "try-it",
+  "displayName": "Try It",
+  "description": "Test what your agent built from your phone, and send your verdict back with one tap per check. The agent shows a QR code, a link, what changed and a checklist in place of the composer. Each check gets Works or Broken, plus an optional note, and the answer goes straight back to the agent. Localhost links are refused, so the link you get opens on your phone.",
+  "icon": {
+    "url": "./icons/try-it-220d743a.svg"
+  },
+  "screenshots": [
+    "./screenshots/try-it/overview.png"
+  ],
+  "overview": "./overview/try-it.md",
+  "tags": [
+    "testing",
+    "qr-code",
+    "mobile",
+    "checklist",
+    "feedback",
+    "manual-testing",
+    "preview"
+  ],
+  "author": {
+    "name": "Alexander Kashin",
+    "github": "AlexKashin29",
+    "url": "https://github.com/AlexKashin29"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/AlexKashin29/bb-plugins.git",
+      "range": "^0.1.0",
+      "subdir": "bb-plugin-try-it",
+      "tagPrefix": "try-it/"
+    }
+  }
+}
