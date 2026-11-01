@@ -5,7 +5,7 @@ Catch Up stores each recap in its own database, so a recap never enters the thre
 - A minimal card above the composer with only the recap and a × button. Close it when you have read it; it stays closed on every device until a newer recap replaces it.
 - Other layouts in settings: a compact banner, a banner that opens expanded, a larger card, or no inline recap until you open the panel.
 - Automatic recaps after a visible thread goes idle and reaches the configured number of user turns. A thread with a running child thread stays active. A new turn hides the old recap until the next one is ready.
-- Generate a recap by hand from the thread header, the command palette, or the CLI. This needs a visible, idle thread.
+- Generate a recap by hand from the command palette or the CLI, or from an optional thread header button that is off by default. This needs a visible, idle thread.
 - Refreshes that send the previous recap plus the new turns, not the whole transcript again.
 
 ## Language
