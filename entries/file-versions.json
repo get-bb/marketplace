@@ -1,0 +1,36 @@
+{
+  "id": "file-versions",
+  "displayName": "File Versions",
+  "description": "See which copy of a deck, document or spreadsheet is the latest across all your projects. Groups v2, final, dated and (1) copies of one document, in English and Russian. Copies in archive folders never count as the latest ahead of a current one. Agents get the same answer from bb file-versions list, so they work from the right file. Reads project folders on the BB server and never changes a file.",
+  "icon": {
+    "url": "./icons/file-versions-0f2dc92a.svg"
+  },
+  "screenshots": [
+    "./screenshots/file-versions/overview.png"
+  ],
+  "overview": "./overview/file-versions.md",
+  "tags": [
+    "documents",
+    "presentations",
+    "spreadsheets",
+    "versions",
+    "office",
+    "pptx",
+    "xlsx",
+    "docx"
+  ],
+  "author": {
+    "name": "Alexander Kashin",
+    "github": "AlexKashin29",
+    "url": "https://github.com/AlexKashin29"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/AlexKashin29/bb-plugins.git",
+      "range": "^0.1.0",
+      "subdir": "bb-plugin-file-versions",
+      "tagPrefix": "file-versions/"
+    }
+  }
+}
