@@ -1,0 +1,31 @@
+{
+  "id": "forage",
+  "displayName": "Forage",
+  "description": "Put web research in every agent's hands and keep what it found in a per-thread Research tab you can read, quote and cite. web_search, web_fetch, web_map, web_extract, web_crawl and web_diff run as bb's own tools for every provider, with routing profiles, domain and date filters, bounded limits and every partial failure in words. Replies carry citation cards that quote the exact kept lines a claim rests on, and Check in sources matches any message against the pages stored for that thread. A zero-turn CLI runs the same operations; private networks are blocked by default and keyless DuckDuckGo and Exa search need no account.",
+  "icon": { "url": "./icons/forage-699808ee.svg" },
+  "screenshots": [
+    "./screenshots/forage/activity.jpg",
+    "./screenshots/forage/reader.jpg",
+    "./screenshots/forage/sources.jpg",
+    "./screenshots/forage/header-chip.jpg",
+    "./screenshots/forage/crawls.jpg",
+    "./screenshots/forage/research-page.jpg"
+  ],
+  "overview": "./overview/forage.md",
+  "tags": ["web-search", "web-fetch", "citations", "sources", "research", "crawls", "snapshots", "searxng", "privacy", "cli"],
+  "author": {
+    "name": "Kalindu De Costa",
+    "github": "kalindudc",
+    "url": "https://github.com/kalindudc"
+  },
+  "category": "thread-content",
+  "secondaryCategories": ["command-line"],
+  "source": {
+    "git": {
+      "url": "https://github.com/kalindudc/bb-marketplace.git",
+      "subdir": "plugins/forage",
+      "range": ">=0.1.0 <1.0.0",
+      "tagPrefix": "forage/"
+    }
+  }
+}
