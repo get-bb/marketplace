@@ -1,7 +1,7 @@
 {
   "id": "next-prompt",
   "displayName": "Next Prompt",
-  "description": "Predicts the instruction you'll type next after each finished turn and shows it above the composer, one key from your draft. Press Tab or → in the empty composer, or click the line, to put it in your draft; nothing is sent for you. Choose the model with bb's provider and model picker: Claude Code and Codex models run as one CLI call with no tools, and any other provider runs as a hidden worker thread. Only the thread's user and assistant messages are sent, never tool output, and hidden and child threads are skipped. Each suggestion is one request on a provider you already use; the default, Claude Sonnet 5.5, needs the claude CLI signed in on the bb server.",
+  "description": "Shows up to three prompts you are likely to type next after each finished turn, one key from your draft. Click a card, or press Tab or → in the empty composer, to put it in your draft; nothing is sent unless you set clicks to send. Show them as numbered cards above the composer, as grey text inside it, or both. Choose the model with bb's provider and model picker: Claude Code and Codex models run as one CLI call with no tools, and any other provider runs as a hidden worker thread. Only the thread's user and assistant messages are sent, never tool output, and hidden and child threads are skipped. Each suggestion request runs on a provider you already use; the default, Claude Sonnet 5.5, needs the claude CLI signed in on the bb server.",
   "icon": "CornerDownRight",
   "tags": [
     "composer",
@@ -27,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/CrazyCoder/bb-plugin-next-prompt.git",
-      "range": "^0.2.0"
+      "range": ">=0.4.0"
     }
   }
 }
