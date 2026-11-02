@@ -1,7 +1,7 @@
 {
   "id": "breathe",
   "displayName": "Breathe",
-  "description": "A pixel wave that guides your breathing while your agent works.",
+  "description": "An animated pixel wave that guides your breathing while your agent works.",
   "icon": {
     "url": "./icons/breathe-0e83da5e.svg"
   },
