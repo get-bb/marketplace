@@ -31,8 +31,10 @@
   ],
   "source": {
     "git": {
-      "url": "https://github.com/kartollikaa/bb-plugin-inline-terminal.git",
-      "range": "^0.1.0"
+      "url": "https://github.com/kartollikaa/bb-plugins.git",
+      "subdir": "plugins/inline-terminal",
+      "range": "^0.1.0",
+      "tagPrefix": "inline-terminal/"
     }
   }
 }
