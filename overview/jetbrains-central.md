@@ -1,3 +1,5 @@
+**This is an unofficial plugin developed independently by an enthusiast. It is not an official JetBrains product.**
+
 ## What are JetBrains Air and Central?
 
 [JetBrains Air](https://www.jetbrains.com/air/) is JetBrains' platform for working with AI coding agents. It also gives organizations a way to manage access to models and agents, permissions, and AI spending across teams.
