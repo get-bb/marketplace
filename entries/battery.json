@@ -1,0 +1,35 @@
+{
+  "id": "battery",
+  "displayName": "Battery",
+  "description": "See your laptop's charge in bb's sidebar without switching to the menu bar. A battery icon and percentage sit at the right end of the sidebar footer, filled red at 20% or less, yellow up to 50% and green above. A click opens a popup with each device's state and charge, including the phone or tablet you opened bb on when its browser reports a battery. `bb battery status` prints the same reading for terminals and agents. Reads the charge of the machine running the bb server, which must be a Mac; no account or external service.",
+  "icon": {
+    "url": "./icons/battery-6ffec35d.svg"
+  },
+  "screenshots": [
+    "./screenshots/battery/popup.png"
+  ],
+  "overview": "./overview/battery.md",
+  "tags": [
+    "battery",
+    "charge",
+    "laptop",
+    "power",
+    "sidebar",
+    "macos",
+    "status"
+  ],
+  "author": {
+    "name": "Dmitrii Maksimov",
+    "github": "kartollikaa",
+    "url": "https://github.com/kartollikaa"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/kartollikaa/bb-plugins.git",
+      "subdir": "plugins/battery",
+      "range": "^0.1.0",
+      "tagPrefix": "battery/"
+    }
+  }
+}
