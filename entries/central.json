@@ -1,0 +1,33 @@
+{
+  "id": "central",
+  "displayName": "JetBrains Central",
+  "description": "Use work AI subscriptions alongside personal accounts and see shared JetBrains Central credits in BB. JetBrains Air is JetBrains' platform for coding agents and team AI access; this plugin connects BB through JetBrains Central CLI using your JetBrains Account. Choose separate Codex, Claude Code, and Pi providers, or configure additional ACP profiles. Requires BB 0.48+ with Plugin SDK 0.6.104+, Git, Node.js, Central with a work subscription or organization-provided AI access, and the corresponding agent CLIs; tested on macOS.",
+  "icon": {
+    "url": "./icons/central-5c076f98.svg"
+  },
+  "screenshots": [
+    "./screenshots/central/providers.png",
+    "./screenshots/central/credits.jpg"
+  ],
+  "overview": "./overview/central.md",
+  "tags": [
+    "codex",
+    "claude-code",
+    "pi",
+    "acp",
+    "work-accounts",
+    "credits"
+  ],
+  "author": {
+    "name": "Sergey Zhukov",
+    "github": "SergeyZh",
+    "url": "https://github.com/SergeyZh"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/SergeyZh/bb-plugin-jetbrains-central.git",
+      "ref": "main"
+    }
+  }
+}
