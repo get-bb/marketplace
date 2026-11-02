@@ -1,7 +1,7 @@
 {
   "id": "breathe",
   "displayName": "Breathe",
-  "description": "Turn waiting time into a reminder to breathe. A pixel wave guides inhale, hold and exhale while your agent works, then disappears when it finishes or needs your input. Choose five colors and three timing presets or your own rhythm, preview changes, and use your system’s reduced-motion setting. Runs locally without extra accounts or services, and is inspired by Mindful Claude by halluton.",
+  "description": "A calming pixel wave guides your breathing while your agent works. Choose your colors and breathing rhythm.",
   "icon": {
     "url": "./icons/breathe-0e83da5e.svg"
   },
