@@ -1,28 +1,34 @@
 # GitLab Interface (Notion style)
 
-Work through GitLab issues, merge requests, pipelines and branches in a BB panel laid out like a Notion database, and hand any of them to an agent.
+Your whole GitLab review loop, inside BB. Open a merge request, see in one line why it can't merge yet, answer the threads, approve and merge without switching to a browser tab. When something needs real work, hand it to an agent in one click.
 
-## Merge requests
+## Know why a merge request is stuck
 
-Each merge request opens on a row of status cards: review, pipeline, open threads, conflicts and, if you set a release branch, how many of its commits are already cherry-picked there. The reason it is blocked is spelled out above the Approve and Merge buttons. Approvals and 👍 reactions both count as review, and you can react to the merge request or to any comment.
+Every merge request opens on five status cards: review, pipeline, open threads, conflicts and cherry-picks. The blocker is written out next to the Merge button, so "why is this still open?" takes a glance. Approvals and 👍 reactions both count as review. A merge is pinned to the commit you looked at; if someone pushes in the meantime, GitLab refuses it instead of merging code you never saw.
 
-Every review thread is a card you can fold. Reply and Resolve sit at the bottom of the card, a resolved thread can be reopened, and comments that arrived since you last looked are marked. A merge is pinned to the commit you looked at, so a branch updated in the meantime is refused instead of merged.
+## Finish review threads where you read them
 
-## Lists and filters
+Each thread is a card you can fold. Reply, resolve or reopen it at the bottom of the card. New comments since your last visit are marked, and you can react with an emoji to the merge request or to any comment.
 
-Issues, merge requests, pipelines and branches share one layout: section tabs, a search field, views such as Review requests or Stale branches, and filter pills you remove with one click. Filter menus search every project member and label, not only the first few.
+## Never lose a hotfix on the way to release
 
-## Pipelines and branches
+Set your release branch (stage, release/2.8, anything) and the Commits tab shows which commits of a merge request already reached it, as a cherry-pick, a copy or the same SHA, and which did not. Select the missing ones and an agent opens the cherry-pick merge request for you.
 
-Open a failed pipeline to read the end of the failing job's log, then retry the failed jobs or run the pipeline again. The branches tab shows each branch's merge request and pipeline, and can start a pipeline on any branch.
+## Fix red pipelines fast
 
-## On the new-thread page
+A failed pipeline opens on the last lines of the failing job's log, where the error usually is. Retry the failed jobs or run the pipeline again from the same page. The branches tab shows every branch with its merge request and pipeline, and finds the stale ones for you.
 
-A GitLab section lists what waits for you: your blocked merge requests, the ones ready to merge, and review requests. It also shows a heatmap of the commits you authored. Hover a day to see its commits, lines added and removed, and projects. Above a thread's composer, a strip tells you what is next for the branch: commit, push, create the merge request or open it.
+## Start the day with what waits for you
 
-## For agents
+The new-thread page gets a GitLab section: your merge requests that need action, the ones ready to merge, and review requests. A heatmap of your own commits switches between week, month and year. Hover a day to see its commits, lines added and removed, and projects.
 
-The `bb gitlab-ui` command lists, shows, comments on, retries and runs pipelines for the same items, so an agent thread can do what the panel does.
+## Agents do the rest
+
+Send any issue or merge request to an agent thread. Above the composer of a thread working on a branch, a strip shows what is next: commit, push, create the merge request or open it. The `bb gitlab-ui` command gives agents the same lists, comments, retries and pipelines the panel has.
+
+## Looks like the rest of your workspace
+
+Issues, merge requests, pipelines and branches are Notion-style databases with one search field, saved views and filter pills you remove with one click. Light and dark themes follow BB.
 
 ## Requirements
 
