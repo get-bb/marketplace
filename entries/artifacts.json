@@ -1,0 +1,39 @@
+{
+  "id": "artifacts",
+  "displayName": "Artifacts",
+  "description": "Open your published Claude Code artifacts and Codex Sites from bb, without going back to the Claude app or ChatGPT. Both lists show as one grid of preview cards, newest first, with a filter; a click opens the item in bb's browser. An agent can also show an artifact or site in chat as the same card. Reads the Claude Code login from the macOS keychain and the Codex login from ~/.codex/auth.json, and sends them only to api.anthropic.com and chatgpt.com.",
+  "icon": {
+    "url": "./icons/artifacts-3049b55d.svg"
+  },
+  "screenshots": [
+    "./screenshots/artifacts/page.jpg"
+  ],
+  "overview": "./overview/artifacts.md",
+  "tags": [
+    "claude",
+    "codex",
+    "artifacts",
+    "sites",
+    "published",
+    "preview",
+    "chat-card",
+    "macos"
+  ],
+  "author": {
+    "name": "Dmitrii Maksimov",
+    "github": "kartollikaa",
+    "url": "https://github.com/kartollikaa"
+  },
+  "category": "utilities",
+  "secondaryCategories": [
+    "thread-content"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/kartollikaa/bb-plugins.git",
+      "subdir": "plugins/artifacts",
+      "range": "^0.1.0",
+      "tagPrefix": "artifacts/"
+    }
+  }
+}
