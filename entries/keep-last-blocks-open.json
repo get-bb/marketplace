@@ -1,0 +1,24 @@
+{
+  "id": "keep-last-blocks-open",
+  "displayName": "Keep Last Blocks Open",
+  "description": "Keeps the newest work blocks open while the agent works, so the output stays in view without clicks. Blocks count at every depth, so the commands inside a group count toward the limit. After the final answer only the last block stays open. Settings set the running count from 0 to 10, the count after the answer from 0 to 3, and whether Thought rows count. Needs no account or external service.",
+  "icon": "ChevronDown",
+  "screenshots": [
+    "./screenshots/keep-last-blocks-open/running-window.png",
+    "./screenshots/keep-last-blocks-open/plugin-settings.png"
+  ],
+  "overview": "./overview/keep-last-blocks-open.md",
+  "tags": ["timeline", "thread-view", "expand-collapse", "commands", "reasoning", "tool-output"],
+  "author": {
+    "name": "zom-2018",
+    "github": "zom-2018",
+    "url": "https://github.com/zom-2018"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/zom-2018/bb-plugin-keep-last-blocks-open.git",
+      "range": "^0.1.0"
+    }
+  }
+}
