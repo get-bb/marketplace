@@ -1,0 +1,38 @@
+{
+  "id": "reveal-in-finder",
+  "displayName": "Reveal In Finder",
+  "description": "Open the files an agent builds or exports with one click, instead of copying a path out of its reply. Each file or folder the agent hands over shows as a card with an icon, its name, format and size. A click on a file opens bb's preview, and Open in reveals it in Finder or opens it in its default app. A bundled skill tells agents when to hand over files this way. Finder and the default app open on the Mac running the bb server; no account or external service.",
+  "icon": {
+    "url": "./icons/reveal-in-finder-27ce539c.svg"
+  },
+  "screenshots": [
+    "./screenshots/reveal-in-finder/cards.png"
+  ],
+  "overview": "./overview/reveal-in-finder.md",
+  "tags": [
+    "files",
+    "finder",
+    "file-card",
+    "open-file",
+    "preview",
+    "attachments",
+    "macos"
+  ],
+  "author": {
+    "name": "Dmitrii Maksimov",
+    "github": "kartollikaa",
+    "url": "https://github.com/kartollikaa"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "file-viewers-and-editors"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/kartollikaa/bb-plugins.git",
+      "subdir": "plugins/reveal-in-finder",
+      "range": "^0.1.0",
+      "tagPrefix": "reveal-in-finder/"
+    }
+  }
+}
