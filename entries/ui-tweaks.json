@@ -1,14 +1,17 @@
 {
   "id": "ui-tweaks",
   "displayName": "UI Tweaks",
-  "description": "Adds configurable fonts, new-thread prompt placement, Open With filtering, and sidebar footer controls to BB.",
+  "description": "Tune BB's icons, spinner, prompt box and app menus to the way you work. Switch interface icons between BB Default, Lucide, Iconoir and Tabler Outline, and give the spinner its own style or let it follow the pack. Move the new-thread prompt to the top, center or bottom, set its starting height, and hide workspace apps from the Open With menu. Clearer hierarchy makes thread titles bolder and chat text slightly larger, and it is on by default. Changes apply live, one button resets them, and no external service or account is needed.",
   "icon": "SlidersHorizontal",
   "tags": [
     "interface",
     "customization",
-    "fonts",
-    "sidebar",
-    "workspace"
+    "icons",
+    "icon-pack",
+    "spinner",
+    "prompt-box",
+    "typography",
+    "workspace-apps"
   ],
   "author": {
     "name": "WYEZ",
@@ -16,10 +19,15 @@
     "url": "https://github.com/wy3z"
   },
   "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/ui-tweaks/ui-tweaks-settings.png",
+    "./screenshots/ui-tweaks/ui-tweaks-open-with.png"
+  ],
+  "overview": "./overview/ui-tweaks.md",
   "source": {
     "git": {
       "url": "https://github.com/wy3z/bb-plugin-ui-tweaks.git",
-      "range": "^0.17.0"
+      "range": "^0.30.0"
     }
   }
 }
