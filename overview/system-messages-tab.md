@@ -18,6 +18,8 @@ get lost among them.
 - A date-and-time line above every outline entry, in all three tabs:
   "Today, 2:34 PM", "Yesterday, 22:10", "Oct 3, 9:15 AM", with the year for
   older messages. Language and clock follow your computer.
+- Every tab lists the newest message first and opens scrolled to it, so
+  the latest message is at the top instead of at the end of the history.
 - Messages from threads the app hasn't loaded show the sender thread's title
   instead of a bare "Agent" chip.
 - The tab only appears in threads that have such messages, and remembers your
@@ -27,7 +29,8 @@ get lost among them.
 
 The Plugin SDK has no slot for the thread outline, so the plugin works on the
 rendered outline: it adds one tab button, widens the popover so the three tabs
-fit, hides entries in the list, and adds the time lines. Times and sender
+fit, hides entries in the list, shows the list in reverse order, and adds the
+time lines. Times and sender
 titles come from the thread's own event log on your BB server. The plugin does
 not change messages and sends nothing anywhere. Disabling the plugin restores the outline exactly as BB
 ships it.
