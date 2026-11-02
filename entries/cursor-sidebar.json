@@ -23,7 +23,7 @@
   "source": {
     "git": {
       "url": "https://github.com/wy3z/bb-plugin-cursor-sidebar.git",
-      "range": "^0.3.1"
+      "range": "^0.3.2"
     }
   },
   "screenshots": [
