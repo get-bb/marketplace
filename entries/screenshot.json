@@ -1,0 +1,31 @@
+{
+  "id": "screenshot",
+  "displayName": "Screenshot",
+  "description": "Attach a selected area of your Mac's screen directly to a BB message. Use the native macOS crosshair from the camera button beside Send. Capture runs on the Mac displaying BB and preserves your draft text and attachments. Requires macOS, a connected BB host, screen recording permission, and browser local network access; no external service or paid account.",
+  "icon": {
+    "url": "./icons/screenshot-b7c053d7.svg"
+  },
+  "screenshots": [
+    "./screenshots/screenshot/composer.jpg"
+  ],
+  "overview": "./overview/screenshot.md",
+  "tags": [
+    "macos",
+    "screen-capture",
+    "attachments",
+    "visual-context",
+    "native-capture"
+  ],
+  "author": {
+    "name": "strelov1",
+    "github": "strelov1",
+    "url": "https://github.com/strelov1"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/strelov1/bb-plugin-screenshot.git",
+      "ref": "3e837910a531e4e927b71da7371e4a14a0b6070f"
+    }
+  }
+}
