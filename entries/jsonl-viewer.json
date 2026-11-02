@@ -1,0 +1,15 @@
+{
+  "id": "jsonl-viewer",
+  "displayName": "JSONL Viewer — DBConvert",
+  "description": "Opens .jsonl and .ndjson files from chat links as tables, so you can check what an agent wrote without leaving the thread. Agents in the thread can list the columns of the open file and run read-only queries on it, so their answers come from the file. Infers each column's type across every line, and lists the lines that fail to parse by number with the parser's message. DuckDB runs as WebAssembly in the panel, and the file is never uploaded. Exporting more than 10,000 rows of a result needs DBConvert PRO ($9 a month).",
+  "icon": { "url": "./icons/jsonl-viewer-5d5c8f7c.png" },
+  "screenshots": [
+    "./screenshots/jsonl-viewer/1-agent.jpg",
+    "./screenshots/jsonl-viewer/2-data.jpg"
+  ],
+  "overview": "./overview/jsonl-viewer.md",
+  "tags": ["jsonl", "ndjson", "json-lines", "json", "duckdb", "data-viewer", "sql", "data-grid", "agent-tools"],
+  "author": { "name": "DBConvert", "github": "slotix", "url": "https://streams.dbconvert.com" },
+  "category": "file-viewers-and-editors",
+  "source": { "npm": { "package": "@dbconvert/bb-plugin-jsonl-viewer", "range": "^1.3.2" } }
+}
