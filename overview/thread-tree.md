@@ -15,6 +15,11 @@ under it, and the subagents it runs inside its own session show on its row.
 - Threads grouped by Project, by Status (needs input, error, working, done) or
   not at all, with Pinned on top. Projects keep a fixed order you set by
   dragging their headers, or follow recent activity.
+- Sort threads by last activity, creation date or status from the funnel icon
+  beside the Threads heading. Creation date keeps rows in place as messages
+  arrive. Set a global order, override it per folder, or choose Use global
+  setting to restore inheritance. Sort and Group use icons, and their menus
+  stay open while you choose options; click outside or press Escape to close.
 - The Archived toggle shows archived threads in the same grouping and nesting.
 - The top line counts threads that need input, failed or are running.
 - Each child thread sits under the thread that spawned it, at any depth, even
