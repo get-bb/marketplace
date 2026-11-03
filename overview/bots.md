@@ -1,15 +1,17 @@
-## What you get
+## Meet your team of bots
 
-Create named bots for repeatable work. Give each bot its own instructions, model provider, model, reasoning level, and optional project.
+Give your favorite ways of working a home in BB. Create a researcher, a builder, a writing partner, or a bot for any task you return to.
 
-Choose a blob avatar and color, or use an emoji. Expand a bot in the sidebar to open recent threads and see their states.
+Each bot gets its own instructions, provider, model, reasoning level, and optional project. Set it up once, then start a thread whenever you need it.
 
-## How it works
+## Give each bot a personality
 
-Each bot starts as a draft. Publish it after you add a name, provider, and model. Its instructions apply to its own BB threads.
+Pick a blob shape and color that feels right, or choose an emoji. Your bots live together in the sidebar, ready when you need them.
 
-Deleting a bot leaves its existing threads in BB.
+Expand a bot to find its recent threads and see their states. Pick up a conversation where you left off, or start a fresh one.
 
-## Requirements
+## Ready when you are
+
+Bots start as drafts. Add a name, provider, and model to publish one. Each bot's instructions apply to its own BB threads, and deleting a bot leaves its existing threads in BB.
 
 Requires BB 0.48.1 or later and an available model provider.
