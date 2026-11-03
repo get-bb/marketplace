@@ -1,0 +1,38 @@
+{
+  "id": "thread-switcher",
+  "displayName": "Thread Switcher",
+  "description": "Jump between your recent threads from the keyboard and see at a glance which one needs you. Hold Control and press Tab to step through a row of cards, each with the latest messages of that chat, its project, branch and status; let go to open the selected thread. A thread waiting for your answer shows the question it asked, and threads that need input or failed come first. A thread with subthreads counts how many are still running. The hotkey, the number of cards and the order are settings; no account or external service.",
+  "icon": {
+    "url": "./icons/thread-switcher-d80991d0.svg"
+  },
+  "screenshots": [
+    "./screenshots/thread-switcher/switcher.png",
+    "./screenshots/thread-switcher/settings.png"
+  ],
+  "overview": "./overview/thread-switcher.md",
+  "tags": [
+    "threads",
+    "switcher",
+    "keyboard",
+    "hotkey",
+    "shortcut",
+    "control-tab",
+    "navigation",
+    "recent-threads",
+    "preview"
+  ],
+  "author": {
+    "name": "Dmitrii Maksimov",
+    "github": "kartollikaa",
+    "url": "https://github.com/kartollikaa"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/kartollikaa/bb-plugins.git",
+      "subdir": "plugins/thread-switcher",
+      "range": "^0.1.0",
+      "tagPrefix": "thread-switcher/"
+    }
+  }
+}
