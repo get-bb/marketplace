@@ -27,13 +27,13 @@ under it, and the subagents it runs inside its own session show on its row.
   click it to fold the subtree. A folded parent gets a line counting its whole
   subtree by state. The thread you have open and threads waiting for your
   input stay visible under the fold.
+- A PR icon after the age label shows the environment branch's pull request:
+  draft, open, merged or closed, plus checks and conflicts. Hover for details;
+  click to open GitHub. Requires bb's built-in GitHub PR Status plugin.
 - A small icon on each row shows the agent provider the thread runs on.
 - Child threads are ordinary threads: open, message, pin, archive or split them
   with bb's own menu. Hovering a row swaps its age for Archive and the menu.
-- Cmd+Z or Ctrl+Z brings back the threads you just archived, a parent together
-  with the children archived with it; press again to step further back. It only
-  reaches archives from the last few minutes. In a text field you typed in after
-  archiving, it keeps undoing your text.
+- Cmd+Z or Ctrl+Z restores recently archived threads and their children.
 - Provider subagents (Claude Code `Agent` calls, Codex subagents) are not
   threads and cannot be messaged. They show as a counter with a status dot on
   the parent's row; hover it for each one's type, state, duration and tokens.
@@ -61,5 +61,7 @@ hover animations.
 ## How it works
 
 The list reads bb's own thread data. Subagents come from each thread's event
-log, read on the bb server; nothing leaves the machine. Folds, grouping and
+log, read on the bb server. PR status is supplied by bb’s GitHub PR Status
+plugin, which queries GitHub through the environment machine’s gh login.
+Folds, grouping and
 order are kept per client; the settings apply to every client of the bb server.
