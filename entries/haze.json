@@ -1,7 +1,7 @@
 {
   "id": "haze",
   "displayName": "Haze",
-  "description": "Puts your own image behind every BB conversation as a soft haze that fades out before the text. Pick one of six effects (None, Dither, ASCII, Halftone, Scanlines, Haze) and set a separate background for each project. Window glass can blur the same image behind the whole window, with a see-through sidebar and main pane (dark theme only). Images stay in your BB server's local database; no account is needed. Turn off Aura while Haze is on.",
+  "description": "Puts your own image behind every BB conversation as a soft haze that fades out before the text. Pick one of six effects (None, Dither, ASCII, Halftone, Scanlines, Haze) and set a separate background for each project. Window glass can blur the same image behind the whole window, with a see-through sidebar and main pane. Images stay in your BB server's local database; no account is needed. Turn off Aura while Haze is on.",
   "icon": "Image",
   "tags": [
     "background",
