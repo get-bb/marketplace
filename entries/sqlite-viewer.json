@@ -12,5 +12,5 @@
   "tags": ["sqlite", "sqlite3", "database", "db-viewer", "sql", "er-diagram", "schema", "data-grid", "agent-tools"],
   "author": { "name": "DBConvert", "github": "slotix", "url": "https://streams.dbconvert.com" },
   "category": "file-viewers-and-editors",
-  "source": { "npm": { "package": "@dbconvert/bb-plugin-sqlite-viewer", "range": "^1.3.1" } }
+  "source": { "npm": { "package": "@dbconvert/bb-plugin-sqlite-viewer", "range": "^1.3.2" } }
 }

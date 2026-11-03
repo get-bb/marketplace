@@ -6,6 +6,8 @@
 - **ER diagram** drawn from the declared foreign keys.
 - **Integrity check** on open, with the page size, encoding and SQLite version the file was read with.
 
+If another plugin opens these files instead, choose this viewer under Settings → File openers in bb.
+
 ## Agents
 
 In a Claude Code or Codex thread, the agent gets three tools: `sqlite_list_tables`, `sqlite_describe_table` and `sqlite_run_select`. They work on the file open in the viewer, read-only, and return at most 100 rows a query.
