@@ -25,6 +25,10 @@ under it, and the subagents it runs inside its own session show on its row.
 - A small icon on each row shows the agent provider the thread runs on.
 - Child threads are ordinary threads: open, message, pin, archive or split them
   with bb's own menu. Hovering a row swaps its age for Archive and the menu.
+- Cmd+Z or Ctrl+Z brings back the threads you just archived, a parent together
+  with the children archived with it; press again to step further back. It only
+  reaches archives from the last few minutes, and does nothing while you type in
+  a text field, where it keeps undoing text.
 - Provider subagents (Claude Code `Agent` calls, Codex subagents) are not
   threads and cannot be messaged. They show as a counter with a status dot on
   the parent's row; hover it for each one's type, state, duration and tokens.
