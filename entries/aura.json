@@ -1,7 +1,7 @@
 {
   "id": "aura",
   "displayName": "Aura",
-  "description": "Make your BB workspace your own with personal wallpapers and animated pixel textures. Save six backgrounds and switch between them in one click. Choose half or full wallpaper on New thread, and keep full-height wallpaper beside readable conversations. Images stay on your BB server; no external account is required.",
+  "description": "Make your BB workspace your own with personal wallpapers, animated GIFs, and pixel textures. Save six backgrounds and switch in one click. Choose half or full wallpaper, keep the top bar clean or let the wallpaper continue behind it, and show an optional GitHub activity overview below the New thread composer. Images stay on your BB server; the activity overview uses the server's GitHub CLI login.",
   "icon": {
     "url": "./icons/aura-ba775ae1.svg"
   },
@@ -11,7 +11,10 @@
     "dithering",
     "personalization",
     "saved-presets",
-    "composer"
+    "composer",
+    "animated-gif",
+    "top-bar",
+    "github-activity"
   ],
   "author": {
     "name": "Mateo Cerquetella",
@@ -23,7 +26,7 @@
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",
       "subdir": "plugins/aura",
-      "range": "^0.2.1",
+      "range": "^0.2.6",
       "tagPrefix": "aura/"
     }
   },
