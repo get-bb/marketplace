@@ -1,23 +1,31 @@
-## Choose where each thread works
+## Say what to work on
 
-Open the Workspace popover beside the environment picker to choose an existing checkout or create a new worktree. The composer stays compact, with the selected checkout or branch visible in its footer.
+Open **Work on…** beside the environment picker and search once across pull requests, branches, and checkouts. Or just start typing a new branch name. The plugin works out the Git steps: it attaches the worktree that already has your branch, checks out a local branch, fetches and tracks a remote one, or opens a PR in a detached review worktree.
 
-## Existing checkouts
+## New tasks start fresh
 
-Filter project checkouts and worktrees by branch or path, or enter the path to another local clone. The thread uses that checkout's current branch and files without switching branches, resetting changes, or cleaning untracked files. Threads sharing a checkout can edit the same files.
+New branches start from the remote's freshly fetched default branch, not whatever your main checkout happens to be on. Folders follow your path template, and BB's diff compares against the right base: `origin/main`, the parent branch of a stacked change, or the PR's target.
 
-## New worktrees
+## Reviews and handoffs
 
-Choose the parent directory, folder name, branch name, and starting revision. Create a new branch or use an existing local branch that is not checked out elsewhere. Leave folder and new-branch names blank for BB-generated names. A destination preview shows where the worktree will go.
+Pick a PR by title, author, or `#number`, including PRs from forks, without adding remotes. Re-reviewing after new pushes opens a fresh worktree, with no branch conflicts. Resuming your own branch from another machine fast-forwards it to the remote, and never rewinds local commits.
 
-To review a colleague’s remote branch, choose Remote branch, filter the automatically loaded list, and select it. Starting the thread fetches that branch and creates a local tracking branch in its own worktree. Existing local branches are never overwritten. Remote discovery and fetching use the selected machine’s Git authentication.
+## Predictable before launch
 
-Set one default path template in the plugin's settings. Leave it blank for unique folders under `~/worktrees`, use `~/worktrees/{repo}/{pathKey}` to group them by repository, or use `{checkoutParent}/{repo}.{branch}` for siblings with sanitized branch-based names. Settings explain every variable and show expansion examples. Add per-project templates keyed by BB project ID or remote identity, including wildcard matches. Override the parent and folder independently for individual threads. Paths and previews are resolved on the selected machine.
+A one-line preview says exactly what launching will do. Conflicts such as existing branch names, missing branches, or occupied folders show up there instead of failing the environment later.
+
+## Put worktrees where you want them
+
+Set one path template for every new worktree: unique folders under `~/worktrees` by default, grouped by repository with `~/worktrees/{repo}/{pathKey}`, or next to each checkout with `{checkoutParent}/{repo}.{branch}`. Add per-project templates keyed by BB project ID or remote, including wildcard matches. Override the parent directory or folder name for one thread. The settings page explains every variable with examples.
+
+## Ready to run
+
+New worktrees get their submodules initialized and the untracked files listed in `.worktreeinclude` (such as `.env`) copied over before BB runs your setup script.
 
 ## Keep control of your files
 
-The plugin retains worktrees and branches when threads are archived or deleted. Remove unwanted worktrees manually with Git. Existing destination directories are refused rather than overwritten. Newly created worktrees run BB's normal repository environment hooks; existing checkouts do not.
+The plugin never deletes worktrees or branches. Manage them with `git worktree` when you're done. Existing checkouts are attached exactly as they are, and existing files are never overwritten.
 
 ## Requirements
 
-Requires BB 0.43 or newer, Plugin SDK 0.4.87 or newer, and Git 2.31 or newer on the selected machine. No external service or account is required. Like other BB plugins, it runs as full-trust code and can access files on the selected machine.
+Requires BB 0.43 or newer, Plugin SDK 0.4.87 or newer, and Git 2.31 or newer on the selected machine. The GitHub CLI (`gh`) is optional and enables the pull request list. Like other BB plugins, it runs as full-trust code and can access files on the selected machine.
