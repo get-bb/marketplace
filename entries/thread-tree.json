@@ -1,0 +1,27 @@
+{
+  "id": "thread-tree",
+  "displayName": "Thread Tree",
+  "description": "See which agent spawned which thread. A sidebar thread list where child threads nest under the thread that started them, at any depth, and a parent folds its subtree into one line that counts each state. Provider subagents (Claude Code Agent calls, Codex subagents) show as a counter on the parent's row with type, state, duration and tokens on hover. Threads group by project or status. Above them sit Recent Activity, your scheduled Automations and, with the GitHub Folder plugin installed, the pull requests that need you. Drag sections and project folders to reorder them. Reads bb's own thread data on the bb server; nothing leaves the machine.",
+  "icon": { "url": "./icons/thread-tree-80ed9973.svg" },
+  "screenshots": [
+    "./screenshots/thread-tree/threads-tree.png",
+    "./screenshots/thread-tree/github-section.png"
+  ],
+  "overview": "./overview/thread-tree.md",
+  "tags": ["threads", "sidebar", "subagents", "tree", "nesting", "projects", "automations", "github"],
+  "author": {
+    "name": "Dmitrii Maksimov",
+    "github": "kartollikaa",
+    "url": "https://github.com/kartollikaa"
+  },
+  "category": "thread-management",
+  "secondaryCategories": ["agents-and-providers"],
+  "source": {
+    "git": {
+      "url": "https://github.com/kartollikaa/bb-plugins.git",
+      "subdir": "plugins/thread-tree",
+      "range": "^0.2.0",
+      "tagPrefix": "thread-tree/"
+    }
+  }
+}
