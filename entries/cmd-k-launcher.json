@@ -1,17 +1,17 @@
 {
-  "id": "ultra-cmd-k",
-  "displayName": "Ultra Cmd+K",
+  "id": "cmd-k-launcher",
+  "displayName": "Cmd K Launcher",
   "description": "Reach any thread, project, theme or BB command from one Cmd+K palette. Press the right arrow on a thread to pin, archive, fork, compact, stop or message it without opening it. Move through the theme list to preview each theme on the whole app, and press Esc to keep yours. Type $ and a bb command to run it on your primary host and read the output in the palette. It takes over Cmd+K and moves BB's quick palette to Cmd+Shift+P, and one setting gives Cmd+K back. Requires BB 0.46 or later.",
   "icon": {
-    "url": "./icons/ultra-cmd-k-309f9812.svg"
+    "url": "./icons/cmd-k-launcher-309f9812.svg"
   },
   "screenshots": [
-    "./screenshots/ultra-cmd-k/palette.png",
-    "./screenshots/ultra-cmd-k/thread-actions.png",
-    "./screenshots/ultra-cmd-k/themes.png",
-    "./screenshots/ultra-cmd-k/bb-commands.png"
+    "./screenshots/cmd-k-launcher/palette.png",
+    "./screenshots/cmd-k-launcher/thread-actions.png",
+    "./screenshots/cmd-k-launcher/themes.png",
+    "./screenshots/cmd-k-launcher/bb-commands.png"
   ],
-  "overview": "./overview/ultra-cmd-k.md",
+  "overview": "./overview/cmd-k-launcher.md",
   "tags": [
     "command-palette",
     "keyboard-shortcuts",
@@ -34,8 +34,8 @@
   ],
   "source": {
     "git": {
-      "url": "https://github.com/dillionverma/bb-plugin-ultra-cmd-k.git",
-      "range": "^1.0.0"
+      "url": "https://github.com/dillionverma/bb-plugin-cmd-k-launcher.git",
+      "range": "^1.1.0"
     }
   }
 }

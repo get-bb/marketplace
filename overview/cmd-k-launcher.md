@@ -16,8 +16,8 @@
 
 ## For agents and scripts
 
-`bb ultra-cmd-k status`, `claim`, `release`, `themes`, `theme <id>` and `run <args>` work from a terminal. A bundled skill explains each one.
+`bb cmd-k-launcher status`, `claim`, `release`, `themes`, `theme <id>` and `run <args>` work from a terminal. A bundled skill explains each one.
 
 ## Requirements
 
-BB 0.46 or later. The plugin takes over Cmd+K and moves BB's quick palette to Cmd+Shift+P. Turn off **Take over Ctrl/Cmd+K** in the plugin settings, or run `bb ultra-cmd-k release`, to give the shortcut back. Do that before you disable or uninstall the plugin. Commands in `$` mode run the `bb` executable directly, with no shell, and keep the first 64 KB of output. The plugin uses no external service or account.
+BB 0.46 or later. The plugin takes over Cmd+K and moves BB's quick palette to Cmd+Shift+P. Turn off **Take over Ctrl/Cmd+K** in the plugin settings, or run `bb cmd-k-launcher release`, to give the shortcut back. Do that before you disable or uninstall the plugin. Commands in `$` mode run the `bb` executable directly, with no shell, and keep the first 64 KB of output. The plugin uses no external service or account.
