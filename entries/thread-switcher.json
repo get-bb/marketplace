@@ -1,7 +1,7 @@
 {
   "id": "thread-switcher",
   "displayName": "Thread Switcher",
-  "description": "Jump between your recent threads from the keyboard and see at a glance which one needs you. Hold Control and press Tab to step through a row of cards, each with the latest messages of that chat, its project, branch and status; let go to open the selected thread. A thread waiting for your answer shows the question it asked, and threads that need input or failed come first. A thread with subthreads counts how many are still running. The hotkey, the number of cards and the order are settings; no account or external service.",
+  "description": "Jump between your recent threads from the keyboard and see at a glance which one needs you. Hold Control and press Tab to step through a row of cards, each with the latest messages of that chat, its project, branch and status; let go to open the selected thread. On a phone, pinch two fingers together in a chat to open the same cards as a grid. A thread waiting for your answer shows the question it asked, and threads that need input or failed come first. A thread with subthreads counts how many are still running. The hotkey, the number of cards and the order are settings; no account or external service.",
   "icon": {
     "url": "./icons/thread-switcher-d80991d0.svg"
   },
