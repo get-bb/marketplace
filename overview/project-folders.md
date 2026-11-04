@@ -24,4 +24,4 @@ The management page and the plugin page in BB settings show the same settings: C
 
 ## Requirements
 
-BB 0.43 or later and connected macOS or Linux devices with local-path project sources. Windows paths are not supported. No account, API key or external service is needed. Chat history stays in BB; the plugin also exports it to a hidden .bb/chats folder inside each section, which is not a full backup. Some BB interfaces this plugin uses are experimental.
+BB 0.43.0 or later and connected macOS or Linux devices with local-path project sources. On BB 0.43.0–0.43.2 the project chip stays BB's own: pick the section in the environment picker. An older BB stops the install with "no release … runs on this bb": update BB first. Windows paths are not supported. No account, API key or external service is needed. Chat history stays in BB; the plugin also exports it to a hidden .bb/chats folder inside each section, which is not a full backup. Some BB interfaces this plugin uses are experimental.
