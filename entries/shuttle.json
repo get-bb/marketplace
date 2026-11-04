@@ -1,12 +1,14 @@
 {
   "id": "shuttle",
   "displayName": "Shuttle",
-  "description": "Puts every pull request that needs you, from any server, in one place. The Inbox lists the decisions waiting on you, your PRs keep the agent thread that fixes their reviews and failed checks, and the review centre groups PRs that ask you or your teams by where your review stands. Merge, comment and post AI review drafts from Shuttle, on GitHub out of the box or on any other server you describe with a command adapter. Insights show where review time goes: who reviews your PRs, how fast, and what your agents fixed.",
+  "description": "Puts every pull request that needs you, from any server, in one Inbox grouped by what to do next. Each of your PRs keeps an agent thread that gets its new reviews, comments and failed checks, and fixes them or just passes them on. AI reviews come back as drafts you edit and post as yourself, and auto post, in shadow mode for the repositories you pick, records which findings it would have posted. Saved boards keep the PRs of a release or a handoff together with live status, across repositories and servers. Merge, comment, reply and resolve from Shuttle, with merges and reviews queued in the background on each server. GitHub works through your signed-in gh CLI; GitLab and other servers need a command adapter, a few shell commands you write that print JSON.",
   "icon": { "url": "./icons/shuttle-2bd74ed6.svg" },
   "screenshots": [
     "./screenshots/shuttle/inbox.jpg",
-    "./screenshots/shuttle/pr-panel.jpg",
-    "./screenshots/shuttle/reviews.jpg"
+    "./screenshots/shuttle/pr-view.jpg",
+    "./screenshots/shuttle/review-draft.jpg",
+    "./screenshots/shuttle/reviews.jpg",
+    "./screenshots/shuttle/board.jpg"
   ],
   "tags": [
     "pull-requests",
@@ -22,6 +24,9 @@
     "url": "https://github.com/kalindudc"
   },
   "category": "code-and-reviews",
+  "secondaryCategories": [
+    "tasks-and-workflows"
+  ],
   "overview": "./overview/shuttle.md",
   "source": {
     "git": {
