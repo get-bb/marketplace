@@ -14,12 +14,13 @@ under it, and the subagents it runs inside its own session show on its row.
   newest first. Show more extends it.
 - Threads grouped by Project, by Status (needs input, error, working, done) or
   not at all, with Pinned on top. Projects keep a fixed order you set by
-  dragging their headers, or follow recent activity.
+  dragging their headers, or follow recent activity. The + on a project header
+  starts a new thread there; on touch screens header icons show dimmed.
 - Sort threads by last activity, creation date or status from the funnel icon
   beside the Threads heading. Creation date keeps rows in place as messages
   arrive. Set a global order, override it per folder, or choose Use global
-  setting to restore inheritance. Sort and Group use icons, and their menus
-  stay open while you choose options; click outside or press Escape to close.
+  setting to restore inheritance. The Sort and Group menus stay open while you
+  pick; click outside or press Escape to close.
 - The Archived toggle shows archived threads in the same grouping and nesting.
 - The top line counts threads that need input, failed or are running.
 - Each child thread sits under the thread that spawned it, at any depth, even
@@ -30,7 +31,7 @@ under it, and the subagents it runs inside its own session show on its row.
 - A PR icon after the age label shows the environment branch's pull request:
   draft, open, merged or closed, plus checks and conflicts. Hover for details;
   click to open GitHub. Requires bb's built-in GitHub PR Status plugin.
-- A small icon on each row shows the agent provider the thread runs on.
+- A small icon on each row shows the thread's agent provider.
 - Child threads are ordinary threads: open, message, pin, archive or split them
   with bb's own menu. Hovering a row swaps its age for Archive and the menu.
 - Cmd+Z or Ctrl+Z restores recently archived threads and their children.
@@ -47,8 +48,7 @@ Right-click the GitHub, Automations or Recent Activity header to remove it;
 Sections at the top of the list brings it back. Drag a header, or use Move up
 and Move down in its menu, to reorder sections. While you drag a section or a
 project, the blocks fold to their headers, the others slide aside to show
-where it will land, the list scrolls near its edges, and everything opens back
-the way it was on drop.
+where it lands, the list scrolls near its edges, and all reopens on drop.
 
 ## Settings
 
@@ -63,5 +63,4 @@ hover animations.
 The list reads bb's own thread data. Subagents come from each thread's event
 log, read on the bb server. PR status is supplied by bb’s GitHub PR Status
 plugin, which queries GitHub through the environment machine’s gh login.
-Folds, grouping and
-order are kept per client; the settings apply to every client of the bb server.
+Folds, grouping and order are kept per client; the settings apply to every client of the bb server.
