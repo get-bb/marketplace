@@ -34,7 +34,7 @@
   "source": {
     "git": {
       "url": "https://github.com/VKirill/bb-plugin-project-folders.git",
-      "range": ">=0.4.5 <1.0.0"
+      "range": ">=0.4.5"
     }
   }
 }
