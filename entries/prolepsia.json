@@ -3,7 +3,7 @@
   "displayName": "Prolepsia",
   "description": "Create probabilistic forecasts and check their progress from BB with your Prolepsia account. Discover and call forecasting and question tools through your agent or the bb prolepsia command. Requires a Prolepsia API key; forecast runs consume Prolepsia credits.",
   "icon": {
-    "url": "./icons/prolepsia-3adc974b.svg"
+    "url": "./icons/prolepsia-8f813b8d.png"
   },
   "overview": "./overview/prolepsia.md",
   "tags": [
@@ -21,7 +21,7 @@
   "source": {
     "git": {
       "url": "https://github.com/danielproj/bb-plugin-prolepsia.git",
-      "range": "^0.1.0"
+      "range": "^0.1.1"
     }
   }
 }
