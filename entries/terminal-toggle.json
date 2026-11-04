@@ -1,0 +1,22 @@
+{
+  "id": "terminal-toggle",
+  "displayName": "Terminal Toggle",
+  "description": "Toggle the last focused native terminal with Ctrl+backtick. Press again to hide the panel and return to the composer.",
+  "icon": "Terminal",
+  "author": {
+    "name": "ekaragodin",
+    "github": "ekaragodin"
+  },
+  "category": "command-line",
+  "tags": [
+    "terminal",
+    "keyboard",
+    "focus"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/ekaragodin/bb-plugin-terminal-toggle.git",
+      "range": ">=0.1.0"
+    }
+  }
+}
