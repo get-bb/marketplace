@@ -1,0 +1,38 @@
+{
+  "id": "tracing",
+  "displayName": "Tracing",
+  "description": "See where every second of an agent turn went, one click from the answer it produced. A chip under each answer opens the turn on a timeline: every command, tool call, thinking block and response in its own color, with the full command, output, arguments or diff of any step. Silences become named steps: Generating shows what the model had just read and what it wrote next, and API retries shows failed provider calls with each backoff. Each turn records its token spend split into cache reads, cache writes, uncached input and output, and a Tracing page sums turn time, failures and tokens across threads. Spans are kept on the bb server as NDJSON files in OpenBot's trace format, and the bb tracing command answers the same questions for agents. Nothing leaves the bb server. Needs bb 0.48 or newer.",
+  "icon": { "url": "./icons/tracing-a2132e34.svg" },
+  "screenshots": [
+    "./screenshots/tracing/trace-viewer.png",
+    "./screenshots/tracing/api-retries.png",
+    "./screenshots/tracing/tracing-page.png"
+  ],
+  "overview": "./overview/tracing.md",
+  "tags": [
+    "tracing",
+    "timeline",
+    "waterfall",
+    "observability",
+    "performance",
+    "profiling",
+    "token-usage",
+    "api-retries",
+    "ndjson",
+    "cli"
+  ],
+  "author": {
+    "name": "Vyacheslav Artemyev",
+    "github": "viartemev",
+    "url": "https://github.com/viartemev"
+  },
+  "category": "thread-content",
+  "secondaryCategories": ["token-usage-and-limits"],
+  "source": {
+    "git": {
+      "url": "https://github.com/viartemev/bb-tracing.git",
+      "subdir": "bb-plugin-tracing",
+      "range": "^0.1.0"
+    }
+  }
+}
