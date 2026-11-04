@@ -1,0 +1,25 @@
+{
+  "id": "wiki",
+  "displayName": "Wiki",
+  "description": "Gives your agents a wiki of Markdown notes, so what one thread learns the next one can find. Agents search, cite and save notes with two tools, and each new thread starts with up to three notes that fit its first message. Citations open the note in the side panel and preview it on hover, and an @ mention adds a whole note as context. A Wiki panel lists the notes linked to the thread, and one button saves what's worth keeping and archives the thread. Needs a local folder of Markdown notes. git and mempalace are optional.",
+  "icon": { "url": "./icons/wiki-3ddf60cf.svg" },
+  "screenshots": [
+    "./screenshots/wiki/wiki-panel.png",
+    "./screenshots/wiki/citation-preview.png",
+    "./screenshots/wiki/mention.png"
+  ],
+  "overview": "./overview/wiki.md",
+  "tags": ["notes", "markdown", "knowledge-base", "search", "obsidian", "mempalace", "citations", "memory"],
+  "author": {
+    "name": "Jonas Brusman",
+    "github": "himynameisjonas",
+    "url": "https://github.com/himynameisjonas"
+  },
+  "category": "memory-and-context",
+  "source": {
+    "git": {
+      "url": "https://github.com/himynameisjonas/bb-plugin-wiki.git",
+      "range": "^0.1.0"
+    }
+  }
+}
