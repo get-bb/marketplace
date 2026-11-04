@@ -18,6 +18,8 @@ you are in the selected thread.
 - Let go of Control to open the selected thread. Enter does the same, Esc closes without
   switching, and a click opens any card.
 - A quick Control+Tab tap jumps back to the previous thread.
+- On a phone, pinch two fingers together to open the cards as a grid and tap one. Spread two fingers
+  to close it.
 
 ## Settings
 
@@ -25,6 +27,7 @@ you are in the selected thread.
   Control, Option or Command, because the switcher stays open while you hold that key.
 - **Threads shown**: 2 to 20 cards, 6 by default.
 - **Threads that need you first**: on by default; turn it off to order cards by recency only.
+- **Pinch to open on touch screens**: on by default.
 
 ## Privacy
 
