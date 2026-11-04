@@ -1,0 +1,35 @@
+{
+  "id": "haze",
+  "displayName": "Haze",
+  "description": "Puts your own image behind every BB conversation as a soft haze that fades out before the text. Pick one of six effects (None, Dither, ASCII, Halftone, Scanlines, Haze) and set a separate background for each project. Window glass can blur the same image behind the whole window, with a see-through sidebar and main pane. Images stay in your BB server's local database; no account is needed. Turn off Aura while Haze is on.",
+  "icon": "Image",
+  "tags": [
+    "background",
+    "wallpaper",
+    "glass",
+    "dither",
+    "halftone",
+    "ascii",
+    "personalization",
+    "per-project"
+  ],
+  "author": {
+    "name": "AdzeB",
+    "github": "AdzeB",
+    "url": "https://github.com/AdzeB"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/AdzeB/bb-plugin-haze.git",
+      "range": "^0.2.0"
+    }
+  },
+  "overview": "./overview/haze.md",
+  "screenshots": [
+    "./screenshots/haze/new-thread.png",
+    "./screenshots/haze/new-thread-night.png",
+    "./screenshots/haze/conversation.png",
+    "./screenshots/haze/settings.png"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "id": "cursor-sidebar",
   "displayName": "Cursor Sidebar",
-  "description": "Replace BB's thread list with a Cursor-style sidebar. Group chats by project, status, environment or date. Nest child chats, pin them, file them into folders, and keep view settings in the plugin's own database so uninstalling it leaves your threads alone.",
+  "description": "Replace BB's thread list with a project sidebar that nests spawned chats and groups the rest by status, date or machine. Group by Projects, Status, Environment or Updated, or draw one flat list, and narrow to one project from the toolbar switcher. Pin chats, file them into folders, and give each project a glyph, emoji, monogram or uploaded image. Filter by status, age and environment, limit each section to 5, 10, 20 or 50 with Show more, and toggle each row's metadata. A second surface replaces the navigation rows with a compact header. No account or external service is needed.",
   "icon": "PanelLeft",
   "tags": [
     "sidebar",
@@ -9,7 +9,10 @@
     "projects",
     "grouping",
     "folders",
-    "pins"
+    "pins",
+    "project-icons",
+    "status",
+    "navigation"
   ],
   "author": {
     "name": "WYEZ",
@@ -20,14 +23,14 @@
   "source": {
     "git": {
       "url": "https://github.com/wy3z/bb-plugin-cursor-sidebar.git",
-      "range": "^0.2.1"
+      "range": "^0.3.2"
     }
   },
   "screenshots": [
     "./screenshots/cursor-sidebar/grouping-projects.png",
-    "./screenshots/cursor-sidebar/grouping-updated.png",
     "./screenshots/cursor-sidebar/grouping-status.png",
-    "./screenshots/cursor-sidebar/grouping-environment.png"
+    "./screenshots/cursor-sidebar/icon-picker.png",
+    "./screenshots/cursor-sidebar/view-menu.png"
   ],
   "overview": "./overview/cursor-sidebar.md"
 }

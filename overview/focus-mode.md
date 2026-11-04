@@ -1,9 +1,10 @@
 ## What you get
 
-Open a full-window reading view for one conversation. The sidebar, other split
-panes, and composer stay out of sight, with an Exit focus button available at
-the top. The transcript uses BB's own chat rendering and follows your active
-theme.
+Open a full-window reading view for one conversation that shows only the words:
+your prompts as quiet quotes and the agent's prose in one narrow column. Tool
+calls, file edits, the sidebar, other split panes, and the composer stay out of
+sight. A thin top bar holds a working dot and an Exit focus button that appears
+on hover. Colours follow your active theme.
 
 ## How to use it
 
@@ -13,8 +14,8 @@ binding in BB's Keyboard settings. No shortcut is bound by default, so the
 plugin does not compete with other plugins' default shortcuts.
 
 Press Escape or click Exit focus to return. The plugin leaves the underlying
-layout and draft unchanged. It opens a separate transcript view, so its
-starting scroll position can differ from the original chat. Active agents
+layout and draft unchanged. The reader opens at the newest message and
+refreshes while open; Show earlier messages loads older history. Active agents
 continue running; exit to use the normal composer and execution controls.
 
 ## Requirements

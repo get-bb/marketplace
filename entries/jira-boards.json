@@ -1,7 +1,7 @@
 {
   "id": "jira-boards",
   "displayName": "Jira Boards",
-  "description": "Browse your Jira boards beside the chat and add any ticket's current context to your next message. Columns, assignee swimlanes and JQL filters keep the board to the work you care about, and every task page loads so nothing hides behind pagination. Drag a card into the composer or press Add to chat, and BB fetches the issue, its fields and comments when you send. Agents can read issues, individual fields and comment pages, post a comment, and move a ticket through its workflow transitions when you ask, as your own Jira account. Works with Jira Data Center or Server through a personal access token and with Jira Cloud through an API token plus account email; the BB server needs HTTPS access to the Jira site. Needs BB 0.47 or newer.",
+  "description": "Browse your Jira boards beside the chat and add any ticket's current context to your next message. Columns, quick filters, JQL and swimlanes by assignee, epic or priority keep the board to the work you care about, and the tab reopens on your last board and filters. Drag a card into the composer or press Add to chat, and BB fetches the issue, its fields and newest comments when you send. Agents can read issues, individual fields, comment pages, text attachments such as logs and JSON, and linked issues and subtasks in one call, and post a comment, move a ticket through its workflow or assign it to you when you ask, as your own Jira account. Works with Jira Data Center or Server through a personal access token and with Jira Cloud through an API token plus account email; the BB server needs HTTPS access to the Jira site. Needs BB 0.47 or newer.",
   "icon": { "url": "./icons/jira-boards-51f9b062.svg" },
   "screenshots": [
     "./screenshots/jira-boards/board-and-chat.jpg",
@@ -28,7 +28,7 @@
   "source": {
     "git": {
       "url": "https://github.com/viartemev/bb-jira.git",
-      "range": "^0.2.0"
+      "range": "^0.3.0"
     }
   }
 }

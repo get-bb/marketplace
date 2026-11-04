@@ -25,5 +25,10 @@
       "url": "https://github.com/prakashchokalingam/bb-plugin-bots.git",
       "range": "^1.0.0"
     }
-  }
+  },
+  "screenshots": [
+    "./screenshots/bots/bots-and-threads.png",
+    "./screenshots/bots/avatar-picker.png"
+  ],
+  "overview": "./overview/bots.md"
 }

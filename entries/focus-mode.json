@@ -1,18 +1,19 @@
 {
   "id": "focus-mode",
   "displayName": "Focus mode",
-  "description": "Read one conversation with the sidebar, other split panes, and composer out of sight. Open it from the thread header or command palette, and assign a shortcut in BB's Keyboard settings. Press Escape to return to your previous layout and draft. Uses BB's native transcript and active theme, with no additional account or external service.",
+  "description": "Read a conversation as plain text, with tool calls, file edits, and every panel out of sight. Your prompts appear as quiet quotes and the agent's replies in one narrow column, refreshed every two seconds while the agent works. A small dot shows when the agent is running, and older history loads on request. Open it from the thread header or command palette, assign a shortcut in BB's Keyboard settings, and press Escape to return to your unchanged layout and draft.",
   "icon": {
     "url": "./icons/focus-mode-d37cdfd5.svg"
   },
   "screenshots": [
-    "./screenshots/focus-mode/reader-light.png",
-    "./screenshots/focus-mode/reader-dark.png"
+    "./screenshots/focus-mode/reader-dark.png",
+    "./screenshots/focus-mode/reader-light.png"
   ],
   "tags": [
     "reading",
     "distraction-free",
     "transcript",
+    "text-only",
     "keyboard",
     "split-panes"
   ],
@@ -26,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/Ayushlm10/bb-plugin-focus-mode.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   }
 }

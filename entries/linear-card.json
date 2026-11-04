@@ -1,0 +1,34 @@
+{
+  "id": "linear-card",
+  "displayName": "Linear Card",
+  "description": "See which Linear issue each chat is about, right in the thread header. Click the chip for the full card with its description and images, then open, change, or unlink it. A chat with no card opens your assigned issues, grouped by state and searchable, so you can link one in two clicks. Branches named by Linear (eng-123-…) attach their issue on their own, and long titles get a short AI label. Requires a Linear personal API key; short labels use bb's Account Pooler.",
+  "icon": {
+    "url": "./icons/linear-card-16d9a858.svg"
+  },
+  "screenshots": [
+    "./screenshots/linear-card/card.png",
+    "./screenshots/linear-card/explorer.png",
+    "./screenshots/linear-card/settings.png"
+  ],
+  "overview": "./overview/linear-card.md",
+  "tags": [
+    "linear",
+    "issues",
+    "issue-tracking",
+    "tickets",
+    "thread-header",
+    "branches"
+  ],
+  "author": {
+    "name": "bottlebrushes",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-plugin-linear-card.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "section-load-more",
+  "displayName": "Section Load More",
+  "description": "Keep long sidebar sections short, so opening one never pushes the others out of view. Each custom section and the Threads group shows its first 10 threads, with Load more and Show less at the end of the same section. Nothing is archived or moved, and the thread you have open always stays visible. Set the starting count and the batch size in the plugin settings.",
+  "icon": "ListView",
+  "tags": [
+    "sidebar",
+    "sections",
+    "thread-list",
+    "load-more",
+    "show-more",
+    "long-lists",
+    "declutter",
+    "organize"
+  ],
+  "author": {
+    "name": "siluthfi",
+    "github": "siluthfi",
+    "url": "https://github.com/siluthfi"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/section-load-more/01-sections-capped.png",
+    "./screenshots/section-load-more/02-load-more-expanded.png"
+  ],
+  "overview": "./overview/section-load-more.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/siluthfi/bb-plugin-section-load-more.git",
+      "range": "^0.1.1"
+    }
+  }
+}

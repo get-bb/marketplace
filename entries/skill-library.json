@@ -1,0 +1,21 @@
+{
+  "id": "skill-library",
+  "displayName": "Skill Library",
+  "description": "Edit any skill bb discovers straight from the sidebar, so a downloaded skill becomes yours before it runs. Every skill on the machine — provider, plugin, built-in, and user — sits in one filterable list. Save carries a revision check, so a file changed on disk is refused instead of overwritten. Create new skills under ~/.bb/skills, search skills.sh, and install registry entries without opening a terminal. Registry search and install need network access to skills.sh; everything else works offline.",
+  "icon": "BookOpen",
+  "tags": ["skills", "markdown", "editing", "registry", "sidebar"],
+  "author": {
+    "name": "Ayan Masood",
+    "github": "Ayan-M-Dev"
+  },
+  "category": "file-viewers-and-editors",
+  "secondaryCategories": ["memory-and-context"],
+  "source": {
+    "git": {
+      "url": "https://github.com/Ayan-M-Dev/bb-plugin-skill-library.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": ["./screenshots/skill-library/registry.png"],
+  "overview": "./overview/skill-library.md"
+}
