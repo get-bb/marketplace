@@ -15,4 +15,4 @@ The `super-diff` skill tells an agent to run `bb super-diff read` and follow the
 
 ## Requirements
 
-A thread with a git environment, and bb 0.47 or later for the Viewed checkboxes. Nothing to configure.
+A thread with a git environment, and bb 0.48 or later. Nothing to configure.
