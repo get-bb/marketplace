@@ -1,0 +1,42 @@
+{
+  "id": "kodaforge",
+  "displayName": "KodaForge",
+  "description": "Edit, run and debug your project inside BB, with agent chat, threads and workflows open beside the code. A Monaco code editor with tabs, split editors, quick open (⌘P), find in files, and search and replace with a preview. Language servers (LSP) for Python and TypeScript give completion, go to definition, find references, rename and a Problems panel. Debug Python with breakpoints, pick the Python environment (venv, uv, Poetry, conda), run Makefile and npm tasks, and work in split terminals that survive restarts. Source control stages, diffs, commits, stashes, pulls and pushes with git. The Agent Network maps the agents and MCP servers working on your project, and in App mode the agents, tools, MCP servers, models and skills your code builds. Install the language servers (pyright or basedpyright, typescript-language-server) and debugpy yourself.",
+  "icon": {
+    "url": "./icons/kodaforge-87d1685c.png"
+  },
+  "category": "file-viewers-and-editors",
+  "secondaryCategories": [
+    "code-and-reviews",
+    "command-line"
+  ],
+  "screenshots": [
+    "./screenshots/kodaforge/editor.jpg",
+    "./screenshots/kodaforge/agent-network-app.jpg",
+    "./screenshots/kodaforge/agent-network-coding.jpg"
+  ],
+  "overview": "./overview/kodaforge.md",
+  "tags": [
+    "ide",
+    "code-editor",
+    "vscode",
+    "monaco",
+    "lsp",
+    "debugger",
+    "python",
+    "terminal",
+    "git",
+    "mcp"
+  ],
+  "author": {
+    "name": "Kodaks94",
+    "github": "Kodaks94",
+    "url": "https://github.com/Kodaks94"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/Kodaks94/bb-plugin-kodaforge.git",
+      "range": ">=0.7.0 <1.0.0"
+    }
+  }
+}
