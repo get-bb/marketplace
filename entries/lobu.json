@@ -12,7 +12,9 @@
     "project-brief",
     "team-memory",
     "recap",
-    "notes"
+    "notes",
+    "entities",
+    "mentions"
   ],
   "author": {
     "name": "Lobu",
@@ -26,7 +28,7 @@
   "source": {
     "git": {
       "url": "https://github.com/lobu-ai/bb-plugin-lobu.git",
-      "range": "^0.5.0"
+      "range": "^0.6.0"
     }
   },
   "overview": "./overview/lobu.md",
