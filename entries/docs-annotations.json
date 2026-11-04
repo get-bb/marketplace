@@ -1,0 +1,35 @@
+{
+  "id": "docs-annotations",
+  "displayName": "Docs Annotations",
+  "description": "Discuss selected Markdown passages in chat without changing the source file. Select text in Docs or an in-thread preview to save a comment and attach its quote and location to the composer. Highlights reopen for editing or deletion; comments stay separate from Markdown, follow document moves, and are removed with deleted documents or vaults. Install this replacement separately, disable built-in Docs, and add your vaults again.",
+  "icon": "FileText",
+  "tags": [
+    "markdown",
+    "annotations",
+    "comments",
+    "docs",
+    "vaults",
+    "review",
+    "editor",
+    "chat",
+    "passages"
+  ],
+  "author": {
+    "name": "Robert Sinke",
+    "github": "robertsinke",
+    "url": "https://github.com/robertsinke"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/robertsinke/docs-annotations.git",
+      "range": "^0.1.1"
+    }
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/docs-annotations/select-passage.png",
+    "./screenshots/docs-annotations/add-comment.png",
+    "./screenshots/docs-annotations/comment-in-chat.png"
+  ],
+  "overview": "./overview/docs-annotations.md"
+}
