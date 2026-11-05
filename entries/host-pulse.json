@@ -1,0 +1,40 @@
+{
+  "id": "host-pulse",
+  "displayName": "Host Pulse",
+  "description": "Keep server load, provider quotas, reset countdowns, and DeepSeek balance in view while you work in BB. Pin a draggable card with per-core CPU, disk busy time and IOPS, network speed, and CPU/RAM process leaders; detailed activity needs Linux. Quotas use BB's Provider usage plugin and configured accounts; the optional balance row needs local DSH with a DeepSeek API key and calls DeepSeek's balance API. Open charts and diagnostics, or enable background CPU and memory alerts.",
+  "icon": {
+    "url": "./icons/host-pulse-f612033a.svg"
+  },
+  "screenshots": [
+    "./screenshots/host-pulse/monitor.jpg",
+    "./screenshots/host-pulse/details.jpg"
+  ],
+  "overview": "./overview/host-pulse.md",
+  "author": {
+    "name": "maryanovas",
+    "github": "maryanovas",
+    "url": "https://github.com/maryanovas"
+  },
+  "category": "utilities",
+  "secondaryCategories": [
+    "token-usage-and-limits"
+  ],
+  "tags": [
+    "monitoring",
+    "cpu",
+    "memory",
+    "disk",
+    "network",
+    "processes",
+    "provider-usage",
+    "quotas",
+    "deepseek",
+    "floating-monitor"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/maryanovas/bb-plugin-host-pulse.git",
+      "range": "^0.1.0"
+    }
+  }
+}
