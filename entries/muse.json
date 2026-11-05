@@ -1,0 +1,37 @@
+{
+  "id": "muse",
+  "displayName": "Muse AI connector",
+  "description": "Runs BB chats on the Muse personal assistant (muse.ai) through your own signed-in Muse accounts. Tools, MCP servers and skills run on your machine; replies stream into the BB chat. Several accounts with parallel chats, each account's weekly limit on the settings screen, and one Chrome sign-in copied to every connected machine. Not the Muse Code CLI plugin.",
+  "icon": {
+    "url": "./icons/muse-674c8507.svg"
+  },
+  "screenshots": [
+    "./screenshots/muse/provider-picker.png",
+    "./screenshots/muse/settings.png"
+  ],
+  "overview": "./overview/muse.md",
+  "tags": [
+    "muse",
+    "muse-ai",
+    "meta",
+    "provider",
+    "agents",
+    "muse-spark",
+    "mcp",
+    "multi-account"
+  ],
+  "author": {
+    "name": "Kirill Vechkasov",
+    "github": "VKirill"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "token-usage-and-limits"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/VKirill/muse-ai-connector.git",
+      "range": ">=0.3.19 <1.0.0"
+    }
+  }
+}
