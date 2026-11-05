@@ -6,7 +6,8 @@ Voice messages you record in a BB chat are transcribed on a machine you choose, 
 - **Five engines.** Whisper (MLX) and GigaAM v3 run locally, so audio never leaves your machine. Groq, OpenAI and Google run in the cloud and need only an API key. Switch engines with one click.
 - **Continuous multi-tab dictation.** Recording stays active while you navigate between threads, files, or settings. An in-place waveform bar tracks your speech, and the transcript is delivered directly to the chat where recording started.
 - **A term vocabulary.** List the names you use — tools, products, people. Garbled spellings are repaired by matching consonant skeletons, so "Mail X" becomes MLX without listing every variant.
-- **An optional AI correction pass.** A language model fixes the vocabulary terms the rules missed, and nothing else. Works with any OpenAI-compatible endpoint; Groq, OpenCode Zen and OpenAI are preset.
+- **An optional AI correction pass.** Choose strict vocabulary repair or opt-in contextual editing. Improve and Undo edit just the last dictated fragment on demand. Works with any OpenAI-compatible endpoint; Groq, OpenCode Zen and OpenAI are preset.
+- **Optional dictation controls.** Stop after silence or send through the original unchanged composer. Auto-send stays off for on-demand/contextual AI editing. Live preview and native-recorder selection are deferred.
 - **Text cleanup.** Removes fillers such as "uh" and "um" and fixes quotes and spacing, with rules for Russian, English, German, French, Spanish, Portuguese and Italian. Each rule can be turned off.
 - **Recordings and models under control.** Set how many days recordings are kept, download a model in advance with progress, and see and delete models on disk.
 
@@ -17,16 +18,17 @@ Enter an API key directly in the plugin: it is stored on the recognition machine
 ## Setup
 
 1. Install the plugin.
-2. Run `bb settings set BB_TRANSCRIPTION local-voice/default`.
+2. Run `bb settings ai-services set voice local-voice`.
 3. Pick an engine on the plugin page, or run `bb voice-input setup` to install a local one.
 
 `bb voice-input status`, `history`, `download` and `transcribe` cover the same tasks from the terminal. The settings page is available in eight languages.
 
 ## Requirements
 
+- Requires BB 0.48.1+ and Plugin SDK 0.6.104+, including with optional features disabled.
 - Local engines need Python 3 and ffmpeg on the recognition machine. Whisper (MLX) runs only on macOS with Apple silicon; GigaAM installs PyTorch and is built for Russian speech. Engines a machine cannot run are shown greyed out with the reason, so a Linux server still offers the cloud ones.
 - Cloud engines send audio to the provider and need your own account: Groq and Google have free tiers, OpenAI bills per minute.
-- BB allows 10 seconds per transcription attempt, so very long recordings can time out on any engine.
+- Slow providers and long recordings can time out; a failed optional AI pass keeps ordinary cleanup.
 
 ## Credits
 
