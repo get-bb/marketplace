@@ -1,0 +1,35 @@
+{
+  "id": "pr-xray",
+  "displayName": "PR X-ray",
+  "description": "Understand a pull request before you judge it. PR X-ray groups the diff by concern and puts it in reading order, then explains it with a walkthrough, diagrams and the spots worth a closer look. Ask questions as you read, and comment or submit your review on GitHub without leaving bb.",
+  "icon": "GitPullRequest",
+  "screenshots": [
+    "./screenshots/pr-xray/reading-path.jpg",
+    "./screenshots/pr-xray/walkthrough.jpg",
+    "./screenshots/pr-xray/diagram.jpg",
+    "./screenshots/pr-xray/comments.jpg",
+    "./screenshots/pr-xray/ask-about-the-pr.jpg",
+    "./screenshots/pr-xray/settings.jpg"
+  ],
+  "overview": "./overview/pr-xray.md",
+  "author": {
+    "name": "AlsoKnownAs-Ax",
+    "github": "AlsoKnownAs-Ax",
+    "url": "https://github.com/AlsoKnownAs-Ax"
+  },
+  "category": "code-and-reviews",
+  "tags": [
+    "github",
+    "pull-requests",
+    "code-review",
+    "diagrams",
+    "review-comments",
+    "agents"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/AlsoKnownAs-Ax/bb-plugin-pr-xray.git",
+      "range": "^1.0.0"
+    }
+  }
+}
