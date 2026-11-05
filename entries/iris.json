@@ -1,0 +1,13 @@
+{
+  "id": "iris",
+  "displayName": "Iris",
+  "description": "Turns agent replies into live cards you can use: charts, test runs, decisions, plans and small apps, drawn in your bb theme. Agents pick from 120 components on their own and check each card before you see it, so a status report arrives as metrics and progress, and proof of done as criteria with their evidence. Sliders and toggles recompute cards in place, buttons and pickers send your answer back to the agent, and live cards re-read files every 2 seconds while a job runs. Cards also read bb itself: the thread's context use, the threads it started, its pull request, commits and plan usage. Adds about 15k tokens of instructions to each top-level session, and maps and photos call OpenStreetMap, Photon and Wikimedia Commons unless you turn web lookups off.",
+  "icon": { "url": "./icons/iris-440dec6f.svg" },
+  "tags": ["inline-ui", "generative-ui", "charts", "interactive", "components", "test-reports", "decisions", "live-data", "visualization", "dashboards"],
+  "author": { "name": "Vedran Burojević", "github": "vburojevic", "url": "https://github.com/vburojevic" },
+  "category": "thread-content",
+  "secondaryCategories": ["code-and-reviews"],
+  "screenshots": ["./screenshots/iris/chat-chart.png", "./screenshots/iris/chat-decision.png", "./screenshots/iris/gallery.png"],
+  "overview": "./overview/iris.md",
+  "source": { "git": { "url": "https://github.com/vburojevic/bb-plugin-iris.git", "range": "^1.0.0" } }
+}
