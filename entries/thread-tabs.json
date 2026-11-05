@@ -1,0 +1,34 @@
+{
+  "id": "thread-tabs",
+  "displayName": "Thread Tabs",
+  "description": "Keep up to eight independent agent chats in one thread and workspace. Choose any installed model, fork an output into a transcript-backed tab, rename chats, and restore closed tabs. The output menu also keeps BB’s native fork into a separate thread. Requires BB 0.48.1 (0.48.x only) and your configured agent provider.",
+  "icon": "PanelsTopLeft",
+  "author": {
+    "name": "Anirudh Ranganath",
+    "github": "anirudhranganath",
+    "url": "https://github.com/anirudhranganath"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "thread-management"
+  ],
+  "tags": [
+    "tabs",
+    "chat",
+    "fork",
+    "threads",
+    "models",
+    "workspace"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/anirudhranganath/bb-plugin-thread-tabs.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/thread-tabs/fork-menu.jpg",
+    "./screenshots/thread-tabs/fork-draft.jpg"
+  ],
+  "overview": "./overview/thread-tabs.md"
+}
