@@ -3,7 +3,7 @@
   "displayName": "Antigravity CLI [Experimental]",
   "description": "Code with your Antigravity account inside BB. Choose CLI-discovered models, switch between Plan and Build, and review tool requests in your thread. Requires a separately installed Antigravity CLI and an eligible account; service quota or charges apply. Tested locally on Windows.",
   "icon": {
-    "url": "./icons/antigravity-cli-b61622a0.svg"
+    "url": "./icons/antigravity-cli-4632eabe.svg"
   },
   "tags": [
     "acp",
