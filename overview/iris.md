@@ -23,6 +23,6 @@ Expressions run in a sandboxed interpreter with no `eval` and a step budget. Car
 
 ## Costs and settings
 
-Iris adds about 15k tokens of instructions to each session it reaches. By default that is every top-level thread; threads that agents spawn under them are left out unless you turn on the `workers` setting. Maps, place search and photos call OpenStreetMap, Photon and Wikimedia Commons through Iris's server; turn `webLookups` off to keep cards offline. Some components use experimental bb plugin APIs, so a bb update can change how they look until Iris catches up.
+Iris adds about 3,500 tokens of instructions to each session it reaches: its rules and an index of every component. Prop details and examples load only when an agent asks for them. By default that is every top-level thread; threads that agents spawn under them are left out unless you turn on the `workers` setting. Maps, place search and photos call OpenStreetMap, Photon and Wikimedia Commons through Iris's server; turn `webLookups` off to keep cards offline. Some components use experimental bb plugin APIs, so a bb update can change how they look until Iris catches up.
 
 Source, docs and the eval suite: https://github.com/vburojevic/bb-plugin-iris
