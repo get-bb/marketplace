@@ -1,0 +1,25 @@
+{
+  "id": "antigravity-cli",
+  "displayName": "Antigravity CLI [Experimental]",
+  "description": "Code with your Antigravity account inside BB. Choose CLI-discovered models, switch between Plan and Build, and review tool requests in your thread. Requires a separately installed Antigravity CLI and an eligible account; service quota or charges apply. Tested locally on Windows.",
+  "icon": {
+    "url": "./icons/antigravity-cli-b61622a0.svg"
+  },
+  "tags": [
+    "acp",
+    "cli",
+    "planning"
+  ],
+  "category": "agents-and-providers",
+  "author": {
+    "name": "dionis-d",
+    "github": "dionis-d"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/ols-md/bb-plugin-antigravity.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/antigravity-cli.md"
+}
