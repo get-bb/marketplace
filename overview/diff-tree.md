@@ -2,7 +2,11 @@ Keep large reviews organized by directory, with file counts and line statistics 
 
 ## Review the right changes
 
-Choose all branch changes, uncommitted work, the last 1–100 commits, or a single commit. Pick a comparison branch with BB's searchable branch picker. When BB recorded a branch's creation source, Diff Tree uses it as the automatic comparison default.
+Choose all branch changes, uncommitted work, a range from a chosen starting commit through HEAD, or a single commit. Pick a comparison branch with BB's searchable branch picker. When BB recorded a branch's creation source, Diff Tree uses it as the automatic comparison default.
+
+Return to a chat with its comparison, selected file, layout and folder expansion restored. Changes and Full tree remember their own selected paths and searches. Review state stays in this browser; file contents and chat drafts are not stored with it.
+
+Image changes show Before/After versions with transparency backgrounds, dimensions and Fit / 100% zoom. PNG, JPEG, GIF, WebP, BMP, ICO, AVIF and SVG are supported up to 2 MiB per side; SVG keeps a text-diff option. Historical comparisons use pinned Git versions, and Worktree previews use the current file.
 
 Switch between unified and split layouts. Expand unchanged lines in either direction to read surrounding code, with syntax highlighting that follows your BB theme. File type icons help distinguish source files, configuration, and documents.
 
