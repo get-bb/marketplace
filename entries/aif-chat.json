@@ -1,0 +1,28 @@
+{
+  "id": "aif-chat",
+  "displayName": "BB AIF Helper",
+  "description": "Keep research, plans, checks and commits within reach in every BB thread. A persistent panel tracks tasks, gate results and versions, while buttons launch the next step or a command suggested by your agent. Use the bundled five-step workflow without AI Factory; full AI Factory/AIFHub workflows require separate project installation. Requires BB 0.48+; the interface is Russian, Windows is verified, and actions use your configured agent's quota or billing.",
+  "icon": {
+    "url": "./icons/aif-chat-75852d16.svg"
+  },
+  "screenshots": [
+    "./screenshots/aif-chat/workflow.png",
+    "./screenshots/aif-chat/checks.png",
+    "./screenshots/aif-chat/basic-flow.png"
+  ],
+  "tags": ["ai-factory", "aifhub", "planning", "verification", "qa", "git", "workflow-navigation"],
+  "author": {
+    "name": "ichinya",
+    "github": "ichinya",
+    "url": "https://github.com/ichinya"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": ["thread-content", "code-and-reviews"],
+  "overview": "./overview/aif-chat.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/ichinya/bb-aif-helper.git",
+      "range": "^0.8.0"
+    }
+  }
+}
