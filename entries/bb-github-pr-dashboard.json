@@ -1,7 +1,7 @@
 {
   "id": "bb-github-pr-dashboard",
   "displayName": "GitHub PR Dashboard",
-  "description": "See why each pull request is stuck, and get it unstuck, without leaving bb. My PRs lists your pull requests, review requests for you and your teams, the ones you reviewed, and assigned ones by repository, each led by what blocks it: failing CI down to the job, changes requested, unresolved comments, conflicts or a stack. Reviewed turns amber when the author pushes after your review, so you know to look again. Open one to read its failing checks, walk its changed files with syntax highlighting inline or side by side, and answer each review thread under its line. Comment on a line or a range, reply, submit a review as Comment, Approve or Request changes, and close or reopen the pull request, each only when you click. Hand a review comment or a failed job to a bb agent with Fix with agent. Search the list, hide or fold repositories, and move by keyboard: j and k between pull requests or files, n and p between unresolved comments, [ and ] to the previous or next one. Alerts tell you when CI starts failing or someone comments, as bb toasts, a badge, and notifications through bb's Push notifications plugin. Uses the GitHub CLI login on the machine running bb, or a personal access token; github.com only.",
+  "description": "See why each pull request is stuck, and get it unstuck, without leaving bb. My PRs lists your pull requests, review requests for you and your teams, the ones you reviewed, and assigned ones by repository, each with its +/- lines and led by what blocks it: failing CI down to the job, changes requested, unresolved comments, conflicts or a stack. Reviewed turns amber when the author pushes after your review. Open one for its reviewers and their verdicts, labels, and tabs: Overview (the description, then comments and reviews), Checks with error annotations, Files with syntax-highlighted diffs and review threads under their lines, Commits with the ones since your review marked, and Comments. Edit the title and description, comment on a line or range, reply, delete your own comments, submit a review, mark your draft ready, and close or reopen, each only when you click. A menu links the PR to a bb thread, asks about it, explains it, or sends every finding to an agent, starting in the PR's project; Fix with agent does it for one comment or failed job. Jira keys open in bb's My Jira plugin. Search, hide or fold repositories, move by keyboard, switch gh accounts, and get alerts when CI fails or someone comments. Uses the GitHub CLI login or a token; github.com only.",
   "icon": "GitPullRequest",
   "tags": [
     "github",
@@ -22,11 +22,11 @@
   "category": "code-and-reviews",
   "screenshots": [
     "./screenshots/bb-github-pr-dashboard/list.png",
+    "./screenshots/bb-github-pr-dashboard/overview.png",
     "./screenshots/bb-github-pr-dashboard/files.png",
-    "./screenshots/bb-github-pr-dashboard/review.png",
-    "./screenshots/bb-github-pr-dashboard/checks.png",
-    "./screenshots/bb-github-pr-dashboard/split.png",
-    "./screenshots/bb-github-pr-dashboard/filters.png"
+    "./screenshots/bb-github-pr-dashboard/menu.png",
+    "./screenshots/bb-github-pr-dashboard/reviewed.png",
+    "./screenshots/bb-github-pr-dashboard/checks.png"
   ],
   "overview": "./overview/bb-github-pr-dashboard.md",
   "source": {
