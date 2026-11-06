@@ -9,10 +9,12 @@
 
 ## How it works
 
-The plugin is a bb machine provider on top of the skiff CLI: `skiff new` boots the VM, a
-provision script installs Node, the GitHub CLI and Claude Code (pinned versions, checked against
-the publishers' SHA-256 sums), bb enrolls its daemon over `skiff exec`, and `skiff tunnel` keeps
-the broker reachable. Archiving the thread removes the VM. A periodic sweep collects VMs that a
+The plugin is a bb machine provider on top of the skiff CLI: `skiff new --profile` boots the VM
+from a skiff profile whose setup installs Node, the GitHub CLI and Claude Code (pinned versions,
+checked against the publishers' SHA-256 sums), bb enrolls its daemon over `skiff exec`, and
+`skiff tunnel` keeps the broker reachable. Your machine default `~/.skiff/profile.toml` applies
+too, and so does a `.skiff` in the project folder once you trusted it with `skiff profile trust`,
+so the skills, packages, Claude Code plugins and MCP servers you declare there reach the VM. Archiving the thread removes the VM. A periodic sweep collects VMs that a
 failed launch left behind; VMs you create by hand are never touched.
 
 ## About skiff
@@ -27,7 +29,7 @@ see the [skiff website](https://sovyn-eu.github.io/skiff/).
 ## Requirements
 
 - Apple Silicon and macOS 26.
-- [skiff](https://github.com/sovyn-eu/skiff), prepared once with `skiff prepare`, plus
+- [skiff](https://github.com/sovyn-eu/skiff) 0.6.0 or newer, prepared once with `skiff prepare`, plus
   `skiff secret set claude-token` and `skiff secret set github-token`. Use a fine-grained GitHub
   token limited to the repositories agents should work on.
 - A project with a Git remote the VM can clone.
