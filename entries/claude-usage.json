@@ -1,0 +1,39 @@
+{
+  "id": "claude-usage",
+  "displayName": "Usage Explorer",
+  "description": "See how much of your Claude plan is left and where your AI coding spend went, by session, day and model, across every agent CLI you use. Each limit window shows what is left, when it resets and where you will land at your current pace, with a plain verdict on whether there is room for a big task. Sessions carry their titles and projects; open one for its models and its cost by token type, or click a model to filter the whole page. Reads Claude Code, Codex, Gemini CLI, OpenCode and the other CLIs ccusage supports, offline from their local logs, and draws each provider in its own colour. Plan limits use the Claude Code sign-in already on your machine and need a Claude subscription.",
+  "icon": {
+    "url": "./icons/claude-usage-853b2737.svg"
+  },
+  "screenshots": [
+    "./screenshots/claude-usage/all-clear.png",
+    "./screenshots/claude-usage/providers.png",
+    "./screenshots/claude-usage/sessions.png",
+    "./screenshots/claude-usage/models.png"
+  ],
+  "overview": "./overview/claude-usage.md",
+  "tags": [
+    "claude-code",
+    "codex",
+    "ccusage",
+    "cost",
+    "tokens",
+    "quota",
+    "rate-limits",
+    "sessions",
+    "forecast",
+    "gemini-cli"
+  ],
+  "author": {
+    "name": "Muhammad Ahsan",
+    "github": "ahsan7162",
+    "url": "https://github.com/ahsan7162"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/ahsan7162/bb-plugin-claude-usage.git",
+      "range": "^0.1.1"
+    }
+  }
+}
