@@ -1,0 +1,27 @@
+{
+  "id": "asana",
+  "displayName": "Asana Tasks",
+  "description": "Work your Asana tickets inside bb: read them, start an agent thread from one, and hand it back when it's done. Your My Tasks list sits in the sidebar and beside every thread, in your own sections, with overdue and time-against-estimate badges. Opening a task shows its description, images, comments, subtasks, and editable fields, and a thread started from it begins with the ticket's details. Hand back posts your comment and reassigns the task to whoever filed it in one step, and agents need your approval before they write anything to Asana. Needs an Asana account and a personal access token.",
+  "icon": "ListTodo",
+  "tags": ["asana", "tickets", "task-management", "project-management", "my-tasks", "client-work", "handoff"],
+  "author": {
+    "name": "Jack Shedd",
+    "github": "etchalon",
+    "url": "https://github.com/etchalon"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": ["thread-content"],
+  "source": {
+    "git": {
+      "url": "https://github.com/etchalon/bb-plugin-asana.git",
+      "range": "^1.0.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/asana/tasks.png",
+    "./screenshots/asana/task.png",
+    "./screenshots/asana/thread.png",
+    "./screenshots/asana/getting-started.png"
+  ],
+  "overview": "./overview/asana.md"
+}
