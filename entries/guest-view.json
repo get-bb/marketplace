@@ -1,0 +1,44 @@
+{
+  "id": "guest-view",
+  "displayName": "Guest View",
+  "description": "Share one thread with someone who has no BB account: they follow it live in a browser and suggest prompts that you approve. Guests see your messages and the agent's replies as they happen, with tool work shown only as counts such as \"Ran 3 commands, edited 2 files\". Each suggestion waits in a card above your composer, where you choose Use, Copy or Dismiss, so nothing a guest writes reaches the agent until you send it. The card also shows who is connected, kicks a guest, ends the link, and sets how long it lasts (4 hours by default). The link is a free Cloudflare quick tunnel, so the thread's text passes through Cloudflare and anyone with the link can watch; it needs the separate cloudflared program (on Linux the plugin can download a pinned, checksummed copy when you ask), and it requires BB 0.48 or later.",
+  "icon": {
+    "url": "./icons/guest-view-61b8862d.svg"
+  },
+  "tags": [
+    "sharing",
+    "guest-link",
+    "live-view",
+    "collaboration",
+    "prompt-approval",
+    "cloudflare-tunnel",
+    "remote-access",
+    "read-only"
+  ],
+  "author": {
+    "name": "nfour",
+    "github": "nfour",
+    "url": "https://github.com/nfour"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "cloud-and-remote"
+  ],
+  "screenshots": [
+    "./screenshots/guest-view/owner-card.jpg",
+    "./screenshots/guest-view/history.jpg",
+    "./screenshots/guest-view/settings.jpg",
+    "./screenshots/guest-view/page-light.jpg",
+    "./screenshots/guest-view/page-dark.jpg",
+    "./screenshots/guest-view/menu.jpg"
+  ],
+  "overview": "./overview/guest-view.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/nfour/bb-plugins.git",
+      "subdir": "bb-plugin-guest-view",
+      "range": ">=0.1.0 <1.0.0",
+      "tagPrefix": "guest-view/"
+    }
+  }
+}
