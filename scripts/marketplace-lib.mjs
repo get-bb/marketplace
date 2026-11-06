@@ -4,6 +4,7 @@ import { join } from "node:path";
 import { fromMarkdown } from "mdast-util-from-markdown";
 import { gfmFromMarkdown } from "mdast-util-gfm";
 import { gfm } from "micromark-extension-gfm";
+import semver from "semver";
 
 export const V1_ENTRY_FIELDS = Object.freeze([
   "id",
@@ -789,4 +790,179 @@ export function reservedPluginIdProblem(id, reserved) {
     return `The id "${id}" belongs to a plugin bundled with BB. Rename the package so the plugin gets a different id.`;
   }
   return undefined;
+}
+
+const RANGE_WARNING_SUMMARIES = {
+  "patch-only": (findings) =>
+    `${findings.length} unchanged entries use a 0.x range that stops before the next minor release.`,
+  unbounded: (findings) =>
+    `${findings.length} unchanged entries use a range with no upper bound.`,
+  "outside-range": (findings) =>
+    `${findings.length} unchanged entries have a newest release outside their range: ${findings
+      .map((finding) => `${finding.id} ${finding.release}`)
+      .join(", ")}.`,
+};
+
+function entrySourceRange(entry) {
+  const source = entry?.source ?? {};
+  return source.git?.range ?? source.npm?.range;
+}
+
+export function patchOnlyRangeWarning(range) {
+  if (semver.validRange(range) === null) return undefined;
+  const lowest = semver.minVersion(range);
+  if (lowest === null || lowest.major !== 0) return undefined;
+  const nextMinor = `0.${lowest.minor + 1}.0`;
+  if (semver.intersects(range, `>=${nextMinor}`)) return undefined;
+  const nextPatch = semver.inc(lowest, "patch");
+  const stop = semver.intersects(range, `>=${nextPatch}`) ? nextMinor : nextPatch;
+  return (
+    `The range "${range}" stops before ${stop}, ` +
+    `so ${stop} and later releases never reach users of this entry. ` +
+    "A later range change reaches new installations only. " +
+    `The range ">=${lowest.version} <1.0.0" follows every 0.x release.`
+  );
+}
+
+function hasOnlyLowerBounds(comparators) {
+  return comparators.every(
+    (comparator) =>
+      comparator.operator === ">=" ||
+      comparator.operator === ">" ||
+      comparator.semver === semver.Comparator.ANY,
+  );
+}
+
+export function unboundedRangeWarning(range) {
+  if (semver.validRange(range) === null) return undefined;
+  const sets = new semver.Range(range).set;
+  if (!sets.some(hasOnlyLowerBounds)) return undefined;
+  const warning =
+    `The range "${range}" has no upper bound, ` +
+    "so every future major release reaches users of this entry, " +
+    "including one that breaks compatibility.";
+  if (
+    sets.length > 1 ||
+    sets[0].some((comparator) => comparator.semver === semver.Comparator.ANY)
+  ) {
+    return warning;
+  }
+  const lowest = semver.minVersion(range);
+  const bounded =
+    lowest.major === 0
+      ? `">=${lowest.version} <1.0.0" follows every 0.x release`
+      : `"^${lowest.version}" follows every ${lowest.major}.x release`;
+  return `${warning} The range ${bounded}.`;
+}
+
+export function staticRangeFindings(entry, file) {
+  const range = entrySourceRange(entry);
+  if (range === undefined) return [];
+  return [
+    { kind: "patch-only", message: patchOnlyRangeWarning(range) },
+    { kind: "unbounded", message: unboundedRangeWarning(range) },
+  ]
+    .filter((finding) => finding.message !== undefined)
+    .map((finding) => ({ id: entry.id, file: `entries/${file}`, ...finding }));
+}
+
+export function newestStableGitRelease(lsRemoteOutput, tagPrefix) {
+  let newest;
+  for (const line of lsRemoteOutput.split("\n")) {
+    const ref = line.trim().split("\t")[1] ?? "";
+    if (!ref.startsWith(`refs/tags/${tagPrefix}v`)) continue;
+    const tag = ref.slice("refs/tags/".length).replace(/\^\{\}$/, "");
+    const version = tag.slice(tagPrefix.length + 1);
+    if (semver.parse(version)?.version !== version) continue;
+    if (semver.prerelease(version) !== null) continue;
+    if (newest === undefined || semver.gt(version, newest.version)) {
+      newest = { version, label: tag };
+    }
+  }
+  return newest;
+}
+
+export function newestStableNpmRelease(versionsJson, packageName) {
+  const version = [JSON.parse(versionsJson)]
+    .flat()
+    .filter(
+      (candidate) =>
+        semver.valid(candidate) !== null && semver.prerelease(candidate) === null,
+    )
+    .sort(semver.rcompare)[0];
+  return version === undefined
+    ? undefined
+    : { version, label: `${packageName}@${version}` };
+}
+
+function outsideRangeWarning(range, release) {
+  if (semver.validRange(range) === null) return undefined;
+  if (semver.satisfies(release.version, range)) return undefined;
+  if (semver.gtr(release.version, range)) {
+    return (
+      `The newest release, ${release.label}, is newer than the range "${range}" admits, ` +
+      "so it never reaches users of this entry. " +
+      "A range change reaches new installations only. " +
+      "Existing installations keep the range they were installed with."
+    );
+  }
+  if (semver.ltr(release.version, range)) {
+    return (
+      `The newest release, ${release.label}, is older than the range "${range}" admits, ` +
+      "so no stable release satisfies the range."
+    );
+  }
+  return `The newest release, ${release.label}, is outside the range "${range}".`;
+}
+
+export function outsideRangeFindings(entry, file, release) {
+  const range = entrySourceRange(entry);
+  if (range === undefined || release === undefined) return [];
+  const message = outsideRangeWarning(range, release);
+  if (message === undefined) return [];
+  return [
+    {
+      id: entry.id,
+      file: `entries/${file}`,
+      kind: "outside-range",
+      message,
+      release: release.label,
+    },
+  ];
+}
+
+function escapeWorkflowData(text) {
+  return text
+    .replaceAll("%", "%25")
+    .replaceAll("\r", "%0D")
+    .replaceAll("\n", "%0A");
+}
+
+function githubWarning(file, message) {
+  const property = escapeWorkflowData(file)
+    .replaceAll(":", "%3A")
+    .replaceAll(",", "%2C");
+  return `::warning file=${property}::${escapeWorkflowData(message)}`;
+}
+
+export function rangeWarningReport(findings, changedEntryFiles) {
+  const changed = new Set(
+    changedEntryFiles.map((file) => file.replaceAll("\\", "/")),
+  );
+  const warnings = [];
+  const annotations = [];
+  const unchanged = new Map();
+  for (const finding of findings) {
+    if (changed.has(finding.file)) {
+      warnings.push(`${finding.file}: ${finding.message}`);
+      annotations.push(githubWarning(finding.file, finding.message));
+    } else {
+      unchanged.set(finding.kind, [...(unchanged.get(finding.kind) ?? []), finding]);
+    }
+  }
+  for (const [kind, summary] of Object.entries(RANGE_WARNING_SUMMARIES)) {
+    const group = unchanged.get(kind);
+    if (group !== undefined) warnings.push(summary(group));
+  }
+  return { warnings, annotations };
 }
