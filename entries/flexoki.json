@@ -1,0 +1,36 @@
+{
+  "id": "flexoki",
+  "displayName": "Flexoki",
+  "description": "Read and write on warm paper and ink with Flexoki by Steph Ango (kepano/flexoki): light and dark palettes, syntax and terminal colours.",
+  "icon": {
+    "url": "./icons/flexoki-6d64c9a0.svg"
+  },
+  "tags": [
+    "theme",
+    "palette",
+    "flexoki",
+    "light-mode",
+    "dark-mode",
+    "syntax-highlighting",
+    "terminal-colors",
+    "typography"
+  ],
+  "author": {
+    "name": "ponomr",
+    "github": "ponomr",
+    "url": "https://github.com/ponomr"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/ponomr/bb-plugin-flexoki.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/flexoki/1-light.png",
+    "./screenshots/flexoki/2-dark.png",
+    "./screenshots/flexoki/3-appearance.png"
+  ],
+  "overview": "./overview/flexoki.md"
+}
