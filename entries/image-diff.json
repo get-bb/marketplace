@@ -1,0 +1,39 @@
+{
+  "id": "image-diff",
+  "displayName": "Image Diff",
+  "description": "See exactly which pixels changed in an image before you approve it. Before, Diff and After sit side by side, with changed pixels highlighted over a white background, over the new image, or blinking, plus a changed-pixel count. Git LFS images render in place in BB's Diff tab, downloading missing objects on demand. A pinned Image diff tab lists every changed image in the thread, and opening a changed image anywhere shows its diff. LFS images need git-lfs on the host.",
+  "icon": {
+    "url": "./icons/image-diff-2ff30872.svg"
+  },
+  "screenshots": [
+    "./screenshots/image-diff/diff-tab.jpg",
+    "./screenshots/image-diff/image-diff-tab.jpg"
+  ],
+  "overview": "./overview/image-diff.md",
+  "tags": [
+    "images",
+    "screenshots",
+    "pixel-diff",
+    "git-lfs",
+    "visual-regression",
+    "snapshots",
+    "png",
+    "diff",
+    "code-review"
+  ],
+  "author": {
+    "name": "Pavel Serezhin",
+    "github": "20koneek",
+    "url": "https://github.com/20koneek"
+  },
+  "category": "code-and-reviews",
+  "secondaryCategories": [
+    "file-viewers-and-editors"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/20koneek/bb-plugin-image-diff.git",
+      "range": "^0.1.0"
+    }
+  }
+}
