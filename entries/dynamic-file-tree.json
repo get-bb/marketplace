@@ -1,0 +1,35 @@
+{
+  "id": "dynamic-file-tree",
+  "displayName": "Dynamic File Tree",
+  "description": "Browse the active project beside every BB thread, with Git status, previews, diff counts, and live agent activity. Navigate files and folders scoped to the current Environment or Worktree. Preview text, Markdown, and image files inside BB. See reads, writes, added, deleted, and changed files with configurable colors and metadata. Requires BB 0.48+ and a thread with an available Environment; it uses no external service or account.",
+  "icon": "FolderTree",
+  "tags": [
+    "file-tree",
+    "file-browser",
+    "project-files",
+    "git-status",
+    "file-preview",
+    "markdown",
+    "sidebar"
+  ],
+  "author": {
+    "name": "D-Town",
+    "github": "D-Town",
+    "url": "https://github.com/D-Town"
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/dynamic-file-tree/overview.png",
+    "./screenshots/dynamic-file-tree/tree.png",
+    "./screenshots/dynamic-file-tree/settings.png"
+  ],
+  "overview": "./overview/dynamic-file-tree.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/D-Town/bb-plugins.git",
+      "subdir": "plugins/dynamic-file-tree",
+      "range": "^1.0.0",
+      "tagPrefix": "dynamic-file-tree/"
+    }
+  }
+}
