@@ -1,7 +1,7 @@
 {
   "id": "claude-accounts",
   "displayName": "Fast Switch Accounts",
-  "description": "Switch to another Claude Code or Codex login when the current one runs out of quota, without leaving BB. See each saved account's remaining limits before you pick one, then start the next thread on it. Add an account through the provider's own browser sign-in. Saved logins stay in the macOS Keychain. Tokens go only to Anthropic and OpenAI. Cursor and other providers show limits only. Runs on macOS only. Codex switching needs the Codex CLI signed in with ChatGPT and the Xcode Command Line Tools.",
+  "description": "Switch Claude Code or Codex logins when quota runs out, and start a new BB thread with a saved account. Check remaining limits before choosing an account, or add one through the provider's browser sign-in. Runs on macOS and Windows, with snapshots stored in Keychain or encrypted with Windows DPAPI; tokens go to Anthropic and OpenAI, while Cursor and other providers show limits only. Requires provider accounts; Codex switching also needs the Codex CLI signed in with ChatGPT, and saving Codex logins on macOS needs Xcode Command Line Tools.",
   "icon": "Users",
   "screenshots": [
     "./screenshots/claude-accounts/accounts.png"
@@ -15,7 +15,8 @@
     "codex",
     "chatgpt",
     "keychain",
-    "macos"
+    "macos",
+    "windows"
   ],
   "author": {
     "name": "Yuriy Egorov",
@@ -26,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/fzrx-ego/bb-plugin-claude-accounts.git",
-      "range": "^0.4.0"
+      "range": "^0.5.0"
     }
   },
   "overview": "./overview/claude-accounts.md"

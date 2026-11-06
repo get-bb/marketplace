@@ -18,11 +18,11 @@ CLI: `bb claude-accounts` covers the same actions, for example `status`, `switch
 
 ## How it works
 
-Claude Code credentials live in the login Keychain; saved snapshots sit in a second Keychain service on this Mac. Codex snapshots have their own Keychain service, and a Codex switch atomically replaces the Codex CLI's auth file. Labels live in plugin host data. Only the host worker reads or writes tokens; the page and the CLI see labels, emails, plans and percentages. Tokens go only to Anthropic and OpenAI, for sign-in, refresh and limit reads.
+On macOS, Claude Code credentials live in the login Keychain and saved snapshots sit in a second Keychain service. On Windows, the live Claude login uses `~/.claude/.credentials.json` (as Claude Code does), and snapshots are DPAPI-protected under `%LOCALAPPDATA%\bb-claude-accounts`. Codex snapshots use Keychain on macOS or DPAPI on Windows; a Codex switch atomically replaces the Codex CLI's auth file. Labels live in plugin host data. Only the host worker reads or writes tokens; the page and the CLI see labels, emails, plans and percentages. Tokens go only to Anthropic and OpenAI, for sign-in, refresh and limit reads.
 
 ## Requirements
 
-macOS. Codex switching needs the Codex CLI signed in with ChatGPT and the Xcode Command Line Tools; API-key logins are not supported. Finish running Codex threads before a Codex switch, otherwise an old thread can refresh its token and overwrite the shared auth file.
+macOS or Windows. Codex switching needs the Codex CLI signed in with ChatGPT. On macOS, saving a Codex snapshot also needs the Xcode Command Line Tools. API-key logins are not supported. Finish running Codex threads before a Codex switch, otherwise an old thread can refresh its token and overwrite the shared auth file.
 
 ## First step
 
