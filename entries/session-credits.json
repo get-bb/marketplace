@@ -1,7 +1,7 @@
 {
   "id": "session-credits",
   "displayName": "Copilot session credits",
-  "description": "See GitHub Copilot session credits beside BB’s context indicator. Open details for recorded usage, coverage, and Pi setup guidance. Works with Copilot CLI checkpoints; Pi requires a separate collector installation and Pi 1.5.0 or newer. Requires authenticated Copilot access; tested on macOS, with partial Pi coverage.",
+  "description": "See how many GitHub Copilot credits your BB thread has used. Click the indicator for usage details or Pi setup instructions, in a panel beside the button. Copilot CLI works directly; Pi needs a separate companion extension and Pi 1.5.0+. Requires authenticated GitHub Copilot access; tested on macOS, with partial Pi coverage.",
   "icon": {
     "url": "./icons/session-credits-6b26f7e7.svg"
   },
@@ -21,7 +21,7 @@
     "git": {
       "url": "https://github.com/lalitjeevanrao/copilot-session-credits.git",
       "subdir": "packages/bb-plugin-session-credits",
-      "range": "^0.2.0"
+      "range": "^0.2.1"
     }
   },
   "screenshots": [

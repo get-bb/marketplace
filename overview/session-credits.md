@@ -1,23 +1,19 @@
-## What you get
+## Session credits at a glance
 
-A credit indicator beside the thread's context usage opens exact amounts, capture state and coverage. Historical amounts stay visible when new capture is unavailable. Missing telemetry stays unknown instead of appearing as zero.
+See GitHub Copilot AI Credits beside the thread’s context indicator. Click to open a small panel with the exact amount, coverage and capture status. Recorded credits stay visible if capture stops; missing usage appears as a dash.
 
-## Copilot CLI
+## Setup
 
-The BB installation reads native Copilot CLI usage checkpoints. No Pi companion is needed. Checkpoint availability and coverage depend on the provider.
+With **Copilot CLI**, install this BB plugin. It reads the CLI’s reported usage; no companion is needed.
 
-## Pi setup
+With **Pi Coding Agent**, click **Set up credits** for the companion install command. Install it on the machine running Pi, then restart the session. Requires **Pi 1.5.0+** with GitHub Copilot signed in. The companion adds no Pi TUI meter.
 
-Pi users also install this release's companion through Pi's package manager on the machine running their thread. The clickable Set up credits indicator provides the command, runtime requirements and restart guidance. Retry check refreshes status without running an installer or calling a model.
+Requires **BB 0.48.1+** and authenticated GitHub Copilot access. Tested on macOS.
 
-The companion reports session-specific startup readiness separately from usage. Ready with no observations means awaiting Copilot usage. Unsupported runtime, disabled capture and errors have their own states. Pi coverage is always partial, and readiness is best-effort process evidence rather than a heartbeat.
+## Coverage and privacy
 
-## Requirements and privacy
+These are reported session credits, not a remaining subscription balance or invoice. Pi coverage is partial: earlier calls and hidden retries may be missing.
 
-Requires BB 0.48.1+ and authenticated GitHub Copilot access through Copilot CLI or Pi. Pi capture additionally requires Pi 1.5.0+ and the separate companion installation. Tested on macOS. No Pi TUI meter is added.
+Pi receipts stay on the execution host and contain usage amounts and identifiers, not prompts, responses or credentials. The plugin adds no analytics endpoint. Removing it preserves receipts; the receipt folder has a 256-entry limit.
 
-Private local receipts contain scalar usage and pseudonymous identifiers, not prompts, answers or credentials. The CLI reader returns only usage fields from a bounded log tail. No additional analytics endpoint is used. This is observed telemetry, not an invoice or remaining subscription balance.
-
-The 256-entry receipt cap requires deliberate archival with Pi stopped. Removal preserves receipts. Composer placement uses a private BB DOM adapter with a toolbar fallback and may need updates when BB changes.
-
-[Installation and updates](https://github.com/lalitjeevanrao/copilot-session-credits#readme) · [Privacy and trust](https://github.com/lalitjeevanrao/copilot-session-credits/blob/main/SECURITY.md) · [Receipt cleanup](https://github.com/lalitjeevanrao/copilot-session-credits/blob/main/docs/cleanup.md)
+[Installation and screenshots](https://github.com/lalitjeevanrao/copilot-session-credits#readme) · [Security](https://github.com/lalitjeevanrao/copilot-session-credits/blob/main/SECURITY.md) · [Receipt cleanup](https://github.com/lalitjeevanrao/copilot-session-credits/blob/main/docs/cleanup.md)
