@@ -5,9 +5,10 @@
   "icon": "Mic",
   "screenshots": [
     "./screenshots/voice-input/engines.png",
-    "./screenshots/voice-input/vocabulary.png",
+    "./screenshots/voice-input/vocabulary.jpg",
     "./screenshots/voice-input/cloud.png",
-    "./screenshots/voice-input/data.png"
+    "./screenshots/voice-input/data.png",
+    "./screenshots/voice-input/dictation.jpg"
   ],
   "overview": "./overview/voice-input.md",
   "tags": ["voice", "speech-to-text", "transcription", "dictation", "whisper", "gigaam", "groq", "vocabulary", "offline"],
