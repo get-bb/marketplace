@@ -9,5 +9,5 @@
   "secondaryCategories": ["code-and-reviews"],
   "screenshots": ["./screenshots/iris/chat-chart.png", "./screenshots/iris/pinned.png", "./screenshots/iris/chat-decision.png", "./screenshots/iris/chat-table.png", "./screenshots/iris/send-confirm.png", "./screenshots/iris/gallery.png"],
   "overview": "./overview/iris.md",
-  "source": { "git": { "url": "https://github.com/vburojevic/bb-plugin-iris.git", "range": "^1.0.0" } }
+  "source": { "git": { "url": "https://github.com/vburojevic/bb-plugin-iris.git", "range": ">=1.0.0" } }
 }
