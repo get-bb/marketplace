@@ -2,14 +2,14 @@
 
 Agents answer with cards instead of long text. A status report comes back as metrics and a progress bar, proof that work is done as a checklist of criteria with their evidence, a comparison as a decision whose weights you can drag, and a test run as its failures with links to the lines. The answer stays in a sentence or two above the card.
 
-There are 120 components in 30 families: layout, charts, data grids, diagrams, code and diffs, test, coverage and lint reports, plans, boards, roadmaps, maps, media players, 3D scenes, math, spreadsheets, API inspectors, whiteboards and more. Every card takes its colors from your bb theme and follows it when you switch.
+There are 129 components in 30 families: layout, charts, data grids, diagrams, code and diffs, test, coverage and lint reports, plans, boards, roadmaps, maps, media players, 3D scenes, math, spreadsheets, API inspectors, whiteboards and more. Every card takes its colors from your bb theme and follows it when you switch.
 
 ## How it works
 
 The agent writes a short `iris` code block in its reply, and bb draws it as a card while the reply streams in. Before sending, the agent checks the block with the `iris_check` tool, which reads the files it loads, moves every input to its extremes and returns an outline of what you will see.
 
 - Sliders, toggles and pickers recompute the card in place.
-- Buttons put text in your message, and `iris_ask` opens a picker that waits for your answer, like ask mode.
+- Buttons put text in your message, and `iris_ask` opens a picker that waits for your answer, like ask mode: a ranked checklist, design variants in a live preview, a color with its contrast, marks on a screenshot, comments on a spec, or a list to put in order.
 - A live card re-reads its files every 2 seconds, so a running job's log, progress or test results fill in as they land.
 - `load("bb:...")` reads bb's own data for the card's thread: its context use, the threads it started, its pull request, commits and changes, plan usage, machines and plugins.
 - Other plugins can publish JSON that cards read with `load("plugin:<id>/<name>")`.
