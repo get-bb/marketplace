@@ -1,0 +1,37 @@
+{
+  "id": "triage-sidebar",
+  "displayName": "Triage Sidebar",
+  "description": "Puts the threads that need you at the top of the sidebar, and clears away the ones you finished. Failed turns, raised hands and unread results rise above idle work, and the list holds still while your pointer is over it. Snooze a thread until this evening or next Monday, or settle it to stop the dev servers and terminals it left running; settled threads archive themselves after a number of days you choose. Each card shows the ports its worktree is serving, opens them in BB's browser, and runs the commands you saved for its project. Requires BB 0.43.4+; port listing needs lsof, so macOS or Linux only.",
+  "icon": {
+    "url": "./icons/triage-sidebar-5dc9357b.svg"
+  },
+  "screenshots": [
+    "./screenshots/triage-sidebar/inbox.png",
+    "./screenshots/triage-sidebar/ports.png",
+    "./screenshots/triage-sidebar/commands.png"
+  ],
+  "overview": "./overview/triage-sidebar.md",
+  "tags": [
+    "sidebar",
+    "inbox",
+    "triage",
+    "snooze",
+    "auto-archive",
+    "attention",
+    "ports",
+    "dev-server",
+    "project-commands"
+  ],
+  "author": {
+    "name": "Roger Serra",
+    "github": "Hazihell",
+    "url": "https://github.com/Hazihell"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/Hazihell/bb-plugin-triage-sidebar.git",
+      "range": "^0.1.0"
+    }
+  }
+}
