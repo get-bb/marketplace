@@ -1,0 +1,23 @@
+{
+  "id": "codex-realtime",
+  "displayName": "ChatGPT Realtime Connection",
+  "description": "Run Voice Mode's voice chats on your ChatGPT subscription instead of a separately billed OpenAI API key. It hands Voice Mode the ChatGPT sign-in that the Codex CLI already keeps on the machine running the bb server, reads it again for every chat, and never renews or rewrites it. Only the plugins you allow, Voice Mode to begin with, receive the token; the bb app, the command line and agents in threads never do. This is an undocumented use of the subscription that OpenAI could stop accepting at any time, nobody has checked whether OpenAI's terms allow it, and voice chats count against your ChatGPT plan. Requires bb 0.46 or later, Voice Mode 0.1.9 or later, and the Codex CLI signed in with Sign in with ChatGPT on a plan that includes Codex.",
+  "icon": "Mic",
+  "tags": ["voice", "realtime", "chatgpt", "codex", "openai", "subscription", "voice-mode", "speech"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": ["token-usage-and-limits"],
+  "overview": "./overview/codex-realtime.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "codex-realtime",
+      "tagPrefix": "codex-realtime/",
+      "range": ">=0.1.0"
+    }
+  }
+}
