@@ -1,29 +1,22 @@
-# Home Hero — overview
-
-**Greets you on BB's home screen and gets out of the way.**
-
-Home Hero replaces the empty home composer header with a small greeting that follows the local clock — Morning, Afternoon or Evening — optionally followed by your name. An uploaded icon sits beside it; without one the greeting is just text, so nothing personal ships with the plugin.
-
-## Who it is for
-
-People who spend the day in BB and want the home screen to feel like theirs, without a full theme or a fork of the app shell.
+Home Hero adds a small greeting above the home composer. It follows the local browser clock and says Morning, Afternoon or Evening, optionally followed by a name you set. Nothing personal ships with the plugin: no name and no icon still gives a plain greeting.
 
 ## What it does
 
-- Time-of-day greeting with the original typography (Palatino italic hello, Georgia small-caps name).
-- Optional display name from settings, trimmed and limited to 80 characters.
-- Optional PNG/JPEG/WebP icon up to 256 KiB, decoded in the browser and structurally validated on the plugin server.
+- Shows a time-of-day greeting in BB's home composer column, using Palatino italic for the hello and Georgia small caps for the name.
+- Reads an optional display name from settings, trims it and caps it at 80 characters.
+- Accepts an optional PNG, JPEG or WebP icon up to 256 KiB. The browser decodes it before upload and the plugin server checks the bytes again.
+- Keeps the text readable with reduced motion, showing the full greeting immediately instead of typing it.
 
 ## What it does not do
 
-- No default artwork, no analytics, no third-party requests.
-- It does not touch BB's global branding or other pages.
-- It does not resize or reformat the composer itself.
+- It ships no default artwork and no personal mark.
+- It does not change BB's global branding, other pages, or the composer itself.
+- It does not collect analytics or send anything to a third party.
 
-## Compatibility
+## Requirements
 
-BB 0.49.0+ (plugin SDK 0.6.132+), Node 22.19+ for development. The hero attaches to the home composer column; a host layout change can hide it without breaking the page.
+BB 0.49.0+ (plugin SDK 0.6.132+). The hero attaches to the home composer column; if a future host layout changes, the hero can stop appearing without breaking the page.
 
 ## Privacy
 
-The icon is sent over BB's existing connection to the BB server and stored in plugin-managed storage on the server machine. Greeting text comes from plugin settings. Nothing is sent to a third party.
+Greeting text comes from plugin settings and the time from the local browser clock. An uploaded icon travels over BB's existing connection to the BB server and is stored in plugin-managed storage on the server machine, never in the repository. The content script reads the home page structure to place the greeting and does not read conversation text; there is no analytics or third-party transmission.
