@@ -1,7 +1,7 @@
 {
   "id": "composer-autocollapse",
   "displayName": "Composer Auto-collapse",
-  "description": "Closes the prompt box when you click away or leave it idle, without touching your draft. Set the focus-out delay and the idle timeout, or turn either off. Clicks in the editor, toolbar, model picker and menus never collapse it. Idle collapse only fires while the box still has focus, and by default only with an empty draft; a hidden tab can collapse too. Requires BB 0.49.0+.",
+  "description": "Closes the prompt box when you click away or leave it idle, and leaves the draft in place. Set the focus-out delay and the idle threshold, or turn either off. Clicks in the editor, toolbar, model picker and menus never collapse it. Idle collapse needs focus to still be inside the box and fires only with an empty draft, or in a hidden tab when that option is on. Requires BB 0.49.0+.",
   "icon": "ChevronsDownUp",
   "screenshots": [
     "./screenshots/composer-autocollapse/collapsed.png",
