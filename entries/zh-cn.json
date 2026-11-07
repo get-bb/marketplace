@@ -1,0 +1,34 @@
+{
+  "id": "zh-cn",
+  "displayName": "简体中文语言包 · Simplified Chinese",
+  "description": "Use Simplified Chinese across BB menus, settings and built-in panels while keeping project, thread and Git. Includes 5,914 translated strings and preserves dynamic names and placeholders. Chat content, code, terminals and recognized custom titles keep their original text; disabling the plugin restores the interface. Runs locally without a translation API or account; the dictionary targets BB 0.49.0 and requires BB 0.49+.",
+  "icon": {
+    "url": "./icons/zh-cn-9862955d.svg"
+  },
+  "tags": [
+    "chinese",
+    "zh-cn",
+    "simplified-chinese",
+    "localization",
+    "translation",
+    "language",
+    "interface"
+  ],
+  "author": {
+    "name": "Yuusei",
+    "github": "YuuseiP",
+    "url": "https://github.com/YuuseiP"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/YuuseiP/bb-plugin-zh-cn.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/zh-cn.md",
+  "screenshots": [
+    "./screenshots/zh-cn/general-settings.png",
+    "./screenshots/zh-cn/keyboard-settings.png"
+  ]
+}
