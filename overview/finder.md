@@ -26,8 +26,11 @@ without leaving BB.
 - A markdown preview that renders **Mermaid** diagrams with BB's own message
   renderer, so it looks like the rest of BB.
 - Copy the file's contents or its path in one click.
-- **Add the file to the prompt**: it becomes an `@` mention whose contents are
-  resolved when the message is sent, so the agent reads the file as it is then.
+- **Add a file, or just the selected lines, to the prompt**: it becomes an `@`
+  mention whose contents are resolved when the message is sent, so the agent
+  reads the file — or exactly those lines — as they are then. Select lines in
+  the editor and the toolbar button narrows to that range; Mod-Alt-A does the
+  same from the keyboard.
 - File references BB opens from chat render in this editor instead of BB's
   read-only preview, with line targeting, find, edit, and save. Markdown keeps
   BB's preview.
