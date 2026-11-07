@@ -1,6 +1,8 @@
-## Session credits at a glance
+## Copilot session credits at a glance
 
-See GitHub Copilot AI Credits beside the thread’s context indicator. Click to open a small panel with the exact amount, coverage and capture status. Recorded credits stay visible if capture stops; missing usage appears as a dash.
+Copilot CLI supplies native cumulative usage checkpoints. The Pi companion records observed provider usage in private receipts; Pi coverage is partial and can miss earlier calls or hidden retries. Each BB thread shows its own reported provider-session usage, not a subscription balance or invoice total.
+
+The anchored credits panel shows exact reported amounts, coverage and capture status. Recorded credits remain visible if capture stops; missing usage is a dash.
 
 ## Setup
 
@@ -17,3 +19,5 @@ These are reported session credits, not a remaining subscription balance or invo
 Pi receipts stay on the execution host and contain usage amounts and identifiers, not prompts, responses or credentials. The plugin adds no analytics endpoint. Removing it preserves receipts; the receipt folder has a 256-entry limit.
 
 [Installation and screenshots](https://github.com/lalitjeevanrao/copilot-session-credits#readme) · [Security](https://github.com/lalitjeevanrao/copilot-session-credits/blob/main/SECURITY.md) · [Receipt cleanup](https://github.com/lalitjeevanrao/copilot-session-credits/blob/main/docs/cleanup.md)
+
+Version 0.3.0 uses the BB ID `copilot-session-credits`. Remove the old BB plugin ID before upgrading, and replace the existing Pi source rather than installing a second companion. Legacy receipts remain readable without moving them.
