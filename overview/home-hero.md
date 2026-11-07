@@ -15,8 +15,8 @@ Home Hero adds a small greeting above the home composer. It follows the local br
 
 ## Requirements
 
-BB 0.49.0+ (plugin SDK 0.6.132+). The hero attaches to the home composer column; if a future host layout changes, the hero can stop appearing without breaking the page.
+BB 0.49.0+ (plugin SDK 0.6.132+). The hero attaches to the home composer column. Host layout changes can stop the greeting from appearing.
 
 ## Privacy
 
-Greeting text comes from plugin settings and the time from the local browser clock. An uploaded icon travels over BB's existing connection to the BB server and is stored in plugin-managed storage on the server machine, never in the repository. The content script reads the home page structure to place the greeting and does not read conversation text; there is no analytics or third-party transmission.
+Greeting text comes from plugin settings and the time from the local browser clock. An uploaded icon travels over BB's existing connection to the BB server and is stored in plugin-managed storage on the server machine, never in the repository. The content script observes page structure to locate the home composer and renders the greeting only on the home screen; it does not read conversation text, and there is no analytics or third-party transmission.
