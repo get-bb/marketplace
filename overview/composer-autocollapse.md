@@ -15,8 +15,8 @@ Composer Auto-collapse closes BB's prompt box when you click elsewhere or leave 
 
 ## Requirements
 
-BB 0.49.0+ (plugin SDK 0.6.132+). Rendered-visibility checks skip CSS-hidden composer trees. If BB's composer markup changes, the plugin stays inert instead of misfiring.
+BB 0.49.0+ (plugin SDK 0.6.132+). Rendered-visibility checks skip CSS-hidden composer trees. When the expected composer controls are absent, it makes no change.
 
 ## Privacy
 
-Six local settings, no telemetry, no analytics endpoint, and no prompt content read beyond the emptiness check.
+Six settings stored on the BB server, no telemetry or analytics endpoint, and draft text is used only for an emptiness check, never stored or transmitted.
