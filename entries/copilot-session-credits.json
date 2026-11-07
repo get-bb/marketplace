@@ -1,0 +1,32 @@
+{
+  "id": "copilot-session-credits",
+  "displayName": "Copilot session credits",
+  "description": "Track reported GitHub Copilot credit usage for each BB thread. Click the indicator to see the amount, coverage, and capture status or get Pi setup instructions. Copilot CLI works directly; Pi requires a separate companion extension and Pi 1.5.0+. Requires authenticated GitHub Copilot access; tested on macOS. Pi coverage is partial, so earlier calls and hidden retries may be missing.",
+  "icon": {
+    "url": "./icons/copilot-session-credits-6b26f7e7.svg"
+  },
+  "tags": [
+    "github-copilot",
+    "pi",
+    "credits",
+    "usage",
+    "composer"
+  ],
+  "author": {
+    "name": "Lalit Rao",
+    "github": "lalitjeevanrao"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/lalitjeevanrao/copilot-session-credits.git",
+      "subdir": "packages/bb-plugin-copilot-session-credits",
+      "range": "^0.3.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/copilot-session-credits/copilot-cli.png",
+    "./screenshots/copilot-session-credits/pi-copilot.png"
+  ],
+  "overview": "./overview/copilot-session-credits.md"
+}
