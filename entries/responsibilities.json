@@ -11,12 +11,14 @@
   "source": {
     "git": {
       "url": "https://github.com/neoromantic/bb-plugin-responsibilities.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   },
   "overview": "./overview/responsibilities.md",
   "screenshots": [
     "./screenshots/responsibilities/responsibilities.png",
-    "./screenshots/responsibilities/new-child.png"
+    "./screenshots/responsibilities/new-child.png",
+    "./screenshots/responsibilities/compact-theme-dark.png",
+    "./screenshots/responsibilities/compact-theme-light.png"
   ]
 }
