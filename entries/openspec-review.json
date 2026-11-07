@@ -1,0 +1,34 @@
+{
+  "id": "openspec-review",
+  "displayName": "OpenSpec Review",
+  "description": "Comment on quoted text in OpenSpec proposals, designs and specs, and send the comments to the agent in the chat.",
+  "icon": "FileText",
+  "author": {
+    "name": "Nicolay I",
+    "github": "nicolay-i",
+    "url": "https://github.com/nicolay-i"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "tags": [
+    "openspec",
+    "review",
+    "specs",
+    "comments"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/nicolay-i/bb-plugin-openspec-review.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/openspec-review/review.png",
+    "./screenshots/openspec-review/resolved.png",
+    "./screenshots/openspec-review/change.png",
+    "./screenshots/openspec-review/spec.png"
+  ],
+  "overview": "./overview/openspec-review.md"
+}
