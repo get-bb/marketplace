@@ -2,7 +2,7 @@
 
 Agents answer with cards instead of long text. A status report comes back as metrics and a progress bar, proof that work is done as a checklist of criteria with their evidence, a comparison as a decision whose weights you can drag, and a test run as its failures with links to the lines. The answer stays in a sentence or two above the card.
 
-There are 140 components in 32 families: layout, charts, data grids, diagrams, code and diffs, test, coverage and lint reports, eval runs, agent traces, flame graphs, migrations, plans, boards, roadmaps, maps, media players, 3D scenes, math, spreadsheets, API inspectors, whiteboards and more. Every card takes its colors from your bb theme and follows it when you switch.
+Iris has well over a hundred components: layout, charts, data grids, diagrams, code and diffs, test, coverage and lint reports, eval runs, agent traces, flame graphs, migrations, plans, boards, roadmaps, maps, media players, 3D scenes, math, spreadsheets, API inspectors, whiteboards and more. Every card takes its colors from your bb theme and follows it when you switch.
 
 ## How it works
 
@@ -27,6 +27,6 @@ Expressions run in a sandboxed interpreter with no `eval` and a step budget. Car
 
 ## Costs and settings
 
-Iris adds about 3,600 tokens of instructions to each session it reaches: its rules and an index of every component. Prop details and examples load only when an agent asks for them. By default that is every top-level thread; threads that agents spawn under them are left out unless you turn on the `workers` setting. Maps, place search and photos call OpenStreetMap, Photon and Wikimedia Commons through Iris's server; turn `webLookups` off to keep cards offline. Some components use experimental bb plugin APIs, so a bb update can change how they look until Iris catches up.
+Iris adds under 4,000 tokens of instructions to each session it reaches: its rules and an index of every component. Prop details and examples load only when an agent asks for them. By default that is every top-level thread; threads that agents spawn under them are left out unless you turn on the `workers` setting. Maps, place search and photos call OpenStreetMap, Photon and Wikimedia Commons through Iris's server; turn `webLookups` off to keep cards offline. Some components use experimental bb plugin APIs, so a bb update can change how they look until Iris catches up.
 
 Source, docs and the eval suite: https://github.com/vburojevic/bb-plugin-iris
