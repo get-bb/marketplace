@@ -1,0 +1,23 @@
+{
+  "id": "diff-review",
+  "displayName": "Diff Review",
+  "description": "Comment on a thread's changes line by line, then send the comments to its agent, which fixes the code and answers each one. A Review tab beside the thread shows the diff of its uncommitted, staged or unstaged changes, its branch, one commit or a range, and each comment follows its code as the code moves. The same tab reviews a GitHub pull request: answer its threads, mark files viewed in step with GitHub, and submit your comments as one review, posted as the GitHub CLI's signed-in account. An AI review leaves comments of its own, @reviewer answers a question inside a comment thread, and Fix in a new thread hands the comments to another agent; these runs start as threads under the one being reviewed, in the permission mode set in the settings (bb's Approve for me by default, or Accept edits), and in full permission mode with a provider that lacks that mode, such as opencode. Follows the review loop of the open-source diffity, credited in the plugin's third-party notices. Needs bb 0.48 or later with bb's Git plugin on, and the signed-in GitHub CLI (gh) for pull request review only; it is built on experimental bb plugin APIs that may change between bb releases.",
+  "icon": "FileDiff",
+  "tags": ["code-review", "diff", "review-comments", "line-comments", "ai-review", "pull-requests", "github", "git", "agents"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "code-and-reviews",
+  "screenshots": ["./screenshots/diff-review/review-and-send.png", "./screenshots/diff-review/diff-and-ai-review.png"],
+  "overview": "./overview/diff-review.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "diff-review",
+      "tagPrefix": "diff-review/",
+      "range": ">=0.5.1"
+    }
+  }
+}
