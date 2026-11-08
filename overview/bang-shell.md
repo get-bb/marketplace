@@ -1,9 +1,22 @@
+## Why
+
+Keep agents away from secrets and production access without losing their help.
+When an agent's sandbox or permission mode blocks a command — it needs
+credentials from `.env`, a database the agent must not reach, or a tool that
+runs as you — the agent proposes the command, you review it and run it with one
+click, and the agent continues from the output. It never gets the credentials
+or the access, only the result you chose to run. Keep secret values out of
+what the command prints: the output goes to the agent.
+
 ## What you get
 
 - Type a command in a thread's composer, such as `git status`, `!ls -la` or a
   multi-line script, and send it with **Mod+Alt+Enter** or **Send menu → Run
   in terminal**. It runs in the thread's working directory, on the machine
   where that thread's session runs.
+- Highlight a command in an agent's answer and pick **Run in terminal** in the
+  selection menu, next to Add to chat. The message action button runs the
+  answer's first shell code block. Your unfinished draft is kept.
 - The message waits in the queue while the command runs. It then goes to the
   agent as two blocks, the command and its output (with the exit code when it
   is not zero), so the next answer starts from the real result.
