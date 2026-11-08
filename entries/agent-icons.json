@@ -1,0 +1,37 @@
+{
+  "id": "agent-icons",
+  "displayName": "Agent Icons",
+  "description": "Give each BB agent provider its own icon and colour: built-in glyphs or your own SVG sets, synced across devices.",
+  "icon": {
+    "url": "./icons/agent-icons-bfcb0b96.svg"
+  },
+  "tags": [
+    "icons",
+    "appearance",
+    "agents",
+    "providers",
+    "svg",
+    "customization"
+  ],
+  "author": {
+    "name": "ponomr",
+    "github": "ponomr",
+    "url": "https://github.com/ponomr"
+  },
+  "category": "themes-and-appearance",
+  "secondaryCategories": [
+    "agents-and-providers"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/ponomr/bb-plugin-agent-icons.git",
+      "range": "^0.2.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/agent-icons/settings.png",
+    "./screenshots/agent-icons/picker.png",
+    "./screenshots/agent-icons/threads.png"
+  ],
+  "overview": "./overview/agent-icons.md"
+}
