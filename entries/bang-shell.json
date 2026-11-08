@@ -1,7 +1,7 @@
 {
   "id": "bang-shell",
   "displayName": "Bang Shell",
-  "description": "Run a shell command from a thread's composer and hand the agent the command and its output in one message. Send with Mod+Shift+Enter or Send menu → Run in terminal; the command runs once in the thread's own environment, on whichever machine the session uses, local or remote. The message waits in the queue while the command runs, then reaches the agent as a sh block and an output block, so its next answer starts from the real result. Commands that outlast the wait (30 seconds by default) keep running in the thread's Terminal panel, and pagers are off so git log and git diff print in full. Messages from agents, other plugins and bb thread tell never run a command; commands run with your account's full rights, outside the agent's permission mode. Requires bb 0.49+.",
+  "description": "Run a shell command from a thread's composer and hand the agent the command and its output in one message. Send with Mod+Alt+Enter or Send menu → Run in terminal; the command runs once in the thread's own environment, on whichever machine the session uses, local or remote. The message waits in the queue while the command runs, then reaches the agent as a sh block and an output block, so its next answer starts from the real result. Commands that outlast the wait (30 seconds by default) keep running in the thread's Terminal panel, and pagers are off so git log and git diff print in full. Messages from agents, other plugins and bb thread tell never run a command; commands run with your account's full rights, outside the agent's permission mode. Requires bb 0.49+.",
   "icon": "Terminal",
   "screenshots": [
     "./screenshots/bang-shell/result.png",
@@ -31,7 +31,7 @@
   "source": {
     "git": {
       "url": "https://github.com/jonnik-bb-plugins/bb-plugin-bang-shell.git",
-      "range": "^0.2.1"
+      "range": "^0.2.2"
     }
   }
 }

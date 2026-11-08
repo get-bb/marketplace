@@ -1,7 +1,7 @@
 ## What you get
 
 - Type a command in a thread's composer, such as `git status`, `!ls -la` or a
-  multi-line script, and send it with **Mod+Shift+Enter** or **Send menu → Run
+  multi-line script, and send it with **Mod+Alt+Enter** or **Send menu → Run
   in terminal**. It runs in the thread's working directory, on the machine
   where that thread's session runs.
 - The message waits in the queue while the command runs. It then goes to the
