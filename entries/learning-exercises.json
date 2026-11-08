@@ -1,0 +1,29 @@
+{
+  "id": "learning-exercises",
+  "displayName": "Learning Exercises",
+  "description": "Get a short exercise on the code your agents just wrote, so you keep understanding what lands in your repository. After a commit, new files, a schema change or a merged pull request, one line above the composer offers a 10–15 minute exercise; offers are decided from bb's own data, not by a model, and are capped at three answered a day. Start runs the session in a side thread forked from yours, where each question is a card for your answer and how sure you are, and the agent's turn ends while the card is open, so it cannot hint. A Learning tab in every thread's side panel shows the session in progress, starts an exercise on the last commit, the new files or a topic you type, and keeps the project's paused and earlier sessions with your answers. A session runs on the thread's own agent and uses its tokens; answers are stored on the machine running bb. Exercises adapted from Dr. Cat Hicks's Learning Opportunities (CC BY 4.0), not affiliated with or endorsed by the author. Requires bb 0.48.1 or later with bb's bundled Git plugin on; pull request offers also need GitHub PR Status.",
+  "icon": "Brain",
+  "tags": ["learning", "exercises", "education", "comprehension", "quiz", "commits", "pull-requests", "code-understanding"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "thread-content",
+  "secondaryCategories": ["code-and-reviews"],
+  "screenshots": [
+    "./screenshots/learning-exercises/offer.png",
+    "./screenshots/learning-exercises/question-card.png",
+    "./screenshots/learning-exercises/learning-tab-session.png",
+    "./screenshots/learning-exercises/start-exercise.png"
+  ],
+  "overview": "./overview/learning-exercises.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "learning-exercises",
+      "tagPrefix": "learning-exercises/",
+      "range": ">=0.2.0"
+    }
+  }
+}
