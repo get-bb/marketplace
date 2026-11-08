@@ -27,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/steveafrost/bb-plugin-voice-mode.git",
-      "range": "^0.1.5"
+      "range": ">=0.1.5"
     }
   },
   "screenshots": [
