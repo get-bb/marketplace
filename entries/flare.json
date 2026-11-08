@@ -1,0 +1,28 @@
+{
+  "id": "flare",
+  "displayName": "Flare",
+  "description": "Let an agent tell you what it found while it is still working, not only in the message that ends its turn. Agents get a `flare` tool and send a finding, a decision, a progress or status update, a blocker or a summary; the newest one shows in a banner above the message box, and the thread's Flares tab keeps them all, drawn the way bb draws a reply, so an agent can answer with a chart, a diagram, a table or a snippet instead of describing it. Blockers, and flares the agent marks urgent, send a push notification, so alerts reach you while the work carries on. A child thread's flares appear in its parent's tab, and a child's blocker reaches the parent's agent as a note without starting a turn. The tool returns at once, so the agent never waits, and `bb flare send` works from a terminal or another agent.",
+  "icon": { "url": "./icons/flare-fec07abb.svg" },
+  "screenshots": [
+    "./screenshots/flare/overview.jpg",
+    "./screenshots/flare/finding.jpg",
+    "./screenshots/flare/blocker-summary.jpg"
+  ],
+  "overview": "./overview/flare.md",
+  "tags": ["agents", "agent-tools", "notifications", "push-notifications", "progress", "mid-turn", "side-panel", "child-threads", "subagents", "orchestration"],
+  "author": {
+    "name": "Kalindu De Costa",
+    "github": "kalindudc",
+    "url": "https://github.com/kalindudc"
+  },
+  "category": "thread-content",
+  "secondaryCategories": ["notifications"],
+  "source": {
+    "git": {
+      "url": "https://github.com/kalindudc/bb-marketplace.git",
+      "subdir": "plugins/flare",
+      "range": ">=0.1.0 <1.0.0",
+      "tagPrefix": "flare/"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "open-in-window",
+  "displayName": "Open in Window",
+  "description": "Opens any thread in its own browser tab or window from the thread's \"...\" menu, so two threads can stay open side by side. Adds Open in new window to the sidebar row's menu, its right-click menu, and the thread header's menu. Opens the same link Copy link copies, exactly as a target=\"_blank\" link would, so your browser's own tab and window settings decide where it lands. Nothing to configure, no commands, and no network access.",
+  "icon": "AppWindow",
+  "screenshots": [
+    "./screenshots/open-in-window/menu.png"
+  ],
+  "overview": "./overview/open-in-window.md",
+  "tags": [
+    "threads",
+    "new-window",
+    "new-tab",
+    "browser",
+    "side-by-side",
+    "menu",
+    "multitasking"
+  ],
+  "author": {
+    "name": "Chris Sells",
+    "github": "csells",
+    "url": "https://github.com/csells"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/csells/bb-plugins.git",
+      "subdir": "plugins/open-in-window",
+      "range": "^0.1.0",
+      "tagPrefix": "open-in-window/"
+    }
+  }
+}

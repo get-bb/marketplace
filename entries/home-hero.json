@@ -1,0 +1,33 @@
+{
+  "id": "home-hero",
+  "displayName": "Home Hero",
+  "description": "Greets you on BB's home screen with the time of day and, when you set one, your name. Optionally upload a PNG, JPEG or WebP icon up to 256 KiB; it travels over BB's existing plugin connection and is stored with the plugin on the BB server, never in the repository. Without a name or icon the greeting is plain text. Requires BB 0.49.0+.",
+  "icon": "Sunrise",
+  "screenshots": [
+    "./screenshots/home-hero/hero.png",
+    "./screenshots/home-hero/settings.png"
+  ],
+  "overview": "./overview/home-hero.md",
+  "tags": [
+    "home-screen",
+    "greeting",
+    "personalization",
+    "time-of-day",
+    "display-name",
+    "icon-upload"
+  ],
+  "author": {
+    "name": "Lalit Rao",
+    "github": "lalitjeevanrao",
+    "url": "https://github.com/lalitjeevanrao"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/lalitjeevanrao/bb-plugins.git",
+      "subdir": "packages/bb-plugin-home-hero",
+      "range": "^0.1.3",
+      "tagPrefix": "home-hero/"
+    }
+  }
+}
