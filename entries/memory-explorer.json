@@ -1,0 +1,37 @@
+{
+  "id": "memory-explorer",
+  "displayName": "Memory Explorer",
+  "description": "See what your agents remember: BB memory as a searchable table and a zoomable link graph, with a detail drawer for each memory. Search and filter every global and project memory, follow the links between memories, and see what links back to each one. Confirm or discard the preferences agents marked unconfirmed, and keep your own notes on people, teams and initiatives. Needs BB 0.48 or later and BB's Memory plugin.",
+  "icon": {
+    "url": "./icons/memory-explorer-2711b80c.svg"
+  },
+  "screenshots": [
+    "./screenshots/memory-explorer/table.png",
+    "./screenshots/memory-explorer/drawer.png",
+    "./screenshots/memory-explorer/graph.png"
+  ],
+  "overview": "./overview/memory-explorer.md",
+  "tags": [
+    "memory",
+    "knowledge-graph",
+    "knowledge-base",
+    "graph",
+    "backlinks",
+    "notes",
+    "preferences",
+    "search",
+    "agents"
+  ],
+  "author": {
+    "name": "David Asensio Cañas",
+    "github": "d-asensio",
+    "url": "https://github.com/d-asensio"
+  },
+  "category": "memory-and-context",
+  "source": {
+    "git": {
+      "url": "https://github.com/d-asensio/bb-plugin-memory-explorer.git",
+      "range": ">=0.1.0 <1.0.0"
+    }
+  }
+}
