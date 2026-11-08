@@ -2,14 +2,18 @@
 
 - A **Memory** page in the sidebar listing every global and project memory in BB's Memory plugin, each type with its own icon and colour.
 - **Table**: sort by any column, filter by type, and search names, aliases, email addresses, Slack ids and summaries.
-- **Drawer**: click a row or a graph node to read the memory. Follow a `[[link]]` to the memory it names, and see what links back to it, a small graph of its neighbours and, for an entity, the open threads whose title names it.
-- **Graph**: every memory and link on one canvas. Zoom, pan, and drag a node to pin it. Unconnected entities and broken links are listed below.
+- **Drawer**: click a row or a graph node to read the memory. Follow a `[[link]]` to the memory it names, and see what links back to it, a small zoomable graph of its neighbours and, for an entity, the open threads whose title names it.
+- **Graph**: every memory and link on one canvas. Zoom, pan, and drag a node to pin it. Relations are arrows labelled with their type, such as `member of` or `led to`, so you see how memories relate, not only that they do. Unconnected entities and broken links are listed below.
 - **Preferences**: a preference tagged `unconfirmed` gets Confirm and Discard buttons.
 - **Notes**: keep your own Notes on an entity. They are saved as the entity memory's `## Notes` section, so agents can read them.
 
+## Links and relations
+
+Links are written `[[memory-name]]` or `[[memory-name|label]]` in any memory. A `## Relations` section of lines like `- member of [[team.core]]` or `- led to [[procedure.key-rotation]]` says how the memory relates to the one it names. Every memory can have one: a person is a member of a team, an episode led to a procedure, the procedure is based on that episode.
+
 ## Entities
 
-A memory named `<type>.<slug>`, of kind `reference` and tagged `entity` and its type, is shown as an entity. The types are person, company, team, system, integration, meeting, initiative and other. Front matter at the top of its text gives the name, aliases and links. A `## Relations` section of lines like `- member-of [[team.core]]` gives typed relations. Every other memory is shown by its kind, such as preference, decision, procedure or fact. Links are written `[[memory-name]]` or `[[memory-name|label]]`.
+A memory named `<type>.<slug>`, of kind `reference` and tagged `entity` and its type, is shown as an entity. The types are person, company, team, system, integration, meeting, initiative and other. Front matter at the top of its text gives the name, aliases and links. Every other memory is shown by its kind, such as preference, decision, procedure, fact or episode.
 
 ## Settings
 
