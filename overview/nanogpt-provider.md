@@ -12,7 +12,7 @@ Pick NanoGPT in the provider list, choose any of its models, and run bb threads 
 
 ## How it works
 
-The plugin checks your key against NanoGPT before it hands the key to the provider. A key that NanoGPT rejects gives you no models. The key is stored as a secret setting on the bb server. Prompts, tool results and attached images are sent to NanoGPT, or to the base URL you set.
+The plugin checks your key against NanoGPT before it hands the key to the provider. A key that NanoGPT rejects gives you no models. The key is stored as a secret setting on the bb server. Prompts, tool results, attached text files, and image URLs are sent to NanoGPT, or to the base URL you set. Local images are described rather than sent.
 
 ## Requirements
 
