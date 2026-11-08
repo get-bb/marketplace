@@ -21,3 +21,12 @@ The plugin checks your key against NanoGPT before it hands the key to the provid
 ## Limits
 
 Only the full permission mode is offered. Conversation history is kept in memory and starts fresh after a daemon restart. Local files and images are sent as a text placeholder, not their contents.
+
+## Support the author
+
+The plugin is free and MIT licensed. If it saves you time, you can support its author with a donation. Send each asset only on the network named next to its address; a transfer on the wrong network cannot be recovered.
+
+- Bitcoin (BTC): `13BEg3VPxsiSfLhKNM1GnXEmy6kz23ybYz`
+- Ethereum (ETH, ERC-20): `0x94e35bfeee8f9d0338994acda2c9e8d7e3d9779d`
+- USDT on Tron (TRC-20): `TS9mfjWxhEtXt8omkyd3cUyvZmp1YBfJwW`
+- USDT on Ethereum (ERC-20): `0x94e35bfeee8f9d0338994acda2c9e8d7e3d9779d`
