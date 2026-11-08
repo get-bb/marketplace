@@ -1,0 +1,34 @@
+{
+  "id": "realtime-gateway",
+  "displayName": "Realtime Gateway",
+  "description": "Runs Voice Mode's realtime sessions through a Vercel AI Gateway key, so voice bills to one gateway account and the bb host never needs an OpenAI key. Voice Mode asks installed connection plugins for a session; this one mints a single-use client secret from the gateway and returns its realtime URL with the secret already attached to the WebSocket handshake. Pick the model (gpt-realtime-mini by default), set an optional team scope, and run bb realtime-gateway test to confirm the handshake before relying on it. Needs a Vercel AI Gateway key with usage billing; no OpenAI key on this host.",
+  "icon": {
+    "url": "./icons/realtime-gateway-74b57a17.svg"
+  },
+  "tags": [
+    "voice",
+    "realtime",
+    "vercel",
+    "ai-gateway",
+    "connection-provider",
+    "billing",
+    "openai"
+  ],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost",
+    "url": "https://github.com/steveafrost"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-plugin-realtime-gateway.git",
+      "range": "^0.1.1"
+    }
+  },
+  "screenshots": [
+    "./screenshots/realtime-gateway/settings.png",
+    "./screenshots/realtime-gateway/voice-mode.png"
+  ],
+  "overview": "./overview/realtime-gateway.md"
+}
