@@ -5,7 +5,7 @@ Run bb threads on [polza.ai](https://polza.ai) models. Sign in with your Polza a
 - **Sign in with Polza** (OAuth, PKCE). The key Polza issues is stored on the bb server as a plugin secret; nothing is typed by hand. Signing in again rotates the key; signing out forgets it.
 - **A curated model picker.** Any chat model of the Polza catalog (Claude, GPT, Gemini, DeepSeek, Qwen, Kimi and more) can be offered in bb's picker, in your order, with prices and context size in the description. The first model is the default.
 - **Balance at a glance.** The sidebar footer shows the organisation's available balance and what the key may still spend; the settings page adds the key's usage and a Top up button.
-- **Ruble spend per thread.** A card above the composer estimates the open thread's spend from token counts and catalog prices.
+- **Ruble spend per thread.** The context row above the composer shows the open thread's estimated spend and prompt-cache hit rate, with token counts on expand.
 - **Claude Code as the engine.** Threads run the Claude Code CLI against Polza's Anthropic-compatible API, so you keep Claude Code's tools, permission modes, plan mode, skills and checkpoint forks. The plugin installs or updates the CLI on each machine from Settings → Providers.
 
 ## Requirements
