@@ -1,43 +1,51 @@
-## What it does
+## What you get
 
-Cursor Sidebar fills BB's experimental thread-list slot and replaces the built-in list. Chats nest under the chat that spawned them, pinned chats gather in one block, and standalone chats file into folders. Native projects, pins and folders stay on the host; only the view settings live in the plugin's own SQLite database, so uninstalling it removes the settings and leaves your threads alone.
+Cursor Sidebar fills BB's thread-list slot with a port of Cursor's sidebar. Chats nest under the chat that spawned them, pinned chats gather in one block at the top, and a parent with working children shows their count as a small accent pill where its age would be.
 
 ## Grouping
 
-Pick one grouping at a time, never stacked.
+Pick one grouping at a time.
 
 - **Projects** nests each chat under its project.
 - **Updated** groups chats by last activity: Today, Yesterday, Last 7 days, Last 30 days, Older.
-- **Status** groups by the strongest status in the group, in a fixed order: Needs your input, Failed, Unread, Working, Idle.
+- **Status** groups by the strongest status: Needs your input, Failed, Unread, Working, Idle.
 - **Environment** groups by the machine the chat ran on, including chats with none.
-- **None** draws one flat list with no section headings. Pinned chats and child trees keep their own headings.
+- **None** draws one flat list. Pinned chats still come first and child chats still nest.
+
+The project switcher above the list narrows every grouping to one project, and opens BB's New project dialog.
+
+## Workers under a project lead
+
+With the Projects plugin installed, clicking a worker under a project lead opens it as a tab of the lead, so the lead's side panel stays in view. Ctrl or Cmd-click still opens a split. Other chats open as usual.
+
+## Navigation
+
+The plugin adds two sidebar navigation layouts, **Cursor** and **Compact**. BB uses the first layout a plugin adds unless you have picked one, so the sidebar switches to Cursor after install, and a note above the list says so until you dismiss it. Pick **Rail** or **Top list** under Settings → Appearance → Navigation to go back to BB's own layout.
+
+## View menu
+
+- Grouping, chat order, project order and group order.
+- How many chats each group previews: 5, 10, 20, 50 or All, with **Show more** for the next page. Working, selected and pinned chats always show.
+- What each row shows: updated time, environment, branch, machine, the pull request mark, provider icons and project icons.
+- Filters by status, age, environment and pull request state.
+- Expand All, Collapse All and Mark All as Read.
+
+## Rows
+
+A row can show its project icon, a status glyph and a metadata line. Hover a row for its pin and archive buttons. A chat running on a cloud machine shows a cloud mark beside its provider mark.
 
 ## Project icons
 
-Each project can wear a glyph, an emoji, a one or two letter monogram or an uploaded PNG image. Open the picker from a project heading's Actions menu, from a chat row's right-click menu, or from the project switcher while one project is picked. The dialog has a searchable glyph grid, an emoji grid, a monogram field, an 18-colour palette, a live preview and an image upload that keeps PNG transparency. Rows show the project icon outside Projects grouping, and the Show menu turns that off.
-
-The `bb cursor-sidebar icon` command sets, reads and clears a project icon from a shell. A chat can set its own project's icon; other chats can name the project with `--project`.
-
-## View controls
-
-The toolbar holds the project switcher on the left and the view menu on the right. The switcher reads All projects, one project's name, or a count, and offers every project plus New project. Picking one project narrows every grouping and drops that project's heading under Projects grouping.
-
-The view menu sets the grouping, chat order, project order and group order. It also sets how many inactive chats a section previews: 5, 10, 20, 50 or All, with Show more for the next page. The Show section toggles the updated time, environment, branch, machine, pull request mark and project icons on rows. Filters cover status, age and environment. Expand All, Collapse All and Mark All as Read act on the loaded list.
-
-A warning mark on the menu button means a view change has not reached the server. The notice inside the menu has a Retry button.
-
-## Row details
-
-A row can show its project icon, a status glyph and metadata. When a chat has child chats that are working, the age at the end of the row becomes a small accent pill with their count. The pill disappears when nothing below it is running.
-
-## Compact navigation
-
-The plugin also registers `cursor-sidebar/compact`, an optional navigation surface. It replaces the navigation rows with a header: back, forward and New thread on the left, and a menu of every navigation destination on the right. BB's own back and forward buttons are hidden while it is active, and the header drops its own buttons when the sidebar is too narrow. Choose Compact under Settings → Appearance.
+Open the picker from a project heading, the switcher or a chat's right-click menu. Search the icon grid, pick one of ten colours, or upload or paste a PNG. The icons also replace BB's folder next to the prompt box. Agents can set an icon from a shell with `bb cursor-sidebar icon`.
 
 ## Mobile
 
-Touch uses the same list with gestures instead of hover. Tap a row to open it and tap a project name to fold it. Swipe left to pin and right to archive; a swipe has to travel 72px. Hold until a row lifts to drag it, or let go without moving to open its actions menu. Hold a project heading and pick Move up or Move down when project order is Manual.
+Tap a row to open it and tap a project name to fold it. Swipe left to pin and right to archive. Hold a row until it lifts to drag it, or let go without moving to open its actions menu.
 
 ## Requirements
 
-BB 0.48.1 or newer, with plugin SDK 0.6.104 or newer. No account or external service is needed.
+BB 0.49 or newer, with plugin SDK 0.6.132 or newer. No account or external service. View settings live in the plugin's own database on the BB server; uninstalling the plugin removes them and leaves your threads alone.
+
+---
+
+Not affiliated with, endorsed by or sponsored by Anysphere, Inc. Cursor is a trademark of Anysphere, Inc.
