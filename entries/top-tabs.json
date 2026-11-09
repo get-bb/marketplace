@@ -1,0 +1,35 @@
+{
+  "id": "top-tabs",
+  "displayName": "Top Tabs",
+  "description": "Switch between the threads you are working on from a row of tabs across the top of the bb window. Every thread you open gets a tab with bb's status glyph, so a thread that is working, needs input, or has unread output shows without the sidebar. Close tabs with × or a middle-click, drag them to reorder, and cycle through them with Ctrl+Tab. Right-click a tab for bb's thread menu plus Close other tabs and Close tabs to the right. Tabs are stored per window on your machine, with no account or external service; requires bb 0.49 or later.",
+  "icon": {
+    "url": "./icons/top-tabs-f6092a5c.svg"
+  },
+  "tags": [
+    "tabs",
+    "tab-bar",
+    "browser-tabs",
+    "navigation",
+    "threads",
+    "switcher",
+    "keyboard-shortcuts",
+    "interface"
+  ],
+  "author": {
+    "name": "nikushiks",
+    "github": "nikushiks",
+    "url": "https://github.com/nikushiks"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/top-tabs/tab-strip.jpg",
+    "./screenshots/top-tabs/tab-menu.jpg"
+  ],
+  "overview": "./overview/top-tabs.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/nikushiks/bb-plugin-top-tabs.git",
+      "range": "^0.1.0"
+    }
+  }
+}
