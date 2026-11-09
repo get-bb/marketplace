@@ -1,24 +1,32 @@
 ## See work as it happens
 
 Open the global dashboard for active executions, Needs Attention, and recent
-completion. Open a thread's Agent Board action for automatic single-agent focus
-or a multi-agent Kanban view. Inspect the bounded execution timeline to see
-public operational updates, actual models, and tools as sources report them.
+completion. Open a thread's Agent Board action for single-agent focus or a
+multi-agent board. Inspect models, tools and public operational updates as
+sources report them. Load earlier BB timeline activity while keeping your place.
 
-See how recently an agent reported public activity. Quiet reporting keeps the
-source's task status intact. Review completion outcomes, results, failures and
-explicitly agent-reported checks, then open the original thread or timeline for
-details. Filter and group visible work by project, repository, provider or status.
-Needs Attention stays visible across filters. Connection, refresh and watcher
-health help you distinguish an observation problem from quiet execution.
+## Catch up and act
 
-What's New shows bundled version highlights. Dismiss an announcement once and
-reopen its notes from the dashboard whenever needed.
+Reply to a reported question, review an approval request, or inspect a failure
+in BB's native surface. Review completed work with objectives, observed files,
+reported result links and checks; a finished turn does not prove verification.
+Expand observed child agents and delegations when source data is available.
 
-## Requirements
+Retain filters, grouping and history-window choices in this browser, and save
+up to eight named views. A catch-up digest summarizes changed outcomes since
+your last visit. Restrained status accents and expandable results keep the
+board compact; running strips show activity rather than percentage complete.
 
-Requires BB 0.40 or newer; BB 0.46.0 is recommended. Ollama Fleet 0.6.0 or newer and Redteam's public observability RPC
-are optional integrations. Missing integrations leave native BB observation
-available. Mobile layouts and reduced-motion preferences are supported.
-Hidden reasoning is excluded. System/push notifications are unavailable in
-the current public SDK; Agent Board does not implement browser-push workarounds.
+What's New shows bundled highlights. An update card checks official GitHub
+release metadata without credentials and lets you review and confirm updates
+that BB considers eligible. Pinned or out-of-range sources remain advisory.
+
+## Requirements and limits
+
+Requires BB 0.40 or newer; a current BB supplies current history and update
+APIs. Ollama Fleet 0.6.0 or newer and Redteam's public observability RPC are
+optional separate integrations. Native BB observation works without them.
+Mobile layouts and reduced motion are supported. Hidden reasoning is excluded.
+History depends on source retention; Fleet and Redteam provide bounded
+snapshots. Saved views and catch-up state are browser-local. No push
+notifications or automatic installation are added.

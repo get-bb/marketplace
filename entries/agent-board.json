@@ -1,7 +1,7 @@
 {
   "id": "agent-board",
   "displayName": "Agent Board",
-  "description": "Follow live BB agent activity, freshness, completion outcomes and monitoring health. Filter and group visible work by project, repository, provider or status. Optional Ollama Fleet and Redteam add worker visibility. Requires BB 0.40+; BB 0.46.0 recommended.",
+  "description": "Follow live agents, respond to requests, and catch up on completed work. Browse retained BB timeline history, review reported results, and save dashboard views. Check official releases and confirm BB-eligible updates. Requires BB 0.40+; Ollama Fleet and Redteam are optional separate integrations.",
   "icon": "Columns",
   "tags": [
     "agents",
@@ -21,6 +21,8 @@
       "range": "^0.7.0"
     }
   },
-  "screenshots": ["./screenshots/agent-board/global.png"],
+  "screenshots": [
+    "./screenshots/agent-board/global.png"
+  ],
   "overview": "./overview/agent-board.md"
 }
