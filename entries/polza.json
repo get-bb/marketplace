@@ -7,6 +7,7 @@
   },
   "screenshots": [
     "./screenshots/polza/settings.png",
+    "./screenshots/polza/thread-spend.png",
     "./screenshots/polza/model-picker.png"
   ],
   "overview": "./overview/polza.md",
