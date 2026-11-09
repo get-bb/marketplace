@@ -1,0 +1,38 @@
+{
+  "id": "cortado",
+  "displayName": "Cortado",
+  "description": "Neutral graphite with warm orange and amber, in light and dark. Three palettes: one that follows bb's light or dark mode, and fixed dark and light versions. Recolors the app, the syntax colors in chat, diffs and file previews, and the terminal.",
+  "icon": {
+    "url": "./icons/cortado.svg"
+  },
+  "tags": [
+    "themes",
+    "appearance",
+    "colors",
+    "dark-theme",
+    "light-theme",
+    "graphite",
+    "orange"
+  ],
+  "author": {
+    "name": "Vedran Burojević",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-cortado.git",
+      "range": "^1.0.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/cortado/split.png",
+    "./screenshots/cortado/thread-dark.png",
+    "./screenshots/cortado/thread-light.png",
+    "./screenshots/cortado/diff-dark.png",
+    "./screenshots/cortado/palettes-dark.png",
+    "./screenshots/cortado/search-light.png"
+  ],
+  "overview": "./overview/cortado.md"
+}
