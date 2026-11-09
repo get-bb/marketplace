@@ -14,7 +14,7 @@ Set **Threads per page** from 1 to 100; the default is 5. Each project gets its 
 
 Use **Workspaces | Recent** above the sidebar to switch from the native tree to the latest 50 visible, non-archived conversations. Recent orders chats by saved user/assistant messages and edits, not by opening, reading or renaming them. Search titles and project names within those 50 chats without downloading histories. Native chat actions stay available, and switching modes preserves the open chat and draft.
 
-Work and unread status remain visible together: busy unread chats show the work indicator on the left and an unread badge beside the bold title. Refresh keeps rows and search in place; an error or lost connection hides data that cannot be verified.
+Work reported in BB's live metadata is reflected in the chat and its ancestors, including children outside the latest 50. Work and unread status remain visible together: busy unread chats show the work indicator on the left and an unread badge beside the bold title. Refresh keeps rows and search in place; an error or lost connection hides data that cannot be verified.
 
 ## Repository-local Source Control
 
