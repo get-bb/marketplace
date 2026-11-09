@@ -26,13 +26,17 @@ You choose the backends, and a box goes to the first one with room:
 
 ## Requirements
 
-The quickest start is a Linux machine that runs BB and Docker. The server image needs about 10 GB of disk free, and the host needs 8 GiB of memory, or 12 GiB of memory for a desktop. A desktop image needs about 18 GB of disk free. Docker Desktop on a Mac or Windows works too. On a Mac with Apple silicon the images are x86_64, so boxes run under emulation, slowly. The first Linux image usually builds in 5 to 12 minutes.
+BB Box starts on the machine that runs BB:
 
-Other backends need their own host or account, such as a Proxmox VE host, a Mac with Apple silicon for macOS and iOS, or a Hetzner Cloud, Namespace or boat.dev account. The cloud accounts bill you for what boxes use.
+- **Linux**: Docker. The server image needs about 10 GB of disk free and 8 GiB of memory, and builds in 5 to 12 minutes. A desktop needs about 18 GB of disk free and 12 GiB of memory.
+- **A Mac with Apple silicon**: microsandbox, which needs nothing installed and runs arm64 Linux boxes as microVMs. It needs about 80 GiB of free disk while it builds its first image. Tart adds macOS, iOS and Windows boxes.
+- **Windows**: Docker in WSL 2.
+
+Other backends need their own host or account, such as a Proxmox VE host, or a Hetzner Cloud, Namespace or boat.dev account. The cloud accounts bill you for what boxes use.
 
 BB Box assumes one trusted user. It is not a sandbox for code you do not trust.
 
 ## Learn more
 
-- [User guide](https://github.com/ahkohd/bb-box/blob/main/docs/guide/README.md)
-- [Setting up backends](https://github.com/ahkohd/bb-box/blob/main/setup/README.md)
+- [User guide](https://bbbox.dev/guide/)
+- [Setting up backends](https://bbbox.dev/setup/)
