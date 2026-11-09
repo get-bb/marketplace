@@ -1,0 +1,34 @@
+{
+  "id": "thread-names",
+  "displayName": "Thread Names",
+  "description": "Names each thread \"category: name\" in lowercase, like \"fix: login redirect loop\", so a long sidebar reads at a glance. Eight categories for coding work come built in, and the settings page takes up to 16 of your own plus sample names in the style you want. Once you pick it as the thread-title service in bb settings, a thread whose title is not yet in that form gets a new one after a finished turn, at most twice. A thread you rename by hand after it got such a name keeps your title. Titles come from bb cloud, so the plugin needs a signed-in bb account with bb cloud on, and each title uses its daily AI budget; it needs no API key.",
+  "icon": "Edit",
+  "tags": [
+    "thread-titles",
+    "titles",
+    "naming",
+    "rename",
+    "sidebar",
+    "categories",
+    "prefixes",
+    "lowercase",
+    "bb-cloud"
+  ],
+  "author": {
+    "name": "nikushiks",
+    "github": "nikushiks",
+    "url": "https://github.com/nikushiks"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/nikushiks/bb-plugin-thread-names.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/thread-names.md",
+  "screenshots": [
+    "./screenshots/thread-names/sidebar.png",
+    "./screenshots/thread-names/settings.png"
+  ]
+}
