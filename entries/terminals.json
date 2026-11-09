@@ -1,0 +1,27 @@
+{
+  "id": "terminals",
+  "displayName": "Terminals",
+  "description": "Open shells on any machine connected to bb from one sidebar page, and find them still running when you come back. Each tab is a terminal in that machine's home folder, with no project, thread or checkout needed; with several machines connected, the + button lists them so you pick one. Tabs reattach to their shells after a reload, the desktop app and bb in a browser show and type into the same shells, and a machine that goes offline picks up where it was when it reconnects. Select text in a terminal to put it in an open or new thread's message box as terminal output, for you to send yourself. Requires bb 0.48 or later and at least one machine connected to bb; a terminal runs that machine's own shell as the user bb runs as there.",
+  "icon": "Terminal",
+  "tags": ["shell", "tabs", "remote-shell", "multi-machine", "xterm", "console", "pty"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "command-line",
+  "secondaryCategories": ["utilities"],
+  "screenshots": [
+    "./screenshots/terminals/terminals-log.png",
+    "./screenshots/terminals/terminals-new-tab-menu.png"
+  ],
+  "overview": "./overview/terminals.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "terminals",
+      "tagPrefix": "terminals/",
+      "range": ">=0.4.0"
+    }
+  }
+}
