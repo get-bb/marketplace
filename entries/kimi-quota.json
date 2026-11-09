@@ -1,0 +1,32 @@
+{
+  "id": "kimi-quota",
+  "displayName": "Kimi Quota",
+  "description": "See Kimi Code quota beside Codex and Claude limits in one BB usage card. Shows the 5-hour window, monthly coding and total limits, with reset times; also provides the bb kimi-quota command. Uses Kimi's API and requires Kimi Code CLI installed and signed in on the BB server, plus a Kimi membership that includes Kimi Code.",
+  "icon": {
+    "url": "./icons/kimi-quota-2f8fb1f1.svg"
+  },
+  "screenshots": [
+    "./screenshots/kimi-quota/combined-usage.jpg"
+  ],
+  "overview": "./overview/kimi-quota.md",
+  "tags": [
+    "kimi",
+    "moonshot",
+    "quota",
+    "rate-limits",
+    "subscriptions",
+    "cli"
+  ],
+  "author": {
+    "name": "Anatolt",
+    "github": "Anatolt",
+    "url": "https://github.com/Anatolt"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/Anatolt/bb-plugin-kimi-quota.git",
+      "range": "^0.1.1"
+    }
+  }
+}
