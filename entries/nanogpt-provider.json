@@ -1,0 +1,27 @@
+{
+  "id": "nanogpt-provider",
+  "displayName": "NanoGPT",
+  "description": "Run bb threads on NanoGPT's models, unlocked by your own API key. Paste the key into a gear in the composer; NanoGPT checks it before bb stores it, and a rejected key unlocks no models. Answers stream in with a separate reasoning channel, and the agent can call bb's tools in your project. Needs a NanoGPT account and API key, and NanoGPT bills your usage.",
+  "icon": { "url": "./icons/nanogpt-provider-b7fbdf7d.svg" },
+  "tags": [
+    "nanogpt",
+    "models",
+    "openai-compatible",
+    "api-key",
+    "streaming",
+    "tool-calling"
+  ],
+  "author": {
+    "name": "Oleksander Trybushnyi",
+    "github": "AlllxTry",
+    "url": "https://github.com/AlllxTry"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/AlllxTry/bb-plugin-nanoGPT-provider.git",
+      "range": "^0.1.7"
+    }
+  },
+  "overview": "./overview/nanogpt-provider.md"
+}
