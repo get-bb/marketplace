@@ -20,7 +20,7 @@
   "source": {
     "git": {
       "url": "https://github.com/AlllxTry/bb-plugin-nanoGPT-provider.git",
-      "range": "^0.1.4"
+      "range": "^0.1.5"
     }
   },
   "overview": "./overview/nanogpt-provider.md"
