@@ -1,0 +1,34 @@
+{
+  "id": "usage-forecast",
+  "displayName": "Usage Forecast",
+  "description": "Forecast whether your Claude Code and Codex limits last until reset, and see each thread's context fill above the composer. A band shows every limit window with a pace tick, the context breakdown and a Compact button, and adds a learned forecast once windows have closed. Optional auto-compact, off by default, compacts an idle thread above a threshold you set; each compact runs a turn on the thread's provider and counts against its limits. Limits appear only for providers that report them to bb, today Claude Code and Codex. The server polls bb every 2 minutes and calls no provider API.",
+  "icon": {
+    "url": "./icons/usage-forecast-372ec0fa.svg"
+  },
+  "screenshots": [
+    "./screenshots/usage-forecast/band.png",
+    "./screenshots/usage-forecast/expanded.png"
+  ],
+  "overview": "./overview/usage-forecast.md",
+  "tags": [
+    "limits",
+    "usage",
+    "forecast",
+    "context",
+    "compact",
+    "claude-code",
+    "codex"
+  ],
+  "author": {
+    "name": "Alex Ponomar",
+    "github": "ponomr",
+    "url": "https://github.com/ponomr"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/ponomr/bb-plugin-usage-forecast.git",
+      "range": "^0.3.0"
+    }
+  }
+}
