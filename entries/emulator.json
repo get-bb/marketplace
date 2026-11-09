@@ -1,0 +1,41 @@
+{
+  "id": "emulator",
+  "displayName": "Emulator",
+  "description": "Keep a live Android emulator in bb’s left sidebar and tap, scroll and type in it while agents work. Start and stop the emulator on any bb machine, and see whether adb reports it online, booting or offline. Boot and shut down iOS simulators on a Mac, with a screenshot mirror that refreshes about once a second. A configuration page checks each machine for an Android SDK, AVDs, Xcode and simulators. Needs the Android SDK with an AVD, a separate ws-scrcpy install for the live view, and Xcode for iOS.",
+  "icon": {
+    "url": "./icons/emulator-58a7284b.svg"
+  },
+  "screenshots": [
+    "./screenshots/emulator/android.jpg",
+    "./screenshots/emulator/ios.jpg",
+    "./screenshots/emulator/config.jpg"
+  ],
+  "overview": "./overview/emulator.md",
+  "tags": [
+    "android",
+    "ios",
+    "emulator",
+    "simulator",
+    "adb",
+    "scrcpy",
+    "xcode",
+    "avd",
+    "mobile",
+    "testing"
+  ],
+  "author": {
+    "name": "abdoutelb",
+    "github": "abdoutelb",
+    "url": "https://github.com/abdoutelb"
+  },
+  "category": "utilities",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/abdoutelb/bb-plugin-emulator.git",
+      "range": "^0.1.0"
+    }
+  }
+}
