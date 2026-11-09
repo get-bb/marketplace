@@ -1,0 +1,35 @@
+{
+  "id": "machine-load",
+  "displayName": "Machine Load",
+  "description": "Compare CPU, memory, GPU, network and disk load of all your bb machines on one shared timeline, with up to 7 days of history. Each machine gets a card with load average, swap, disk usage, disk IO, CPU temperature and every GPU, including Intel integrated graphics and Apple silicon, read without root. Agents check load before a heavy job with bb machine-load --json. A sidebar badge appears when any machine passes 80% CPU or RAM. Apple silicon temperature and power need macmon, installed separately.",
+  "icon": { "url": "./icons/machine-load-7e8254e6.svg" },
+  "screenshots": [
+    "./screenshots/machine-load/overview.png",
+    "./screenshots/machine-load/machines.png"
+  ],
+  "overview": "./overview/machine-load.md",
+  "tags": [
+    "system-monitor",
+    "cpu",
+    "gpu",
+    "memory",
+    "network",
+    "disk-io",
+    "multi-machine",
+    "history",
+    "apple-silicon",
+    "intel-gpu"
+  ],
+  "author": {
+    "name": "artgas1",
+    "github": "artgas1",
+    "url": "https://github.com/artgas1"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/artgas1/bb-plugin-machine-load.git",
+      "range": "^0.1.0"
+    }
+  }
+}
