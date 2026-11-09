@@ -1,0 +1,44 @@
+{
+  "id": "bb-box",
+  "displayName": "BB Box",
+  "description": "Give each thread its own Linux, Windows or macOS computer, or an iPhone or Android device, shared with its agent. You and the agent use the same desktop or terminal in BB's panel, and the agent waits while you have control. On the backends that support it, a snapshot saves a box before a risky change, and a restore with an undo or a fork brings it back. Boxes run on Docker, microsandbox, Proxmox, Tart on your Macs, or your own machines over SSH; Hetzner Cloud, Namespace and boat.dev need an account and bill you for what boxes use. Not a sandbox: BB Box assumes one trusted user.",
+  "icon": {
+    "url": "./icons/bb-box-daf167ac.svg"
+  },
+  "screenshots": [
+    "./screenshots/bb-box/overview.png",
+    "./screenshots/bb-box/new-box.png",
+    "./screenshots/bb-box/android.png",
+    "./screenshots/bb-box/snapshots.png",
+    "./screenshots/bb-box/monitor.png"
+  ],
+  "overview": "./overview/bb-box.md",
+  "tags": [
+    "virtual-machines",
+    "desktop",
+    "docker",
+    "proxmox",
+    "ios-simulator",
+    "android-emulator",
+    "snapshots",
+    "computer-use",
+    "macos",
+    "windows"
+  ],
+  "author": {
+    "name": "Victor Aremu",
+    "github": "ahkohd",
+    "url": "https://github.com/ahkohd"
+  },
+  "category": "cloud-and-remote",
+  "secondaryCategories": [
+    "utilities",
+    "code-and-reviews"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/ahkohd/bb-box.git",
+      "range": ">=0.1.0 <1.0.0"
+    }
+  }
+}
