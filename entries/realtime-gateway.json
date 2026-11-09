@@ -23,7 +23,7 @@
   "source": {
     "git": {
       "url": "https://github.com/steveafrost/bb-plugin-realtime-gateway.git",
-      "range": "^0.1.1"
+      "range": ">=0.1.1"
     }
   },
   "screenshots": [
