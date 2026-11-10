@@ -24,7 +24,7 @@
   "source": {
     "git": {
       "url": "https://github.com/steveafrost/bb-plugin-subscription-pace.git",
-      "range": "^0.2.4"
+      "range": "^0.2.5"
     }
   },
   "category": "token-usage-and-limits",
