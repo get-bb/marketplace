@@ -1,0 +1,36 @@
+{
+  "id": "subscription-pace",
+  "displayName": "Subscription Pace",
+  "description": "See whether every AI subscription you pay for will last until it renews. Tracks Vercel Token Pass and OpenCode Go live, and takes any other plan in the three free slots, then draws them all on one percent-of-allowance chart with a forecast to each renewal. The combined headline is weighted by each plan's allowance, so a small plan running out does not read the same as a large one. A provider that cannot be read shows as unreadable rather than as zero, and nothing is guessed: allowances start from a suggestion you confirm.",
+  "icon": {
+    "url": "./icons/subscription-pace-122b3f87.svg"
+  },
+  "tags": [
+    "subscriptions",
+    "usage",
+    "allowance",
+    "forecast",
+    "budget",
+    "vercel",
+    "opencode",
+    "codex",
+    "billing"
+  ],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost",
+    "url": "https://github.com/steveafrost"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-plugin-subscription-pace.git",
+      "range": "^0.1.0"
+    }
+  },
+  "category": "token-usage-and-limits",
+  "screenshots": [
+    "./screenshots/subscription-pace/panel.png",
+    "./screenshots/subscription-pace/settings.png"
+  ],
+  "overview": "./overview/subscription-pace.md"
+}
