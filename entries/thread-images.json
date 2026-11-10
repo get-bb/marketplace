@@ -29,7 +29,8 @@
   "source": {
     "git": {
       "url": "https://github.com/kartollikaa/bb-plugin-thread-images.git",
-      "range": "^0.1.2"
+      "range": "^0.1.3"
     }
   }
 }
+
