@@ -1,0 +1,41 @@
+{
+  "id": "polza",
+  "displayName": "Polza",
+  "description": "Run bb threads on polza.ai models and pay in rubles from one Polza balance. Sign in with your Polza account; the plugin stores the issued key on the bb server. Choose which catalog models the picker offers, in your order, with prices and context size shown. The sidebar shows the available balance and the key's remaining spend limit, and each thread shows an estimated spend and cache hit rate above the composer. Polza also works as bb's AI service for thread titles and commit messages on a small model you choose. Threads run the Claude Code CLI against Polza, so Claude Code's tools, permission modes, plan mode and skills keep working; the plugin installs the CLI when it is missing. Needs a Polza account with balance.",
+  "icon": {
+    "url": "./icons/polza-3bfc372c.svg"
+  },
+  "screenshots": [
+    "./screenshots/polza/settings.png",
+    "./screenshots/polza/thread-spend.png",
+    "./screenshots/polza/model-picker.png"
+  ],
+  "overview": "./overview/polza.md",
+  "tags": [
+    "polza",
+    "polza-ai",
+    "claude-code",
+    "models",
+    "model-picker",
+    "balance",
+    "rubles",
+    "oauth",
+    "api-gateway",
+    "russia"
+  ],
+  "author": {
+    "name": "Polza.AI",
+    "github": "dddoker",
+    "url": "https://polza.ai"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "token-usage-and-limits"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/polza-ai/bb-plugin-polza.git",
+      "range": "^0.1.0"
+    }
+  }
+}
