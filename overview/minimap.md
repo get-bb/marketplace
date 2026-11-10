@@ -4,12 +4,12 @@ Minimap is a scrollbar you can read. It puts a strip along the right edge of eac
 
 - Drag the slider to scrub through the thread, click anywhere on the strip to jump there, or scroll the wheel over it.
 - Your messages are light grey and right-aligned, as wide as the bubble. Agent replies are grey, work is amber, errors are red and system notes are faint, so a long thread shows where you asked something, where the agent worked for a while and where something failed.
-- Hover a rectangle to see the start of its message in a note beside the strip.
+- Hover a rectangle to see the start of its message in a note beside the strip, which slides from row to row and points at the rectangle, outlined in its own colour.
 - The strip is drawn to scale, so its slider sits where the scrollbar's thumb would. On a very long thread your messages and errors are painted on top and stay at least two device pixels tall.
 
 ## The scrollbar
 
-BB's scrollbar fades out and is thin to grab, so Minimap switches it off while the strip is there. Turn off **Replace the scrollbar** to keep both, and **Always show the scrollbar** stops BB fading it. BB's thread-index button moves to the left of the strip, or you can remove it. A thread with nothing to scroll gets no strip.
+BB's scrollbar fades out and is thin to grab, so Minimap switches it off while the strip is there. Turn off **Replace the scrollbar** to keep both, and **Always show the scrollbar** stops BB fading it. BB's thread-index button is removed by default; turn **Hide the thread-index button** off and it sits just left of the strip. A thread with nothing to scroll gets no strip.
 
 ## Settings
 
@@ -24,7 +24,7 @@ Sliders and colours preview on the strip as you drag. **Reset all** asks twice b
 
 ## Narrow windows
 
-The full strip needs about 920px of thread width. On a narrower window it drops to a narrow width (14px by default) and may overlap the edge of the message column; turn off **Keep on narrow windows** to get BB's scrollbar back there instead.
+The full strip needs about 920px of thread width. On a narrower window it drops to a narrow width (12px by default) and may overlap the edge of the message column; turn off **Keep on narrow windows** to get BB's scrollbar back there instead.
 
 ## Requirements and costs
 
