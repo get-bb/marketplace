@@ -60,8 +60,9 @@ the provider they belong to.
 1. Add your Vercel AI Gateway key and OpenCode key in the plugin settings.
 2. Check the allowance and renewal day on each slot. They start from a guess based on the
    subscription you picked, so confirm them. OpenCode Go has no default at all: its percentage is
-   of a per-model limit the endpoint does not name, so enter your model's monthly limit if you
-   want dollars and leave it blank to see only the share.
+   of a per-model limit the endpoint does not name. Enter your model's monthly limit and the row
+   estimates the spend from the provider's percentage, marked `≈` because the provider never sent
+   a dollar figure; leave it blank to see only the share.
 3. For the Codex slot, enable BB's Codex provider and sign in — `bb plugin enable provider-codex`.
    Without it that slot reads as unreadable rather than 0%.
 
