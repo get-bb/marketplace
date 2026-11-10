@@ -1,0 +1,35 @@
+{
+  "id": "thread-kanban",
+  "displayName": "Канбан",
+  "description": "Plan tasks and follow agent work on a project board. Prepare task titles and plans with a Codex assistant, connect worker chats, and review changes before merging. Configure panel placement and new-chat defaults in the same plugin. Requires BB 0.49+, your own installed and signed-in Codex for the assistant, and Git for repository workflows; the UI is in Russian.",
+  "icon": {
+    "url": "./icons/thread-kanban-c061b1e3.svg"
+  },
+  "tags": [
+    "kanban",
+    "tasks",
+    "codex",
+    "planning",
+    "worktrees",
+    "code-review"
+  ],
+  "author": {
+    "name": "Andrey Khudoley",
+    "github": "andrey-khudoley",
+    "url": "https://github.com/andrey-khudoley"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/thread-kanban/board.jpg",
+    "./screenshots/thread-kanban/assistant.jpg",
+    "./screenshots/thread-kanban/settings.jpg",
+    "./screenshots/thread-kanban/chat-defaults.jpg"
+  ],
+  "overview": "./overview/thread-kanban.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/andrey-khudoley/bb-plugin-thread-kanban.git",
+      "range": "^0.2.1"
+    }
+  }
+}
