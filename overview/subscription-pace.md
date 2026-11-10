@@ -25,14 +25,16 @@ usedPercent = spend / that subscription's own allowance × 100
 That is the chart's axis, fixed at 0 to 110% so the allowance rule stays visible whether a line
 sits at 6% or at 100%. Dollars appear only where a provider publishes them — on the row.
 
-**There is no combined percentage.** It was removed rather than fixed, because the arithmetic was
-sound but its inputs were not: the figure was weighted by each slot's allowance, and OpenCode's
-allowance is a *per-model* monthly limit ($15–$100 depending on model) that the endpoint never
-names. The same 27% is $27 on a $100 model and $4.05 on a $15 one, so any weight is a guess.
+**There is no combined percentage.** It was removed rather than fixed: the arithmetic was sound
+but its inputs were not. The figure was weighted by each slot's allowance, and OpenCode's is a
+*per-model* monthly limit ($15–$100 by model) the endpoint never names — the same 27% is $27 on a $100
+model and $4.05 on a $15 one, so any weight is a guess.
 
-In its place is a **count of subscriptions in trouble** — over the limit, or on pace to be before
-the next reset. The second half is what a combined average could never say: 60% used is fine
-until you know it took three days.
+The header carries a **count of subscriptions in trouble** instead — over the limit, or on pace to
+be before the next reset. The second half is what a combined average could never say: 60% used is
+fine until you know it took three days. Nor is there a "closest to its limit": a plan at 95% on
+day 30 is not worse than one at 60% on day 3, so ranking by percent would mislead. Each row
+carries its own verdict.
 
 ## Where the numbers come from
 
