@@ -1,14 +1,14 @@
 {
   "id": "multi-repo-git",
   "displayName": "Atrium — MonoRepo Projects",
-  "description": "Keep related projects and recent conversations within reach, without replacing BB's native workspace tree. Group subprojects into workspaces and page each project's chat families (1–100, default 5). Switch to the latest 50 conversations, search titles and projects, and see work and unread status together. Includes repository-local Source Control; requires BB 0.48.1+, SDK 0.6.104+, Node 24.20.0+ and the built-in thread-list.",
+  "description": "Keep related projects and conversations within reach without replacing BB's native workspace tree. Group subprojects into workspaces and page each project's chat families (1–100, default 5). Recent loads chats 50 at a time as you scroll and searches titles and project names across all visible, non-archived chats with saved messages. Work and unread status remain visible together, including activity in child chats. Includes repository-local Source Control; requires BB 0.48.1+, SDK 0.6.104+, Node 24.20.0+ and the built-in thread-list, with no external service or paid account.",
   "icon": "FolderGit",
   "tags": [
     "workspaces",
     "subprojects",
     "sidebar",
     "recent-chats",
-    "repositories",
+    "infinite-scroll",
     "thread-limits",
     "search",
     "source-control",
@@ -27,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/nicolay-i/bb-plugin-multi-repo-git.git",
-      "range": "^0.1.3"
+      "range": "^0.1.4"
     }
   },
   "screenshots": [
