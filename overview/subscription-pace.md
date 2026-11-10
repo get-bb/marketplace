@@ -1,7 +1,7 @@
 # Subscription Pace
 
 Track several AI subscription allowances in one panel: how much of each you have used, whether
-it will last until the reset, and the combined picture across all of them.
+it will last until the reset, and which of them needs attention.
 
 ## What it shows
 
@@ -23,13 +23,16 @@ usedPercent = spend / that subscription's own allowance × 100
 ```
 
 That is the chart's axis, fixed at 0 to 110% so the allowance rule stays visible whether a line
-sits at 6% or at 100%. Dollars still appear where a provider publishes them: on the row, and in
-the headline subtotal when every readable slot reports dollars.
+sits at 6% or at 100%. Dollars appear only where a provider publishes them — on the row.
 
-**Percentages are not summed.** The headline is the share of total allowance used, weighted by
-each slot's allowance — a $10 plan at 100% beside a $200 plan at 0% is 4.8% consumed, not 50%. A
-plain mean would let the smallest plan dominate, and a sum of dollars would silently drop
-OpenCode, which reports no money at all.
+**There is no combined percentage.** It was removed rather than fixed, because the arithmetic was
+sound but its inputs were not: the figure was weighted by each slot's allowance, and OpenCode's
+allowance is a *per-model* monthly limit ($15–$100 depending on model) that the endpoint never
+names. The same 27% is $27 on a $100 model and $4.05 on a $15 one, so any weight is a guess.
+
+In its place is a **count of subscriptions in trouble** — over the limit, or on pace to be before
+the next reset. The second half is what a combined average could never say: 60% used is fine
+until you know it took three days.
 
 ## Where the numbers come from
 
@@ -56,7 +59,9 @@ the provider they belong to.
 
 1. Add your Vercel AI Gateway key and OpenCode key in the plugin settings.
 2. Check the allowance and renewal day on each slot. They start from a guess based on the
-   subscription you picked, so confirm them.
+   subscription you picked, so confirm them. OpenCode Go has no default at all: its percentage is
+   of a per-model limit the endpoint does not name, so enter your model's monthly limit if you
+   want dollars and leave it blank to see only the share.
 3. For the Codex slot, enable BB's Codex provider and sign in — `bb plugin enable provider-codex`.
    Without it that slot reads as unreadable rather than 0%.
 
