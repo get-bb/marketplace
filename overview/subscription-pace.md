@@ -1,17 +1,17 @@
 # Subscription Pace
 
 Track several AI subscription allowances in one panel: how much of each you have used, whether
-it will last until the reset, and which of them needs attention.
+it will last until the reset, and which needs attention.
 
 ## What it shows
 
-A single chart with every subscription as its own line, plus a filter to look at one, two, or
-three at a time. Each row names the number that matters — the percentage used, the day the
-current rate runs the allowance out, and when it resets.
+A single chart with every subscription as its own line, plus a filter to look at one, two or
+three at a time. Each row names the percentage used, the day the current rate runs the allowance
+out, and when it resets.
 
-**Vercel Token Pass** and **OpenCode Go** occupy slots 1 and 2 and are read live. Slots 3 to 5
-take any kind from the catalogue: Claude Pro / Max, ChatGPT / Codex, GitHub Copilot, Cursor,
-Gemini, the Anthropic and OpenAI APIs, or a figure you type in yourself.
+**Vercel Token Pass** and **OpenCode Go** occupy slots 1 and 2, read live. Slots 3 to 5 take any
+kind from the catalogue: Claude, ChatGPT / Codex, Copilot, Cursor, Gemini, the Anthropic and
+OpenAI APIs, or a figure you type in.
 
 ## Why percent of allowance
 
@@ -23,18 +23,20 @@ usedPercent = spend / that subscription's own allowance × 100
 ```
 
 That is the chart's axis, fixed at 0 to 110% so the allowance rule stays visible whether a line
-sits at 6% or at 100%. Dollars appear only where a provider publishes them — on the row.
+sits at 6% or at 100%. Dollars appear on the row in one of two forms: measured, when the provider
+publishes money, or marked `≈` with the percentage it came from, when you entered the limit. A
+plan on the plugin's own suggested limit shows none — it says "no dollar limit set", because a
+figure the plugin chose is not one it may multiply out and call a spend.
 
 **There is no combined percentage.** It was removed rather than fixed: the arithmetic was sound
-but its inputs were not. The figure was weighted by each slot's allowance, and OpenCode's is a
-*per-model* monthly limit ($15–$100 by model) the endpoint never names — the same 27% is $27 on a $100
-model and $4.05 on a $15 one, so any weight is a guess.
+but its inputs were not. It was weighted by each slot's allowance, and OpenCode's is a *per-model*
+monthly limit ($15–$100) the endpoint never names — the same 27% is $27 on a $100 model and $4.05
+on a $15 one, so any weight is a guess.
 
 The header carries a **count of subscriptions in trouble** instead — over the limit, or on pace to
-be before the next reset. The second half is what a combined average could never say: 60% used is
-fine until you know it took three days. Nor is there a "closest to its limit": a plan at 95% on
-day 30 is not worse than one at 60% on day 3, so ranking by percent would mislead. Each row
-carries its own verdict.
+be before the next reset. That second clause is what an average never could say: 60% used is fine
+until you know it took three days. Nor is there a "closest to its limit", since a plan at 95% on
+day 30 is not worse than one at 60% on day 3. Each row carries its own verdict.
 
 ## Where the numbers come from
 
@@ -52,19 +54,17 @@ the provider they belong to.
 - **It does not guess.** A provider that cannot be read shows as unreadable, never as zero — a
   subscription with an unknown balance is not a subscription with an empty one.
 - **It does not invent history.** OpenCode publishes no series, so the plugin records one sample
-  a day and says so. Codex publishes only its current quota, so that row is a marker rather than
-  a curve.
+  a day and says so. Codex publishes only its current quota, so that row is a marker, not a curve.
 - **It does not project a figure that has already run out.** When the allowance is spent before
-  the reset, the row names the last day it was spent instead of forecasting a future date.
+  the reset, the row names the last day it was spent rather than forecasting a future one.
 
 ## Setup
 
 1. Add your Vercel AI Gateway key and OpenCode key in the plugin settings.
-2. Check the allowance and renewal day on each slot. They start from a guess based on the
-   subscription you picked, so confirm them. OpenCode Go has no default at all: its percentage is
-   of a per-model limit the endpoint does not name. Enter your model's monthly limit and the row
-   estimates the spend from the provider's percentage, marked `≈` because the provider never sent
-   a dollar figure; leave it blank to see only the share.
+2. Check the allowance and renewal day on each slot — they start from a guess based on the
+   subscription you picked. OpenCode Go has no default: its percentage is of a per-model limit the
+   endpoint does not name. Enter your model's limit and the row estimates the spend, marked `≈`;
+   leave it blank to see only the share.
 3. For the Codex slot, enable BB's Codex provider and sign in — `bb plugin enable provider-codex`.
    Without it that slot reads as unreadable rather than 0%.
 
