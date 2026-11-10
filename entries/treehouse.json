@@ -1,0 +1,39 @@
+{
+  "id": "treehouse",
+  "displayName": "Treehouse",
+  "description": "See and commit every repository your agents touched, worktrees included, from a tab beside the thread. Each repository gets its own staged and unstaged lists, per-hunk staging, and a commit box where Claude can write the message in your repo's style. Compare any branch with main, then open a pull request on GitHub, GitLab or Bitbucket. A file tree with git badges and a branch graph share the same tab and refresh from bb's file watcher. Needs git on the thread's machine; the commit-message button also needs an Anthropic API key, an ant login or the claude CLI.",
+  "icon": { "url": "./icons/treehouse-7965d9d0.svg" },
+  "screenshots": [
+    "./screenshots/treehouse/diff.png",
+    "./screenshots/treehouse/files.png",
+    "./screenshots/treehouse/graph.png",
+    "./screenshots/treehouse/commit.png",
+    "./screenshots/treehouse/hunks.png"
+  ],
+  "overview": "./overview/treehouse.md",
+  "tags": [
+    "git",
+    "worktrees",
+    "file-tree",
+    "source-control",
+    "commit-message",
+    "pull-requests",
+    "branch-compare",
+    "commit-history",
+    "monorepo",
+    "staging"
+  ],
+  "author": {
+    "name": "Redha Juanda",
+    "github": "redhajuanda",
+    "url": "https://github.com/redhajuanda"
+  },
+  "category": "code-and-reviews",
+  "secondaryCategories": ["file-viewers-and-editors"],
+  "source": {
+    "git": {
+      "url": "https://github.com/redhajuanda/bb-treehouse.git",
+      "range": "^0.2.0"
+    }
+  }
+}
