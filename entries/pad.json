@@ -1,0 +1,32 @@
+{
+  "id": "pad",
+  "displayName": "Pad",
+  "description": "Keep notes beside your work in a local Markdown outline, with keyboard editing and optional agent reviews. Capture notes from the panel, the `bb pad add` command, or the `pad_add` agent tool. Notes stay on your bb server with local Git history; optional reviews send pending notes to your chosen agent provider and use its normal quota or billing. Requires bb 0.49.0 or later and Git.",
+  "icon": {
+    "url": "./icons/pad-33dd7bf3.svg"
+  },
+  "tags": [
+    "notes",
+    "markdown",
+    "outline",
+    "notepad",
+    "daily-review",
+    "local-files"
+  ],
+  "author": {
+    "name": "itsbariscan",
+    "github": "itsbariscan",
+    "url": "https://github.com/itsbariscan"
+  },
+  "category": "tasks-and-workflows",
+  "screenshots": [
+    "./screenshots/pad/outline.jpg"
+  ],
+  "overview": "./overview/pad.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/itsbariscan/bb-pad.git",
+      "range": "^0.2.0"
+    }
+  }
+}
