@@ -1,7 +1,7 @@
 {
   "id": "ui-tweaks",
   "displayName": "UI Tweaks",
-  "description": "Tune BB's icons, spinner, prompt box and app menus to the way you work. Switch interface icons between BB Default, Lucide, Iconoir and Tabler Outline, and give the spinner its own style or let it follow the pack. Move the new-thread prompt to the top, center or bottom, set its starting height, and hide workspace apps from the Open With menu. Clearer hierarchy makes thread titles bolder and chat text slightly larger, and it is on by default. Changes apply live, one button resets them, and no external service or account is needed.",
+  "description": "Tune BB's type, icons, prompt box, menus and shortcuts with switches that BB itself does not offer. Clearer hierarchy, on by default, makes thread titles bolder and chat text slightly larger. Switch interface icons between BB Default, Lucide, Iconoir and Tabler Outline, and give the spinner its own style. Move the new-thread prompt to the top, center or bottom, hide Steer labels, turn on richer File Editor highlighting, and hide apps from the Open With menu. Alt+1 to Alt+9 switch right-panel tabs, and settings are saved on the BB server so every device shares them. Needs BB 0.49 or newer; no account or external service.",
   "icon": "SlidersHorizontal",
   "tags": [
     "interface",
@@ -11,7 +11,9 @@
     "spinner",
     "prompt-box",
     "typography",
-    "workspace-apps"
+    "workspace-apps",
+    "keyboard-shortcuts",
+    "syntax-highlighting"
   ],
   "author": {
     "name": "WYEZ",
@@ -20,14 +22,16 @@
   },
   "category": "themes-and-appearance",
   "screenshots": [
-    "./screenshots/ui-tweaks/ui-tweaks-settings.png",
-    "./screenshots/ui-tweaks/ui-tweaks-open-with.png"
+    "./screenshots/ui-tweaks/settings.png",
+    "./screenshots/ui-tweaks/icon-packs.png"
   ],
   "overview": "./overview/ui-tweaks.md",
   "source": {
     "git": {
-      "url": "https://github.com/wy3z/bb-plugin-ui-tweaks.git",
-      "range": "^0.30.0"
+      "url": "https://github.com/wy3z/bb-cursor-suite.git",
+      "subdir": "plugins/ui-tweaks",
+      "range": "^0.30.1",
+      "tagPrefix": "ui-tweaks/"
     }
   }
 }

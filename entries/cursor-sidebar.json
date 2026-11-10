@@ -1,7 +1,7 @@
 {
   "id": "cursor-sidebar",
   "displayName": "Cursor Sidebar",
-  "description": "Replace BB's thread list with a project sidebar that nests spawned chats and groups the rest by status, date or machine. Group by Projects, Status, Environment or Updated, or draw one flat list, and narrow to one project from the toolbar switcher. Pin chats, file them into folders, and give each project a glyph, emoji, monogram or uploaded image. Filter by status, age and environment, limit each section to 5, 10, 20 or 50 with Show more, and toggle each row's metadata. A second surface replaces the navigation rows with a compact header. No account or external service is needed.",
+  "description": "See at a glance which agents are working, which need an answer and which are done, with spawned chats nested under their parent. Group chats by project, last update, status or environment, or draw one flat list, and narrow every grouping to one project from the switcher. With the Projects plugin, a worker opens as a tab of its project lead, so the lead's side panel stays in view. After install the sidebar switches to the Cursor navigation layout, and Compact is one setting away. Give each project a glyph in one of ten colours or an uploaded PNG, filter by status, age, environment or pull request, and spot chats on cloud machines by their cloud mark. Needs BB 0.49 or newer; no account or external service.",
   "icon": "PanelLeft",
   "tags": [
     "sidebar",
@@ -22,15 +22,17 @@
   "category": "thread-management",
   "source": {
     "git": {
-      "url": "https://github.com/wy3z/bb-plugin-cursor-sidebar.git",
-      "range": "^0.3.2"
+      "url": "https://github.com/wy3z/bb-cursor-suite.git",
+      "subdir": "plugins/cursor-sidebar",
+      "range": "^0.3.4",
+      "tagPrefix": "cursor-sidebar/"
     }
   },
   "screenshots": [
-    "./screenshots/cursor-sidebar/grouping-projects.png",
-    "./screenshots/cursor-sidebar/grouping-status.png",
-    "./screenshots/cursor-sidebar/icon-picker.png",
-    "./screenshots/cursor-sidebar/view-menu.png"
+    "./screenshots/cursor-sidebar/suite-hero.png",
+    "./screenshots/cursor-sidebar/projects-lead-tabs.png",
+    "./screenshots/cursor-sidebar/view-menu.png",
+    "./screenshots/cursor-sidebar/icon-picker.png"
   ],
   "overview": "./overview/cursor-sidebar.md"
 }
