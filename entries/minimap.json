@@ -1,7 +1,7 @@
 {
   "id": "minimap",
   "displayName": "Minimap",
-  "description": "A scrollbar you can read: a strip along the right edge of each thread, drawn like VS Code's minimap, with one rectangle per message, as tall as the message and coloured by kind (your messages, agent replies, work, errors, system notes). Drag its slider to scrub, click to jump, scroll the wheel over it, or hover a rectangle to see the start of its message. It replaces BB's fading scrollbar, or keeps it beside the strip, and a floating settings panel in the thread menu sets the width, colours, opacity and slider while you watch. It reads only what changed while a turn works and nothing while the strip is not shown. Requires BB 0.49 or later.",
+  "description": "A scrollbar you can read: a strip along the right edge of each thread, drawn like VS Code's minimap, with one rectangle per message, as tall as the message and coloured by kind (your messages, agent replies, work, errors, system notes). Drag its slider to scrub, click to jump, scroll the wheel over it, or hover a rectangle to see what it is and the start of its text. It replaces BB's fading scrollbar, or keeps it beside the strip, and a floating settings panel in the thread menu sets the width, colours, opacity and slider while you watch. It reads only what changed while a turn works and nothing while the strip is not shown. Requires BB 0.49 or later.",
   "icon": "Menu",
   "tags": [
     "minimap",

@@ -4,7 +4,7 @@ Minimap is a scrollbar you can read. It puts a strip along the right edge of eac
 
 - Drag the slider to scrub through the thread, click anywhere on the strip to jump there, or scroll the wheel over it.
 - Your messages are light grey and right-aligned, as wide as the bubble. Agent replies are grey, work is amber, errors are red and system notes are faint, so a long thread shows where you asked something, where the agent worked for a while and where something failed.
-- Hover a rectangle to see the start of its message in a note beside the strip, which slides from row to row and points at the rectangle, outlined in its own colour.
+- Hover a rectangle to see an icon for what it is and the start of its text (a message, the command that ran) in a note beside the strip, which slides from row to row and points at the rectangle, outlined in its own colour (that line jumps, it doesn't slide).
 - The strip is drawn to scale, so its slider sits where the scrollbar's thumb would. On a very long thread your messages and errors are painted on top and stay at least two device pixels tall.
 
 ## The scrollbar
