@@ -1,0 +1,41 @@
+{
+  "id": "minimap",
+  "displayName": "Minimap",
+  "description": "A scrollbar you can read: a strip along the right edge of each thread, drawn like VS Code's minimap, with one rectangle per message, as tall as the message and coloured by kind (your messages, agent replies, work, errors, system notes). Drag its slider to scrub, click to jump, scroll the wheel over it, or hover a rectangle to see the start of its message. It replaces BB's fading scrollbar, or keeps it beside the strip, and a floating settings panel in the thread menu sets the width, colours, opacity and slider while you watch. It reads only what changed while a turn works and nothing while the strip is not shown. Requires BB 0.49 or later.",
+  "icon": "Menu",
+  "tags": [
+    "minimap",
+    "scrollbar",
+    "scrolling",
+    "navigation",
+    "long-threads",
+    "timeline",
+    "overview",
+    "reading"
+  ],
+  "author": {
+    "name": "nfour",
+    "github": "nfour",
+    "url": "https://github.com/nfour"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "themes-and-appearance"
+  ],
+  "screenshots": [
+    "./screenshots/minimap/strip-light.jpg",
+    "./screenshots/minimap/hover.jpg",
+    "./screenshots/minimap/settings-strip.jpg",
+    "./screenshots/minimap/settings-blocks.jpg",
+    "./screenshots/minimap/strip-dark.jpg"
+  ],
+  "overview": "./overview/minimap.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/nfour/bb-plugins.git",
+      "subdir": "bb-plugin-minimap",
+      "range": ">=0.1.0 <1.0.0",
+      "tagPrefix": "minimap/"
+    }
+  }
+}
