@@ -30,7 +30,8 @@ under it, and the subagents it runs inside its own session show on its row.
 - A PR icon and number below the title show the branch's pull request:
   draft, open, merged or closed, plus checks and conflicts. Hover for details;
   click to open GitHub. With Thread Links installed, all PRs linked in the
-  session's messages appear in the same horizontally scrolling row. Branch status uses bb's GitHub PR Status plugin.
+  session's PRs share a scrolling row; parents omit child PRs. Branch status
+  uses bb's GitHub PR Status plugin.
 - A small icon on each row shows the thread's agent provider.
 - Child threads are ordinary threads: open, message, pin, archive or split them
   with bb's own menu. Hovering a row swaps its age for Archive and the menu.
