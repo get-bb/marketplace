@@ -2,25 +2,31 @@
 
 Minimap is a scrollbar you can read. It puts a strip along the right edge of each thread, drawn like VS Code's minimap: one rectangle per message, as tall as the message, coloured by who wrote it. A slider marks the part you are reading.
 
-- Drag the slider to scrub through the thread, click anywhere on the strip to jump there, or scroll the wheel over it.
+- Drag the slider to scrub through the thread, click anywhere on the strip to go there, or scroll the wheel over it.
 - Your messages are light grey and right-aligned, as wide as the bubble. Agent replies are grey, work is amber, errors are red and system notes are faint, so a long thread shows where you asked something, where the agent worked for a while and where something failed.
-- Hover a rectangle to see an icon for what it is and the start of its text (a message, the command that ran) in a note beside the strip, which slides from row to row and points at the rectangle, outlined in its own colour (that line jumps, it doesn't slide).
-- The strip is drawn to scale, so its slider sits where the scrollbar's thumb would. On a very long thread your messages and errors are painted on top and stay at least two device pixels tall.
+- The strip is drawn to scale, so its slider sits where the scrollbar's thumb would. On a very long thread your messages and errors stay on top.
 
-## The scrollbar
+## The hover note
 
-BB's scrollbar fades out and is thin to grab, so Minimap switches it off while the strip is there. Turn off **Replace the scrollbar** to keep both, and **Always show the scrollbar** stops BB fading it. BB's thread-index button is removed by default; turn **Hide the thread-index button** off and it sits just left of the strip. A thread with nothing to scroll gets no strip.
+Hover the strip and a note beside it names the rows around the pointer: the pointer's own row bright, one row above and below it dimmed. Each row has an icon in its rectangle's colour (you, the agent, a command, a file read, a search, a finished turn) and the start of its text, such as the command that ran or a turn's step count. Moving along the strip glides the list to the next row, and the note's arrow points at the rectangle, which gets a thin line in its own colour. The note stays while you drag, so it keeps naming the rows as you scrub.
+
+Rows of context, lines per message, the glide and the delay between rows are settings.
+
+## Scrolling
+
+A click on the strip glides to the place you clicked, even in a part of a long thread BB has not loaded yet, and lands where you aimed. The wheel over the strip glides too, with quick steps adding up, and goes three times as far as the thread's own wheel (**Wheel speed**, 25 to 1000%). Either can jump instead.
+
+## The scrollbar and the shade
+
+BB's scrollbar fades out and is thin to grab, so Minimap switches it off while the strip is there. Turn off **Replace the scrollbar** to keep both; **Always show the scrollbar** then stops BB fading it. BB's thread-index button is removed while the strip is there, or can sit just left of it. A thread with nothing to scroll gets no strip.
+
+On a dark theme a soft shade falls from the strip's edge over the thread. Its strength and reach are sliders, and it can sit over or under the rectangles, start from the strip's edge or the window's, and darken with black or fade into the theme's background. It is off on a light theme unless you turn **No shade on a light theme** off.
 
 ## Settings
 
-Pick **Minimap** in a thread's actions menu. A settings panel opens over the chat, so you can watch the strip change as you edit, with four tabs:
+Pick **Minimap** in a thread's actions menu. A settings panel opens over the chat, so you can watch the strip change as you edit. Its six tabs are Behaviour, Strip (size, fading, the scrollbar, the shade), Scrolling, Blocks (a colour and a switch for each kind of rectangle), Slider and Note. The same panel is the Minimap section of the plugin's page in BB's settings.
 
-- **Behaviour**: showing the strip, the thread-index button, the hover preview, short threads, and loading the whole history.
-- **Strip**: the scrollbar, width (6 to 120px), opacity, fading when the pointer is elsewhere, and narrow windows.
-- **Blocks**: a colour and an on/off switch for each kind of rectangle.
-- **Slider**: the slider's corners, thickness, opacity and colour.
-
-Sliders and colours preview on the strip as you drag. **Reset all** asks twice before it puts everything back.
+Sliders and colours preview on the strip as you drag. The tabs work from the keyboard. On a phone the panel opens as a sheet from the bottom. **Reset all** asks twice before it puts everything back.
 
 ## Narrow windows
 
