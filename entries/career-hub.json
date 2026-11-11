@@ -1,0 +1,37 @@
+{
+  "id": "career-hub",
+  "displayName": "Career Hub",
+  "description": "Keep every application and its tailored CV in one place. Build a complete career profile from multiple CVs and reusable interview stories. Tailor concise CVs with a reference document's section order, then save versions and download PDFs. The optional embedded assistant uses your configured BB provider and its normal quota or charges.",
+  "icon": {
+    "url": "./icons/career-hub-8bf7f932.svg"
+  },
+  "tags": [
+    "job-search",
+    "applications",
+    "cv",
+    "resume",
+    "interview-prep",
+    "career",
+    "ats"
+  ],
+  "author": {
+    "name": "Rustambek Umarov",
+    "github": "Rustam1010",
+    "url": "https://github.com/Rustam1010"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/Rustam1010/ai-agents.git",
+      "subdir": "plugins/career-hub",
+      "range": "^0.2.1",
+      "tagPrefix": "career-hub/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/career-hub/jobs.jpg",
+    "./screenshots/career-hub/profile.jpg",
+    "./screenshots/career-hub/cv-builder.jpg"
+  ],
+  "overview": "./overview/career-hub.md"
+}
