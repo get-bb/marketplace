@@ -1,7 +1,7 @@
 {
   "id": "jb-flow",
   "displayName": "JB Flow",
-  "description": "Puts the agent threads that need you at the top, and keeps the rest out of the way until they do. A Triage sidebar ranks what to do next in Now: what's blocked on you, threads you mark as Focus, and deadlines coming up, above numbered lanes you move between with one key. Workspace tabs group projects, threads and tools by area of work. Agents end each hand-back with a short status report (done, next, blocked, PRs, progress) that stays in view while the thread is idle. ⌘K searches threads, messages and PRs, and Tab on a result replies to it, snoozes, moves or archives it. Agents call wait_for_ci and end their turn instead of polling GitHub, and are messaged when checks finish or a review arrives. PR and CI features need the GitHub CLI.",
+  "description": "Puts the agent threads that need you at the top, and keeps the rest out of the way until they do. A Triage sidebar ranks what to do next in Now: what's blocked on you, threads you mark as Focus, and deadlines coming up, above numbered lanes you move between with one key. Workspace tabs group projects, threads and tools by area of work. ⌘K searches threads, messages and PRs, and Tab on a result replies to it, snoozes, moves or archives it. Agents call wait_for_ci and end their turn instead of polling GitHub, and are messaged when checks finish or a review arrives. PR and CI features need the GitHub CLI.",
   "icon": "TimeSchedule",
   "tags": [
     "triage",
@@ -13,7 +13,7 @@
     "pull-requests",
     "ci",
     "github",
-    "status-reports"
+    "dev-servers"
   ],
   "author": {
     "name": "Johannes Berggren",
