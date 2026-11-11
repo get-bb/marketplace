@@ -1,7 +1,7 @@
 {
   "id": "lobu",
   "displayName": "Lobu",
-  "description": "Starts every thread with what earlier threads learned in your project and saves new learnings to Lobu memory. Agents search your personal workspace and a linked team workspace before working, supersede outdated memories in place, and run through native tools or bb lobu CLI commands across every agent provider. Each thread's Lobu memory panel shows what the agent started with, looked up, and saved, with undo, project pins, and one-click sharing to your team workspace. Built-in setup on the New thread screen installs the Lobu CLI via bun or npm and connects to a Lobu Cloud account or a local Lobu instance running on your machine.",
+  "description": "Starts every thread with what earlier threads learned in your project and saves new learnings to Lobu memory. Agents search your personal workspace and a linked team workspace before working, supersede outdated memories in place, and run through native tools or bb lobu CLI commands across every agent provider. Each thread's Lobu memory panel shows what the agent started with, looked up, and saved, with undo, project pins, and one-click sharing to your team workspace. A Lobu page in bb's sidebar shows what agents saved in bb threads, searches all of Lobu, and surfaces the inbox plus the devices and connections that need attention. Built-in setup on the New thread screen installs the Lobu CLI via bun or npm and connects to a Lobu Cloud account or a local Lobu instance running on your machine.",
   "icon": {
     "url": "./icons/lobu-d54c7c7d.svg"
   },
@@ -28,7 +28,7 @@
   "source": {
     "git": {
       "url": "https://github.com/lobu-ai/bb-plugin-lobu.git",
-      "range": "^0.6.0"
+      "range": "^0.7.0"
     }
   },
   "overview": "./overview/lobu.md",
