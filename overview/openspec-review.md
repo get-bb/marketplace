@@ -17,6 +17,6 @@ Review OpenSpec proposals, designs, tasks and specs right from the chat: comment
 ## Requirements
 
 - OpenSpec CLI 1.9.x on the environment host, and an `openspec/` folder in the checkout.
-- English and Russian interface.
+- Interface in 10 languages (English, 简体中文, Español, Português (Brasil), 日本語, Deutsch, Français, Русский, 한국어, हिन्दी); Auto follows the browser language.
 
 Comments live in the plugin storage of your BB, not in the repository. The plugin does not run Propose, Apply or Archive and does not edit documents.
