@@ -1,0 +1,39 @@
+{
+  "id": "drmanhattan",
+  "displayName": "drmanhattan",
+  "description": "Makes agents in parallel threads take turns on builds and tests, and shows each thread its queued runs. Threads on a machine with drmanhattan, a local job queue, are told to run heavy commands through it, so several agents stop compiling at the same time and slowing each other down. While a thread has runs going, a row above its composer shows each run's slot or place in line against its usual time, with a cancel button and a link to its log; the Info tab lists recent results. A drmanhattan page in bb's navigation shows the queue on every connected machine, each run linked to the thread that queued it, and archiving a thread stops the dev servers it started. Agents and scripts also get bb drmanhattan runs, status and cancel. Needs the free, open-source drmanhattan command-line tool installed and running on each machine (macOS or Linux).",
+  "icon": "Layers",
+  "screenshots": [
+    "./screenshots/drmanhattan/thread-runs.png",
+    "./screenshots/drmanhattan/queue-page.png",
+    "./screenshots/drmanhattan/dashboard.png"
+  ],
+  "overview": "./overview/drmanhattan.md",
+  "tags": [
+    "job-queue",
+    "builds",
+    "tests",
+    "parallel-agents",
+    "background-jobs",
+    "cpu-load",
+    "concurrency",
+    "dashboard",
+    "dev-servers"
+  ],
+  "author": {
+    "name": "Gagandip Singh",
+    "github": "gagansingh",
+    "url": "https://github.com/gagansingh"
+  },
+  "category": "command-line",
+  "secondaryCategories": [
+    "thread-content"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/gagansingh/drmanhattan.git",
+      "subdir": "integrations/bb",
+      "range": ">=0.8.1 <1.0.0"
+    }
+  }
+}
