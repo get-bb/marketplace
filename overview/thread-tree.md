@@ -22,22 +22,21 @@ under it, and the subagents it runs inside its own session show on its row.
   setting to restore inheritance. The Sort and Group menus stay open while you
   pick; click outside or press Escape to close.
 - The Archived toggle shows archived threads in the same grouping and nesting.
-- The top line counts threads that need input, failed or are running.
 - Each child thread sits under the thread that spawned it, at any depth, even
   in another project. A parent's status dot turns into a chevron on hover;
   click it to fold the subtree. A folded parent gets a line counting its whole
   subtree by state. The thread you have open and threads waiting for your
   input stay visible under the fold.
-- A PR icon after the age label shows the environment branch's pull request:
+- A PR icon and number below the title show the branch's pull request:
   draft, open, merged or closed, plus checks and conflicts. Hover for details;
-  click to open GitHub. Requires bb's built-in GitHub PR Status plugin.
+  click to open GitHub. With Thread Links installed, all PRs linked in the
+  session's messages appear in the same horizontally scrolling row. Branch status uses bb's GitHub PR Status plugin.
 - A small icon on each row shows the thread's agent provider.
 - Child threads are ordinary threads: open, message, pin, archive or split them
   with bb's own menu. Hovering a row swaps its age for Archive and the menu.
 - Cmd+Z or Ctrl+Z restores recently archived threads and their children.
-- Provider subagents (Claude Code `Agent` calls, Codex subagents) are not
-  threads and cannot be messaged. They show as a counter with a status dot on
-  the parent's row; hover it for each one's type, state, duration and tokens.
+- Provider subagents show a counter and status dot on the parent's row;
+  hover for type, state, duration and tokens. They cannot be messaged.
 - A dot before each title shows the thread's state: blue running, green done,
   yellow needs input, red error with a Retry button, gray stopped.
 - `bb thread-tree list` prints a thread's subagents from a terminal.
