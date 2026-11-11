@@ -1,0 +1,35 @@
+{
+  "id": "unified-inbox",
+  "displayName": "Unified Inbox",
+  "description": "Read Gmail, WhatsApp, Messages, and LinkedIn in one list beside the thread. Reply where that source can send, and mute a conversation without removing it. A mail image shows in the message, and a shared LinkedIn post shows its words and picture. Gmail needs your own Google Cloud client, WhatsApp pairs as a linked device, LinkedIn uses this plugin's Chrome window, and Messages needs imsg plus Full Disk Access on a Mac.",
+  "icon": {
+    "url": "./icons/unified-inbox-e26ff423.svg"
+  },
+  "screenshots": [
+    "./screenshots/unified-inbox/list.jpg",
+    "./screenshots/unified-inbox/chat.jpg",
+    "./screenshots/unified-inbox/settings.jpg"
+  ],
+  "overview": "./overview/unified-inbox.md",
+  "tags": [
+    "gmail",
+    "whatsapp",
+    "imessage",
+    "linkedin",
+    "inbox",
+    "mail",
+    "chat"
+  ],
+  "author": {
+    "name": "Robert Sinke",
+    "github": "robertsinke",
+    "url": "https://github.com/robertsinke"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/robertsinke/bb-plugin-unified-inbox.git",
+      "range": "^0.1.0"
+    }
+  }
+}
