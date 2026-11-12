@@ -7,7 +7,9 @@
   },
   "screenshots": [
     "./screenshots/usage-forecast/band.png",
-    "./screenshots/usage-forecast/expanded.png"
+    "./screenshots/usage-forecast/expanded.png",
+    "./screenshots/usage-forecast/band-light.png",
+    "./screenshots/usage-forecast/expanded-light.png"
   ],
   "overview": "./overview/usage-forecast.md",
   "tags": [
