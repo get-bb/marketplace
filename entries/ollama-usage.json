@@ -1,0 +1,29 @@
+{
+  "id": "ollama-usage",
+  "displayName": "Ollama Usage",
+  "description": "Shows what is left in the Ollama Cloud monthly credit pool, with its reset date and the money already spent, in bb's usage panel. The panel reads only the OpenCode Go and Claude Code subscriptions, so an Ollama Cloud plan has no row there; this adds the pool as a dollar window beside them. Spend for the last day, week or month comes with a per-model breakdown, and bb ollama-usage prints the same numbers in a terminal. Needs an Ollama Cloud account with an API key on the host, either OLLAMA_API_KEY or the sign-in OpenCode already stored.",
+  "icon": "ChartColumn",
+  "tags": [
+    "ollama",
+    "provider-quota",
+    "credit-balance",
+    "spend",
+    "budget"
+  ],
+  "author": {
+    "name": "Vladislav Chmelyuk",
+    "github": "fgbm",
+    "url": "https://github.com/fgbm"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/fgbm/bb-plugin-ollama-usage.git",
+      "range": "^0.1.1"
+    }
+  },
+  "overview": "./overview/ollama-usage.md",
+  "screenshots": [
+    "./screenshots/ollama-usage/ollama-cloud-credits.png"
+  ]
+}
