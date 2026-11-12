@@ -1,0 +1,39 @@
+{
+  "id": "openui",
+  "displayName": "OpenUI Live Replies",
+  "description": "Turns agent replies into dashboards, reports, plans and forms you can read at a glance and click, right in the chat. Agents write OpenUI Lang, and the plugin draws it with OpenUI's React component library plus about 70 components of its own: gauges, heatmaps, timelines, roadmaps, kanban boards, test and coverage reports, diffs and maps. Plans, decisions, choices, quizzes and forms send your answer back into the thread as your next message. Components for BB show the thread's changed files, commits, pull request and other threads live. Adds about 3,000 tokens of instructions to sessions whose replies you read, and Map and ImageSearch fetch from OpenStreetMap, Photon, Wikipedia and Wikimedia Commons unless you turn web lookups off.",
+  "icon": "AppWindow",
+  "tags": [
+    "openui",
+    "generative-ui",
+    "inline-ui",
+    "charts",
+    "dashboards",
+    "forms",
+    "diagrams",
+    "test-reports",
+    "kanban",
+    "interactive"
+  ],
+  "author": {
+    "name": "Muhammad Ahsan",
+    "github": "ahsan7162",
+    "url": "https://github.com/ahsan7162"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "screenshots": [
+    "./screenshots/openui/dashboard.png",
+    "./screenshots/openui/decision.png",
+    "./screenshots/openui/tests.png"
+  ],
+  "overview": "./overview/openui.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/ahsan7162/bb-plugin-openui.git",
+      "range": "^0.1.0"
+    }
+  }
+}
