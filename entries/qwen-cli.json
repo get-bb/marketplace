@@ -1,0 +1,26 @@
+{
+  "id": "qwen-cli",
+  "displayName": "Qwen CLI [Experimental]",
+  "description": "Code with your Qwen account inside BB. Choose CLI-discovered models, switch between Plan and Build, and review tool requests in your thread. Requires a separately installed Qwen Code CLI and an eligible account; service quota or charges apply.",
+  "icon": {
+    "url": "./icons/qwen-cli-93a1e88b.svg"
+  },
+  "tags": [
+    "acp",
+    "cli",
+    "planning",
+    "qwen"
+  ],
+  "category": "agents-and-providers",
+  "author": {
+    "name": "dionis-d",
+    "github": "dionis-d"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/ols-md/bb-plugin-qwen-cli.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/qwen-cli.md"
+}
