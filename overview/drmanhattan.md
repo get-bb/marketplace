@@ -6,6 +6,7 @@
 - **A thread's runs beside its composer.** While a thread has runs going, the row above its composer says how many are running and waiting. Expand it to see each run's slot, place in line and time against its usual time, cancel one, or open its log on the dashboard.
 - **A history in the Info tab.** The thread's recent runs, passed or failed, with a link to each log.
 - **The queue in bb's navigation.** A drmanhattan page shows every connected machine's queue: slots in use, what is running and waiting, and what finished lately, each run linked to the thread that queued it, with its log and a cancel button. The full dashboard is a click away.
+- **One-click setup.** On a machine without drmanhattan, the page explains what it is, shows the exact commands, and installs and starts it when you click **Install and start** (or copies the commands for you).
 - **Services stopped with their thread.** Archiving or deleting a thread stops the dev servers, databases and other services it started through drmanhattan.
 - **Links back.** On the drmanhattan dashboard, each run from a bb thread links to that thread.
 
@@ -24,4 +25,4 @@ Add `--json` for machine-readable output.
 
 ## Requirements
 
-drmanhattan 0.8.1 or later on each machine whose threads should use it (0.9.0 or later for recent results on the drmanhattan page), running as a daemon (`drmanhattan --yes &`, or as a service). It is free, open source, and runs on macOS and Linux (x86_64); the [install instructions](https://github.com/gagansingh/drmanhattan#install) take one command. Machines without it are left alone.
+drmanhattan 0.8.1 or later on each machine whose threads should use it (0.9.0 or later for recent results on the drmanhattan page), running as a daemon. It is free, open source, and runs on macOS and Linux (x86_64). The drmanhattan page installs and starts it for you; to do it by hand, follow the [install instructions](https://github.com/gagansingh/drmanhattan#install). Machines without it are left alone.
