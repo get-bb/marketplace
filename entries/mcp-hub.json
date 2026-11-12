@@ -1,0 +1,37 @@
+{
+  "id": "mcp-hub",
+  "displayName": "MCP Hub",
+  "description": "Keeps MCP servers for Claude Code, Cursor, Codex, Kimi and OpenCode in one file and writes each harness its own config. Edit URL or command, headers and environment variables as key/value rows. Secrets live in a git-ignored mcp.local.json and are referenced as ${VAR}. Import servers already defined in opencode.json, .mcp.json or .cursor/mcp.json, including SSE. Works per host, including remote machines, and reads variables from the target host. Requires bb 0.49+ and the harnesses you enable.",
+  "icon": {
+    "url": "./icons/mcp-hub-5a28296c.svg"
+  },
+  "screenshots": [
+    "./screenshots/mcp-hub/overview.png",
+    "./screenshots/mcp-hub/editor.png"
+  ],
+  "overview": "./overview/mcp-hub.md",
+  "category": "utilities",
+  "tags": [
+    "mcp",
+    "model-context-protocol",
+    "claude-code",
+    "opencode",
+    "cursor",
+    "codex",
+    "kimi-code",
+    "configuration",
+    "secrets",
+    "remote-hosts"
+  ],
+  "author": {
+    "name": "Vladislav Chmelyuk",
+    "github": "fgbm",
+    "url": "https://github.com/fgbm"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/fgbm/bb-plugin-mcp-hub.git",
+      "range": "^0.1.0"
+    }
+  }
+}
