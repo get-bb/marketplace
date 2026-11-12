@@ -4,6 +4,7 @@ Keep work and personal projects in one bb without seeing both at once. Pick a sp
 
 - A space switcher in the sidebar header, with New thread on its own row underneath. Each space has a name, an icon and an optional tint.
 - A menu with every space, a checkmark on the current one, **All projects** to leave spaces, and **Edit Spaces…**.
+- Or, if you prefer, a row of icons instead of the menu: one per space, then **All projects** and **Edit Spaces…**, one click to switch. Pick **Menu** or **Icons** under **Sidebar header** in Edit Spaces.
 - Switching to a space reopens the thread you last had open there, so you pick up where you left off.
 - Ctrl + Alt + 1 to 9 (⌃ ⌥ 1 to 9 on macOS) switch to the first nine spaces; bb already uses Ctrl/⌘ + 1–9 to jump between threads. The command palette also has Next space, Previous space, Show all projects and Edit Spaces.
 - **Edit Spaces…** sets each space's name, icon, tint, order and projects. A project in no space shows in every space.
