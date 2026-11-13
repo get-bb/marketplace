@@ -30,8 +30,7 @@
   },
   "screenshots": [
     "./screenshots/ghostrunner/new-thread.png",
-    "./screenshots/ghostrunner/thread.png",
-    "./screenshots/ghostrunner/settings.png"
+    "./screenshots/ghostrunner/thread.png"
   ],
   "overview": "./overview/ghostrunner.md"
 }
