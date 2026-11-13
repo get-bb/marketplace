@@ -1,7 +1,7 @@
 {
   "id": "team",
   "displayName": "Team",
-  "description": "Role-based agent teams for a project: a lead that plans and accepts work, plus developers, a cheap junior for simple tasks, and testers that report back to it. Create several teams per project from templates, edit templates in settings, add executors or adopt existing threads, hand out tracked work packages, and watch every team in a live tree with statuses and actions. Configs live in .bb/teams/ and stay out of git until you turn versioning on. Works with any installed provider; no external services.",
+  "description": "Agent teams with a shared Beads or built-in task tracker, reusable roles, safe session handoffs, review gates and finite execution budgets. Edit team templates, select approved models and follow task ownership and session status in one panel. Requires BB 0.49 or newer; Beads mode additionally requires bd 1.3.1.",
   "icon": "Users",
   "tags": [
     "agents",
