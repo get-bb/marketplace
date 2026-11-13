@@ -1,0 +1,37 @@
+{
+  "id": "hats",
+  "displayName": "Hats",
+  "description": "Switch your bb sidebar between groups of projects, like Work and Personal, with one click. Each hat holds a set of projects, and a project can sit in several hats. A footer button wears the next hat: projects that other hats claim are hidden, and projects in no hat always show. Your sidebar order, threads, and collapsed groups stay exactly as you left them. Edit hats and pick their icons on the settings page, or use the bb hats CLI; no account or external service.",
+  "icon": {
+    "url": "./icons/hats-4ebcb7aa.svg"
+  },
+  "tags": [
+    "sidebar",
+    "projects",
+    "focus",
+    "work-life",
+    "contexts",
+    "filter",
+    "organize",
+    "cli"
+  ],
+  "author": {
+    "name": "zaymonoid",
+    "github": "zaymonoid",
+    "url": "https://github.com/zaymonoid"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/zaymonoid/bb-hats.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/hats/switching.webp",
+    "./screenshots/hats/configuring.webp",
+    "./screenshots/hats/sidebar-day-job.png",
+    "./screenshots/hats/settings.png"
+  ],
+  "overview": "./overview/hats.md"
+}
