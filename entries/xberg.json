@@ -1,0 +1,35 @@
+{
+  "id": "xberg",
+  "displayName": "Xberg",
+  "description": "Lets agents read the PDFs, Word files, spreadsheets, slides and images in your project. Documents are converted on the machine that holds the workspace, and the plugin uploads no files, though the extracted text reaches the agent's model. OCR reads text in images, and can be turned on for scanned documents. Long documents come back in pages of 20,000 characters by default, and the agent chooses how many to read. First use downloads the open-source Xberg CLI (50–90 MB) from GitHub; it needs 120–230 MB of disk plus caches, of up to 2 GB for text and no set limit for OCR, and runs only on Apple Silicon macOS and Linux.",
+  "icon": "FileText",
+  "tags": [
+    "pdf",
+    "word",
+    "excel",
+    "powerpoint",
+    "docx",
+    "xlsx",
+    "pptx",
+    "ocr",
+    "documents",
+    "text-extraction"
+  ],
+  "author": {
+    "name": "vidurb",
+    "github": "vidurb",
+    "url": "https://github.com/vidurb"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/vidurb/bb-plugin-xberg.git",
+      "range": "^0.1.2"
+    }
+  },
+  "screenshots": [
+    "./screenshots/xberg/answer.png",
+    "./screenshots/xberg/tool-result.png"
+  ],
+  "overview": "./overview/xberg.md"
+}
