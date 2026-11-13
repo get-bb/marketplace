@@ -203,7 +203,7 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 4000,
-          "$comment": "An entry file uses the path ./overview/<plugin-id>.md. The built document holds the markdown text."
+          "$comment": "An entry file uses the path ./overview/<plugin-id>.md. The built document holds the published file URL; clients fetch the markdown on demand."
         },
         "publishedAt": {
           "type": "string",

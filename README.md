@@ -137,7 +137,8 @@ The file can use headings, paragraphs, emphasis, strong text, strikethrough, inl
 Each link must be an absolute `https` URL.
 The build rejects raw HTML, images, tables, footnotes, task lists, and control characters.
 The build rejects a file in `overview/` that no entry references.
-The build replaces the path with the file text in the v2 document.
+The build replaces the path with the published file URL in the v2 document.
+The store detail page fetches the markdown from that URL on demand.
 The v1 document never holds the `overview` field.
 
 ## Frozen v1 document

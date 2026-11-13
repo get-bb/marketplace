@@ -65,6 +65,17 @@ jobs:
             r2_put_with_retry "bb-marketplace/v2/$screenshot" \
               --file "$screenshot" --content-type "$content_type" --remote
           done 3< changed-screenshots.txt
+      - name: Upload overviews
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          source scripts/r2-upload.sh
+          node scripts/changed-assets.mjs overviews > changed-overviews.txt
+          while IFS= read -r overview <&3; do
+            r2_put_with_retry "bb-marketplace/v2/$overview" \
+              --file "$overview" --content-type "text/markdown; charset=utf-8" --remote
+          done 3< changed-overviews.txt
       - name: Upload v2 manifest
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
