@@ -1,7 +1,7 @@
 {
   "id": "pinch-zoom",
   "displayName": "Pinch Zoom",
-  "description": "Resize bb's text with a pinch: pinch over a terminal to change its font, or anywhere else to scale the app's text. App text scales from 75% to 200% and terminal text from 8 to 32px, and the terminal re-wraps to its new width when you let go. Works with a touchscreen, a trackpad pinch, or Ctrl and the mouse wheel. Sizes are saved on each device, and a Settings section has A−, A+ and Reset buttons. Terminal sizing hooks into bb's internal terminal component, so a bb update can break it until the plugin catches up; app text sizing does not depend on it.",
+  "description": "Resize bb's text with a pinch, and choose whether it scales the whole app or only chat, composer and terminals. Text scales from 75% to 200%; settings make the composer and terminal half to double the chat size, and terminals re-wrap to their new width when you let go. A pinch over a terminal fine-tunes it on that device. Works with a touchscreen, a trackpad pinch, or Ctrl and the mouse wheel, and a Settings section has A−, A+ and Reset buttons. Terminal sizing and chat-only scaling hook into bb's internal components, so a bb update can break them until the plugin catches up; whole-app text sizing does not depend on them.",
   "icon": "ZoomIn",
   "tags": [
     "pinch",
@@ -9,6 +9,7 @@
     "text-size",
     "font-size",
     "terminal",
+    "composer",
     "accessibility",
     "gestures",
     "touch",
@@ -26,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/gsxdsm/bb-plugin-pinch-zoom.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   },
   "screenshots": [
