@@ -28,7 +28,7 @@
   "source": {
     "git": {
       "url": "https://github.com/lobu-ai/bb-plugin-lobu.git",
-      "range": "^0.7.0"
+      "range": "^0.8.0"
     }
   },
   "overview": "./overview/lobu.md",
