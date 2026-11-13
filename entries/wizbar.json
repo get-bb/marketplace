@@ -1,0 +1,32 @@
+{
+  "id": "wizbar",
+  "displayName": "WizBar",
+  "description": "An agent-first sidebar for fleets of agent threads. Cards show the issue or pull request link and child count, children open from a hover list, a live running count sits below the list with a stats panel on the footer bolt, drag pins and reorders, and every WizBar action has a wizbar CLI command with JSON. Derived from T3 Sidebar.",
+  "icon": "Zap",
+  "overview": "./overview/wizbar.md",
+  "tags": [
+    "sidebar",
+    "threads",
+    "inbox",
+    "agents",
+    "fleet",
+    "cli"
+  ],
+  "author": {
+    "name": "OpenWiz",
+    "github": "openwizdev",
+    "url": "https://github.com/openwizdev"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/openwizdev/WizPlugins.git",
+      "subdir": "wizbar",
+      "range": "^0.3.0",
+      "tagPrefix": "wizbar/"
+    }
+  },
+  "screenshots": [
+    "./screenshots/wizbar/child-and-parent-chip.png"
+  ]
+}
