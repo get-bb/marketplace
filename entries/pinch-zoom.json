@@ -1,7 +1,7 @@
 {
   "id": "pinch-zoom",
   "displayName": "Pinch Zoom",
-  "description": "Resize bb's text with a pinch, and choose whether it scales the whole app or only chat, composer and terminals. Text scales from 75% to 200%; settings make the composer and terminal half to double the chat size, and terminals re-wrap to their new width when you let go. A pinch over a terminal fine-tunes it on that device. Works with a touchscreen, a trackpad pinch, or Ctrl and the mouse wheel, and a Settings section has A−, A+ and Reset buttons. Terminal sizing and chat-only scaling hook into bb's internal components, so a bb update can break them until the plugin catches up; whole-app text sizing does not depend on them.",
+  "description": "Resize bb's chat, composer and terminal text with a pinch, or switch a setting to scale the whole app. Text scales from 75% to 200%; settings make the composer and terminal half to double the chat size, and terminals re-wrap to their new width when you let go. A pinch over a terminal fine-tunes it on that device. Works with a touchscreen, a trackpad pinch, or Ctrl and the mouse wheel, and a Settings section has A−, A+ and Reset buttons. Terminal sizing and chat-only scaling hook into bb's internal components, so a bb update can break them until the plugin catches up; whole-app text sizing does not depend on them.",
   "icon": "ZoomIn",
   "tags": [
     "pinch",
