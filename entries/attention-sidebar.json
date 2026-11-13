@@ -1,0 +1,35 @@
+{
+  "id": "attention-sidebar",
+  "displayName": "Attention sidebar",
+  "description": "Puts every thread that is waiting on you, from all projects, at the top of the bb sidebar. Questions and approvals, errors, and finished-but-unread threads share one block, each marked ?, ! or ✓. Running threads get their own block below it, and everything else sits in collapsible project folders with project avatars instead of provider icons. Block titles and labels are in Russian; the plugin is frontend-only and needs no external service.",
+  "icon": {
+    "url": "./icons/attention-sidebar-1f7a12d5.svg"
+  },
+  "screenshots": [
+    "./screenshots/attention-sidebar/waiting-and-folders.png",
+    "./screenshots/attention-sidebar/expanded-folder.png"
+  ],
+  "tags": [
+    "sidebar",
+    "threads",
+    "inbox",
+    "triage",
+    "unread",
+    "thread-list",
+    "projects",
+    "russian"
+  ],
+  "author": {
+    "name": "nosenss",
+    "github": "nosenss",
+    "url": "https://github.com/nosenss"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/nosenss/bb-plugin-attention-sidebar.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/attention-sidebar.md"
+}
