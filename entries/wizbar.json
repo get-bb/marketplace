@@ -20,7 +20,7 @@
   "category": "thread-management",
   "source": {
     "git": {
-      "url": "https://github.com/openwizdev/wizplugins.git",
+      "url": "https://github.com/openwizdev/WizPlugins.git",
       "subdir": "wizbar",
       "range": "^0.3.0",
       "tagPrefix": "wizbar/"

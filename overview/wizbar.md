@@ -37,8 +37,8 @@ Switches for the list-bottom count, Cloud/Local row icons and the two thread-hea
 
 ## What is proven
 
-The behaviour above is covered by WizBar's fixture tests in CI. A live check on a real host is a separate step; see the [README](https://github.com/openwizdev/wizplugins/tree/main/wizbar#readme) for current limits.
+The behaviour above is covered by WizBar's fixture tests in CI. A live check on a real host is a separate step; see the [README](https://github.com/openwizdev/WizPlugins/tree/main/wizbar#readme) for current limits.
 
 ## Credit
 
-WizBar is derived from [Sawyer Hood's T3 Sidebar](https://github.com/SawyerHood/sawyer-plugins/tree/d3424f24e2cebe91da4e72cb38feb023da808922/plugins/t3sidebar) and keeps its MIT notices. Source: [openwizdev/wizplugins](https://github.com/openwizdev/wizplugins).
+WizBar is derived from [Sawyer Hood's T3 Sidebar](https://github.com/SawyerHood/sawyer-plugins/tree/d3424f24e2cebe91da4e72cb38feb023da808922/plugins/t3sidebar) and keeps its MIT notices. Source: [openwizdev/WizPlugins](https://github.com/openwizdev/WizPlugins).
