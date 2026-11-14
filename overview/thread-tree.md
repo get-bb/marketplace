@@ -5,12 +5,13 @@ under it, and the subagents it runs inside its own session show on its row.
 
 - A search field on top (or `/`) finds threads by title, branch, PR number or
   project. Below it, counts of threads that need input, failed, run or are
-  unread; click one for a flat list. Running rows name project and
-  orchestration.
+  unread; click one for a flat list. Running rows show the current step, a turn
+  timer, a high context fill and the orchestration.
 - Needs you, above the sections: threads asking a question (with how long
-  they waited), failed turns and queued messages, unread results, then failing
-  PRs of your threads and failed automations. Retry or Resend in place; hover
-  to snooze an item until it changes. ⇧⌘I (Ctrl+Shift+I) opens the next.
+  they waited), failed turns and queued messages, threads stuck with no
+  progress, unread results, then failing PRs of your threads and failed
+  automations. Retry, Resend or Stop in place; hover to snooze. ⇧⌘I
+  (Ctrl+Shift+I) opens the next.
 - Pull requests (from GitHub Folder) and Automations start folded, with a
   summary in the header: "1 failing · 5", "1 failed · next in 12m". A PR's
   reason is its icon; hover to snooze or open its thread. Hover an automation
@@ -28,17 +29,15 @@ under it, and the subagents it runs inside its own session show on its row.
   expanded, it offers Archive these, skipping uncommitted worktrees.
 - Orchestrations: a shortcut for each thread with live subthreads, most
   urgent first, with its projects and progress; finished ones go last, muted.
-- Before each title, bb's own status glyph: a spinner while the agent works, a
-  question mark when it needs input, a red cross for a failure, a dot for an
-  unread result, a pencil for a draft. A failed thread gets a Retry button.
+- Before each title, bb's own status glyph: spinner, question mark, red cross,
+  unread dot or draft pencil. A failed thread gets a Retry button.
 - Rows are one line; a tinted PR icon appears only when a PR needs action.
 - A ⚠ warns when another live thread works on the same branch or worktree.
 - Each row shows its agent provider; hover for title, branch and age.
 - Hovering or focusing a row fades Archive and ⋯ in over its end; Archive keeps
   bb's confirmation and Undo. Cmd+Z or Ctrl+Z restores recently archived
   threads and their children.
-- Hover a running thread's spinner to stop it; on touch, Stop is only in the
-  row's menu.
+- Hover a running thread's spinner to stop it; on touch, use the row's menu.
 - Provider subagents show a counter and status dot on the parent's row;
   hover for type, state, duration and tokens.
 - Hold Ctrl (or Cmd on a Mac) to see each row's jump key.
