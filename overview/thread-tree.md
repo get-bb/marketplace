@@ -3,14 +3,14 @@ under it, and the subagents it runs inside its own session show on its row.
 
 ## What you get
 
-- A status line counts threads that need input, failed, are running or are
-  unread. Click a count for a flat list of those threads; Running rows name
-  their project and orchestration. Press `/` to search title, branch, PR
-  number or project; Escape returns.
+- A search field on top (or `/`) finds threads by title, branch, PR number or
+  project. Below it, counts of threads that need input, failed, run or are
+  unread; click one for a flat list. Running rows name project and
+  orchestration.
 - Needs you, above the sections: threads asking a question (with how long
   they waited), failed turns and queued messages, unread results, then failing
   PRs of your threads and failed automations. Retry or Resend in place; hover
-  to snooze an item until it changes. ⇧⌘I opens the next one.
+  to snooze an item until it changes. ⇧⌘I (Ctrl+Shift+I) opens the next.
 - Pull requests (from GitHub Folder) and Automations start folded, with a
   summary in the header: "1 failing · 5", "1 failed · next in 12m". A PR's
   reason is its icon; hover to snooze or open its thread. Hover an automation
@@ -46,10 +46,10 @@ under it, and the subagents it runs inside its own session show on its row.
 
 ## Arranging the sidebar
 
-Right-click a section header to remove it; the sliders icon beside search
-brings it back, as well as Recent Activity, off by default. Drag a header, or
-use Move up and Move down in its menu, to reorder sections. While you drag, the
-blocks fold to their headers and reopen on drop.
+Right-click a section header to remove it; the sliders icon beside the search
+field brings it back, as well as Recent Activity, off by default. Drag a header,
+or use Move up and Move down in its menu, to reorder sections. While you drag,
+the blocks fold to their headers and reopen on drop.
 
 ## Settings
 
