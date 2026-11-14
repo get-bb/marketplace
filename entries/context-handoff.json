@@ -1,0 +1,31 @@
+{
+  "id": "context-handoff",
+  "displayName": "Context Handoff",
+  "description": "Track context usage as a percentage and safely continue long tasks in fresh threads. A meter above the chat input shows how full the context window is: it uses your theme's main color below 20% (light gray in dark mode), then turns yellow at 20%, orange at 30%, red at 40% and dark red at 65%. Each thread has an Auto handoff switch, off until you turn it on. Turn it on below 20% and the thread hands off once it reaches 30%; turn it on at 20% or above and it hands off at the next safe stopping point. The agent saves its plan and progress as notes, and a fresh thread confirms it read them, then continues with the switch on. Turning the switch off cancels a pending handoff.",
+  "icon": "Zap",
+  "tags": [
+    "context-window",
+    "tokens",
+    "meter",
+    "composer",
+    "long-tasks",
+    "continuation",
+    "checkpoint"
+  ],
+  "author": {
+    "name": "RoRoGitr",
+    "github": "RoRoGitr"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/RoRoGitr/bb-plugin-context-handoff.git",
+      "range": "^0.4.1"
+    }
+  },
+  "screenshots": [
+    "./screenshots/context-handoff/composer.png",
+    "./screenshots/context-handoff/meter-and-switch.png"
+  ],
+  "overview": "./overview/context-handoff.md"
+}
