@@ -3,6 +3,13 @@
   "displayName": "Tasks Kanban",
   "description": "Turn BB's built-in Tasks into a live Kanban board: drag cards across all six statuses, create, edit, comment, and label tasks. Every change goes straight into the Tasks tracker that bb tasks and agents use, so the board never drifts from the data. Works with any tracker project; Russian and English UI.",
   "icon": "SectionMove",
+  "screenshots": [
+    "./screenshots/tasks-kanban/board.jpg",
+    "./screenshots/tasks-kanban/new-task-dialog.jpg",
+    "./screenshots/tasks-kanban/drag-and-drop.jpg",
+    "./screenshots/tasks-kanban/board-hidden-lanes.jpg",
+    "./screenshots/tasks-kanban/settings.jpg"
+  ],
   "overview": "./overview/tasks-kanban.md",
   "tags": ["tasks", "kanban", "board", "backlog", "status", "priority", "labels", "i18n"],
   "author": {
