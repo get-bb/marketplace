@@ -11,6 +11,7 @@ Review OpenSpec proposals, designs, tasks and specs right from the chat: comment
 
 - An OpenSpec button in the chat header opens the latest active change; a menu picks another one.
 - The OpenSpec tab lists specs, active changes and the archive of the chat's checkout. A change card shows artifacts, task progress, affected specs and chats that mention the change.
+- The pinned header keeps one back button (document → card → list) and the document actions while you scroll.
 - Spec documents have a table of contents and collapsible requirements and scenarios.
 - Markdown links into the `openspec/` folder can open in the "OpenSpec review" file opener.
 
