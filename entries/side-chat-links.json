@@ -1,0 +1,33 @@
+{
+  "id": "side-chat-links",
+  "displayName": "Side Chat Links",
+  "description": "Reopen a side chat from the message you started it on, instead of hunting for it. A thread icon appears under every message that has side chats, with a count when there are several. Click it to open a panel tab for that message, with one inner tab for each of its side chats. Rename a side chat by double-clicking its tab. Works with bb's bundled Side chat plugin, including side chats made before you install it, and needs bb 0.49 or later.",
+  "icon": { "url": "./icons/side-chat-links-50c7d6d0.svg" },
+  "tags": [
+    "side-chat",
+    "side-chats",
+    "forks",
+    "threads",
+    "replies",
+    "panel",
+    "tabs",
+    "rename"
+  ],
+  "author": {
+    "name": "Rob Dodson",
+    "github": "robdodson",
+    "url": "https://github.com/robdodson"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/side-chat-links/overview.png",
+    "./screenshots/side-chat-links/rename.png"
+  ],
+  "overview": "./overview/side-chat-links.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/robdodson/bb-plugin-side-chat-links.git",
+      "range": "^0.1.0"
+    }
+  }
+}
