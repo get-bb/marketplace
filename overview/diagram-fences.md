@@ -11,7 +11,9 @@ you read them.
   source toggle, copy, and open-in-tab controls.
 - Markdown file previews: the same blocks draw in the right panel, where BB's
   code-fence slot does not reach. A content script swaps the code block for the
-  diagram and leaves the file untouched.
+  diagram and leaves the file untouched. The panel must be BB's built-in
+  preview; when another plugin opens `.md` files, pick Built-in preview under
+  Settings → Files → File openers.
 
 ## Local engines
 
