@@ -1,0 +1,35 @@
+{
+  "id": "mac-watch",
+  "displayName": "Mac Watch",
+  "description": "Watch the Mac that runs bb — battery, heat, disk and sleep — from your phone. A macOS-style sidebar page shows CPU, memory pressure, disk, network and power draw with 1, 6 and 24 hour charts, plus the apps that hold the machine awake. Processor, SSD and battery temperatures, macOS thermal pressure, SMART status and kernel panics are read without sudo. Pushes cover only real trouble: battery under 20%, overheating, memory or disk running out, battery-controller faults and an unexpected reboot, with warnings held until morning during quiet hours. macOS on Apple Silicon only; alerts need the push-notifications plugin, sleep and shutdown add a one-time sudoers rule, and the interface is in Russian.",
+  "icon": {
+    "url": "./icons/mac-watch-81f841ef.svg"
+  },
+  "tags": [
+    "macos",
+    "monitoring",
+    "battery",
+    "temperature",
+    "disk",
+    "sleep",
+    "host-health",
+    "push-alerts",
+    "dashboard"
+  ],
+  "author": {
+    "name": "Artur Karapetyan",
+    "github": "architawr",
+    "url": "https://github.com/architawr"
+  },
+  "category": "utilities",
+  "screenshots": [
+    "./screenshots/mac-watch/overview.jpg"
+  ],
+  "overview": "./overview/mac-watch.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/architawr/bb-plugin-mac-watch.git",
+      "range": "^0.1.0"
+    }
+  }
+}
