@@ -1,7 +1,7 @@
 {
   "id": "bb-sync",
   "displayName": "Sync",
-  "description": "Keep your BB theme, shortcuts, and interface preferences aligned across laptops. Connect GitHub, choose or create a private repository, and review the first transfer before automatic sync starts. Independent edits merge; conflicts wait for your choice, and a local snapshot supports recovery. Requires BB 0.49+, a GitHub account, and GitHub CLI on the BB server for guided sign-in; the interface is in Russian.",
+  "description": "Sync your BB theme, shortcuts, plugins, and interface preferences across laptops. Connect GitHub and review the first transfer. Missing plugins are installed; enabled state travels without propagating removals or transferring plugin secrets. Independent edits merge, conflicts wait for your choice, and a local snapshot supports recovery. Requires BB 0.49+, a GitHub account, and GitHub CLI on the BB server for guided sign-in; the interface is in Russian.",
   "icon": {
     "url": "./icons/bb-sync-e82e8a48.svg"
   },
@@ -16,7 +16,8 @@
     "theme",
     "github",
     "multi-device",
-    "preferences"
+    "preferences",
+    "plugins"
   ],
   "author": {
     "name": "Iosif Brudnyi",
@@ -27,7 +28,7 @@
   "source": {
     "git": {
       "url": "https://github.com/brudnyi/bb-sync.git",
-      "range": "^0.2.1"
+      "range": "^0.3.0"
     }
   }
 }

@@ -10,10 +10,14 @@ Independent edits merge automatically. Different edits to the same setting wait 
 
 A durable apply journal supports recovery after interruptions. Unknown settings remain in GitHub without being applied locally.
 
+## Bring your plugins
+
+Enable the Plugins group to install missing Git/npm plugins and transfer enabled/disabled state. Inventories combine without removing anything. A manual removal stays local and is not automatically reinstalled on that device. Already-installed plugin versions stay as they are; local paths, plugin settings and secrets are excluded. Installation runs through persistent BB jobs and can resume after an interruption.
+
 ## Requirements and scope
 
 Requires BB 0.49.0+, a GitHub account, and GitHub CLI on the BB server computer for guided sign-in. The repository must be private. No paid service or Git checkout is required. Credentials remain on the server.
 
-Transfers theme selection, shortcut overrides, and selected navigation/interface settings. Referenced themes and interface plugins must be installed separately on each computer. Window layouts, arbitrary plugin settings, thread-list grouping, chats, and credentials do not travel.
+Transfers theme selection, shortcut overrides, and selected navigation/interface settings. Missing theme/interface plugins can be installed by the Plugins group; custom theme files must be installed separately. Window layouts, arbitrary plugin settings, thread-list grouping, chats, and credentials do not travel.
 
 The [setup guide](https://github.com/brudnyi/bb-sync#readme) describes the full scope. `bb sync status`, `bb sync now`, and `bb sync restore` are also available.
