@@ -1,81 +1,40 @@
-# Team
+## Organize work by role
 
-Role-based agent teams for bb: a lead that plans and accepts work, and
-executors — developers, a cheap junior for simple tasks, testers, writers —
-that report back to it. Several teams per project, created from templates.
+Create a lead and executors from a reusable template, select installed providers
+and models, and address each employee by role. Team keeps the current thread,
+environment and execution history when a session changes.
 
-## Why
+## What you get
 
-A multi-agent workflow in bb is manual: role prompts from scratch, threads
-spawned one by one, thread IDs pasted between agents, packages tracked in
-chat. Team turns it into a template, a short config and one click.
+- Beads as the project task tracker, or the built-in tracker for small projects.
+  Teams share the selected tracker; there is no silent fallback or duplicate list.
+- English/Russian settings, a default-template list, a shared model picker and
+  starter prompts. Built-in templates are read-only; duplicate them to customize.
+- Structured review reports and acceptance grounds. Executors cannot accept their
+  own work; the lead accepts or returns it with a concrete remark.
+- Saved checkpoints and safe session replacement that reuses the environment and
+  unfinished files. Context-triggered rotation uses reliable reported metrics.
+- Finite task attempts and team start budgets, including helpers and retries.
+  The Resources panel shows holds, outcomes and available cumulative usage.
+- Explicitly approved backup models for confirmed quota errors. Automatic handoff
+  requires a refused next input and a verified checkpoint/history; uncertain state
+  stops for inspection instead of repeating work.
 
-## How it works
+## Requirements and limits
 
-1. Open the Team panel: projects are grouped into "with teams", "a team can be
-   created" and "cannot be created now" (with the reason), with search.
-2. Pick a template (development, QA, docs, management, or your own), adjust
-   roles, providers and models, and create the team. Disabled providers block
-   creation up front.
-3. The lead gets a roster; executors are its child threads, titled
-   `👥 Developer` (or `👥 core · Developer` with several teams).
-4. Work from the panel's tree or the CLI: message roles by name, hand out
-   tracked work packages, pause, stop, add executors.
+Requires BB 0.49 and SDK 0.6.132 or newer. Beads mode requires the `bd` CLI
+(tested with 1.3.1) on the project's source host. Team prepares a missing database
+in the canonical checkout. Existing built-in tasks are not migrated automatically.
+Models run through your configured providers and may use their credits or plan.
+A model catalog entry does not prove that it is free.
 
-## Highlights
+Budgets gate subsequent starts; active operations are not interrupted. Unknown
+usage is not zero, and Team does not guarantee a hard monetary limit or control
+provider-internal retries and BB's explicit policy overrides.
 
-- **Several teams per project**, each in `.bb/teams/<team>.yaml`, each with its
-  own sidebar section, packages and pause.
-- **Budget-minded default team**: a lead on a strong model, a developer, a
-  junior on a cheap model, a tester; short built-in prompts that plan first,
-  delegate by difficulty and keep diffs and reports small.
-- **Templates** shared across projects: edit them in Settings → Team, create
-  one from role kinds with prepared prompts, or save a running team as one.
-- **Add executors** later: a new role, or an existing free thread of the
-  project (it is renamed and moved under the lead).
-- **Work packages**: `bb team task add developer "Login form" --send`;
-  executors move them to review, only the lead accepts.
-- **Helpers**: threads an agent spawns under a role show up under that role.
-- **Live tree**: statuses, models and current packages; actions per role.
-- **Pause** holds agent messages to executors until resume; humans are never
-  held. Optional `notifyOn: [idle]` wakes the lead after a role's turn.
-- **Doctor**: providers, environments, prompts, broken links, git state.
-- **Replace** a role with a fresh thread that receives a handoff.
-- **Out of git by default**: team configs stay untracked until you turn
-  versioning on per team.
+## Getting started
 
-## Config sketch
-
-```yaml
-version: 1
-title: Development team
-defaults:
-  environment: checkout
-  parentNotifications: stuck
-roles:
-  - name: lead
-    lead: true
-    provider: codex
-  - name: developer
-    provider: codex
-  - name: junior
-    provider: pi
-    model: qwen3-coder
-  - name: tester
-    provider: codex
-    notifyOn: [idle]
-```
-
-## Commands
-
-`bb team init | create | list | status | add-role | version | tell |
-task add/list/update/done/remove | report | doctor | replace | stop | pause |
-resume | retitle | template list/show/save/delete` — all with `--team`,
-`--project` and `--json`.
-
-## Settings
-
-Language (English or Russian for CLI, panel and templates), a sidebar section
-per team, the roster message, and the thread title format.
-
-Opt-in: projects without team configs are untouched.
+Open Team, select a project and create a team from a template. Give its lead a
+normal goal; its persistent instructions cover planning, delegation and review.
+Use `bb team report` for a digest and `bb team doctor` for configuration checks.
+AI prompt generation is deferred until BB provides a suitable text-only API.

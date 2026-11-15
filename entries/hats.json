@@ -1,11 +1,12 @@
 {
   "id": "hats",
-  "displayName": "Hats",
-  "description": "Switch your bb sidebar between groups of projects, like Work and Personal, with one click. Each hat holds a set of projects, and a project can sit in several hats. A footer button wears the next hat: projects that other hats claim are hidden, and projects in no hat always show. Your sidebar order, threads, and collapsed groups stay exactly as you left them. Edit hats and pick their icons on the settings page, or use the bb hats CLI; no account or external service.",
+  "displayName": "Hats - Workspaces simplified",
+  "description": "Workspaces for your bb sidebar: switch between groups of projects, like Work and Personal, with one click. Each hat is a workspace that holds a set of projects, and a project can sit in several hats. A footer button switches to the next hat: projects that other hats claim are hidden, and projects in no hat always show. Your sidebar order, threads, and collapsed groups stay exactly as you left them. Edit hats and pick their icons on the settings page, or use the bb hats CLI; no account or external service.",
   "icon": {
     "url": "./icons/hats-4ebcb7aa.svg"
   },
   "tags": [
+    "workspaces",
     "sidebar",
     "projects",
     "focus",

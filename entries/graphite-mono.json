@@ -1,0 +1,36 @@
+{
+  "id": "graphite-mono",
+  "displayName": "Graphite Mono",
+  "description": "Set BB in JetBrains Mono at Light weight with a compact reading scale and a rounded composer, in Graphite and Matrix palettes.",
+  "icon": {
+    "url": "./icons/graphite-mono-1147403c.svg"
+  },
+  "tags": [
+    "theme",
+    "palette",
+    "monospace",
+    "jetbrains-mono",
+    "light-mode",
+    "dark-mode",
+    "typography"
+  ],
+  "author": {
+    "name": "ponomr",
+    "github": "ponomr",
+    "url": "https://github.com/ponomr"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/ponomr/bb-plugin-graphite-mono.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/graphite-mono/1-light.png",
+    "./screenshots/graphite-mono/2-dark.png",
+    "./screenshots/graphite-mono/3-matrix-dark.png",
+    "./screenshots/graphite-mono/4-matrix-light.png"
+  ],
+  "overview": "./overview/graphite-mono.md"
+}

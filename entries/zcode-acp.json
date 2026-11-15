@@ -1,0 +1,39 @@
+{
+  "id": "zcode-acp",
+  "displayName": "ZCode ACP",
+  "description": "Use your ZCode Coding Plan, free Start Plan and personal API models in BB. Install or update Rust ACP in settings and track each plan's quota separately. Requires BB 0.49+ and a signed-in ZCode Desktop installation on Windows or macOS. Coding Plan requires a paid subscription; personal API charges follow your provider, while Start Plan depends on an active free grant.",
+  "icon": {
+    "url": "./icons/zcode-acp-c526a7b9.svg"
+  },
+  "screenshots": [
+    "./screenshots/zcode-acp/models.png",
+    "./screenshots/zcode-acp/settings.png",
+    "./screenshots/zcode-acp/quotas.png"
+  ],
+  "overview": "./overview/zcode-acp.md",
+  "tags": [
+    "glm",
+    "coding-plan",
+    "start-plan",
+    "quotas",
+    "model-selection",
+    "windows",
+    "macos",
+    "agent-client-protocol"
+  ],
+  "author": {
+    "name": "Kirill Vechkasov",
+    "github": "ichinya",
+    "url": "https://github.com/ichinya"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "token-usage-and-limits"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/ichinya/bb-plugin-zcode.git",
+      "range": "^0.1.1"
+    }
+  }
+}

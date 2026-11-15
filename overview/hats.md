@@ -1,28 +1,26 @@
-## What you get
+Hats adds workspaces to the bb sidebar. A hat is a group of projects, like
+Work or Personal. Click the button in the sidebar footer to switch to the
+next hat, and the projects that belong to your other hats are hidden.
 
-- **A footer button.** One click wears the next hat. The button shows the
-  worn hat's icon, and a toast names it.
-- **A settings page.** Add, rename, reorder, and delete hats, and pick an icon
-  for each from 30. A grid of projects against hats lets you tick which
-  projects each hat holds. A project can be in as many hats as you like.
-- **A CLI.** `bb hats` wears, cycles, creates, renames, and fills hats from any
-  terminal, so agents can switch hats too.
+Hats preserves normal project ordering by hiding and showing projects in the
+bb thread list, preserving ordering.
 
-## How it works
+## Setting up hats
 
-Wearing a hat hides every project that another hat claims and this hat does
-not. A project in no hat shows whichever hat you wear, so a new project never
-disappears before you sort it.
+On the settings page you can add, rename, reorder and delete hats, pick an
+icon for each, and choose which projects are included in each one. A project
+can be in more than one hat. A project that is in no hat is always visible, so
+new projects show up until you file them somewhere.
 
-Your sidebar stays exactly as you arranged it. Hats only edits bb's list of
-hidden projects. A hidden project keeps its position, its threads, and whether
-it was collapsed, and reappears in the same place when you switch back. Any
-sections or machines you hid yourself are left alone.
+A new install starts with two empty hats, Work and Personal. Nothing is hidden
+until you put projects in them.
 
-New installs start with empty Work and Personal hats, so nothing is hidden
-until you assign projects.
+## CLI
+
+The `bb hats` command does everything the settings page does, so you can
+switch hats from a terminal and agents can switch them too.
 
 ## Requirements
 
-None. Hats stores its data in bb on your machine and needs no account,
-API key, or external service.
+None. Hats keeps its data in bb on your machine. It needs no account or API
+key.
