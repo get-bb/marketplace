@@ -1,0 +1,27 @@
+{
+  "id": "telegram-relay",
+  "displayName": "Telegram Relay",
+  "description": "Team notifications over Telegram — one bot, many subscribers. Members self-serve with /start and pick channels with an inline keyboard, while automations, agents, and plugins deliver broadcasts through the RPC or the bb CLI. Long polling only: no webhooks, no open ports; Russian and English.",
+  "icon": "Send",
+  "screenshots": [
+    "./screenshots/telegram-relay/panel.jpg",
+    "./screenshots/telegram-relay/deliveries.jpg",
+    "./screenshots/telegram-relay/subscribers.jpg",
+    "./screenshots/telegram-relay/test-broadcast.jpg",
+    "./screenshots/telegram-relay/settings.jpg"
+  ],
+  "overview": "./overview/telegram-relay.md",
+  "tags": ["telegram", "notifications", "alerts", "broadcast", "monitoring", "i18n"],
+  "author": {
+    "name": "Lev Kovalenko",
+    "github": "levkovalenko",
+    "url": "https://github.com/levkovalenko"
+  },
+  "category": "notifications",
+  "source": {
+    "git": {
+      "url": "https://github.com/levkovalenko/bb-telegram-relay.git",
+      "range": "^0.1.0"
+    }
+  }
+}
