@@ -1,7 +1,7 @@
 {
   "id": "shop-kanban",
   "displayName": "Shop Kanban",
-  "description": "Shows your bb threads as cards placed by live state, so you see at a glance which ones need you. Cards move on their own: a pending question or a failed run turns red at the top of Working, a reply that reports completion lands in Done, and threads you set aside wait in Parked. A working limit caps how many threads run at once: past it, a new thread waits in Queue and starts when a working one finishes, to pace spend. Each card carries a model-written title and summary, context-window fill, the harness icon, and the cost of the thread together with every child thread and subagent it started. Queue's In tab lists the Delta and GitHub pull requests waiting on you or your teams, each with a risk chip, approve and request-changes buttons, and a drafted thread that explains the change, and the Out tab tracks your own open and merged pull requests. The title bar searches every thread by what was said in it, archived ones included, and shows CPU, memory, disk and battery with the heaviest apps; on a Shopify account it also shows today's Shopify AI proxy spend. Titles, summaries and risk chips come from a pi-compatible CLI on the thread's host (default Claude Haiku 4.5), billed to that CLI's account; search needs qmd and the pull request lists need the dt or gh CLI, signed in, on a persistent host. Each is optional.",
+  "description": "Shows your bb threads as cards placed by live state, so you see at a glance which ones need you. Cards move on their own: a pending question or a failed run turns red at the top of Working, a reply that reports completion lands in Done, and threads you set aside wait in Parked. A working limit caps how many threads run at once: past it, a new thread waits in Queue and starts when a working one finishes, to pace spend. Each card is two rows: a model-written title and the cost, then context-window fill, a one-line summary and its age; the cost covers the thread together with every child thread and subagent it started. Queue's In tab lists the Delta and GitHub pull requests waiting on you or your teams, each with a risk chip, approve and request-changes buttons, and a drafted thread that explains the change, and the Out tab tracks your own open and merged pull requests. The title bar searches every thread by what was said in it, archived ones included, and shows CPU, memory, disk and battery with the heaviest apps; on a Shopify account it also shows today's Shopify AI proxy spend. Titles, summaries and risk chips come from a pi-compatible CLI on the thread's host (default Claude Haiku 4.5), billed to that CLI's account; search needs qmd and the pull request lists need the dt or gh CLI, signed in, on a persistent host. Each is optional.",
   "icon": "ListTodo",
   "tags": [
     "kanban",
@@ -24,7 +24,7 @@
   "source": {
     "git": {
       "url": "https://github.com/muhammad-siddeek/bb-plugin-shop-kanban.git",
-      "range": "^0.16.2"
+      "range": "^0.22.1"
     }
   },
   "screenshots": [
