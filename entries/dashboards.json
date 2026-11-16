@@ -1,0 +1,40 @@
+{
+  "id": "dashboards",
+  "displayName": "bb Dashboards",
+  "description": "Dashboards built by prompting an agent that open in their own side-panel tab, stay interactive, refresh their own data and change when you ask again.",
+  "icon": "LayoutDashboard",
+  "tags": [
+    "dashboards",
+    "reports",
+    "charts",
+    "kpi",
+    "trackers",
+    "side-panel",
+    "live-data",
+    "openui",
+    "mcp",
+    "data-visualization"
+  ],
+  "author": {
+    "name": "Muhammad Ahsan",
+    "github": "ahsan7162",
+    "url": "https://github.com/ahsan7162"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "code-and-reviews"
+  ],
+  "screenshots": [
+    "./screenshots/dashboards/dashboard.png",
+    "./screenshots/dashboards/card-in-reply.png",
+    "./screenshots/dashboards/live-data.png",
+    "./screenshots/dashboards/edit-mode.png"
+  ],
+  "overview": "./overview/dashboards.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/ahsan7162/bb-plugin-dashboards.git",
+      "range": "^0.1.0"
+    }
+  }
+}
