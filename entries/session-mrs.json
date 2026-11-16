@@ -1,0 +1,17 @@
+{
+  "id": "session-mrs",
+  "displayName": "Session MRs",
+  "description": "Shows the merge and pull requests a thread opened, with live state and pipeline status, in the thread context card and Info tab. It finds each GitLab MR or GitHub PR that the thread's own commands created (glab mr create, gh pr create, git push -o merge_request.create), lists it with a Draft, Open, Merged or Closed chip and a pass, fail or running pipeline mark, and opens it on click. Rows refresh every minute and from a refresh button; agents get bb session-mrs list and bb session-mrs status <url>. Read-only: it needs glab and/or gh logged in on the machine that runs the BB server.",
+  "icon": "GitMerge",
+  "tags": ["merge-requests", "pull-requests", "gitlab", "github", "ci-status", "code-review", "thread-context"],
+  "author": { "name": "JonniK", "github": "JonniK" },
+  "category": "code-and-reviews",
+  "screenshots": ["./screenshots/session-mrs/context-card.jpg", "./screenshots/session-mrs/info-tab.jpg"],
+  "overview": "./overview/session-mrs.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/jonnik-bb-plugins/bb-plugin-session-mrs.git",
+      "range": "^0.1.0"
+    }
+  }
+}
