@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <title>Sync between computers</title>
+  <rect x="2" y="11" width="10" height="8" rx="1.5"/>
+  <path d="M7 19v2M1 21h12"/>
+  <rect x="20" y="11" width="10" height="8" rx="1.5"/>
+  <path d="M25 19v2M19 21h12M9 6h14l-3-3M23 6l-3 3M23 26H9l3-3M9 26l3 3"/>
+</svg>
