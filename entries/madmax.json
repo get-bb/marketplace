@@ -1,7 +1,7 @@
 {
   "id": "madmax",
   "displayName": "Madmax",
-  "description": "Run a coordinated swarm of coding agents: one Mayor thread plans work in a Beads ledger and slings each task to a worker in its own worktree. Verified work lands as a pushed branch with its bead moved to review, and merges stay yours. Adversarial reviews run lite or one-reviewer-per-lens with confidence-rated findings, and other people's pull requests come back with a drafted approve, comment, or request-changes response. A Town Hall board shows every bead blocked, ready, in flight, or in review, and scheduled patrols sweep for cruft and security issues. Requires BB 0.49+, the Beads CLI (bd) on the BB host, git, and an authenticated GitHub CLI.",
+  "description": "Run a coordinated swarm of coding agents: one Mayor thread plans work in a Beads ledger and slings each task to a worker in its own worktree. Verified work lands as a pushed branch with its bead moved to review, and merges stay yours \u2014 merged PRs close their own beads and archive their threads. Polecats review their own work in their own worktree; adversarial reviews run lite or one-reviewer-per-lens. GitHub, GitLab, and Gitea/Forgejo rigs are all supported (auto-detected per rig, or pinned). A Town Hall board shows every bead, and patrols sweep for cruft and security issues. Requires BB 0.49+ and the Beads CLI (bd) on the BB host.",
   "icon": "Landmark",
   "tags": [
     "multi-agent",
@@ -27,7 +27,7 @@
   "source": {
     "git": {
       "url": "https://github.com/jgnagy/bb-plugin-madmax.git",
-      "range": ">=0.4.0"
+      "range": ">=0.5.1"
     }
   },
   "overview": "./overview/madmax.md"
