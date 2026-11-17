@@ -4,7 +4,7 @@
 - Values appear the way Excel saved them: currency, percentages, and dates keep their number formats, and numbers are right-aligned.
 - Merged cells, column widths from the file, and hidden rows, columns, and sheets are respected.
 - Hover a cell to see its formula and any cell note. A formula with no saved result, common in files written by scripts and agents, shows its formula text instead of an empty cell.
-- Right-click a column letter to freeze the columns up to it, so labels stay in view while you scroll right. Each sheet keeps its own frozen columns while the file is open.
+- Right-click a cell to freeze the rows above and columns left of it, including its own, so headers and labels stay in view while you scroll. Right-click a row number or column letter to freeze just rows or just columns. Each sheet keeps its own frozen panes while the file is open.
 - The grid uses your BB theme's colors and switches with light and dark mode. The file's own cell fills are not drawn.
 
 ## Formats and limits
