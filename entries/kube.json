@@ -1,0 +1,27 @@
+{
+  "id": "kube",
+  "displayName": "Kubernetes",
+  "description": "Shows your Kubernetes clusters in the bb sidebar, so you can spot a failing pod, read its logs and restart it without leaving the thread. Agents that deploy post a live card in the thread that shows which deployments restarted and which pods are still old. ArgoCD sync and health, node CPU, memory and disk, and PVC fill levels are one click away, along with port-forwards to any pod or service. Runs your own kubectl and kubeconfig; live CPU and memory need metrics-server in the cluster.",
+  "icon": { "url": "./icons/kube-e4beb981.svg" },
+  "screenshots": [
+    "./screenshots/kube/pods.png",
+    "./screenshots/kube/rollout-card.png",
+    "./screenshots/kube/nodes.png",
+    "./screenshots/kube/argocd.png"
+  ],
+  "overview": "./overview/kube.md",
+  "tags": ["kubernetes", "k8s", "kubectl", "argocd", "pods", "deployments", "devops", "port-forward", "rollout", "sre"],
+  "author": {
+    "name": "Amal Agishev",
+    "github": "WTTeneger",
+    "url": "https://github.com/WTTeneger"
+  },
+  "category": "utilities",
+  "secondaryCategories": ["thread-content"],
+  "source": {
+    "git": {
+      "url": "https://github.com/WTTeneger/bb-plugin-kube.git",
+      "range": "^0.1.0"
+    }
+  }
+}
