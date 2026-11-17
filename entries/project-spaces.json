@@ -1,13 +1,14 @@
 {
   "id": "project-spaces",
   "displayName": "Project Spaces",
-  "description": "Keep related repositories and their chats together in one project space. Start common or project chats, move or copy threads, and track questions, failures and finished work in the sidebar. Add shared materials with ai-workspace and code queries across repositories with Repowise; both require separate optional CLIs. Requires BB 0.49+; the interface is Russian, and ai-workspace installation downloads verified binaries from GitHub. Chats use your configured agent account or quota.",
+  "description": "Keep related repositories, shared context and chats in one space. Use ai-workspace for shared files, notes and groups, and Repowise for code queries across repositories. Install or update both optional CLIs per device from settings; downloads use GitHub and PyPI and can include uv and Python. Organize common and project threads, manage compact AGENTS.md blocks, and track pending input in the sidebar. Requires BB 0.49+; the interface is Russian, and chats use your configured agent account or quota.",
   "icon": {
     "url": "./icons/project-spaces-95b96765.svg"
   },
   "screenshots": [
     "./screenshots/project-spaces/space-and-inline-chat.png",
-    "./screenshots/project-spaces/context-settings.png"
+    "./screenshots/project-spaces/context-settings.png",
+    "./screenshots/project-spaces/agent-context.png"
   ],
   "overview": "./overview/project-spaces.md",
   "tags": [
@@ -16,7 +17,8 @@
     "sidebar",
     "shared-context",
     "ai-workspace",
-    "repowise"
+    "repowise",
+    "agents-md"
   ],
   "author": {
     "name": "ichinya",
@@ -30,7 +32,7 @@
   "source": {
     "git": {
       "url": "https://github.com/ichinya/bb-project-space.git",
-      "range": "^0.1.19"
+      "range": "^0.2.0"
     }
   }
 }
