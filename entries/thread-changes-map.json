@@ -1,0 +1,34 @@
+{
+  "id": "thread-changes-map",
+  "displayName": "Thread Changes Map",
+  "description": "See which parts of your system a thread's work touches, on a live diagram that redraws after every turn. Each part carries a tag: new, changed, impacted, or removed. Progress from the thread's plan bar fills the parts that each step builds, and flows play hop by hop to show what moves between parts. A second copy of the map opens as a browser page for another screen. A hidden mapper thread keeps the map current, so each update uses tokens on your provider; requires bb 0.48 or later.",
+  "icon": "Workflow",
+  "screenshots": [
+    "./screenshots/thread-changes-map/thread-tab.png",
+    "./screenshots/thread-changes-map/browser-page.png"
+  ],
+  "overview": "./overview/thread-changes-map.md",
+  "tags": [
+    "architecture",
+    "diagram",
+    "system-map",
+    "change-impact",
+    "code-changes",
+    "flows",
+    "live-map",
+    "visualization",
+    "plan-progress"
+  ],
+  "author": {
+    "name": "Jason Paul Deland",
+    "github": "jaydeland",
+    "url": "https://github.com/jaydeland"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/jaydeland/bb-plugin-thread-changes-map.git",
+      "range": "^0.1.1"
+    }
+  }
+}
