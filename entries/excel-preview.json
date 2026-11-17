@@ -1,0 +1,36 @@
+{
+  "id": "excel-preview",
+  "displayName": "Excel Preview",
+  "description": "Opens Excel and OpenDocument spreadsheets in BB's file panel as a read-only grid in your theme's colors. Sheet tabs run along the bottom, column letters and row numbers stay in view, and currency, percent, and date formats display as the file saved them. Right-click a cell, row number, or column letter to freeze rows and columns while you scroll. Hover a cell for its formula and note; a formula a script wrote but never calculated shows its formula text instead of a blank cell. Reads .xlsx, .xlsm, .xlsb, .xls, and .ods files up to 25 MB, showing the first 2,000 rows of each sheet, with no account or external service.",
+  "icon": {
+    "url": "./icons/excel-preview-31bd5634.svg"
+  },
+  "tags": [
+    "spreadsheet",
+    "xlsm",
+    "xlsx",
+    "xls",
+    "ods",
+    "workbook",
+    "viewer",
+    "tables"
+  ],
+  "author": {
+    "name": "bottlebrushes",
+    "github": "bottlebrushes",
+    "url": "https://github.com/bottlebrushes"
+  },
+  "category": "file-viewers-and-editors",
+  "overview": "./overview/excel-preview.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/bottlebrushes/bb-plugin-excel-preview.git",
+      "range": "^0.2.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/excel-preview/workbook-dark.png",
+    "./screenshots/excel-preview/long-sheet.png",
+    "./screenshots/excel-preview/workbook-light.png"
+  ]
+}
