@@ -18,7 +18,6 @@
 ## Requirements and costs
 
 - bb 0.49 or later. No account and no outside service of the plugin's own: the plugin itself contacts only the web MCP servers you add. Pull request data comes through bb's built-in GitHub pull request plugin, and an approved script reaches whatever its text reaches.
-- Measured with the Claude Code provider: an idle thread costs about 17 more tokens; the three tool definitions (921 tokens) and the authoring guide (about 10,500 characters) come in when an agent uses them; one measured build added about 18,400 tokens to its thread. Other providers are not measured.
 - Viewing, filtering and refreshing cost no model call. Each change, Edit request, AskAgent click or agent-source refresh is one agent turn.
 - Tested on macOS only. Scripts are not supported on Windows. Connections with a token need the system's secure store; the Windows and Linux stores are untested, and Linux needs `secret-tool` with a keyring.
 - No telemetry of its own. OpenUI's runtime usage report stays off unless `OPENUI_RUNTIME_TELEMETRY_ENABLED` is set.
