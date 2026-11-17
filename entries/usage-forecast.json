@@ -8,8 +8,9 @@
   "screenshots": [
     "./screenshots/usage-forecast/band.png",
     "./screenshots/usage-forecast/expanded.png",
-    "./screenshots/usage-forecast/band-light.png",
-    "./screenshots/usage-forecast/expanded-light.png"
+    "./screenshots/usage-forecast/sidebar-card.png",
+    "./screenshots/usage-forecast/context-card.png",
+    "./screenshots/usage-forecast/settings.png"
   ],
   "overview": "./overview/usage-forecast.md",
   "tags": [
