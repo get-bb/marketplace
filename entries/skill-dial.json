@@ -1,0 +1,34 @@
+{
+  "id": "skill-dial",
+  "displayName": "Skill Dial",
+  "description": "Run your go-to skills in one tap from chips beside the send button, instead of typing them through the / menu each time. Each chip either drops its skill, with preset arguments, into your draft or sends it right away. Select text in the chat or in your draft first, and the chip passes it to the skill as the argument. Add as many chips as you need in the plugin settings; they scroll sideways, fold into one toggle, and shrink to emoji on phones. Needs no account or external service.",
+  "icon": {
+    "url": "./icons/skill-dial-3b687179.svg"
+  },
+  "tags": [
+    "skills",
+    "composer",
+    "shortcuts",
+    "slash-commands",
+    "speed-dial",
+    "quick-actions"
+  ],
+  "author": {
+    "name": "JonniK",
+    "github": "JonniK",
+    "url": "https://github.com/JonniK"
+  },
+  "category": "thread-content",
+  "overview": "./overview/skill-dial.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/jonnik-bb-plugins/bb-plugin-skill-dial.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/skill-dial/composer-insert.jpg",
+    "./screenshots/skill-dial/selection-in-draft.jpg",
+    "./screenshots/skill-dial/settings.jpg"
+  ]
+}
