@@ -1,9 +1,22 @@
 {
   "id": "backdrop",
   "displayName": "Backdrop",
-  "description": "Tells your projects apart at a glance with a quiet wallpaper drawn from what each project is about. Codex reads the project's README and manifest, picks a few motifs, and draws a tiling line pattern that bb shows behind every thread and subthread of that project. The same image shows as dark lines in day mode and light lines in night mode, with a separate opacity for each. Regenerate with your own direction, change size and tint, or import your own pattern from Settings, the thread menu, or the bb backdrop command that agents can run. Needs the Codex CLI signed in on the bb server; each background is one Codex run of about a minute, and the README text goes to your Codex provider.",
-  "icon": { "url": "./icons/backdrop-7554e02f.svg" },
-  "tags": ["background", "wallpaper", "per-project", "pattern", "codex", "image-generation", "dark-mode", "monochrome"],
+  "description": "Tells your projects apart at a glance with a quiet wallpaper drawn from what each project is about. An image model reads the project's README and manifest, picks a few motifs, and draws a tiling line pattern that bb shows behind every thread and subthread of that project. The same image shows as dark lines in day mode and light lines in night mode, with a separate opacity for each. Draw with the Codex CLI, the OpenAI or Gemini image APIs, or your own command, and regenerate, tune or import patterns from Settings, the thread menu, or the bb backdrop command that agents can run. Needs one provider set up on the bb server: a signed-in Codex CLI, an OpenAI or Gemini API key billed per image, or a local command; the README text goes to the provider you choose.",
+  "icon": {
+    "url": "./icons/backdrop-7554e02f.svg"
+  },
+  "tags": [
+    "background",
+    "wallpaper",
+    "per-project",
+    "pattern",
+    "codex",
+    "openai",
+    "gemini",
+    "image-generation",
+    "dark-mode",
+    "monochrome"
+  ],
   "author": {
     "name": "Vitalii Ionov",
     "github": "vitalio-sh",
@@ -19,7 +32,7 @@
   "source": {
     "git": {
       "url": "https://github.com/vitalio-sh/bb-plugin-backdrop.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   }
 }
