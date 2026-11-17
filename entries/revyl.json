@@ -1,0 +1,37 @@
+{
+  "id": "revyl",
+  "displayName": "Revyl",
+  "description": "Builds and tests your iOS apps on Revyl's cloud from a bb thread, with the agent's cloud device live beside the chat. Turn on Test on Revyl in a thread's composer and its Claude Code, Codex or Cursor agent builds on Revyl's runners and proves its change with Revyl tests. When the agent starts a cloud device, a side pane opens and streams it live, with each tap and swipe the agent sends. Builds and test runs show live above the composer, and each run's report carries its video and steps. The agent pins its test results and device screenshots in its reply. Needs a Revyl account with device minutes and the Revyl CLI on the bb server's machine. Verified on iOS; Android is not verified yet. Unofficial; not affiliated with Revyl.",
+  "icon": {
+    "url": "./icons/revyl-c3002e31.png"
+  },
+  "screenshots": [
+    "./screenshots/revyl/thread.png",
+    "./screenshots/revyl/report.png",
+    "./screenshots/revyl/page.png"
+  ],
+  "overview": "./overview/revyl.md",
+  "tags": [
+    "ios",
+    "mobile-testing",
+    "ui-testing",
+    "e2e-testing",
+    "cloud-devices",
+    "cloud-builds",
+    "simulator",
+    "android",
+    "qa"
+  ],
+  "author": {
+    "name": "Vedran Burojević",
+    "github": "vburojevic",
+    "url": "https://github.com/vburojevic"
+  },
+  "category": "cloud-and-remote",
+  "source": {
+    "git": {
+      "url": "https://github.com/vburojevic/bb-plugin-revyl.git",
+      "range": ">=0.2.6"
+    }
+  }
+}
