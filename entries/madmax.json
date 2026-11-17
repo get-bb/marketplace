@@ -1,0 +1,42 @@
+{
+  "id": "madmax",
+  "displayName": "Madmax",
+  "description": "Run a coordinated swarm of coding agents: one Mayor thread plans work in a Beads ledger and slings each task to a worker in its own worktree. Verified work lands as a pushed branch with its bead moved to review, and merges stay yours \u2014 merged PRs close their own beads and archive their threads. Polecats review their own work in their own worktree; adversarial reviews run lite or one-reviewer-per-lens. GitHub, GitLab, and Gitea/Forgejo rigs are all supported (auto-detected per rig, or pinned). A Town Hall board shows every bead, and patrols sweep for cruft and security issues. Requires BB 0.49+ and the Beads CLI (bd) on the BB host.",
+  "icon": {
+    "url": "./icons/madmax.svg"
+  },
+  "tags": [
+    "multi-agent",
+    "agents",
+    "orchestration",
+    "beads",
+    "code-review",
+    "pull-requests",
+    "worktrees",
+    "automation",
+    "task-tracking"
+  ],
+  "author": {
+    "name": "Jonathan Gnagy",
+    "github": "jgnagy",
+    "url": "https://github.com/jgnagy"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "tasks-and-workflows",
+    "code-and-reviews"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/jgnagy/bb-plugin-madmax.git",
+      "range": ">=0.6.1"
+    }
+  },
+  "overview": "./overview/madmax.md",
+  "screenshots": [
+    "./screenshots/madmax/townhall.png",
+    "./screenshots/madmax/mayor-thread.png",
+    "./screenshots/madmax/polecat-midwork.png",
+    "./screenshots/madmax/review-dispatched.png"
+  ]
+}
