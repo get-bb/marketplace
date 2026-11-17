@@ -25,5 +25,8 @@
       "range": "*"
     }
   },
-  "overview": "./overview/link-tooltips.md"
+  "overview": "./overview/link-tooltips.md",
+  "screenshots": [
+    "./screenshots/link-tooltips/hover-url.png"
+  ]
 }
