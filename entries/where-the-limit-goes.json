@@ -1,7 +1,7 @@
 {
   "id": "where-the-limit-goes",
   "displayName": "Usage & Limits",
-  "description": "Check whether your quota will last, then open the threads behind your token usage. Supports connected Codex and Claude Code accounts, Codex manual reset balances and a separate GitHub Actions view for the author’s account.",
+  "description": "See whether your quota will last and which threads or recurring jobs used the most tokens. View connected Codex and Claude Code accounts, Codex manual resets and a separate GitHub Actions view for the author’s account.",
   "icon": "Gauge",
   "tags": [
     "codex",

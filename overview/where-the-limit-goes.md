@@ -4,7 +4,7 @@ Open Usage before you start a long run. Read your remaining allowance, the time 
 
 ## See where the tokens went
 
-Switch to Threads, choose five hours or seven days, and open the conversation behind a spike. The breakdown uses local session logs, including cache tokens. The provider reports subscription quota separately.
+Switch to Threads, choose five hours or seven days, and open the conversation behind a spike. Repeated runs of a routine share one row, making it easier to spot the cumulative cost in tokens of a scheduled job. Open it to inspect the latest run. Model names and subagent counts appear when available. The breakdown uses local session logs, including cache tokens. The provider reports subscription quota separately.
 
 ## Use your connected accounts
 
