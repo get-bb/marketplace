@@ -1,7 +1,7 @@
 {
   "id": "thread-list-by-day",
-  "displayName": "Claude-Like Threads",
-  "description": "The BB sidebar grouped into Today, Yesterday, recent dates and Older, with pinned threads, custom sections and the original row controls.",
+  "displayName": "Thread list by day",
+  "description": "The BB thread list with collapsible Today, Yesterday, recent dates and Older. Keeps BB's original thread rows, pinned threads, custom sections and menus.",
   "icon": "List",
   "tags": [
     "sidebar",
@@ -17,7 +17,7 @@
   "source": {
     "git": {
       "url": "https://github.com/startsevdev/bb-plugin-thread-list-by-day.git",
-      "range": "^0.1.1"
+      "range": "^0.1.0"
     }
   }
 }
