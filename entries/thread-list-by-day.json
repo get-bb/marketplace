@@ -1,7 +1,7 @@
 {
   "id": "thread-list-by-day",
   "displayName": "Claude-Like Threads",
-  "description": "Pick up work across projects from one BB sidebar. Find conversations under Today, Yesterday or an earlier date, keep pinned threads close and expand older days when you need them.",
+  "description": "One timeline across BB projects, newest activity first. Running threads appear in Today. Jump back by date, collapse a day, or expand older history while keeping your pins, drag-and-drop and thread menus.",
   "icon": "List",
   "tags": [
     "sidebar",
