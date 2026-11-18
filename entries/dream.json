@@ -1,0 +1,29 @@
+{
+  "id": "dream",
+  "displayName": "Dream",
+  "description": "Keep every Claude Code project's memory consolidated overnight, as Claude Code's own auto-dream would if it ran in bb. Each dream is a hidden thread that can read anything but write only that project's memory files, and a project's first dream is a dry run you review as a diff, then apply or discard. The memory is backed up before every change, and the Dream page shows each project's memory, why it is or is not due, the dry runs waiting for you and the history of dreams. The schedule is off until you turn it on. Each dream is one model run on your Claude Code account; requires bb 0.49 or later, macOS or Linux, and Claude Code signed in on the machine dreams run on.",
+  "icon": "Brain",
+  "tags": ["memory", "claude-code", "auto-dream", "consolidation", "memory-md", "overnight", "schedule", "dry-run", "backups"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "memory-and-context",
+  "screenshots": [
+    "./screenshots/dream/page.png",
+    "./screenshots/dream/proposal.png",
+    "./screenshots/dream/history.png",
+    "./screenshots/dream/project.png",
+    "./screenshots/dream/settings.png"
+  ],
+  "overview": "./overview/dream.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "dream",
+      "tagPrefix": "dream/",
+      "range": "^0.1.0"
+    }
+  }
+}
