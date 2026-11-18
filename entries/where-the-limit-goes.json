@@ -1,7 +1,7 @@
 {
   "id": "where-the-limit-goes",
-  "displayName": "Usage & Limits",
-  "description": "See where your thread usage goes, how much quota remains and when it resets for Codex and Claude Code. Track GitHub Actions monthly compute separately; the original billing block is tied to the author’s account.",
+  "displayName": "Where the limit goes",
+  "description": "Shows remaining Codex quota, reset times, pace forecasts and thread-level token shares. Reads BB usage and local Codex logs. Its separate GitHub Actions block is specific to the author's GitHub account.",
   "icon": "Gauge",
   "tags": [
     "codex",
@@ -17,7 +17,7 @@
   "source": {
     "git": {
       "url": "https://github.com/startsevdev/bb-plugin-where-the-limit-goes.git",
-      "range": "^0.1.1"
+      "range": "^0.1.0"
     }
   }
 }
