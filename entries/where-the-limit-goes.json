@@ -16,7 +16,7 @@
   "category": "token-usage-and-limits",
   "source": {
     "git": {
-      "url": "https://github.com/startsevdev/bb-plugin-where-the-limit-goes.git",
+      "url": "https://github.com/startsevdev/bb-plugin-usage-and-limits.git",
       "range": "^0.1.4"
     }
   }
