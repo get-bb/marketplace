@@ -16,7 +16,7 @@
   "category": "thread-management",
   "source": {
     "git": {
-      "url": "https://github.com/startsevdev/bb-plugin-thread-list-by-day.git",
+      "url": "https://github.com/startsevdev/bb-plugin-claude-like-threads.git",
       "range": "^0.1.2"
     }
   }
