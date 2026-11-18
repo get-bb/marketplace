@@ -1,0 +1,31 @@
+{
+  "id": "thread-prs",
+  "displayName": "Thread PR Manager",
+  "description": "Manage pull requests across a thread and its child threads. See checks, review status and unresolved conversations beside the composer. Open diffs, retry eligible GitHub Actions jobs, request Copilot review, change draft status or confirm a merge from the PR list. Turn on Auto-fix for a PR to send its owning agent up to three requests for failed checks, new review feedback or merge conflicts. Sign in to the GitHub CLI on each thread machine and install Focus Board if you want to include explicitly linked PRs. CI retries can use GitHub Actions minutes, Copilot reviews use Copilot quota, and Auto-fix uses your agent provider’s quota or billing.",
+  "icon": "GitPullRequest",
+  "tags": [
+    "pull-requests",
+    "github",
+    "ci",
+    "review-comments",
+    "agents",
+    "auto-fix"
+  ],
+  "author": {
+    "name": "Artem Korotkikh",
+    "github": "artkorotkikh-dfinity",
+    "url": "https://github.com/artkorotkikh-dfinity"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/artkorotkikh-dfinity/bb-plugin-thread-prs.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/thread-prs/overview.jpg",
+    "./screenshots/thread-prs/settings.jpg"
+  ],
+  "overview": "./overview/thread-prs.md"
+}
