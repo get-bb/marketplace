@@ -1,7 +1,7 @@
 {
   "id": "where-the-limit-goes",
   "displayName": "Usage & Limits",
-  "description": "View remaining quota and thread usage for connected Codex and Claude Code accounts, including the Codex manual reset balance. The original GitHub Actions block shows monthly compute for the author’s account.",
+  "description": "Check whether your quota will last, then open the threads behind your token usage. Supports connected Codex and Claude Code accounts, Codex manual reset balances and a separate GitHub Actions view for the author’s account.",
   "icon": "Gauge",
   "tags": [
     "codex",
@@ -19,5 +19,10 @@
       "url": "https://github.com/startsevdev/bb-plugin-usage-and-limits.git",
       "range": "^0.1.4"
     }
-  }
+  },
+  "overview": "./overview/where-the-limit-goes.md",
+  "screenshots": [
+    "./screenshots/where-the-limit-goes/cover.png",
+    "./screenshots/where-the-limit-goes/threads.png"
+  ]
 }
