@@ -22,11 +22,11 @@
   },
   "overview": "./overview/where-the-limit-goes.md",
   "screenshots": [
-    "./screenshots/where-the-limit-goes/cover.png",
-    "./screenshots/where-the-limit-goes/threads.png",
-    "./screenshots/where-the-limit-goes/providers.png",
-    "./screenshots/where-the-limit-goes/pace.png",
-    "./screenshots/where-the-limit-goes/banked.png",
-    "./screenshots/where-the-limit-goes/routines.png"
+    "./screenshots/where-the-limit-goes/cover.webp",
+    "./screenshots/where-the-limit-goes/threads.webp",
+    "./screenshots/where-the-limit-goes/providers.webp",
+    "./screenshots/where-the-limit-goes/pace.webp",
+    "./screenshots/where-the-limit-goes/banked.webp",
+    "./screenshots/where-the-limit-goes/routines.webp"
   ]
 }
