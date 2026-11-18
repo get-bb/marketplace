@@ -1,7 +1,7 @@
 {
   "id": "thread-list-by-day",
   "displayName": "Claude-Like Threads",
-  "description": "The BB thread list with collapsible Today, Yesterday, recent dates and Older. Keeps BB's original thread rows, pinned threads, custom sections and menus.",
+  "description": "Pick up work across projects from one BB sidebar. Find conversations under Today, Yesterday or an earlier date, keep pinned threads close and expand older days when you need them.",
   "icon": "List",
   "tags": [
     "sidebar",
@@ -19,5 +19,9 @@
       "url": "https://github.com/startsevdev/bb-plugin-claude-like-threads.git",
       "range": "^0.1.2"
     }
-  }
+  },
+  "overview": "./overview/thread-list-by-day.md",
+  "screenshots": [
+    "./screenshots/thread-list-by-day/cover.png"
+  ]
 }
