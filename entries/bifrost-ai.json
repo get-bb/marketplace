@@ -1,0 +1,32 @@
+{
+  "id": "bifrost-ai",
+  "displayName": "Bifrost AI",
+  "description": "Points bb's thread titles and commit messages at your own Bifrost gateway, so titles run on the models your gateway already routes. Set the model per task, and rotate the virtual key without touching a provider login.",
+  "icon": "Zap",
+  "tags": [
+    "bifrost",
+    "gateway",
+    "thread-titles",
+    "commit-messages",
+    "llm-gateway",
+    "ai-service",
+    "self-hosted",
+    "routing"
+  ],
+  "author": {
+    "name": "Steve Frost",
+    "github": "steveafrost"
+  },
+  "category": "agents-and-providers",
+  "screenshots": [
+    "./screenshots/bifrost-ai/ai-services.jpg",
+    "./screenshots/bifrost-ai/plugin-settings.jpg"
+  ],
+  "overview": "./overview/bifrost-ai.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/steveafrost/bb-plugin-bifrost-ai.git",
+      "range": ">=0.1.0"
+    }
+  }
+}
