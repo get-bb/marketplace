@@ -1,0 +1,32 @@
+{
+  "id": "codex-quota",
+  "displayName": "Codex Quota",
+  "description": "See how much Codex quota is left and when it resets. Hover beside the BB context meter for five-hour, weekly or other limits reported by your account. Requires BB’s Codex provider and Codex CLI signed in with a ChatGPT subscription.",
+  "icon": {
+    "url": "./icons/codex-quota-3d9076e6.svg"
+  },
+  "tags": [
+    "codex",
+    "usage-limits",
+    "quota",
+    "subscription",
+    "reset-countdown"
+  ],
+  "author": {
+    "name": "aiBabai",
+    "github": "ai-babai",
+    "url": "https://github.com/ai-babai"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/ai-babai/bb-plugin-codex-quota.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/codex-quota.md",
+  "screenshots": [
+    "./screenshots/codex-quota/footer-dark.png",
+    "./screenshots/codex-quota/quota-light.png"
+  ]
+}
