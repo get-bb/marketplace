@@ -22,10 +22,10 @@
   },
   "overview": "./overview/thread-list-by-day.md",
   "screenshots": [
-    "./screenshots/thread-list-by-day/cover.png",
-    "./screenshots/thread-list-by-day/activity.png",
-    "./screenshots/thread-list-by-day/history.png",
-    "./screenshots/thread-list-by-day/focus.png",
-    "./screenshots/thread-list-by-day/sorting.png"
+    "./screenshots/thread-list-by-day/cover.webp",
+    "./screenshots/thread-list-by-day/activity.webp",
+    "./screenshots/thread-list-by-day/history.webp",
+    "./screenshots/thread-list-by-day/focus.webp",
+    "./screenshots/thread-list-by-day/sorting.webp"
   ]
 }
