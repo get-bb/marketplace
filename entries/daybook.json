@@ -1,0 +1,11 @@
+{
+  "id": "daybook",
+  "displayName": "Daybook",
+  "description": "A Claude-style sidebar for working across projects. Find conversations under Today, Yesterday and earlier dates, filter by recent project, and see how much quota remains in each provider window and when it resets in your time zone.",
+  "icon": "CalendarDays",
+  "tags": ["sidebar", "threads", "projects", "quota", "reset-times"],
+  "author": { "name": "Alexander Startsev", "github": "startsevdev", "url": "https://github.com/startsevdev" },
+  "category": "thread-management",
+  "secondaryCategories": ["token-usage-and-limits"],
+  "source": { "git": { "url": "https://github.com/startsevdev/bb-plugin-daybook.git", "range": "^1.0.0" } }
+}
