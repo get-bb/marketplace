@@ -1,0 +1,24 @@
+{
+  "id": "spaces",
+  "displayName": "Spaces",
+  "description": "Show only the projects you are working on by switching the sidebar between spaces such as Work and Personal. Each space has a name, an icon, its own projects and an optional sidebar tint; pick one from the menu in the sidebar header or press Ctrl+Alt+1 to 9 (⌃⌥ on macOS), and it reopens the thread you last had open there. All projects shows everything again. Edit Spaces sets each space's projects, icon, tint and order, turns folders dragged in from Explorer or Finder into projects, and keeps a project in no space visible in every space. `bb space` switches from a terminal or an agent. Needs bb 0.49 or later with the bundled Thread list plugin, and an active space groups the thread list by project.",
+  "icon": "Layers",
+  "screenshots": [
+    "./screenshots/spaces/switcher-menu.png",
+    "./screenshots/spaces/edit-spaces.png"
+  ],
+  "overview": "./overview/spaces.md",
+  "tags": ["workspaces", "sidebar", "projects", "focus", "profiles", "project-switcher", "work-personal", "keyboard", "arc"],
+  "author": {
+    "name": "Siarhei Tarasenka",
+    "github": "tarasenko-by",
+    "url": "https://github.com/tarasenko-by"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/tarasenko-by/bb-plugin-spaces.git",
+      "range": "^0.4.1"
+    }
+  }
+}

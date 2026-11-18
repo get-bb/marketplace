@@ -1,0 +1,32 @@
+{
+  "id": "decisions",
+  "displayName": "Decisions",
+  "description": "Gets a probability for a typed question, and keeps the TypeSafe API key in one place. A thread or another plugin sends state and questions and gets probabilities back. The Decisions page shows ask counts, callers, cost, and yes/no confidence for 24 hours, 7 days, or 30 days. Named asks stay in the plugin database, and the inbox sends the ask marked in use. A TypeSafe API key is required, and the page prices input tokens at $0.042 per million.",
+  "icon": "Scale",
+  "screenshots": [
+    "./screenshots/decisions/activity.png",
+    "./screenshots/decisions/question.png"
+  ],
+  "overview": "./overview/decisions.md",
+  "tags": [
+    "typesafe",
+    "jev",
+    "classification",
+    "probabilities",
+    "yes-no",
+    "cost",
+    "callers"
+  ],
+  "author": {
+    "name": "Robert Sinke",
+    "github": "robertsinke",
+    "url": "https://robert.md"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/robertsinke/bb-plugin-decisions.git",
+      "range": "^0.1.0"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "next-step",
+  "displayName": "Следующий шаг",
+  "description": "Turn a finished Codex answer into an editable next request. Accept one suggestion with Tab or a tap, then edit and send it yourself. Dismiss it with Esc; existing drafts and attachments stay intact. Requires BB 0.49+ and an installed, signed-in Codex CLI; each generated suggestion uses additional Codex quota.",
+  "icon": {
+    "url": "./icons/next-step-6d512bd0.svg"
+  },
+  "screenshots": [
+    "./screenshots/next-step/suggestion.png",
+    "./screenshots/next-step/settings.png"
+  ],
+  "overview": "./overview/next-step.md",
+  "tags": [
+    "codex",
+    "autocomplete",
+    "suggestions",
+    "composer",
+    "keyboard"
+  ],
+  "author": {
+    "name": "rutracker152",
+    "github": "rutracker152",
+    "url": "https://github.com/rutracker152"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/rutracker152/bb-plugin-next-step.git",
+      "ref": "b650928fb34c8d146edfa332b53c6aabebccc9d3"
+    }
+  }
+}

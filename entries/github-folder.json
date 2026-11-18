@@ -1,0 +1,33 @@
+{
+  "id": "github-folder",
+  "displayName": "GitHub Folder",
+  "description": "The open GitHub pull requests that need you, as a folder at the top of the sidebar: review requests, then your own PRs with changes requested, failing checks or conflicts, and the ones ready to merge. Click a PR to start a thread with its title, status, branch and description as context, in the project whose remote is that repository. Snooze a PR until it changes, and pick sources, drafts and organizations. Reads GitHub through the gh CLI on the bb server; Thread Tree draws the folder in its own list when installed.",
+  "icon": {
+    "url": "./icons/github-folder-91ac9888.svg"
+  },
+  "overview": "./overview/github-folder.md",
+  "tags": [
+    "github",
+    "pull-requests",
+    "code-review",
+    "sidebar",
+    "gh"
+  ],
+  "author": {
+    "name": "Dmitrii Maksimov",
+    "github": "kartollikaa",
+    "url": "https://github.com/kartollikaa"
+  },
+  "category": "code-and-reviews",
+  "secondaryCategories": [
+    "thread-management"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/kartollikaa/bb-plugins.git",
+      "subdir": "plugins/github-folder",
+      "range": "^0.1.0",
+      "tagPrefix": "github-folder/"
+    }
+  }
+}

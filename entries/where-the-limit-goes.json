@@ -1,0 +1,32 @@
+{
+  "id": "where-the-limit-goes",
+  "displayName": "Usage & Limits",
+  "description": "See whether your quota will last and which threads or recurring jobs used the most tokens. View connected Codex and Claude Code accounts, Codex manual resets and a separate GitHub Actions view for the author’s account.",
+  "icon": "Gauge",
+  "tags": [
+    "codex",
+    "limits",
+    "reset-times"
+  ],
+  "author": {
+    "name": "Alexander Startsev",
+    "github": "startsevdev",
+    "url": "https://github.com/startsevdev"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/startsevdev/bb-plugin-usage-and-limits.git",
+      "range": "^0.1.4"
+    }
+  },
+  "overview": "./overview/where-the-limit-goes.md",
+  "screenshots": [
+    "./screenshots/where-the-limit-goes/cover.png",
+    "./screenshots/where-the-limit-goes/threads.png",
+    "./screenshots/where-the-limit-goes/providers.png",
+    "./screenshots/where-the-limit-goes/pace.png",
+    "./screenshots/where-the-limit-goes/banked.png",
+    "./screenshots/where-the-limit-goes/routines.png"
+  ]
+}

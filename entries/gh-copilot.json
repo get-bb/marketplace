@@ -21,7 +21,7 @@
   "source": {
     "git": {
       "url": "https://github.com/ai-ecoverse/bb-gh-copilot.git",
-      "range": "^0.4.0"
+      "range": "^1.0.0"
     }
   }
 }

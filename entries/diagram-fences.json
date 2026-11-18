@@ -1,0 +1,40 @@
+{
+  "id": "diagram-fences",
+  "displayName": "Diagram Fences",
+  "description": "Draws PlantUML, Graphviz, D2 and the rest of the Kroki diagram family in chat and in Markdown file previews. Mermaid stays with bb. PlantUML and D2 install from the plugin's settings screen; Graphviz uses dot when it exists and a bundled WASM renderer otherwise. Diagrams go to kroki.io only when no local engine can draw them, and a self-hosted Kroki URL can replace it. Diagram source is capped at 64 KB and every render is cached.",
+  "icon": {
+    "url": "./icons/diagram-fences-07a1ee9b.svg"
+  },
+  "tags": [
+    "plantuml",
+    "graphviz",
+    "d2",
+    "diagrams",
+    "uml",
+    "diagram-as-code",
+    "kroki",
+    "structurizr",
+    "dot",
+    "markdown"
+  ],
+  "author": {
+    "name": "Artur",
+    "github": "architawr",
+    "url": "https://github.com/architawr"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "file-viewers-and-editors"
+  ],
+  "screenshots": [
+    "./screenshots/diagram-fences/markdown-preview.jpg",
+    "./screenshots/diagram-fences/engine-settings.jpg"
+  ],
+  "overview": "./overview/diagram-fences.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/architawr/bb-plugin-diagram-fences.git",
+      "range": "^0.2.0"
+    }
+  }
+}

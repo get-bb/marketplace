@@ -24,7 +24,7 @@ New worktrees get their submodules initialized and the untracked files listed in
 
 ## Keep control of your files
 
-The plugin never deletes worktrees or branches. Manage them with `git worktree` when you're done. Existing checkouts are attached exactly as they are, and existing files are never overwritten.
+The plugin never deletes worktrees or branches. Manage them with `git worktree` when you're done. If BB restores a thread's environment, the plugin reattaches the files it left behind instead of creating a new worktree. Existing checkouts are attached exactly as they are, and existing files are never overwritten.
 
 ## Requirements
 

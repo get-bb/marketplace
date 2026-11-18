@@ -1,7 +1,7 @@
 {
   "id": "sql",
   "displayName": "SQL",
-  "description": "Browse Postgres schemas and run SQL from a bb panel or agent tools. Controlled write/DDL (0.5): Agent write and Allow DDL off by default.",
+  "description": "Browse every Postgres database, complete SQL with schema awareness, and run queries from a panel or agent tools. New connections default to Agent write and Allow DDL on; duplicate connections from the menu.",
   "icon": "Layers",
   "tags": [
     "sql",
@@ -16,10 +16,11 @@
     "url": "https://github.com/yazydzhi"
   },
   "category": "code-and-reviews",
+  "overview": "./overview/sql.md",
   "source": {
     "git": {
       "url": "https://github.com/yazydzhi/bb-plugin-sql.git",
-      "range": "^0.5.4"
+      "range": "^0.6.3"
     }
   }
 }

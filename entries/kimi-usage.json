@@ -1,0 +1,29 @@
+{
+  "id": "kimi-usage",
+  "displayName": "Kimi Usage",
+  "description": "Shows the Kimi Code 5-hour and monthly limits in bb's usage panel, where no collector reads them. The panel covers the OpenCode Go and Claude Code subscriptions only, so a Kimi Code plan shows nothing; this adds the windows Kimi reports, with the percentage used and the reset time. The row appears only when the Kimi Code ACP provider is installed, and a host whose login expired drops out instead of leaving an empty row. Requires a Kimi Code subscription signed in on the host.",
+  "icon": "ChartColumn",
+  "tags": [
+    "kimi-code",
+    "plan-limits",
+    "provider-quota",
+    "acp",
+    "five-hour-limit"
+  ],
+  "author": {
+    "name": "Vladislav Chmelyuk",
+    "github": "fgbm",
+    "url": "https://github.com/fgbm"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/fgbm/bb-plugin-kimi-usage.git",
+      "range": "^0.2.1"
+    }
+  },
+  "overview": "./overview/kimi-usage.md",
+  "screenshots": [
+    "./screenshots/kimi-usage/kimi-code-limits.png"
+  ]
+}

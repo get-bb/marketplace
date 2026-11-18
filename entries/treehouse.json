@@ -1,27 +1,28 @@
 {
   "id": "treehouse",
   "displayName": "Treehouse",
-  "description": "See and commit every repository your agents touched, worktrees included, from a tab beside the thread. Each repository gets its own staged and unstaged lists, per-hunk staging, and a commit box where Claude can write the message in your repo's style. Compare any branch with main, then open a pull request on GitHub, GitLab or Bitbucket. A file tree with git badges and a branch graph share the same tab and refresh from bb's file watcher. Needs git on the thread's machine; the commit-message button also needs an Anthropic API key, an ant login or the claude CLI.",
-  "icon": { "url": "./icons/treehouse-7965d9d0.svg" },
+  "description": "Review, edit and commit every repository your agents touched, worktrees included, from a split panel beside the thread. Files, diffs and commits open as tabs next to a file tree with git badges, and you can edit a file and save it with Ctrl/⌘+S. Each repository gets staged and unstaged lists, per-hunk staging, and a commit box where Claude can write the message in your repo's style. Compare any branch with main and open a pull request on GitHub, GitLab or Bitbucket, or click a commit in the branch graph to see its diff. Needs git on the thread's machine; the commit-message button also needs an Anthropic API key, an ant login or the claude CLI.",
+  "icon": {
+    "url": "./icons/treehouse-7965d9d0.svg"
+  },
   "screenshots": [
-    "./screenshots/treehouse/diff.png",
     "./screenshots/treehouse/files.png",
-    "./screenshots/treehouse/graph.png",
-    "./screenshots/treehouse/commit.png",
-    "./screenshots/treehouse/hunks.png"
+    "./screenshots/treehouse/diff.png",
+    "./screenshots/treehouse/menu.png",
+    "./screenshots/treehouse/graph.png"
   ],
   "overview": "./overview/treehouse.md",
   "tags": [
     "git",
     "worktrees",
     "file-tree",
+    "code-editor",
     "source-control",
     "commit-message",
     "pull-requests",
     "branch-compare",
     "commit-history",
-    "monorepo",
-    "staging"
+    "file-manager"
   ],
   "author": {
     "name": "Redha Juanda",
@@ -29,11 +30,13 @@
     "url": "https://github.com/redhajuanda"
   },
   "category": "code-and-reviews",
-  "secondaryCategories": ["file-viewers-and-editors"],
+  "secondaryCategories": [
+    "file-viewers-and-editors"
+  ],
   "source": {
     "git": {
       "url": "https://github.com/redhajuanda/bb-treehouse.git",
-      "range": "^0.2.0"
+      "range": "^0.3.0"
     }
   }
 }

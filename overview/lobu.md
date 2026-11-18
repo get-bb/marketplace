@@ -14,15 +14,19 @@ Keep what your agents learn in Lobu memory, without leaving bb.
 - **Save to Lobu** on any message, and **Save learnings to Lobu** for a whole
   thread, through a review form.
 - **Open what bb saved in Lobu** opens Lobu's own page of those memories.
+- A **Lobu** page in bb's sidebar shows what agents saved in bb threads (with
+  the project, reuse count, and a link to the source thread), searches across
+  all of Lobu, and surfaces the inbox plus the devices and connections that
+  need attention. **Open in Lobu** opens the full app in your browser.
 - Type `@` in any composer to reference a memory, entity, feed, automation, paired
   device or connection, or open browser tab; it resolves into fresh context
   when the message is sent.
 - Your Lobu **Inbox** sits on the New thread screen when bb is connected, and
   `lobu` CLI logins you already have are reused, not duplicated.
-- Automatic entity discovery and graph linking: saving memories or recapping
-  archived threads inspects open BB desktop browser tabs and conversation turns to
-  discover, resolve, or auto-create relevant Lobu entities, linking them into
-  Lobu's knowledge graph.
+- Memories link to the Lobu records they are about, by exact full name: Lobu
+  links a name only when exactly one record carries it, and the agent is told
+  which names stayed unlinked. Nothing is linked by partial or similar names,
+  and no records are created from tabs or transcripts.
 
 ## Getting started
 

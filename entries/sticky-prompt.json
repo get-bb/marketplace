@@ -1,0 +1,36 @@
+{
+  "id": "sticky-prompt",
+  "displayName": "Sticky Prompt",
+  "description": "Keeps your message pinned at the top of the chat, so you always know which question a long reply answers. As soon as your message scrolls up, a two-line copy stays above the reply, drawn with BB's own Markdown, and your next message pushes it away. Click it to jump back to the full message, even in a long thread where BB has unloaded it. Images show as thumbnails, short turns are left alone, and messages from agents and BB notices are skipped unless you turn them on. Runs in the BB app with your own session and needs no account or external service.",
+  "icon": {
+    "url": "./icons/sticky-prompt-8d9a2f98.svg"
+  },
+  "tags": [
+    "pin",
+    "sticky-header",
+    "scroll",
+    "long-replies",
+    "messages",
+    "prompt",
+    "markdown",
+    "thumbnails"
+  ],
+  "author": {
+    "name": "Victor Aremu",
+    "github": "ahkohd",
+    "url": "https://github.com/ahkohd"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/ahkohd/bb-plugin-sticky-prompt.git",
+      "range": "^0.2.1"
+    }
+  },
+  "screenshots": [
+    "./screenshots/sticky-prompt/pinned-markdown-dark.png",
+    "./screenshots/sticky-prompt/pinned-images-dark.png",
+    "./screenshots/sticky-prompt/pinned-light.png"
+  ],
+  "overview": "./overview/sticky-prompt.md"
+}

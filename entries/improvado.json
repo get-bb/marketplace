@@ -1,0 +1,32 @@
+{
+  "id": "improvado",
+  "displayName": "Improvado",
+  "description": "Connect your agents to Improvado MCP and ask about ads, CRM and analytics data in your Improvado workspace. Ships a skill with setup steps for Claude Code and Codex threads, example questions and links to analysis recipes. Requires an Improvado account; sign-in uses OAuth.",
+  "icon": {
+    "url": "./icons/improvado.svg"
+  },
+  "tags": [
+    "mcp",
+    "marketing",
+    "analytics",
+    "marketing-data",
+    "google-ads",
+    "meta-ads",
+    "ga4"
+  ],
+  "author": {
+    "name": "Improvado",
+    "github": "kommaks-i",
+    "url": "https://improvado.io"
+  },
+  "category": "memory-and-context",
+  "source": {
+    "git": {
+      "url": "https://github.com/tekliner/improvado-mcp.git",
+      "subdir": "bb-plugin",
+      "range": "^0.1.0",
+      "tagPrefix": "bb-plugin-improvado/"
+    }
+  },
+  "overview": "./overview/improvado.md"
+}

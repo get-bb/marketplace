@@ -9,14 +9,15 @@ Review OpenSpec proposals, designs, tasks and specs right from the chat: comment
 
 ## Navigate from the chat
 
-- An OpenSpec button in the chat header opens the latest active change; a menu picks another one.
-- The OpenSpec tab lists specs, active changes and the archive of the chat's checkout. A change card shows artifacts, task progress, affected specs and chats that mention the change.
+- An OPS (OpenSpec) button in the chat header opens the latest active change; a menu picks another one.
+- The OpenSpec tab lists specs, active changes and the archive of the chat's checkout. A change card shows task progress, artifacts, affected specs and chats that mention the change.
+- The pinned header keeps one back button (document → card → list) and the document actions while you scroll.
 - Spec documents have a table of contents and collapsible requirements and scenarios.
 - Markdown links into the `openspec/` folder can open in the "OpenSpec review" file opener.
 
 ## Requirements
 
 - OpenSpec CLI 1.9.x on the environment host, and an `openspec/` folder in the checkout.
-- English and Russian interface.
+- Interface in 10 languages (English, 简体中文, Español, Português (Brasil), 日本語, Deutsch, Français, Русский, 한국어, हिन्दी); Auto follows the browser language.
 
 Comments live in the plugin storage of your BB, not in the repository. The plugin does not run Propose, Apply or Archive and does not edit documents.

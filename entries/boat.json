@@ -1,0 +1,20 @@
+{
+  "id": "boat",
+  "displayName": "Boat",
+  "description": "Run each bb thread on its own Boat cloud VM that stops when idle and resumes on demand. Start from the stock Ubuntu image or your own saved snapshot, and pick the VM size, Boat environment and org. Requires a Boat account (paid, billed per second) and a bb hub reachable from the internet.",
+  "icon": { "url": "./icons/boat-c5cf1574.svg" },
+  "overview": "./overview/boat.md",
+  "tags": ["sandbox", "cloud-vm", "remote-machine", "boat-dev", "ubuntu", "snapshots"],
+  "author": {
+    "name": "Not Quite Unicorns",
+    "github": "georgecollier-nqu",
+    "url": "https://github.com/Not-Quite-Unicorns"
+  },
+  "category": "cloud-and-remote",
+  "source": {
+    "git": {
+      "url": "https://github.com/Not-Quite-Unicorns/bb-plugin-boat.git",
+      "range": "^0.3.0"
+    }
+  }
+}

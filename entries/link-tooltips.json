@@ -1,0 +1,32 @@
+{
+  "id": "link-tooltips",
+  "displayName": "Link Tooltips",
+  "description": "See the full web address or file path before opening a link in BB. Hover links in earlier messages and newly streamed replies, with existing descriptions preserved above the destination. Works in desktop windows and remote browser clients, using the browser’s native tooltip delay. Requires a mouse; no external account or service is needed.",
+  "icon": {
+    "url": "./icons/link-tooltips-9b0f8b58.svg"
+  },
+  "tags": [
+    "urls",
+    "file-paths",
+    "hover",
+    "preview",
+    "desktop",
+    "browser"
+  ],
+  "author": {
+    "name": "Sergey Zhukov",
+    "github": "SergeyZh",
+    "url": "https://github.com/SergeyZh"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/SergeyZh/bb-plugin-link-tooltips.git",
+      "range": "*"
+    }
+  },
+  "overview": "./overview/link-tooltips.md",
+  "screenshots": [
+    "./screenshots/link-tooltips/hover-url.png"
+  ]
+}
