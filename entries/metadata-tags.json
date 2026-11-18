@@ -1,0 +1,30 @@
+{
+  "id": "metadata-tags",
+  "displayName": "Metadata Tags",
+  "description": "See each thread's project, pull request state, and uncommitted changes at a glance in any sidebar organization. Each row gets a colored tag with the project's name and a stable dot color per project. Pull requests get bb's own git glyphs tinted by state — draft, open, checks, conflicts, merged, closed — and threads with uncommitted edits get a file-diff tag with green-red line counts. Every item can be toggled, recolored, or re-iconed in the plugin's settings. Needs the Rows → Metadata sidebar option and bb's threadRowMetadata experiment, both off by default.",
+  "icon": "Tag",
+  "overview": "./overview/metadata-tags.md",
+  "tags": [
+    "projects",
+    "sidebar",
+    "thread-list",
+    "threads",
+    "tags",
+    "labels",
+    "pull-requests",
+    "git-changes",
+    "organization"
+  ],
+  "author": {
+    "name": "Liliana Zheng",
+    "github": "99Lys",
+    "url": "https://github.com/99Lys"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/99Lys/bb-plugin-metadata-tags.git",
+      "range": "^0.1.0"
+    }
+  }
+}
