@@ -1,0 +1,38 @@
+{
+  "id": "routerai",
+  "displayName": "RouterAI",
+  "description": "Run bb threads on Claude, GPT, DeepSeek, Qwen, Kimi and about 300 other tool-calling models through RouterAI, with one account and billing in rubles. Sign in with one click and the key saves itself; your balance sits in the sidebar and each thread shows what it has spent. A switch can also route bb's built-in Claude Code provider through RouterAI. Needs a routerai.ru account and OpenCode on the host that runs threads; prompts and thread content go to RouterAI and the chosen model's provider, and RouterAI bills your balance.",
+  "icon": {
+    "url": "./icons/routerai-e1c7f9a6.svg"
+  },
+  "screenshots": [
+    "./screenshots/routerai/account.png",
+    "./screenshots/routerai/thread.png",
+    "./screenshots/routerai/catalog.png",
+    "./screenshots/routerai/blocked.png"
+  ],
+  "overview": "./overview/routerai.md",
+  "tags": [
+    "routerai",
+    "provider",
+    "models",
+    "opencode",
+    "claude-code",
+    "oauth",
+    "rubles",
+    "spend"
+  ],
+  "author": {
+    "name": "RouterAI",
+    "github": "router-ai",
+    "url": "https://routerai.ru"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": ["token-usage-and-limits"],
+  "source": {
+    "git": {
+      "url": "https://github.com/router-ai/bb-plugin-routerai.git",
+      "range": ">=0.2.0"
+    }
+  }
+}
