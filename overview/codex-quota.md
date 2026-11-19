@@ -16,4 +16,4 @@ Requires BB 0.49+, Plugin SDK 0.6.132 or later in the 0.x series, and BB’s bui
 
 Quota data comes from BB’s Codex provider. The plugin reads the number of manual resets from Codex CLI on the same machine when quota loads or refreshes. It reads no credentials and sends no telemetry.
 
-[Installation and source code](https://github.com/ai-babai/bb-plugin-codex-quota)
+[Source and installation](https://github.com/ai-babai/bb-plugin-codex-quota) · [Codex Quota on popkov.dev](https://popkov.dev/en/apps/#codex-quota)
