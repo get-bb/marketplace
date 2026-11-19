@@ -1,0 +1,36 @@
+{
+  "id": "bottom-panel",
+  "displayName": "Bottom Panel",
+  "description": "Puts bb's App panel, with its terminal, browser tabs and previews, below the chat like an IDE, and lets you resize it by dragging the divider. Select text in the terminal and press Cmd+L (Ctrl+L on Windows and Linux) to drop it into the chat composer without sending it, also on non-Latin layouts. One header button switches back to the native right panel. Needs no account or external service.",
+  "icon": {
+    "url": "./icons/bottom-panel-de252884.svg"
+  },
+  "tags": [
+    "layout",
+    "bottom-panel",
+    "terminal",
+    "right-panel",
+    "split-view",
+    "ide",
+    "add-to-chat",
+    "keyboard-shortcuts"
+  ],
+  "author": {
+    "name": "JonniK",
+    "github": "JonniK",
+    "url": "https://github.com/JonniK"
+  },
+  "category": "themes-and-appearance",
+  "overview": "./overview/bottom-panel.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/jonnik-bb-plugins/bb-plugin-bottom-panel.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/bottom-panel/bottom-layout.png",
+    "./screenshots/bottom-panel/selection-popup.png",
+    "./screenshots/bottom-panel/added-to-chat.png"
+  ]
+}
