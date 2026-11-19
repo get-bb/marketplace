@@ -28,7 +28,9 @@
   "screenshots": [
     "./screenshots/codex-quota/footer-dark.png",
     "./screenshots/codex-quota/sidebar-en.png",
+    "./screenshots/codex-quota/mobile-en.png",
     "./screenshots/codex-quota/quota-light.png",
-    "./screenshots/codex-quota/sidebar-ru.png"
+    "./screenshots/codex-quota/sidebar-ru.png",
+    "./screenshots/codex-quota/mobile-ru.png"
   ]
 }
