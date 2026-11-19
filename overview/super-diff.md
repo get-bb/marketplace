@@ -1,7 +1,7 @@
 ## What you get
 
 - A **Generate Super Diff** button that asks the thread's agent to sort the changed files into concerns. The grouped list takes the place of bb's file list, and **Super Diff | Original** switches back.
-- A line under each concern for every file, saying what its change does, and bb's **Viewed** checkbox on each file, with a count of viewed files per concern.
+- A line under each concern for every file, saying what its change does, and bb's **Viewed** checkbox on each file, with a count of viewed files per concern and a link to mark the whole section viewed.
 - Notes in the diff under the lines a reviewer might misread, removed lines included, and an **Explain this line** button on any other line for a note written on request.
 - An amber **Out of date** warning with **Regenerate** when files are added or edited after the Super Diff was written.
 
