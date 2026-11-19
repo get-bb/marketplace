@@ -1,0 +1,38 @@
+{
+  "id": "markwright",
+  "displayName": "Markwright",
+  "description": "Edit Markdown files like a Word document, inserting tables, diagrams, callouts and templates from a / menu instead of typing syntax. A save rewrites only the blocks you changed, so untouched text keeps its exact bytes and git diffs stay small. Eight Mermaid starters render as live diagrams while you edit their source, and eleven document templates fill an empty file in one click. Every save checks the file's hash first: if an agent changed it while you typed, autosave pauses and you compare, keep yours or take theirs. Files with footnotes, reference-style links or $$ math open read-only in bb's preview; needs bb 0.49 or later and no account or external service.",
+  "icon": "FileText",
+  "tags": [
+    "markdown",
+    "wysiwyg",
+    "editor",
+    "slash-commands",
+    "templates",
+    "mermaid",
+    "diagrams",
+    "callouts",
+    "tables",
+    "agent-docs"
+  ],
+  "author": {
+    "name": "Muhammad Ahsan",
+    "github": "ahsan7162",
+    "url": "https://github.com/ahsan7162"
+  },
+  "category": "file-viewers-and-editors",
+  "screenshots": [
+    "./screenshots/markwright/1-overview.png",
+    "./screenshots/markwright/2-slash-menu.png",
+    "./screenshots/markwright/3-mermaid.png",
+    "./screenshots/markwright/4-templates.png",
+    "./screenshots/markwright/5-conflict.png"
+  ],
+  "overview": "./overview/markwright.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/ahsan7162/markwright.git",
+      "range": "^0.1.0"
+    }
+  }
+}
