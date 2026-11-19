@@ -17,6 +17,8 @@ what the command prints: the output goes to the agent.
 - Highlight a command in an agent's answer and pick **Run in terminal** in the
   selection menu, next to Add to chat. The message action button runs the
   answer's first shell code block. Your unfinished draft is kept.
+- Fenced `sh`/`bash`/`zsh` code blocks in an answer get a **Run** button (Python
+  blocks too with `runPythonBlocks`); languages are set by `runButtonLanguages`.
 - The message waits in the queue while the command runs. It then goes to the
   agent as two blocks, the command and its output (with the exit code when it
   is not zero), so the next answer starts from the real result.
