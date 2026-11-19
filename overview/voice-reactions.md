@@ -2,7 +2,7 @@
 
 An unofficial BB plugin that reacts out loud to what you type to your agents. A decision model picks a reaction, or silence, and a voice model writes and speaks one short line. Ordinary questions and instructions stay silent by default.
 
-Choose one of twelve characters, a random role per line, or your own persona. Edit the reaction options to decide when it speaks. It handles human prompts, follow-ups, steers and queued messages, while ignoring agent messages and retries. One line plays at a time, with no backlog.
+Choose one of sixteen characters, including a noir detective, cowboy, chef and surfer, a random role per line, or your own persona. Each built-in role selects an OpenAI voice unless you set one explicitly. A language setting can fix the spoken language; the default follows the message, while shopkeeper speaks English. Edit the reaction options to decide when it speaks. It handles human prompts, follow-ups, steers and queued messages, while ignoring agent messages and retries. One line plays at a time, with no backlog.
 
 ## Requirements
 

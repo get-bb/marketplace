@@ -1,7 +1,7 @@
 {
   "id": "voice-reactions",
   "displayName": "Voice reactions",
-  "description": "A short spoken reaction to the messages you type to your agents, in one of twelve roles or your own character. Sound plays on the BB server machine. Requires an audio player and provider API keys; sends message text to the configured providers.",
+  "description": "A short spoken reaction to the messages you type to your agents, in one of sixteen roles or your own character. Sound plays on the BB server machine. Requires an audio player and provider API keys; sends message text to the configured providers.",
   "icon": "AudioLines",
   "overview": "./overview/voice-reactions.md",
   "tags": [
@@ -17,7 +17,7 @@
   "source": {
     "git": {
       "url": "https://github.com/neoromantic/bb-plugin-voice-reactions.git",
-      "range": "^0.1.1"
+      "range": "^0.2.0"
     }
   }
 }
