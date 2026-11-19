@@ -1,0 +1,38 @@
+{
+  "id": "perch",
+  "displayName": "Perch",
+  "description": "Run Perch agents in bb threads and pick the model, reasoning level and persona for each thread. bb's permission picker sets Perch's own mode, from Default to Take the Wheel, and Perch's tool approvals appear in bb. Your Perch plan's 5-hour, weekly and Manual-allowance meters appear in Settings and in bb's Provider usage card. bb perch run sends one-off tasks from the command line and returns JSON. Requires the Perch CLI and a Perch account; the plugin never reads Perch's credentials.",
+  "icon": {
+    "url": "./icons/perch-eb557e08.svg"
+  },
+  "screenshots": [
+    "./screenshots/perch/thread-picker.png",
+    "./screenshots/perch/usage.png",
+    "./screenshots/perch/settings.png"
+  ],
+  "overview": "./overview/perch.md",
+  "tags": [
+    "acp",
+    "agent",
+    "models",
+    "reasoning",
+    "usage",
+    "quota",
+    "roost"
+  ],
+  "author": {
+    "name": "thelaggingway",
+    "github": "thelaggingway",
+    "url": "https://github.com/thelaggingway"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "token-usage-and-limits"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/thelaggingway/bb-perch.git",
+      "range": "^0.1.0"
+    }
+  }
+}
