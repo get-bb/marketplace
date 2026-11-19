@@ -2,7 +2,7 @@
   "id": "orble",
   "displayName": "Orble",
   "description": "Run bb threads on Orble cloud boxes, with no Tailscale or relay to set up. Each box connects back to your bb server over an SSH tunnel through Orble's API, and in testing reached bb in about 18 seconds. bb suspends idle runners and resumes them on your next message. An Orble page in the sidebar shows credit, boxes, snapshots, networks and Secrets, and creates, forks, snapshots or deletes boxes. Requires an Orble account and API key, plus node, ssh and ssh-keygen on the bb server. Experimental.",
-  "icon": { "url": "./icons/orble-ec3a2bfa.svg" },
+  "icon": { "url": "./icons/orble-af07b7e8.png" },
   "screenshots": [
     "./screenshots/orble/orble-page.png",
     "./screenshots/orble/new-runner.png"
