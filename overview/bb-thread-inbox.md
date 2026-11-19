@@ -21,9 +21,10 @@ notifications, retries, and runtime management use native BB controls.
 
 BB 0.49.0 or newer. Merge/close-based settling uses BB's GitHub PR Status plugin
 and its GitHub access; unknown PR state leaves the conversation in place.
-No listening-port scanner, process shutdown, historical PR scanner, or paid
-title recovery is included. Saved project appearance remains readable.
+Saved project appearance remains readable.
 
-The technical plugin ID is `bb-sidebar-clean`, preserving existing filing data.
+The plugin ID is `bb-thread-inbox`. Version 0.1.0 installations need a
+[one-time data transfer](https://github.com/ysskrishna/bb-thread-inbox/blob/main/docs/upgrade.md)
+because the installed identity changed in 0.1.1.
 For installation and release status, see the
 [project README](https://github.com/ysskrishna/bb-thread-inbox#readme).

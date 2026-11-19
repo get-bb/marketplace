@@ -1,21 +1,29 @@
 {
-  "id": "bb-sidebar-clean",
+  "id": "bb-thread-inbox",
   "displayName": "Thread Inbox",
   "description": "A community BB sidebar with Working, Active, Settled, snooze, and automatic settling.",
   "icon": "PanelLeft",
-  "tags": ["interface", "sidebar", "threads", "inbox", "productivity"],
+  "tags": [
+    "interface",
+    "sidebar",
+    "threads",
+    "inbox",
+    "productivity"
+  ],
   "author": {
     "name": "Y. Siva Sai Krishna",
     "github": "ysskrishna",
     "url": "https://ysskrishna.space"
   },
   "category": "thread-management",
-  "overview": "./overview/bb-sidebar-clean.md",
-  "screenshots": ["./screenshots/bb-sidebar-clean/overview.png"],
+  "overview": "./overview/bb-thread-inbox.md",
+  "screenshots": [
+    "./screenshots/bb-thread-inbox/overview.png"
+  ],
   "source": {
     "git": {
       "url": "https://github.com/ysskrishna/bb-thread-inbox.git",
-      "range": "^0.1.0"
+      "range": "^0.1.1"
     }
   }
 }
