@@ -1,0 +1,31 @@
+{
+  "id": "codex-project-trust",
+  "displayName": "Codex Project Trust",
+  "description": "Review and approve Codex project trust in the thread that reported it. Check the project path, execution machine, and user config before saving. Requires BB 0.50.1+ and Codex 0.170.0+.",
+  "icon": {
+    "url": "./icons/codex-project-trust-2a660e95.svg"
+  },
+  "screenshots": [
+    "./screenshots/codex-project-trust/warning.jpg",
+    "./screenshots/codex-project-trust/review.jpg"
+  ],
+  "overview": "./overview/codex-project-trust.md",
+  "tags": [
+    "codex",
+    "project-trust",
+    "security",
+    "configuration"
+  ],
+  "author": {
+    "name": "Ainur Minibaev",
+    "github": "ainurminibaev",
+    "url": "https://github.com/ainurminibaev"
+  },
+  "category": "security",
+  "source": {
+    "git": {
+      "url": "https://github.com/ainurminibaev/bb-codex-project-trust.git",
+      "range": "^1.0.1"
+    }
+  }
+}
