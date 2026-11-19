@@ -1,0 +1,27 @@
+{
+  "id": "phone-rail",
+  "displayName": "Phone Rail",
+  "description": "Show fewer sidebar icons on your phone than on your desktop. Phone-sized screens keep their own set and order of rail icons, while desktop windows keep bb's shared choice. Customize navigation on a phone, or Customize phone navigation in the desktop rail's More menu, opens bb's own list to tick and drag icons, and Same as wider windows goes back to the shared set. The phone's set is saved on your bb server, so it survives restarts and every phone shares it; a desktop window narrower than 768 pixels counts as a phone too. Requires bb 0.48 or later; pick Phone Rail in Settings → Appearance → Navigation.",
+  "icon": "Smartphone",
+  "tags": ["phone", "mobile", "iphone", "sidebar", "navigation", "rail", "icons", "small-screen"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "themes-and-appearance",
+  "screenshots": [
+    "./screenshots/phone-rail/phone-light.png",
+    "./screenshots/phone-rail/phone-editor-light.png",
+    "./screenshots/phone-rail/desktop-light.png"
+  ],
+  "overview": "./overview/phone-rail.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "phone-rail",
+      "tagPrefix": "phone-rail/",
+      "range": "^0.1.0"
+    }
+  }
+}
