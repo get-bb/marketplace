@@ -25,5 +25,9 @@
       "range": "^0.1.0"
     }
   },
-  "overview": "./overview/art-day.md"
+  "overview": "./overview/art-day.md",
+  "screenshots": [
+    "./screenshots/art-day/today.jpg",
+    "./screenshots/art-day/detail.jpg"
+  ]
 }
