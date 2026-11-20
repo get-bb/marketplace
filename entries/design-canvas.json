@@ -1,0 +1,36 @@
+{
+  "id": "design-canvas",
+  "displayName": "Design Canvas",
+  "description": "Lay out your agent's HTML designs as artboards you move, edit, tune and comment on, then send every comment back in one message. Comments become numbered pins that reach the agent together, and it answers each one with what it changed. Tweaks the agent declares become color pickers, sliders and toggles that restyle every artboard as you drag. Right-click to copy artboards or components as one PNG, or copy the whole canvas from the toolbar. Ported from 961853266hyt's Design canvas for paseo; designs are plain files in the workspace's design folder, and the agent tools work on the machine bb runs on.",
+  "icon": "Palette",
+  "screenshots": [
+    "./screenshots/design-canvas/01-comments.png",
+    "./screenshots/design-canvas/02-tweaks.png",
+    "./screenshots/design-canvas/03-copy-as-image.png"
+  ],
+  "overview": "./overview/design-canvas.md",
+  "tags": [
+    "design",
+    "prototyping",
+    "artboards",
+    "mockups",
+    "wireframes",
+    "html",
+    "design-comments",
+    "design-tokens",
+    "screenshots",
+    "paseo"
+  ],
+  "author": {
+    "name": "Anh Chu",
+    "github": "anh-chu",
+    "url": "https://github.com/anh-chu"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/anh-chu/bb-plugin-design-canvas.git",
+      "range": "^0.1.0"
+    }
+  }
+}
