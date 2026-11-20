@@ -1,0 +1,32 @@
+{
+  "id": "downshift",
+  "displayName": "Downshift [Experimental]",
+  "description": "Switch BB threads between your chosen model profiles with one toggle. Choose models from the same BB provider, with optional automatic Downshift at 5% remaining in confirmed native quota. A ready-to-run Linux x64 companion is available for a fresh BB instance. Requires your provider account and matching native integration on execution hosts; stock BB is unsupported.",
+  "icon": {
+    "url": "./icons/downshift-9c79bb07.svg"
+  },
+  "screenshots": [
+    "./screenshots/downshift/models.jpg",
+    "./screenshots/downshift/downshift-on.jpg"
+  ],
+  "overview": "./overview/downshift.md",
+  "tags": [
+    "model-switching",
+    "profiles",
+    "providers",
+    "quota",
+    "automatic-switching"
+  ],
+  "author": {
+    "name": "beaverbeard",
+    "github": "beaverbeard",
+    "url": "https://github.com/beaverbeard"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/beaverbeard/bb-plugin-downshift.git",
+      "ref": "v0.1.0-rc.6"
+    }
+  }
+}
