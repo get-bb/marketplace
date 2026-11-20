@@ -1,6 +1,6 @@
 ## Companion native build required
 
-Economy is experimental and requires the included companion BB source
+Downshift is experimental and requires the included companion BB source
 integration. It has not shipped upstream. Stock BB shows a disabled control;
 the UI alone cannot provide a global execution overlay. The package contains
 an exact source patch, checksum, build guide and compatibility check.
@@ -8,14 +8,14 @@ an exact source patch, checksum, build guide and compatibility check.
 ## Your models
 
 Setup asks **“What is your main model?”** using the live BB catalog. Choose your
-provider and a smaller Economy model from that same provider. There is no
+provider and a smaller Downshift model from that same provider. There is no
 preselected main model. Available providers with confirmed catalogs can be used;
 unknown reasoning discovery is unavailable. Catalog discovery uses the primary
 machine. Each execution host separately validates the selected profile.
 
 The rabbit/turtle switch supports click, tap, swipe and keyboard controls.
 OFF follows BB’s theme; ON is orange. Active work finishes naturally. Later
-native turns use Economy; turning it off restores each thread’s original model,
+native turns use Downshift; turning it off restores each thread’s original model,
 reasoning and inherited settings. Other providers keep their settings. Native
 restore readers survive plugin removal.
 
@@ -31,3 +31,8 @@ there is no automatic OFF. Shared subscription limits still apply.
 All plugin text is English. No quota percentage widget is included. The plugin
 uses BB’s native integration, without a separate paid API service. It never
 patches an installed runtime or restarts a service.
+
+Moving from the former Economy plugin requires an explicit OFF, completed
+restoration, uninstall and new Downshift install. Native journals are retained;
+settings and active state are not imported automatically. Follow the migration
+guide in the repository before changing plugin identity.
