@@ -1,12 +1,9 @@
 {
   "id": "thoughts-open",
   "displayName": "Thoughts Open",
-  "description": "Shows every Thought from every agent expanded and in full, and folds them all again with one button in the thread header. Thoughts that bb tucks into groups such as \"Ran 5 commands\" open too, and long thoughts lose the 20rem scroll box. The choice is saved on your bb server, so every window follows it, and a Thought you toggle by hand stays as you set it. Needs no account or external service.",
+  "description": "Read what your agents are thinking and where they are heading, so you can stop them in time and steer them right. Every Thought from every agent stays expanded and in full, including thoughts bb tucks into groups such as \"Ran 5 commands\". One button in the thread header folds them all again, and the choice follows every window. Needs no account or external service.",
   "icon": "Brain",
-  "screenshots": [
-    "./screenshots/thoughts-open/thoughts-open.png",
-    "./screenshots/thoughts-open/thoughts-folded.png"
-  ],
+  "screenshots": ["./screenshots/thoughts-open/thoughts.png"],
   "overview": "./overview/thoughts-open.md",
   "tags": ["reasoning", "thinking", "thoughts", "timeline", "expand-collapse", "thread-view"],
   "author": {

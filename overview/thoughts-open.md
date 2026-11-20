@@ -1,3 +1,7 @@
+## Why
+
+A Thought shows what the agent is about to do before it does it. With every Thought open you catch a wrong turn early: stop the run and send a correction instead of reading the damage afterwards.
+
 ## What you get
 
 - One button in the thread header shows **Thoughts: open** or **Thoughts: folded**. A click switches every Thought in every thread. The command palette has the same switch, **Thoughts: show or fold**. The choice is saved on your bb server, so every window and device follows it.
