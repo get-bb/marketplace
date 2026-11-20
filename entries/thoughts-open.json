@@ -1,0 +1,24 @@
+{
+  "id": "thoughts-open",
+  "displayName": "Thoughts Open",
+  "description": "Shows every Thought from every agent expanded and in full, and folds them all again with one button in the thread header. Thoughts that bb tucks into groups such as \"Ran 5 commands\" open too, and long thoughts lose the 20rem scroll box. The choice is saved on your bb server, so every window follows it, and a Thought you toggle by hand stays as you set it. Needs no account or external service.",
+  "icon": "Brain",
+  "screenshots": [
+    "./screenshots/thoughts-open/thoughts-open.png",
+    "./screenshots/thoughts-open/thoughts-folded.png"
+  ],
+  "overview": "./overview/thoughts-open.md",
+  "tags": ["reasoning", "thinking", "thoughts", "timeline", "expand-collapse", "thread-view"],
+  "author": {
+    "name": "smixs",
+    "github": "smixs",
+    "url": "https://github.com/smixs"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/smixs/bb-plugin-thoughts-open.git",
+      "range": "^1.0.0"
+    }
+  }
+}
