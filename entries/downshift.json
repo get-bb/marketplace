@@ -1,7 +1,7 @@
 {
   "id": "downshift",
   "displayName": "Downshift [Experimental]",
-  "description": "Switch your threads to a smaller model when you need to conserve quota. Choose your main and Downshift models from BB’s catalog, then tap or swipe between profiles. Optional Codex automatic activation starts at 5% remaining; manual OFF takes priority until reset. Requires your provider account and the companion BB source build on the server and execution hosts; stock BB is unsupported.",
+  "description": "Switch BB threads between your chosen model profiles with one toggle. Choose from providers and models available in BB’s confirmed native catalog, keeping both profiles with the same provider. Requires your provider account and the companion BB source build on the server and execution hosts; stock BB is unsupported.",
   "icon": {
     "url": "./icons/downshift-5554a25c.svg"
   },
@@ -12,9 +12,9 @@
   "overview": "./overview/downshift.md",
   "tags": [
     "model-switching",
-    "quota",
-    "codex",
-    "automatic-switching"
+    "profiles",
+    "providers",
+    "quota"
   ],
   "author": {
     "name": "beaverbeard",

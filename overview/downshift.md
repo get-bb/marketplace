@@ -1,3 +1,9 @@
+## Your BB profiles
+
+Switch BB threads between model profiles you choose. Downshift supports models
+and providers available in BB with a confirmed native catalog. Choose your
+provider, main model and a smaller Downshift profile from that same provider.
+
 ## Companion native build required
 
 Downshift is experimental and requires the included companion BB source
