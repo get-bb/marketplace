@@ -1,8 +1,8 @@
-## Neon on black
+## Ghostrunner
 
-Ghostrunner turns BB into a cyberpunk console. It uses near-black panels with a hot red accent, cyan for success and diffs, and yellow for warnings. Text is set in JetBrains Mono and titles in Chakra Petch, when those fonts are installed. Otherwise BB uses your system monospace font.
+Ghostrunner turns BB into a cyberpunk console. It offers near-black Dark panels and cool-gray Light panels, with red accents, cyan for success and diffs, and yellow for warnings. Text is set in JetBrains Mono and titles in Chakra Petch, when those fonts are installed. Otherwise BB uses your system monospace font.
 
-Select Ghostrunner in Settings → Appearance. It is dark only, so Light, Dark and System modes all show the same palette. A matching syntax theme covers code and diffs. Body and muted text reach at least 4.5:1 contrast on every panel.
+Select Ghostrunner in Settings → Appearance. Light and Dark use matching palettes for the app, code and diffs under one Ghostrunner entry. System follows your device appearance. Body and muted text reach at least 4.5:1 contrast on every panel.
 
 The screenshots are mockups with sample projects and threads.
 

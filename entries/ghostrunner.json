@@ -1,7 +1,7 @@
 {
   "id": "ghostrunner",
   "displayName": "Ghostrunner",
-  "description": "Turn BB into a cyberpunk console with near-black panels, a hot red accent, cyan for success and diffs, and yellow for warnings. Text uses JetBrains Mono and titles Chakra Petch, with a monospace fallback, and code previews get matching syntax colours. Dark only. No wallpapers are bundled: the overview links some that suit the theme, which you can set with Aura.",
+  "description": "Turn BB into a cyberpunk console with near-black Dark panels or cool-gray Light panels, a red accent, cyan for success and diffs, and yellow for warnings. Text uses JetBrains Mono and titles Chakra Petch, with a monospace fallback, and code previews get matching syntax colours. No wallpapers are bundled: the overview links some that suit the theme, which you can set with Aura.",
   "icon": {
     "url": "./icons/ghostrunner-0735345a.svg"
   },
@@ -24,7 +24,7 @@
     "git": {
       "url": "https://github.com/MateoCerquetella/bb-plugins.git",
       "subdir": "plugins/ghostrunner",
-      "range": "^0.1.0",
+      "range": "^0.1.1",
       "tagPrefix": "ghostrunner/"
     }
   },
