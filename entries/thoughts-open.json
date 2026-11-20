@@ -1,7 +1,7 @@
 {
   "id": "thoughts-open",
   "displayName": "Thoughts Open",
-  "description": "Read what your agents are thinking and where they are heading, so you can stop them in time and steer them right. Every Thought from every agent stays expanded and in full, including thoughts bb tucks into groups such as \"Ran 5 commands\". One button in the thread header folds them all again, and the choice follows every window. Needs no account or external service.",
+  "description": "Read what your agents are thinking and where they are heading, so you can stop them in time and steer them right. Every Thought from every agent stays expanded and in full, including thoughts bb tucks into groups such as \"Ran 5 commands\". A brain icon in the thread header folds them all again, and the choice follows every window. Needs no account or external service.",
   "icon": "Brain",
   "screenshots": ["./screenshots/thoughts-open/thoughts.png"],
   "overview": "./overview/thoughts-open.md",
