@@ -1,19 +1,19 @@
-Codex Quota shows how much of your OpenAI Codex quota is left and when each limit resets. Select Codex and an existing machine in BB to check your quota before sending the first message.
+Check how much of each OpenAI Codex limit you have left and when it resets. The teal ring appears next to your message box in BB and above Settings in the left sidebar. On a phone, tap either ring to open the card.
 
-## Check your limits
+## Read the ring
 
-The teal ring sits beside the context meter in Codex chats and side chats, and above Settings in the left sidebar. On a phone, tap the ring in the chat composer or above Settings in the open sidebar. Hover over or tap the ring for each reported limit and its reset countdown. In the Plus screenshot, 78% of the five-hour quota and 46% of the weekly quota remain. The ring shows **46%**. A **?** means it is waiting for current data.
+The ring shows the lowest remaining percentage. In the Plus screenshot, 78% of the five-hour quota and 46% of the weekly quota remain, so the ring shows **46%**. Each limit has its own bar. The fill shows how much quota remains. The vertical mark shows the share of time left until reset. The countdown and reset time sit together underneath.
 
-Click to close the preview or click again to reopen it. **Enter** or **Space** toggles the card with the ring focused. **Esc** closes it.
+Select Codex and a connected machine to see your limits in a new chat. A Codex side chat shows the quota for its own machine. The ring spins while the first reading loads. A **?** means a current reading is unavailable.
 
-The lightning bolt shows how many manual resets are available. Hover over it or tap it to see their expiry dates without using a reset.
+## Check your manual resets
 
-## Settings and setup
+The lightning bolt shows how many manual resets are available. Hover over it or tap it to see their expiry dates and times. Viewing the list keeps every reset available.
 
-The gear beside the plan name opens the refresh interval and the **In chat** and **In sidebar** switches. By default, usage refreshes every two minutes on a visible page and when you hover over or press the ring. In **Settings → Installed plugins → Codex Quota**, you can change those triggers or choose **English** or **Русский**.
+## Choose where to see your quota
 
-Requires BB 0.49+, Plugin SDK 0.6.132 or later in the 0.x series, and BB’s built-in Codex provider. Sign in to Codex CLI on the chat’s machine with a ChatGPT plan that includes Codex.
+Open the gear beside the plan name. Set the refresh **Interval** in seconds and choose **Chat**, **Sidebar**, or both. Select **Save** after making a change. The default interval is two minutes while the page is visible. Set it to **0** to turn off the timer. The full plugin settings also let you change the language and the hover and press refresh options.
 
-Quota data comes from BB’s Codex provider. The plugin reads the number of manual resets from Codex CLI on the same machine when quota loads or refreshes. It reads no credentials and sends no telemetry.
+Requires BB 0.49+ with its built-in Codex provider, Plugin SDK 0.6.132 or later in the 0.x series, and Codex CLI signed in on the chat’s machine with an eligible ChatGPT plan. Quota readings come from BB’s provider. Manual reset availability comes from a read-only Codex CLI request on the same machine.
 
 [Source and installation](https://github.com/ai-babai/bb-plugin-codex-quota) · [Codex Quota on popkov.dev](https://popkov.dev/en/apps/#codex-quota)
