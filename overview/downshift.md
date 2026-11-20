@@ -6,10 +6,13 @@ provider, main model and a smaller Downshift profile from that same provider.
 
 ## Companion native build required
 
-Downshift is experimental and requires the included companion BB source
-integration. It has not shipped upstream. Stock BB shows a disabled control;
-the UI alone cannot provide a global execution overlay. The package contains
-an exact source patch, checksum, build guide and compatibility check.
+Downshift is experimental. A [ready-to-run Linux x64 companion](https://github.com/beaverbeard/bb-plugin-downshift/releases/tag/companion-v0.50.1-ds.1)
+includes BB 0.50.1, Downshift rc.6, Node.js and native dependencies. Extract it and
+start a new separate BB instance; no manual fork or compilation is required.
+It requires glibc 2.34+ and GLIBCXX_3.4.29. Existing-data production upgrades and
+other platforms are unvalidated. Each execution host needs the matching native
+integration. Stock BB is unsupported; this integration has not shipped upstream.
+The source patch, checksums and build guide remain available.
 
 ## Your models
 
