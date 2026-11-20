@@ -1,7 +1,7 @@
 {
   "id": "downshift",
   "displayName": "Downshift [Experimental]",
-  "description": "Switch BB threads between your chosen model profiles with one toggle. Choose from providers and models available in BB’s confirmed native catalog, keeping both profiles with the same provider. Requires your provider account and the companion BB source build on the server and execution hosts; stock BB is unsupported.",
+  "description": "Switch BB threads between your chosen model profiles with one toggle. Choose models from the same BB provider, with optional automatic Downshift at 5% remaining in confirmed native quota. Requires your provider account and the companion BB source build on the server and execution hosts; stock BB is unsupported.",
   "icon": {
     "url": "./icons/downshift-5554a25c.svg"
   },
@@ -14,7 +14,8 @@
     "model-switching",
     "profiles",
     "providers",
-    "quota"
+    "quota",
+    "automatic-switching"
   ],
   "author": {
     "name": "beaverbeard",
@@ -25,7 +26,7 @@
   "source": {
     "git": {
       "url": "https://github.com/beaverbeard/bb-plugin-downshift.git",
-      "ref": "v0.1.0-rc.5"
+      "ref": "v0.1.0-rc.6"
     }
   }
 }

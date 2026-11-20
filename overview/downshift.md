@@ -27,12 +27,24 @@ restore readers survive plugin removal.
 
 ## Optional automatic activation
 
-For Codex, setup offers automatic activation at 5% or less remaining in any confirmed
-active shared account window on BB’s primary host. No separate model quota is
-inferred and accounts are not combined. Other providers currently use manual
-switching. Manual OFF takes priority until the window resets, including when
-quota was temporarily unknown. Stale readings cannot activate the mode, and
-there is no automatic OFF. Shared subscription limits still apply.
+Enable optional auto for any selected provider that exposes native quota in BB.
+It triggers at **5% or less remaining** in an applicable main-model or real shared
+window on the primary machine. Another model's limit alone does not trigger it.
+Claude family limits use explicit native model metadata, never display labels.
+
+Manual OFF holds until a dated window resets. For undated quota it holds until
+confirmed recovery above 5%, then permits a new low episode. Indistinguishable
+undated windows keep their readings and use conservative group suppression:
+all original members must recover. Unknown/error or missing windows cannot rearm.
+The barrier survives reload; auto never turns Downshift OFF.
+
+Issuer account keys give account scope. When that optional key is absent, auto
+uses explicit provider/machine connection scope, another fresh reading before
+CAS, and a new decision UUID instead of replaying old uncertain requests.
+Unreported account changes cannot be proven in connection scope; suppression
+is conservative. No guessed account identity, budget or context-token percentage
+is substituted for quota. A provider with no native usage source needs one before
+auto can work. Shared subscription limits still apply.
 
 All plugin text is English. No quota percentage widget is included. The plugin
 uses BB’s native integration, without a separate paid API service. It never
