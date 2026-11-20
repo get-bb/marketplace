@@ -1,9 +1,9 @@
 {
   "id": "art-day",
   "displayName": "Art Day",
-  "description": "Discover a museum painting chosen for your taste each day. Rate works, save favorites, and explore Russian stories in a dedicated gallery. Fresh research uses only Google Arts & Culture and Wikimedia Commons. Requires BB 0.6.157+, internet and your configured BB agent with web research; agent usage counts toward your provider limits, with no separate login or API key.",
+  "description": "Discover one museum painting every day and develop your taste in art. Explore short Russian stories, rate paintings and save favorites to guide future selections. Fresh research uses only Google Arts & Culture and Wikimedia Commons, with automatic selection from 09:00 Europe/Paris. Requires BB 0.6.157+, internet and your configured BB agent; its usage limits apply, with no separate login or API key.",
   "icon": {
-    "url": "./icons/art-day-c831a237.svg"
+    "url": "./icons/art-day-3b12c5d5.png"
   },
   "tags": [
     "museum",
