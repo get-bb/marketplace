@@ -2,7 +2,7 @@ Codex Quota shows how much of your OpenAI Codex quota is left and when each limi
 
 ## Check your limits
 
-The teal ring sits beside the context meter in Codex chats and side chats, and above Settings in the left sidebar. On a phone, look beside the send controls. Hover over or tap the ring for each reported limit and its reset countdown. In the Plus screenshot, 78% of the five-hour quota and 46% of the weekly quota remain. The ring shows **46%**. A **?** means it is waiting for current data.
+The teal ring sits beside the context meter in Codex chats and side chats, and above Settings in the left sidebar. On a phone, tap the ring in the chat composer or above Settings in the open sidebar. Hover over or tap the ring for each reported limit and its reset countdown. In the Plus screenshot, 78% of the five-hour quota and 46% of the weekly quota remain. The ring shows **46%**. A **?** means it is waiting for current data.
 
 Click to close the preview or click again to reopen it. **Enter** or **Space** toggles the card with the ring focused. **Esc** closes it.
 
@@ -16,4 +16,4 @@ Requires BB 0.49+, Plugin SDK 0.6.132 or later in the 0.x series, and BB’s bui
 
 Quota data comes from BB’s Codex provider. The plugin reads the number of manual resets from Codex CLI on the same machine when quota loads or refreshes. It reads no credentials and sends no telemetry.
 
-[Installation and source code](https://github.com/ai-babai/bb-plugin-codex-quota)
+[Source and installation](https://github.com/ai-babai/bb-plugin-codex-quota) · [Codex Quota on popkov.dev](https://popkov.dev/en/apps/#codex-quota)
