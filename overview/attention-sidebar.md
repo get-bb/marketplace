@@ -16,10 +16,12 @@ Each thread appears exactly once. A thread that needs attention or is running sh
 - The thread you have open stays where it was when you opened it until you open another one, so the list does not jump while you read.
 - Folders start collapsed except the current project's. A collapsed folder shows a dot when its project has threads waiting for you (accent colour) or running (muted, pulsing).
 - Every block and folder can be collapsed. The state is kept in your browser's local storage, per browser.
+- Drag a row onto another thread to make it a child of that thread; drag it onto its project folder header to move it back to the top level. The link is saved in bb, with the parent's notifications about the child turned off, so nesting never wakes the parent's agent. A parent row in a folder has an arrow that collapses or expands its branch.
+- An open folder has a `↕` button that picks the thread order for that folder: latest activity (the default), last opened, creation time, or title. A parent always stays above its children.
 - Right-click a row, or use its `⋯` button, to open bb's own thread menu (pin, rename, archive and so on). Rows show a relative time such as "5 мин", or the keyboard shortcut label when the thread has one.
 
 ## Requirements and limits
 
-- The plugin is frontend-only: it needs no account, no external service and no separate install, and it stores nothing outside your browser's local storage.
+- The plugin is frontend-only: it needs no account, no external service and no separate install. It keeps folder, branch and sort state and the times you opened threads in your browser's local storage; the only change it makes in bb is the parent link you set by dragging.
 - The interface of the plugin is in Russian: block titles, tooltips, accessibility labels, the loading and empty states, and relative times. There is no English interface and no language setting.
 - It replaces bb's thread list in the sidebar. To go back, choose bb's own **Thread list** under Settings → Appearance → Sidebar thread list, or disable the plugin.
