@@ -1,0 +1,33 @@
+{
+  "id": "art-day",
+  "displayName": "Art Day",
+  "description": "Discover one museum painting every day and develop your taste in art. Explore short Russian stories, rate paintings and save favorites to guide future selections. Fresh research uses only Google Arts & Culture and Wikimedia Commons, with automatic selection from 09:00 Europe/Paris. Requires BB 0.6.157+, internet and your configured BB agent; its usage limits apply, with no separate login or API key.",
+  "icon": {
+    "url": "./icons/art-day-3b12c5d5.png"
+  },
+  "tags": [
+    "museum",
+    "painting",
+    "wikimedia",
+    "daily-art",
+    "favorites",
+    "personalization"
+  ],
+  "author": {
+    "name": "KZBSS888",
+    "github": "KZBSS888",
+    "url": "https://github.com/KZBSS888"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/KZBSS888/bb-plugin-art-day.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/art-day.md",
+  "screenshots": [
+    "./screenshots/art-day/today.jpg",
+    "./screenshots/art-day/detail.jpg"
+  ]
+}
