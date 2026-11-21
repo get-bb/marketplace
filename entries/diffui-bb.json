@@ -1,0 +1,25 @@
+{
+  "id": "diffui-bb",
+  "displayName": "Diffui",
+  "description": "Runs Diffui's design canvas inside bb, lists the canvases that belong to bb alongside your threads, and turns a right-click on any design into a new bb thread with that design attached.",
+  "icon": "Palette",
+  "tags": [
+    "design",
+    "canvas",
+    "diffui",
+    "agent-tools",
+    "mockups",
+    "prototyping"
+  ],
+  "author": {
+    "name": "Jacob Miller",
+    "github": "jjcm",
+    "url": "https://github.com/jjcm"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/jjcm/diffui-bb.git",
+      "range": "^0.1.0"
+    }
+  }
+}
