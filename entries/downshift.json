@@ -1,7 +1,7 @@
 {
   "id": "downshift",
   "displayName": "Downshift [Experimental]",
-  "description": "Switch BB threads between your chosen model profiles with one toggle. Choose models from the same BB provider, with optional automatic Downshift at 5% remaining in confirmed native quota. A ready-to-run Linux x64 companion is available for a fresh BB instance. Requires your provider account and matching native integration on execution hosts; stock BB is unsupported.",
+  "description": "Switch BB threads between your chosen model profiles with one toggle. Choose models from the same BB provider, with optional automatic Downshift at 5% remaining in confirmed native quota. Requires your provider account and the companion BB source build on the server and execution hosts; stock BB is unsupported.",
   "icon": {
     "url": "./icons/downshift-9c79bb07.svg"
   },
