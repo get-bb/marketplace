@@ -1,0 +1,42 @@
+{
+  "id": "gearshift",
+  "displayName": "Gearshift",
+  "description": "Runs every message on the model and reasoning effort its size calls for, so a quick question stops paying for the top model. For bigger asks it orchestrates sub-agents: it tells the agent which roles to start and on which models, and stops any sub-agent that spends past its token budget. A pill in the composer shows which model your draft will run on before you send it, and turns routing off for a thread. Long threads keep their current model, so a short reply never forces a large context to be re-read uncached. Works with Claude Code, Codex and any other provider; a settings editor sets the model, effort and service tier for each message size. Scoring runs as local rules with no extra model call, and an analytics page shows every shift and the estimated savings.",
+  "icon": {
+    "url": "./icons/gearshift-c0112c6d.svg"
+  },
+  "screenshots": [
+    "./screenshots/gearshift/1-composer-pill.png",
+    "./screenshots/gearshift/2-analytics.png",
+    "./screenshots/gearshift/3-settings.png",
+    "./screenshots/gearshift/4-teams.png"
+  ],
+  "tags": [
+    "model-routing",
+    "sub-agents",
+    "orchestration",
+    "reasoning-effort",
+    "cost",
+    "tokens",
+    "models",
+    "claude-code",
+    "codex",
+    "analytics"
+  ],
+  "author": {
+    "name": "vanZeben",
+    "github": "vanZeben",
+    "url": "https://github.com/vanZeben"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": [
+    "token-usage-and-limits"
+  ],
+  "overview": "./overview/gearshift.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/vanZeben/bb-gearshift.git",
+      "range": ">=0.1.0 <1.0.0"
+    }
+  }
+}
