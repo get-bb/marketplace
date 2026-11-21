@@ -7,6 +7,7 @@ on:
     - cron: "17 6 * * *"
 jobs:
   stats:
+    if: github.repository == 'get-bb/marketplace'
     runs-on: ubuntu-latest
     environment: production
     steps:
