@@ -1,0 +1,35 @@
+{
+  "id": "cache-compact",
+  "displayName": "Cache Compact",
+  "description": "Compact idle threads minutes before their prompt cache expires, so compaction runs on a warm cache instead of paying cold re-input rates. Reads exact cache lifetimes from Claude Code and Pi for native compaction, and compacts Antigravity CLI threads via /compact using a configurable fallback TTL. Skips threads whose cache has already expired, threads under your token threshold, and threads with queued work or active child threads. Includes a live countdown dashboard in Settings and bb cache-compact CLI commands; requires BB 0.50 or later with no external service or separate account.",
+  "icon": {
+    "url": "./icons/cache-compact-1dd434d7.svg"
+  },
+  "screenshots": [
+    "./screenshots/cache-compact/schedule.png",
+    "./screenshots/cache-compact/settings.png"
+  ],
+  "overview": "./overview/cache-compact.md",
+  "tags": [
+    "prompt-cache",
+    "compaction",
+    "tokens",
+    "context-window",
+    "cache-ttl",
+    "claude-code",
+    "pi",
+    "antigravity"
+  ],
+  "author": {
+    "name": "Adebola",
+    "github": "AdzeB",
+    "url": "https://github.com/AdzeB"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/AdzeB/bb-plugin-cache-compact.git",
+      "range": "^0.1.0"
+    }
+  }
+}
