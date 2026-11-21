@@ -24,5 +24,8 @@
       "range": "^0.1.0"
     }
   },
-  "overview": "./overview/sidebar-canvas.md"
+  "overview": "./overview/sidebar-canvas.md",
+  "screenshots": [
+    "./screenshots/sidebar-canvas/privacy-overview.png"
+  ]
 }
