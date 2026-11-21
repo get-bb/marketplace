@@ -1,0 +1,42 @@
+{
+  "id": "project-actions",
+  "displayName": "Project Actions",
+  "description": "Run your project's dev server, tests and scripts from a menu in each thread's header, in that thread's own worktree. The list is a .bb/actions.json file in the repository, so each branch carries its own actions and everyone on the project gets the same menu. Picking an action opens a terminal titled with its name in the thread's terminal panel, and picking it again while it runs brings that terminal back instead of starting a second copy. Edit actions… opens an editor beside the thread that adds, changes, reorders and deletes actions, checks each change and saves into the worktree without committing. Requires bb 0.49 or later; actions run on macOS and Linux machines.",
+  "icon": "Play",
+  "tags": [
+    "actions",
+    "scripts",
+    "dev-server",
+    "terminal",
+    "run",
+    "commands",
+    "worktree",
+    "npm-scripts",
+    "launcher",
+    "tasks"
+  ],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "command-line",
+  "secondaryCategories": [
+    "tasks-and-workflows"
+  ],
+  "screenshots": [
+    "./screenshots/project-actions/menu.png",
+    "./screenshots/project-actions/running.png",
+    "./screenshots/project-actions/editor.png",
+    "./screenshots/project-actions/invalid.png"
+  ],
+  "overview": "./overview/project-actions.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "project-actions",
+      "tagPrefix": "project-actions/",
+      "range": "^0.1.0"
+    }
+  }
+}
