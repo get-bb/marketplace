@@ -1,0 +1,29 @@
+{
+  "id": "cyber-office",
+  "displayName": "Cyber Office",
+  "description": "Give one task to a coordinator and get it back checked. Stas, the coordinator, splits the task and briefs specialists: researcher, engineer, designer, copywriter. A critic that cannot be switched off reviews the result before it reaches you, and when the team needs a decision you get one question with options. A pixel office shows who is working, who is waiting for you and who failed. Rename the cyborgs, add your own agents, pick a model for each and hand them your installed skills by category. Includes a marketing team, a capped demo run, and English and Russian interfaces. Uses your own providers; requires BB 0.49 or newer.",
+  "icon": "Users",
+  "tags": ["agents", "team", "roles", "coordinator", "critic", "review", "skills", "marketing", "pixel-art", "multi-agent"],
+  "author": {
+    "name": "sumkarisa",
+    "github": "marketing-g",
+    "url": "https://github.com/marketing-g"
+  },
+  "category": "agents-and-providers",
+  "secondaryCategories": ["tasks-and-workflows", "thread-management"],
+  "source": {
+    "git": {
+      "url": "https://github.com/marketing-g/bb-plugin-cyber-office.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/cyber-office/office.png",
+    "./screenshots/cyber-office/cyborg-card.png",
+    "./screenshots/cyber-office/skill-picker.png",
+    "./screenshots/cyber-office/add-agent.png",
+    "./screenshots/cyber-office/demo-run.png",
+    "./screenshots/cyber-office/settings.png"
+  ],
+  "overview": "./overview/cyber-office.md"
+}
