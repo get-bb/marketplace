@@ -1,0 +1,24 @@
+{
+  "id": "model-favorites",
+  "displayName": "Model Favorites",
+  "description": "Keep the models you actually use one tab away in every model picker. Star a model and it appears in a Favorites tab beside the provider tabs with its provider icon and saved reasoning level; picking it restores provider, model, and reasoning through the composer's own selection. The tab opens by itself when a composer has no model yet, and search filters the list. Desktop model picker only; the compact and mobile pickers keep their native behavior.",
+  "icon": "Star",
+  "screenshots": [
+    "./screenshots/model-favorites/01-favorites-tab.jpg",
+    "./screenshots/model-favorites/02-stars-in-picker.jpg",
+    "./screenshots/model-favorites/03-settings.jpg"
+  ],
+  "overview": "./overview/model-favorites.md",
+  "tags": ["models", "model-picker", "favorites", "reasoning", "composer", "provider"],
+  "author": {
+    "name": "QUNETOL57",
+    "github": "QUNETOL57"
+  },
+  "category": "agents-and-providers",
+  "source": {
+    "git": {
+      "url": "https://github.com/QUNETOL57/bb-model-favorites.git",
+      "range": "^0.1.0"
+    }
+  }
+}
