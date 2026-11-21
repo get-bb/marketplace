@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 // Build the frozen v1 document and the full v2 document from one source.
-// The --liveness option also checks each remote source.
+// The --liveness option also checks each remote source and compares its
+// newest release with the entry range. It leaves the static range warnings to
+// the plain build, so CI prints them once.
 // The --ranking <path> option reads recent install counts from
 // scripts/build-ranking.mjs; without it, computed shelves use newest entries.
 import { execFileSync } from "node:child_process";
@@ -14,11 +16,16 @@ import {
   findOrphanOverviewFiles,
   findOrphanScreenshotFiles,
   fillEmptyCollections,
+  newestStableGitRelease,
+  newestStableNpmRelease,
   orderCategories,
+  outsideRangeFindings,
   projectV1Manifest,
   pullRequestEntryFiles,
+  rangeWarningReport,
   readEntryAddedDates,
   reservedPluginIdProblem,
+  staticRangeFindings,
   validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
@@ -132,10 +139,8 @@ function changedPullRequestEntryFiles() {
   }
 }
 
-const categoryPolicy = checkRequiredCategories(
-  entryRecords,
-  changedPullRequestEntryFiles(),
-);
+const changedEntryFiles = changedPullRequestEntryFiles();
+const categoryPolicy = checkRequiredCategories(entryRecords, changedEntryFiles);
 for (const file of categoryPolicy.errors) {
   problems.push(`${file}: A new or changed entry must have a category.`);
 }
@@ -187,6 +192,9 @@ function readRanking() {
 }
 
 const ranking = readRanking();
+const rangeFindings = liveness
+  ? []
+  : entryRecords.flatMap(({ entry, file }) => staticRangeFindings(entry, file));
 
 const plugins = entryRecords.map(({ entry }) => entry);
 for (const entry of plugins) {
@@ -315,7 +323,7 @@ if (!validateV2(v2Manifest)) {
 }
 
 if (liveness) {
-  for (const entry of plugins) {
+  for (const { entry, file } of entryRecords) {
     const source = entry.source ?? {};
     try {
       if (source.git) {
@@ -327,21 +335,13 @@ if (liveness) {
             ["ls-remote", "--tags", url, `refs/tags/${prefix}v*`],
             { encoding: "utf8", timeout: 30_000 },
           );
-          const escapedPrefix = prefix.replaceAll(
-            /[.*+?^${}()|[\]\\]/g,
-            "\\$&",
-          );
-          const tagPattern = new RegExp(
-            `refs/tags/${escapedPrefix}(v\\d+\\.\\d+\\.\\d+)(\\^\\{\\})?$`,
-          );
-          const hasTag = out
-            .split("\n")
-            .some((line) => tagPattern.test(line.trim()));
-          if (!hasTag) {
+          const newest = newestStableGitRelease(out, prefix);
+          if (newest === undefined) {
             problems.push(
               `${entry.id}: The source has no ${prefix}vX.Y.Z tag for "${range}".`,
             );
           }
+          rangeFindings.push(...outsideRangeFindings(entry, file, newest));
         } else {
           const out = execFileSync("git", ["ls-remote", url, ref, `${ref}^{}`], {
             encoding: "utf8",
@@ -359,10 +359,17 @@ if (liveness) {
           }
         }
       } else if (source.npm) {
-        execFileSync("npm", ["view", source.npm.package, "name"], {
-          encoding: "utf8",
-          timeout: 30_000,
-        });
+        const registry =
+          source.npm.registry === undefined
+            ? []
+            : ["--registry", source.npm.registry];
+        const out = execFileSync(
+          "npm",
+          ["view", source.npm.package, "versions", "--json", ...registry],
+          { encoding: "utf8", timeout: 30_000 },
+        );
+        const newest = newestStableNpmRelease(out, source.npm.package);
+        rangeFindings.push(...outsideRangeFindings(entry, file, newest));
       }
     } catch (error) {
       const reason = error.message.split("\n")[0];
@@ -371,7 +378,12 @@ if (liveness) {
   }
 }
 
+const rangeReport = rangeWarningReport(rangeFindings, changedEntryFiles);
+warnings.push(...rangeReport.warnings);
 for (const warning of warnings) console.warn(`warning: ${warning}`);
+if (process.env.GITHUB_ACTIONS === "true") {
+  for (const annotation of rangeReport.annotations) console.log(annotation);
+}
 if (problems.length > 0) {
   for (const problem of problems) console.error(`error: ${problem}`);
   process.exit(1);

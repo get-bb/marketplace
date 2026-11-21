@@ -22,13 +22,20 @@ import {
   fillEmptyCollections,
   findOrphanOverviewFiles,
   inspectImage,
+  newestStableGitRelease,
+  newestStableNpmRelease,
   orderCategories,
+  outsideRangeFindings,
   parseEntryAddedDates,
+  patchOnlyRangeWarning,
   projectV1Entry,
   projectV1Manifest,
   pullRequestEntryFiles,
+  rangeWarningReport,
   readEntryAddedDates,
   reservedPluginIdProblem,
+  staticRangeFindings,
+  unboundedRangeWarning,
   validateOverviewReference,
   validateAndRewriteIcon,
   validateScreenshotReference,
@@ -712,4 +719,165 @@ test("reserved plugin ids reject the bb-- prefix and bundled plugin ids", () => 
   );
   assert.equal(reservedPluginIdProblem(undefined, reserved), undefined);
   assert.equal(reservedPluginIdProblem(42, reserved), undefined);
+});
+
+test("a 0.x range that stops before the next minor release gets a warning", () => {
+  const cases = [
+    ["^0.6.1", "0.7.0", ">=0.6.1 <1.0.0"],
+    ["~0.6.1", "0.7.0", ">=0.6.1 <1.0.0"],
+    ["0.6.x", "0.7.0", ">=0.6.0 <1.0.0"],
+    ["^0.0.3", "0.0.4", ">=0.0.3 <1.0.0"],
+    ["0.6.1", "0.6.2", ">=0.6.1 <1.0.0"],
+  ];
+  for (const [range, stop, wider] of cases) {
+    const warning = patchOnlyRangeWarning(range);
+    assert.ok(
+      warning?.startsWith(`The range "${range}" stops before ${stop}, so ${stop} and later`),
+      `${range} gave ${warning}`,
+    );
+    assert.ok(warning.includes(`"${wider}" follows every 0.x release`), warning);
+  }
+  for (const range of [">=0.6.1 <1.0.0", "^0", "0.x", "^1.2.3", ">=0.6.1", "*", "latest"]) {
+    assert.equal(patchOnlyRangeWarning(range), undefined, range);
+  }
+});
+
+test("a range with no upper bound gets a warning", () => {
+  const cases = [
+    [">=0.1.0", '">=0.1.0 <1.0.0" follows every 0.x release'],
+    [">1.2.0", '"^1.2.1" follows every 1.x release'],
+    [">=1.0.0 >1.2.0", '"^1.2.1" follows every 1.x release'],
+  ];
+  for (const [range, text] of cases) {
+    const warning = unboundedRangeWarning(range);
+    assert.ok(warning?.includes("has no upper bound"), `${range} gave ${warning}`);
+    assert.ok(warning.includes(text), warning);
+  }
+  for (const range of ["*", "1.x || >=2.5.0", ">=1.0.0 || <0.5.0"]) {
+    const warning = unboundedRangeWarning(range);
+    assert.ok(warning?.includes("has no upper bound"), `${range} gave ${warning}`);
+    assert.ok(!warning.includes("follows every"), warning);
+  }
+  for (const range of ["^0.6.1", ">=0.1.0 <1.0.0", "<2.0.0", "1.2.3", "^0", "latest"]) {
+    assert.equal(unboundedRangeWarning(range), undefined, range);
+  }
+});
+
+test("the newest stable Git release follows BB tag names", () => {
+  const output = [
+    "1111111111111111111111111111111111111111\trefs/tags/v0.6.1",
+    "2222222222222222222222222222222222222222\trefs/tags/v0.7.0",
+    "3333333333333333333333333333333333333333\trefs/tags/v0.7.0^{}",
+    "4444444444444444444444444444444444444444\trefs/tags/v0.10.0",
+    "5555555555555555555555555555555555555555\trefs/tags/v1.0.0-rc.1",
+    "6666666666666666666666666666666666666666\trefs/tags/v2.0.0+build.1",
+    "7777777777777777777777777777777777777777\trefs/tags/v03.0.0",
+    "8888888888888888888888888888888888888888\trefs/tags/v4.0",
+    "",
+  ].join("\n");
+  assert.deepEqual(newestStableGitRelease(output, ""), {
+    version: "0.10.0",
+    label: "v0.10.0",
+  });
+  const prefixed = [
+    "1111111111111111111111111111111111111111\trefs/tags/notes/v1.2.0",
+    "2222222222222222222222222222222222222222\trefs/tags/notes/v1.10.0",
+    "3333333333333333333333333333333333333333\trefs/tags/notes-v9.0.0",
+  ].join("\n");
+  assert.deepEqual(newestStableGitRelease(prefixed, "notes/"), {
+    version: "1.10.0",
+    label: "notes/v1.10.0",
+  });
+  assert.equal(
+    newestStableGitRelease(
+      "1111111111111111111111111111111111111111\trefs/tags/v1.0.0-beta.1\n",
+      "",
+    ),
+    undefined,
+  );
+});
+
+test("the newest stable npm release ignores prereleases", () => {
+  assert.deepEqual(
+    newestStableNpmRelease('["0.1.0","0.2.0","0.10.0","1.0.0-beta.1"]', "@acme/notes"),
+    { version: "0.10.0", label: "@acme/notes@0.10.0" },
+  );
+  assert.deepEqual(newestStableNpmRelease('"0.3.0"', "notes"), {
+    version: "0.3.0",
+    label: "notes@0.3.0",
+  });
+  assert.equal(newestStableNpmRelease('["1.0.0-beta.1"]', "notes"), undefined);
+});
+
+test("a newest release outside the range gets a warning", () => {
+  const entry = (range) => ({
+    id: "notes",
+    source: { git: { url: "https://github.com/acme/notes.git", range } },
+  });
+  const release = { version: "0.7.0", label: "v0.7.0" };
+  const [above] = outsideRangeFindings(entry("^0.6.1"), "notes.json", release);
+  assert.equal(above.kind, "outside-range");
+  assert.equal(above.file, "entries/notes.json");
+  assert.equal(above.release, "v0.7.0");
+  assert.match(above.message, /v0\.7\.0, is newer than the range "\^0\.6\.1" admits/);
+  assert.match(
+    outsideRangeFindings(entry("^1.0.0"), "notes.json", release)[0].message,
+    /no stable release satisfies the range/,
+  );
+  assert.match(
+    outsideRangeFindings(entry("^0.5.0 || ^0.8.0"), "notes.json", release)[0].message,
+    /is outside the range/,
+  );
+  assert.deepEqual(outsideRangeFindings(entry(">=0.6.1 <1.0.0"), "notes.json", release), []);
+  assert.deepEqual(outsideRangeFindings(entry("^0.6.1"), "notes.json", undefined), []);
+  const pinned = {
+    id: "notes",
+    source: { git: { url: "https://github.com/acme/notes.git", ref: "main" } },
+  };
+  assert.deepEqual(outsideRangeFindings(pinned, "notes.json", release), []);
+});
+
+test("range warnings name changed entries and count the rest", () => {
+  const entries = [
+    { id: "changed", source: { git: { url: "https://github.com/acme/changed.git", range: "^0.2.0" } } },
+    { id: "old", source: { npm: { package: "bb-plugin-old", range: "^0.1.0" } } },
+    { id: "open", source: { git: { url: "https://github.com/acme/open.git", range: ">=0.1.0" } } },
+    { id: "wide", source: { git: { url: "https://github.com/acme/wide.git", range: ">=0.1.0 <1.0.0" } } },
+    { id: "pinned", source: { git: { url: "https://github.com/acme/pinned.git", ref: "v1.0.0" } } },
+  ];
+  const findings = [
+    ...entries.flatMap((entry) => staticRangeFindings(entry, `${entry.id}.json`)),
+    ...outsideRangeFindings(entries[1], "old.json", {
+      version: "0.2.0",
+      label: "bb-plugin-old@0.2.0",
+    }),
+  ];
+  const { warnings, annotations } = rangeWarningReport(findings, ["entries/changed.json"]);
+  assert.equal(warnings.length, 4, JSON.stringify(warnings));
+  assert.match(warnings[0], /^entries\/changed\.json: The range "\^0\.2\.0" stops before 0\.3\.0/);
+  assert.equal(
+    warnings[1],
+    "1 unchanged entries use a 0.x range that stops before the next minor release.",
+  );
+  assert.equal(warnings[2], "1 unchanged entries use a range with no upper bound.");
+  assert.equal(
+    warnings[3],
+    "1 unchanged entries have a newest release outside their range: old bb-plugin-old@0.2.0.",
+  );
+  assert.deepEqual(annotations, [
+    `::warning file=entries/changed.json::${findings[0].message}`,
+  ]);
+});
+
+test("a range annotation escapes GitHub workflow command data", () => {
+  const finding = {
+    id: "odd",
+    file: "entries/a,b:c.json",
+    kind: "patch-only",
+    message: "100% of\r\nreleases",
+  };
+  const { annotations } = rangeWarningReport([finding], ["entries/a,b:c.json"]);
+  assert.deepEqual(annotations, [
+    "::warning file=entries/a%2Cb%3Ac.json::100%25 of%0D%0Areleases",
+  ]);
 });

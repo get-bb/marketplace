@@ -50,6 +50,37 @@ BB installs nothing automatically.
 A catalog refresh does not install a plugin.
 A user controls each plugin installation and update.
 
+## Version ranges
+
+BB reads a `range` with npm semver rules.
+It installs the highest release that the range admits.
+It skips a prerelease unless the range names one.
+A Git range source uses tags named `vX.Y.Z`, or `<tagPrefix>vX.Y.Z` when the entry sets `tagPrefix`.
+
+- `^1.2.3` admits every 1.x release from 1.2.3 and stops before 2.0.0.
+- `^0.6.1` admits only 0.6.x patch releases. A 0.7.0 release never reaches users of the entry.
+- `>=0.6.1 <1.0.0` admits every 0.x release from 0.6.1, including a 0.x minor release that breaks compatibility.
+- `>=0.6.1` has no upper bound. It admits every future major release.
+
+BB records the range in each installation.
+A range change in an entry reaches new installations only.
+An existing installation keeps the range it was installed with.
+
+The build reports a warning for each of these cases:
+
+- The range is a 0.x range that stops before the next minor release, such as `^0.6.1` or `~0.6.1`.
+- The range has no upper bound, such as `>=0.6.1` or `*`.
+- The newest stable release is outside the range.
+
+`npm run build` reports the first two cases.
+`npm run check` reports the third case: it reads the newest `vX.Y.Z` tag of a Git source, or the newest version of an npm package.
+
+A warning does not fail the build.
+In a pull request, CI prints the warnings of each new or changed entry and adds each one as a GitHub warning annotation on the entry file.
+For the other entries, it prints one count for each case and names each entry whose newest release is outside its range.
+The range is the author's decision.
+A maintainer reports a warning to the author and does not rewrite the range.
+
 ## Categories
 
 The `categories` array defines the available category IDs and their display text.
@@ -189,4 +220,4 @@ npm run gate:v1
 npm run check
 ```
 
-The `check` command also checks each Git or npm source.
+The `check` command also checks each Git or npm source and compares its newest release with the range.
