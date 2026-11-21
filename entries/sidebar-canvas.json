@@ -1,6 +1,6 @@
 {
   "id": "sidebar-canvas",
-  "displayName": "Sidebar Canvas",
+  "displayName": "Art Sidebar Canvas",
   "description": "Give your sidebar a new piece of art every day. Rate wallpapers from 1\u201310 to guide future styles, adjust the tint, or keep a favorite. Choose a daily time with up to two hourly retries when access is unavailable. Requires BB 0.50+ and a connected agent with an image-generation tool; provider and generator charges may apply.",
   "icon": {
     "url": "./icons/sidebar-canvas-5cef608a.svg"
