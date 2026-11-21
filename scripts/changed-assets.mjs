@@ -1,9 +1,11 @@
 #!/usr/bin/env node
-// Print the icon or screenshot files whose published copy is missing or
-// different, one path per line, so the publish workflow uploads only those.
+// Print the icon, screenshot, or overview files whose published copy is
+// missing or different, one path per line, so the publish workflow uploads
+// only those.
 //
 //   node scripts/changed-assets.mjs icons
 //   node scripts/changed-assets.mjs screenshots
+//   node scripts/changed-assets.mjs overviews
 //
 // R2's ETag for a single-part object is the MD5 of its bytes, and getbb.app
 // serves it unchanged, so a matching ETag means the object already has this
@@ -21,6 +23,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 const DEFAULT_BASE_URL = "https://getbb.app/marketplace/v1/";
 const CONCURRENCY = 16;
 const ICON_PATTERN = /\.(svg|png|webp)$/;
+const OVERVIEW_PATTERN = /\.md$/;
 
 /** The files of one asset group with the bucket key each is published at. */
 export function listAssets(root, group) {
@@ -45,6 +48,14 @@ export function listAssets(root, group) {
         return { file, key: `v2/${file}` };
       })
       .sort((left, right) => (left.file < right.file ? -1 : 1));
+  }
+  if (group === "overviews") {
+    const dir = join(root, "overview");
+    if (!existsSync(dir)) return [];
+    return readdirSync(dir)
+      .filter((name) => OVERVIEW_PATTERN.test(name))
+      .sort()
+      .map((name) => ({ file: `overview/${name}`, key: `v2/overview/${name}` }));
   }
   throw new Error(`unknown asset group "${group}"`);
 }

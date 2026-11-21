@@ -577,6 +577,11 @@ export function normalizeOverviewText(text) {
     .replace(/\n+$/, "")}\n`;
 }
 
+/** The published URL of a plugin's long-form description file. */
+export function overviewAssetUrl(pluginId) {
+  return `${MARKETPLACE_ORIGIN}/marketplace/v2/overview/${pluginId}.md`;
+}
+
 export function validateOverviewReference(root, pluginId, reference) {
   if (reference !== `./overview/${pluginId}.md`) {
     return {

@@ -23,6 +23,7 @@ import {
   findOrphanOverviewFiles,
   inspectImage,
   orderCategories,
+  overviewAssetUrl,
   parseEntryAddedDates,
   projectV1Entry,
   projectV1Manifest,
@@ -537,6 +538,13 @@ test("the screenshot check finds an unreferenced file", () => {
     );
     assert.deepEqual(orphans, ["screenshots/example-plugin/orphan.png"]);
   });
+});
+
+test("the overview asset URL uses the v2 overview directory", () => {
+  assert.equal(
+    overviewAssetUrl("example-plugin"),
+    "https://getbb.app/marketplace/v2/overview/example-plugin.md",
+  );
 });
 
 function withOverviewRoot(callback) {
