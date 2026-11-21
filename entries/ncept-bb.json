@@ -1,0 +1,32 @@
+{
+  "id": "ncept-bb",
+  "displayName": "Common Concept",
+  "description": "Learn what you set out to learn, one lesson at a time. See your next lesson and what’s due for review in Learn. Explore the map of skills behind a Mission and return to its tutoring threads. Tutoring requires pi with a configured model; your provider’s charges apply. Requires bb 0.48.1 or later.",
+  "icon": {
+    "url": "./icons/ncept-bb-8f2dcf6c.png"
+  },
+  "tags": [
+    "learning",
+    "tutoring",
+    "spaced-repetition",
+    "skill-map",
+    "pi"
+  ],
+  "author": {
+    "name": "Common Concept",
+    "github": "mlegls",
+    "url": "https://mmon.co"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/ncept-bb/learn.webp",
+    "./screenshots/ncept-bb/mission.webp"
+  ],
+  "overview": "./overview/ncept-bb.md",
+  "source": {
+    "npm": {
+      "package": "@mmon-co/ncept-bb",
+      "range": "^0.2.0"
+    }
+  }
+}
