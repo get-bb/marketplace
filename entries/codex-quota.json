@@ -28,6 +28,7 @@
   "screenshots": [
     "./screenshots/codex-quota/footer-dark.png",
     "./screenshots/codex-quota/sidebar-en.png",
-    "./screenshots/codex-quota/mobile-en.png"
+    "./screenshots/codex-quota/mobile-en.png",
+    "./screenshots/codex-quota/resets-en.png"
   ]
 }
