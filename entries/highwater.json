@@ -1,0 +1,25 @@
+{
+  "id": "highwater",
+  "displayName": "Highwater [Experimental]",
+  "description": "See what fills your coding agent’s context window. Hover over the composer bar for a token breakdown, or open the Context tab to see what was added, retained or dropped across model calls. Works with Pi, Claude Code and Codex on BB 0.49 or later.",
+  "category": "token-usage-and-limits",
+  "tags": ["context-window", "tokens", "compaction"],
+  "author": {
+    "name": "nickcox",
+    "github": "nickcox"
+  },
+  "icon": { "url": "./icons/highwater-4cc7d2b4.svg" },
+  "overview": "./overview/highwater.md",
+  "screenshots": [
+    "./screenshots/highwater/context-summary.jpg",
+    "./screenshots/highwater/context-tab.jpg"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/nickcox/highwater.git",
+      "subdir": "integrations/bb",
+      "range": "^0.5.5",
+      "tagPrefix": "bb-plugin-"
+    }
+  }
+}
