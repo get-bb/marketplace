@@ -8,7 +8,7 @@ The sidebar thumbnail shows the current painting.
 ## A daily museum visit
 
 Open a dedicated page with a large painting, its artist, year and museum,
-a short Russian story, and a detail to look for. Enlarge or download the
+a short story in Russian or English, and a detail to look for. Enlarge or download the
 reproduction and follow its credited source.
 
 ## Learn your taste
@@ -16,7 +16,7 @@ reproduction and follow its credited source.
 Rate works from 1 to 5, choose what you liked and save favorites. The next
 fresh search considers those signals while leaving room for discoveries.
 Today, Favorites and My Taste are separate tabs. Profiles stay independent
-between BB installations. The interface and stories currently use Russian.
+between BB installations. The interface follows your system/browser language: Russian for ru-* locales, English for all others. Stories, titles, museum names and media have both versions; artist names and artwork identity stay unchanged. Missing translations show the original text with a notice until your BB agent prepares them. Switching language preserves ratings and favorites.
 
 ## Automatic selection
 
