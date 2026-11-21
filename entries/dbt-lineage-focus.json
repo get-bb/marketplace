@@ -1,0 +1,22 @@
+{
+  "id": "dbt-lineage-focus",
+  "displayName": "dbt Lineage Focus",
+  "description": "Displays a depth-limited interactive dbt lineage graph alongside the focused model's source code.",
+  "icon": {
+    "url": "./icons/dbt-lineage-focus-cb95cf46.svg"
+  },
+  "tags": ["dbt", "lineage", "data", "developer-tools"],
+  "author": {
+    "name": "Nazih Kalo",
+    "github": "nazihkalo",
+    "url": "https://github.com/nazihkalo"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/nazihkalo/bb-data-plugins.git",
+      "subdir": "plugins/bb-plugin-dbt-lineage-focus",
+      "range": "^0.1.0",
+      "tagPrefix": "dbt-lineage-focus/"
+    }
+  }
+}
