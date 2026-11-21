@@ -1,0 +1,33 @@
+{
+  "id": "section-load-more-fork",
+  "displayName": "Section Load More (Fork)",
+  "description": "Keep your pinned threads and busy sections from taking over the sidebar. Show the first eight threads in Pinned and five in each custom section or Threads by default. Reveal the next five with Load more or return to the initial limit with Show less. Adjust the limits in BB settings.",
+  "icon": {
+    "url": "./icons/section-load-more-fork-b26fefd1.svg"
+  },
+  "tags": [
+    "sidebar",
+    "pinned",
+    "sections",
+    "threads",
+    "load-more",
+    "show-less"
+  ],
+  "author": {
+    "name": "Maxim Berezkin",
+    "github": "docomoz",
+    "url": "https://github.com/docomoz"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/section-load-more-fork/01-capped-sections.jpg",
+    "./screenshots/section-load-more-fork/02-expanded-section.jpg"
+  ],
+  "overview": "./overview/section-load-more-fork.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/docomoz/bb-plugin-section-load-more.git",
+      "range": "^0.1.3"
+    }
+  }
+}
