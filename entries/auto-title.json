@@ -1,0 +1,12 @@
+{
+  "id": "auto-title",
+  "displayName": "Auto Title",
+  "description": "Rechecks your thread title every ten human messages. If the title still fits, it stays; if the conversation moved to a new goal, it gets a new name. Auto Title leaves hand-written titles alone when it can distinguish them from generated titles. Choose your own interval and use BB Cloud, a compatible AI plugin, a custom endpoint, or a small model on the thread's provider.",
+  "category": "thread-management",
+  "icon": { "url": "./icons/auto-title.svg" },
+  "tags": ["thread-titles", "rename", "naming", "sidebar"],
+  "author": { "name": "Steve Frost", "github": "steveafrost", "url": "https://github.com/steveafrost" },
+  "source": { "git": { "url": "https://github.com/steveafrost/bb-plugin-auto-title.git", "range": "^0.4.0" } },
+  "overview": "./overview/auto-title.md",
+  "screenshots": ["./screenshots/auto-title/settings.jpg"]
+}
