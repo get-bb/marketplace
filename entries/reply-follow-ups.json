@@ -1,0 +1,30 @@
+{
+  "id": "reply-follow-ups",
+  "displayName": "Reply Follow-ups",
+  "description": "Pick up to five follow-up prompts from an agent’s reply without retyping them. Click a suggestion or use a keyboard shortcut to put it in your draft. With GenUI installed, the buttons appear above the composer in one place. The reply must include suggestions, and the plugin runs in BB 0.50+ with Plugin SDK 0.6.157+ and makes no extra model requests.",
+  "icon": {
+    "url": "./icons/reply-follow-ups-e2afca67.svg"
+  },
+  "tags": [
+    "composer",
+    "suggestions",
+    "keyboard-shortcuts",
+    "genui"
+  ],
+  "author": {
+    "name": "docomoz",
+    "github": "docomoz",
+    "url": "https://github.com/docomoz"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/reply-follow-ups/composer.png"
+  ],
+  "overview": "./overview/reply-follow-ups.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/docomoz/bb-plugin-reply-follow-ups.git",
+      "range": "^0.1.0"
+    }
+  }
+}
