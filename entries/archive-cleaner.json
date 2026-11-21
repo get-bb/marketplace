@@ -1,0 +1,12 @@
+{
+  "id": "archive-cleaner",
+  "displayName": "Archived Threads Cleaner",
+  "description": "Keep archived threads for as long as you choose, then clear them automatically. Pick projects by name and preview which threads qualify. Cleanup catches up when BB returns after downtime.",
+  "icon": {"url": "./icons/archive-cleaner.svg"},
+  "screenshots": ["./screenshots/archive-cleaner/settings.png"],
+  "overview": "./overview/archive-cleaner.md",
+  "tags": ["retention", "cleanup", "archived-threads"],
+  "author": {"name": "architawr", "github": "architawr"},
+  "category": "thread-management",
+  "source": {"git": {"url": "https://github.com/architawr/bb-plugin-archive-cleaner.git", "range": "^0.2.4"}}
+}
