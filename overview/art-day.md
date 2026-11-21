@@ -29,7 +29,7 @@ painting's original date.
 
 ## Sources and requirements
 
-Fresh research uses only Google Arts & Culture and Wikimedia Commons.
+Fresh research uses only Wikimedia Commons.
 Reproductions come from Wikimedia and require verified Public Domain or CC0
 rights. Only the current painting and favorites keep their full cards and
 images; other shown works become compact history. No future catalogue is kept.
