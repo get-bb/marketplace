@@ -1,6 +1,6 @@
 ## The meadow
 
-Overgrown starts with short grass. Give it 40 minutes and the blades reach about a third of the chat. Open the sliders above the message box to see the countdown, choose 20, 40 or 60 minutes, or press **Grow now** to bring up the whole meadow. Each chat remembers its cuts while BB is closed.
+Overgrown starts with short grass. Give it 40 minutes and the blades reach about a third of the chat. Open the sliders above the message box to see the countdown, choose any growth period from 5 to 90 minutes in one-minute steps, or press **Grow now** to bring up the whole meadow. Each chat remembers its cuts while BB is closed.
 
 ## Play
 
