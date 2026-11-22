@@ -21,6 +21,10 @@ without leaving BB.
   a sticky file header and a hit opens the file at its line.
 - A CodeMirror editor with syntax highlighting in your BB code theme, find in
   file, go to line, multi-cursor, and code folding.
+- **Automatic file reloading**: Open files detect changes made on disk by agents
+  or external tools, seamlessly refreshing clean tabs while preserving your caret
+  and scroll position. Dirty tabs with unsaved edits flag a conflict notice
+  instead of clobbering your work.
 - **Auto-save** (off by default) and a **line-wrap** toggle, both remembered
   between sessions.
 - A markdown preview that renders **Mermaid** diagrams with BB's own message
@@ -43,7 +47,9 @@ works the same way. Paths are confined to the workspace root.
 
 Every save carries the hash the edit was based on. If an agent changed the file
 while you were typing, the save stops with a conflict notice and offers Reload
-or Save again rather than overwriting the agent's work.
+or Save again rather than overwriting the agent's work. When a file is not being
+edited, changes made externally on disk reload automatically into the active tab
+without disturbing your cursor or scroll position.
 
 A write from anywhere, another tab, another device, or the plugin's CLI,
 refreshes every open tree over realtime.
