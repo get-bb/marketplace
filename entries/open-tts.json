@@ -1,7 +1,7 @@
 {
   "id": "open-tts",
   "displayName": "Open TTS",
-  "description": "Listen to BB messages using a speech server you choose. Read full replies or selected passages, then pause, seek within buffered audio or adjust playback speed. Connect an OpenAI-compatible MP3 endpoint such as Piper behind an adapter; text goes to that service and provider charges may apply. Requires BB 0.49 or newer; API keys stay in BB server secret settings.",
+  "description": "Listen to BB messages using a speech server you choose. Read full replies or selected passages with pause, buffered seeking, playback speed, a waiting timer and timing diagnostics. Connect an OpenAI-compatible MP3 endpoint such as Piper behind an adapter; text goes to that service and provider charges may apply. Requires BB 0.49 or newer; API keys stay in BB server secret settings.",
   "icon": {
     "url": "./icons/open-tts-732fafac.svg"
   },
@@ -28,7 +28,7 @@
   "source": {
     "git": {
       "url": "https://github.com/Anatolt/bb-plugin-open-tts.git",
-      "range": "^0.1.1"
+      "range": "^0.1.3"
     }
   }
 }

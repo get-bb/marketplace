@@ -10,6 +10,9 @@ Connect an OpenAI-compatible TTS endpoint, including Piper behind a compatible
 adapter. Set the server URL, API key, model and voice in the plugin settings.
 Speech requests run on the BB server, and the API key stays there as a secret
 setting. Markdown is prepared for speech; code blocks are skipped by default.
+An elapsed-seconds timer shows waiting during preparation and buffering.
+Optional timing logs distinguish synthesis, response delivery and the client's
+playback event, without message text or API keys.
 Short opening chunks reduce the initial wait, and a shared queue keeps small
 self-hosted servers from receiving parallel synthesis requests.
 
