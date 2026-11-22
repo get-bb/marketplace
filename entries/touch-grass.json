@@ -1,0 +1,36 @@
+{
+  "id": "touch-grass",
+  "displayName": "Touch Grass",
+  "description": "It's time to touch grass. Brush the meadow in your BB chat with a mouse or finger, wake a firefly to grow a flower, or cut a path back to your messages. Give the grass 40 minutes to grow tall, or choose Grow now and fire up the mower.",
+  "icon": {
+    "url": "./icons/touch-grass-b7c8a750.png"
+  },
+  "tags": [
+    "grass",
+    "garden",
+    "game",
+    "fireflies",
+    "touch"
+  ],
+  "author": {
+    "name": "aiBabai",
+    "github": "ai-babai",
+    "url": "https://popkov.dev/apps/touch-grass/"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "themes-and-appearance"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/ai-babai/bb-plugin-touch-grass.git",
+      "range": "^0.3.1"
+    }
+  },
+  "overview": "./overview/touch-grass.md",
+  "screenshots": [
+    "./screenshots/touch-grass/meadow.webp",
+    "./screenshots/touch-grass/touch.webp",
+    "./screenshots/touch-grass/settings.webp"
+  ]
+}
