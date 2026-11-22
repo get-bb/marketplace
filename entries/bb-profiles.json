@@ -1,0 +1,30 @@
+{
+  "id": "bb-profiles",
+  "displayName": "Profiles",
+  "description": "Choose which providers and models appear in the model picker for each project, and the default model new threads start on.",
+  "icon": "SlidersHorizontal",
+  "tags": [
+    "profiles",
+    "models",
+    "model-picker",
+    "providers",
+    "default-model",
+    "custom-models"
+  ],
+  "author": {
+    "name": "Y. Siva Sai Krishna",
+    "github": "ysskrishna",
+    "url": "https://ysskrishna.space"
+  },
+  "category": "agents-and-providers",
+  "overview": "./overview/bb-profiles.md",
+  "screenshots": [
+    "./screenshots/bb-profiles/overview.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/ysskrishna/bb-profiles.git",
+      "range": "^0.1.1"
+    }
+  }
+}
