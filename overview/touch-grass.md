@@ -4,7 +4,9 @@ Overgrown starts with short grass. Give it 40 minutes and the blades reach about
 
 ## Play
 
-Wait about 15 seconds in a new meadow for the first wildflower. Tap the glowing firefly or brush across it once to grow another. Daisies and cornflowers carry narrow leaves. Clover stays low, with leaves in threes. Bees land on the flower heads. Low strawberry plants sometimes grow between them, with berries hanging on their own stalks.
+Wait about 15 seconds in a new meadow for the first sprout. Tap the glowing firefly or brush across it once to plant another. Each stem grows for about ten minutes before the petals open above nearby grass. Daisies and cornflowers carry narrow leaves. Clover stays low, with leaves in threes. A bee landing on a flower slips behind the same blades as its stem. Low strawberry plants sometimes grow between them, with berries hanging on their own stalks.
+
+Some flowers grow in small clumps. A yellow dandelion turns into a white seed head. Brush it back and forth to loosen a few seeds.
 
 On a phone, hold a finger against the blades, slide sideways and let go. Grass and flower stems bend under your finger and spring back when you let go. Swipe up or down over the meadow to scroll the chat. Pick up the scythe on the left to cut at finger height, or send the mower across the whole strip. Sweep through a flower to cut it individually. The mower clears grass, flowers and strawberry plants together. New plants can return after about two minutes.
 
