@@ -1,0 +1,36 @@
+{
+  "id": "touch-grass",
+  "displayName": "Touch Grass",
+  "description": "It's time to touch grass. Each BB chat grows a meadow of wildflowers and strawberry plants. Brush the stems, tap a firefly for a flower, or use the scythe and mower to clear a path back to your messages.",
+  "icon": {
+    "url": "./icons/touch-grass-b7c8a750.png"
+  },
+  "tags": [
+    "grass",
+    "garden",
+    "game",
+    "fireflies",
+    "touch"
+  ],
+  "author": {
+    "name": "aiBabai",
+    "github": "ai-babai",
+    "url": "https://popkov.dev/apps/touch-grass/"
+  },
+  "category": "thread-content",
+  "secondaryCategories": [
+    "themes-and-appearance"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/ai-babai/bb-plugin-touch-grass.git",
+      "range": "^0.4.2"
+    }
+  },
+  "overview": "./overview/touch-grass.md",
+  "screenshots": [
+    "./screenshots/touch-grass/meadow.webp",
+    "./screenshots/touch-grass/touch.webp",
+    "./screenshots/touch-grass/settings.webp"
+  ]
+}
