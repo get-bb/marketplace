@@ -24,7 +24,7 @@
   "source": {
     "git": {
       "url": "https://github.com/ai-babai/bb-plugin-touch-grass.git",
-      "range": "^0.3.1"
+      "range": "^0.3.2"
     }
   },
   "overview": "./overview/touch-grass.md",
