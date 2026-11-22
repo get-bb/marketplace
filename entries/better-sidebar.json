@@ -1,0 +1,28 @@
+{
+  "id": "better-sidebar",
+  "displayName": "Better Sidebar",
+  "description": "T3 Code-inspired sidebar thread list with Active, Working, and collapsible Settled groups, explicit Settle/Unsettle controls, color-coded project badges, and quick search.",
+  "icon": {
+    "url": "./icons/better-sidebar.svg"
+  },
+  "tags": [
+    "sidebar",
+    "thread-list",
+    "t3-code",
+    "settle",
+    "navigation"
+  ],
+  "author": {
+    "name": "bashln",
+    "github": "bashln",
+    "url": "https://github.com/bashln"
+  },
+  "category": "thread-management",
+  "overview": "./overview/better-sidebar.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/bashln/bb-plugin-better-sidebar.git",
+      "range": "^0.1.0"
+    }
+  }
+}
