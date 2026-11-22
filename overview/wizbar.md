@@ -1,43 +1,32 @@
-## An inbox for a fleet of agent threads
+## A sidebar for a fleet of agent threads
 
-WizBar replaces the thread list with one flat list of cards, newest first, that never re-orders itself. Status lives on each card, not in its position, so the list only moves when you act. Threads sit on Inbox, Snoozed, Settled, Muted and Pinned shelves.
+WizBar replaces the thread list with three sections, Pinned, Specs and Unread, in the order you choose: drag a section by the grip on its header, or press Alt+Up and Alt+Down with the header focused. Click a header to collapse it; WizBar remembers both the order and what is collapsed. Snoozed and Muted shelves sit below, and Settled is one quiet link at the very bottom.
 
-## What each card shows
+## Unread
 
-- The issue or pull request as a link. With no issue field from the host, the issue number comes from a `room/<N>-…` branch name, shown only when it parses.
-- A child count, hidden at zero. Hover or focus it to list the children with status, title and age, then open one with a click.
-- The branch, on hover only.
-- Model and effort are left out until the host exposes them. Nothing is shown in their place.
+Unread lists only threads with something new for you (unread, waiting on your input, or marked by the host with an unread result or a failure). A running agent of a spec appears under that spec instead. Without a search, Unread also leaves out fleet wakes, and fleet-loop runs for a repository you have bound; any other loop's run can appear when it has something new, because the host does not mark loop runs. While you search, Unread drops its filter.
 
-## Running work at a glance
+## Specs
 
-A slim "N running" line stays below the list. The footer bolt opens a stats panel: running threads split into top-level and children, Cloud and Local, plus threads waiting on you. It says plainly what it cannot count yet: subagents are not counted, some threads may be unseen, and "finished today" is not available until the host gives a finish time.
+A rule such as `Specs 24 · 5 tickets need you (3 specs)`, then one row per spec from your factory's specs file, specs with a ticket due now first, then the most recently active. A picker switches to Recently active, Closest to done or Newest, and is remembered. Each ticket is a dot: done, building, in review, needs you, later, held or not started. The dot of a ticket whose agent is working breathes slowly unless the ticket is done or in review; a spec with nothing running and nothing due now shows its name muted. Finished specs, and specs with nothing moving for more than 3 days, fold into a collapsed `Quiet N` group. Open a spec to see its running builders and reviewers with their model and effort.
 
-## Drag to pin
+A small producer in the plugin's `tools/specs-producer/` keeps the specs file fresh from GitHub through your `gh` login.
 
-Drag a card into Pinned to pin it, out of Pinned to unpin it, or inside Pinned to reorder it (Alt+Up and Alt+Down from the keyboard). WizBar uses the host's own pins, so its Pinned shelf and the host agree. The Inbox stays newest-first.
+## Cards and running work
+
+Cards show the issue or pull request as a link, a child count with the children on hover, and model and effort in friendly words, such as `Opus 5.5 · High`; a missing model is left out, never guessed. The footer shows "N running", counting threads; hover or focus it for a card of the running threads with their spec and model, which updates in place without flashing. Click to pin it open. Drag a card into Pinned to pin it, out to unpin it, or inside Pinned to reorder it.
 
 ## Agent-first
 
-Every WizBar action in the sidebar is also a `room-cli wizbar` command, and each takes `--json`. The row menu's host items (open in split, mark read or unread, archive, delete) are the host's own; the README lists their agent routes.
+`room-cli wizbar` commands settle, snooze, mute, pin and move threads, list a thread's shelf or children, read the running card and the specs, open or close a spec, and collapse or expand a section, each with `--json`. The sort picker, the section order and the Quiet group have no command. The [README](https://github.com/openwizdev/WizPlugins/tree/main/wizbar#readme) lists every command and its exit codes.
 
-```text
-wizbar settle | unsettle | snooze | unsnooze | mute | unmute | list <id>... [--json]
-wizbar pin | unpin <id>... [--json]
-wizbar move <id> (--before <id> | --after <id> | --first | --last) [--json]
-wizbar children <id> [--json]
-wizbar stats [--json]
-```
+## Theme and settings
 
-`children` and `stats` use the same computations as the hover list and the stats panel, so for the same threads an agent reads the same answer you see. Exit codes are 0 for success, 1 when any thread or the command fails, and 2 for a usage error.
-
-## Settings
-
-Switches for the list-bottom count, Cloud/Local row icons and the two thread-header chips. The parent's children chip is off by default; a child's chip back to its parent is on by default.
+Every colour is a host theme variable, so WizBar follows your Cloudroom theme. Switches cover the list-bottom count, Cloud/Local row icons and the two thread-header chips. Upgrading from 0.5.0 keeps every setting.
 
 ## What is proven
 
-The behaviour above is covered by WizBar's fixture tests in CI. A live check on a real host is a separate step; see the [README](https://github.com/openwizdev/WizPlugins/tree/main/wizbar#readme) for current limits.
+The behaviour above is covered by WizBar's fixture tests in CI. 0.5.0 was installed from source and run on a real Cloudroom host; 0.6.0 has not been run on a real host yet.
 
 ## Credit
 
