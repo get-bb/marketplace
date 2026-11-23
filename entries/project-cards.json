@@ -1,0 +1,34 @@
+{
+  "id": "project-cards",
+  "displayName": "Project Cards",
+  "description": "Find active work and pick up conversations from project cards in the BB sidebar. Expand thread trees, pin projects, and start new threads from their project cards. See usage limits for providers configured on your BB host when they report them. Sidebar labels are in Russian.",
+  "icon": {
+    "url": "./icons/project-cards-7434c09e.svg"
+  },
+  "screenshots": [
+    "./screenshots/project-cards/sidebar.png"
+  ],
+  "overview": "./overview/project-cards.md",
+  "tags": [
+    "sidebar",
+    "projects",
+    "threads",
+    "thread-tree",
+    "pinning",
+    "archive",
+    "provider-limits",
+    "russian"
+  ],
+  "author": {
+    "name": "romandots",
+    "github": "romandots",
+    "url": "https://github.com/romandots"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/romandots/bb-plugin-project-cards.git",
+      "range": "^0.2.16"
+    }
+  }
+}
