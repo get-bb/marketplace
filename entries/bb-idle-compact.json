@@ -1,0 +1,32 @@
+{
+  "id": "bb-idle-compact",
+  "displayName": "Idle Compact",
+  "description": "Compacts large idle Claude Code and Codex threads before their prompt cache expires, so coming back does not re-read the whole context without the cache.",
+  "icon": "Archive",
+  "tags": [
+    "compact",
+    "compaction",
+    "prompt-cache",
+    "tokens",
+    "usage",
+    "context",
+    "claude-code",
+    "codex"
+  ],
+  "author": {
+    "name": "Y. Siva Sai Krishna",
+    "github": "ysskrishna",
+    "url": "https://ysskrishna.space"
+  },
+  "category": "token-usage-and-limits",
+  "overview": "./overview/bb-idle-compact.md",
+  "screenshots": [
+    "./screenshots/bb-idle-compact/overview.png"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/ysskrishna/bb-idle-compact.git",
+      "range": "^0.1.0"
+    }
+  }
+}
