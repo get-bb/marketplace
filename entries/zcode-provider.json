@@ -1,7 +1,7 @@
 {
   "id": "zcode-provider",
   "displayName": "ZCode Provider",
-  "description": "Use your Z.ai GLM Coding Plan for coding tasks in bb on macOS. Choose GLM-5.3 or GLM-5.3-Flash, work with files and terminal tools, and continue saved sessions through your installed ZCode agent. Reuse Desktop sign-in and its shared store, settings and configured MCP servers; bb sessions, history and logs stay separate. Requires Apple silicon, bb 0.47.1+, Git, ZCode Desktop, an individual paid Z.ai Coding Plan and Full permissions; unofficial and unaffiliated with Z.ai, ZCode or bb.",
+  "description": "Use GLM-5.4 in bb on macOS through ZCode when your Z.ai Coding Plan offers it. Choose models and reasoning levels available to your account, work with files and terminal tools, and continue saved sessions through your installed ZCode agent. Reuse Desktop sign-in and its shared store, settings and configured MCP servers; bb sessions, history and logs stay separate. Requires Apple silicon, bb 0.47.1+, Git, ZCode Desktop, an individual paid Z.ai Coding Plan and Full permissions; unofficial and unaffiliated with Z.ai, ZCode or bb.",
   "icon": { "url": "./icons/zcode-provider-f4b86e51.svg" },
   "screenshots": [
     "./screenshots/zcode-provider/model-picker.png",
