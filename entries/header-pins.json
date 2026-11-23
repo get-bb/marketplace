@@ -1,7 +1,7 @@
 {
   "id": "header-pins",
   "displayName": "Header Pins",
-  "description": "Switch between your pinned threads in one click from the empty title bar strip at the top of the BB window. Each chip carries a status dot for the thread and its child threads: yellow waits for you, blue works, green finished and unread. A colored bar marks the thread with its project color when Chat Sidebar by Evgeniy Perin is installed, which we recommend, and with its provider's color otherwise. Hover a chip to unpin it in place. Needs the BB desktop app; no account or network access.",
+  "description": "Switch between pinned threads from tabs in the thread header, with project colors and live status. Each tab shows activity across the thread and its children, and lets you unpin in place. Project stripes match Chat Sidebar when it is installed, including with filtered or hidden lists; otherwise they use the provider color. Requires BB 0.50.1 or later; no account or external service.",
   "icon": "Pin",
   "tags": [
     "pins",
