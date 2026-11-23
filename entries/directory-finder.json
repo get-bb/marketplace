@@ -1,0 +1,31 @@
+{
+  "id": "directory-finder",
+  "displayName": "Directory in Finder",
+  "description": "Open the thread’s working directory in Finder from its Info panel on a supported Mac.",
+  "icon": "FolderOpen",
+  "tags": [
+    "finder",
+    "macos",
+    "folder",
+    "directory",
+    "info-tab"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "utilities",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/directory-finder",
+      "range": "^0.2.0",
+      "tagPrefix": "directory-finder/"
+    }
+  },
+  "overview": "./overview/directory-finder.md",
+  "screenshots": [
+    "./screenshots/directory-finder/info-row.png"
+  ]
+}

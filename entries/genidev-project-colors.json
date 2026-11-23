@@ -1,0 +1,34 @@
+{
+  "id": "genidev-project-colors",
+  "displayName": "Project Underlines",
+  "description": "Give projects their own underline colors in the BB sidebar. Set or reset a color from the project controls.",
+  "icon": "Palette",
+  "tags": [
+    "sidebar",
+    "projects",
+    "color-coding",
+    "underline",
+    "rgb-picker",
+    "color-picker",
+    "organize-projects",
+    "visual-labels"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/genidev-project-colors",
+      "range": "^0.2.1",
+      "tagPrefix": "genidev-project-colors/"
+    }
+  },
+  "overview": "./overview/genidev-project-colors.md",
+  "screenshots": [
+    "./screenshots/genidev-project-colors/colour-menu.png"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "genidev-ui-tweaks",
+  "displayName": "Thread Panel Polish",
+  "description": "Align thread-header actions and side-panel tabs. Keeps labels compact in narrow layouts and provides a close button in the right panel.",
+  "icon": "Paintbrush",
+  "tags": [
+    "right-panel",
+    "side-panel",
+    "animation",
+    "close-button",
+    "escape-key",
+    "thread-header",
+    "pin-icon",
+    "message-navigator",
+    "css-tweaks",
+    "interface"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/genidev-ui-tweaks",
+      "range": "^0.5.0",
+      "tagPrefix": "genidev-ui-tweaks/"
+    }
+  },
+  "overview": "./overview/genidev-ui-tweaks.md",
+  "screenshots": [
+    "./screenshots/genidev-ui-tweaks/header-actions.png",
+    "./screenshots/genidev-ui-tweaks/panel-close.png"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "csv-table",
+  "displayName": "CSV table",
+  "description": "Open CSV files as a sortable table in BB. Filter columns or search the full table.",
+  "icon": "GridView",
+  "tags": [
+    "csv",
+    "table",
+    "spreadsheet",
+    "sort",
+    "filter",
+    "data",
+    "file-opener",
+    "viewer"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/csv-table",
+      "range": "^0.1.1",
+      "tagPrefix": "csv-table/"
+    }
+  },
+  "overview": "./overview/csv-table.md",
+  "screenshots": [
+    "./screenshots/csv-table/table.png",
+    "./screenshots/csv-table/filtered.png"
+  ]
+}

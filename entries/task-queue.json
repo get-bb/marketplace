@@ -1,0 +1,36 @@
+{
+  "id": "task-queue",
+  "displayName": "Working Thread",
+  "description": "The lead agent’s plan sits above the composer. See queues, tickets, owners, acceptance checks and how long each ticket has been waiting or running. Background agents appear under their tickets. Agents update the plan with the task_queue_plan tool or the BB CLI.",
+  "icon": "ListTodo",
+  "tags": [
+    "plan",
+    "tickets",
+    "progress",
+    "agents",
+    "subagents",
+    "lead-agent",
+    "composer",
+    "task-tracking",
+    "acceptance"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "tasks-and-workflows",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/task-queue",
+      "range": "^1.4.1",
+      "tagPrefix": "task-queue/"
+    }
+  },
+  "overview": "./overview/task-queue.md",
+  "screenshots": [
+    "./screenshots/task-queue/working-thread-open.png",
+    "./screenshots/task-queue/working-thread-closed.png"
+  ]
+}

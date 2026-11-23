@@ -1,0 +1,35 @@
+{
+  "id": "thread-materials",
+  "displayName": "Chat widget",
+  "description": "Open Git, subagents, results or sources from four equal buttons. Each section expands inside the card, including agent details, material actions and the archive. Expand longer lists in place.",
+  "icon": "MessageSquare",
+  "tags": [
+    "git-changes",
+    "subagents",
+    "child-threads",
+    "attachments",
+    "files",
+    "widget",
+    "chat-context",
+    "diff"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/thread-materials",
+      "range": "^0.10.1",
+      "tagPrefix": "thread-materials/"
+    }
+  },
+  "overview": "./overview/thread-materials.md",
+  "screenshots": [
+    "./screenshots/thread-materials/1-executors.png",
+    "./screenshots/thread-materials/3-results.png"
+  ]
+}
