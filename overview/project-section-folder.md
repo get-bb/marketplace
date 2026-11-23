@@ -6,7 +6,7 @@ Keep frequently used groups visible and fold the rest into a folder. In Custom, 
 
 Drag a heading onto the folder, or open the folder menu and choose which groups belong inside. The same menu lets you rename the folder and choose an icon. Drag a group above the folder to bring it back into the main list.
 
-Switch to Active to see ongoing work, Input to find threads waiting for you, or Unread to catch up on updates. The filters include threads in collapsed groups.
+Switch to Active to see ongoing work, Input to find threads waiting for you, or Unread to catch up on updates. The filters include threads in collapsed groups and use the same icons, spacing, and thread menu as the All tab.
 
 ## Recognize threads by their icons
 
