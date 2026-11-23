@@ -18,7 +18,7 @@
   "source": {
     "git": {
       "url": "https://github.com/emlevsky777/bb-plugin-zcode.git",
-      "range": "^0.2.0"
+      "ref": "main"
     }
   }
 }
