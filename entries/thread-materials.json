@@ -29,7 +29,6 @@
   },
   "overview": "./overview/thread-materials.md",
   "screenshots": [
-    "./screenshots/thread-materials/1-executors.png",
-    "./screenshots/thread-materials/3-results.png"
+    "./screenshots/thread-materials/sections.jpg"
   ]
 }
