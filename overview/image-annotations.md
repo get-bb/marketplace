@@ -6,7 +6,7 @@ link each comment to the spot it describes.
 
 Choose **Done** to return to the draft. An icon on the thumbnail marks the
 annotated image. Open it again to edit or delete its comments. Removing the
-image or deleting its last comment clears the attached notes.
+image from the draft or deleting its last comment clears the attached notes.
 
 ## Keyboard controls
 
