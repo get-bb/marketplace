@@ -1,7 +1,7 @@
 {
   "id": "project-section-folder",
   "displayName": "Sidebar Folders",
-  "description": "Keep frequently used groups visible and tuck the rest into a sidebar folder. Drag sections, projects, or machines into the folder and give it a name and an icon. Find active, waiting, or unread threads across groups. Uses the built-in BB thread list and requires no external service.",
+  "description": "Keep frequently used groups visible and tuck the rest into a sidebar folder. Drag sections, projects, or machines into the folder and find active, waiting, or unread threads across groups. Choose from 32 icons to identify individual threads. Uses the built-in BB thread list and requires no external service.",
   "icon": {
     "url": "./icons/project-section-folder-6664278d.svg"
   },
@@ -12,7 +12,8 @@
     "projects",
     "machines",
     "status-filters",
-    "unread"
+    "unread",
+    "thread-icons"
   ],
   "author": {
     "name": "Maxim Berezkin",
@@ -22,13 +23,14 @@
   "category": "thread-management",
   "screenshots": [
     "./screenshots/project-section-folder/01-custom-sidebar.jpg",
-    "./screenshots/project-section-folder/02-folder-settings.jpg"
+    "./screenshots/project-section-folder/02-folder-settings.jpg",
+    "./screenshots/project-section-folder/03-thread-icons.jpg"
   ],
   "overview": "./overview/project-section-folder.md",
   "source": {
     "git": {
       "url": "https://github.com/docomoz/bb-plugin-project-section-folder.git",
-      "range": "^0.1.0"
+      "range": "^0.2.0"
     }
   }
 }
