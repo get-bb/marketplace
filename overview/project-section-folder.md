@@ -1,12 +1,22 @@
 ## Organize your sidebar
 
-Keep frequently used groups visible and fold the rest into a folder. In Custom, the folder holds your sections. In Projects or Machines, it holds projects or machines. Each mode remembers its own name, icon, and contents.
+Keep your most-used groups in view and organize related work in a collapsible folder. In Custom, the folder holds sections. In Projects or Machines, it holds projects or machines. Each mode remembers its own name, icon, and contents.
 
 ## Move groups and find threads
 
-Drag a heading onto the folder, or open the folder menu and choose which groups belong inside. The same menu lets you rename the folder and choose an icon. Drag a group above the folder to bring it back into the main list.
+Click a section's name to expand or collapse it, including in filtered results. Rename sections from their menus.
 
-Switch to Active to see ongoing work, Input to find threads waiting for you, or Unread to catch up on updates. The filters include threads in collapsed groups.
+Drag a heading onto the folder, or hover over the folder heading and open its menu to choose which groups belong inside. The same menu lets you rename the folder and choose an icon. Drag a group above the folder to bring it back into the main list.
+
+Switch to Active to see ongoing work, Input to find threads waiting for you, or Unread to catch up on updates. The filters include threads in collapsed groups and use the same icons, spacing, and thread menu as the All tab.
+
+## Keep long sections short
+
+Turn on **Enable Load more** in Sidebar Beautifier settings to limit the starting number of threads in custom sections and Threads. Use **Load more** to reveal the next batch or **Show less** to return to the limit. Pinned has its own optional limit. The open thread stays visible, and child threads stay with their parent.
+
+## Recognize threads by their icons
+
+Open a thread's menu and choose **Change icon**. The grid has 72 icons for topics such as meetings, digests, design, workouts, and expenses. Pick one of nine colors or keep the default gray. The picker has six rows of 12 on desktop and nine rows of eight on phones. BB saves each thread's icon and color across windows. Choose **Provider default** and save to restore the agent's icon.
 
 ## Requirements
 
