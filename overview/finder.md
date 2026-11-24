@@ -29,6 +29,9 @@ without leaving BB.
   between sessions.
 - A markdown preview that renders **Mermaid** diagrams with BB's own message
   renderer, so it looks like the rest of BB.
+- An **HTML preview** for `.html`/`.htm`: the page renders in a sandboxed iframe,
+  so a generated report or a demo runs its own scripts, forms, and dialogs while
+  staying out of the editor, the workspace, and BB.
 - Copy the file's contents or its path in one click.
 - **Add a file, or just the selected lines, to the prompt**: it becomes an `@`
   mention whose contents are resolved when the message is sent, so the agent
