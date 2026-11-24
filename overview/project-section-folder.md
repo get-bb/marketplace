@@ -6,7 +6,7 @@ Keep your most-used groups in view and organize related work in a collapsible fo
 
 Click a section's name to expand or collapse it, including in filtered results. Rename sections from their menus.
 
-Drag a heading onto the folder, or open the folder menu and choose which groups belong inside. The same menu lets you rename the folder and choose an icon. Drag a group above the folder to bring it back into the main list.
+Drag a heading onto the folder, or hover over the folder heading and open its menu to choose which groups belong inside. The same menu lets you rename the folder and choose an icon. Drag a group above the folder to bring it back into the main list.
 
 Switch to Active to see ongoing work, Input to find threads waiting for you, or Unread to catch up on updates. The filters include threads in collapsed groups and use the same icons, spacing, and thread menu as the All tab.
 
