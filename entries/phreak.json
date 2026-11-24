@@ -3,6 +3,10 @@
   "displayName": "Phreak",
   "description": "Talk a thread through by voice, then say \"send that\" to message the agent. Phreak answers from the chat, catches up each time the agent finishes a turn, and offers anything that needs code, files or commands to the agent. Each message it sends shows as a card with bb's delivery status and the exact text. Needs bb 0.50 or later, the ChatGPT Realtime Connection plugin (codex-realtime) with phreak allowed, and the Codex CLI signed in with ChatGPT on a plan that includes Codex. Voice counts against that plan, OpenAI receives your mic audio and the thread's text, and this undocumented use of the sign-in may stop working at any time.",
   "icon": "Mic",
+  "screenshots": [
+    "./screenshots/phreak/listening.png",
+    "./screenshots/phreak/start.png"
+  ],
   "tags": [
     "voice",
     "realtime",
