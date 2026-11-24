@@ -1,0 +1,18 @@
+{
+  "id": "routerai-managed-profile",
+  "displayName": "RouterAI Managed Profile",
+  "description": "Picks RouterAI models for bb and runs threads on them through OpenCode. The sidebar page filters the whole catalog, toggles models and sets a reasoning level per model, with prices in rubles and the size of the generated config. Threads use an inline OpenCode config, so your own opencode.json stays untouched. Needs a RouterAI account and key, and OpenCode on the host.",
+  "icon": "Sparkles",
+  "tags": ["routerai", "provider", "models", "reasoning", "opencode", "acp", "rubles", "model-picker"],
+  "author": { "name": "Ivan", "github": "vladimirovichivan" },
+  "category": "agents-and-providers",
+  "secondaryCategories": ["token-usage-and-limits"],
+  "screenshots": ["./screenshots/routerai-managed-profile/panel.png"],
+  "overview": "./overview/routerai-managed-profile.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/vladimirovichivan/bb-routerai-models.git",
+      "range": ">=0.0.2 <1.0.0"
+    }
+  }
+}
