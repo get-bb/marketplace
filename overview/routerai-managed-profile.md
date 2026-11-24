@@ -6,10 +6,10 @@ touching the OpenCode config you already use.
 A second provider, `routerai-managed`, appears in the bb model picker. It holds
 only the models you enabled, each with its context size, its price in rubles per
 1M tokens and its reasoning levels. The provider page in the sidebar filters the
-whole RouterAI catalog, toggles models on and off, and puts a reasoning slider
-under every enabled model. A single config line under the list shows how large
-the generated OpenCode config is, so you can see when you are close to the
-24 KiB cap.
+whole RouterAI catalog, toggles models on and off, and puts a reasoning level
+selector on the right of every enabled model. A single config line under the
+list shows how large the generated OpenCode config is, so you can see when you
+are close to the 24 KiB cap.
 
 ## How it works
 
