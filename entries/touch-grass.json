@@ -29,9 +29,9 @@
   },
   "overview": "./overview/touch-grass.md",
   "screenshots": [
+    "./screenshots/touch-grass/mower.webp",
     "./screenshots/touch-grass/mower-lead.webp",
     "./screenshots/touch-grass/meadow.webp",
-    "./screenshots/touch-grass/mower.webp",
     "./screenshots/touch-grass/touch.webp",
     "./screenshots/touch-grass/settings.webp"
   ]
