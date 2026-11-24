@@ -1,0 +1,35 @@
+{
+  "id": "host-usage",
+  "displayName": "Host Usage",
+  "description": "Spot low memory, a full disk, or an unhealthy container from the BB sidebar. See RAM, CPU, disk space, and temporary storage for the host and drill into BB instances and other containers. The optional Linux collector requires Python 3.9+ and access to Docker or Podman for container metrics.",
+  "icon": {
+    "url": "./icons/host-usage-f0b0575d.svg"
+  },
+  "author": {
+    "name": "docomoz",
+    "github": "docomoz",
+    "url": "https://github.com/docomoz"
+  },
+  "category": "utilities",
+  "tags": [
+    "monitoring",
+    "cpu",
+    "memory",
+    "disk",
+    "docker",
+    "podman",
+    "container-health",
+    "sidebar"
+  ],
+  "screenshots": [
+    "./screenshots/host-usage/overview.png",
+    "./screenshots/host-usage/containers.png"
+  ],
+  "overview": "./overview/host-usage.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/docomoz/bb-plugin-host-usage.git",
+      "range": "^0.1.0"
+    }
+  }
+}
