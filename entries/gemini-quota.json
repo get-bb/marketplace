@@ -13,9 +13,9 @@
   "source": {
     "git": {
       "url": "https://github.com/docomoz/bb-plugin-gemini-quota.git",
-      "range": "^0.2.2"
+      "range": "^0.2.3"
     }
   },
-  "screenshots": ["./screenshots/gemini-quota/provider-usage-en.jpg"],
+  "screenshots": ["./screenshots/gemini-quota/provider-usage-utc.jpg"],
   "overview": "./overview/gemini-quota.md"
 }
