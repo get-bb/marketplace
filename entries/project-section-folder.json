@@ -1,7 +1,7 @@
 {
   "id": "project-section-folder",
   "displayName": "Sidebar Folders",
-  "description": "Give threads recognizable icons and keep related work together in the BB sidebar. Choose from 72 icons and nine optional colors for individual threads. Group sections, projects, or machines in a collapsible folder and filter for active, waiting, or unread threads. Uses the built-in BB thread list and requires no external service.",
+  "description": "Organize your BB sidebar and recognize threads at a glance. Group sections, projects, or machines in a collapsible folder. Filter for active threads, threads waiting for input, or unread updates. Choose from 72 icons and nine optional colors for individual threads. Requires BB 0.50.1+ with the built-in thread list and uses no external services.",
   "icon": {
     "url": "./icons/project-section-folder-6664278d.svg"
   },
@@ -23,8 +23,8 @@
   "category": "thread-management",
   "screenshots": [
     "./screenshots/project-section-folder/01-custom-sidebar.jpg",
-    "./screenshots/project-section-folder/02-folder-settings.jpg",
-    "./screenshots/project-section-folder/03-thread-icons.jpg"
+    "./screenshots/project-section-folder/03-thread-icons.jpg",
+    "./screenshots/project-section-folder/02-folder-settings.jpg"
   ],
   "overview": "./overview/project-section-folder.md",
   "source": {

@@ -1,6 +1,6 @@
 ## Organize your sidebar
 
-Keep frequently used groups visible and fold the rest into a folder. In Custom, the folder holds your sections. In Projects or Machines, it holds projects or machines. Each mode remembers its own name, icon, and contents.
+Keep your most-used groups in view and organize related work in a collapsible folder. In Custom, the folder holds sections. In Projects or Machines, it holds projects or machines. Each mode remembers its own name, icon, and contents.
 
 ## Move groups and find threads
 
@@ -10,7 +10,7 @@ Switch to Active to see ongoing work, Input to find threads waiting for you, or 
 
 ## Recognize threads by their icons
 
-Open a thread's menu and choose **Change icon**. Pick from a grid of 72 icons for meetings, digests, slides, market monitoring, maps, AI, health, expenses, workouts, family, and more. Choose one of 9 colors or keep the default gray. BB saves the icon and color for each thread across windows. Choose **Provider default** and save to restore the agent's icon.
+Open a thread's menu and choose **Change icon**. The grid has 72 icons for topics such as meetings, digests, design, workouts, and expenses. Pick one of nine colors or keep the default gray. The picker uses 12 columns on desktop and switches to eight with larger targets on phones. BB saves each thread's icon and color across windows. Choose **Provider default** and save to restore the agent's icon.
 
 ## Requirements
 
