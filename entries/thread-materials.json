@@ -1,7 +1,7 @@
 {
   "id": "thread-materials",
   "displayName": "Chat widget",
-  "description": "Open Git, subagents, results or sources from four equal buttons. Each section expands inside the card, including agent details, material actions and the archive. Expand longer lists in place.",
+  "description": "See Git, subagents, created materials and attachments alongside a BB chat. The selected section stays highlighted, and View all opens the matching side panel.",
   "icon": "MessageSquare",
   "tags": [
     "git-changes",
@@ -23,12 +23,13 @@
     "git": {
       "url": "https://github.com/gguzhov/bb-plugins.git",
       "subdir": "plugins/thread-materials",
-      "range": "^0.10.1",
+      "range": "^0.10.5",
       "tagPrefix": "thread-materials/"
     }
   },
   "overview": "./overview/thread-materials.md",
   "screenshots": [
-    "./screenshots/thread-materials/sections.jpg"
+    "./screenshots/thread-materials/sections.jpg",
+    "./screenshots/thread-materials/attachments.jpg"
   ]
 }

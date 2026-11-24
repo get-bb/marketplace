@@ -23,12 +23,13 @@
     "git": {
       "url": "https://github.com/gguzhov/bb-plugins.git",
       "subdir": "plugins/genidev-project-colors",
-      "range": "^0.2.1",
+      "range": "^0.2.3",
       "tagPrefix": "genidev-project-colors/"
     }
   },
   "overview": "./overview/genidev-project-colors.md",
   "screenshots": [
-    "./screenshots/genidev-project-colors/colour-menu.png"
+    "./screenshots/genidev-project-colors/colour-menu.png",
+    "./screenshots/genidev-project-colors/colour-picker.jpg"
   ]
 }
