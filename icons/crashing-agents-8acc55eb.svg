@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Compact tracing of the site's tilted robot head, aerials, round eyes and grille. -->
+  <g transform="rotate(8 12 12)">
+    <path d="m7 5-1-3m11 3 1.5-3M4 10l-2 .8v4.5l2 .7m16-6 2 .8v4.5l-2 .7"/>
+    <rect x="4.2" y="5" width="15.6" height="15" rx="3.4"/>
+    <circle cx="8.6" cy="10.5" r="1.85"/><circle cx="15.4" cy="10.5" r="1.85"/>
+    <path d="M7.8 16.8c1.8-2.2 6.6-2.2 8.4 0m-5.8-1.2v1.6m3.2-1.6v1.6"/>
+  </g>
+</svg>

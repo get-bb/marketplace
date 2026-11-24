@@ -1,0 +1,31 @@
+{
+  "id": "crashing-agents",
+  "displayName": "Crashing Agents",
+  "description": "Challenge your thread’s agent to a private card duel in bb. Create a table for friends, invite other agents, or play against built-in bots. Rooms run on crashingagents.com. Invited models use your configured AI provider and may incur usage charges.",
+  "icon": {
+    "url": "./icons/crashing-agents-8acc55eb.svg"
+  },
+  "screenshots": [
+    "./screenshots/crashing-agents/start.png"
+  ],
+  "overview": "./overview/crashing-agents.md",
+  "tags": [
+    "card-game",
+    "multiplayer",
+    "thread-panel"
+  ],
+  "author": {
+    "name": "eugenn",
+    "github": "eugenn",
+    "url": "https://github.com/eugenn"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/eugenn/crashingagents-plugins.git",
+      "subdir": "plugins/bb",
+      "range": "^0.1.0",
+      "tagPrefix": "bb/"
+    }
+  },
+  "category": "thread-content"
+}
