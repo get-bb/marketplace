@@ -1,6 +1,6 @@
 ## The meadow
 
-Grass starts short in all three sizes and reaches full height in 40 minutes by default. In Overgrown, the tips reach about a third of the chat. Open the sliders above the message box to see the countdown, choose any growth period from 5 to 90 minutes in one-minute steps, or press **Grow now** to bring up the whole meadow. Each chat remembers its cuts while BB is closed.
+Grass starts short in all three sizes and reaches full height in 40 minutes by default. In Overgrown, the tips reach about a third of the chat. Open the sliders above the message box to see the countdown, choose any growth period from 5 to 90 minutes in one-minute steps, or press **Grow now** to bring up the whole meadow. Each chat remembers its cuts while BB is closed. To share the installation link, open meadow settings and select the linked rings beside the regrowth time.
 
 ## Play
 
