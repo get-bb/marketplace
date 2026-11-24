@@ -1,0 +1,38 @@
+{
+  "id": "spot-chat",
+  "displayName": "Spot Chat",
+  "description": "Ask a quick question in a fresh BB chat without leaving your current thread. Press Command–Option–S or the sidebar button for a blank composer, and press it again to close the panel. Each conversation is a hidden thread that you can reopen from the Spot Chats list, continue in place, or delete by age. It uses the model BB would pick for a new chat unless you save your own provider, model and reasoning level. The separate native window works only in the BB desktop app on macOS; everywhere else Spot Chat opens as a panel inside BB.",
+  "icon": "NewTab",
+  "screenshots": [
+    "./screenshots/spot-chat/spot-chat-demo.webp",
+    "./screenshots/spot-chat/inside-bb-panel.png",
+    "./screenshots/spot-chat/separate-window.png",
+    "./screenshots/spot-chat/spot-chats-history.png",
+    "./screenshots/spot-chat/settings.png"
+  ],
+  "overview": "./overview/spot-chat.md",
+  "tags": [
+    "quick-question",
+    "side-chat",
+    "scratchpad",
+    "hidden-threads",
+    "floating-panel",
+    "keyboard-shortcut",
+    "chat-history",
+    "model-picker",
+    "native-window",
+    "macos"
+  ],
+  "author": {
+    "name": "FeelsGoodEtc",
+    "github": "FeelsGoodEtc",
+    "url": "https://github.com/FeelsGoodEtc"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/FeelsGoodEtc/bb-plugin-spot-chat.git",
+      "range": "^0.1.2"
+    }
+  }
+}
