@@ -1,0 +1,31 @@
+{
+  "id": "short-titles",
+  "displayName": "Short thread titles",
+  "description": "Keep sidebar titles short by setting a word limit for generated thread names.",
+  "icon": "Heading",
+  "tags": [
+    "titles",
+    "threads",
+    "sidebar",
+    "naming",
+    "tidy"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/short-titles",
+      "range": "^0.2.0",
+      "tagPrefix": "short-titles/"
+    }
+  },
+  "overview": "./overview/short-titles.md",
+  "screenshots": [
+    "./screenshots/short-titles/settings.png"
+  ]
+}

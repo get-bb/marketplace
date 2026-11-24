@@ -1,0 +1,35 @@
+{
+  "id": "thread-materials",
+  "displayName": "Chat widget",
+  "description": "See Git, subagents, created materials and attachments alongside a BB chat. The selected section stays highlighted, and View all opens the matching side panel.",
+  "icon": "MessageSquare",
+  "tags": [
+    "git-changes",
+    "subagents",
+    "child-threads",
+    "attachments",
+    "files",
+    "widget",
+    "chat-context",
+    "diff"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/thread-materials",
+      "range": "^0.10.5",
+      "tagPrefix": "thread-materials/"
+    }
+  },
+  "overview": "./overview/thread-materials.md",
+  "screenshots": [
+    "./screenshots/thread-materials/sections.jpg",
+    "./screenshots/thread-materials/attachments.jpg"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "genidev-project-icons",
+  "displayName": "Project Icons",
+  "description": "Add an icon beside a project name in BB. Choose a built-in icon or import your own image, with optional animation when a project is working or waiting.",
+  "icon": "GridView",
+  "category": "themes-and-appearance",
+  "tags": [
+    "projects",
+    "sidebar",
+    "icons",
+    "animation"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/genidev-project-icons",
+      "range": "^0.2.1",
+      "tagPrefix": "genidev-project-icons/"
+    }
+  },
+  "overview": "./overview/genidev-project-icons.md",
+  "screenshots": [
+    "./screenshots/genidev-project-icons/icon-picker.jpg"
+  ]
+}

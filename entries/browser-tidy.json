@@ -1,0 +1,30 @@
+{
+  "id": "browser-tidy",
+  "displayName": "Browser tidy",
+  "description": "Hides the Browser menu in BB’s built-in browser tab for a cleaner toolbar.",
+  "icon": "EyeOff",
+  "tags": [
+    "browser",
+    "toolbar",
+    "declutter",
+    "menu"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/browser-tidy",
+      "range": "^0.1.0",
+      "tagPrefix": "browser-tidy/"
+    }
+  },
+  "overview": "./overview/browser-tidy.md",
+  "screenshots": [
+    "./screenshots/browser-tidy/browser-toolbar.jpg"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "chat-tables",
+  "displayName": "Chat table containment",
+  "description": "Keep wide Markdown tables inside the chat column. Scroll a wide table sideways without stretching the page.",
+  "icon": "FileText",
+  "tags": [
+    "tables",
+    "markdown",
+    "chat",
+    "layout",
+    "scrolling"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/chat-tables",
+      "range": "^0.1.1",
+      "tagPrefix": "chat-tables/"
+    }
+  },
+  "overview": "./overview/chat-tables.md",
+  "screenshots": [
+    "./screenshots/chat-tables/after.png",
+    "./screenshots/chat-tables/before.png"
+  ]
+}

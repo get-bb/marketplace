@@ -1,0 +1,36 @@
+{
+  "id": "ssh-fleet",
+  "displayName": "Server Fleet",
+  "description": "Group servers and see their CPU, memory, disk and cost in one view. Add hosts with an existing SSH key, install a dedicated key with a one-time root password, or copy the setup prompt for an agent. One-time setup asks you to verify the host key first.",
+  "icon": "ComputerCloud",
+  "tags": [
+    "ssh",
+    "servers",
+    "vps",
+    "monitoring",
+    "inventory",
+    "hosting-costs",
+    "cpu",
+    "disk-usage",
+    "linux"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "cloud-and-remote",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/ssh-fleet",
+      "range": "^0.3.0",
+      "tagPrefix": "ssh-fleet/"
+    }
+  },
+  "overview": "./overview/ssh-fleet.md",
+  "screenshots": [
+    "./screenshots/ssh-fleet/groups.png",
+    "./screenshots/ssh-fleet/list.png"
+  ]
+}

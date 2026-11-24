@@ -1,0 +1,34 @@
+{
+  "id": "pdf-chat",
+  "displayName": "PDF to chat",
+  "description": "Read a PDF in BB’s side panel and zoom with a trackpad pinch. Select text to copy it or open Add to chat. The composer includes the excerpt and page number and lets you add your own prompt before sending.",
+  "icon": "FileText",
+  "tags": [
+    "pdf",
+    "pdf-viewer",
+    "zoom",
+    "quote",
+    "selection",
+    "documents",
+    "reader"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/pdf-chat",
+      "range": "^0.4.0",
+      "tagPrefix": "pdf-chat/"
+    }
+  },
+  "overview": "./overview/pdf-chat.md",
+  "screenshots": [
+    "./screenshots/pdf-chat/selection-bar.png",
+    "./screenshots/pdf-chat/send-to-chat.png"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "mobile-home-composer",
+  "displayName": "Mobile Home Composer",
+  "description": "Keeps the model, environment and access controls within reach on the mobile home composer. The environment uses an icon and the access mode stays visible.",
+  "icon": "Smartphone",
+  "tags": [
+    "mobile",
+    "composer",
+    "layout",
+    "compact",
+    "narrow-screen"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/mobile-home-composer",
+      "range": "^0.2.1",
+      "tagPrefix": "mobile-home-composer/"
+    }
+  },
+  "overview": "./overview/mobile-home-composer.md",
+  "screenshots": [
+    "./screenshots/mobile-home-composer/footer-375.png"
+  ]
+}
