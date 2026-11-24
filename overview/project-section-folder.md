@@ -10,7 +10,7 @@ Switch to Active to see ongoing work, Input to find threads waiting for you, or 
 
 ## Recognize threads by their icons
 
-Open a thread's menu and choose **Change icon**. Pick from 32 icons for automations, tasks, meetings, and other threads. BB saves the choice for each thread across windows. Choose **Provider default** to restore the agent's icon.
+Open a thread's menu and choose **Change icon**. Pick from a grid of 72 icons for meetings, digests, slides, market monitoring, maps, AI, health, expenses, workouts, family, and more. Choose one of 9 colors or keep the default gray. BB saves the icon and color for each thread across windows. Choose **Provider default** and save to restore the agent's icon.
 
 ## Requirements
 
