@@ -1,7 +1,7 @@
 {
   "id": "wizbar",
   "displayName": "WizBar",
-  "description": "An agent-first sidebar for fleets of agent threads. Pinned, Specs and Unread sections reorder by drag; Unread lists only threads with something new. Specs sort by what needs you, with a picker; finished and idle specs fold into Quiet, and a ticket's dot breathes while its agent is working, unless it is done or in review. Cards show the issue or pull request link, children, and model and effort; the footer counts running threads and opens a steady hover card; drag pins and reorders; and wizbar CLI commands with JSON settle, snooze, mute, pin and move threads, read the running card and specs, open or close a spec and collapse a section. Derived from T3 Sidebar.",
+  "description": "An agent-first sidebar for fleets of agent threads. Yours keeps every thread you started until you settle it, with search over titles and first prompts, sort and filters. Cloud agents lists agents the desktop does not show (such as Antigravity), from GitHub status notes and a fleet's run map. Specs sort by what needs you; the running card lists every running thread, grouped by spec, with awake, starting and asleep counts. Sections reorder by drag, and wizbar CLI commands with JSON settle, snooze, mute, pin and move threads, list threads and cloud agents, and read the running card and specs. Derived from T3 Sidebar.",
   "icon": "Zap",
   "overview": "./overview/wizbar.md",
   "tags": [
@@ -22,12 +22,13 @@
     "git": {
       "url": "https://github.com/openwizdev/WizPlugins.git",
       "subdir": "wizbar",
-      "range": "^0.6.0",
+      "range": "^0.7.0",
       "tagPrefix": "wizbar/"
     }
   },
   "screenshots": [
-    "./screenshots/wizbar/wizbar-0-6.png",
+    "./screenshots/wizbar/wizbar-0-7-sidebar.png",
+    "./screenshots/wizbar/wizbar-0-7-running-card.png",
     "./screenshots/wizbar/child-and-parent-chip.png"
   ]
 }
