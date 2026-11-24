@@ -20,9 +20,13 @@ A small producer in `tools/specs-producer/` keeps the specs and agents files fre
 
 The footer shows "N running"; hover or click it for every running thread, grouped by spec, with awake, starting and asleep counts and a count per harness. The list scrolls inside the card, with a fade where more rows are above or below, so 100 threads fit. Rows with no title read as role and ticket, never the prompt's first words.
 
+## A calmer thread
+
+A Composer footer setting hides the bar under the thread composer on pinned threads or everywhere.
+
 ## Agent-first
 
-`room-cli wizbar` commands settle, snooze, mute, pin and move threads, list threads with search, sort and filters (`wizbar threads`), list cloud agents (`wizbar agents`), read the running card and the specs, open or close a spec and collapse a section, each with `--json`. The [README](https://github.com/openwizdev/WizPlugins/tree/main/wizbar#readme) lists every command.
+`room-cli wizbar` commands settle, snooze, mute, pin and move threads, list threads with search, sort and filters (`wizbar threads`), list cloud agents (`wizbar agents`), read the running card and the specs, open or close a spec and collapse a section, each with `--json`; `wizbar footer` sets the composer bar option. The [README](https://github.com/openwizdev/WizPlugins/tree/main/wizbar#readme) lists every command.
 
 ## Theme and settings
 
