@@ -1,3 +1,12 @@
+## GLM-5.4 support
+
+ZCode Provider v0.2.4 adds GLM-5.4 support when the model is available in your
+ZCode Desktop account's model catalogue.
+
+**First connection.** macOS may ask for your Mac login password in a Keychain
+dialog. This allows bb to use the key that protects your existing ZCode Desktop
+sign-in.
+
 ## What you can do
 
 Work on code with your individual Z.ai GLM Coding Plan while ZCode handles
