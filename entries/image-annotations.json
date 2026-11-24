@@ -1,0 +1,31 @@
+{
+  "id": "image-annotations",
+  "displayName": "Image Annotations",
+  "description": "Give your agent feedback on the exact part of an image that needs attention. Open an attached image and click to pin a comment or drag to mark an area. An icon marks annotated thumbnails, and the notes travel with the image when you send. Tested on BB 0.50.1 with Plugin SDK 0.6.157.",
+  "icon": "MessageSquare",
+  "screenshots": [
+    "./screenshots/image-annotations/editor.png",
+    "./screenshots/image-annotations/thumbnail.png",
+    "./screenshots/image-annotations/preview.png"
+  ],
+  "overview": "./overview/image-annotations.md",
+  "tags": [
+    "comments",
+    "feedback",
+    "screenshots",
+    "attachments",
+    "composer"
+  ],
+  "author": {
+    "name": "fusioneery",
+    "github": "fusioneery",
+    "url": "https://github.com/fusioneery"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/fusioneery/bb-plugin-image-annotations.git",
+      "range": "^0.1.0"
+    }
+  }
+}
