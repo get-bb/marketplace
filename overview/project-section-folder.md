@@ -14,7 +14,7 @@ Turn on **Enable Load more** in Sidebar Beautifier settings to limit the startin
 
 ## Recognize threads by their icons
 
-Open a thread's menu and choose **Change icon**. The grid has 71 icons for topics such as meetings, digests, design, workouts, and expenses. Pick one of nine colors or keep the default gray. The picker uses 12 columns on desktop and switches to eight with larger targets on phones. BB saves each thread's icon and color across windows. Choose **Provider default** and save to restore the agent's icon.
+Open a thread's menu and choose **Change icon**. The grid has 72 icons for topics such as meetings, digests, design, workouts, and expenses. Pick one of nine colors or keep the default gray. The picker has six rows of 12 on desktop and nine rows of eight on phones. BB saves each thread's icon and color across windows. Choose **Provider default** and save to restore the agent's icon.
 
 ## Requirements
 
