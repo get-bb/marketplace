@@ -1,0 +1,31 @@
+{
+  "id": "codemirror",
+  "displayName": "CodeMirror Editor",
+  "description": "Edit code and config files inside BB without leaving the thread. Save with the toolbar button or Cmd/Ctrl+S, and edits stay in the buffer until you save. If the file changed on disk since you loaded it, the save stops and asks whether to keep the disk version or write your draft. Find, folding, bracket matching and multiple selections work in every supported language. Files that are not UTF-8 text or are larger than 8 MB fall back to BB's own preview.",
+  "icon": "Code",
+  "tags": [
+    "code-editor",
+    "syntax-highlighting",
+    "text-editor",
+    "file-opener",
+    "javascript",
+    "typescript",
+    "python",
+    "markdown",
+    "config",
+    "developer-tools"
+  ],
+  "author": {
+    "name": "Miftahul Huda",
+    "github": "mifhud",
+    "url": "https://github.com/mifhud"
+  },
+  "category": "file-viewers-and-editors",
+  "source": {
+    "git": {
+      "url": "https://github.com/mifhud/bb-plugin-codemirror.git",
+      "range": "^0.1.0"
+    }
+  },
+  "overview": "./overview/codemirror.md"
+}
