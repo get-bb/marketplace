@@ -1,0 +1,31 @@
+{
+  "id": "wikisuppy",
+  "displayName": "wikisuppy",
+  "description": "Keep BB conversations as Markdown you can open in Obsidian or any Markdown editor. Save threads, messages, or excerpts and turn them into topic notes with a configured BB automation. Use iCloud Drive or another cloud storage service to sync the folder across devices. Requires Python 3 and folder access on the BB server.",
+  "icon": {
+    "url": "./icons/wikisuppy-a3efdfaa.svg"
+  },
+  "tags": [
+    "obsidian",
+    "markdown",
+    "chat-archive",
+    "knowledge-base",
+    "automation"
+  ],
+  "author": {
+    "name": "yknnv",
+    "github": "yknnv",
+    "url": "https://github.com/yknnv"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/yknnv/wikisuppy.git",
+      "range": "^0.1.2"
+    }
+  },
+  "screenshots": [
+    "./screenshots/wikisuppy/thread-menu.png"
+  ],
+  "overview": "./overview/wikisuppy.md"
+}
