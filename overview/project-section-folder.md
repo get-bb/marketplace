@@ -12,7 +12,7 @@ Switch to Active to see ongoing work, Input to find threads waiting for you, or 
 
 ## Keep long sections short
 
-Turn on **Enable Load more** in Sidebar Beautifier settings to limit the starting number of threads in custom sections and Threads. Use **Load more** to reveal the next batch or **Show less** to return to the limit. Pinned has its own optional limit. The open thread stays visible, and child threads stay with their parent.
+Turn on **Enable Load more** in Sidebar Beautifier settings to limit the starting number of threads in custom sections and Threads. Use **Load more** to reveal the next batch or **Show less** to return to the limit. A gray dot beside **Load more** signals that some of the hidden threads are unread. Pinned has its own optional limit. The open thread stays visible, and child threads stay with their parent.
 
 ## Recognize threads by their icons
 
