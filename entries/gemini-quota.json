@@ -1,0 +1,21 @@
+{
+  "id": "gemini-quota",
+  "displayName": "Gemini Quota",
+  "description": "See Gemini’s five-hour and weekly usage in Provider Usage. Refresh on demand and keep the last successful snapshot. Requires a signed-in Antigravity CLI on Linux and a Google account with access to Gemini quotas.",
+  "icon": "Gauge",
+  "tags": ["gemini", "antigravity", "google-ai", "quota", "usage"],
+  "author": {
+    "name": "docomoz",
+    "github": "docomoz",
+    "url": "https://github.com/docomoz"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/docomoz/bb-plugin-gemini-quota.git",
+      "range": "^0.2.3"
+    }
+  },
+  "screenshots": ["./screenshots/gemini-quota/provider-usage-utc.jpg"],
+  "overview": "./overview/gemini-quota.md"
+}
