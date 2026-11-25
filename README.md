@@ -42,7 +42,8 @@ A listing comes from the plugin's own repository or package.
 No pull request to this repository is needed.
 
 1. Add `bbMarketplace` to the plugin's `package.json`.
-   `category` is required and must be a category ID from `marketplace.base.json`.
+   Set `category` to a category ID from `marketplace.base.json`.
+   A plugin without a category is listed, but it does not appear under any category.
 
    ```json
    {
@@ -84,13 +85,15 @@ The listing installs with the range `>=<first release>`, so users get each new r
 | `displayName`, `description` | `bb.name`, `bb.description` (both required) |
 | `icon` | `bb.branding.icon`: a BB icon name, or a relative `.svg`, `.png`, or `.webp` file of at most 256 KiB |
 | `tags` | `keywords`, in kebab case, at most 32 characters each, at most 10; `bb-plugin`, `bb`, and `bb-plugins` are dropped |
-| `category`, `secondaryCategories` | `bbMarketplace` (at most three secondary IDs) |
+| `category`, `secondaryCategories` | `bbMarketplace` (optional; at most three secondary IDs, used only with `category`) |
 | `screenshots` | `bbMarketplace.screenshots`: at most six relative paths |
 | `overview` | `PLUGIN_OVERVIEW.md` |
 | `author` | the GitHub owner; for npm, the owner of a GitHub `repository`, otherwise the first maintainer |
 | `publishedAt` | the date of the first release |
 
 - Screenshots and overviews follow the rules in the sections below.
+  A screenshot that breaks a rule stops the listing.
+  An overview that breaks a rule, for example one over 4000 characters, is left out; the listing stays.
 - An unknown key in `bbMarketplace` is an error, to catch typos.
 - Forks, archived repositories, and deprecated npm versions are not listed.
 - A plugin on both npm and GitHub, where the package `repository` names the repository and directory, is listed once, from npm.
@@ -98,8 +101,8 @@ The listing installs with the range `>=<first release>`, so users get each new r
   A later source with the same ID is not listed.
 - An ID from `entries/` belongs to that entry.
   A self-published plugin replaces the entry when it has the same source, or when its GitHub owner is the entry's `author.github`.
-  The entry keeps its `publishedAt`.
   Authors of existing entries update their listing this way.
+  See [Legacy entries](#legacy-entries) for what the replacement keeps.
 - IDs in `reserved-plugin-ids.json` and IDs that start with `bb--` belong to plugins bundled with BB.
 
 ### The crawl report
@@ -111,14 +114,24 @@ The listing installs with the range `>=<first release>`, so users get each new r
   "generatedAt": "2026-11-25T12:00:00.000Z",
   "sources": {
     "github:owner/repo": { "status": "listed", "id": "example", "version": "1.2.3", "checkedAt": "…" },
-    "github:owner/monorepo/plugins/notes": { "status": "skipped", "reason": "missing-category", "detail": "…", "checkedAt": "…" },
-    "npm:@scope/bb-plugin-x": { "status": "listed", "id": "x", "replaces": "legacy", "checkedAt": "…" }
+    "github:owner/monorepo/plugins/notes": { "status": "skipped", "reason": "no-release-tag", "detail": "…", "checkedAt": "…" },
+    "npm:@scope/bb-plugin-x": {
+      "status": "listed",
+      "id": "x",
+      "version": "2.0.0",
+      "replaces": "legacy",
+      "fromLegacy": ["category", "screenshots"],
+      "warnings": [{ "reason": "missing-category", "detail": "…" }],
+      "checkedAt": "…"
+    }
   }
 }
 ```
 
-The reasons are `no-release-tag`, `no-manifest`, `invalid-manifest`, `missing-category`, `unknown-category`, `invalid-screenshot`, `invalid-overview`, `invalid-icon`, `id-claimed`, `id-reserved`, `blocked`, `fork`, `archived`, `deprecated`, and `npm-preferred`.
-`bb plugin publish --check` uses the same reasons.
+A skipped source has one reason: `no-release-tag`, `no-manifest`, `invalid-manifest`, `unknown-category`, `invalid-screenshot`, `invalid-icon`, `id-claimed`, `id-reserved`, `blocked`, `fork`, `archived`, `deprecated`, or `npm-preferred`.
+A listed source can have warnings: `missing-category` (the listing has no category of its own) and `invalid-overview` (the overview is left out).
+`fromLegacy` names the fields a replaced legacy entry supplied.
+`bb plugin publish --check` uses the same reasons and warnings.
 
 ### Report a plugin
 
@@ -139,6 +152,15 @@ A legacy entry uses the fields of the v2 schema.
 
 CI validates each entry and its remote source.
 The `author.github` value identifies the owner for later entry changes.
+
+A self-published release replaces a legacy entry when it has the same ID and either the same source or a GitHub owner equal to `author.github`.
+The release supplies the listing, with these exceptions:
+
+- Without `bbMarketplace.category`, the listing keeps the entry's `category` and `secondaryCategories`.
+- Without `bbMarketplace.screenshots`, the listing keeps the entry's screenshots.
+  Screenshots in the release replace all of the entry's screenshots.
+- Without a valid `PLUGIN_OVERVIEW.md`, the listing keeps the entry's overview.
+- The listing always keeps the entry's `publishedAt`, so an old plugin does not show as new.
 A semver `range` source uses release tags from the plugin repository.
 
 BB installs nothing automatically.

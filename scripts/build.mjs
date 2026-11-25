@@ -294,7 +294,9 @@ for (const entry of v2Plugins) {
 /**
  * Merge crawled entries into the legacy v2 entries. A crawled entry with a
  * legacy id replaces that entry only when the crawler marked it so (same
- * source or same GitHub owner); it keeps the legacy publishedAt. Any other
+ * source or same GitHub owner); it keeps the legacy publishedAt. The crawler
+ * has already filled in the legacy category, screenshots, and overview where
+ * the release has none. A crawled entry may have no category. Any other
  * crawled entry with a legacy id is dropped: the legacy entry wins. A crawled
  * entry that fails a check is dropped with a warning, so one bad source never
  * stops a publish.
@@ -325,7 +327,6 @@ function mergeCrawled(legacyPlugins) {
         ...clientEntryProblems(entry),
         ...entryCategoryProblems(entry, categoryIds),
       );
-      if (entry.category === undefined) entryProblems.push("It has no category.");
       if (reservedPluginIdProblem(entry.id, reservedPluginIds) !== undefined) {
         entryProblems.push("Its id is reserved.");
       }

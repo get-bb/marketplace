@@ -47,10 +47,12 @@ import {
   iconBufferProblems,
   screenshotBufferProblems,
   validateOverviewBytes,
+  validateOverviewReference,
+  validateScreenshotReference,
 } from "./marketplace-lib.mjs";
 
 /** Bump to make the next run process every source again. */
-export const CRAWLER_VERSION = 1;
+export const CRAWLER_VERSION = 2;
 export const TOPIC = "bb-plugin";
 export const ASSET_URL_BASE = "https://getbb.app/marketplace/v1/assets";
 const OVERVIEW_FILE = "PLUGIN_OVERVIEW.md";
@@ -77,7 +79,34 @@ export function readRepositoryInputs(root) {
     reserved: readJson(join(root, "reserved-plugin-ids.json")),
     blocked,
     legacyEntries,
+    legacyListings: readLegacyListings(root, legacyEntries),
   };
+}
+
+/**
+ * The screenshots and overview of each legacy entry as scripts/build.mjs
+ * publishes them, for a crawled entry that replaces it and has none of its
+ * own. A field with any problem is left out; the build reports it.
+ */
+export function readLegacyListings(root, legacyEntries) {
+  const listings = new Map();
+  for (const entry of legacyEntries) {
+    const listing = {};
+    if (Array.isArray(entry.screenshots) && entry.screenshots.length > 0) {
+      const results = entry.screenshots.map((reference) =>
+        validateScreenshotReference(root, entry.id, reference),
+      );
+      if (results.every((result) => result.problems.length === 0)) {
+        listing.screenshots = results.map((result) => result.outputUrl);
+      }
+    }
+    if (entry.overview !== undefined) {
+      const result = validateOverviewReference(root, entry.id, entry.overview);
+      if (result.problems.length === 0 && result.text !== undefined) listing.overview = result.text;
+    }
+    listings.set(entry.id, listing);
+  }
+  return listings;
 }
 
 async function mapLimit(items, limit, task) {
@@ -195,24 +224,8 @@ async function buildFromFiles(pkgBytes, read, inputs, assets) {
   } catch (error) {
     throw new Skip("invalid-manifest", `package.json is not valid JSON: ${error.message}`);
   }
-  if (inputs.simulateLegacyCategory && pkg?.bbMarketplace === undefined) {
-    // Dry-run analysis only: pretend the author copied the category of the
-    // legacy entry with this id into bbMarketplace.
-    let legacy;
-    try {
-      legacy = inputs.legacyEntries.find((entry) => entry.id === derivePluginId(pkg.name, inputs.reserved));
-    } catch {}
-    if (legacy?.category !== undefined) {
-      pkg = {
-        ...pkg,
-        bbMarketplace: {
-          category: legacy.category,
-          ...(legacy.secondaryCategories === undefined ? {} : { secondaryCategories: legacy.secondaryCategories }),
-        },
-      };
-    }
-  }
   const mapped = mapManifest(pkg, inputs);
+  const warnings = [...mapped.warnings];
   const pending = new Map();
 
   let iconUrl;
@@ -243,15 +256,22 @@ async function buildFromFiles(pkgBytes, read, inputs, assets) {
     screenshots.push({ bytes, extension: path.split(".").at(-1) });
   }
 
+  // A bad overview drops only the overview (a replacing entry then keeps the
+  // legacy one); the listing stays, with a warning.
   let overview;
   const overviewBytes = await read(OVERVIEW_FILE, OVERVIEW_MAX_FETCH);
   if (overviewBytes !== undefined) {
-    if (overviewBytes.tooLarge) {
-      throw new Skip("invalid-overview", `${OVERVIEW_FILE} is larger than ${OVERVIEW_MAX_FETCH} bytes.`);
+    const result = overviewBytes.tooLarge
+      ? { problems: [`${OVERVIEW_FILE} is larger than ${OVERVIEW_MAX_FETCH} bytes.`] }
+      : validateOverviewBytes(overviewBytes, { label: OVERVIEW_FILE });
+    if (result.problems.length > 0) {
+      warnings.push({
+        reason: "invalid-overview",
+        detail: `${result.problems.join(" ")} The overview is left out.`,
+      });
+    } else {
+      overview = result.text;
     }
-    const result = validateOverviewBytes(overviewBytes, { label: OVERVIEW_FILE });
-    if (result.problems.length > 0) throw new Skip("invalid-overview", result.problems.join(" "));
-    overview = result.text;
   }
 
   // Only a source that passes every rule adds assets.
@@ -262,7 +282,11 @@ async function buildFromFiles(pkgBytes, read, inputs, assets) {
   const screenshotUrls = screenshots.map(({ bytes, extension }) =>
     addAsset(assets, bytes, extension),
   );
-  return { mapped, iconUrl, screenshotUrls, overview };
+  return { mapped, iconUrl, screenshotUrls, overview, warnings };
+}
+
+function withWarnings(candidate, warnings) {
+  return warnings === undefined || warnings.length === 0 ? candidate : { ...candidate, warnings };
 }
 
 function skipped(base, error) {
@@ -341,7 +365,7 @@ async function processGithubPlugin({ http, meta, subdir, tagNames, previous, inp
       source: { git },
       publishedAt: record.publishedAt,
     });
-    return { ...record, candidate: { ...base, version, entry } };
+    return { ...record, candidate: withWarnings({ ...base, version, entry }, built.warnings) };
   } catch (error) {
     return { ...record, candidate: skipped({ ...base, version }, error) };
   }
@@ -503,7 +527,7 @@ async function processNpm({ http, name, previous, inputs, assets, checkedAt }) {
     source: { npm: { package: name, range: `>=${facts.earliest}` } },
     publishedAt: facts.publishedAt,
   });
-  return { ...record, candidate: { ...base, entry } };
+  return { ...record, candidate: withWarnings({ ...base, entry }, built.warnings) };
 }
 
 function emptyState() {
@@ -613,6 +637,7 @@ export async function crawl({
   const resolved = resolveListings({
     candidates: candidatesFromState(state),
     legacyEntries: inputs.legacyEntries,
+    legacyListings: inputs.legacyListings,
     claims: state.claims,
     blocked: inputs.blocked,
     categoryIds: inputs.categoryIds,
@@ -639,14 +664,21 @@ export async function crawl({
 
 export function summarize(result, legacyEntries) {
   const reasons = {};
+  const warnings = {};
+  const fromLegacy = {};
   let listed = 0;
   let github = 0;
   let npm = 0;
+  const count = (table, key) => {
+    table[key] = (table[key] ?? 0) + 1;
+  };
   for (const [label, verdict] of Object.entries(result.report.sources)) {
     if (label.startsWith("github:")) github += 1;
     else npm += 1;
     if (verdict.status === "listed") listed += 1;
-    else reasons[verdict.reason] = (reasons[verdict.reason] ?? 0) + 1;
+    else count(reasons, verdict.reason);
+    for (const warning of verdict.warnings ?? []) count(warnings, warning.reason);
+    for (const field of verdict.fromLegacy ?? []) count(fromLegacy, field);
   }
   const legacyIds = new Set(legacyEntries.map((entry) => entry.id));
   const legacyVerdicts = {};
@@ -662,7 +694,10 @@ export function summarize(result, legacyEntries) {
     listedNew: result.entries.plugins.filter((entry) => !legacyIds.has(entry.id)).length,
     replacesLegacy: result.entries.replacesLegacy.length,
     sourcesWithALegacyId: Object.fromEntries(Object.entries(legacyVerdicts).sort()),
+    listedWithoutCategory: result.entries.plugins.filter((entry) => entry.category === undefined).length,
     skippedByReason: Object.fromEntries(Object.entries(reasons).sort()),
+    warningsByReason: Object.fromEntries(Object.entries(warnings).sort()),
+    keptFromLegacy: Object.fromEntries(Object.entries(fromLegacy).sort()),
     newAssets: result.assets.size,
     transientProblems: result.problems.length,
   };
@@ -676,7 +711,6 @@ function parseArgs(argv) {
     else if (flag === "--state") args.state = argv[++index];
     else if (flag === "--budget-seconds") args.budgetSeconds = Number(argv[++index]);
     else if (flag === "--dry-run") args.dryRun = true;
-    else if (flag === "--simulate-legacy-category") args.simulateLegacyCategory = true;
     else throw new Error(`unknown argument ${flag}`);
   }
   return args;
@@ -698,7 +732,6 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   if (token === undefined) log("warning: GITHUB_TOKEN is not set; the API budget is 60 requests an hour");
   const http = createHttp({ token, log });
   const inputs = readRepositoryInputs(root);
-  inputs.simulateLegacyCategory = args.simulateLegacyCategory === true;
   const result = await crawl({
     root,
     state: previous,

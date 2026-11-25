@@ -12,15 +12,14 @@ export const MAX_SCREENSHOTS = 6;
 export const MAX_TAGS = 10;
 export const MAX_SECONDARY_CATEGORIES = 3;
 
-// Reason codes shared with `bb plugin publish --check`.
+// Reason codes shared with `bb plugin publish --check`. A skipped source has
+// one reason; a listed source can carry WARNINGS.
 export const REASONS = Object.freeze([
   "no-release-tag",
   "no-manifest",
   "invalid-manifest",
-  "missing-category",
   "unknown-category",
   "invalid-screenshot",
-  "invalid-overview",
   "invalid-icon",
   "id-claimed",
   "id-reserved",
@@ -30,6 +29,7 @@ export const REASONS = Object.freeze([
   "deprecated",
   "npm-preferred",
 ]);
+export const WARNINGS = Object.freeze(["missing-category", "invalid-overview"]);
 
 const DROPPED_KEYWORDS = new Set(["bb-plugin", "bb", "bb-plugins"]);
 const TAG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -231,10 +231,7 @@ export function mapManifest(pkg, { categoryIds, reserved }) {
     throw new Skip("invalid-manifest", "package.json bb.description is required.");
   }
 
-  const market = pkg.bbMarketplace;
-  if (market === undefined) {
-    throw new Skip("missing-category", "package.json has no bbMarketplace.category.");
-  }
+  const market = pkg.bbMarketplace === undefined ? {} : pkg.bbMarketplace;
   if (market === null || typeof market !== "object" || Array.isArray(market)) {
     throw new Skip("invalid-manifest", "package.json bbMarketplace must be an object.");
   }
@@ -245,10 +242,10 @@ export function mapManifest(pkg, { categoryIds, reserved }) {
       `package.json bbMarketplace has unknown keys: ${unknownKeys.join(", ")}.`,
     );
   }
-  if (market.category === undefined || market.category === "") {
-    throw new Skip("missing-category", "package.json has no bbMarketplace.category.");
-  }
-  if (typeof market.category !== "string" || !categoryIds.has(market.category)) {
+  // The category is optional: a listing without one is valid, and a listing
+  // that replaces a legacy entry keeps that entry's categories.
+  const hasCategory = market.category !== undefined && market.category !== "";
+  if (hasCategory && (typeof market.category !== "string" || !categoryIds.has(market.category))) {
     throw new Skip("unknown-category", `The category ${JSON.stringify(market.category)} is not a marketplace category.`);
   }
   let secondaryCategories;
@@ -266,6 +263,16 @@ export function mapManifest(pkg, { categoryIds, reserved }) {
       throw new Skip("invalid-manifest", "bbMarketplace.secondaryCategories must be distinct from each other and from category.");
     }
     if (list.length > 0) secondaryCategories = [...list];
+  }
+  const warnings = [];
+  if (!hasCategory) {
+    warnings.push({
+      reason: "missing-category",
+      detail:
+        "package.json has no bbMarketplace.category" +
+        (secondaryCategories === undefined ? "." : ", so bbMarketplace.secondaryCategories is ignored."),
+    });
+    secondaryCategories = undefined;
   }
 
   let screenshots = [];
@@ -307,10 +314,11 @@ export function mapManifest(pkg, { categoryIds, reserved }) {
     displayName,
     description,
     tags: keywordsToTags(pkg.keywords),
-    category: market.category,
+    category: hasCategory ? market.category : undefined,
     secondaryCategories,
     screenshots,
     icon,
+    warnings,
   };
 }
 
@@ -326,13 +334,73 @@ export function assembleEntry(mapped, { iconUrl, screenshotUrls, overview, autho
   if (overview !== undefined) entry.overview = overview;
   if (mapped.tags.length > 0) entry.tags = mapped.tags;
   entry.author = author;
-  entry.category = mapped.category;
+  if (mapped.category !== undefined) entry.category = mapped.category;
   if (mapped.secondaryCategories !== undefined) {
     entry.secondaryCategories = mapped.secondaryCategories;
   }
   entry.source = source;
   if (publishedAt !== undefined) entry.publishedAt = publishedAt;
   return entry;
+}
+
+const ENTRY_KEY_ORDER = [
+  "id",
+  "displayName",
+  "description",
+  "icon",
+  "screenshots",
+  "overview",
+  "tags",
+  "author",
+  "category",
+  "secondaryCategories",
+  "source",
+  "publishedAt",
+];
+
+function orderEntry(entry) {
+  const ordered = {};
+  for (const key of ENTRY_KEY_ORDER) if (entry[key] !== undefined) ordered[key] = entry[key];
+  for (const key of Object.keys(entry)) if (!(key in ordered)) ordered[key] = entry[key];
+  return ordered;
+}
+
+/**
+ * A crawled entry that replaces a legacy entry keeps, field by field, what its
+ * release does not supply: category with secondaryCategories, screenshots as
+ * a whole, and overview as a whole. `legacyListing` holds the legacy
+ * entry's published screenshot URLs and overview text. Returns the entry, the
+ * fields taken from the legacy entry, and the warnings with updated details.
+ */
+export function carryOverLegacy(entry, legacy, legacyListing = {}, warnings = []) {
+  const output = { ...entry };
+  const fromLegacy = [];
+  let nextWarnings = warnings;
+  if (output.category === undefined && legacy.category !== undefined) {
+    output.category = legacy.category;
+    delete output.secondaryCategories;
+    if (legacy.secondaryCategories !== undefined && legacy.secondaryCategories.length > 0) {
+      output.secondaryCategories = [...legacy.secondaryCategories];
+    }
+    fromLegacy.push("category");
+    nextWarnings = warnings.map((warning) =>
+      warning.reason === "missing-category"
+        ? {
+            ...warning,
+            detail: `${warning.detail} The listing keeps the category of entries/${entry.id}.json.`,
+          }
+        : warning,
+    );
+  }
+  if (output.screenshots === undefined && (legacyListing.screenshots?.length ?? 0) > 0) {
+    output.screenshots = [...legacyListing.screenshots];
+    fromLegacy.push("screenshots");
+  }
+  if (output.overview === undefined && legacyListing.overview !== undefined) {
+    output.overview = legacyListing.overview;
+    fromLegacy.push("overview");
+  }
+  return { entry: orderEntry(output), fromLegacy, warnings: nextWarnings };
 }
 
 export function githubAuthor(owner) {
@@ -499,13 +567,16 @@ export function blockedReason(candidate, blocked) {
  *
  * A candidate is `{ key, label, checkedAt, repoId?, owner?, npmPackage?,
  * github?: { fullName, subdir }, npmRepository?: { owner, repo, subdir },
- * version?, entry? , reason?, detail? }`: an entry when the source passed
- * every per-source rule, otherwise a reason. `claims` is the ledger
+ * version?, entry?, warnings?, reason?, detail? }`: an entry when the source
+ * passed every per-source rule, otherwise a reason. `claims` is the ledger
  * `{ [id]: { key, label, claimedAt } }`; it is updated in place.
+ * `legacyListings` maps a legacy id to its published `{ screenshots?,
+ * overview? }`, which a replacing entry keeps when its release has none.
  */
 export function resolveListings({
   candidates,
   legacyEntries,
+  legacyListings = new Map(),
   claims,
   blocked,
   categoryIds,
@@ -544,7 +615,7 @@ export function resolveListings({
       continue;
     }
     const unknown = [candidate.entry.category, ...(candidate.entry.secondaryCategories ?? [])]
-      .find((category) => !categoryIds.has(category));
+      .find((category) => category !== undefined && !categoryIds.has(category));
     if (unknown !== undefined) {
       skip(candidate, "unknown-category", `The category "${unknown}" is not a marketplace category.`);
       continue;
@@ -609,13 +680,28 @@ export function resolveListings({
     } else if (claim.label !== candidate.label) {
       claims[id] = { ...claim, label: candidate.label };
     }
-    listed.push(candidate.entry);
-    if (replaces) replacesLegacy.push(id);
+    let entry = candidate.entry;
+    let warnings = candidate.warnings ?? [];
+    let fromLegacy = [];
+    if (replaces) {
+      ({ entry, fromLegacy, warnings } = carryOverLegacy(entry, legacy, legacyListings.get(id), warnings));
+      replacesLegacy.push(id);
+    }
+    if (entry.category === undefined) {
+      warnings = warnings.map((warning) =>
+        warning.reason === "missing-category"
+          ? { ...warning, detail: `${warning.detail} The listing has no category.` }
+          : warning,
+      );
+    }
+    listed.push(entry);
     verdicts.set(candidate.label, {
       status: "listed",
       id,
       ...(candidate.version === undefined ? {} : { version: candidate.version }),
       ...(replaces ? { replaces: "legacy" } : {}),
+      ...(fromLegacy.length > 0 ? { fromLegacy } : {}),
+      ...(warnings.length > 0 ? { warnings } : {}),
       checkedAt: candidate.checkedAt,
     });
   }
