@@ -1,0 +1,39 @@
+{
+  "id": "git",
+  "displayName": "Git Panel",
+  "description": "Review what your agent changed, then stage, commit, branch, and push from a panel beside the thread. Pin one workspace and repository and the panel follows your threads instead of the other way around. Stage, unstage, or discard files and commit them, or click a file to read its diff in BB's own side panel as unified or split. Walk a lane graph over every branch, remote and tag, or a linear history of the checked-out branch, and copy a hash, cherry-pick, revert, reset, merge, or rebase from any commit. The File tab lists every commit that touched a path, and the Stash tab pushes, applies, pops, and drops stashes. Requires Git on the BB host; every action is a local git command against the primary host only.",
+  "icon": {
+    "url": "./icons/git-e4b28766.svg"
+  },
+  "screenshots": [
+    "./screenshots/git/changes.png",
+    "./screenshots/git/diff.png",
+    "./screenshots/git/graph.png",
+    "./screenshots/git/file-history.png"
+  ],
+  "overview": "./overview/git.md",
+  "tags": [
+    "source-control",
+    "diff-viewer",
+    "staging",
+    "commit",
+    "branch-management",
+    "commit-graph",
+    "file-history",
+    "push-pull",
+    "stash",
+    "repository"
+  ],
+  "author": {
+    "name": "Miftahul Huda",
+    "github": "mifhud",
+    "url": "https://github.com/mifhud"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/mifhud/bb-plugin-git.git",
+      "range": "^0.1.0"
+    }
+  }
+}
