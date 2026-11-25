@@ -1,0 +1,34 @@
+{
+  "id": "claude-code-mode",
+  "displayName": "Claude Code Mode",
+  "description": "Start a single Claude Code thread in Claude Code's experimental Code Mode. A button in the New thread composer opts in the threads you send from the app, and leaves agent, CLI, SDK and fork threads alone. An opted-in thread is marked above its composer and resumes in Code Mode while the plugin is enabled, without Claude in Chrome, computer use or Remote Control. Needs Claude Code CLI 2.1.323 or later with a 5.5 or Fable 5.2 model on macOS or Linux, and routes every Claude Code launch on the bb server's machine through its wrapper script.",
+  "icon": {
+    "url": "./icons/claude-code-mode-5799d013.svg"
+  },
+  "tags": [
+    "claude-code",
+    "code-mode",
+    "experimental",
+    "composer",
+    "per-thread",
+    "opus",
+    "sonnet"
+  ],
+  "author": {
+    "name": "JonniK",
+    "github": "JonniK",
+    "url": "https://github.com/JonniK"
+  },
+  "category": "agents-and-providers",
+  "overview": "./overview/claude-code-mode.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/jonnik-bb-plugins/bb-plugin-claude-code-mode.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/claude-code-mode/toolbar-toggle.png",
+    "./screenshots/claude-code-mode/thread-banner.png"
+  ]
+}
