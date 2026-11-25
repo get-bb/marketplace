@@ -29,22 +29,35 @@ The build sets `schemaVersion` to `2` in the v2 output.
 
 ## Submit a plugin
 
-1. Fork this repository.
-2. Add `entries/<your-plugin-id>.json`.
-3. Make the file name equal to the entry `id`.
-   The `id` must not start with `bb--` or equal an id in `reserved-plugin-ids.json`; those belong to plugins bundled with BB.
-4. Set `source` to a public Git repository or an npm package.
-5. Set `category` to an ID from `marketplace.base.json`.
-6. Add screenshots if they help users review the plugin.
-7. Add `overview/<your-plugin-id>.md` if the plugin needs a long-form description.
-8. Open a pull request.
+**This repository no longer accepts new entries by pull request.**
+CI fails a pull request that adds a file under `entries/`.
+A plugin is listed automatically when its author publishes it:
 
-CI validates the entry and its remote source.
-A maintainer reviews the source and the plugin behavior.
-The `author.github` value identifies the owner for later entry changes.
+1. Add `bbMarketplace` to the plugin's `package.json`.
+   Set `category` to a category ID from `marketplace.base.json`.
+   `category` is optional but recommended: a plugin without one is listed, but it does not appear under any category.
+   `secondaryCategories` and `screenshots` (relative paths) are optional.
+2. Add `PLUGIN_OVERVIEW.md` beside `package.json` if the plugin needs a long-form description.
+3. Opt in and release:
+   - **GitHub:** add the topic `bb-plugin` to a public repository, then push a release tag.
+     A plugin at the repository root uses tags like `v1.2.3`.
+     A plugin in a subdirectory listed in `.bb/plugins.json` uses tags like `<directory name>/v1.2.3`.
+   - **npm:** add the keyword `bb-plugin` to `keywords`, then run `npm publish`.
+4. A crawler lists the plugin within 30 minutes.
+   Its verdict is in [report.json](https://getbb.app/marketplace/v1/index/v1/report.json).
 
+Listings are not reviewed by BB.
+
+### Existing entries
+
+The entries in `entries/` stay published.
+Authors of existing entries can update their listing the same way.
+A self-published release replaces the entry when it has the same source, or when its GitHub owner is the entry's `author.github`.
+The listing keeps its original `publishedAt`.
+
+A pull request can still edit or remove an existing entry.
+CI accepts it only when its author is the entry's `author.github` on `main` or a maintainer of this repository.
 A semver `range` source uses release tags from the plugin repository.
-Use a new marketplace pull request for a source, name, or brand change.
 
 BB installs nothing automatically.
 A catalog refresh does not install a plugin.
@@ -179,7 +192,7 @@ POSTHOG_API_KEY=… POSTHOG_PROJECT_ID=… node scripts/build-stats.mjs --print
 
 ## Local validation
 
-Run these commands before you open a pull request:
+Run these commands before you open a pull request that changes an existing entry:
 
 ```sh
 npm ci
