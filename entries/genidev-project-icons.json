@@ -19,7 +19,7 @@
     "git": {
       "url": "https://github.com/gguzhov/bb-plugins.git",
       "subdir": "plugins/genidev-project-icons",
-      "range": "^0.4.0",
+      "range": "^0.2.1",
       "tagPrefix": "genidev-project-icons/"
     }
   },
