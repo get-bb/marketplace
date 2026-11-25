@@ -1,0 +1,34 @@
+{
+  "id": "thread-materials-panel",
+  "displayName": "Thread Materials",
+  "description": "Find files, images, links, and commands in a BB thread without scrolling through the conversation. Group files by type or browse images as thumbnails. Go back to the message that mentions a file. Copy commands from agent replies when you’re ready to run them.",
+  "icon": "FolderOpen",
+  "tags": [
+    "files",
+    "images",
+    "links",
+    "attachments",
+    "gallery",
+    "terminal-commands",
+    "thread-storage",
+    "message-navigation"
+  ],
+  "author": {
+    "name": "serjdrej",
+    "github": "serjdrej",
+    "url": "https://github.com/serjdrej"
+  },
+  "category": "thread-content",
+  "screenshots": [
+    "./screenshots/thread-materials-panel/files.jpg",
+    "./screenshots/thread-materials-panel/images.jpg"
+  ],
+  "overview": "./overview/thread-materials-panel.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/serjdrej/bb-plugin-thread-materials.git",
+      "range": "^0.1.3",
+      "tagPrefix": "thread-materials-panel/"
+    }
+  }
+}
