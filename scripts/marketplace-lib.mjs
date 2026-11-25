@@ -26,7 +26,7 @@ export const SCREENSHOT_MAX_BYTES = 2 * 1024 * 1024;
 export const SCREENSHOT_MIN_WIDTH = 1200;
 export const OVERVIEW_MAX_CHARS = 4000;
 
-const MARKETPLACE_ORIGIN = "https://getbb.app";
+export const MARKETPLACE_ORIGIN = "https://getbb.app";
 const SCREENSHOT_FILE_PATTERN =
   /^[A-Za-z0-9][A-Za-z0-9._-]*\.(?:png|jpg|jpeg|webp)$/;
 const OVERVIEW_MAX_BYTES = OVERVIEW_MAX_CHARS * 4;
@@ -468,22 +468,72 @@ export function validateScreenshotReference(
     problems.push(`The screenshot file is larger than 2 MiB: ${path}`);
     return { outputUrl: parsed.outputUrl, relativeFile, problems };
   }
+  problems.push(
+    ...screenshotBufferProblems(readFileSync(path), parsed.filename, {
+      minimumWidth,
+      label: path,
+    }),
+  );
+  return { outputUrl: parsed.outputUrl, relativeFile, problems };
+}
 
-  const image = inspectImage(readFileSync(path));
-  if (image === undefined) {
-    problems.push(`The screenshot file is not a PNG, JPEG, or WebP image: ${path}`);
-    return { outputUrl: parsed.outputUrl, relativeFile, problems };
+/**
+ * Check screenshot bytes: size, image data, extension, and width. The crawler
+ * uses this on files read from a plugin release; the build uses it on files
+ * in screenshots/.
+ */
+export function screenshotBufferProblems(
+  buffer,
+  filename,
+  { minimumWidth = SCREENSHOT_MIN_WIDTH, label = filename } = {},
+) {
+  if (buffer.length > SCREENSHOT_MAX_BYTES) {
+    return [`The screenshot file is larger than 2 MiB: ${label}`];
   }
-  if (image.format !== expectedImageFormat(parsed.filename)) {
-    problems.push(`The screenshot extension does not match its image format: ${path}`);
+  const image = inspectImage(buffer);
+  if (image === undefined) {
+    return [`The screenshot file is not a PNG, JPEG, or WebP image: ${label}`];
+  }
+  const problems = [];
+  if (image.format !== expectedImageFormat(filename)) {
+    problems.push(`The screenshot extension does not match its image format: ${label}`);
   }
   if (image.width < minimumWidth) {
     problems.push(
-      `The screenshot width is less than ${minimumWidth} pixels: ${path}`,
+      `The screenshot width is less than ${minimumWidth} pixels: ${label}`,
     );
   }
+  return problems;
+}
 
-  return { outputUrl: parsed.outputUrl, relativeFile, problems };
+export const ICON_MAX_BYTES = 256 * 1024;
+
+/** Check icon bytes read from a plugin release: size and SVG, PNG, or WebP data. */
+export function iconBufferProblems(buffer, filename, label = filename) {
+  const extension = filename.split(".").at(-1)?.toLowerCase();
+  if (!["svg", "png", "webp"].includes(extension)) {
+    return [`The icon must be an .svg, .png, or .webp file: ${label}`];
+  }
+  if (buffer.length === 0) return [`The icon file is empty: ${label}`];
+  if (buffer.length > ICON_MAX_BYTES) {
+    return [`The icon file is larger than 256 KiB: ${label}`];
+  }
+  if (extension === "svg") {
+    let text;
+    try {
+      text = new TextDecoder("utf-8", { fatal: true }).decode(buffer);
+    } catch {
+      return [`The SVG icon is not UTF-8 text: ${label}`];
+    }
+    return /<svg[\s>]/i.test(text)
+      ? []
+      : [`The icon file is not an SVG image: ${label}`];
+  }
+  const image = inspectImage(buffer);
+  if (image?.format !== extension) {
+    return [`The icon extension does not match its image data: ${label}`];
+  }
+  return [];
 }
 
 function directoryFiles(directory, prefix) {
@@ -600,17 +650,34 @@ export function validateOverviewReference(root, pluginId, reference) {
       ],
     };
   }
+  return {
+    relativeFile,
+    ...validateOverviewBytes(readFileSync(path), { path, label: relativeFile }),
+  };
+}
+
+/**
+ * Decode, normalize, and check overview markdown bytes. Returns the text that
+ * goes into the v2 document, or problems.
+ */
+export function validateOverviewBytes(bytes, { path = "", label = "" } = {}) {
+  const where = path || label;
+  if (bytes.length > OVERVIEW_MAX_BYTES) {
+    return {
+      problems: [`The overview file is larger than ${OVERVIEW_MAX_BYTES} bytes: ${where}`],
+    };
+  }
   let text;
   try {
-    text = new TextDecoder("utf-8", { fatal: true }).decode(readFileSync(path));
+    text = new TextDecoder("utf-8", { fatal: true }).decode(bytes);
   } catch {
-    return { relativeFile, problems: [`The overview file is not UTF-8: ${path}`] };
+    return { problems: [`The overview file is not UTF-8: ${where}`] };
   }
   const normalized = normalizeOverviewText(text);
-  const problems = checkOverviewMarkdown(normalized).map(
-    (problem) => `${problem} (${relativeFile})`,
+  const problems = checkOverviewMarkdown(normalized).map((problem) =>
+    label ? `${problem} (${label})` : problem,
   );
-  return { text: normalized, relativeFile, problems };
+  return { text: normalized, problems };
 }
 
 export function findOrphanOverviewFiles(root, referencedFiles) {
@@ -789,4 +856,70 @@ export function reservedPluginIdProblem(id, reserved) {
     return `The id "${id}" belongs to a plugin bundled with BB. Rename the package so the plugin gets a different id.`;
   }
   return undefined;
+}
+
+export function entryCategoryProblems(entry, categoryIds) {
+  const problems = [];
+  if (entry.category !== undefined && !categoryIds.has(entry.category)) {
+    problems.push(`The category "${entry.category}" is not defined.`);
+  }
+  for (const secondary of entry.secondaryCategories ?? []) {
+    if (!categoryIds.has(secondary)) {
+      problems.push(`The secondary category "${secondary}" is not defined.`);
+    }
+    if (secondary === entry.category) {
+      problems.push("The primary category cannot be secondary.");
+    }
+  }
+  return problems;
+}
+
+const CLIENT_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
+const CLIENT_TAG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const CLIENT_ICON_NAME_PATTERN = /^[A-Za-z][A-Za-z0-9]*$/;
+
+/**
+ * Limits that current bb clients enforce on each v2 entry (the zod schema in
+ * packages/domain/src/plugin-marketplace-entry.ts). One bad entry makes a
+ * client reject the whole document, so the build checks the output too.
+ */
+export function clientEntryProblems(entry) {
+  const problems = [];
+  if (typeof entry.id !== "string" || !CLIENT_ID_PATTERN.test(entry.id)) {
+    problems.push(`The id ${JSON.stringify(entry.id)} is not a valid plugin id.`);
+  }
+  if (entry.tags !== undefined) {
+    if (!Array.isArray(entry.tags) || entry.tags.length > 10) {
+      problems.push("An entry can have at most 10 tags.");
+    }
+    for (const tag of Array.isArray(entry.tags) ? entry.tags : []) {
+      if (typeof tag !== "string" || tag.length > 32 || !CLIENT_TAG_PATTERN.test(tag)) {
+        problems.push(`The tag ${JSON.stringify(tag)} must be kebab case with at most 32 characters.`);
+      }
+    }
+  }
+  if (entry.screenshots !== undefined && entry.screenshots.length > 6) {
+    problems.push("An entry can have at most 6 screenshots.");
+  }
+  if (typeof entry.icon === "string") {
+    if (!CLIENT_ICON_NAME_PATTERN.test(entry.icon)) {
+      problems.push(`The icon name ${JSON.stringify(entry.icon)} is not valid.`);
+    }
+  } else {
+    let url;
+    try {
+      url = new URL(entry.icon?.url);
+    } catch {}
+    if (
+      url === undefined ||
+      url.origin !== MARKETPLACE_ORIGIN ||
+      !/\.(?:svg|png|webp)$/.test(url.pathname)
+    ) {
+      problems.push(`The icon must be a ${MARKETPLACE_ORIGIN} .svg, .png, or .webp URL or an icon name.`);
+    }
+  }
+  if (entry.overview !== undefined && [...entry.overview].length > OVERVIEW_MAX_CHARS + 1) {
+    problems.push(`The overview is longer than ${OVERVIEW_MAX_CHARS} characters.`);
+  }
+  return problems;
 }

@@ -1,7 +1,14 @@
 # BB Community plugin marketplace
 
 BB registers this repository as the reserved `bb-community` marketplace.
-Each merge to `main` publishes two marketplace documents.
+Plugin authors list a plugin themselves: they add a GitHub topic or an npm keyword and publish a release.
+A crawler finds these plugins every 30 minutes.
+
+**Listings are not reviewed by BB.**
+Review a plugin's source before you install it.
+To report a listing, [open a report](https://github.com/get-bb/marketplace/issues/new?template=report-plugin.yml).
+
+The publish workflow builds two marketplace documents.
 
 - [The v1 document](https://getbb.app/marketplace/v1/marketplace.json) has the frozen contract for older BB versions.
 - [The v2 document](https://getbb.app/marketplace/v2/marketplace.json) adds discovery data for newer BB versions.
@@ -11,7 +18,8 @@ One entry file supplies data to both documents.
 
 ## Layout
 
-- `entries/<plugin-id>.json` contains one marketplace entry.
+- `entries/<plugin-id>.json` contains one legacy marketplace entry.
+- `blocked.json` lists sources that the crawler never lists.
 - `icons/` contains local icon files.
 - `screenshots/<plugin-id>/` contains local screenshot files.
 - `overview/<plugin-id>.md` contains an optional long-form description.
@@ -19,6 +27,7 @@ One entry file supplies data to both documents.
 - `marketplace.base.json` contains the marketplace identity, categories, and collections.
 - `schema/marketplace.schema.json` defines the v1 document.
 - `schema/marketplace-v2.schema.json` defines the v2 document.
+- `scripts/crawl.mjs` finds self-published plugins on GitHub and npm.
 - `scripts/build.mjs` validates the source and builds both documents.
 - `scripts/check-v1-gate.mjs` compares the v1 entries with the live document.
 - `scripts/build-stats.mjs` builds the install-count document.
@@ -27,24 +36,110 @@ The build writes `dist/marketplace.json` and `dist/v2/marketplace.json`.
 The base file carries the v1 identity and keeps `schemaVersion` set to `1`.
 The build sets `schemaVersion` to `2` in the v2 output.
 
-## Submit a plugin
+## Get listed
 
-1. Fork this repository.
-2. Add `entries/<your-plugin-id>.json`.
-3. Make the file name equal to the entry `id`.
-   The `id` must not start with `bb--` or equal an id in `reserved-plugin-ids.json`; those belong to plugins bundled with BB.
-4. Set `source` to a public Git repository or an npm package.
-5. Set `category` to an ID from `marketplace.base.json`.
-6. Add screenshots if they help users review the plugin.
-7. Add `overview/<your-plugin-id>.md` if the plugin needs a long-form description.
-8. Open a pull request.
+A listing comes from the plugin's own repository or package.
+No pull request to this repository is needed.
 
-CI validates the entry and its remote source.
-A maintainer reviews the source and the plugin behavior.
+1. Add `bbMarketplace` to the plugin's `package.json`.
+   `category` is required and must be a category ID from `marketplace.base.json`.
+
+   ```json
+   {
+     "name": "bb-plugin-example",
+     "keywords": ["bb-plugin", "notes", "markdown"],
+     "bb": {
+       "name": "Example",
+       "description": "One sentence about what the plugin does.",
+       "branding": { "icon": "./icon.svg" }
+     },
+     "bbMarketplace": {
+       "category": "utilities",
+       "secondaryCategories": ["thread-content"],
+       "screenshots": ["./screenshots/overview.png"]
+     }
+   }
+   ```
+
+2. Add `PLUGIN_OVERVIEW.md` beside `package.json` if the plugin needs a long-form description.
+3. Run `bb plugin publish --check` in the plugin directory.
+   It runs the crawler's checks locally.
+4. Opt in and release:
+   - **GitHub:** add the topic `bb-plugin` to a public repository, then push a release tag.
+     A plugin at the repository root uses tags like `v1.2.3`.
+     A plugin in a subdirectory listed in `.bb/plugins.json` uses tags like `<directory name>/v1.2.3`, for example `notes/v1.2.3`.
+   - **npm:** add the keyword `bb-plugin` to `keywords`, then run `npm publish`.
+     The overview, the icon, and the screenshots must be in the package, so list them in `files`.
+5. Wait for the next crawl, at most 30 minutes, and check the plugin's verdict in [report.json](https://getbb.app/marketplace/v1/index/v1/report.json).
+
+The crawler reads all listing data from the newest release, never from the default branch.
+A new release updates the listing.
+The listing installs with the range `>=<first release>`, so users get each new release that their BB version supports.
+
+### Listing rules
+
+| Listing field | Comes from |
+|---|---|
+| `id` | `package.json` `name`, without a scope and without a `bb-plugin-` prefix |
+| `displayName`, `description` | `bb.name`, `bb.description` (both required) |
+| `icon` | `bb.branding.icon`: a BB icon name, or a relative `.svg`, `.png`, or `.webp` file of at most 256 KiB |
+| `tags` | `keywords`, in kebab case, at most 32 characters each, at most 10; `bb-plugin`, `bb`, and `bb-plugins` are dropped |
+| `category`, `secondaryCategories` | `bbMarketplace` (at most three secondary IDs) |
+| `screenshots` | `bbMarketplace.screenshots`: at most six relative paths |
+| `overview` | `PLUGIN_OVERVIEW.md` |
+| `author` | the GitHub owner; for npm, the owner of a GitHub `repository`, otherwise the first maintainer |
+| `publishedAt` | the date of the first release |
+
+- Screenshots and overviews follow the rules in the sections below.
+- An unknown key in `bbMarketplace` is an error, to catch typos.
+- Forks, archived repositories, and deprecated npm versions are not listed.
+- A plugin on both npm and GitHub, where the package `repository` names the repository and directory, is listed once, from npm.
+- A plugin ID belongs to the first source that claims it.
+  A later source with the same ID is not listed.
+- An ID from `entries/` belongs to that entry.
+  A self-published plugin replaces the entry when it has the same source, or when its GitHub owner is the entry's `author.github`.
+  The entry keeps its `publishedAt`.
+  Authors of existing entries update their listing this way.
+- IDs in `reserved-plugin-ids.json` and IDs that start with `bb--` belong to plugins bundled with BB.
+
+### The crawl report
+
+[report.json](https://getbb.app/marketplace/v1/index/v1/report.json) has one verdict for each source the crawler found:
+
+```json
+{
+  "generatedAt": "2026-11-25T12:00:00.000Z",
+  "sources": {
+    "github:owner/repo": { "status": "listed", "id": "example", "version": "1.2.3", "checkedAt": "…" },
+    "github:owner/monorepo/plugins/notes": { "status": "skipped", "reason": "missing-category", "detail": "…", "checkedAt": "…" },
+    "npm:@scope/bb-plugin-x": { "status": "listed", "id": "x", "replaces": "legacy", "checkedAt": "…" }
+  }
+}
+```
+
+The reasons are `no-release-tag`, `no-manifest`, `invalid-manifest`, `missing-category`, `unknown-category`, `invalid-screenshot`, `invalid-overview`, `invalid-icon`, `id-claimed`, `id-reserved`, `blocked`, `fork`, `archived`, `deprecated`, and `npm-preferred`.
+`bb plugin publish --check` uses the same reasons.
+
+### Report a plugin
+
+The Report link on getbb.app opens a [plugin report](https://github.com/get-bb/marketplace/issues/new?template=report-plugin.yml).
+Maintainers remove a listing by adding its source to `blocked.json`.
+`blocked.json` takes GitHub repository IDs, GitHub owners, and npm package names.
+
+## Legacy entries
+
+The files in `entries/` are the listings from before the crawler.
+They stay published in both documents.
+A legacy entry uses the fields of the v2 schema.
+
+1. Make the file name equal to the entry `id`.
+2. Set `source` to a public Git repository or an npm package.
+3. Set `category` to an ID from `marketplace.base.json`.
+4. Put screenshots in `screenshots/<plugin-id>/` and an overview in `overview/<plugin-id>.md`.
+
+CI validates each entry and its remote source.
 The `author.github` value identifies the owner for later entry changes.
-
 A semver `range` source uses release tags from the plugin repository.
-Use a new marketplace pull request for a source, name, or brand change.
 
 BB installs nothing automatically.
 A catalog refresh does not install a plugin.
@@ -86,10 +181,52 @@ The build orders the published `categories` array at each publish.
 Categories are sorted by the summed installs of their entries in the last 30 days.
 Ties keep the order of the `categories` array.
 
-The publish workflow runs on each merge and once a day.
-It reads recent install counts from PostHog with `npm run build:ranking`.
-When those counts are unavailable, a merge still publishes.
+The publish workflow reads recent install counts from PostHog with `npm run build:ranking` once a day.
+It keeps the counts in the bucket at `index/ranking.json` and uses them for each publish that day.
+When those counts are unavailable, the workflow still publishes.
 Computed spots then use the newest entries, and categories keep the base order.
+
+## Crawl and publish
+
+The publish workflow runs on each merge to `main`, every 30 minutes, and on demand.
+Each run crawls GitHub and npm, then builds and uploads both documents.
+
+- The crawl is incremental.
+  A repository is processed again only when its tags change, and a package only when its `latest` version changes.
+- The crawl state is in the bucket at `index/state.json`, not in Git.
+  It holds ETags, releases, the built entries, and the claims ledger.
+- A source that fails for a network reason or a rate limit keeps its last listing.
+  When the whole crawl fails, the run publishes the entries of the last good crawl.
+- Crawled icons and screenshots are uploaded to `assets/<content hash>.<ext>` and served from `https://getbb.app/marketplace/v1/assets/`.
+- Crawled entries go into the v2 document only, never into the frozen v1 document.
+
+The repository variable `CRAWL_MODE` selects what the live v2 document holds:
+
+- `shadow` (the default): the live v2 document has the legacy entries only.
+  The merged document goes to [index/shadow/marketplace.json](https://getbb.app/marketplace/v1/index/shadow/marketplace.json), with a copy of the report.
+- `live`: the live v2 document has the legacy and crawled entries.
+
+The report is always published to `index/v1/report.json`.
+
+The workflow uses these settings:
+
+| Name | Kind | Use |
+|---|---|---|
+| `CLOUDFLARE_API_TOKEN` | secret | R2 uploads |
+| `CLOUDFLARE_ACCOUNT_ID` | variable | R2 uploads |
+| `POSTHOG_API_KEY` | secret | daily ranking |
+| `POSTHOG_PROJECT_ID`, `POSTHOG_HOST` | variables | daily ranking |
+| `CRAWL_MODE` | variable, optional | `shadow` or `live` |
+| `CRAWLER_GITHUB_TOKEN` | secret, optional | a token with a larger GitHub API budget than the built-in `GITHUB_TOKEN` |
+
+Run a crawl locally without an upload:
+
+```sh
+GITHUB_TOKEN=$(gh auth token) node scripts/crawl.mjs --out /tmp/crawl
+node scripts/build.mjs --crawled /tmp/crawl/entries.json --v2-out /tmp/crawl/marketplace.json
+```
+
+Pass `--state /tmp/crawl/state.json` to a later run to make it incremental.
 
 ## Screenshots and icons
 
@@ -179,7 +316,7 @@ POSTHOG_API_KEY=… POSTHOG_PROJECT_ID=… node scripts/build-stats.mjs --print
 
 ## Local validation
 
-Run these commands before you open a pull request:
+Run these commands before you open a pull request to this repository:
 
 ```sh
 npm ci

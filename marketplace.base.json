@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "bb-community",
   "displayName": "BB Community",
-  "description": "Plugins published to the BB registry and reviewed by the BB team.",
+  "description": "Plugins that their authors publish to the BB community marketplace. Listings are not reviewed by BB.",
   "categories": [
     {
       "id": "themes-and-appearance",

@@ -4,16 +4,27 @@ on:
   push:
     branches: [main]
   schedule:
-    # Daily, after the install counts, so trending shelves and the category
-    # order follow recent installs without a commit.
-    - cron: "47 6 * * *"
+    # Every 30 minutes: crawl GitHub and npm for self-published plugins.
+    # The PostHog ranking is cached in R2 and refreshed once a day.
+    - cron: "7,37 * * * *"
 concurrency:
   group: publish
   cancel-in-progress: false
+permissions:
+  contents: read
 jobs:
   publish:
     runs-on: ubuntu-latest
     environment: production
+    timeout-minutes: 30
+    env:
+      # Repository variable CRAWL_MODE: "shadow" (default) or "live".
+      # shadow: the live v2 document stays legacy-only; the merged document
+      #         goes to index/shadow/marketplace.json.
+      # live:   the live v2 document is the merged document.
+      CRAWL_MODE: ${{ vars.CRAWL_MODE == 'live' && 'live' || 'shadow' }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
@@ -22,25 +33,77 @@ jobs:
       - run: npm ci
       - name: Install Wrangler 4.86.0
         run: npm install --global wrangler@4.86.0
-      # A scheduled run exists only to refresh the ranking, so it stops when
-      # PostHog fails. A push still publishes, with newest-entry fallbacks.
-      - name: Build ranking.json
-        continue-on-error: ${{ github.event_name != 'schedule' }}
+
+      # A missing object is fine (first run). Any other failure stops the
+      # crawl below, so it never restarts from an empty claims ledger.
+      - name: Restore the crawl state and caches
+        id: restore
+        continue-on-error: true
+        run: |
+          node scripts/index-cache.mjs get crawled-entries.json dist/cache/crawled-entries.json
+          node scripts/index-cache.mjs get ranking.json dist/ranking.json
+          node scripts/index-cache.mjs get state.json dist/cache/state.json
+
+      - name: Check the ranking age
+        id: ranking
+        run: node scripts/index-cache.mjs due dist/ranking.json 20 >> "$GITHUB_OUTPUT"
+      # Once a day. On failure the cached ranking (or newest-entry fallbacks)
+      # is used and the next run tries again.
+      - name: Refresh ranking.json from PostHog
+        id: refresh
+        if: steps.ranking.outputs.due == 'true'
+        continue-on-error: true
         env:
           POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
           POSTHOG_PROJECT_ID: ${{ vars.POSTHOG_PROJECT_ID }}
           POSTHOG_HOST: ${{ vars.POSTHOG_HOST }}
         run: npm run build:ranking
-      - run: npm run build -- --ranking dist/ranking.json
+
+      - name: Crawl GitHub and npm
+        id: crawl
+        if: steps.restore.outcome == 'success'
+        continue-on-error: true
+        env:
+          # GITHUB_TOKEN allows 1000 API requests an hour, enough for the
+          # incremental crawl (unchanged tags cost nothing). Set the secret
+          # CRAWLER_GITHUB_TOKEN to a GitHub App token for more.
+          GITHUB_TOKEN: ${{ secrets.CRAWLER_GITHUB_TOKEN || github.token }}
+        run: |
+          args=(--out dist/crawl --budget-seconds 900)
+          if [ -f dist/cache/state.json ]; then args+=(--state dist/cache/state.json); fi
+          node scripts/crawl.mjs "${args[@]}"
+      # Keep the last crawl's listings rather than dropping them.
+      - name: Fall back to the last crawl
+        if: steps.crawl.outcome != 'success'
+        run: |
+          rm -rf dist/crawl
+          mkdir -p dist/crawl
+          if [ -f dist/cache/crawled-entries.json ]; then
+            cp dist/cache/crawled-entries.json dist/crawl/entries.json
+          else
+            echo '{"plugins":[],"replacesLegacy":[]}' > dist/crawl/entries.json
+          fi
+          echo "::warning::The crawl did not finish; the last crawled entries are used."
+
+      - name: Build
+        run: |
+          node scripts/build.mjs --ranking dist/ranking.json \
+            --crawled dist/crawl/entries.json --v2-out dist/index/marketplace.json
+          node scripts/build.mjs --ranking dist/ranking.json
+          if [ "$CRAWL_MODE" = live ]; then
+            cp dist/index/marketplace.json dist/v2/marketplace.json
+          fi
+          echo "mode $CRAWL_MODE: live v2 $(wc -c < dist/v2/marketplace.json) bytes, merged $(wc -c < dist/index/marketplace.json) bytes"
       - name: Check frozen v1 entries
         if: github.event_name == 'push'
         run: npm run gate:v1
-      # Keep this order explicit: assets first, then v2, then v1.
-      # Only assets whose published copy is missing or different are uploaded.
+
+      # Keep this order: assets first, then v2, then v1, then the index files.
+      # Repository assets change only with a commit, so scheduled runs skip
+      # them. Only assets whose published copy is missing or different are
+      # uploaded.
       - name: Upload icons
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        if: github.event_name != 'schedule'
         run: |
           source scripts/r2-upload.sh
           node scripts/changed-assets.mjs icons > changed-icons.txt
@@ -49,9 +112,7 @@ jobs:
               --file "$icon" --remote
           done 3< changed-icons.txt
       - name: Upload screenshots
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        if: github.event_name != 'schedule'
         run: |
           source scripts/r2-upload.sh
           node scripts/changed-assets.mjs screenshots > changed-screenshots.txt
@@ -65,21 +126,73 @@ jobs:
             r2_put_with_retry "bb-marketplace/v2/$screenshot" \
               --file "$screenshot" --content-type "$content_type" --remote
           done 3< changed-screenshots.txt
+      # New icons and screenshots of crawled plugins, named by content hash.
+      # Uploaded in shadow mode too, so the shadow document is complete.
+      - name: Upload crawled assets
+        if: steps.crawl.outcome == 'success'
+        run: |
+          source scripts/r2-upload.sh
+          shopt -s nullglob
+          for asset in dist/crawl/assets/*; do
+            case "$asset" in
+              *.svg) content_type="image/svg+xml" ;;
+              *.png) content_type="image/png" ;;
+              *.jpg|*.jpeg) content_type="image/jpeg" ;;
+              *.webp) content_type="image/webp" ;;
+              *) echo "Unsupported asset: $asset" >&2; exit 1 ;;
+            esac
+            r2_put_with_retry "bb-marketplace/assets/$(basename "$asset")" \
+              --file "$asset" --content-type "$content_type" --remote
+          done
       - name: Upload v2 manifest
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           source scripts/r2-upload.sh
           r2_put_with_retry "bb-marketplace/v2/marketplace.json" \
             --file dist/v2/marketplace.json \
             --content-type application/json --remote
       - name: Upload v1 manifest
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           source scripts/r2-upload.sh
           r2_put_with_retry "bb-marketplace/marketplace.json" \
             --file dist/marketplace.json \
             --content-type application/json --remote
+      - name: Upload the shadow document
+        if: env.CRAWL_MODE == 'shadow'
+        run: |
+          source scripts/r2-upload.sh
+          r2_put_with_retry "bb-marketplace/index/shadow/marketplace.json" \
+            --file dist/index/marketplace.json \
+            --content-type application/json --remote
+          if [ -f dist/crawl/report.json ]; then
+            r2_put_with_retry "bb-marketplace/index/shadow/report.json" \
+              --file dist/crawl/report.json \
+              --content-type application/json --remote
+          fi
+      # The state goes last: if anything above failed, the next run processes
+      # the same changes again.
+      - name: Upload the report and the crawl state
+        if: steps.crawl.outcome == 'success'
+        run: |
+          source scripts/r2-upload.sh
+          r2_put_with_retry "bb-marketplace/index/v1/report.json" \
+            --file dist/crawl/report.json \
+            --content-type application/json --remote
+          r2_put_with_retry "bb-marketplace/index/crawled-entries.json" \
+            --file dist/crawl/entries.json \
+            --content-type application/json --remote
+          r2_put_with_retry "bb-marketplace/index/state.json" \
+            --file dist/crawl/state.json \
+            --content-type application/json --remote
+      - name: Upload the ranking cache
+        if: steps.refresh.outcome == 'success'
+        run: |
+          source scripts/r2-upload.sh
+          r2_put_with_retry "bb-marketplace/index/ranking.json" \
+            --file dist/ranking.json \
+            --content-type application/json --remote
+      - name: Crawl summary
+        if: always()
+        run: |
+          if [ -f dist/crawl/summary.json ]; then
+            { echo '### Crawl'; echo; echo "Mode: $CRAWL_MODE"; echo; echo '```json'; cat dist/crawl/summary.json; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          fi

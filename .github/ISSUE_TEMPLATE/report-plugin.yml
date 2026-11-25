@@ -1,0 +1,37 @@
+name: Report a plugin
+description: Report a marketplace listing that is malicious, broken, impersonates someone, or breaks the rules.
+title: "Report: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Listings in the BB community marketplace are published by their authors and are not reviewed by BB.
+        Maintainers read each report. A listing that breaks the rules is removed with `blocked.json`.
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin ID
+      description: The ID from the listing URL, for example `notes` in getbb.app/marketplace/notes.
+      placeholder: notes
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Reason
+      options:
+        - Malicious or harmful code
+        - Impersonates another author or plugin
+        - Broken or does not install
+        - Spam or misleading listing
+        - Copyright or license problem
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What did you see? Add links to code, releases, or screenshots.
+    validations:
+      required: true
