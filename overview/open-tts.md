@@ -1,13 +1,16 @@
-## Listen with your own speech service
+## Listen to messages
 
 A speaker button on each message reads the full message or a selected passage.
 The floating player provides pause, stop, ten-second skips and playback speeds
 from 0.75× to 2×. Playback stops when you switch threads or send a new prompt.
 
-## Choose the server and voice
+## Choose a voice source
 
-Connect an OpenAI-compatible TTS endpoint, including Piper behind a compatible
-adapter. Set the server URL, API key, model and voice in the plugin settings.
+The source selector beside playback speed restarts the current passage with the
+chosen voice and remembers your choice on this device. Open the gear to choose
+an installed Mac voice or configure up to two OpenAI-compatible services,
+including Piper behind a compatible adapter. Each service has its own URL,
+API key, model and voice.
 Speech requests run on the BB server, and the API key stays there as a secret
 setting. Markdown is prepared for speech; code blocks are skipped by default.
 An elapsed-seconds timer shows waiting during preparation and buffering.
@@ -18,9 +21,10 @@ self-hosted servers from receiving parallel synthesis requests.
 
 ## Requirements and data
 
-Requires BB 0.49.0 or newer and an accessible speech endpoint that returns MP3.
-Your configured provider receives the text being read; its account, retention
-policy and usage charges apply. The plugin does not install a speech model.
+Requires BB 0.49.0 or newer. Mac voices use macOS speech and ffmpeg with an MP3
+encoder on the Mac running BB. The Mac streams the audio to the listening
+device. API voices require an endpoint that returns MP3. The selected service
+receives the text, and its retention policy and usage charges apply. The plugin does not install a speech model.
 There is no default server and no Microsoft service dependency.
 
 Use `bb open-tts status` to synthesize a short test; this may incur a charge.
