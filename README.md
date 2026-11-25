@@ -34,7 +34,8 @@ CI fails a pull request that adds a file under `entries/`.
 A plugin is listed automatically when its author publishes it:
 
 1. Add `bbMarketplace` to the plugin's `package.json`.
-   `category` is required and must be a category ID from `marketplace.base.json`.
+   Set `category` to a category ID from `marketplace.base.json`.
+   `category` is optional but recommended: a plugin without one is listed, but it does not appear under any category.
    `secondaryCategories` and `screenshots` (relative paths) are optional.
 2. Add `PLUGIN_OVERVIEW.md` beside `package.json` if the plugin needs a long-form description.
 3. Opt in and release:
