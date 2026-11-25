@@ -1,0 +1,23 @@
+{
+  "id": "duo-rail",
+  "displayName": "Duo Rail",
+  "description": "Put your own bb buttons in the empty strip below the camera on the iPhone Duo, on the folded cover screen and the unfolded display. Back, New thread and More are there from the start; in the plugin's settings you choose each display's buttons, their order and symbols, and what each does: open a thread, a project or a web address, run an action from bb's thread menu or a bb command, or open a menu of your own. The layout is kept on your bb server, so every device follows it, and a mirrored device puts the buttons on the left. On a desktop, an ordinary iPhone or an iPad it draws nothing. Requires bb 0.49 or later and bb's iOS app on an iPhone Duo; a button that runs a bb command needs bb's command-line tool installed.",
+  "icon": "Smartphone",
+  "tags": ["iphone", "iphone-duo", "foldable", "phone", "mobile", "ios", "buttons", "shortcuts", "toolbar", "navigation"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "themes-and-appearance",
+  "secondaryCategories": ["thread-management"],
+  "overview": "./overview/duo-rail.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "duo-rail",
+      "tagPrefix": "duo-rail/",
+      "range": ">=0.1.0"
+    }
+  }
+}
