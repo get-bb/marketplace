@@ -3,14 +3,19 @@
 // The --liveness option also checks each remote source.
 // The --ranking <path> option reads recent install counts from
 // scripts/build-ranking.mjs; without it, computed shelves use newest entries.
+// The --crawled <path> option merges the entries.json of scripts/crawl.mjs
+// into the v2 document. Crawled entries never enter the v1 document.
+// The --v2-out <path> option writes the v2 document somewhere else.
 import { execFileSync } from "node:child_process";
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 import {
   checkRequiredCategories,
+  clientEntryProblems,
+  entryCategoryProblems,
   findOrphanOverviewFiles,
   findOrphanScreenshotFiles,
   fillEmptyCollections,
@@ -29,6 +34,12 @@ const liveness = process.argv.includes("--liveness");
 const rankingFlag = process.argv.indexOf("--ranking");
 const rankingPath =
   rankingFlag === -1 ? undefined : process.argv[rankingFlag + 1];
+const flagValue = (flag) => {
+  const index = process.argv.indexOf(flag);
+  return index === -1 ? undefined : process.argv[index + 1];
+};
+const crawledPath = flagValue("--crawled");
+const v2OutPath = flagValue("--v2-out");
 const problems = [];
 const warnings = [];
 
@@ -190,16 +201,8 @@ const ranking = readRanking();
 
 const plugins = entryRecords.map(({ entry }) => entry);
 for (const entry of plugins) {
-  if (entry.category !== undefined && !categoryIds.has(entry.category)) {
-    problems.push(`${entry.id}.json: The category "${entry.category}" is not defined.`);
-  }
-  for (const secondary of entry.secondaryCategories ?? []) {
-    if (!categoryIds.has(secondary)) {
-      problems.push(`${entry.id}.json: The secondary category "${secondary}" is not defined.`);
-    }
-    if (secondary === entry.category) {
-      problems.push(`${entry.id}.json: The primary category cannot be secondary.`);
-    }
+  for (const problem of entryCategoryProblems(entry, categoryIds)) {
+    problems.push(`${entry.id}.json: ${problem}`);
   }
 }
 
@@ -282,15 +285,94 @@ function entryAddedDates() {
   }
 }
 
+for (const entry of v2Plugins) {
+  for (const problem of clientEntryProblems(entry)) {
+    problems.push(`${entry.id}.json: ${problem}`);
+  }
+}
+
+/**
+ * Merge crawled entries into the legacy v2 entries. A crawled entry with a
+ * legacy id replaces that entry only when the crawler marked it so (same
+ * source or same GitHub owner); it keeps the legacy publishedAt. The crawler
+ * has already filled in the legacy category, screenshots, and overview where
+ * the release has none. A crawled entry may have no category. Any other
+ * crawled entry with a legacy id is dropped: the legacy entry wins. A crawled
+ * entry that fails a check is dropped with a warning, so one bad source never
+ * stops a publish.
+ */
+function mergeCrawled(legacyPlugins) {
+  if (crawledPath === undefined) return { plugins: legacyPlugins, added: 0, replaced: 0 };
+  let crawled;
+  try {
+    crawled = readJson(crawledPath);
+  } catch (error) {
+    problems.push(`${crawledPath}: The crawled entries are not readable. ${error.message}`);
+    return { plugins: legacyPlugins, added: 0, replaced: 0 };
+  }
+  const replaces = new Set(crawled.replacesLegacy ?? []);
+  const byId = new Map(legacyPlugins.map((entry) => [entry.id, entry]));
+  const seen = new Set();
+  let added = 0;
+  let replaced = 0;
+  for (const entry of crawled.plugins ?? []) {
+    const label = `crawled entry ${JSON.stringify(entry?.id)}`;
+    const entryProblems = [];
+    if (!validateEntry(entry)) {
+      for (const error of validateEntry.errors ?? []) {
+        entryProblems.push(`${error.instancePath || "/"} ${error.message}`);
+      }
+    } else {
+      entryProblems.push(
+        ...clientEntryProblems(entry),
+        ...entryCategoryProblems(entry, categoryIds),
+      );
+      if (reservedPluginIdProblem(entry.id, reservedPluginIds) !== undefined) {
+        entryProblems.push("Its id is reserved.");
+      }
+    }
+    if (entryProblems.length > 0) {
+      warnings.push(`${label} is not published: ${entryProblems.join("; ")}`);
+      continue;
+    }
+    if (seen.has(entry.id)) {
+      warnings.push(`${label} occurs more than once; the first one is published.`);
+      continue;
+    }
+    seen.add(entry.id);
+    const legacy = byId.get(entry.id);
+    if (legacy === undefined) {
+      byId.set(entry.id, entry);
+      added += 1;
+      continue;
+    }
+    if (!replaces.has(entry.id)) {
+      warnings.push(`${label} conflicts with entries/${entry.id}.json; the legacy entry is published.`);
+      continue;
+    }
+    const output = { ...entry };
+    delete output.publishedAt;
+    if (legacy.publishedAt !== undefined) output.publishedAt = legacy.publishedAt;
+    byId.set(entry.id, output);
+    replaced += 1;
+  }
+  return {
+    plugins: [...byId.values()].sort((left, right) => left.id.localeCompare(right.id)),
+    added,
+    replaced,
+  };
+}
+
+const merged = mergeCrawled(v2Plugins);
 const collections = fillEmptyCollections(
   base.collections ?? [],
-  v2Plugins,
+  merged.plugins,
   ranking,
 );
 const categories =
   base.categories === undefined
     ? undefined
-    : orderCategories(base.categories, v2Plugins, ranking);
+    : orderCategories(base.categories, merged.plugins, ranking);
 const v1Manifest = projectV1Manifest(base, plugins);
 const v2Manifest = {
   $schema: "https://getbb.app/schemas/marketplace-v2.schema.json",
@@ -300,7 +382,7 @@ const v2Manifest = {
   ...(base.description === undefined ? {} : { description: base.description }),
   ...(categories === undefined ? {} : { categories }),
   ...(base.collections === undefined ? {} : { collections }),
-  plugins: v2Plugins,
+  plugins: merged.plugins,
 };
 
 if (!validateV1(v1Manifest)) {
@@ -377,14 +459,19 @@ if (problems.length > 0) {
   process.exit(1);
 }
 
-mkdirSync(join(root, "dist", "v2"), { recursive: true });
+const v2Out = resolve(v2OutPath ?? join(root, "dist", "v2", "marketplace.json"));
+mkdirSync(join(root, "dist"), { recursive: true });
+mkdirSync(dirname(v2Out), { recursive: true });
 writeFileSync(
   join(root, "dist", "marketplace.json"),
   `${JSON.stringify(v1Manifest, null, 2)}\n`,
 );
-writeFileSync(
-  join(root, "dist", "v2", "marketplace.json"),
-  `${JSON.stringify(v2Manifest)}\n`,
-);
+const v2Bytes = `${JSON.stringify(v2Manifest)}\n`;
+writeFileSync(v2Out, v2Bytes);
 console.log(`built dist/marketplace.json with ${plugins.length} entries`);
-console.log(`built dist/v2/marketplace.json with ${plugins.length} entries`);
+console.log(
+  `built ${v2Out} with ${merged.plugins.length} entries (${Buffer.byteLength(v2Bytes)} bytes)` +
+    (crawledPath === undefined
+      ? ""
+      : `: ${plugins.length} legacy, ${merged.added} crawled, ${merged.replaced} legacy replaced by crawled`),
+);
