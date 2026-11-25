@@ -1,0 +1,33 @@
+{
+  "id": "fuel-bb",
+  "displayName": "Fuel BB",
+  "description": "Keeps every agent's usage limit and the open thread's context in one strip at the bottom of the sidebar. Buttons come from the providers bb reports, such as Claude Code, Kimi Code, Cursor and OpenCode, and a click shows each window with its reset time. The Context button shows the thread's tokens and compacts it after a confirmation. Optionally reads the Antigravity (Gemini) quota through your agy CLI on macOS; it is off by default, as is Antigravity account switching.",
+  "icon": "Gauge",
+  "screenshots": [
+    "./screenshots/fuel-bb/cover.png",
+    "./screenshots/fuel-bb/popovers.png"
+  ],
+  "overview": "./overview/fuel-bb.md",
+  "tags": [
+    "limits",
+    "usage",
+    "quota",
+    "context",
+    "compact",
+    "claude",
+    "kimi",
+    "gemini",
+    "antigravity"
+  ],
+  "author": {
+    "name": "xaibu9",
+    "github": "xaibu9"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/xaibu9/bb-plugin-fuel.git",
+      "range": "^0.1.1"
+    }
+  }
+}
