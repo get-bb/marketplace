@@ -1,7 +1,7 @@
 {
   "id": "header-pins",
   "displayName": "Header Pins",
-  "description": "Switch between pinned threads from tabs in the thread header, and always see which thread is open. Each tab shows a status dot across the thread and its children, and unpins in place. A floating capsule over the conversation names the open thread with its project, branch and live status, and holds the pin button and thread actions menu. Tabs and capsule use Chat Sidebar's project colors when it is installed, otherwise the provider color. Requires BB 0.50.1 or later; no account or external service.",
+  "description": "Switch between pinned threads from tabs in the thread header, and always see which thread is open. Each tab shows a status dot across the thread and its children, and unpins in place. A floating capsule over the conversation names the open thread with its project, branch and live status. Its quick buttons are yours to pick in settings: any thread menu action, such as a new sub-thread or Mark finished, plus pin and the thread menu. Tabs and capsule use Chat Sidebar's project colors when it is installed, otherwise the provider color. Requires BB 0.50.1 or later; no account or external service.",
   "icon": "Pin",
   "tags": [
     "pins",
@@ -23,13 +23,14 @@
   "category": "thread-management",
   "screenshots": [
     "./screenshots/header-pins/overview.png",
-    "./screenshots/header-pins/thread-header.png"
+    "./screenshots/header-pins/thread-header.png",
+    "./screenshots/header-pins/settings.png"
   ],
   "overview": "./overview/header-pins.md",
   "source": {
     "git": {
       "url": "https://github.com/fzrx-ego/bb-plugin-header-pins.git",
-      "range": "^0.2.0"
+      "range": "^0.3.0"
     }
   }
 }
