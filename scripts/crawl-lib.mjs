@@ -313,6 +313,7 @@ export function mapManifest(pkg, { categoryIds, reserved }) {
     id,
     displayName,
     description,
+    iconDeclared: declaredIcon !== undefined,
     tags: keywordsToTags(pkg.keywords),
     category: hasCategory ? market.category : undefined,
     secondaryCategories,
@@ -367,12 +368,13 @@ function orderEntry(entry) {
 
 /**
  * A crawled entry that replaces a legacy entry keeps, field by field, what its
- * release does not supply: category with secondaryCategories, screenshots as
- * a whole, and overview as a whole. `legacyListing` holds the legacy
- * entry's published screenshot URLs and overview text. Returns the entry, the
+ * release does not supply: category with secondaryCategories, the icon (when
+ * the release has no bb.branding.icon, `defaultIcon`), screenshots as a
+ * whole, and overview as a whole. `legacyListing` holds the legacy entry's
+ * published icon, screenshot URLs, and overview text. Returns the entry, the
  * fields taken from the legacy entry, and the warnings with updated details.
  */
-export function carryOverLegacy(entry, legacy, legacyListing = {}, warnings = []) {
+export function carryOverLegacy(entry, legacy, legacyListing = {}, warnings = [], { defaultIcon = false } = {}) {
   const output = { ...entry };
   const fromLegacy = [];
   let nextWarnings = warnings;
@@ -391,6 +393,10 @@ export function carryOverLegacy(entry, legacy, legacyListing = {}, warnings = []
           }
         : warning,
     );
+  }
+  if (defaultIcon && legacyListing.icon !== undefined) {
+    output.icon = typeof legacyListing.icon === "string" ? legacyListing.icon : { ...legacyListing.icon };
+    fromLegacy.push("icon");
   }
   if (output.screenshots === undefined && (legacyListing.screenshots?.length ?? 0) > 0) {
     output.screenshots = [...legacyListing.screenshots];
@@ -567,7 +573,8 @@ export function blockedReason(candidate, blocked) {
  *
  * A candidate is `{ key, label, checkedAt, repoId?, owner?, npmPackage?,
  * github?: { fullName, subdir }, npmRepository?: { owner, repo, subdir },
- * version?, entry?, warnings?, reason?, detail? }`: an entry when the source
+ * version?, entry?, warnings?, defaultIcon?, reason?, detail? }`: an entry
+ * when the source
  * passed every per-source rule, otherwise a reason. `claims` is the ledger
  * `{ [id]: { key, label, claimedAt } }`; it is updated in place.
  * `legacyListings` maps a legacy id to its published `{ screenshots?,
@@ -684,7 +691,9 @@ export function resolveListings({
     let warnings = candidate.warnings ?? [];
     let fromLegacy = [];
     if (replaces) {
-      ({ entry, fromLegacy, warnings } = carryOverLegacy(entry, legacy, legacyListings.get(id), warnings));
+      ({ entry, fromLegacy, warnings } = carryOverLegacy(entry, legacy, legacyListings.get(id), warnings, {
+        defaultIcon: candidate.defaultIcon === true,
+      }));
       replacesLegacy.push(id);
     }
     if (entry.category === undefined) {

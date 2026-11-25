@@ -83,7 +83,7 @@ The listing installs with the range `>=<first release>`, so users get each new r
 |---|---|
 | `id` | `package.json` `name`, without a scope and without a `bb-plugin-` prefix |
 | `displayName`, `description` | `bb.name`, `bb.description` (both required) |
-| `icon` | `bb.branding.icon`: a BB icon name, or a relative `.svg`, `.png`, or `.webp` file of at most 256 KiB |
+| `icon` | `bb.branding.icon`: a BB icon name, or a relative `.svg`, `.png`, or `.webp` file of at most 256 KiB; when missing, a replaced legacy entry's icon, otherwise `Puzzle` |
 | `tags` | `keywords`, in kebab case, at most 32 characters each, at most 10; `bb-plugin`, `bb`, and `bb-plugins` are dropped |
 | `category`, `secondaryCategories` | `bbMarketplace` (optional; at most three secondary IDs, used only with `category`) |
 | `screenshots` | `bbMarketplace.screenshots`: at most six relative paths |
@@ -120,7 +120,7 @@ The listing installs with the range `>=<first release>`, so users get each new r
       "id": "x",
       "version": "2.0.0",
       "replaces": "legacy",
-      "fromLegacy": ["category", "screenshots"],
+      "fromLegacy": ["category", "icon", "screenshots"],
       "warnings": [{ "reason": "missing-category", "detail": "…" }],
       "checkedAt": "…"
     }
@@ -157,6 +157,8 @@ A self-published release replaces a legacy entry when it has the same ID and eit
 The release supplies the listing, with these exceptions:
 
 - Without `bbMarketplace.category`, the listing keeps the entry's `category` and `secondaryCategories`.
+- Without `bb.branding.icon`, the listing keeps the entry's icon.
+  A new plugin without an icon gets the `Puzzle` icon.
 - Without `bbMarketplace.screenshots`, the listing keeps the entry's screenshots.
   Screenshots in the release replace all of the entry's screenshots.
 - Without a valid `PLUGIN_OVERVIEW.md`, the listing keeps the entry's overview.

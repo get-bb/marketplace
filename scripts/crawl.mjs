@@ -46,13 +46,14 @@ import {
   SCREENSHOT_MAX_BYTES,
   iconBufferProblems,
   screenshotBufferProblems,
+  validateAndRewriteIcon,
   validateOverviewBytes,
   validateOverviewReference,
   validateScreenshotReference,
 } from "./marketplace-lib.mjs";
 
 /** Bump to make the next run process every source again. */
-export const CRAWLER_VERSION = 2;
+export const CRAWLER_VERSION = 3;
 export const TOPIC = "bb-plugin";
 export const ASSET_URL_BASE = "https://getbb.app/marketplace/v1/assets";
 const OVERVIEW_FILE = "PLUGIN_OVERVIEW.md";
@@ -84,14 +85,19 @@ export function readRepositoryInputs(root) {
 }
 
 /**
- * The screenshots and overview of each legacy entry as scripts/build.mjs
- * publishes them, for a crawled entry that replaces it and has none of its
- * own. A field with any problem is left out; the build reports it.
+ * The icon, screenshots, and overview of each legacy entry as
+ * scripts/build.mjs publishes them, for a crawled entry that replaces it and
+ * has none of its own. A field with any problem is left out; the build
+ * reports it.
  */
 export function readLegacyListings(root, legacyEntries) {
   const listings = new Map();
   for (const entry of legacyEntries) {
     const listing = {};
+    if (entry.icon !== undefined) {
+      const result = validateAndRewriteIcon(root, entry.icon);
+      if (result.problems.length === 0 && result.icon !== undefined) listing.icon = result.icon;
+    }
     if (Array.isArray(entry.screenshots) && entry.screenshots.length > 0) {
       const results = entry.screenshots.map((reference) =>
         validateScreenshotReference(root, entry.id, reference),
@@ -285,8 +291,12 @@ async function buildFromFiles(pkgBytes, read, inputs, assets) {
   return { mapped, iconUrl, screenshotUrls, overview, warnings };
 }
 
-function withWarnings(candidate, warnings) {
-  return warnings === undefined || warnings.length === 0 ? candidate : { ...candidate, warnings };
+function withBuilt(candidate, built) {
+  const output = { ...candidate };
+  if (built.warnings !== undefined && built.warnings.length > 0) output.warnings = built.warnings;
+  // A replacing entry keeps the legacy icon instead of the default.
+  if (built.mapped.iconDeclared === false) output.defaultIcon = true;
+  return output;
 }
 
 function skipped(base, error) {
@@ -365,7 +375,7 @@ async function processGithubPlugin({ http, meta, subdir, tagNames, previous, inp
       source: { git },
       publishedAt: record.publishedAt,
     });
-    return { ...record, candidate: withWarnings({ ...base, version, entry }, built.warnings) };
+    return { ...record, candidate: withBuilt({ ...base, version, entry }, built) };
   } catch (error) {
     return { ...record, candidate: skipped({ ...base, version }, error) };
   }
@@ -527,7 +537,7 @@ async function processNpm({ http, name, previous, inputs, assets, checkedAt }) {
     source: { npm: { package: name, range: `>=${facts.earliest}` } },
     publishedAt: facts.publishedAt,
   });
-  return { ...record, candidate: withWarnings({ ...base, entry }, built.warnings) };
+  return { ...record, candidate: withBuilt({ ...base, entry }, built) };
 }
 
 function emptyState() {

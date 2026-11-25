@@ -259,12 +259,13 @@ function world({ notesTags = ["v0.1.0", "v0.2.0", "v0.3.0-beta.1", "0.9.0"] } = 
 }
 
 const LEGACY_SHOT = "https://getbb.app/marketplace/v1/screenshots/monorepo-tool/a.png";
+const LEGACY_ICON = "https://getbb.app/marketplace/v1/icons/monorepo-tool-1234abcd.svg";
 const inputs = (extra = {}) => ({
   categoryIds,
   reserved,
   blocked: {},
   legacyEntries,
-  legacyListings: new Map([["monorepo-tool", { screenshots: [LEGACY_SHOT], overview: "Legacy overview.\n" }]]),
+  legacyListings: new Map([["monorepo-tool", { icon: { url: LEGACY_ICON }, screenshots: [LEGACY_SHOT], overview: "Legacy overview.\n" }]]),
   ...extra,
 });
 
@@ -342,6 +343,8 @@ test("manifest mapping enforces bbMarketplace", () => {
   assert.deepEqual(mapped.icon, { name: "Puzzle" });
   assert.deepEqual(map(manifest({ bb: { name: "N", description: "D", branding: { icon: "./i.svg" } } })).icon, { path: "i.svg" });
   assert.deepEqual(map(manifest({ bb: { name: "N", description: "D", branding: { icon: "Rocket" } } })).icon, { name: "Rocket" });
+  assert.equal(mapped.iconDeclared, false);
+  assert.equal(map(manifest({ bb: { name: "N", description: "D", branding: { icon: "Puzzle" } } })).iconDeclared, true);
 
   // The category is optional; its absence is a warning.
   for (const bbMarketplace of [undefined, {}, { category: "" }]) {
@@ -456,24 +459,26 @@ test("a crawled entry replaces a legacy entry by source or by GitHub owner", () 
   assert.equal(sameSource({ npm: { package: "a" } }, { git: { url: "a" } }), false);
 });
 
-test("a replacing entry keeps legacy category, screenshots, and overview it does not supply", () => {
+test("a replacing entry keeps legacy category, icon, screenshots, and overview it does not supply", () => {
   const legacy = [
     { id: "bare", category: "security", secondaryCategories: ["thread-content"], author: { github: "o" }, source: { npm: { package: "bare" } } },
     { id: "full", category: "security", author: { github: "o" }, source: { npm: { package: "full" } } },
   ];
   const legacyListings = new Map([
-    ["bare", { screenshots: ["https://getbb.app/marketplace/v1/screenshots/bare/a.png"], overview: "Old.\n" }],
-    ["full", { screenshots: ["https://getbb.app/marketplace/v1/screenshots/full/a.png"], overview: "Old.\n" }],
+    ["bare", { icon: "Notebook", screenshots: ["https://getbb.app/marketplace/v1/screenshots/bare/a.png"], overview: "Old.\n" }],
+    ["full", { icon: "Notebook", screenshots: ["https://getbb.app/marketplace/v1/screenshots/full/a.png"], overview: "Old.\n" }],
   ]);
   const missingCategory = [{ reason: "missing-category", detail: "package.json has no bbMarketplace.category." }];
   const bare = candidate("npm:bare", "bare", { owner: "o", source: { npm: { package: "bare", range: ">=1.0.0" } } });
   delete bare.entry.category;
   bare.warnings = missingCategory;
+  bare.defaultIcon = true;
   const full = candidate("npm:full", "full", { owner: "o", source: { npm: { package: "full", range: ">=1.0.0" } } });
   full.entry = { ...full.entry, screenshots: [`${ASSET_URL_BASE}/${"b".repeat(32)}.png`], overview: "New.\n" };
   const loose = candidate("npm:loose", "loose", { source: { npm: { package: "loose", range: ">=1.0.0" } } });
   delete loose.entry.category;
   loose.warnings = missingCategory;
+  loose.defaultIcon = true;
   const result = resolve([bare, full, loose], { legacy, legacyListings });
   const byId = new Map(result.plugins.map((entry) => [entry.id, entry]));
 
@@ -481,19 +486,22 @@ test("a replacing entry keeps legacy category, screenshots, and overview it does
   assert.deepEqual(byId.get("bare").secondaryCategories, ["thread-content"]);
   assert.deepEqual(byId.get("bare").screenshots, ["https://getbb.app/marketplace/v1/screenshots/bare/a.png"]);
   assert.equal(byId.get("bare").overview, "Old.\n");
-  assert.deepEqual(result.sources["npm:bare"].fromLegacy, ["category", "screenshots", "overview"]);
+  assert.equal(byId.get("bare").icon, "Notebook");
+  assert.deepEqual(result.sources["npm:bare"].fromLegacy, ["category", "icon", "screenshots", "overview"]);
   assert.match(result.sources["npm:bare"].warnings[0].detail, /keeps the category of entries\/bare\.json/);
   assert.deepEqual(Object.keys(byId.get("bare")), ["id", "displayName", "description", "icon", "screenshots", "overview", "author", "category", "secondaryCategories", "source", "publishedAt"]);
 
   // Release fields win as a whole.
   assert.deepEqual(byId.get("full").screenshots, [`${ASSET_URL_BASE}/${"b".repeat(32)}.png`]);
   assert.equal(byId.get("full").overview, "New.\n");
+  assert.equal(byId.get("full").icon, "Puzzle", "a declared icon is the release's, even Puzzle");
   assert.equal(result.sources["npm:full"].fromLegacy, undefined);
   assert.equal(result.sources["npm:full"].warnings, undefined);
 
   // No legacy entry: listed without a category, with a warning.
   assert.equal(result.sources["npm:loose"].status, "listed");
   assert.equal(byId.get("loose").category, undefined);
+  assert.equal(byId.get("loose").icon, "Puzzle", "a new plugin without an icon gets Puzzle");
   assert.match(result.sources["npm:loose"].warnings[0].detail, /The listing has no category\./);
 
   // A release category replaces the legacy secondary categories too.
@@ -559,7 +567,8 @@ test("a crawl lists, skips with reasons, dedupes npm/GitHub, and writes assets",
   assert.deepEqual(replaced.secondaryCategories, ["thread-content"]);
   assert.deepEqual(replaced.screenshots, [LEGACY_SHOT]);
   assert.equal(replaced.overview, "Legacy overview.\n");
-  assert.deepEqual(sources["github:acme/tools/plugins/beta-dir"].fromLegacy, ["category", "screenshots", "overview"]);
+  assert.deepEqual(replaced.icon, { url: LEGACY_ICON });
+  assert.deepEqual(sources["github:acme/tools/plugins/beta-dir"].fromLegacy, ["category", "icon", "screenshots", "overview"]);
   assert.deepEqual(sources["github:acme/tools/plugins/beta-dir"].warnings.map(({ reason }) => reason), ["missing-category"]);
 
   // No category and a bad overview: listed anyway, with warnings.
@@ -567,6 +576,7 @@ test("a crawl lists, skips with reasons, dedupes npm/GitHub, and writes assets",
   assert.equal(sources["github:acme/tools/plugins/alpha"].status, "listed");
   assert.equal(alpha.category, undefined);
   assert.equal(alpha.overview, undefined);
+  assert.equal(alpha.icon, "Puzzle");
   assert.deepEqual(
     sources["github:acme/tools/plugins/alpha"].warnings.map(({ reason }) => reason),
     ["missing-category", "invalid-overview"],
@@ -738,6 +748,7 @@ test("build merges crawled entries into v2 only, with legacy precedence", () => 
     const listings = readLegacyListings(root, legacyFiles);
     let compared = 0;
     for (const id of legacyIds.filter((id) => id !== replacedId)) {
+      assert.deepEqual(listings.get(id).icon, v2ById.get(id).icon, id);
       assert.deepEqual(listings.get(id).screenshots, v2ById.get(id).screenshots, id);
       assert.equal(listings.get(id).overview, v2ById.get(id).overview, id);
       if (v2ById.get(id).screenshots !== undefined) compared += 1;
