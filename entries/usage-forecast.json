@@ -1,14 +1,15 @@
 {
   "id": "usage-forecast",
-  "displayName": "Usage Forecast",
-  "description": "Forecast whether your Claude Code and Codex limits last until reset, and see each thread's context fill above the composer. A band shows every limit window with a pace tick, the context breakdown and a Compact button, and adds a learned forecast once windows have closed. Optional auto-compact, off by default, compacts an idle thread above a threshold you set; each compact runs a turn on the thread's provider and counts against its limits. Limits appear only for providers that report them to bb, today Claude Code and Codex. The server polls bb every 2 minutes and calls no provider API.",
+  "displayName": "Ultimate Usage Widgets",
+  "description": "Your Claude Code and Codex limits wherever you look in bb: in the page header, as rings in the sidebar footer, in a band above the composer and in an optional floating widget, each coloured by whether it lasts to its reset. Shows each thread's context fill with a Compact button. Optional auto-compact, off by default, compacts an idle thread above a threshold you set; each compact runs a turn on the thread's provider and counts against its limits. Limits appear only for providers that report them to bb, today Claude Code and Codex. The server polls bb every 2 minutes and calls no provider API.",
   "icon": {
     "url": "./icons/usage-forecast-372ec0fa.svg"
   },
   "screenshots": [
+    "./screenshots/usage-forecast/overview.png",
     "./screenshots/usage-forecast/band.png",
     "./screenshots/usage-forecast/expanded.png",
-    "./screenshots/usage-forecast/sidebar-card.png",
+    "./screenshots/usage-forecast/cards.png",
     "./screenshots/usage-forecast/context-card.png",
     "./screenshots/usage-forecast/settings.png"
   ],
@@ -20,7 +21,9 @@
     "context",
     "compact",
     "claude-code",
-    "codex"
+    "codex",
+    "widgets",
+    "header"
   ],
   "author": {
     "name": "Alex Ponomar",
