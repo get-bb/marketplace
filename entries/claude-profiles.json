@@ -1,0 +1,13 @@
+{
+  "id": "claude-profiles",
+  "displayName": "Claude Profiles",
+  "description": "Runs each thread on the Claude account you choose: a work account for one project, a personal one for another. Set a default for all projects and one per project, or pick a different account in the new-thread composer. An account can be a Claude config folder, a claude setup-token token or an Anthropic Console API key. Settings shows each login's plan and how much of its 5-hour and weekly limits is used, and flags a revoked login. A running thread can switch accounts and keep its conversation. Requires Claude Code; usage isn't reported for setup-tokens or API keys.",
+  "icon": { "url": "./icons/claude-profiles-25f9fa91.svg" },
+  "tags": ["claude", "claude-code", "accounts", "multi-account", "api-key", "setup-token", "usage-limits"],
+  "author": { "name": "Yasser Rabee", "github": "YasserRabee", "url": "https://github.com/YasserRabee" },
+  "category": "agents-and-providers",
+  "secondaryCategories": ["token-usage-and-limits"],
+  "source": { "git": { "url": "https://github.com/YasserRabee/bb-plugins.git", "subdir": "plugins/claude-profiles", "range": "^0.4.1", "tagPrefix": "claude-profiles/" } },
+  "screenshots": ["./screenshots/claude-profiles/settings.png", "./screenshots/claude-profiles/new-thread-picker.png"],
+  "overview": "./overview/claude-profiles.md"
+}
