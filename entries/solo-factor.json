@@ -1,0 +1,41 @@
+{
+  "id": "solo-factor",
+  "displayName": "Solo Factor",
+  "description": "Run each ticket through plan review, build, code review and ship with independent agents, and get asked only for product decisions. Tickets that would collide share a swimlane and run in order while other lanes run beside them. One inbox holds every decision and every screen change you must try before it ships, with a before and after image. Standing agents plan the work, watch real usage and improve the pipeline, and each role runs on the model you pick. Scripts installed in your repository refuse to ship a commit no review covers and merge one branch at a time on green CI. Needs a Git project and the agent CLIs you choose; merging needs a GitHub remote and the gh CLI, and ticket sync is optional with a Linear API key.",
+  "icon": {
+    "url": "./icons/solo-factor-509cd14f.svg"
+  },
+  "tags": [
+    "multi-agent",
+    "swimlanes",
+    "pipeline",
+    "code-review",
+    "founder-inbox",
+    "orchestration",
+    "worktrees",
+    "linear",
+    "solo-founder",
+    "merge-queue"
+  ],
+  "author": {
+    "name": "Gideon Emmanuel",
+    "github": "gmemmanuel",
+    "url": "https://github.com/gmemmanuel"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "agents-and-providers",
+    "code-and-reviews"
+  ],
+  "screenshots": [
+    "./screenshots/solo-factor/inbox.png",
+    "./screenshots/solo-factor/swimlanes.png"
+  ],
+  "overview": "./overview/solo-factor.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gmemmanuel/solo-factor.git",
+      "range": "^0.3.0"
+    }
+  }
+}
