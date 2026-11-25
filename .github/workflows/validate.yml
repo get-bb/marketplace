@@ -2,6 +2,8 @@ name: Validate
 on:
   pull_request:
     types: [opened, synchronize, reopened, labeled, unlabeled]
+permissions:
+  contents: read
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -10,6 +12,12 @@ jobs:
         with: { fetch-depth: 0 }
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
+      # New entries are no longer accepted by pull request; edits and removals
+      # need the entry's author.github or a maintainer.
+      - name: Check entry changes
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/check-entry-changes.mjs
       - run: npm ci
       - run: npm run build
       - run: npm test
