@@ -2,14 +2,15 @@
   "id": "side-board",
   "displayName": "Side Board",
   "description": "See every question, bug and todo your agent raises in one panel beside the thread, so nothing gets lost in the scroll. Items are numbered Q1, B1, T1: answer in chat with \"Q3 clerk\", or \"go\" to accept every recommendation. Agents add and close items themselves through the board_add and board_close tools, in every thread and with every provider. If a reply asks a question or finishes work without updating the board, the agent gets one reminder; you can turn this off in settings.",
-  "icon": "ListTodo",
+  "icon": { "url": "./icons/side-board-a6ac580e.svg" },
   "tags": ["questions", "todos", "bugs", "side-panel", "decisions", "agent-tools", "checklist", "adhd"],
   "author": {
     "name": "Job de Noo",
     "github": "devnoo",
     "url": "https://github.com/devnoo"
   },
-  "category": "tasks-and-workflows",
+  "category": "thread-content",
+  "secondaryCategories": ["tasks-and-workflows", "agents-and-providers"],
   "source": {
     "git": {
       "url": "https://github.com/devnoo/bb-side-board.git",

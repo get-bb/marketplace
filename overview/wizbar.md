@@ -1,32 +1,40 @@
 ## A sidebar for a fleet of agent threads
 
-WizBar replaces the thread list with three sections, Pinned, Specs and Unread, in the order you choose: drag a section by the grip on its header, or press Alt+Up and Alt+Down with the header focused. Click a header to collapse it; WizBar remembers both the order and what is collapsed. Snoozed and Muted shelves sit below, and Settled is one quiet link at the very bottom.
+WizBar replaces the thread list with sections you order by dragging a header (or Alt+Up and Alt+Down): Pinned, Cloud agents, Specs and Yours. Click a header to collapse it; WizBar remembers the order and what is collapsed. Snoozed and Muted sit below, and Settled is one quiet link at the bottom.
 
-## Unread
+## Yours: nothing gets lost
 
-Unread lists only threads with something new for you (unread, waiting on your input, or marked by the host with an unread result or a failure). A running agent of a spec appears under that spec instead. Without a search, Unread also leaves out fleet wakes, and fleet-loop runs for a repository you have bound; any other loop's run can appear when it has something new, because the host does not mark loop runs. While you search, Unread drops its filter.
+Yours keeps every top-level thread you started, read or not, until you settle, snooze, mute, archive or pin it. Spec agents, fleet wakes and fleet-loop runs for your bound repositories stay out; other loops' runs can appear, because the host does not mark them. A small picker sorts by newest, last activity, status, harness, model or effort, and filters by status and harness; a filter shows `Yours 4 of 19` with one click to clear. Search matches a thread's title and its first prompt, and takes `harness:`, `model:`, `effort:` and `status:` words.
+
+## Cloud agents
+
+Agents that run in their own cloud sandbox, such as Antigravity, are not in the desktop's thread list. WizBar lists them from GitHub: each agent's status note on its ticket, and optionally a fleet's run map. Each row shows the role, repository and ticket, the model in plain words (`Neon · Medium`), its state and last activity, and opens the pull request (or the ticket). The running card counts them apart and says plainly when some cloud agents may be missing.
 
 ## Specs
 
-A rule such as `Specs 24 · 5 tickets need you (3 specs)`, then one row per spec from your factory's specs file, specs with a ticket due now first, then the most recently active. A picker switches to Recently active, Closest to done or Newest, and is remembered. Each ticket is a dot: done, building, in review, needs you, later, held or not started. The dot of a ticket whose agent is working breathes slowly unless the ticket is done or in review; a spec with nothing running and nothing due now shows its name muted. Finished specs, and specs with nothing moving for more than 3 days, fold into a collapsed `Quiet N` group. Open a spec to see its running builders and reviewers with their model and effort.
+One row per spec from your factory's specs file, what needs you first, with a picker for recently active, closest to done or newest. Each ticket is a dot: done, building, in review, needs you, later, held or not started; a ticket whose agent is working breathes slowly. Finished and idle specs fold into `Quiet N`. Open a spec to see its running builders and reviewers with model and effort.
 
-A small producer in the plugin's `tools/specs-producer/` keeps the specs file fresh from GitHub through your `gh` login.
+A small producer in `tools/specs-producer/` keeps the specs and agents files fresh from GitHub through your `gh` login; run it on a timer (the README shows one every 10 minutes). A legacy v1 specs file has no separate later state.
 
-## Cards and running work
+## The running card
 
-Cards show the issue or pull request as a link, a child count with the children on hover, and model and effort in friendly words, such as `Opus 5.5 · High`; a missing model is left out, never guessed. The footer shows "N running", counting threads; hover or focus it for a card of the running threads with their spec and model, which updates in place without flashing. Click to pin it open. Drag a card into Pinned to pin it, out to unpin it, or inside Pinned to reorder it.
+The footer shows "N running"; hover or click it for every running thread, grouped by spec, with awake, starting and asleep counts and a count per harness. The list scrolls inside the card, with a fade where more rows are above or below, so 100 threads fit. Rows with no title read as role and ticket, never the prompt's first words.
+
+## A calmer thread
+
+A Composer footer setting hides the bar under the thread composer on pinned threads or everywhere.
 
 ## Agent-first
 
-`room-cli wizbar` commands settle, snooze, mute, pin and move threads, list a thread's shelf or children, read the running card and the specs, open or close a spec, and collapse or expand a section, each with `--json`. The sort picker, the section order and the Quiet group have no command. The [README](https://github.com/openwizdev/WizPlugins/tree/main/wizbar#readme) lists every command and its exit codes.
+`room-cli wizbar` commands settle, snooze, mute, pin and move threads, list threads with search, sort and filters (`wizbar threads`), list cloud agents (`wizbar agents`), read the running card and the specs, open or close a spec and collapse a section, each with `--json`; `wizbar footer` sets the composer bar option. The [README](https://github.com/openwizdev/WizPlugins/tree/main/wizbar#readme) lists every command.
 
 ## Theme and settings
 
-Every colour is a host theme variable, so WizBar follows your Cloudroom theme. Switches cover the list-bottom count, Cloud/Local row icons and the two thread-header chips. Upgrading from 0.5.0 keeps every setting.
+Every colour is a host theme variable. Upgrading from 0.6.0 keeps every setting; a stored Unread section becomes Yours.
 
 ## What is proven
 
-The behaviour above is covered by WizBar's fixture tests in CI. 0.5.0 was installed from source and run on a real Cloudroom host; 0.6.0 has not been run on a real host yet.
+The behaviour above is covered by fixture tests and Chromium browser tests in CI. 0.7.0 has not been run on a real host yet.
 
 ## Credit
 

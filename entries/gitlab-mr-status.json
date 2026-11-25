@@ -1,0 +1,12 @@
+{
+  "id": "gitlab-mr-status",
+  "displayName": "GitLab MR Status",
+  "description": "Shows the GitLab merge request for each thread's branch, with its pipeline and approvals, right above the composer. Mark the merge request ready, set it back to draft, or merge it with a merge, squash or rebase without leaving bb. Merge request links and !123 references in chat get chips with a hover card showing state, pipeline and branches. Thread rows show a colored !123 badge while you scan the sidebar. Requires the glab CLI, logged in on each machine that runs threads; self-hosted GitLab works.",
+  "icon": { "url": "./icons/gitlab-mr-status-6a57d4a9.svg" },
+  "tags": ["gitlab", "merge-requests", "pipelines", "ci", "glab", "code-review", "self-hosted"],
+  "author": { "name": "Yasser Rabee", "github": "YasserRabee", "url": "https://github.com/YasserRabee" },
+  "category": "code-and-reviews",
+  "source": { "git": { "url": "https://github.com/YasserRabee/bb-plugins.git", "subdir": "plugins/gitlab-mr-status", "range": "^0.2.1", "tagPrefix": "gitlab-mr-status/" } },
+  "screenshots": ["./screenshots/gitlab-mr-status/status-bar.png", "./screenshots/gitlab-mr-status/chat-chip-hover.png"],
+  "overview": "./overview/gitlab-mr-status.md"
+}

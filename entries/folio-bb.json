@@ -1,0 +1,37 @@
+{
+  "id": "folio-bb",
+  "displayName": "Folio BB",
+  "description": "Shows at a glance which threads work, wait for you, failed or finished, even in collapsed project folders. Each row keeps the icon of its AI with a status dot on its corner, and every folder shows a rollup left of its count. Project folders become cards with a sticky header; threads sort by their latest turn, and each card shows its 5 freshest threads behind Show N more. The folder of the open thread is outlined, and colors follow the active bb theme in light and dark mode. Requires the Thread Tree plugin.",
+  "icon": "PanelLeft",
+  "screenshots": [
+    "./screenshots/folio-bb/cover.png",
+    "./screenshots/folio-bb/overview-dark.png",
+    "./screenshots/folio-bb/themes.png"
+  ],
+  "overview": "./overview/folio-bb.md",
+  "tags": [
+    "sidebar",
+    "projects",
+    "status",
+    "cards",
+    "sort",
+    "activity",
+    "provider-icons",
+    "thread-tree",
+    "light-mode"
+  ],
+  "author": {
+    "name": "xaibu9",
+    "github": "xaibu9"
+  },
+  "category": "themes-and-appearance",
+  "secondaryCategories": [
+    "thread-management"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/xaibu9/bb-plugin-folio.git",
+      "range": "^0.1.0"
+    }
+  }
+}

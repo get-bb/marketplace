@@ -1,0 +1,13 @@
+{
+  "id": "checklist",
+  "displayName": "Checklist",
+  "description": "Shows the agent's plan as a live checklist on every thread, so you can see how far a long task has got at a glance. The agent writes and ticks off the list with a todo_write tool that works with Claude Code, Codex and Pi. The list stays pinned above the input box with the current step and the next three, and a Checklist tab holds the rest. Each thread row in the sidebar shows a 3/5 progress badge. After its context is compacted, the agent is reminded of its open items.",
+  "icon": "ListTodo",
+  "tags": ["checklist", "todo", "todo-write", "progress", "planning", "agent-tasks"],
+  "author": { "name": "Yasser Rabee", "github": "YasserRabee", "url": "https://github.com/YasserRabee" },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": ["thread-content"],
+  "source": { "git": { "url": "https://github.com/YasserRabee/bb-plugins.git", "subdir": "plugins/checklist", "range": "^0.3.1", "tagPrefix": "checklist/" } },
+  "screenshots": ["./screenshots/checklist/checklist-banner.png"],
+  "overview": "./overview/checklist.md"
+}

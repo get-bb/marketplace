@@ -22,6 +22,7 @@
   },
   "category": "thread-content",
   "screenshots": [
+    "./screenshots/open-tts/player.png",
     "./screenshots/open-tts/settings.png"
   ],
   "overview": "./overview/open-tts.md",
