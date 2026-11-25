@@ -1,0 +1,16 @@
+{
+  "id": "starship-console",
+  "displayName": "Starship Console",
+  "description": "Turn BB into a retro starship control console, with elbow frames, pill buttons and a faded ship schematic. Pick from three palettes: orange Bridge, blue Science and purple Lounge, each in light and dark. Every text colour passes WCAG AA contrast. The themes are CSS only, with no settings, commands or network access. Requires BB 0.49 or later.",
+  "icon": { "url": "./icons/starship-console-975f2a25.svg" },
+  "screenshots": [
+    "./screenshots/starship-console/bridge-dark.jpg",
+    "./screenshots/starship-console/science-light.jpg",
+    "./screenshots/starship-console/lounge-dark.jpg"
+  ],
+  "overview": "./overview/starship-console.md",
+  "tags": ["sci-fi", "retro", "dark-theme", "light-theme", "console", "palettes", "frames", "orange", "blue", "purple"],
+  "author": { "name": "Jason Deland", "github": "jaydeland", "url": "https://github.com/jaydeland" },
+  "category": "themes-and-appearance",
+  "source": { "git": { "url": "https://github.com/jaydeland/bb-plugin-starship-console.git", "range": ">=0.1.0" } }
+}
