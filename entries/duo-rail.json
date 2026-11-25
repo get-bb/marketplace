@@ -11,6 +11,13 @@
   },
   "category": "themes-and-appearance",
   "secondaryCategories": ["thread-management"],
+  "screenshots": [
+    "./screenshots/duo-rail/cover-light.png",
+    "./screenshots/duo-rail/cover-more-light.png",
+    "./screenshots/duo-rail/unfolded-light.png",
+    "./screenshots/duo-rail/unfolded-more-light.png",
+    "./screenshots/duo-rail/editor-commands-light.png"
+  ],
   "overview": "./overview/duo-rail.md",
   "source": {
     "git": {
