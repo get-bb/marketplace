@@ -20,7 +20,9 @@ unknown reasoning discovery is unavailable. Catalog discovery uses the primary
 machine. Each execution host separately validates the selected profile.
 
 The rabbit/turtle switch supports click, tap, swipe and keyboard controls.
-OFF follows BB’s theme; ON is orange. Active work finishes naturally. Later
+OFF follows BB’s theme; ON is orange. The header switch can be hidden in settings;
+the sidebar control and shared tint remain. Setup can be saved on stock BB,
+without enabling execution. Active work finishes naturally. Later
 native turns use Downshift; turning it off restores each thread’s original model,
 reasoning and inherited settings. Other providers keep their settings. Native
 restore readers survive plugin removal.
@@ -54,3 +56,15 @@ Moving from the former Economy plugin requires an explicit OFF, completed
 restoration, uninstall and new Downshift install. Native journals are retained;
 settings and active state are not imported automatically. Follow the migration
 guide in the repository before changing plugin identity.
+
+## Manual OFF and storage recovery
+
+If suppression storage fails during ON → OFF, profiles are restored and auto
+stays paused across reloads. Missing or mismatched manual checkpoints also pause
+auto. Storage repair or quota recovery cannot resume it; manually turn Downshift
+ON when ready. An older OFF policy without a checkpoint needs that explicit step.
+
+Repeated OFF may leave the native generation unchanged. If suppression cannot
+be saved and a durable pause cannot be confirmed, that request reports a refusal:
+retry OFF after storage recovers, before reloading. A failed request does not
+confirm a durable pause. The plugin never turns ON just to advance a generation.
