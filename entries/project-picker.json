@@ -1,0 +1,31 @@
+{
+  "id": "project-picker",
+  "displayName": "Project Picker",
+  "description": "Start a new thread in any project from the keyboard with Cmd+N. Type to filter projects by name or path, with your most recently active projects at the top. Press Enter or Cmd+1 to Cmd+9 to open that project's new-thread screen with the prompt focused. BB's own New thread shortcut moves to Cmd+Shift+O while the plugin runs and returns to Cmd+N when you disable it.",
+  "icon": "FolderOpen",
+  "screenshots": [
+    "./screenshots/project-picker/picker.png",
+    "./screenshots/project-picker/new-thread.png"
+  ],
+  "overview": "./overview/project-picker.md",
+  "tags": [
+    "keyboard-shortcuts",
+    "projects",
+    "new-thread",
+    "quick-switcher",
+    "command-palette",
+    "navigation"
+  ],
+  "author": {
+    "name": "Jonathan M.",
+    "github": "Jonathanm10",
+    "url": "https://github.com/Jonathanm10"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/Jonathanm10/bb-plugin-project-picker.git",
+      "range": "^0.1.0"
+    }
+  }
+}
