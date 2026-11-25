@@ -1,0 +1,35 @@
+{
+  "id": "agent-inbox",
+  "displayName": "Agent Inbox",
+  "description": "Puts every agent thread that needs you in one tab: questions to answer, failed runs, and finished work to verify. Each finished thread shows its diffstat and pull request checks, and Verify clears it on every device you use bb on. Later hides a thread until it has something new, and threads still working collapse into one running count. A plain rule spots turns that end with a question; you can pick a model you already use to read each turn instead, which spends tokens on that provider. Replaces bb's thread list and keeps the full tree in a Threads tab.",
+  "icon": "ListView",
+  "tags": [
+    "inbox",
+    "triage",
+    "sidebar",
+    "attention",
+    "verify",
+    "approvals",
+    "questions",
+    "thread-list",
+    "review",
+    "agents"
+  ],
+  "author": {
+    "name": "Kavii Suri",
+    "github": "KaviiSuri"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/agent-inbox/inbox.jpg",
+    "./screenshots/agent-inbox/verify.jpg",
+    "./screenshots/agent-inbox/classifier-settings.jpg"
+  ],
+  "overview": "./overview/agent-inbox.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/KaviiSuri/bb-plugin-inbox.git",
+      "range": "^0.1.0"
+    }
+  }
+}
