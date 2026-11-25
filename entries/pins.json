@@ -1,0 +1,21 @@
+{
+  "id": "pins",
+  "displayName": "Pins",
+  "description": "Keeps the messages you need in a bar at the top of the thread, so you stop scrolling back to find them. Pin a whole message or just the text you select, then find every pin from every thread on one Pins page in the sidebar. Pins keep their own copy of the text, so they stay readable after a thread is deleted. Runs locally, with no account or API key.",
+  "icon": { "url": "./icons/pins-a68e85d3.svg" },
+  "tags": ["pins", "bookmarks", "messages", "navigation", "thread", "search"],
+  "author": {
+    "name": "yazydzhi",
+    "github": "yazydzhi",
+    "url": "https://github.com/yazydzhi"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/yazydzhi/bb-plugin-pins.git",
+      "range": "^0.2.0"
+    }
+  },
+  "overview": "./overview/pins.md",
+  "screenshots": ["./screenshots/pins/thread-bar.jpg", "./screenshots/pins/pins-page.jpg"]
+}
