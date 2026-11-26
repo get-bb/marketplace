@@ -1,16 +1,13 @@
 {
   "id": "antigravity-cli",
   "displayName": "Antigravity CLI [Experimental]",
-  "description": "Plan and code with Google Antigravity inside BB. Choose your model and reasoning level, and review tool requests in your thread. Check quota and reset times in BB. You need the standalone Antigravity CLI and an eligible account. Antigravity quota or charges apply. Tested on Windows.",
+  "description": "Code with your Antigravity account inside BB. Choose CLI-discovered models, switch between Plan and Build, and review tool requests in your thread. Requires a separately installed Antigravity CLI and an eligible account; service quota or charges apply. Tested locally on Windows.",
   "icon": {
     "url": "./icons/antigravity-cli-4632eabe.svg"
   },
   "tags": [
-    "antigravity",
     "acp",
     "cli",
-    "gemini",
-    "claude",
     "planning"
   ],
   "category": "agents-and-providers",
