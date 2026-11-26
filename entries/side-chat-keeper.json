@@ -1,0 +1,38 @@
+{
+  "id": "side-chat-keeper",
+  "displayName": "Side Chat Keeper",
+  "description": "Reopen any side chat after its tab closes, and move it into the thread list when it outgrows the side panel. A Side chats tab in each thread lists every side chat grouped by the message it replies to, and a chip under each message opens that message's chats in one click. Move a chat to the thread list as a standalone thread or under its source thread, from a menu or by dragging it onto the sidebar, and send it back to the panel later. Archive, restore, and delete chats from any row, search side chats across all projects on a Side chats page, and let agents do the same through the `bb side-chat-keeper` command. Works with BB's bundled Side chat plugin and needs BB 0.49 or later.",
+  "icon": {
+    "url": "./icons/side-chat-keeper-89597f44.svg"
+  },
+  "tags": [
+    "side-chats",
+    "side-chat",
+    "forks",
+    "replies",
+    "reopen",
+    "promote",
+    "archive",
+    "drag-and-drop",
+    "panel",
+    "cli"
+  ],
+  "author": {
+    "name": "Artur Karapetyan",
+    "github": "architawr",
+    "url": "https://github.com/architawr"
+  },
+  "category": "thread-management",
+  "screenshots": [
+    "./screenshots/side-chat-keeper/side-chats-panel.png",
+    "./screenshots/side-chat-keeper/message-chip.png",
+    "./screenshots/side-chat-keeper/side-chats-page.png"
+  ],
+  "overview": "./overview/side-chat-keeper.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/architawr/bb-plugin-side-chat-keeper.git",
+      "range": "^0.1.1"
+    }
+  }
+}
