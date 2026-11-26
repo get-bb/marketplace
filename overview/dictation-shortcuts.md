@@ -1,8 +1,10 @@
 ## Dictate from the keyboard
 
 - Hold **Space** in the chat editor for 300 ms to start recording. Release it to transcribe into the draft. A short tap still types a space.
+- Press **Enter** while still holding Space to finish, transcribe and send the message right away.
 - Press **Enter** during recording to finish and add the transcript to the draft. Release the key and press Enter again to send.
 - Press **Escape** to cancel recording or transcription.
+- Optional: turn on **Enter during transcription sends** in the plugin's settings. Then pressing **Enter** while the transcription spinner is showing sends the message as soon as the text arrives. It is off by default.
 - Use **Ctrl+Shift+Space** to toggle recording without holding a key. Rebind this command in Settings → Keyboard.
 
 ## Hints where you need them
@@ -21,4 +23,4 @@ This is whole-recording transcription, not streaming recognition. Text appears a
 
 Requires BB 0.46.1 or later, Plugin SDK 0.6.49 or later, a keyboard, microphone access and an available voice-input service in Settings → AI services. Tested on BB 0.46.1 on macOS.
 
-This version uses BB's native composer markup because its public composer API does not expose recorder controls. A BB update or a replacement composer may require an adapter update. Missing or ambiguous recorder buttons cause no action; the plugin never substitutes the Send button.
+This version uses BB's native composer markup because its public composer API does not expose recorder controls. A BB update or a replacement composer may require an adapter update. Missing or ambiguous recorder buttons cause no action; the plugin never substitutes the composer Send button. Only Enter while holding Space uses BB's own voice-send control.
