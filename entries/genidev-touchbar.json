@@ -1,0 +1,36 @@
+{
+  "id": "genidev-touchbar",
+  "displayName": "Notch Bar",
+  "description": "A strip around the MacBook camera notch that shows your agents' plans at a glance: projects in work and tasks done out of planned. Hover it for a panel with each thread's current task, a task track and thread icons. Needs a MacBook with a notch and a small companion app that the plugin builds and installs.",
+  "icon": "ChartPie",
+  "category": "tasks-and-workflows",
+  "tags": [
+    "notch",
+    "macos",
+    "menu-bar",
+    "plan",
+    "progress",
+    "agents",
+    "tickets",
+    "task-tracking",
+    "status"
+  ],
+  "author": {
+    "name": "genidev",
+    "github": "gguzhov",
+    "url": "https://github.com/gguzhov"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/gguzhov/bb-plugins.git",
+      "subdir": "plugins/genidev-touchbar",
+      "range": "^0.2.0",
+      "tagPrefix": "genidev-touchbar/"
+    }
+  },
+  "overview": "./overview/genidev-touchbar.md",
+  "screenshots": [
+    "./screenshots/genidev-touchbar/notch-bar-panel.png",
+    "./screenshots/genidev-touchbar/notch-bar-strip.png"
+  ]
+}
