@@ -1,0 +1,42 @@
+{
+  "id": "paper-trail",
+  "displayName": "Paper Trail",
+  "description": "A private, evidence-backed record of your engineering work: a contribution graph of rated days with every claim linked to its source. Hidden agent threads read your own connectors (calendar, meeting notes, Jira and Confluence, GitHub, Slack, notes) for each finished workday, and a tool-less job rates it against your role. Setup is a name, an email and a role card; the agent infers the rest. A Monday scan writes the week's intent and a Friday judgment marks each commitment, so plans are tracked as well as results. Time split, guardrails, long-running threads, an invisible-work radar and review packets help you prepare for a performance review from evidence. The plugin holds no credentials, and data stays in the bb server's plugin database.",
+  "icon": {
+    "url": "./icons/paper-trail-5f42a715.svg"
+  },
+  "screenshots": [
+    "./screenshots/paper-trail/1-graph.png",
+    "./screenshots/paper-trail/2-week.png",
+    "./screenshots/paper-trail/3-review.png",
+    "./screenshots/paper-trail/4-threads.png"
+  ],
+  "tags": [
+    "performance-review",
+    "work-log",
+    "contribution-graph",
+    "evidence",
+    "weekly-review",
+    "planning",
+    "jira",
+    "github",
+    "slack",
+    "privacy"
+  ],
+  "author": {
+    "name": "vanZeben",
+    "github": "vanZeben",
+    "url": "https://github.com/vanZeben"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "memory-and-context"
+  ],
+  "overview": "./overview/paper-trail.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/vanZeben/bb-paper-trail.git",
+      "range": ">=0.1.0 <1.0.0"
+    }
+  }
+}
