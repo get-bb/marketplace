@@ -1,0 +1,34 @@
+{
+  "id": "claude-code-mode",
+  "displayName": "Claude Code Mode",
+  "description": "Start chosen Claude Code threads in Code Mode, where Claude writes scripts that call tools and filter their output. A sticky composer button opts in the threads you send from the app, and the bb claude-code-mode spawn command does it for agents and scripts. A badge above the composer marks a Code Mode thread, and resumed sessions keep the mode. Needs Claude Code CLI 2.1.323 or later, a 5.5 or Fable 5.2 model and macOS or Linux; the mode is experimental, lacks Claude in Chrome, computer use and Remote Control, and the plugin routes every Claude Code launch on the bb server's machine through its wrapper script.",
+  "icon": {
+    "url": "./icons/claude-code-mode-5799d013.svg"
+  },
+  "tags": [
+    "claude-code",
+    "code-mode",
+    "experimental",
+    "composer",
+    "per-thread",
+    "opus",
+    "sonnet"
+  ],
+  "author": {
+    "name": "JonniK",
+    "github": "JonniK",
+    "url": "https://github.com/JonniK"
+  },
+  "category": "agents-and-providers",
+  "overview": "./overview/claude-code-mode.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/jonnik-bb-plugins/bb-plugin-claude-code-mode.git",
+      "range": "^0.1.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/claude-code-mode/toolbar-toggle.png",
+    "./screenshots/claude-code-mode/thread-banner.png"
+  ]
+}
