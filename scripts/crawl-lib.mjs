@@ -520,6 +520,20 @@ export function readTarball(gzipped, { maxBytes = 64 * 1024 * 1024 } = {}) {
   return files;
 }
 
+/**
+ * A fingerprint of a repository's tags (`git/matching-refs/tags` refs): each
+ * tag name with the object it points at. Equal fingerprints mean nothing a
+ * release depends on has changed. GitHub ETags cannot tell this across runs:
+ * they depend on the token, and Actions gets a new GITHUB_TOKEN every run.
+ */
+export function tagsFingerprint(refs) {
+  const lines = (Array.isArray(refs) ? refs : [])
+    .filter((ref) => typeof ref?.ref === "string")
+    .map((ref) => `${ref.ref} ${ref.object?.sha ?? ""}`)
+    .sort();
+  return createHash("sha256").update(lines.join("\n")).digest("hex").slice(0, 32);
+}
+
 /** github.com/Owner/Repo(.git) → owner/repo, lowercased, for comparisons. */
 export function normalizeGitUrl(url) {
   if (typeof url !== "string") return undefined;
