@@ -1,0 +1,29 @@
+{
+  "id": "quota-reset",
+  "displayName": "Quota Reset [Experimental]",
+  "description": "Gets a usage-limited Codex thread running again by spending a reset credit you already have, only on threads you authorize. When an authorized thread hits a rate limit, it redeems one reset, checks that the limit lifted, and retries the failed turn. You set the thread IDs, the exact account email, how close natural recovery must be, a total reset budget and an expiry; it starts disabled. `bb quota-reset inspect` reads your reset credits without spending them, and `bb quota-reset status` shows the policy and decision journal. Experimental: needs the Codex CLI on the BB server host, signed in to an existing ChatGPT account that has reset credits; pooled accounts and remote hosts are not supported.",
+  "icon": "RefreshCw",
+  "tags": [
+    "codex",
+    "chatgpt",
+    "quota",
+    "rate-limit",
+    "usage-limit",
+    "reset",
+    "retry",
+    "automation"
+  ],
+  "author": {
+    "name": "Artur Karapetyan",
+    "github": "architawr",
+    "url": "https://github.com/architawr"
+  },
+  "category": "token-usage-and-limits",
+  "overview": "./overview/quota-reset.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/architawr/bb-plugin-quota-reset.git",
+      "range": "^0.1.0"
+    }
+  }
+}
