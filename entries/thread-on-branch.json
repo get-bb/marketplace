@@ -1,0 +1,30 @@
+{
+  "id": "thread-on-branch",
+  "displayName": "Thread On Branch",
+  "description": "Right-click any thread and pick \"New thread on <branch>\" to start another thread on the same branch. It opens the new-thread screen with that thread's project and environment already selected and the prompt focused. The item is in every thread menu, and you can pin it as a row quick action.",
+  "icon": "GitBranch",
+  "screenshots": [
+    "./screenshots/thread-on-branch/menu.png",
+    "./screenshots/thread-on-branch/new-thread.png"
+  ],
+  "overview": "./overview/thread-on-branch.md",
+  "tags": [
+    "branches",
+    "worktrees",
+    "new-thread",
+    "context-menu",
+    "git"
+  ],
+  "author": {
+    "name": "Jonathan M.",
+    "github": "Jonathanm10",
+    "url": "https://github.com/Jonathanm10"
+  },
+  "category": "thread-management",
+  "source": {
+    "git": {
+      "url": "https://github.com/Jonathanm10/bb-plugin-thread-on-branch.git",
+      "range": "^0.1.0"
+    }
+  }
+}
