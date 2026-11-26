@@ -1,27 +1,27 @@
 {
   "id": "antigravity-plus",
   "displayName": "Antigravity Provider +",
-  "description": "Turn Antigravity CLI into a native BB provider with persistent instructions, tip forking, /compact, and a live /swarm board. Go beyond bare ACP chat with low-through-max reasoning, readable command cards with sandbox-escape prompts, live background task banners, and one worker process per thread. Track 5-hour and 7-day per-model quota windows in BB, verify sign-in and CLI updates without spending tokens, and browse antigravity-prefixed builtin skills. Requires Antigravity CLI 1.5.0+ (1.5.14+ for /compact) and a signed-in Google account on the host; verified on macOS, Linux, and Windows.",
+  "description": "Use Antigravity CLI in BB with built-in 5h/7d quotas, thread forking, /compact, per-model reasoning, and a live /swarm board. Uses your existing agy login with no extra API keys. Requires agy 1.5.0+ (1.5.14+ for /compact). Verified on macOS, Linux, and Windows.",
   "icon": {
     "url": "./icons/antigravity-plus-be3178dd.svg"
   },
   "screenshots": [
-    "./screenshots/antigravity-plus/swarm-board.png",
-    "./screenshots/antigravity-plus/model-picker.png",
+    "./screenshots/antigravity-plus/thread-workflow.png",
     "./screenshots/antigravity-plus/usage.png",
+    "./screenshots/antigravity-plus/swarm-board.png",
     "./screenshots/antigravity-plus/settings.png"
   ],
   "tags": [
-    "acp",
+    "antigravity",
     "agy",
-    "cli",
+    "gemini",
+    "quota",
+    "usage",
+    "reasoning",
+    "swarm",
     "compact",
     "fork",
-    "gemini",
-    "google",
-    "quota",
-    "reasoning",
-    "swarm"
+    "acp"
   ],
   "category": "agents-and-providers",
   "secondaryCategories": [
