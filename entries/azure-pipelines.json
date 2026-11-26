@@ -1,0 +1,29 @@
+{
+  "id": "azure-pipelines",
+  "displayName": "Azure Pipelines",
+  "description": "Track Azure DevOps pipelines, active builds, and live stage progress from your thread side panel. Browse every pipeline by folder, pick defaults so your main builds stay on top, and drill into any run to watch stages update automatically. Run bb azure-pipelines status in the terminal or an agent thread for the same live summary. Requires an Azure DevOps account on dev.azure.com or visualstudio.com with Azure CLI sign-in (az login) or a Build (Read) personal access token.",
+  "icon": {
+    "url": "./icons/azure-pipelines-4a19d64b.svg"
+  },
+  "overview": "./overview/azure-pipelines.md",
+  "tags": [
+    "azure-devops",
+    "ado",
+    "ci-cd",
+    "builds",
+    "deployments",
+    "stages"
+  ],
+  "author": {
+    "name": "aipdv",
+    "github": "aipdv",
+    "url": "https://github.com/aipdv"
+  },
+  "category": "code-and-reviews",
+  "source": {
+    "git": {
+      "url": "https://github.com/aipdv/bb-plugin-azure-pipelines.git",
+      "range": "^0.1.1"
+    }
+  }
+}
