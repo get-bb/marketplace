@@ -35,7 +35,7 @@
     "git": {
       "url": "https://github.com/euanguo/euanguo-plugins.git",
       "subdir": "plugins/harbor",
-      "range": "^0.1.0",
+      "range": "^0.1.1",
       "tagPrefix": "harbor/"
     }
   },
