@@ -25,9 +25,12 @@
     "code-and-reviews"
   ],
   "screenshots": [
-    "./screenshots/openui/dashboard.png",
+    "./screenshots/openui/hero.png",
     "./screenshots/openui/decision.png",
-    "./screenshots/openui/tests.png"
+    "./screenshots/openui/planning.png",
+    "./screenshots/openui/reports.png",
+    "./screenshots/openui/code.png",
+    "./screenshots/openui/dashboard.png"
   ],
   "overview": "./overview/openui.md",
   "source": {
