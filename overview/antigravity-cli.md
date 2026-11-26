@@ -1,17 +1,21 @@
-## What you get
+## Models and reasoning
 
-Use your Antigravity CLI sign-in to work inside BB. Choose models discovered from the CLI, read streamed replies, and review tool approval requests in your thread. Choose Build or Plan in the Mode selector, and show or hide the provider in the plugin settings.
+The model picker uses the choices available to your Antigravity account and CLI version. Examples include Gemini 4 Hydrogen, Orchestrator with a Neon, Carbon, or Argon planner, Claude Opus 5.5, and Claude Sonnet 5.5. The reasoning options depend on the model and plugin version. [Antigravity model guide](https://antigravity.google/docs/models)
 
-BB can list native personal and workspace Antigravity skills, show live background command and agent indicators above the composer and in the sidebar, render rich tool cards (with `toolSummary` descriptions, exit codes, and **Outside of sandbox** badges), optionally redirect subagent delegation to BB threads, and display per-model-group quota windows (`Gemini`, `Claude/GPT`, `Argon`) in BB's usage sidebar and settings. A separate setting requests the CLI terminal sandbox for new threads; off inherits CLI settings.
+## Work in BB
+
+- Choose **Plan** to outline a task or **Build** to implement it. Plan mode does not enforce read-only access.
+- Read replies as they arrive and see background commands and agents while they run. Tool cards can show command descriptions, exit codes, and requests to run outside the sandbox.
+- View quota used and reset times by model group in the usage sidebar or **Settings → Usage limits** when the CLI reports them.
+- Use the BB skills picker to find personal and workspace Antigravity skills.
+- In plugin settings, show or hide the provider, request the CLI terminal sandbox for new threads, or disable native subagents to delegate through BB threads.
 
 ## Permissions and sandbox
 
-Accept edits uses the CLI's native editing mode and forwards remaining ACP approval requests to BB by default. The automatic approval setting can approve those requests, including commands outside the sandbox. Full access automatically approves ACP permission requests, potentially including requests to execute outside the terminal sandbox. Plan is agent behavior, not enforced read-only access.
-
-The plugin inherits the CLI's sandbox configuration. Sandbox availability depends on your operating system and CLI version. See the [Antigravity sandbox documentation](https://antigravity.google/docs/sandbox/?tab=cli).
+With **Accept edits**, the CLI applies its native editing permissions. By default, remaining ACP permission requests appear in BB for review. In this mode, the optional automatic approval setting approves requests, including commands outside the sandbox if host policy permits them. **Full access** automatically approves ACP permission requests, including requests to run commands outside the sandbox. The plugin uses the CLI's sandbox settings by default. Sandbox availability depends on the host OS and CLI version.
 
 ## Requirements
 
-Requires BB 0.48+, Node.js 22+, a separately installed Antigravity CLI with `agy acp` available on the agent host, and an eligible signed-in account. Provider quota or charges apply. The desktop application alone is insufficient; remote hosts need their own CLI installation and sign-in.
+You need BB 0.48 or later, Node.js 22 or later, and the standalone Antigravity CLI with `agy acp` available on the agent host. Sign in to an eligible Antigravity account on that host, including when you run the agent remotely. Antigravity quota or charges apply. This experimental provider has been tested locally on Windows. macOS and Linux still need validation.
 
-Windows has been tested locally; macOS and Linux need validation. Automatic CLI installation, forks, and manual compaction are not supported.
+See the [setup instructions](https://github.com/ols-md/bb-plugin-antigravity#getting-started) for installation and sign-in.
