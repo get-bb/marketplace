@@ -1,0 +1,33 @@
+{
+  "id": "russian",
+  "displayName": "Russian",
+  "description": "Читайте пояснения BB по-русски, сохраняя оригинальные названия плагинов, моделей и команд. Новые описания и подсказки переводятся автоматически через публичный неофициальный Google Translate и сохраняются в кеше. Переписка, код, терминалы и значения полей исключены; перевод можно отключить с возвратом оригиналов. Для новых переводов нужен интернет, API-ключ и платная подписка не требуются; неизвестные короткие названия сохраняются.",
+  "icon": {
+    "url": "./icons/russian-59b278fb.svg"
+  },
+  "tags": [
+    "russian-language",
+    "localization",
+    "translation",
+    "interface",
+    "tooltips",
+    "accessibility"
+  ],
+  "author": {
+    "name": "Vitalli Fotich",
+    "github": "g94590",
+    "url": "https://github.com/g94590"
+  },
+  "category": "themes-and-appearance",
+  "source": {
+    "git": {
+      "url": "https://github.com/g94590/bb-plugin-russian.git",
+      "range": "^0.2.0"
+    }
+  },
+  "screenshots": [
+    "./screenshots/russian/interface.jpg",
+    "./screenshots/russian/settings.jpg"
+  ],
+  "overview": "./overview/russian.md"
+}
