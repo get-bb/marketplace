@@ -26,7 +26,7 @@
   "source": {
     "git": {
       "url": "https://github.com/beaverbeard/bb-plugin-downshift.git",
-      "ref": "v0.1.0-rc.6"
+      "ref": "v0.1.0-rc.7"
     }
   }
 }
