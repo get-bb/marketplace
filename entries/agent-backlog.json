@@ -1,0 +1,38 @@
+{
+  "id": "agent-backlog",
+  "displayName": "Agent Backlog",
+  "description": "Turn your task backlog into a five-lane board where BB agents pick up work in their own threads and surface only what needs your call. Assign tasks to any connected provider and model using priority, tag, or keyword rules, or turn on autopilot to start queued work on a schedule. Agents report progress on the card, ask questions with answer buttons and deadlines, call a second agent for review, wait on other tasks or timestamps, and close tasks with a summary and evidence. Tasks live in a local SQLite database out of the box, with an optional external HTTP Backlog API backend; requires bb 0.50 or later and at least one configured agent provider.",
+  "icon": "Columns2",
+  "tags": [
+    "kanban",
+    "tasks",
+    "board",
+    "sqlite",
+    "autopilot",
+    "routing",
+    "delegation",
+    "queue",
+    "workflow"
+  ],
+  "author": {
+    "name": "nikushiks",
+    "github": "nikushiks",
+    "url": "https://github.com/nikushiks"
+  },
+  "category": "tasks-and-workflows",
+  "secondaryCategories": [
+    "agents-and-providers"
+  ],
+  "screenshots": [
+    "./screenshots/agent-backlog/board.png",
+    "./screenshots/agent-backlog/task-panel.png",
+    "./screenshots/agent-backlog/rules-tab.png"
+  ],
+  "overview": "./overview/agent-backlog.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/nikushiks/bb-plugin-agent-backlog.git",
+      "range": "^0.1.0"
+    }
+  }
+}
