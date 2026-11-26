@@ -25,7 +25,7 @@ import {
   tagPrefixesFor,
 } from "../scripts/crawl-lib.mjs";
 import { RateLimitError, createHttp } from "../scripts/crawl-http.mjs";
-import { ASSET_URL_BASE, crawl, readLegacyListings } from "../scripts/crawl.mjs";
+import { ASSET_URL_BASE, crawl, readLegacyListings, summarize } from "../scripts/crawl.mjs";
 import { getIndexFile, rankingDue } from "../scripts/index-cache.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
@@ -618,6 +618,60 @@ test("an unchanged source is not fetched again", async () => {
   assert.ok(conditional.some(({ url }) => url.endsWith("alice/bb-plugin-notes/git/matching-refs/tags")));
   assert.deepEqual(second.result.entries.plugins, first.result.entries.plugins);
   assert.equal(second.result.assets.size, 0, "assets were written by the run that built them");
+  assert.deepEqual(second.calls.filter(({ url }) => url.startsWith("https://raw.githubusercontent.com/")), []);
+  assert.deepEqual(second.result.incremental, {
+    github: { unchanged: 4, changed: 0, noRequest: 1 },
+    npm: { unchanged: 2, changed: 0 },
+  });
+});
+
+test("unchanged tags skip the reads when the ETag no longer matches (a new token)", async () => {
+  const first = await runCrawl(world());
+  // Actions gets a new GITHUB_TOKEN every run, and GitHub ETags depend on
+  // the token, so a stored ETag never matches: every tags call is a 200.
+  const routes = world();
+  for (const [url, route] of Object.entries(routes)) {
+    if (typeof route === "function" && url.includes("/matching-refs/tags")) {
+      routes[url] = (_url, headers) => ({ ...route(_url, {}), headers: { etag: '"other-token"' } });
+    }
+  }
+  const state = JSON.parse(JSON.stringify(first.result.state));
+  const second = await runCrawl(routes, { state });
+  const github = second.calls.filter(({ url }) => url.startsWith("https://api.github.com/"));
+  assert.equal(second.http.stats.apiNotModified, 0);
+  assert.deepEqual(
+    github.map(({ url }) => url.replace("https://api.github.com", "").replace(/\?.*/, "")).sort(),
+    [
+      "/repos/acme/tools/git/matching-refs/tags",
+      "/repos/alice/bb-plugin-notes/git/matching-refs/tags",
+      "/repos/carol/bb-plugin-npm-twin/git/matching-refs/tags",
+      "/repos/mallory/bb-plugin-taken/git/matching-refs/tags",
+      "/search/repositories",
+    ],
+    "one tags request per repository, nothing else",
+  );
+  assert.deepEqual(second.calls.filter(({ url }) => url.startsWith("https://raw.githubusercontent.com/")), []);
+  assert.deepEqual(second.result.entries.plugins, first.result.entries.plugins);
+  assert.deepEqual(second.result.report.sources, first.result.report.sources);
+  assert.equal(second.result.state.github["1"].tagsEtag, '"other-token"', "the new ETag is kept for a stable token");
+  const summary = summarize(second.result, legacyEntries);
+  assert.deepEqual(summary.skippedAsUnchanged, { githubRepositories: 4, npmPackages: 2 });
+  assert.deepEqual(summary.reprocessed, { githubRepositories: 0, npmPackages: 0 });
+
+  // A moved tag (same name, new commit) is a change.
+  routes["https://api.github.com/repos/alice/bb-plugin-notes/git/matching-refs/tags"] = {
+    json: tagRefs(["v0.1.0", "v0.2.0", "v0.3.0-beta.1", "0.9.0"]).map((ref) =>
+      ref.ref === "refs/tags/v0.2.0" ? { ...ref, object: { ...ref.object, sha: "c".repeat(40) } } : ref,
+    ),
+  };
+  const third = await runCrawl(routes, { state: second.result.state });
+  assert.deepEqual(third.result.incremental.github, { unchanged: 3, changed: 1, noRequest: 1 });
+  assert.ok(third.calls.some(({ url }) => url === raw("alice/bb-plugin-notes", "refs/heads/main", ".bb/plugins.json")));
+  assert.ok(
+    third.calls.some(({ url }) => url === raw("alice/bb-plugin-notes", "refs/tags/v0.2.0", "package.json")),
+    "the moved release is read again",
+  );
+  assert.equal(third.result.report.sources["github:alice/bb-plugin-notes"].status, "listed");
 });
 
 test("a new tag reprocesses only that repository", async () => {

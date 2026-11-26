@@ -39,7 +39,7 @@ export function createHttp({
     raw: semaphore(concurrency.raw),
     npm: semaphore(concurrency.npm),
   };
-  const stats = { api: 0, apiNotModified: 0, raw: 0, npm: 0, retries: 0 };
+  const stats = { api: 0, apiNotModified: 0, raw: 0, npm: 0, npmNotModified: 0, retries: 0 };
   let apiBlockedUntil = 0;
 
   async function request(lane, url, { headers = {}, etag, accept } = {}) {
@@ -73,7 +73,8 @@ export function createHttp({
         continue;
       }
       stats[lane] += 1;
-      if (response.status === 304) stats.apiNotModified += lane === "api" ? 1 : 0;
+      if (response.status === 304 && lane === "api") stats.apiNotModified += 1;
+      if (response.status === 304 && lane === "npm") stats.npmNotModified += 1;
 
       const limited =
         response.status === 429 ||

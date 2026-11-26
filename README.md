@@ -216,9 +216,12 @@ The publish workflow runs on each merge to `main`, every 30 minutes, and on dema
 Each run crawls GitHub and npm, then builds and uploads both documents.
 
 - The crawl is incremental.
-  A repository is processed again only when its tags change, and a package only when its `latest` version changes.
+  A repository is processed again only when its tags change (a name or the commit a tag points at), and a package only when its `latest` version changes.
+  An unchanged repository costs one tags request and an unchanged package one packument request; no release files are read.
+  The state compares tag lists, not only ETags, because GitHub ETags depend on the token and Actions gets a new `GITHUB_TOKEN` every run.
+- `summary.json` and the crawl log report `skippedAsUnchanged` and `reprocessed` counts.
 - The crawl state is in the bucket at `index/state.json`, not in Git.
-  It holds ETags, releases, the built entries, and the claims ledger.
+  It holds ETags, tag fingerprints, releases, the built entries, and the claims ledger.
 - A source that fails for a network reason or a rate limit keeps its last listing.
   When the whole crawl fails, the run publishes the entries of the last good crawl.
 - Crawled icons and screenshots are uploaded to `assets/<content hash>.<ext>` and served from `https://getbb.app/marketplace/v1/assets/`.

@@ -16,7 +16,9 @@
 // Environment: GITHUB_TOKEN (needed for a useful API budget).
 //
 // The crawl is incremental. A GitHub repository is processed again only when
-// its tag list changes, an npm package only when `latest` changes. A source
+// its tag list (names and commits) changes, an npm package only when `latest`
+// changes. Unchanged ones cost one request each. ETags alone cannot tell:
+// GitHub ETags depend on the token, and Actions has a new one every run. A source
 // that fails for a reason that says nothing about it (network, rate limit,
 // 5xx) keeps its last good state, so its listing stays.
 import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
@@ -39,6 +41,7 @@ import {
   resolveListings,
   selectRelease,
   tagPrefixesFor,
+  tagsFingerprint,
 } from "./crawl-lib.mjs";
 import { RateLimitError, TransientError, createHttp } from "./crawl-http.mjs";
 import {
@@ -313,7 +316,7 @@ async function tagCommitDate(http, fullName, tag) {
   return date === undefined ? undefined : new Date(date).toISOString();
 }
 
-async function processGithubPlugin({ http, meta, subdir, tagNames, previous, inputs, assets, checkedAt }) {
+async function processGithubPlugin({ http, meta, subdir, tagNames, tagShas = new Map(), previous, inputs, assets, checkedAt }) {
   const suffix = subdir === "" ? "" : `/${subdir}`;
   const base = {
     key: `github:${meta.id}${suffix}`,
@@ -347,13 +350,20 @@ async function processGithubPlugin({ http, meta, subdir, tagNames, previous, inp
     latestTag: release.latest.name,
     earliestTag: release.earliest.name,
   };
+  const latestSha = tagShas.get(release.latest.name);
+  if (latestSha !== undefined) record.latestSha = latestSha;
+  // A tag moved to another commit under the same name is a new release.
+  // (Records from before latestSha was kept match by name.)
   const reusable =
     previous !== undefined &&
     previous.latestTag === record.latestTag &&
+    (previous.latestSha === undefined || previous.latestSha === record.latestSha) &&
     previous.earliestTag === record.earliestTag &&
     previous.prefix === record.prefix &&
     previous.candidate?.label === base.label;
-  if (reusable) return { ...previous, candidate: { ...previous.candidate, checkedAt } };
+  if (reusable) {
+    return { ...previous, ...(latestSha === undefined ? {} : { latestSha }), candidate: { ...previous.candidate, checkedAt } };
+  }
 
   record.publishedAt =
     previous?.earliestTag === record.earliestTag && previous.publishedAt !== undefined
@@ -381,7 +391,27 @@ async function processGithubPlugin({ http, meta, subdir, tagNames, previous, inp
   }
 }
 
-async function processRepo({ http, meta, previous, inputs, assets, checkedAt }) {
+/** The previous record of an unchanged repository, re-dated. */
+function reuseRepoRecord(previous, meta, checkedAt) {
+  return {
+    ...previous,
+    meta,
+    checkedAt,
+    verdict: previous.verdict === undefined ? undefined : { ...previous.verdict, checkedAt },
+    plugins: Object.fromEntries(
+      Object.entries(previous.plugins ?? {}).map(([subdir, plugin]) => [
+        subdir,
+        { ...plugin, candidate: { ...plugin.candidate, checkedAt } },
+      ]),
+    ),
+  };
+}
+
+/**
+ * One repository. `counts.github` gets `noRequest` (fork or archived),
+ * `unchanged` (one tags request, nothing read), or `changed`.
+ */
+async function processRepo({ http, meta, previous, inputs, assets, checkedAt, counts = newCounts() }) {
   const record = {
     meta,
     crawlerVersion: CRAWLER_VERSION,
@@ -395,6 +425,7 @@ async function processRepo({ http, meta, previous, inputs, assets, checkedAt }) 
     owner: meta.owner,
     checkedAt,
   };
+  if (meta.fork || meta.archived) counts.github.noRequest += 1;
   if (meta.fork) return { ...record, verdict: { ...repoCandidate, reason: "fork", detail: "Forks are not listed." } };
   if (meta.archived) {
     return { ...record, verdict: { ...repoCandidate, reason: "archived", detail: "Archived repositories are not listed." } };
@@ -406,22 +437,12 @@ async function processRepo({ http, meta, previous, inputs, assets, checkedAt }) 
     etag: comparable ? previous.tagsEtag : undefined,
   });
   if (tags.status === 304 && comparable) {
-    return {
-      ...previous,
-      meta,
-      checkedAt,
-      verdict: previous.verdict === undefined ? undefined : { ...previous.verdict, checkedAt },
-      plugins: Object.fromEntries(
-        Object.entries(previous.plugins ?? {}).map(([subdir, plugin]) => [
-          subdir,
-          { ...plugin, candidate: { ...plugin.candidate, checkedAt } },
-        ]),
-      ),
-    };
+    counts.github.unchanged += 1;
+    return reuseRepoRecord(previous, meta, checkedAt);
   }
   if (tags.status === 304) {
     // An ETag we cannot use for this record; ask again without it.
-    return processRepo({ http, meta, previous: undefined, inputs, assets, checkedAt });
+    return processRepo({ http, meta, previous: undefined, inputs, assets, checkedAt, counts });
   }
   if (tags.status === 409 || tags.status === 404) {
     // An empty repository has no tags.
@@ -430,9 +451,21 @@ async function processRepo({ http, meta, previous, inputs, assets, checkedAt }) 
     throw new TransientError(`${meta.fullName}: tags returned HTTP ${tags.status}`);
   }
   record.tagsEtag = tags.etag;
+  record.tagsHash = tagsFingerprint(tags.json);
+  if (comparable && previous.tagsHash === record.tagsHash) {
+    // Same tags under a different ETag (a new token): nothing to read.
+    counts.github.unchanged += 1;
+    return { ...reuseRepoRecord(previous, meta, checkedAt), tagsEtag: record.tagsEtag };
+  }
+  counts.github.changed += 1;
   const tagNames = (Array.isArray(tags.json) ? tags.json : [])
     .map((ref) => (typeof ref?.ref === "string" ? ref.ref.replace(/^refs\/tags\//, "") : undefined))
     .filter(Boolean);
+  const tagShas = new Map(
+    (Array.isArray(tags.json) ? tags.json : [])
+      .filter((ref) => typeof ref?.ref === "string" && typeof ref.object?.sha === "string")
+      .map((ref) => [ref.ref.replace(/^refs\/tags\//, ""), ref.object.sha]),
+  );
 
   let subdirs = [""];
   const collection = await http.raw(meta.fullName, `refs/heads/${meta.defaultBranch}`, ".bb/plugins.json");
@@ -440,9 +473,10 @@ async function processRepo({ http, meta, previous, inputs, assets, checkedAt }) 
     try {
       subdirs = parseCollectionManifest(collection.toString("utf8"));
     } catch (error) {
-      // No tagsEtag: the next run reads .bb/plugins.json again, so a fix on
-      // the default branch shows up without a new tag.
+      // No tagsEtag or tagsHash: the next run reads .bb/plugins.json again,
+      // so a fix on the default branch shows up without a new tag.
       delete record.tagsEtag;
+      delete record.tagsHash;
       return { ...record, verdict: skipped(repoCandidate, error) };
     }
   }
@@ -453,6 +487,7 @@ async function processRepo({ http, meta, previous, inputs, assets, checkedAt }) 
       meta,
       subdir,
       tagNames,
+      tagShas,
       previous: comparable ? previous.plugins?.[subdir] : undefined,
       inputs,
       assets,
@@ -466,7 +501,12 @@ function npmPackumentUrl(name) {
   return `${NPM_REGISTRY}/${name.replace("/", "%2f")}`;
 }
 
-async function processNpm({ http, name, previous, inputs, assets, checkedAt }) {
+/**
+ * One npm package. Sets `probe.tarball` when it had to read the release, so
+ * an unchanged package (a 304, or the same `latest`) costs one packument
+ * request.
+ */
+async function processNpm({ http, name, previous, inputs, assets, checkedAt, probe = {} }) {
   const comparable = previous?.crawlerVersion === CRAWLER_VERSION;
   const result = await http.npm(npmPackumentUrl(name), {
     etag: comparable ? previous.etag : undefined,
@@ -474,7 +514,7 @@ async function processNpm({ http, name, previous, inputs, assets, checkedAt }) {
   if (result.status === 304 && comparable) {
     return { ...previous, checkedAt, candidate: { ...previous.candidate, checkedAt } };
   }
-  if (result.status === 304) return processNpm({ http, name, previous: undefined, inputs, assets, checkedAt });
+  if (result.status === 304) return processNpm({ http, name, previous: undefined, inputs, assets, checkedAt, probe });
   if (result.status === 404) return null;
   const packument = result.json;
   const facts = npmVersionFacts(packument);
@@ -509,6 +549,7 @@ async function processNpm({ http, name, previous, inputs, assets, checkedAt }) {
     try {
       const tarballUrl = manifest.dist?.tarball;
       if (typeof tarballUrl !== "string") throw new Skip("no-manifest", "The latest version has no tarball.");
+      probe.tarball = true;
       const tarball = await http.npm(tarballUrl, { bytes: true });
       if (tarball.status !== 200) throw new TransientError(`${tarballUrl}: HTTP ${tarball.status}`);
       let files;
@@ -580,6 +621,7 @@ export async function crawl({
   state.claims ??= {};
   const checkedAt = now.toISOString();
   const assets = new Map();
+  const counts = newCounts();
   const problems = [];
   const keepPrevious = (what, error) => {
     problems.push(`${what}: ${error.message}`);
@@ -619,7 +661,7 @@ export async function crawl({
           return;
         }
       }
-      const record = await processRepo({ http, meta, previous, inputs, assets, checkedAt });
+      const record = await processRepo({ http, meta, previous, inputs, assets, checkedAt, counts });
       if (previous?.repoEtag !== undefined && !github.repos.has(id)) record.repoEtag = previous.repoEtag;
       state.github[id] = record;
     } catch (error) {
@@ -635,7 +677,9 @@ export async function crawl({
     const previous = state.npm[name];
     if (!timeLeft()) return;
     try {
-      const record = await processNpm({ http, name, previous, inputs, assets, checkedAt });
+      const probe = {};
+      const record = await processNpm({ http, name, previous, inputs, assets, checkedAt, probe });
+      if (record !== null) counts.npm[probe.tarball ? "changed" : "unchanged"] += 1;
       if (record === null) delete state.npm[name];
       else state.npm[name] = record;
     } catch (error) {
@@ -669,7 +713,17 @@ export async function crawl({
       npmPackages: npm.names.size,
       npmSearchComplete: npm.complete,
     },
+    incremental: counts,
   };
+}
+
+/**
+ * How much of a crawl was skipped as unchanged. GitHub: `unchanged` cost one
+ * tags request and no reads, `changed` was read again, `noRequest` (fork or
+ * archived) needed no request. npm: `unchanged` cost one packument request.
+ */
+function newCounts() {
+  return { github: { unchanged: 0, changed: 0, noRequest: 0 }, npm: { unchanged: 0, changed: 0 } };
 }
 
 export function summarize(result, legacyEntries) {
@@ -708,6 +762,16 @@ export function summarize(result, legacyEntries) {
     skippedByReason: Object.fromEntries(Object.entries(reasons).sort()),
     warningsByReason: Object.fromEntries(Object.entries(warnings).sort()),
     keptFromLegacy: Object.fromEntries(Object.entries(fromLegacy).sort()),
+    // Repositories and packages whose release was not read again.
+    skippedAsUnchanged: {
+      githubRepositories: result.incremental.github.unchanged,
+      npmPackages: result.incremental.npm.unchanged,
+    },
+    reprocessed: {
+      githubRepositories: result.incremental.github.changed,
+      npmPackages: result.incremental.npm.changed,
+    },
+    forkOrArchivedNoRequest: result.incremental.github.noRequest,
     newAssets: result.assets.size,
     transientProblems: result.problems.length,
   };
