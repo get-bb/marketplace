@@ -1,0 +1,28 @@
+{
+  "id": "code-mode",
+  "displayName": "Code Mode",
+  "description": "Run the Claude Code threads you choose in Claude Code's experimental Code Mode, one thread at a time, with no bb restart. Send in Code Mode and Send without Code Mode in the new-thread composer's Send menu set the mode for that thread. The plugin's settings choose which projects start new Claude Code threads in Code Mode, on which machines, and what threads started by agents and plugins do. The choice is fixed from a thread's first message, so resumes and forks keep it, and a Code Mode thread says so in its thread menu and with a Code badge in the thread list. Requires bb 0.50 or later on macOS or Linux and a model that supports Code Mode, such as Opus 5.5, Sonnet 5.5 or Fable 5.2; it uses bb's experimental plugin APIs and Claude Code's experimental Code Mode, and either can change.",
+  "icon": "Code",
+  "tags": ["claude-code", "code-mode", "experimental", "composer", "send-menu", "per-thread", "per-project", "opus", "sonnet"],
+  "author": {
+    "name": "Gustavo Ambrozio",
+    "github": "gpambrozio",
+    "url": "https://github.com/gpambrozio"
+  },
+  "category": "agents-and-providers",
+  "screenshots": [
+    "./screenshots/code-mode/send-in-code-mode.webp",
+    "./screenshots/code-mode/send-menu-light.png",
+    "./screenshots/code-mode/settings-light.png",
+    "./screenshots/code-mode/thread-menu-light.png"
+  ],
+  "overview": "./overview/code-mode.md",
+  "source": {
+    "git": {
+      "url": "https://github.com/gpambrozio/bb-plugins.git",
+      "subdir": "code-mode",
+      "tagPrefix": "code-mode/",
+      "range": ">=0.1.0"
+    }
+  }
+}
