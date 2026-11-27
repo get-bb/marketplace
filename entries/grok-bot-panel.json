@@ -1,0 +1,38 @@
+{
+  "id": "grok-bot-panel",
+  "displayName": "Grok Bot Panel",
+  "description": "Chat with your Grok Bot from a thread tab, without leaving BB. The roster, recent messages, X post and profile cards, approvals and weekly usage render in the panel, and a draft you send is answered in place. An optional switch lets the Bot push its reply into the BB thread through the desktop app's own command approval. Needs Grok Bot Desktop signed in on the same macOS or Windows machine; the panel reads that session locally instead of storing credentials.",
+  "icon": {
+    "url": "./icons/grok-bot-panel-2829a41c.svg"
+  },
+  "tags": [
+    "grok",
+    "grok-bot",
+    "x",
+    "chat",
+    "chatbots",
+    "macos",
+    "windows",
+    "desktop-app"
+  ],
+  "author": {
+    "name": "GantisStorm",
+    "github": "GantisStorm",
+    "url": "https://github.com/GantisStorm"
+  },
+  "category": "thread-content",
+  "source": {
+    "git": {
+      "url": "https://github.com/GantisStorm/bb-plugin-grok-bot-panel.git",
+      "range": "^0.7.0"
+    }
+  },
+  "overview": "./overview/grok-bot-panel.md",
+  "screenshots": [
+    "./screenshots/grok-bot-panel/chat.png",
+    "./screenshots/grok-bot-panel/picker.png",
+    "./screenshots/grok-bot-panel/approval.png",
+    "./screenshots/grok-bot-panel/usage.png",
+    "./screenshots/grok-bot-panel/attachments.png"
+  ]
+}
