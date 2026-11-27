@@ -1,0 +1,43 @@
+{
+  "id": "harbor",
+  "displayName": "Harbor",
+  "description": "Multi-repo Feature Cockpit & Parallel Workbench for BB: active and parked features with draft-first creation, cross-repo Delivery Matrix, decoupled projects and worktrees with WorkspaceTabStrip, configurable feature row icons, one-click Nest migration, and three-tier agent access.",
+  "icon": {
+    "url": "./icons/harbor-49489ca2.svg"
+  },
+  "screenshots": [
+    "./screenshots/harbor/01-features-cockpit.png",
+    "./screenshots/harbor/02-feature-delivery-matrix.png",
+    "./screenshots/harbor/03-projects-workspaces.png",
+    "./screenshots/harbor/04-harbor-settings.png"
+  ],
+  "tags": [
+    "sidebar",
+    "workspaces",
+    "git-worktree",
+    "multi-repo",
+    "features",
+    "threads",
+    "tabs",
+    "mcp"
+  ],
+  "author": {
+    "name": "Euan Guo",
+    "github": "euanguo",
+    "url": "https://github.com/euanguo"
+  },
+  "category": "thread-management",
+  "secondaryCategories": [
+    "code-and-reviews",
+    "tasks-and-workflows"
+  ],
+  "source": {
+    "git": {
+      "url": "https://github.com/euanguo/euanguo-plugins.git",
+      "subdir": "plugins/harbor",
+      "range": "^0.1.1",
+      "tagPrefix": "harbor/"
+    }
+  },
+  "overview": "./overview/harbor.md"
+}
