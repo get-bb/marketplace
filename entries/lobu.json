@@ -34,6 +34,7 @@
   "overview": "./overview/lobu.md",
   "screenshots": [
     "./screenshots/lobu/new-thread-memory.jpg",
+    "./screenshots/lobu/memory-conflict.jpg",
     "./screenshots/lobu/thread-memory-panel.jpg"
   ]
 }
