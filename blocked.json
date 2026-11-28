@@ -1,6 +1,9 @@
 {
   "$comment": "Sources the crawler never lists (reason \"blocked\"). Maintainers edit this file by pull request. githubRepositoryIds are numeric ids, which survive renames and transfers.",
-  "githubRepositoryIds": [],
+  "githubRepositoryIds": [
+    1362585466,
+    1363779372
+  ],
   "githubOwners": [],
   "npmPackages": []
 }
