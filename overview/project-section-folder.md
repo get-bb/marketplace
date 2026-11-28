@@ -10,6 +10,8 @@ Drag a heading onto the folder, or hover over the folder heading and open its me
 
 Switch to Active to see ongoing work, Input to find threads waiting for you, or Unread to catch up on updates. The filters include threads in collapsed groups and use the same icons, spacing, and thread menu as the All tab.
 
+An underline marks the selected filter. Counts appear when a filter has matching threads.
+
 ## Keep long sections short
 
 Turn on **Enable Load more** in Sidebar Beautifier settings to limit the starting number of threads in custom sections and Threads. Use **Load more** to reveal the next batch or **Show less** to return to the limit. A gray dot beside **Load more** signals that some of the hidden threads are unread. Pinned has its own optional limit. The open thread stays visible, and child threads stay with their parent.
