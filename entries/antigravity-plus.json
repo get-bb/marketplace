@@ -1,7 +1,7 @@
 {
   "id": "antigravity-plus",
   "displayName": "Antigravity Provider +",
-  "description": "Use Antigravity CLI in BB with built-in 5h/7d quotas, thread forking, /compact, per-model reasoning, and a live /swarm board. Uses your existing agy login with no extra API keys. Requires agy 1.5.0+ (1.5.14+ for /compact). Verified on macOS, Linux, and Windows.",
+  "description": "Upgrade BB's Antigravity ACP setup with 5h/7d quotas, Auto, /plan, question cards, forking, /compact, reasoning, and a live /swarm board.",
   "icon": {
     "url": "./icons/antigravity-plus-be3178dd.svg"
   },
