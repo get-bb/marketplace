@@ -1,0 +1,32 @@
+{
+  "id": "terminal-replies",
+  "displayName": "Terminal Replies",
+  "description": "Give Codex and Claude Code replies terminal-style fonts, headings, and colors. Preview each style as you change settings.",
+  "icon": "Terminal",
+  "tags": [
+    "codex",
+    "claude-code",
+    "markdown",
+    "typography",
+    "jetbrains-mono"
+  ],
+  "author": {
+    "name": "Dmitry Leukhin",
+    "github": "d1mka112",
+    "url": "https://github.com/d1mka112"
+  },
+  "source": {
+    "git": {
+      "url": "https://github.com/d1mka112/bb-plugin-terminal-replies.git",
+      "range": "^0.2.0"
+    }
+  },
+  "category": "themes-and-appearance",
+  "secondaryCategories": [
+    "thread-content"
+  ],
+  "screenshots": [
+    "./screenshots/terminal-replies/settings-preview.jpg"
+  ],
+  "overview": "./overview/terminal-replies.md"
+}
