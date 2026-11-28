@@ -1,0 +1,30 @@
+{
+  "id": "rawmodels-usage",
+  "displayName": "RawModels Usage",
+  "description": "See how much of your RawModels subscription is left, next to your Codex and Claude limits in one BB usage card. Shows the rolling 5-hour window and the monthly output-token allowance, each with its reset time. Reuses the login the pi coding agent already has, and the key stays on your machine. Requires a RawModels subscription and pi with the @rawmodels/pi package signed in on the machine that runs your threads.",
+  "icon": "Gauge",
+  "screenshots": [
+    "./screenshots/rawmodels-usage/usage-card.jpg"
+  ],
+  "overview": "./overview/rawmodels-usage.md",
+  "tags": [
+    "rawmodels",
+    "pi",
+    "antislop",
+    "quota",
+    "rate-limits",
+    "subscriptions"
+  ],
+  "author": {
+    "name": "Artur Karapetyan",
+    "github": "architawr",
+    "url": "https://github.com/architawr"
+  },
+  "category": "token-usage-and-limits",
+  "source": {
+    "git": {
+      "url": "https://github.com/architawr/bb-plugin-rawmodels-usage.git",
+      "range": "^0.1.2"
+    }
+  }
+}
