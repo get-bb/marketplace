@@ -1,30 +1,21 @@
-## Antigravity in BB, with workflow controls and quotas built in
-
-Antigravity Provider + runs on your existing Antigravity subscription and `agy` login, adding native BB workflow controls and built-in quota tracking beyond a manual ACP setup. Keep instructions across reloads, fork threads, run `/compact`, choose per-model reasoning, and inspect live `/swarm` runs with no extra API keys or manual ACP JSON.
+BB's built-in ACP setup gives you basic Antigravity chat without quota meters, thread forking, `/compact`, native `/swarm` visibility, or reload-safe instructions. Antigravity Provider + runs on your existing `agy` subscription and login (no extra API keys) and turns it into a full native BB provider.
 
 ## What you get
 
-- **Instructions that survive reloads.** Keeps BB thread and skill instructions active when BB loads or resumes a thread by sending them through Antigravity's native system prompt channel instead of a one-time first message.
-- **Built-in 5-hour and 7-day quota tracking.** Reports `Gemini` and `Claude/GPT` usage windows and reset times directly in BB's Usage dashboard.
-- **Thread forking and manual plus automatic compaction.** Fork any thread at its latest message, with automatic pass-through if a future CLI release adds native session forking. Run manual `/compact` (`agy 1.5.14+`) from BB's Compact action with failure detection, and see automatic compactions as **Compacted context** cards in your timeline.
-- **Per-model reasoning and a single mode selector.** Discovers live CLI models once per host, exposes each model's reasoning levels (including `xhigh` and `max` when the model supports them), and maps **Build** and **Plan** onto one selector.
-- **Readable command cards, sandbox guard, and skills.** Shows plain-English command summaries, clean output and exit codes, **Outside of sandbox** badges, an optional sandbox-only auto-approval policy that still prompts on escapes, live background task banners across restarts, optional BB child-thread delegation, and personal plus workspace skills (including `~/.agents/skills`) in BB's picker.
-- **Live `/swarm` board inside BB.** Starting `/swarm` opens a **Swarm** tab in the side panel and adds a clickable status pill above the composer. Inspect the plan overview, member roster with per-worker models, agent filters, and Markdown posts alongside swarm timeline cards on local and remote hosts.
-- **Built-in CLI install, updates, and sign-in checks.** Wires BB's native **Install** and **Update** (`agy update`) actions, checks for newer Antigravity CLI releases in **Settings -> Updates**, and verifies your CLI version and login without spending tokens (guiding signed-out setups to `agy acp --login`).
-- **Isolated sessions and desktop reliability.** Runs one CLI worker per thread (`--process-per-session`), forwards custom `agy` profile directories, and fixes macOS BB Desktop Electron child spawns.
+- **Quota tracking.** Shows 5-hour quotas above 7-day quotas for each model group in BB's Usage dashboard.
+- **Reload-safe instructions.** Sends BB thread and skill instructions through Antigravity's native system prompt channel on load and resume.
+- **Native workflow controls.** Use BB's **Auto** permission mode (`agy 1.5.4+`), `/plan` composer action, native `ask_question` cards (`agy 1.5.18+`), per-model reasoning levels, tip forking, and manual plus automatic `/compact` cards (`agy 1.5.14+`).
+- **Live `/swarm` board.** Opens a **Swarm** side-panel tab and composer status pill to inspect the plan, worker roster, and posts on local and remote hosts.
+- **Readable cards and CLI management.** Adds plain-English command summaries, **Outside of sandbox** badges, optional sandbox-only auto-approval, live background task banners across restarts, personal and workspace skills, and built-in **Install** / **Update** (`agy update`) and sign-in checks (`agy acp --login`).
 
-## Permissions and sandbox safety
+## Permissions and safety
 
-By default, **Accept edits** applies workspace edits natively and prompts you for each other ACP approval request (`Ask for each request`). In plugin settings you can switch to `Auto-approve in sandbox, ask on escape` or `Auto-approve all`. **Full access** auto-approves every ACP request, including out-of-sandbox commands. **Build** and **Plan** select native work modes. Plan guides agent behavior and does not enforce read-only access.
-
-New threads inherit your CLI sandbox settings unless you turn on the optional CLI sandbox toggle. See the [Antigravity sandbox docs](https://antigravity.google/docs/sandbox/?tab=cli).
+**Accept edits** applies workspace edits and asks about other requests by default (configurable in plugin settings). **Auto** lets Antigravity review tool calls and escalate edge cases to you; if unavailable, BB warns once and falls back to Accept edits. **Full access** auto-approves every request. `/plan` overrides Auto as behavioral guidance, not enforced read-only access. New threads inherit your CLI sandbox settings unless you enable the plugin sandbox toggle. See the [Antigravity sandbox docs](https://antigravity.google/docs/sandbox/?tab=cli).
 
 ## Requirements
 
-Requires BB 0.50+, Node.js 22+, Antigravity CLI 1.5.0+ (`1.5.14+` for `/compact`) on the target host, and a signed-in Google account. Your Google Antigravity account quota and billing terms apply. Remote hosts need their own CLI install and sign-in. Verified on macOS (`agy 1.5.16`, BB Desktop), Linux (`agy 1.5.14`), and Windows (`agy 1.5.1+`).
+Requires BB 0.50+, Node.js 22+, Antigravity CLI 1.5.0+ (`1.5.4+` Auto, `1.5.14+` `/compact`, `1.5.18+` `ask_question`) installed and signed in on the target host, and a Google Antigravity account (your quota and billing terms apply). Verified on macOS, Linux, and Windows.
 
 ## Limits
 
-Registers under `antigravity-plus` with its own state directory, so it installs cleanly side by side without touching existing threads.
-
-Forking works at the latest message only. Mid-thread rewind, message editing, BB Auto permission mode, service tiers, interactive `ask_question` cards, and native archive or rename sync are not supported.
+Installs side by side under `antigravity-plus` without touching existing threads. Forking works at the latest message only. Mid-thread rewind, message editing, service tiers, and native archive or rename sync are unavailable.
